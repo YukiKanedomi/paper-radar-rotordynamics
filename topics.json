@@ -1,0 +1,25 @@
+{
+  "app": "paper-radar-bearing",
+  "perTopic": 2,
+  "topics": [
+    {
+      "key": "foil",
+      "label": "フォイルガス軸受",
+      "keywords": [
+        "gas foil bearing", "bump foil bearing", "air foil journal bearing",
+        "foil thrust bearing", "compliant foil bearing",
+        "foil bearing rotordynamic coefficients", "oil-free turbomachinery bearing"
+      ]
+    },
+    {
+      "key": "rotor",
+      "label": "ロータダイナミクス",
+      "keywords": [
+        "rotordynamics", "rotor-bearing system stability", "unbalance response",
+        "critical speed", "whirl instability", "bearing stiffness damping coefficients",
+        "seal rotordynamic forces", "subsynchronous vibration"
+      ]
+    }
+  ],
+  "note": "検索ワードはチャットで調整（幅広く拾えるよう自動提案/増減）。アプリUIでは変更しない。"
+}
