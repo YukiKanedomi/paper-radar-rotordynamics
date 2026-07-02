@@ -89,7 +89,7 @@
 6. **v5**：`/collect` を整備（topics.json で検索→papers.json 追記）。定期運用へ。
 
 ## 9. 始め方
-1. 新フォルダ作成（軸受系＝`paper-radar-bearing` / ターボ系＝`paper-radar-turbo`）。git init。
+1. 新フォルダ作成（軸受系＝`paper-radar-rotordynamics` / ターボ系＝`paper-radar-turbo`）。git init。
 2. この `SPEC.md` を `CLAUDE.md` として置き、対応する `topics.json` と `data/papers.json`（種）を入れる。
 3. そのフォルダで Claude Code を起動（新セッション＝shadcn MCP 有効）。
 4. プロンプト（`PROMPTS.md` 参照）を投げて v0→v1 から着手。

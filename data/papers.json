@@ -1,6 +1,6 @@
 {
   "meta": {
-    "app": "paper-radar-bearing",
+    "app": "paper-radar-rotordynamics",
     "title": "論文レーダー（軸受系）",
     "topics": { "foil": "フォイルガス軸受", "rotor": "ロータダイナミクス" },
     "levelLabels": { "easy": "やさしい", "std": "標準", "expert": "専門" },
