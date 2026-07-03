@@ -1,0 +1,1634 @@
+/* ===========================================================================
+   確定モック（viz-panels/paper-radar/home.html・detail.html）の CSS を忠実移植。
+   ページ単位でスコープ（.home-page / .detail-page）して衝突回避。
+   見た目・配色・トーンをモックと一致させるための単一の真実の場所。
+   =========================================================================== */
+
+/* ---------- 共通 ---------- */
+.home-page,
+.detail-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ====================== HOME ====================== */
+.home-page .wrap {
+  padding: 36px 24px 80px;
+}
+.home-page .brand {
+  font-size: 11.5px;
+  font-family: "Yu Gothic UI", sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.home-page h1 {
+  font-size: 37px;
+  line-height: 1.18;
+  margin: 9px 0 6px;
+  letter-spacing: 0.01em;
+}
+.home-page .tag {
+  font-size: 15px;
+  color: var(--mut);
+}
+.home-page .sec {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 42px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.home-page .sec::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.home-page .today {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 22px 12px;
+  box-shadow: 0 8px 24px rgba(29, 33, 39, 0.045);
+}
+.home-page .today .date {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12.5px;
+  color: var(--mut);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.home-page .today h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.home-page .tg {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 800;
+  margin: 16px 0 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.home-page .pl {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 11px 2px;
+  border-bottom: 1px solid var(--soft);
+}
+.home-page .pl:last-child {
+  border-bottom: none;
+}
+.home-page .pl .pt {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.home-page .pl .pm {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  color: var(--mut);
+  margin-top: 3px;
+}
+.home-page .chip2 {
+  display: inline-block;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin-right: 6px;
+}
+.home-page .c-def {
+  background: var(--accent);
+  color: #fff;
+}
+.home-page .c-new {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.home-page .c-oa {
+  border: 1px solid var(--line);
+  color: var(--mut);
+}
+.home-page .search {
+  width: 100%;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 15px;
+  padding: 11px 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.home-page .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.home-page .f {
+  cursor: pointer;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--mut);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.home-page .f.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+.home-page .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 560px) {
+  .home-page .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.home-page .card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(29, 33, 39, 0.035);
+}
+.home-page .card .tp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.home-page .card .ct {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 6px 0 6px;
+}
+.home-page .card .cm {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  color: var(--mut);
+}
+/* 英語原題（副題）— 和訳の直下に小さく */
+.home-page .card .ct-orig {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--mut);
+  margin: 0 0 6px;
+}
+.home-page .pl .pt-orig {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--mut);
+  margin-top: 2px;
+}
+.home-page .empty {
+  font-family: "Yu Gothic UI", sans-serif;
+  color: var(--mut);
+  text-align: center;
+  padding: 24px;
+  grid-column: 1 / -1;
+}
+
+/* アーカイブカードの OA / 抄録 表示 */
+.home-page .card .cm .oa-mark {
+  font-weight: 800;
+  color: var(--accent);
+}
+.home-page .card .cm .oa-mark.abs {
+  color: var(--mut);
+}
+
+/* 用語集フィーチャーカード（トップで目立たせる導線） */
+.home-page .glossfeat {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(180deg, #f3f7f5, #ecf3ef);
+  border: 1px solid #d6e4de;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 6px 0 28px;
+  box-shadow: 0 4px 14px rgba(26, 94, 84, 0.06);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.home-page .glossfeat:hover {
+  box-shadow: 0 8px 22px rgba(26, 94, 84, 0.12);
+  transform: translateY(-1px);
+}
+.home-page .glossfeat .gf-motif {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+}
+.home-page .glossfeat .gf-k {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.home-page .glossfeat .gf-t {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px 0 5px;
+}
+.home-page .glossfeat .gf-d {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--mut);
+}
+.home-page .glossfeat .gf-cta {
+  display: inline-block;
+  margin-top: 9px;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+}
+@media (max-width: 560px) {
+  .home-page .glossfeat {
+    gap: 14px;
+    padding: 16px;
+  }
+  .home-page .glossfeat .gf-motif {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ====================== GLOSSARY ====================== */
+/* 透明度のみのフェード（transform を使わない＝全画面の position:fixed を壊さない） */
+.glossary-page {
+  animation: gloss-fade 0.4s ease both;
+}
+@keyframes gloss-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.glossary-page .wrap {
+  padding: 30px 24px 90px;
+}
+.glossary-page .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  margin-bottom: 22px;
+  color: var(--mut);
+}
+.glossary-page .top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.glossary-page .kick {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.glossary-page h1 {
+  font-size: 33px;
+  line-height: 1.3;
+  margin: 10px 0 8px;
+}
+.glossary-page .tag {
+  font-size: 15px;
+  color: var(--mut);
+  margin-bottom: 18px;
+}
+.glossary-page .search {
+  width: 100%;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 15px;
+  padding: 11px 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+.glossary-page .empty {
+  font-family: "Yu Gothic UI", sans-serif;
+  color: var(--mut);
+  text-align: center;
+  padding: 40px;
+}
+.glossary-page .glist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.glossary-page .gentry {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 15px 17px;
+}
+.glossary-page .gterm {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent-d);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.glossary-page .gcross {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+.glossary-page .gdef {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 6px 0 9px;
+}
+.glossary-page .grefs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.glossary-page .gref {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  color: var(--mut);
+  text-decoration: none;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.glossary-page .gref:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.glossary-page .gtabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.glossary-page .gtab {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mut);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+.glossary-page .gtab.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* 関係グラフ */
+.graph {
+  position: relative;
+}
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  color: var(--mut);
+  margin-bottom: 8px;
+}
+.graph-legend .lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.graph-legend .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.graph-legend .toggle {
+  cursor: pointer;
+  gap: 5px;
+}
+.graph-stage-wrap {
+  position: relative;
+}
+.graph-svg {
+  width: 100%;
+  height: 66vh;
+  min-height: 440px;
+  background: radial-gradient(circle at 50% 38%, #ffffff 0%, #fbfaf6 70%, #f6f4ec 100%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  touch-action: none;
+  display: block;
+}
+.graph-stage {
+  animation: graph-in 0.55s ease both;
+}
+@keyframes graph-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.graph-svg .node-label {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10.5px;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: #faf9f5;
+  stroke-width: 3.4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.graph-svg .edge-label {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 8.5px;
+  fill: var(--mut);
+  paint-order: stroke;
+  stroke: #faf9f5;
+  stroke-width: 2.6px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.graph-svg .cluster-label {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+  paint-order: stroke;
+  stroke: #faf9f5;
+  stroke-width: 3.4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.graph-ctrls {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.graph-ctrls button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(29, 33, 39, 0.08);
+  -webkit-tap-highlight-color: transparent;
+}
+/* 全画面トグル（先頭ボタン）は少し目立たせる */
+.graph-ctrls button:first-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.graph-ctrls button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.graph-hint {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  color: var(--mut);
+  text-align: center;
+  margin-top: 8px;
+}
+.graph-panel {
+  position: sticky;
+  bottom: 12px;
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(29, 33, 39, 0.08);
+  padding: 14px 16px;
+}
+.graph-panel .gp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.graph-panel .gp-term {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent-d);
+}
+.graph-panel .gp-head button {
+  border: none;
+  background: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--mut);
+  cursor: pointer;
+}
+.graph-panel .gp-def {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 6px 0 9px;
+}
+.graph-panel .gp-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+/* 関係マップ：全画面モード（スマホの操作感向上） */
+.graph.expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+.graph.expanded .graph-legend {
+  margin: 2px 2px 8px;
+}
+.graph.expanded .graph-stage-wrap {
+  flex: 1;
+  min-height: 0;
+}
+.graph.expanded .graph-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.graph.expanded .graph-hint {
+  margin-top: 6px;
+}
+.graph.expanded .graph-panel {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  margin: 0;
+  z-index: 5;
+}
+
+/* ====================== DETAIL ====================== */
+.detail-page {
+  line-height: 1.86;
+}
+.detail-page .wrap {
+  padding: 30px 24px 90px;
+}
+.detail-page .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  margin-bottom: 28px;
+  color: var(--mut);
+}
+.detail-page .top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.detail-page .kick {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.detail-page h1 {
+  font-size: 33px;
+  line-height: 1.34;
+  margin: 11px 0 14px;
+  letter-spacing: 0.005em;
+}
+.detail-page .h1-orig {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--mut);
+  margin: -4px 0 14px;
+}
+.detail-page .meta {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  color: var(--mut);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+.detail-page .meta b {
+  color: var(--ink);
+}
+.detail-page .badges {
+  margin: 16px 0 4px;
+}
+.detail-page .bd {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  color: var(--mut);
+  border-radius: 999px;
+  padding: 3px 11px;
+  margin-right: 7px;
+}
+.detail-page .bd.fill {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.detail-page .bd.line {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.detail-page .lvl {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(250, 249, 245, 0.95);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 12px 18px;
+  margin: 22px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "Yu Gothic UI", sans-serif;
+}
+.detail-page .lvl .lab {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+.detail-page .lvl input {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--accent);
+}
+.detail-page .lvl .now {
+  font-size: 13px;
+  font-weight: 800;
+  min-width: 52px;
+  text-align: right;
+}
+.detail-page .lvl .ends {
+  font-size: 11px;
+  color: var(--mut);
+  white-space: nowrap;
+}
+.detail-page .lead {
+  font-size: 19px;
+  line-height: 1.96;
+  color: #32363f;
+  margin: 22px 0;
+}
+.detail-page .lead .dc {
+  float: left;
+  font-size: 58px;
+  line-height: 0.8;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 7px 13px 0 0;
+  font-family: Georgia, serif;
+}
+.detail-page .sec {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 40px 0 11px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.detail-page .sec::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.detail-page p {
+  margin: 0 0 13px;
+}
+.detail-page .eq {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 19px;
+  margin: 16px 0;
+  color: #16302c;
+}
+.detail-page .eq i {
+  font-style: italic;
+}
+.detail-page .eq sub,
+.detail-page .eq sup {
+  font-size: 0.7em;
+}
+.detail-page .eq .cap {
+  display: block;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  color: var(--mut);
+  margin-top: 9px;
+  font-style: normal;
+}
+.detail-page .fig {
+  margin: 24px 0;
+}
+.detail-page .fig svg,
+.detail-page .fig img {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.detail-page .fig .cap {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12.5px;
+  color: var(--mut);
+  margin-top: 9px;
+  text-align: center;
+}
+.detail-page .fig .credit {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  color: var(--mut);
+  margin-top: 4px;
+  text-align: center;
+}
+.detail-page .fig .credit a {
+  color: var(--accent);
+  text-decoration: none;
+}
+/* 図解説（OAで実図を複数載せる号の補足・出典に忠実） */
+.detail-page .fig .fig-note {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink);
+  margin: 9px auto 0;
+  max-width: 38em;
+}
+
+/* 原文の直接引用（プルクォート・OA全文の号） */
+.detail-page .pq {
+  margin: 18px 0;
+  padding: 6px 0 6px 20px;
+  border-left: 3px solid var(--accent);
+}
+.detail-page .pq .pq-orig {
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--ink);
+  margin: 0;
+}
+.detail-page .pq .pq-ja {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--mut);
+  margin: 7px 0 0;
+}
+.detail-page .pq .pq-src {
+  display: block;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-style: normal;
+  font-size: 11.5px;
+  color: var(--accent);
+  margin-top: 7px;
+}
+
+/* 章立てウォークスルー（OA全文の号・節ごとの忠実要約） */
+.detail-page .walk {
+  border-left: 2px solid var(--line);
+  margin: 8px 0 4px;
+  padding-left: 18px;
+}
+.detail-page .walk .wk {
+  position: relative;
+  margin: 0 0 16px;
+}
+.detail-page .walk .wk::before {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.detail-page .walk .wk-h {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-weight: 800;
+  font-size: 13.5px;
+  color: var(--accent-d);
+  margin-bottom: 4px;
+}
+.detail-page .walk .wk-b {
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+}
+.detail-page .nums {
+  display: flex;
+  gap: 13px;
+  margin: 20px 0;
+}
+.detail-page .num {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+.detail-page .num .v {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: "Yu Gothic UI", sans-serif;
+}
+.detail-page .num .l {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  color: var(--mut);
+  margin-top: 3px;
+}
+
+/* スマホ向けの詰め（説明レベル枠・リード・数値カード） */
+@media (max-width: 560px) {
+  .detail-page .lvl {
+    padding: 8px 12px;
+    gap: 8px;
+    margin: 14px 0 4px;
+  }
+  .detail-page .lvl .lab {
+    font-size: 11px;
+  }
+  .detail-page .lvl .ends {
+    font-size: 10px;
+  }
+  .detail-page .lvl .now {
+    font-size: 12px;
+    min-width: 38px;
+  }
+  .detail-page .lead {
+    font-size: 16.5px;
+    line-height: 1.85;
+    margin: 16px 0;
+  }
+  .detail-page .lead .dc {
+    font-size: 44px;
+    margin: 5px 10px 0 0;
+  }
+  .detail-page .nums {
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .detail-page .num {
+    padding: 11px 7px;
+    border-radius: 10px;
+  }
+  .detail-page .num .v {
+    font-size: 15px;
+  }
+  .detail-page .num .l {
+    font-size: 10.5px;
+  }
+}
+.detail-page .term {
+  border-bottom: 1.5px dotted var(--accent);
+  cursor: pointer;
+  color: var(--accent-d);
+}
+.detail-page .triv {
+  background: var(--soft2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 14px 19px;
+  margin: 13px 0;
+  font-size: 15px;
+  font-family: "Yu Gothic UI", sans-serif;
+  line-height: 1.82;
+}
+.detail-page .triv .t {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.detail-page .acc {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 16px 0;
+  overflow: hidden;
+  background: #fff;
+}
+.detail-page .acc summary {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 18px;
+  cursor: pointer;
+  color: var(--ink);
+  list-style: none;
+}
+.detail-page .acc summary::-webkit-details-marker {
+  display: none;
+}
+.detail-page .acc summary::before {
+  content: "＋ ";
+  color: var(--accent);
+}
+.detail-page .acc[open] summary::before {
+  content: "− ";
+}
+.detail-page .acc .body {
+  padding: 0 18px 16px;
+  font-size: 15px;
+}
+.detail-page .rel {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.detail-page .rel a {
+  font-family: "Yu Gothic UI", sans-serif;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 14px;
+  display: block;
+}
+.detail-page .rel a .tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-right: 8px;
+}
+.detail-page .gloss {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 4px 18px;
+}
+.detail-page .gloss .g {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 14px;
+}
+.detail-page .gloss .g:last-child {
+  border-bottom: none;
+}
+.detail-page .gloss .g b {
+  color: var(--accent);
+}
+.detail-page .orig {
+  display: inline-block;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--ink);
+  border-radius: 10px;
+  padding: 12px 22px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+/* 用語ポップ（モックの #pop 相当）。React で1つだけ描画 */
+.term-pop {
+  position: fixed;
+  z-index: 60;
+  max-width: 280px;
+  background: var(--ink);
+  color: #f3f3ee;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  border-radius: 12px;
+  padding: 13px 15px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+.term-pop b {
+  color: #86c9c0;
+}
+
+/* ---------- 既読 / お気に入り（v2 追加・editorial トーン維持） ---------- */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mut);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+.fav-btn.on {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.fav-star {
+  color: var(--accent);
+  margin-left: 6px;
+  vertical-align: -2px;
+}
+.read-tag {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--mut);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 7px;
+  margin-left: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.home-page .card .tp .fav-star,
+.home-page .card .tp .read-tag {
+  margin-left: 0;
+}
+.home-page .card.read .ct,
+.home-page .pl.read .pt {
+  color: var(--mut);
+}
+.home-page .card.read,
+.home-page .pl.read {
+  opacity: 0.94;
+}
+
+/* ---------- 軽い演出（v3） ---------- */
+@keyframes pr-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.home-page .wrap,
+.detail-page .wrap {
+  animation: pr-fade 0.4s ease both;
+}
+/* ---------- delight：動き・手応え（reduce-motion で無効化） ---------- */
+/* 関係マップ：発光が伝わる瞬間のパルス（一度だけ） */
+.graph-svg .node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodePulse 0.7s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes nodePulse {
+  from { transform: scale(0.6); opacity: 0.5; }
+  to { transform: scale(2.5); opacity: 0; }
+}
+/* 関係マップ：待機の微呼吸（中身だけがゆっくり拡縮＝生きてる感） */
+.graph-svg .node-breathe {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeBreathe 4s ease-in-out infinite;
+}
+@keyframes nodeBreathe {
+  0%, 100% { transform: scale(0.985); }
+  50% { transform: scale(1.05); }
+}
+/* 関係マップ：選択中、関係の向きに一筋の光が流れる（コメット）。
+   pathLength=1 で長さに依らず正規化。丸キャップで端がにじむ光に。 */
+.graph-svg .edge-flow {
+  stroke-linecap: round;
+  stroke-dasharray: 0.14 0.86;
+  opacity: 0.9;
+  animation: edgeFlow 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  pointer-events: none;
+}
+@keyframes edgeFlow {
+  0%   { stroke-dashoffset: 1; opacity: 0; }
+  18%  { opacity: 0.9; }
+  82%  { opacity: 0.9; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* 詳細：説明レベル切替のクロスフェード（inline なので opacity のみ） */
+.detail-page .lvl-fx {
+  animation: lvlFade 0.28s ease both;
+}
+@keyframes lvlFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* スケルトン・シマー（読み込み中の体感速度） */
+.home-page .skel {
+  position: relative;
+  overflow: hidden;
+  background: #efece4;
+  border-radius: 8px;
+}
+.home-page .skel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  animation: shimmer 1.3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  to { transform: translateX(100%); }
+}
+.home-page .skel-brand { width: 92px; height: 12px; margin-bottom: 16px; }
+.home-page .skel-title { width: 62%; height: 30px; margin-bottom: 12px; }
+.home-page .skel-tag { width: 76%; height: 14px; margin-bottom: 26px; }
+.home-page .skel-feat { width: 100%; height: 96px; border-radius: 16px; margin-bottom: 28px; }
+.home-page .skel-row {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.home-page .skel-line { height: 14px; margin: 7px 0; }
+.home-page .w70 { width: 70%; }
+.home-page .w40 { width: 40%; }
+
+/* 一貫した押下スプリング（触っていたい手応え） */
+.home-page .card,
+.home-page .pl,
+.home-page .f,
+.home-page .glossfeat,
+.detail-page .fav-btn,
+.detail-page .acc summary,
+.detail-page .orig,
+.glossary-page .gtab,
+.glossary-page .gentry,
+.glossary-page .gref,
+.graph-ctrls button,
+.graph-panel .gref {
+  transition: transform 0.13s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease;
+}
+.home-page .card:active,
+.home-page .pl:active,
+.home-page .f:active,
+.home-page .glossfeat:active,
+.detail-page .fav-btn:active,
+.detail-page .acc summary:active,
+.detail-page .orig:active,
+.glossary-page .gtab:active,
+.glossary-page .gentry:active,
+.glossary-page .gref:active,
+.graph-ctrls button:active,
+.graph-panel .gref:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .wrap,
+  .detail-page .wrap {
+    animation: none;
+  }
+  .graph-svg .node-pulse {
+    display: none;
+  }
+  .graph-svg .node-breathe {
+    animation: none;
+  }
+  .graph-svg .edge-flow {
+    animation: none;
+  }
+  .home-page .skel::after {
+    animation: none;
+  }
+  .detail-page .lvl-fx {
+    animation: none;
+  }
+  .home-page .card,
+  .home-page .pl,
+  .home-page .f,
+  .home-page .glossfeat,
+  .detail-page .fav-btn,
+  .detail-page .acc summary,
+  .detail-page .orig,
+  .glossary-page .gtab,
+  .glossary-page .gentry,
+  .glossary-page .gref,
+  .graph-ctrls button,
+  .graph-panel .gref {
+    transition: none;
+  }
+  .home-page .card:active,
+  .home-page .pl:active,
+  .home-page .f:active,
+  .home-page .glossfeat:active,
+  .detail-page .fav-btn:active,
+  .detail-page .acc summary:active,
+  .detail-page .orig:active,
+  .glossary-page .gtab:active,
+  .glossary-page .gentry:active,
+  .glossary-page .gref:active,
+  .graph-ctrls button:active,
+  .graph-panel .gref:active {
+    transform: none;
+  }
+}
+
+/* 状態表示（ローディング/エラー/空） — モックの .empty トーンに合わせる */
+.state-msg {
+  font-family: "Yu Gothic UI", sans-serif;
+  color: var(--mut);
+  text-align: center;
+  padding: 60px 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ===== 配信ノートへの導線（ホーム） ===== */
+.home-page .lognote-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+  padding: 14px 16px;
+  margin: 14px 0 4px;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.2s ease;
+}
+.home-page .lognote-link:active {
+  transform: scale(0.985);
+}
+.home-page .lognote-link .ln-k {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-weight: 700;
+  display: block;
+}
+.home-page .lognote-link .ln-t {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+  margin: 3px 0 0;
+  line-height: 1.6;
+}
+.home-page .lognote-link .ln-cta {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12.5px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* ===== 配信ノート ページ ===== */
+.log-page {
+  animation: gloss-fade 0.4s ease both;
+}
+.log-page .wrap {
+  padding: 30px 24px 90px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.log-page .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  color: var(--mut);
+  margin-bottom: 22px;
+}
+.log-page .top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.log-page .kick {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.log-page h1 {
+  font-size: 33px;
+  line-height: 1.3;
+  margin: 10px 0 8px;
+}
+.log-page .tag {
+  font-size: 15px;
+  color: var(--mut);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.log-page .empty {
+  font-family: "Yu Gothic UI", sans-serif;
+  color: var(--mut);
+  text-align: center;
+  padding: 40px;
+}
+
+.log-page .notes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.log-page .note {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffefb;
+  padding: 22px 22px 20px;
+}
+.log-page .note.skipped {
+  background: var(--soft);
+}
+.log-page .note-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Yu Gothic UI", sans-serif;
+}
+.log-page .note-date {
+  font-size: 13px;
+  color: var(--mut);
+  letter-spacing: 0.04em;
+}
+.log-page .note-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.log-page .note-badge.off {
+  background: #b7b2a6;
+}
+.log-page .note-title {
+  font-size: 21px;
+  line-height: 1.45;
+  margin: 10px 0 8px;
+}
+.log-page .note-intro {
+  font-size: 15.5px;
+  line-height: 1.95;
+  color: var(--ink);
+}
+.log-page .note-sub {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+.log-page .note-pick {
+  padding: 10px 0;
+  border-top: 1px dashed var(--line);
+}
+.log-page .note-pick:first-of-type {
+  border-top: none;
+}
+.log-page .np-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.log-page .np-title a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.log-page .np-why {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--mut);
+  margin-top: 3px;
+}
+.log-page .note-asideItem {
+  padding: 9px 0;
+}
+.log-page .na-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.log-page .na-note {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--mut);
+  margin-top: 2px;
+}
+/* 編集後記＝人間味のある一個人の感想。手紙のような佇まいに */
+.log-page .note-afterword {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg);
+  border-radius: 0 10px 10px 0;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ink);
+  font-style: italic;
+}
+/* 検索の記録（展開式・既定は閉じる） */
+.log-page .note-search {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.log-page .note-search > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.log-page .note-search > summary::-webkit-details-marker {
+  display: none;
+}
+.log-page .note-search > summary::before {
+  content: "▸";
+  font-size: 11px;
+  transition: transform 0.18s ease;
+}
+.log-page .note-search[open] > summary::before {
+  transform: rotate(90deg);
+}
+.log-page .ns-body {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.log-page .ns-src {
+  padding: 12px 14px;
+  background: var(--soft);
+  border-radius: 12px;
+}
+.log-page .ns-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: "Yu Gothic UI", sans-serif;
+}
+.log-page .ns-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.log-page .ns-scope {
+  font-size: 11.5px;
+  color: var(--mut);
+}
+.log-page .ns-hits {
+  margin-left: auto;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
+.log-page .ns-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 9px 0 2px;
+}
+.log-page .ns-term {
+  font-family: "SFMono-Regular", "Consolas", monospace;
+  font-size: 11.5px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+.log-page .ns-note {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--mut);
+  margin-top: 7px;
+}
+.log-page .ns-foot {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--mut);
+}
+
+@media (max-width: 560px) {
+  .log-page h1 {
+    font-size: 28px;
+  }
+  .log-page .note {
+    padding: 18px 16px 16px;
+  }
+  .log-page .note-title {
+    font-size: 19px;
+  }
+  .log-page .note-intro {
+    font-size: 15px;
+  }
+}

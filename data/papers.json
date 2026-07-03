@@ -2,19 +2,32 @@
   "meta": {
     "app": "paper-radar-rotordynamics",
     "title": "論文レーダー（軸受系）",
-    "topics": { "foil": "フォイルガス軸受", "rotor": "ロータダイナミクス" },
-    "levelLabels": { "easy": "やさしい", "std": "標準", "expert": "専門" },
+    "topics": {
+      "foil": "フォイルガス軸受",
+      "rotor": "ロータダイナミクス"
+    },
+    "levelLabels": {
+      "easy": "やさしい",
+      "std": "標準",
+      "expert": "専門"
+    },
     "lastUpdated": "2026-06-27",
     "note": "種データ。実在の定番論文のみ。要約は出典に忠実な高水準記述。被引用数等の具体値は本実装の/collectで検証して付与。seed:true は要検証・拡張の印。"
   },
   "papers": [
     {
       "id": "doi:10.1115/1.3254568",
-      "topic": "foil", "stream": "classic", "source": "openalex", "oa": false,
+      "topic": "foil",
+      "stream": "classic",
+      "source": "openalex",
+      "oa": false,
       "title": "Analysis of Gas-Lubricated Compliant Foil Journal Bearings",
       "authors": "H. Heshmat, J. A. Walowit, O. Pinkus",
-      "year": 1983, "venue": "ASME Journal of Lubrication Technology",
-      "doi": "", "url": "", "pdfUrl": "",
+      "year": 1983,
+      "venue": "ASME Journal of Lubrication Technology",
+      "doi": "",
+      "url": "",
+      "pdfUrl": "",
       "citationNote": "定番（高被引用）",
       "levels": {
         "easy": {
@@ -40,39 +53,84 @@
         }
       },
       "equations": [
-        { "tex": "\\frac{\\partial}{\\partial x}\\!\\left(p h^{3}\\frac{\\partial p}{\\partial x}\\right)+\\frac{\\partial}{\\partial z}\\!\\left(p h^{3}\\frac{\\partial p}{\\partial z}\\right)=6\\mu U\\frac{\\partial (p h)}{\\partial x}",
-          "caption": "圧縮性レイノルズ方程式。膜厚 h はフォイル変形 δ(p) を含み圧力場と連成する。" }
+        {
+          "tex": "\\frac{\\partial}{\\partial x}\\!\\left(p h^{3}\\frac{\\partial p}{\\partial x}\\right)+\\frac{\\partial}{\\partial z}\\!\\left(p h^{3}\\frac{\\partial p}{\\partial z}\\right)=6\\mu U\\frac{\\partial (p h)}{\\partial x}",
+          "caption": "圧縮性レイノルズ方程式。膜厚 h はフォイル変形 δ(p) を含み圧力場と連成する。"
+        }
       ],
       "figures": [
-        { "type": "concept", "src": "", "caption": "剛体軸受→フォイル変形→膜厚の自己調整（模式図・実データではない）" }
+        {
+          "type": "concept",
+          "src": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240'><rect width='600' height='240' fill='#faf9f5'/><text x='300' y='20' font-family='sans-serif' font-size='12.5' fill='#114a42' text-anchor='middle' font-weight='700'>フォイルジャーナル軸受：膜圧でフォイルがたわみ、膜厚が自己調整（模式）</text><circle cx='150' cy='138' r='82' fill='none' stroke='#6c7078' stroke-width='5'/><circle cx='150' cy='138' r='73' fill='none' stroke='#1a5e54' stroke-width='2' stroke-dasharray='5 4'/><circle cx='150' cy='138' r='66' fill='none' stroke='#1a5e54' stroke-width='2.4'/><circle cx='156' cy='143' r='56' fill='#e7e4dc' stroke='#1d2127' stroke-width='2'/><path d='M156 108 a35 35 0 0 1 30 18' fill='none' stroke='#1d2127' stroke-width='1.6' marker-end='url(#ar)'/><text x='156' y='147' font-family='sans-serif' font-size='11' fill='#1d2127' text-anchor='middle'>ジャーナル（軸）</text><text x='150' y='233' font-family='sans-serif' font-size='10' fill='#6c7078' text-anchor='middle'>断面（すき間は誇張）</text><path d='M63 74 L86 92' stroke='#6c7078' stroke-width='1.2'/><text x='60' y='68' font-family='sans-serif' font-size='10' fill='#6c7078' text-anchor='middle'>ハウジング</text><path d='M228 200 L204 184' stroke='#1a5e54' stroke-width='1.2'/><text x='238' y='212' font-family='sans-serif' font-size='10' fill='#1a5e54' text-anchor='middle'>バンプ/トップフォイル</text><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1d2127'/></marker><marker id='ag' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1a5e54'/></marker></defs><rect x='320' y='52' width='180' height='14' fill='#e7e4dc' stroke='#1d2127' stroke-width='1.6'/><text x='508' y='63' font-family='sans-serif' font-size='10' fill='#1d2127'>ジャーナル面</text><path d='M320 66 L500 66 L500 96 Q410 88 320 78 Z' fill='#1a5e54' opacity='.14'/><text x='415' y='80' font-family='sans-serif' font-size='10.5' fill='#114a42'>気体膜（膜厚 h）</text><path d='M350 82 v14' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#ag)'/><path d='M385 86 v12' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#ag)'/><path d='M420 90 v10' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#ag)'/><text x='344' y='112' font-family='sans-serif' font-size='10' fill='#1a5e54' text-anchor='end'>膜圧 p</text><path d='M320 100 Q410 108 500 98' fill='none' stroke='#1a5e54' stroke-width='3'/><text x='508' y='104' font-family='sans-serif' font-size='10' fill='#1a5e54'>トップフォイル</text><path d='M320 132 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0 q10 -16 20 0' fill='none' stroke='#1a5e54' stroke-width='2'/><text x='508' y='130' font-family='sans-serif' font-size='10' fill='#1a5e54'>バンプフォイル</text><rect x='320' y='134' width='180' height='10' fill='#6c7078'/><text x='508' y='145' font-family='sans-serif' font-size='10' fill='#6c7078'>ハウジング</text><text x='425' y='170' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>圧力に応じてフォイルがたわみ（コンプライアンス）、</text><text x='425' y='185' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>膜厚 h が自己調整される → 圧力場と連成</text></svg>",
+          "caption": "フォイルジャーナル軸受の構造と膜厚の自己調整（模式図・実データではない）"
+        }
       ],
       "numbers": [
-        { "v": "↑ 負荷容量", "l": "剛体比で向上" },
-        { "v": "安定域 拡大", "l": "高速まで安定" },
-        { "v": "ε, Λc", "l": "無次元で整理" }
+        {
+          "v": "↑ 負荷容量",
+          "l": "剛体比で向上"
+        },
+        {
+          "v": "安定域 拡大",
+          "l": "高速まで安定"
+        },
+        {
+          "v": "ε, Λc",
+          "l": "無次元で整理"
+        }
       ],
       "terms": [
-        { "term": "コンプライアンス", "def": "力を加えたときの変形しやすさ。剛性の逆。フォイルが圧力でどれだけたわむか。" },
-        { "term": "バンプフォイル", "def": "波形（バンプ状）の薄い金属板。ばねのように働き軸受表面に弾力を与える。" },
-        { "term": "偏心率 ε", "def": "軸が軸受中心からどれだけずれているかの割合（0=中心, 1=接触寸前）。" },
-        { "term": "コンプライアンス数 Λc", "def": "フォイルの柔らかさを無次元化した指標。大きいほど柔らかい。" }
+        {
+          "term": "コンプライアンス",
+          "def": "力を加えたときの変形しやすさ。剛性の逆。フォイルが圧力でどれだけたわむか。"
+        },
+        {
+          "term": "バンプフォイル",
+          "def": "波形（バンプ状）の薄い金属板。ばねのように働き軸受表面に弾力を与える。"
+        },
+        {
+          "term": "偏心率 ε",
+          "def": "軸が軸受中心からどれだけずれているかの割合（0=中心, 1=接触寸前）。"
+        },
+        {
+          "term": "コンプライアンス数 Λc",
+          "def": "フォイルの柔らかさを無次元化した指標。大きいほど柔らかい。"
+        }
       ],
       "trivia": [
-        { "label": "由来", "text": "フォイル軸受は航空機のエアサイクルマシン（与圧空調）などで実用化が進んだ技術で、本研究はその設計理論の基礎づけに位置づけられる。" },
-        { "label": "いまの応用", "text": "オイルフリーの空調用ターボ圧縮機・マイクロガスタービン・燃料電池ブロワ等に用いられる。油を使わないため高温・無潤滑環境に強い。" }
+        {
+          "label": "由来",
+          "text": "フォイル軸受は航空機のエアサイクルマシン（与圧空調）などで実用化が進んだ技術で、本研究はその設計理論の基礎づけに位置づけられる。"
+        },
+        {
+          "label": "いまの応用",
+          "text": "オイルフリーの空調用ターボ圧縮機・マイクロガスタービン・燃料電池ブロワ等に用いられる。油を使わないため高温・無潤滑環境に強い。"
+        }
       ],
       "related": [
-        { "tag": "引かれた発展", "title": "ガスフォイル軸受の熱弾性流体潤滑（TEHD）モデル", "url": "" }
+        {
+          "tag": "引かれた発展",
+          "title": "ガスフォイル軸受の熱弾性流体潤滑（TEHD）モデル",
+          "url": ""
+        }
       ],
-      "dateAdded": "2026-06-27", "status": "unread", "seed": true
+      "dateAdded": "2026-06-27",
+      "status": "unread",
+      "seed": true
     },
     {
       "id": "doi:10.1115/1.3438373",
-      "topic": "rotor", "stream": "classic", "source": "openalex", "oa": false,
+      "topic": "rotor",
+      "stream": "classic",
+      "source": "openalex",
+      "oa": false,
       "title": "Stability and Damped Critical Speeds of a Flexible Rotor in Fluid-Film Bearings",
       "authors": "J. W. Lund",
-      "year": 1974, "venue": "ASME Journal of Engineering for Industry",
-      "doi": "", "url": "", "pdfUrl": "",
+      "year": 1974,
+      "venue": "ASME Journal of Engineering for Industry",
+      "doi": "",
+      "url": "",
+      "pdfUrl": "",
       "citationNote": "定番（ロータ安定性解析の古典）",
       "levels": {
         "easy": {
@@ -98,20 +156,43 @@
         }
       },
       "equations": [],
-      "figures": [],
+      "figures": [
+        {
+          "type": "concept",
+          "src": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 220'><rect width='600' height='220' fill='#faf9f5'/><text x='300' y='20' font-family='sans-serif' font-size='12.5' fill='#114a42' text-anchor='middle' font-weight='700'>油膜軸受で支持された柔軟ロータの解析モデル（模式）</text><defs><marker id='ar2' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1d2127'/></marker></defs><path d='M100 108 Q300 96 500 108' fill='none' stroke='#1d2127' stroke-width='5' stroke-linecap='round'/><ellipse cx='300' cy='101' rx='13' ry='34' fill='#e7e4dc' stroke='#1d2127' stroke-width='2'/><text x='300' y='56' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>円板（質量）</text><ellipse cx='300' cy='101' rx='44' ry='22' fill='none' stroke='#b4451f' stroke-width='1.6' stroke-dasharray='5 4'/><path d='M344 101 a44 22 0 0 1 -18 18' fill='none' stroke='#b4451f' stroke-width='1.6' marker-end='url(#ar2)'/><text x='392' y='84' font-family='sans-serif' font-size='10.5' fill='#b4451f'>ふれまわり軌道</text><rect x='84' y='96' width='32' height='24' rx='4' fill='none' stroke='#1a5e54' stroke-width='2'/><path d='M92 120 l0 8 l-6 4 l12 8 l-12 8 l12 8 l-6 4 l0 8' fill='none' stroke='#1a5e54' stroke-width='1.8'/><path d='M108 120 v14 m-7 0 h14 m-11 8 h8 m-4 -8 v8 m-7 8 v-8 h14 v8' fill='none' stroke='#1a5e54' stroke-width='1.8'/><line x1='82' y1='168' x2='118' y2='168' stroke='#6c7078' stroke-width='3'/><rect x='484' y='96' width='32' height='24' rx='4' fill='none' stroke='#1a5e54' stroke-width='2'/><path d='M492 120 l0 8 l-6 4 l12 8 l-12 8 l12 8 l-6 4 l0 8' fill='none' stroke='#1a5e54' stroke-width='1.8'/><path d='M508 120 v14 m-7 0 h14 m-11 8 h8 m-4 -8 v8 m-7 8 v-8 h14 v8' fill='none' stroke='#1a5e54' stroke-width='1.8'/><line x1='482' y1='168' x2='518' y2='168' stroke='#6c7078' stroke-width='3'/><text x='100' y='188' font-family='sans-serif' font-size='10.5' fill='#1a5e54' text-anchor='middle'>油膜軸受＝ばね k・ダンパ c</text><text x='500' y='188' font-family='sans-serif' font-size='10.5' fill='#1a5e54' text-anchor='middle'>（剛性・減衰係数）</text><text x='300' y='210' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>系の複素固有値から減衰危険速度と対数減衰率（&gt;0 で安定）を求める</text></svg>",
+          "caption": "油膜軸受で支持された柔軟ロータの解析モデル（模式図・実データではない）"
+        }
+      ],
       "numbers": [
-        { "v": "対数減衰率", "l": "安定性の指標" },
-        { "v": "減衰危険速度", "l": "設計で評価可" }
+        {
+          "v": "対数減衰率",
+          "l": "安定性の指標"
+        },
+        {
+          "v": "減衰危険速度",
+          "l": "設計で評価可"
+        }
       ],
       "terms": [
-        { "term": "対数減衰率", "def": "振動が1周期でどれだけ減るかの指標。正なら安定、負なら不安定。" },
-        { "term": "軸受の剛性・減衰係数", "def": "油膜が軸を押し戻す力（剛性）と速度に応じた抵抗（減衰）を表す係数。" }
+        {
+          "term": "対数減衰率",
+          "def": "振動が1周期でどれだけ減るかの指標。正なら安定、負なら不安定。"
+        },
+        {
+          "term": "軸受の剛性・減衰係数",
+          "def": "油膜が軸を押し戻す力（剛性）と速度に応じた抵抗（減衰）を表す係数。"
+        }
       ],
       "trivia": [
-        { "label": "位置づけ", "text": "Lund の一連の研究は、油膜軸受係数とロータ系の安定性解析を結びつけ、現代ロータダイナミクスの実務的枠組みを築いたとされる。" }
+        {
+          "label": "位置づけ",
+          "text": "Lund の一連の研究は、油膜軸受係数とロータ系の安定性解析を結びつけ、現代ロータダイナミクスの実務的枠組みを築いたとされる。"
+        }
       ],
       "related": [],
-      "dateAdded": "2026-06-27", "status": "unread", "seed": true
+      "dateAdded": "2026-06-27",
+      "status": "unread",
+      "seed": true
     }
   ]
 }
