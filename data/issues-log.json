@@ -1,0 +1,96 @@
+{
+  "entries": [
+    {
+      "date": "2026-07-04",
+      "status": "published",
+      "headline": "創刊号：空気で浮く軸受の「浮き上がる瞬間」と、漏れを17.6%減らしたシールの形",
+      "intro": "このアプリの最初の配信です。まず土台として、フォイル軸受とロータダイナミクスそれぞれの「古典」を1本ずつ据えました（種データとして用意していた2本の書誌情報を、OpenAlex と Crossref で検証したところ、実は両方ともDOIに誤りが見つかり修正しています）。最新枠は、arXiv と OpenAlex を検索して、全文が読めるオープンアクセスの2本を選びました。",
+      "picked": [
+        {
+          "id": "doi:10.11159/ffhmt26.139",
+          "title": "CFD由来ルックアップテーブル法によるガスフォイルラジアル軸受の起動〜定常解析",
+          "why": "フォイル軸受が「回り始めてから浮くまで」という、教科書があまり教えてくれない過渡の物理を正面から扱っていて、全文OAで手法の数字まで追えるため。"
+        },
+        {
+          "id": "doi:10.1115/1.3254697",
+          "title": "気体潤滑フォイルジャーナル軸受の解析（Heshmat, Walowit & Pinkus 1983）",
+          "why": "フォイル軸受設計理論の出発点となった定番（被引用約370）。今号の最新論文の文献レビューにも登場する、まさに「引かれる側」の1本。"
+        },
+        {
+          "id": "doi:10.1115/1.4071322",
+          "title": "計算解析によるT型ラビリンスシールの動的応答評価",
+          "why": "シールの漏れと動特性（交差剛性・減衰）を1つの枠組みで評価しており、トピックの検索語「seal rotordynamic forces」にぴったり。大学リポジトリの受理原稿で全文が読める。"
+        },
+        {
+          "id": "doi:10.1115/1.3438358",
+          "title": "流体膜軸受で支持された柔軟ロータの安定性と減衰危険速度（Lund 1974）",
+          "why": "対数減衰率でロータ系の安定性を評価する実務の原点（被引用約290）。シール力の話を「軸系全体の安定性」につなぐ土台として。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Axial Load Tester for Elastic-Foil Thrust Bearings（Lubricants, 2026）",
+          "note": "CC-BYの良い候補でしたが、出版社サイトのボット保護でこちらから全文にアクセスできず、逐語確認ができないため今号は見送り（リンク先では読めます）。"
+        },
+        {
+          "title": "ターボチャージャの subsynchronous 分岐実験（MSSP, 2026）",
+          "note": "CC-BYで内容も魅力的でしたが、同じく全文の機械取得ができず保留。次号以降の候補に。"
+        },
+        {
+          "title": "foil の最新枠に他分野のarXiv論文が多数混入",
+          "note": "検索語の単語OR検索が広く拾いすぎたため。分野ガードで除外したうえで、OpenAlex新着側から選定しました。検索語は今後チャットで調整します。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv",
+            "scope": "physics.app-ph / physics.flu-dyn / eess.SY を優先、段階的に緩和（最新枠）",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "note": "フォイル軸受のarXiv投稿は少なく、緩和後は他分野が混じったため分野ガードで除外。"
+          },
+          {
+            "name": "OpenAlex",
+            "scope": "新着（直近3年・発行日順）＋被引用上位（定番枠）— foil",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。定番1位が Heshmat 1983（被引用367）。"
+          },
+          {
+            "name": "OpenAlex",
+            "scope": "新着（直近3年・発行日順）＋被引用上位（定番枠）— rotor",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA6/抄録7）・定番枠14件（OA0/抄録14）。定番には他分野（統計・電力系統）の高被引用も混ざり、分野ガードで除外。"
+          }
+        ],
+        "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
+      },
+      "afterword": "創刊号を組みながら「なるほど」と思ったのは、フォイル軸受の論文の『3750 rpm では浮ききれず、4000 rpm なら浮く』という具体的な数字でした。空気で浮くと聞くとふわっとした話に感じますが、浮くか浮かないかの境目はこんなにくっきりしているんですね。そしてシールの論文では、漏れを減らす工夫が同時に軸を揺らす力にも効いてしまうという綱引きが印象的でした。どちらも「すき間数十マイクロメートルの世界」の話だと思うと、機械の中の見えない攻防が少し身近になった気がします。 — 編集担当より"
+    }
+  ]
+}

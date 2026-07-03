@@ -85,7 +85,8 @@ function HomeView({ data }: { data: PapersData }) {
         <div className="sec">今日の配信</div>
         <div className="today">
           <div className="date">
-            {latestIssue} 号 — 各トピック {todays.length} 件
+            {latestIssue} 号 — 各トピック{" "}
+            {Math.round(todays.length / Math.max(1, new Set(todays.map((p) => p.topic)).size))} 件
           </div>
           <h2>本日のピックアップ</h2>
           {todays.length === 0 ? (
