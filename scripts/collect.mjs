@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { CORE } from "./keyword-core.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -47,11 +48,9 @@ async function fetchRetry(url, { tries = 3, baseDelay = 800 } = {}) {
   throw last ?? new Error("fetch failed");
 }
 
-// 分野ガード：タイトルが軸受・ロータダイナミクスの語を含むものだけを on-topic とみなす。
+// 分野ガード：タイトル/掲載誌が軸受・ロータダイナミクスの語を含むものだけを on-topic とみなす。
 // OpenAlex の被引用ソートは桁違いの他分野（医学・生物等）を上位に上げてしまうため、
-// API の調子に依らずクライアント側でノイズを除去する。
-// 注意：venue も検査対象のため "journal" 等の一般語は入れない（Journal of… に誤ヒットする）。
-const CORE = /bearing|rotordynam|rotor[\s-]?dynam|rotor[\s-]?bearing|\brotor\b|\bwhirl|oil[\s-]?whip|unbalance|critical[\s-]?speed|\bfoil\b|squeeze[\s-]?film|fluid[\s-]?film|oil[\s-]?film|lubricat|tribolog|labyrinth|annular[\s-]?seal|seal[\s-]?force|tilting[\s-]?pad|spiral[\s-]?groove|herringbone|hydrostatic|aerostatic|damping[\s-]?coefficient|shaft[\s-]?vibration|torsional[\s-]?vibration|rub[\s-]?impact|morton[\s-]?effect|subsynchronous|jeffcott/i;
+// API の調子に依らずクライアント側でノイズを除去する。正規表現 CORE は keyword-core.mjs で共有。
 const onTopic = (p) => CORE.test(`${p.title ?? ""} ${p.venue ?? ""}`);
 
 // キーワード群から arXiv 用の有意な単語集合を作る（ストップワード除去）
@@ -146,6 +145,10 @@ function mapOpenAlex(w, stream) {
     citationCount: w.cited_by_count ?? 0,
     pdfUrl: w.open_access?.oa_url ?? "",
     abstract: "", // 本文/抄録は別途エージェントが取得（ここではメタのみ）
+    // キーワード自動拡張の集計用メタ（keyword-suggest.mjs が使う）。display_name＋score＋concept level を残す。
+    keywords: (w.keywords ?? []).map((k) => ({ name: k.display_name, score: k.score ?? 0 })),
+    concepts: (w.concepts ?? []).map((c) => ({ name: c.display_name, level: c.level ?? 0, score: c.score ?? 0 })),
+    fields: [...new Set((w.topics ?? []).map((t) => t.field?.display_name).filter(Boolean))],
   };
 }
 

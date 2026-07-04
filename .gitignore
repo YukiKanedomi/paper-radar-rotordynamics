@@ -6,6 +6,7 @@ public/data/
 *.tsbuildinfo
 
 scripts/.collect-candidates.json
+scripts/.keyword-report.json
 
 scripts/logs/
 .collect-candidates.json
