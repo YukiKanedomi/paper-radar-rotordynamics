@@ -890,6 +890,337 @@
       ],
       "dateAdded": "2026-07-04",
       "status": "unread"
+    },
+    {
+      "id": "doi:10.11159/ffhmt26.105",
+      "topic": "foil",
+      "stream": "latest",
+      "source": "openalex",
+      "oa": true,
+      "title": "A Streamlined Preliminary Design Method for Gas Foil Radial Bearings Validated Through Simulations and Experiments",
+      "titleJa": "シミュレーションと実験で検証したガスフォイルラジアル軸受の簡潔な予備設計法",
+      "authors": "Tai Yuan Yu, Pei Jen Wang",
+      "year": 2026,
+      "venue": "Proc. 13th Int. Conf. on Fluid Flow, Heat and Mass Transfer (FFHMT 2026)",
+      "doi": "10.11159/ffhmt26.105",
+      "url": "https://doi.org/10.11159/ffhmt26.105",
+      "pdfUrl": "https://www.avestia.com/FFHMT2026_Proceedings/files/paper/FFHMT_105.pdf",
+      "citationNote": "",
+      "levels": {
+        "easy": {
+          "tldr": "フォイル軸受を設計し始めるとき、まだ細かい寸法が決まっていなくても『この軸受で十分支えられるか』をすばやく見積もる簡単な方法の提案。手に入りやすい5つの数値だけで計算でき、シミュレーションと実験でよく合うことを確かめた。",
+          "problem": "従来の設計法は、軸と羽根のすきま（膜の厚み）など『設計が固まらないと分からない値』を必要とし、設計初期には使いにくかった。最初の段階で、少ない情報から素早く見積もる信頼できる方法が不足していた。",
+          "method": "『無次元軸受数』という1つの指標を使う。入力は、作動気体の粘度（Pa·s）・目標の浮上速度・軸の直径・周囲の圧力・周囲の温度の5つ（さらに設計目標として負荷を使う）。ここから逆に平均すきまを見積もる。設計した軸受を3次元シミュレーションと自作の実験台で検証した。",
+          "result": "例として起動4500 rpm・軸径30 mm・負荷5 Nの条件で、すきま約25 µmと見積もれた。実験では4500 rpm付近で軸受の抵抗が急に上がってから急に下がり、空気膜が完成して浮いた瞬間が設計値とぴたり合った。予測・シミュ・実験がよく一致した。",
+          "limit": "温度を一定とした簡略計算。すきまが15 µmより小さいと製造が難しい。今後は熱の効果や、より詳しいフォイル構造・耐久試験を取り込むとしている。"
+        },
+        "std": {
+          "tldr": "無次元軸受数（Ausman 1959 由来）を用い、入手容易な最小パラメータだけでGFRBのリフトオフ速度・負荷容量を評価する簡潔な1次元予備設計法。3D FSI FEMシミュレーションと自作実験ベンチで検証し良好な一致を示した。",
+          "problem": "GFRBは強非線形かつFSIが絡み、予備設計が難しい。従来法は平均すきま等『設計確定前には得にくい値』に依存し、限られた情報しかない早期段階で使える信頼できる評価法が不足。1次元設計法は簡略化ゆえ信頼性が低いと批判されがちだった。",
+          "method": "Ausman(1959)の等温・1次摂動由来の無次元軸受数 Λ=6η₀ωr²/(pₐc²) を用い、粘度（絶対粘度, Pa·s）・目標起動速度・軸径・周囲圧・周囲温度（＋目標負荷）から平均すきま c を逆算。フォイル構造は2D薄板／1D梁の簡略モデル（Feng & Kaneko の INCONEL X-750・板厚約0.1 mm のデータに基づき等価剛性0.1 GPa を採用）で扱う。設計プロトタイプを3D FSI FEMで解析し、自作ベンチで荷重下のリフトオフ速度を計測して検証。",
+          "result": "起動4500 rpm・20°C・1 bar・粘度1.8×10⁻⁵ Pa·s・軸径30 mm・負荷5 Nの例で平均すきま約25 µmを得た。実験では4500 rpm近傍で軸受抵抗が急上昇し無負荷相当まで急降下＝設計起動速度で気膜が完全形成される様子を捉え、理論予測・数値・実験が強く一致。早期設計で妥当なリフトオフ速度・負荷容量の予測が可能と確認した。",
+          "limit": "等温ベースの簡略法。小さいすきまは負荷容量を上げるが放熱低下・製造公差の厳しさを伴い、15 µm未満は製造困難。THD効果・高度FSIモデル・高荷重/高温耐久は今後の拡張課題。"
+        },
+        "expert": {
+          "tldr": "Ausman(1959)の等温・1次摂動に基づく無次元軸受数 Λ=6η₀ωr²/(pₐc²) を核に、設計確定前に得られる最小パラメータ集合のみからGFRBの平均すきま・リフトオフ速度・負荷容量を評価する1次元予備設計フレームワーク。3D FSI FEMと自作実験で妥当性を実証。",
+          "problem": "GFRBの強非線形性とFSIにより予備設計は困難で、従来法は top foil–shaft 間の平均径方向すきま等、設計確定前には得にくい入力に依存した。既存の1次元法は簡略化・詳細欠落ゆえ信頼性が低いと批判され、限られた早期情報で使える体系的評価法が欠けていた。",
+          "method": "Ausman の等温・1次摂動解が導く無次元軸受数 Λ=6η₀ωr²/(pₐc²)（η₀=粘度（絶対粘度, Pa·s）, ω=角速度, r=半径, pₐ=周囲圧, c=平均すきま）に、早期に確定するパラメータ（目標起動速度・周囲温度圧力・作動媒体の粘度・軸径・目標負荷）を代入して実現可能な c を反復的に推定。フォイル構造は2D薄板理論／1D梁近似（Feng & Kaneko の link–spring/FEM shell 知見、板厚≈0.1 mm INCONEL X-750 のデータに基づき等価剛性0.1 GPa を採用）で簡略評価。設計プロトタイプを3D FSI FEMで解析し、自作ベンチで荷重下リフトオフ速度を測定して照合。",
+          "result": "代表例（4500 rpm・20°C・1 bar・粘度1.8×10⁻⁵ Pa·s・軸径30 mm・負荷5 N）で c≈25 µm。起動過渡では自重接触→部分摩擦により抵抗が増大し、設計起動速度4500 rpm 近傍で気膜が完全形成されて抵抗が無負荷相当へ急降下する挙動を、予測・3D FSI・実験が一貫して示した。過度に単純な解析則と重い計算研究の間を橋渡しする、実務的で製造性を担保する早期設計経路を提供する。",
+          "limit": "等温仮定に基づく簡略枠組み。c を小さくすると負荷容量は上がるが放熱低下と製造公差の厳格化を招き、c<15 µm は製造・組立が困難。将来拡張として THD効果・高度フォイル構造連成・高荷重/高温での耐久試験を挙げる。"
+        }
+      },
+      "equations": [
+        {
+          "tex": "\\Lambda = \\dfrac{6\\,\\eta_0\\,\\omega\\,r^{2}}{p_a\\,c^{2}}",
+          "caption": "無次元軸受数（Ausman 1959 由来。記号 Λ は本稿での便宜表記で原文は『dimensionless bearing number』）。η₀=粘度（絶対粘度, Pa·s）、ω=角速度、r=半径、pₐ=周囲圧、c=平均すきま。これに早期入力を代入して c を逆算する。"
+        }
+      ],
+      "figures": [
+        {
+          "type": "concept",
+          "src": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 210'><rect width='600' height='210' fill='#faf9f5'/><text x='300' y='20' font-family='sans-serif' font-size='12.5' fill='#114a42' text-anchor='middle' font-weight='700'>最小限の入力から軸受すきまを見積もる予備設計フロー（模式）</text><defs><marker id='f5' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1a5e54'/></marker></defs><rect x='24' y='48' width='150' height='116' rx='10' fill='#1a5e54' opacity='.07'/><rect x='24' y='48' width='150' height='116' rx='10' fill='none' stroke='#1a5e54' stroke-width='1.4'/><text x='99' y='68' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle' font-weight='700'>手に入る5入力</text><text x='99' y='88' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>粘度 η₀（Pa·s）</text><text x='99' y='104' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>起動速度 ω</text><text x='99' y='120' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>軸半径 r</text><text x='99' y='136' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>周囲圧 pₐ</text><text x='99' y='152' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>周囲温度 T</text><path d='M178 106 h34' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#f5)'/><rect x='214' y='74' width='150' height='64' rx='10' fill='none' stroke='#1a5e54' stroke-width='1.8'/><text x='289' y='98' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>無次元軸受数 Λ</text><text x='289' y='118' font-family='sans-serif' font-size='10' fill='#1d2127' text-anchor='middle'>= 6η₀ωr² / (pₐc²)</text><path d='M366 106 h34' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#f5)'/><rect x='402' y='74' width='170' height='64' rx='10' fill='#1a5e54' opacity='.07'/><rect x='402' y='74' width='170' height='64' rx='10' fill='none' stroke='#1a5e54' stroke-width='1.4'/><text x='487' y='98' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>平均すきま c を逆算</text><text x='487' y='118' font-family='sans-serif' font-size='10.5' fill='#114a42' text-anchor='middle' font-weight='700'>例: c ≈ 25 µm</text><text x='300' y='184' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>3D FSIシミュレーション＋実験で検証：設計起動速度4500 rpmで抵抗が急上昇→急降下（気膜完成）</text></svg>",
+          "caption": "最小入力→無次元軸受数→平均すきま推定→FSI/実験検証の流れ（模式図・実データではない）"
+        }
+      ],
+      "numbers": [
+        {
+          "v": "入力は最小限",
+          "l": "粘度・起動速度・軸径・周囲圧・周囲温度（＋設計目標として負荷）"
+        },
+        {
+          "v": "c ≈ 25 µm",
+          "l": "4500 rpm・軸径30 mm・負荷5 N の例で逆算"
+        },
+        {
+          "v": "4500 rpm で急変",
+          "l": "抵抗が急上昇→急降下＝気膜完成の合図"
+        },
+        {
+          "v": "< 15 µm 困難",
+          "l": "小すきまは高負荷だが製造しにくい"
+        }
+      ],
+      "terms": [
+        {
+          "term": "無次元軸受数",
+          "def": "軸受の運転条件を1つにまとめた無次元の指標。粘度・速度・半径・周囲圧・すきまから決まり、予備設計で素早く見積もるのに使う。"
+        },
+        {
+          "term": "リフトオフ速度",
+          "def": "回転が速くなり、気体膜の圧力で軸が完全に浮き上がる（接触が消える）ときの回転速度。設計の目標値になる。"
+        },
+        {
+          "term": "平均すきま",
+          "def": "軸と軸受面（トップフォイル）の間の気体膜の平均的な厚み。負荷容量・放熱・製造しやすさに効くが、設計初期には決まっていないことが多い。"
+        },
+        {
+          "term": "負荷容量",
+          "def": "軸受が支えられる荷重の大きさ。速度とともに増える傾向がある。"
+        },
+        {
+          "term": "1次元設計法",
+          "def": "複雑な3次元計算を避け、無次元指標などで素早く見積もる簡略な設計法。早期段階の方向づけに使う。"
+        },
+        {
+          "term": "リフトオフ",
+          "def": "回転が速くなり、気体膜の圧力で軸が完全に浮き上がって接触がなくなること。"
+        }
+      ],
+      "trivia": [
+        {
+          "label": "起源は1959年",
+          "text": "使っている無次元軸受数は、Ausman が1959年に等温・1次摂動でレイノルズ方程式から導いた古典的パラメータ。設計を素早く評価する土台として今も使われている（本文の説明より）。"
+        },
+        {
+          "label": "同グループの3部作",
+          "text": "同号の『起動〜定常CFD』（ffhmt26.139）・『実験ベンチ』（ffhmt26.101）と同じ Yu & Wang（国立清華大学＝台湾・新竹）。設計法・予測・計測がそろい、GFB研究の全体像が見える。"
+        }
+      ],
+      "related": [
+        {
+          "tag": "同グループの予測研究",
+          "title": "Yu & Wang (2026) GFRB の起動〜定常 CFDルックアップ解析",
+          "url": "https://doi.org/10.11159/ffhmt26.139"
+        },
+        {
+          "tag": "同グループの実験研究",
+          "title": "Yu & Wang (2026) デュアルドライブ実験ベンチ",
+          "url": "https://doi.org/10.11159/ffhmt26.101"
+        }
+      ],
+      "deepDive": [
+        {
+          "title": "なぜ『無次元軸受数』だと少ない入力で足りるのか",
+          "body": {
+            "easy": "軸受の効き具合は、粘り・速度・大きさ・圧力・すきまがそれぞれ効くが、それらを1つの数にまとめたのが無次元軸受数。この数さえ狙いどおりにすれば、細かい寸法が未定でも『すきまはこのくらい必要』と逆算できる。",
+            "std": "無次元軸受数 Λ=6η₀ωr²/(pₐc²) は、粘度・角速度・半径・周囲圧・すきまを1つの無次元量に集約する。設計目標（起動速度・負荷）と早期に確定する量（軸径・周囲条件・媒体の粘度）を与えれば、残る未知の c を逆算でき、詳細形状の確定前に方向づけができる。",
+            "expert": "Ausman の等温・1次摂動解では、無次元軸受数 Λ が rapid かつ simplified な設計評価の鍵になる（原文）。Λ を設計目標に合わせることは、c を含む未知量を目標リフトオフ・負荷に整合させることに等しい。詳細な foil 幾何やクリアランス分布を確定する前でも、Λ の反復調整で feasible な c を絞り込め、3D FSI 前の合理的なスクリーニングとして機能する。"
+          }
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The proposed approach requires only a minimal set of readily accessible parameters: the dynamic viscosity of the working medium, the desired lift-off speed, the shaft diameter, the ambient pressure, and the ambient temperature.",
+          "textJa": "提案手法が必要とするのは、入手容易な最小限のパラメータ集合だけである：作動媒体の粘度、望ましいリフトオフ速度、軸径、周囲圧力、周囲温度。",
+          "where": "Abstract"
+        },
+        {
+          "text": "at 4500 rpm, both analyses exhibited a sharp resistance rise followed by a sudden drop, signifying the formation of a stable gas film and complete transition to hydrodynamic operation.",
+          "textJa": "4500 rpm で、両解析（シミュレーションと実験）は抵抗の急上昇に続く急降下を示し、安定した気体膜の形成と動圧運転への完全な移行を意味した。",
+          "where": "本文 §4 Conclusion"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1〜2. 背景と文献レビュー",
+          "body": {
+            "easy": "フォイル軸受の仕組みと、これまでの設計・解析研究（構造モデル・設計指針・熱の研究など）を紹介する部分。",
+            "std": "GFRBの動圧支持と多層フォイル構造の役割を整理し、Ku & Heshmat（構造剛性）、Peng & Carpino（剛性・減衰）、DellaCorte & Valco（負荷容量の経験則）、Radil ら（すきまの影響）、San Andrés & Kim（THD）まで、予備設計に関わる知見をレビューする。",
+            "expert": "Ausman 以降の気体潤滑理論と、compliant 構造の剛性・減衰・THD 解析（Ku & Heshmat, Peng & Carpino/Khonsari, Radil et al., San Andrés & Kim 等）を、限られた早期入力で使える予備設計の観点から体系化する。"
+          }
+        },
+        {
+          "heading": "3. 予備設計法とFSI/実験による検証",
+          "body": {
+            "easy": "この論文の中心。無次元軸受数からすきまを見積もり、シミュレーションと実験で確かめる手順を、具体例（4500 rpm・軸径30 mm）で示す。",
+            "std": "Ausman の無次元軸受数に早期入力を代入して c を逆算（例：c≈25 µm）。フォイルは簡略構造モデル（等価剛性0.1 GPa）で扱う。設計プロトタイプを3D FSI FEMで解析し、自作ベンチで荷重下リフトオフを計測。起動過渡の抵抗挙動（4500 rpm で急上昇→急降下）で気膜形成を確認する。",
+            "expert": "無次元軸受数の反復適用で feasible な c を推定し、2D薄板/1D梁近似でフォイル剛性を評価。3D FSI FEM と自作ベンチの照合により、設計起動速度4500 rpm での気膜完全形成（抵抗の急変）を予測・数値・実験の一致として示す。"
+          }
+        },
+        {
+          "heading": "4. 結論と今後",
+          "body": {
+            "easy": "少ない入力で素早く設計評価できる方法を確かめた、とまとめ、今後は熱や耐久も取り込むと述べる。",
+            "std": "軸径・起動速度・周囲条件・媒体の粘度・目標負荷だけでリフトオフ速度と負荷容量を妥当に見積もれると結論。過度に単純な解析則と重い計算研究の間を橋渡しし、油フリーターボ機械の早期設計に実用的な道具を提供する。THD・高度FSI・耐久試験への拡張を今後の課題とする。",
+            "expert": "簡潔だが厳密な予備設計経路として、製造性を担保しつつ詳細最適化前の feasibility を確保できると位置づけ。THD効果・高度フォイル構造連成・高荷重/高温耐久を将来拡張に挙げる。"
+          }
+        }
+      ],
+      "dateAdded": "2026-07-04",
+      "status": "unread"
+    },
+    {
+      "id": "arxiv:2105.00118",
+      "topic": "rotor",
+      "stream": "latest",
+      "source": "arxiv",
+      "oa": true,
+      "title": "Complete modeling of hydrodynamic bearings with a boundary parameterization approach",
+      "titleJa": "境界パラメータ化アプローチによる油膜軸受の完全なモデリング",
+      "authors": "J. A. Mota, D. J. G. Maldonado, J. V. Valério, T. G. Ritto",
+      "year": 2021,
+      "venue": "arXiv (preprint, physics.flu-dyn)",
+      "doi": "",
+      "url": "https://arxiv.org/abs/2105.00118",
+      "pdfUrl": "https://arxiv.org/pdf/2105.00118",
+      "citationNote": "",
+      "levels": {
+        "easy": {
+          "tldr": "油の膜で軸を支える『油膜軸受』の圧力を計算するモデルを、いろいろな形の軸受に使い回せるよう作り直した研究。軸受の形を数式で柔軟に表す工夫（パラメータ化）で、円筒だけでなく楕円や摩耗した軸受も同じ枠組みで扱える。計算はオープンソースの道具に組み込まれている。",
+          "problem": "油膜軸受の圧力を求める式は、もともと複雑な流れの式を大胆に簡略化して得る。その簡略化の中身を見直し、さらに『軸受の形』を柔軟に表せるようにして、いろいろな形状や条件に応用できるモデルが欲しかった。",
+          "method": "複雑な流れの式（ナビエ・ストークス方程式）を無次元にして、どの項が重要かを順序づけて整理。軸受の形を効果的にパラメータ化し、最終的に解きやすい形の偏微分方程式にして、格子で刻んで数値的に（中心差分法で）解いて圧力を求める。",
+          "result": "圧力の分布から、軸受の硬さ（剛性）や振動を抑える力（減衰）を計算できた。まず円筒（短い軸受）で文献の答えと合うことを確かめ、その利点を生かして楕円・摩耗した軸受にも適用して応答の違いを比べた。計算はオープンソースのPython道具 Ross-Rotordynamics に組み込まれ、誰でも再現・利用できる。",
+          "limit": "油膜（非圧縮の液体潤滑）を前提としたモデル。特定の実機というより、汎用的な枠組みとしての提案。"
+        },
+        "std": {
+          "tldr": "2円柱間の薄い潤滑油膜のNavier-Stokes方程式の簡略化を無次元解析で見直し、ジオメトリのパラメータ化で汎用化。得られる楕円型偏微分方程式を中心差分法で解いて圧力場・剛性・減衰係数を求め、楕円軸受・摩耗軸受に適用してオープンソースRoss-Rotordynamicsに統合した。",
+          "problem": "油膜軸受の圧力予測に使うレイノルズ方程式は、Navier-Stokes方程式の大幅な簡略化に基づく。その簡略化の妥当性を体系的に整理し、さらに軸受形状を柔軟に記述して多様な幾何・運転条件へ適応できるモデルが求められていた。",
+          "method": "薄い油膜の流れについてNavier-Stokes方程式を無次元化し、各項を重要度で順序づけ。ジオメトリを効果的にパラメータ化し、最終的に楕円型の偏微分方程式（圧力場の支配方程式）に帰着させて中心差分法で数値解を得る。圧力場から負荷容量・剛性・減衰係数を算出。",
+          "result": "まず短ジャーナル軸受で文献の解析近似と照合して妥当性を確認（検証例：ロータ半径0.2 m・半径すきま0.1 mm・荷重50 N・L/D=1/8・粘度0.015 Pa·s）。パラメータ化の利点を生かし、応用として楕円軸受（予圧パラメータ m＝原文 preload、m=0 で円筒に一致）と摩耗軸受の2構成を提示して応答を比較。全モデルとシミュレーションはオープンソースのRoss-Rotordynamics（Python・GitHub公開）に統合されている。",
+          "limit": "非圧縮の油潤滑を前提とする。特定実機ではなく、多様な軸受・シールに共通する一般化モデルの提案。パラメータ化の一般性は高いが、個別条件での妥当性は追加検証が要る。"
+        },
+        "expert": {
+          "tldr": "潤滑油膜（2円柱間の薄膜）に対するNavier-Stokes方程式の簡略化を無次元解析で階層化し、境界（ジオメトリ）のパラメータ化により汎用化。帰着した楕円型PDE（圧力場の支配方程式）を中心差分法で解いて剛性・減衰係数を算出し、楕円・摩耗軸受へ適用してオープンソースRoss-Rotordynamicsに実装した。",
+          "problem": "油膜軸受・環状シールの流体誘起力予測に用いるレイノルズ方程式は、Navier-Stokes方程式の強い簡略化に立脚する。その項の重要度を無次元解析で体系的に順序づけ、かつ軸受幾何を柔軟に記述して多様な形状（円筒・楕円・摩耗）・運転条件へ移植可能なモデルを構築する必要があった。",
+          "method": "薄膜流れのNavier-Stokes方程式を無次元変数で規格化し、膜厚方向の小ささを用いて各項を重要度で順序化。境界（内外円柱面）を効果的にパラメータ化して幾何を一般化し、最終的に圧力場を支配する楕円型PDEに帰着。中心差分法で離散化して数値解を得る。圧力場の積分から負荷・偏心・剛性/減衰係数を導出する。短軸受では文献の解析近似（Ishida & Yamamoto の短軸受式、∂p/∂θ≪∂p/∂z）と照合して検証。",
+          "result": "短ジャーナル軸受（Ri=0.2 m, 半径すきま0.1 mm, W=50 N, L/D=1/8, µ=0.015 Pa·s 等）で文献近似と整合を確認。ジオメトリ・パラメータ化により、応用として楕円軸受（予圧パラメータ m＝原文 preload、m=0 で円筒に一致）と摩耗軸受を同一枠組みで解析し、動特性の差異を比較。実装・シミュレーションはオープンソースの回転機械解析ライブラリ Ross-Rotordynamics（Python, github.com/ross-rotordynamics）に統合され再現可能。",
+          "limit": "非圧縮の油潤滑（液体潤滑膜）を前提とする定式化。特定機械要素でなく、油膜軸受・環状シールに共通する一般化モデルの提案で、個別実機・運転条件への適用は追加検証を要する。"
+        }
+      },
+      "equations": [],
+      "figures": [
+        {
+          "type": "concept",
+          "src": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 210'><rect width='600' height='210' fill='#faf9f5'/><text x='300' y='20' font-family='sans-serif' font-size='12.5' fill='#114a42' text-anchor='middle' font-weight='700'>ジオメトリのパラメータ化で多様な油膜軸受を1つのモデルで扱う（模式）</text><defs><marker id='r3' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1a5e54'/></marker></defs><text x='96' y='44' font-family='sans-serif' font-size='10' fill='#6c7078' text-anchor='middle'>同じ枠組みで多形状</text><circle cx='50' cy='84' r='22' fill='none' stroke='#1d2127' stroke-width='2'/><circle cx='52' cy='86' r='14' fill='#e7e4dc'/><text x='50' y='118' font-family='sans-serif' font-size='9' fill='#1d2127' text-anchor='middle'>円筒(検証)</text><ellipse cx='108' cy='84' rx='24' ry='17' fill='none' stroke='#1d2127' stroke-width='2'/><circle cx='110' cy='86' r='12' fill='#e7e4dc'/><text x='108' y='118' font-family='sans-serif' font-size='9' fill='#1d2127' text-anchor='middle'>楕円</text><path d='M146 84 a22 22 0 1 1 0 0.1 z' fill='none' stroke='#1d2127' stroke-width='2'/><path d='M146 62 a22 22 0 0 1 20 30' fill='none' stroke='#b4451f' stroke-width='2.4'/><circle cx='168' cy='86' r='12' fill='#e7e4dc'/><text x='166' y='118' font-family='sans-serif' font-size='9' fill='#1d2127' text-anchor='middle'>摩耗</text><path d='M196 86 h30' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#r3)'/><rect x='232' y='50' width='150' height='118' rx='10' fill='#1a5e54' opacity='.06'/><rect x='232' y='50' width='150' height='118' rx='10' fill='none' stroke='#1a5e54' stroke-width='1.4'/><text x='307' y='70' font-family='sans-serif' font-size='10' fill='#114a42' text-anchor='middle' font-weight='700'>無次元解析で項を整理</text><text x='307' y='88' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>NS方程式 → 楕円型PDE</text><g stroke='#6c7078' stroke-width='0.8'><line x1='252' y1='102' x2='252' y2='156'/><line x1='272' y1='102' x2='272' y2='156'/><line x1='292' y1='102' x2='292' y2='156'/><line x1='312' y1='102' x2='312' y2='156'/><line x1='332' y1='102' x2='332' y2='156'/><line x1='252' y1='102' x2='352' y2='102'/><line x1='252' y1='120' x2='352' y2='120'/><line x1='252' y1='138' x2='352' y2='138'/><line x1='252' y1='156' x2='352' y2='156'/></g><text x='307' y='168' font-family='sans-serif' font-size='9' fill='#6c7078' text-anchor='middle'>中心差分法</text><path d='M384 110 h30' stroke='#1a5e54' stroke-width='1.8' marker-end='url(#r3)'/><rect x='420' y='58' width='158' height='102' rx='10' fill='none' stroke='#1a5e54' stroke-width='1.4'/><text x='499' y='80' font-family='sans-serif' font-size='10.5' fill='#1d2127' text-anchor='middle'>圧力場 p を計算</text><path d='M440 128 q30 -40 60 -18 q20 15 40 6' fill='none' stroke='#1a5e54' stroke-width='2'/><text x='499' y='148' font-family='sans-serif' font-size='10' fill='#114a42' text-anchor='middle'>剛性 k・減衰 c を導出</text><text x='300' y='202' font-family='sans-serif' font-size='10' fill='#6c7078' text-anchor='middle'>実装はオープンソースの Ross-Rotordynamics（Python）に統合</text></svg>",
+          "caption": "ジオメトリのパラメータ化で円筒・楕円・摩耗を1枠組みに→楕円型PDEを差分法で解き圧力場・剛性/減衰を得る（模式図・実データではない）"
+        }
+      ],
+      "numbers": [
+        {
+          "v": "検証＋応用2形状",
+          "l": "短ジャーナル(検証)＋楕円・摩耗(応用)"
+        },
+        {
+          "v": "NS → 楕円型PDE",
+          "l": "無次元解析で項を順序づけ導出"
+        },
+        {
+          "v": "中心差分法",
+          "l": "格子上で圧力場を数値的に解く"
+        },
+        {
+          "v": "オープンソース",
+          "l": "Ross-Rotordynamics（Python）に統合"
+        }
+      ],
+      "terms": [
+        {
+          "term": "油膜軸受",
+          "def": "軸とケーシングの間の薄い油の膜（動圧）で軸を支える軸受。回転で油が引き込まれて圧力が生まれ、非接触で荷重を支える。"
+        },
+        {
+          "term": "ジオメトリのパラメータ化",
+          "def": "軸受の形（境界の形状）を数式のパラメータで柔軟に表すこと。円筒・楕円・摩耗など多様な形を1つの枠組みで扱えるようになる。"
+        },
+        {
+          "term": "レイノルズ方程式",
+          "def": "薄い潤滑膜の圧力を求める基礎方程式。複雑なナビエ・ストークス方程式を、膜が薄いことを使って簡略化して得られる。"
+        },
+        {
+          "term": "摩耗軸受",
+          "def": "内壁がすり減った軸受。形が崩れると圧力分布や動特性（剛性・減衰）が変わるため、設計・診断で重要。"
+        },
+        {
+          "term": "楕円軸受",
+          "def": "断面が真円でなく楕円状の軸受。高速機械でよく使われ、安定性を高める効果がある。"
+        },
+        {
+          "term": "軸受の剛性・減衰係数",
+          "def": "油膜が軸を押し戻す力（剛性）と速度に応じた抵抗（減衰）を表す係数。ロータの振動・安定性の評価に使う。"
+        }
+      ],
+      "trivia": [
+        {
+          "label": "オープンソースに直結",
+          "text": "この研究のモデルとシミュレーションは、回転機械解析のオープンソースPythonライブラリ Ross-Rotordynamics（GitHub公開）に組み込まれている。論文の成果を誰でも再現・利用できる点が現代的（本文の説明より）。"
+        },
+        {
+          "label": "潤滑理論の父たち",
+          "text": "油膜潤滑の実験（Beauchamp Tower, Petrov）と、その理論的説明（Osborne Reynolds）が1880年代の礎。本研究もその系譜のレイノルズ方程式を出発点にしている。"
+        }
+      ],
+      "related": [
+        {
+          "tag": "同トピックの実験研究",
+          "title": "Kuhr (2022) 環状ギャップの48係数を磁気軸受で実験同定",
+          "url": "https://arxiv.org/abs/2210.09935"
+        },
+        {
+          "tag": "引く定番",
+          "title": "Lund (1974) 柔軟ロータの安定性と減衰危険速度",
+          "url": "https://doi.org/10.1115/1.3438358"
+        }
+      ],
+      "deepDive": [
+        {
+          "title": "なぜ『パラメータ化』で多様な軸受を1つの枠組みに",
+          "body": {
+            "easy": "軸受の形ごとに別々の式を作るのは大変。境界（軸受の内壁の形）を数式のパラメータで表しておけば、そのパラメータを変えるだけで円筒・楕円・摩耗など違う形に切り替えられる。1つのプログラムで使い回せる。",
+            "std": "内外円柱の境界形状をパラメータで記述することで、幾何を式に一般的に組み込む。楕円軸受なら予圧パラメータ m（原文 preload、m=ϵ/F。m=0 で円筒に一致）、摩耗軸受なら摩耗形状のパラメータ、というように、同じ支配方程式・同じ差分解法のまま形状だけ差し替えられる。",
+            "expert": "境界パラメータ化は、膜厚(gap)関数ではなくロータ・ステータ両表面の形状を直接パラメータで記述し、楕円型PDE（圧力場の支配方程式）の係数に幾何を一般的に反映させる。これにより円筒・楕円（予圧 m）・摩耗という異なる境界を、離散化・解法を変えずに統一的に解析でき、形状が動特性（剛性・減衰）に与える影響を系統比較できる。"
+          }
+        }
+      ],
+      "quotes": [
+        {
+          "text": "An effective parameterization of the geometry is proposed, enabling a more detailed description of the problem and its adaptation to other contexts.",
+          "textJa": "ジオメトリの効果的なパラメータ化を提案し、問題のより詳細な記述と、他の文脈への適応を可能にする。",
+          "where": "Abstract"
+        },
+        {
+          "text": "The modeling exposed in this text, as well as all its simulations were developed to integrate Ross-Rotordynamics, an open library in Python, available on the GitHub platform.",
+          "textJa": "本稿で示したモデリングとそのすべてのシミュレーションは、GitHub 上で公開されている Python のオープンライブラリ Ross-Rotordynamics に統合するために開発された。",
+          "where": "Abstract"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "1. Introduction — 何を解くか",
+          "body": {
+            "easy": "回る機械の軸受やシールでは、間の流体が軸に力を及ぼして振動を生む。その力を予測するのがロータダイナミクスの中心。油膜軸受の圧力をどう計算するかの歴史も紹介する。",
+            "std": "油膜軸受・環状シールの流体誘起力がロータ振動・安定性を左右することを述べ、Rankine〜Jeffcott の危険速度研究、Tower/Petrov/Reynolds の潤滑理論、Sommerfeld/Ocvirk 等の解析解、Pinkus 以降の数値解の系譜を整理して本研究の位置づけを示す。",
+            "expert": "流体誘起力による不安定・共振がロータダイナミクスの主要関心であることを踏まえ、無限長（Sommerfeld）・短軸受（Ocvirk）近似から数値解（Pinkus, Singhal の差分）に至る潤滑理論史を跡づけ、幾何パラメータ化（Pina & Carvalho ら）と San Andrés の講義ノートを基盤に据える。"
+          }
+        },
+        {
+          "heading": "3〜6. 無次元化・パラメータ化・支配方程式",
+          "body": {
+            "easy": "複雑な流れの式を無次元にして重要な項を選び、軸受の形をパラメータで表して、解きやすい形の方程式に持ち込む部分。",
+            "std": "薄膜流れのNavier-Stokes方程式を無次元化して各項を重要度で順序づけ、膜厚方向の小ささを利用して簡略化。境界（幾何）をパラメータ化し、圧力場を支配する楕円型PDEに帰着させる導出を示す。",
+            "expert": "無次元変数でNS方程式を規格化し、膜厚比の小ささで項を階層化して楕円型PDEを導出。境界パラメータ化により膜厚関数を幾何パラメータ族で表し、幾何をPDE係数に一般的に組み込む定式化を展開する。"
+          }
+        },
+        {
+          "heading": "7. Results — 短・楕円・摩耗軸受",
+          "body": {
+            "easy": "3種類の軸受で試した結果。まず円筒（短い軸受）で文献の答えと合うことを確かめ、楕円や摩耗で応答がどう違うかを比べる。",
+            "std": "短ジャーナル軸受で文献の解析近似と照合し妥当性を確認（検証用）。その上で応用として楕円軸受（予圧 m）と摩耗軸受を同一枠組みで解いて圧力場・動特性を比較し、形状差が応答に与える影響を示す。実装は Ross-Rotordynamics に統合。",
+            "expert": "短軸受（Ishida & Yamamoto の短軸受近似との比較・検証例つき）で妥当性を担保し、応用として楕円（予圧 m=0 で円筒一致）・摩耗という異なる境界を同一の離散化・解法で解析。形状が剛性・減衰に与える差異を系統比較し、全処理をオープンソース実装で再現可能にする。"
+          }
+        }
+      ],
+      "dateAdded": "2026-07-04",
+      "status": "unread"
     }
   ]
 }
