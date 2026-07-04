@@ -38,6 +38,20 @@ export const CATEGORIES: GraphCategory[] = [
       "軸心軌跡",
       "姿勢角",
       "ホワール",
+      "旋回運動",
+    ],
+  },
+  {
+    key: "experiment",
+    label: "実験・計測",
+    color: "#5f7a8a",
+    terms: [
+      "デュアルドライブ",
+      "反動タービン",
+      "衝動タービン",
+      "非接触計測",
+      "能動磁気軸受",
+      "不確かさ定量化",
     ],
   },
   {
@@ -50,15 +64,17 @@ export const CATEGORIES: GraphCategory[] = [
       "危険速度",
       "交差剛性",
       "有効減衰",
+      "傾き・モーメント係数",
     ],
   },
   {
     key: "seal",
-    label: "シール",
+    label: "シール・環状ギャップ",
     color: "#4a6fa5",
     terms: [
       "ラビリンスシール",
       "ロマキン効果",
+      "環状ギャップ",
     ],
   },
 ];
@@ -78,6 +94,17 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "交差剛性", to: "ホワール", label: "前向き旋回を駆動" },
   { from: "交差剛性", to: "有効減衰", label: "差し引いて評価" },
   { from: "有効減衰", to: "対数減衰率", label: "安定性の目安" },
+  // --- 実験ベンチ（Yu & Wang 2026 / Kuhr 2022） ---
+  { from: "デュアルドライブ", to: "リフトオフ", label: "起動を助ける" },
+  { from: "反動タービン", to: "デュアルドライブ", label: "起動側" },
+  { from: "衝動タービン", to: "デュアルドライブ", label: "加速側" },
+  { from: "非接触計測", to: "姿勢角", label: "乱さず測る" },
+  { from: "能動磁気軸受", to: "旋回運動", label: "で加振" },
+  { from: "旋回運動", to: "傾き・モーメント係数", label: "を同定" },
+  { from: "不確かさ定量化", to: "傾き・モーメント係数", label: "信頼区間を付す" },
+  { from: "環状ギャップ", to: "交差剛性", label: "流体力を生む" },
+  { from: "環状ギャップ", to: "ラビリンスシール", label: "共通の要素" },
+  { from: "傾き・モーメント係数", to: "危険速度", label: "固有値に効く" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
