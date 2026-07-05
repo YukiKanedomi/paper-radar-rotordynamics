@@ -28,6 +28,11 @@ export const CATEGORIES: GraphCategory[] = [
       "コンプライアンス数 Λc",
       "最小膜厚",
       "リフトオフ",
+      "負荷容量",
+      "トップフォイル",
+      "ヘリンボーン溝",
+      "スラスト軸受",
+      "ガスフォイル軸受",
     ],
   },
   {
@@ -39,6 +44,9 @@ export const CATEGORIES: GraphCategory[] = [
       "姿勢角",
       "ホワール",
       "旋回運動",
+      "アンバランス応答",
+      "運転たわみ形状",
+      "Campbell図",
     ],
   },
   {
@@ -65,6 +73,8 @@ export const CATEGORIES: GraphCategory[] = [
       "交差剛性",
       "有効減衰",
       "傾き・モーメント係数",
+      "クーロン摩擦減衰",
+      "分離余裕",
     ],
   },
   {
@@ -105,6 +115,18 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "環状ギャップ", to: "交差剛性", label: "流体力を生む" },
   { from: "環状ギャップ", to: "ラビリンスシール", label: "共通の要素" },
   { from: "傾き・モーメント係数", to: "危険速度", label: "固有値に効く" },
+  // --- 負荷容量ROTとフォイル構造（DellaCorte & Valco 2000） ---
+  { from: "トップフォイル", to: "バンプフォイル", label: "圧力を伝える" },
+  { from: "バンプフォイル", to: "負荷容量", label: "設計が高める" },
+  { from: "負荷容量", to: "クーロン摩擦減衰", label: "トレードオフ" },
+  // --- ヘリンボーン溝スラスト軸受（Panda & Behera 2026） ---
+  { from: "ヘリンボーン溝", to: "負荷容量", label: "発熱を抑え高める" },
+  // --- アンバランス応答とODS（Ying & Liu 2025） ---
+  { from: "ガスフォイル軸受", to: "軸受の剛性・減衰係数", label: "力-変位モデルを持つ" },
+  { from: "軸受の剛性・減衰係数", to: "アンバランス応答", label: "モデルに使う" },
+  { from: "アンバランス応答", to: "運転たわみ形状", label: "変位パターンで説明" },
+  { from: "危険速度", to: "分離余裕", label: "運転速度との差で定義" },
+  { from: "危険速度", to: "Campbell図", label: "速度依存の固有振動数で示す" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

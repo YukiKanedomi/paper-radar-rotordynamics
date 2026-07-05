@@ -91,6 +91,99 @@
         "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
       },
       "afterword": "創刊号を組みながら「なるほど」と思ったのは、フォイル軸受の論文の『3750 rpm では浮ききれず、4000 rpm なら浮く』という具体的な数字でした。空気で浮くと聞くとふわっとした話に感じますが、浮くか浮かないかの境目はこんなにくっきりしているんですね。そしてシールの論文では、漏れを減らす工夫が同時に軸を揺らす力にも効いてしまうという綱引きが印象的でした。どちらも「すき間数十マイクロメートルの世界」の話だと思うと、機械の中の見えない攻防が少し身近になった気がします。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-05",
+      "status": "published",
+      "headline": "第2号：負荷容量係数は0.1から1.4へ、そして燃料電池車ロータが「曲がる」揺れ方を見せた話",
+      "intro": "今日はcollect.mjsで日替わりローテーションの検索語を使い、フォイル軸受・ロータダイナミクスの両トピックで最新枠・定番枠を集めました。フォイルは定番枠にNASAの負荷容量ルール・オブ・サム（DellaCorte & Valco, 2000）を選定、これがOA全文で読めたため今号のOAを担いました。最新枠は抄録ベースでヘリンボーン溝スラスト軸受の熱解析を選定。ロータは逆に、定番枠は抄録ベースでLund(1968)の気体軸受剛性・減衰係数計算法、最新枠はOpenAlexでCC-BYに絞った追加検索から見つけた、水素燃料電池車コンプレッサのアンバランス応答実験（Ying & Liu, 2025, Lubricants）をOA全文で選定しました。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000008982410",
+          "title": "フォイル空気ジャーナル軸受の負荷容量『ルール・オブ・サム』（DellaCorte & Valco, 2000）",
+          "why": "負荷容量係数が軸受の世代（第1〜第3世代）ごとに0.1→1.4まで進化してきたことを実験データから整理した、いまも使われる設計指針。NASAの技術メモとして全文が公開されている。"
+        },
+        {
+          "id": "doi:10.1177/13506501261455791",
+          "title": "ヘリンボーン溝付き空気フォイル・スラスト軸受の熱空力解析（Panda & Behera, 2026）",
+          "why": "スラスト軸受の溝形状が発熱にどう効くかという切り口で、今号の定番（負荷容量）を補う最新研究。抄録の範囲で誠実にまとめた。"
+        },
+        {
+          "id": "doi:10.1115/1.3601723",
+          "title": "気体軸受の剛性・減衰特性の計算法（Lund, 1968）",
+          "why": "気体軸受の剛性・減衰係数という、ロータダイナミクスの計算に欠かせない基礎を作った論文。今号の最新論文（Ying & Liu）もこの手法を参考文献として引用している。"
+        },
+        {
+          "id": "doi:10.3390/lubricants13040181",
+          "title": "水素燃料電池車用エアコンプレッサ・ロータのアンバランス応答（Ying & Liu, 2025）",
+          "why": "燃料電池車のコンプレッサという実務に近い題材で、曲げ危険速度に迫るロータの挙動を実験とモデルの両輪で確かめた最新研究。全文が公開されており読み応えがある。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Experiments on the influence of oil temperature and pressure on subsynchronous bifurcation and shaft orbit behaviour in automotive turbochargers（Mechanical Systems and Signal Processing, 2026）",
+          "note": "CC-BYのオープンアクセスで、サブシンクロナス振動という今号のテーマにぴったりの内容でしたが、出版社サイト(ScienceDirect)のボット保護で全文取得ができず、逐語確認ができないため見送りました。"
+        },
+        {
+          "title": "Comparative Analysis of Fully Floating and Semi-Floating Ring Bearings in High-Speed Turbocharger Rotordynamics（Lubricants, 2025）",
+          "note": "同じくCC-BYで良い候補でしたが、ロータ最新枠のOAは水素燃料電池車コンプレッサの論文で満たせたため、今号は見送りました。次号以降の候補です。"
+        },
+        {
+          "title": "foilの最新枠にarXivの他分野論文が多数混入",
+          "note": "検索語のOR検索が広く拾いすぎるため、分野ガードで除外し、OpenAlex新着側から選定しました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA4/抄録10）。arXiv側は他分野の混入が多く、分野ガードで除外してOpenAlex側から選定。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA16/抄録8）・定番枠14件（OA0/抄録14）。定番枠はOA0件だったため、Lund(1968)を抄録ベースで採用。"
+          },
+          {
+            "name": "OpenAlex（追加検索・CC-BYフィルタ）",
+            "scope": "rotor 最新枠のOA全文候補を探す補助検索",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "whirl instability",
+              "subsynchronous vibration",
+              "seal rotordynamic forces",
+              "critical speed rotor"
+            ],
+            "hits": 48,
+            "note": "collect.mjsの最新枠にOA適合の候補が薄かったため、best_oa_location.license:cc-by で追加検索。MDPI Lubricants誌のCC-BY論文（Ying & Liu 2025）を発見し採用。同誌の他候補（floating ring bearing）は次号アイドル。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor最新枠のOA充足のため、collect.mjsの結果に加えて手動でCC-BYフィルタの補助検索を行った。"
+      },
+      "afterword": "今回「なるほど」と思ったのは、DellaCorteのルール・オブ・サム論文で、負荷容量係数がたった3世代の設計進化（軸方向→周方向→半径方向へと『たわみ方』を作り込む自由度が増えるだけ）で0.1から1.4まで、10倍以上も伸びていたことです。派手な新技術ではなく、地道な構造設計の積み重ねがここまで効くのかと驚きました。もう一つは、燃料電池車のコンプレッサ論文で、片側におもりを付けたら変位が『減ってから増える』という一見不思議な挙動が出てきたところ。ロータの単純な棒のような揺れ方から、途中で弓なりに曲がる揺れ方へバトンタッチする瞬間を、まさに実験と計算の両方で捉えていて、危険速度に近づくというのはこういう感覚なのかと腑に落ちました。 — 編集担当より"
     }
   ]
 }
