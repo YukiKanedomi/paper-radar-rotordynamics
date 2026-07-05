@@ -33,6 +33,7 @@ export const CATEGORIES: GraphCategory[] = [
       "ヘリンボーン溝",
       "スラスト軸受",
       "ガスフォイル軸受",
+      "負荷容量係数 D",
     ],
   },
   {
@@ -47,6 +48,8 @@ export const CATEGORIES: GraphCategory[] = [
       "アンバランス応答",
       "運転たわみ形状",
       "Campbell図",
+      "パラメトリック励振",
+      "疑似線形挙動",
     ],
   },
   {
@@ -75,6 +78,8 @@ export const CATEGORIES: GraphCategory[] = [
       "傾き・モーメント係数",
       "クーロン摩擦減衰",
       "分離余裕",
+      "内部減衰",
+      "異方性軸受剛性",
     ],
   },
   {
@@ -127,6 +132,15 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "アンバランス応答", to: "運転たわみ形状", label: "変位パターンで説明" },
   { from: "危険速度", to: "分離余裕", label: "運転速度との差で定義" },
   { from: "危険速度", to: "Campbell図", label: "速度依存の固有振動数で示す" },
+  // --- オープンソースフォイル軸受（DellaCorte et al. 2008） ---
+  { from: "バンプフォイル", to: "負荷容量係数 D", label: "支持の複雑さが左右する" },
+  { from: "トップフォイル", to: "コンプライアンス", label: "たわみで荷重を伝える" },
+  // --- 内部減衰とロータ安定性（Zorzi & Nelson 1977） ---
+  { from: "内部減衰", to: "ホワール", label: "非同期の前向き旋回を誘発" },
+  { from: "異方性軸受剛性", to: "内部減衰", label: "由来の不安定化を抑える" },
+  // --- 低速パラメトリック励振バランシング（Dolev, Tresser & Bucher 2018） ---
+  { from: "パラメトリック励振", to: "疑似線形挙動", label: "非線形フィードバックの調整で実現" },
+  { from: "疑似線形挙動", to: "アンバランス応答", label: "低速のまま検出可能にする" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
