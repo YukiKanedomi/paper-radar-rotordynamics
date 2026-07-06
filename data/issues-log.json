@@ -261,6 +261,97 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号は両トピックとも、定番枠を抄録ベース、最新枠をOA全文（うちfoilはOpenAlex経由のNASA公開PDF、rotorはarXiv）で構成した。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、DellaCorteたちの2008年の報告書のタイトルにある『オープンソース』という言葉です。特許で守られた最先端のフォイル軸受とは別に、失効した特許や公開文献の情報だけを頼りに、実際に軸受を作って試験してみせる——ソフトウェアの世界でおなじみの発想を、金属の板ばねを曲げる工程にまで持ち込んでいるのが新鮮でした。もう一つは、テクニオンのロータバランシング論文で、『振動を大きく増幅する』ことと『細かい違いを見分ける』ことが両立しないというジレンマを、非線形なばねの効かせ方ひとつで解消できると示していたところ。二者択一だと思っていたものが、実はパラメータの選び方次第で両方手に入る場合がある、という発想の転換が印象に残りました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-07",
+      "status": "published",
+      "headline": "第4号：見かけの摩擦係数のからくりと、『すきまの長さだけでは決まらない』傾きの効き方",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foilは定番枠にNASA Glenn Researchの高温フォイル軸受の摩耗・耐久性実験（DellaCorte et al., 2000）をOA全文で選定、最新枠は抄録ベースでミスアライメント下のエアフォイル・スラスト軸受解析（Eickhoff et al., 2026）を選びました。rotorは、当初候補だった水力発電機のロータ診断論文（Abdullaev et al., e-Journal of NDT）がCC-BYの正式なオープンアクセスであるにもかかわらず、掲載サイト（NDT.net）が503エラーを返し続け全文取得できなかったため、arXivを直接検索して環状ギャップの動的な力・トルク特性の研究（Kuhr, Nordmann & Pelz, 2021）に差し替えました。定番枠も、当初有力候補だったMuszynska(1986)『Whirl and whip』が今回も抄録すら見つからず、磁気軸受のアンバランス補償ノッチフィルタの基礎論文（Herzog et al., 1996）を代わりに選定しています。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000008982407",
+          "title": "オイルフリー・ターボ機械向け高温フォイル空気軸受の性能・耐久性（DellaCorte, Lukaszewicz, Valco, Radil & Heshmat, 2000）",
+          "why": "25〜650℃・荷重10.1〜53.9kPaでの起動停止耐久試験というシンプルながら骨太な実験研究。『見かけの摩擦係数』と『真の摩擦係数』のずれの原因（スプリングプリロード）まで踏み込んで説明されており、NASA公開の技術メモとして全文が読めるため。"
+        },
+        {
+          "id": "doi:10.1115/1.4070805",
+          "title": "軸ずれ（ミスアライメント）下のエアフォイル・スラスト軸受解析——性能限界曲線に着目して（Eickhoff, Triebwasser & Schweizer, 2026）",
+          "why": "スラスト軸受のパッドごとの隙間の偏りという、単パッド解析では見えない切り口。ASME Journal of TribologyのCC-BY論文だが、出版社サイトのボット保護（Cloudflare）で全文が取得できず抄録ベースで誠実にまとめた。"
+        },
+        {
+          "id": "arxiv:2111.06646",
+          "title": "環状ギャップの動的な力・トルク特性——シミュレーション結果と傾き・トルク係数の重要性評価（Kuhr, Nordmann & Pelz, 2021）",
+          "why": "シール力・環状ギャップという核心テーマで、『すきまの長さだけでは傾きの影響を無視できるか判断できない』という具体的なスケーリング則（流量数の-1.5乗、長さのexp(1.4L)倍）を示している。arXivで全文が問題なく読める。"
+        },
+        {
+          "id": "doi:10.1109/87.531924",
+          "title": "磁気軸受の多変数フィードバックにおける一般化ノッチフィルタを用いたアンバランス補償（Herzog, Bühler, Gähler & Larsonneur, 1996）",
+          "why": "磁気浮上ロータのアンバランス由来の同期振動を、閉ループを不安定化させずに抑えるノッチフィルタという、いまも使われる制御の定番（被引用300超）のため。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotor-Bearing Hydrodynamic Modeling for Orbit-Based Diagnostics in Hydropower Units（Abdullaev et al., e-Journal of Nondestructive Testing, 2026）",
+          "note": "Unpaywall上ではCC-BYのgold OAと確認できたが、掲載サイト（NDT.net）が該当ページへのアクセスで503エラーを返し続け、複数回・複数手法で試みても全文を取得できなかったため見送り。rotor最新枠はarXivのKuhr et al.(2021)に差し替えた。"
+        },
+        {
+          "title": "Whirl and whip—Rotor/bearing stability problems（Muszynska, 1986, J. Sound Vib.）",
+          "note": "『ホワール』というテーマの古典として前々号（第3号）に続き今号も候補に挙がったが、OpenAlex・Crossref・Semantic Scholarのいずれにも抄録が登録されておらず、抄録すら裏取りできないため再び見送った。"
+        },
+        {
+          "title": "Co-design of high-speed centrifugal compressors for heat pumps（Results in Engineering, 2026）／Dynamic Analysis of Electrically Assisted Turbocharger Rotor（Int. J. Mechanical System Dynamics, 2026）",
+          "note": "いずれもgold OA（CC-BY）だが、掲載サイト（ScienceDirect／Wiley Online Library）のボット保護で全文取得ができず、rotor最新枠の候補からは見送った。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。arXiv側は他分野（ロボティクス・流体力学等）の混入が多く、分野ガードで除外してOpenAlex側から選定。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA6/抄録7）・定番枠14件（OA0/抄録14）。定番枠は全件抄録ベースの候補で、その中から抄録が確認できたHerzog et al.(1996)を選定。最新枠の最有力候補（Abdullaev, hydropower）はサイト側の503エラーで断念。"
+          },
+          {
+            "name": "arXiv（直接検索・補助）",
+            "scope": "rotor最新枠のOA全文候補を探す補助検索（submittedDate降順）",
+            "terms": [
+              "rotordynamic",
+              "whirl instability",
+              "subsynchronous vibration",
+              "rotor-bearing"
+            ],
+            "hits": 10,
+            "note": "collect.mjsの最新枠でOA全文が取得できなかったため、arXiv APIを直接OR検索。環状ギャップのシール力（Kuhr, Nordmann & Pelz 2021）を発見・採用。他はANN応用や生体力学など主題外のため除外。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor最新枠のOA充足のため、collect.mjsの結果に加えてarXivの直接検索を補助的に行った。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、DellaCorteたちの論文で『見かけの摩擦係数』と『本当の摩擦係数』が違う、というくだりです。トルクを荷重で単純に割ると値がバラバラに見えるのに、荷重を何段階か変えてグラフの傾きを見るだけで、ちゃんと一つの値に落ち着く。測り方ひとつで『本当の姿』が隠れたり見えたりするんだな、と素朴に感心しました。もう一つは、環状ギャップの論文で『すきまが短ければ傾きの影響は無視してよい』という単純な目安が、流れの速さ次第では崩れる、という話。ひとつの数字（すきまの長さ）だけを見て安心してはいけない、という教訓は機械の世界に限らない気がしました。 — 編集担当より"
     }
   ]
 }
