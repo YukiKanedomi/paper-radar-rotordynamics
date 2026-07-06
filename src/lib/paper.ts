@@ -14,6 +14,11 @@ export function streamLabel(stream: Paper["stream"]): string {
   return stream === "classic" ? "定番" : "最新";
 }
 
+// 特別号なら「特別号」、通常は定番/最新。バッジのラベルに使う（§: 特別号は stream を出さない）
+export function streamOrSpecialLabel(p: Paper): string {
+  return p.special ? "特別号" : streamLabel(p.stream);
+}
+
 // 表示タイトルは和訳を主に。和訳が無ければ原題そのまま。
 export function displayTitle(p: Paper): string {
   return p.titleJa?.trim() || p.title;

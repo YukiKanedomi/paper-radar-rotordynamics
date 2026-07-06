@@ -6,7 +6,7 @@ import { usePapers } from "@/lib/data";
 import type { Paper, PapersData } from "@/types";
 import {
   paperHref,
-  streamLabel,
+  streamOrSpecialLabel,
   shortMeta,
   displayTitle,
   originalTitle,
@@ -214,7 +214,7 @@ function HomeView({ data }: { data: PapersData }) {
                     {p.oa ? "OA全文" : "抄録ベース"}
                   </span>
                   {" · "}
-                  {[shortMeta(p), streamLabel(p.stream)].filter(Boolean).join(" · ")}
+                  {[shortMeta(p), streamOrSpecialLabel(p)].filter(Boolean).join(" · ")}
                 </div>
               </Link>
             ))
@@ -226,13 +226,13 @@ function HomeView({ data }: { data: PapersData }) {
 }
 
 function DeliveryRow({ p, read, fav }: { p: Paper; read: boolean; fav: boolean }) {
-  const chipClass = p.stream === "classic" ? "c-def" : "c-new";
+  const chipClass = p.special ? "c-special" : p.stream === "classic" ? "c-def" : "c-new";
   return (
     <Link className={`pl${read ? " read" : ""}`} to={paperHref(p.id)}>
       <div className="pt">{displayTitle(p)}</div>
       {originalTitle(p) && <div className="pt-orig">{originalTitle(p)}</div>}
       <div className="pm">
-        <span className={`chip2 ${chipClass}`}>{streamLabel(p.stream)}</span>
+        <span className={`chip2 ${chipClass}`}>{streamOrSpecialLabel(p)}</span>
         <span className="chip2 c-oa">{p.oa ? "OA" : "抄録"}</span>
         {[p.authors, p.year ? String(p.year) : ""].filter(Boolean).join(" · ")}
         {read && <span className="read-tag">既読</span>}

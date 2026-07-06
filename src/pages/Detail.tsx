@@ -6,6 +6,7 @@ import { usePapers } from "@/lib/data";
 import type { Level, Paper, Term } from "@/types";
 import {
   streamLabel,
+  streamOrSpecialLabel,
   oaLabel,
   sourceUrl,
   displayTitle,
@@ -185,7 +186,7 @@ function DetailView({
         </div>
 
         <div className="kick">
-          {streamLabel(p.stream)}論文 — {topicLabel}
+          {p.special ? "特別号" : `${streamLabel(p.stream)}論文`} — {topicLabel}
         </div>
         <h1>{displayTitle(p)}</h1>
         {originalTitle(p) && <div className="h1-orig">{originalTitle(p)}</div>}
@@ -197,9 +198,13 @@ function DetailView({
           {p.doi ? ` · DOI:${p.doi}` : ""}
         </div>
         <div className="badges">
-          <span className={`bd ${p.stream === "classic" ? "fill" : "line"}`}>
-            {streamLabel(p.stream)}
-          </span>
+          {p.special ? (
+            <span className="bd fill special">{streamOrSpecialLabel(p)}</span>
+          ) : (
+            <span className={`bd ${p.stream === "classic" ? "fill" : "line"}`}>
+              {streamLabel(p.stream)}
+            </span>
+          )}
           <span className="bd line">{oaLabel(p.oa)}</span>
           <span className="bd">{topicLabel}</span>
         </div>

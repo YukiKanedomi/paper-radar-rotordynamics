@@ -123,6 +123,12 @@
   border: 1px solid var(--line);
   color: var(--mut);
 }
+.home-page .c-special {
+  background: var(--accent);
+  color: #fff;
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 0 2px rgba(26, 94, 84, 0.18);
+}
 .home-page .search {
   width: 100%;
   font-family: "Yu Gothic UI", sans-serif;
@@ -708,6 +714,10 @@
 .detail-page .bd.line {
   border-color: var(--accent);
   color: var(--accent);
+}
+.detail-page .bd.special {
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 0 2px rgba(26, 94, 84, 0.18);
 }
 .detail-page .lvl {
   position: sticky;

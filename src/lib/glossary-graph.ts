@@ -80,6 +80,9 @@ export const CATEGORIES: GraphCategory[] = [
       "分離余裕",
       "内部減衰",
       "異方性軸受剛性",
+      "固有振動数",
+      "曲げ振動数",
+      "接触剛性",
     ],
   },
   {
@@ -141,6 +144,10 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 低速パラメトリック励振バランシング（Dolev, Tresser & Bucher 2018） ---
   { from: "パラメトリック励振", to: "疑似線形挙動", label: "非線形フィードバックの調整で実現" },
   { from: "疑似線形挙動", to: "アンバランス応答", label: "低速のまま検出可能にする" },
+  // --- 特別号：高速PMロータの固有振動数解析（Huang & Le 2018・抄録ベース） ---
+  { from: "固有振動数", to: "曲げ振動数", label: "曲げモードの固有値" },
+  { from: "接触剛性", to: "曲げ振動数", label: "組立部の剛性が左右" },
+  { from: "曲げ振動数", to: "危険速度", label: "曲げ危険速度に直結" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

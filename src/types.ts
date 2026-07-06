@@ -88,6 +88,7 @@ export interface Paper {
   citationNote: string;
   citationCount?: number; // OpenAlex cited_by_count（概数・信頼できる時のみ表示。不明なら省略）
   issue?: string; // 配信号（YYYY-MM-DD）。dateAdded とは別。currentIssue と一致するものが「今日の配信」
+  special?: boolean; // 特別号（ユーザー指定の論文を深く紹介）。true のとき「特別号」バッジを出し、定番/最新ラベルは出さない
   levels: Record<Level, LevelText>;
   equations: Equation[];
   figures: Figure[];
