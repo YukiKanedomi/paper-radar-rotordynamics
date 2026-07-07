@@ -352,6 +352,98 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor最新枠のOA充足のため、collect.mjsの結果に加えてarXivの直接検索を補助的に行った。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、DellaCorteたちの論文で『見かけの摩擦係数』と『本当の摩擦係数』が違う、というくだりです。トルクを荷重で単純に割ると値がバラバラに見えるのに、荷重を何段階か変えてグラフの傾きを見るだけで、ちゃんと一つの値に落ち着く。測り方ひとつで『本当の姿』が隠れたり見えたりするんだな、と素朴に感心しました。もう一つは、環状ギャップの論文で『すきまが短ければ傾きの影響は無視してよい』という単純な目安が、流れの速さ次第では崩れる、という話。ひとつの数字（すきまの長さ）だけを見て安心してはいけない、という教訓は機械の世界に限らない気がしました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-08",
+      "status": "published",
+      "headline": "第5号：フォイル軸受の『すきま』が壊し方を変える話と、3度目の正直で読めた『ホワール』の原典",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foilの定番枠は、半径すきま（フォイル軸受特有の紛らわしい概念）が負荷容量と2つの異なる壊れ方を左右することを実測したNASAの技術報告書（Radil, Howard & Dykas, 2002）をOA全文で選定。最新枠は、超臨界CO2タービン向けガスフォイル軸受の動特性を扱う論文（Li, Li & Li, 2025）を抄録ベースで採用しました（本命候補だったEickhoff/Triebwasser/Schweizerの2025年論文はASME公式サイトのボット保護で全文が取得できず見送り）。rotorの定番枠は、第3号・第4号と2度にわたり抄録すら見つからず見送ってきたMuszyńska(1986)『Whirl and whip』を、著者自身がNASAルイス研究センターの技術報告書として公開していたプレプリントを発見し、ついに全文で紹介できました。最新枠は、ティルティングパッド軸受の非荷重パッドを固定インサートに置き換える実務的な工夫を評価した論文（Bradley, Delgado & San Andrés, 2026）を抄録ベースで選定しています。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000208982578",
+          "title": "半径すきまがフォイル空気軸受の性能に与える影響（Radil, Howard & Dykas, 2002）",
+          "why": "半径すきまという、フォイル軸受特有の紛らわしい概念を正面から実測した基礎データ。最適なすきまの存在と、熱暴走・緩やかな低下という2つの異なる壊れ方を定量的に示しており、NASA技術報告書として全文が読めるため。"
+        },
+        {
+          "id": "doi:10.1115/1.4070565",
+          "title": "第三世代CO2ガスフォイルジャーナル軸受の熱流体力学的動特性解析（Li, Li & Li, 2025）",
+          "why": "超臨界CO2タービンという新しい応用で、周囲温度・圧力が軸受の剛性・減衰係数に与える影響を具体的な数値で示している。全文は取得できなかったが、抄録だけでも定量的な内容が豊富だったため抄録ベースで採用。"
+        },
+        {
+          "id": "doi:10.1016/s0022-460x(86)80146-8",
+          "title": "ホワールとホイップ―ロータ/軸受系の安定性問題（Muszyńska, 1986）",
+          "why": "『ホワール』というこのアプリの中心テーマの、まさに古典中の古典。第3号・第4号と2度にわたり抄録すら裏取りできず見送ってきたが、今号でNASAルイス研究センターの技術報告書として本文が公開されていることを発見し、ついに全文で紹介できた。"
+        },
+        {
+          "id": "doi:10.1115/1.4070986",
+          "title": "低ドラッグ動力損失ティルティングパッド・ジャーナル軸受の動特性評価（Bradley, Delgado & San Andrés, 2026）",
+          "why": "非荷重パッドを固定インサートに置き換えるという実務的な工夫について、動力損失の増減と、潤滑油不足による剛性・減衰の大幅な低下という具体的な数値が抄録から読み取れたため。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Passively Enhancing Gas Thrust Bearing Performance...（Eickhoff, Triebwasser & Schweizer, 2025, ASME）",
+          "note": "OA（hybrid）論文だが、出版社サイト（ASME Digital Collection）のボット保護で全文が取得できず見送り。代わりに抄録が読み取れたLi, Li & Li (2025) を採用。"
+        },
+        {
+          "title": "Axial Load Tester for Elastic-Foil Thrust Bearings（Lubricants, 2026）",
+          "note": "創刊号に続き今回もMDPIサイトのボット保護（Akamai）で全文取得ができず見送り。"
+        },
+        {
+          "title": "foil最新枠のarXiv候補の多くがオフトピック",
+          "note": "検索語のOR一致で、熱対流・超伝導・磁気圏物理など無関係な分野の論文が多数混入。分野ガードで除外し、OpenAlex新着側から選定した。"
+        },
+        {
+          "title": "rotor定番枠の高被引用候補にも字面だけの一致が多数",
+          "note": "『Unbalanced』『Subsynchronous』という単語だけが一致する統計学の論文や、風力発電機とAC系統の間のサブシンクロナス相互作用（電力工学）の論文が上位に混入。ロータダイナミクス物理の論文ではないため除外した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。arXiv側は本日も他分野論文の混入が大半で、分野ガードで除外しOpenAlex側から選定。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA7/抄録6）・定番枠14件（OA0/抄録14）。定番枠上位は字面一致のオフトピックが多く、on-topicな高被引用候補を精査して選定。"
+          },
+          {
+            "name": "OpenAlex + Semantic Scholar + Crossref + WebSearch（補助・OA裏取り）",
+            "scope": "rotor定番枠の本文取得（Muszyńska 1986）",
+            "terms": [
+              "Whirl and whip Rotor/bearing stability problems Muszynska"
+            ],
+            "hits": 1,
+            "note": "ジャーナル本体（Journal of Sound and Vibration）は非OAで抄録も未登録だったが、WebSearchで著者自身によるNASAルイス研究センター技術報告書（NTRS収録・パブリックドメイン）のプレプリントPDFを発見。pdftotext・目視確認の両方で本文を裏取りしOA全文として採用した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor定番枠のOA裏取りのため、collect.mjsの結果に加えてWebSearchによる補助調査を行った。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、ジャーナルの正式版が有料でも、著者自身や所属機関（NASAなど）が技術報告書として同じ内容を無料公開していることがある、という発見でした。『ホワール』の生みの親であるMuszynskaさんの論文は、前々号・前号と2回続けて抄録すら見つからず諦めかけていたのですが、まさかNASAの報告書として本人が公開していたとは思いませんでした。もう一つは、フォイル軸受の『すきま』の話です。すきまが足りないと熱暴走で焼き付き、多すぎても緩やかに性能が落ちる。同じ「余裕」という言葉でも、足りない方向と余りすぎる方向で壊れ方の性質がまったく違う、というのは機械に限らずいろいろな場面で応用が利きそうな見方だと感じました。 — 編集担当より"
     }
   ]
 }
