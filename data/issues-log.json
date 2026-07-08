@@ -444,6 +444,95 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor定番枠のOA裏取りのため、collect.mjsの結果に加えてWebSearchによる補助調査を行った。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、ジャーナルの正式版が有料でも、著者自身や所属機関（NASAなど）が技術報告書として同じ内容を無料公開していることがある、という発見でした。『ホワール』の生みの親であるMuszynskaさんの論文は、前々号・前号と2回続けて抄録すら見つからず諦めかけていたのですが、まさかNASAの報告書として本人が公開していたとは思いませんでした。もう一つは、フォイル軸受の『すきま』の話です。すきまが足りないと熱暴走で焼き付き、多すぎても緩やかに性能が落ちる。同じ「余裕」という言葉でも、足りない方向と余りすぎる方向で壊れ方の性質がまったく違う、というのは機械に限らずいろいろな場面で応用が利きそうな見方だと感じました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-09",
+      "status": "published",
+      "headline": "第6号：3度目の正直で読めたMDPIのフォイル軸受論文と、スペースシャトルが教えたロータの暴れ方",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foilの最新枠は、創刊号でボット保護に阻まれて一度見送っていた弾性フォイルスラスト軸受の軸荷重試験機の論文（Lin, Han, Song & Wei, 2026, MDPI Lubricants）を、今回は別の取得経路で全文まで読めたためOAで採用。定番枠は、フォイル空気軸受技術25年の歩みを振り返る概説論文（Agrawal, 1997, 被引用295）を抄録ベースで選びました。rotorの最新枠は、当初はターボチャージャーの副同期分岐実験（Pesthy & Tóth-Nagy, 2026, MSSP）を本命候補にしていましたが、出版社サイトの認証チェックに阻まれて抄録すら取得できなかったため、三葉ジャーナル軸受のパッド間製造ばらつきをシステムレベルで検証した論文（Urbiola-Soto & Delgado, 2026, MDPI Lubricants）に差し替えました。定番枠は、スペースシャトル・メインエンジンの高圧燃料ターボポンプで実際に起きた不安定振動を扱った、ロータダイナミクス分野の代表的な事例研究（Childs, 1978）を抄録ベースで採用しています。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants14040177",
+          "title": "高速ターボ機械用弾性フォイルスラスト軸受の軸荷重試験機（Lin, Han, Song & Wei, 2026）",
+          "why": "創刊号でMDPIサイトのボット保護により一度見送っていた論文。今回は全文取得に成功し、ひずみゲージ式試験機の設計からFEM較正、実働荷重スペクトルの指数減衰モデルまで具体的な数値で紹介できたため。"
+        },
+        {
+          "id": "doi:10.1115/97-gt-347",
+          "title": "フォイル空気/ガス軸受技術の概観（Agrawal, 1997）",
+          "why": "フォイル軸受技術25年の歩みを俯瞰した定番的な概説論文（被引用295）。ボーイング747のエアサイクル機械でMTBF10万時間超という具体的な実績が抄録から読み取れたため。"
+        },
+        {
+          "id": "doi:10.3390/lubricants14020083",
+          "title": "製造ばらつきを考慮した三葉ジャーナル軸受のロータダイナミクスへのシステムレベルの影響（Urbiola-Soto & Delgado, 2026）",
+          "why": "軸受パッドの製造誤差という実務的なテーマを、7段遠心水素圧縮機の実機規模モデルで検証。均一な公差限界より不揃いなパッド構成の方が危険というAPI規格への示唆を、全文OAで具体的な数値まで追えたため。"
+        },
+        {
+          "id": "doi:10.1115/1.3446326",
+          "title": "スペースシャトル・メインエンジン高圧燃料ターボポンプのロータダイナミクス不安定問題（Childs, 1978）",
+          "why": "実際に起きた準同期旋回の不安定振動を扱った、ロータダイナミクス分野で今も語り継がれる代表事例（被引用約90）。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Experiments on the influence of oil temperature and pressure on subsynchronous bifurcation...（Pesthy & Tóth-Nagy, MSSP, 2026）",
+          "note": "OpenAlexではOA（hybrid, CC-BY）と表示されたが、出版社サイト（ScienceDirect）の認証チェックに阻まれ、全文どころか抄録すら取得できず見送り。代わりに三葉軸受のパッドばらつきを扱うUrbiola-Soto & Delgado (2026) を採用した。"
+        },
+        {
+          "title": "Rotordynamics prediction in engineering（Parkinson, 1991, Journal of Sound and Vibration）",
+          "note": "OpenAlex定番枠の高被引用候補（被引用421）だったが、実体はJournal of Sound and Vibration誌の2ページの書評（book review）であることが判明し、要約対象として不適切なため候補から外した。"
+        },
+        {
+          "title": "rotor定番枠の1970〜90年代の高被引用候補の多くは抄録自体が未登録",
+          "note": "OpenAlex・Semantic Scholar・Crossrefのいずれでも抄録が取得できない（出版社側で非公開）古い論文が多く、内容の裏取りができないため候補から除外。抄録が確認できたChilds (1978) を採用した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA4/抄録10）。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA16/抄録8）・定番枠14件（OA0/抄録14）。定番枠は全件非OAで、上位候補の多くは抄録自体が非公開（出版社側で未提供）のため裏取りできず見送った。"
+          },
+          {
+            "name": "OpenAlex（補助・追加検索）",
+            "scope": "rotorのOA代替候補・抄録付き定番候補の探索",
+            "terms": [
+              "rotor whirl bearing seal stability（2023年以降・OA限定）",
+              "rotordynamics whirl instability bearing（高被引用・要旨あり限定）"
+            ],
+            "hits": 14,
+            "note": "collect.mjs候補では要旨・全文とも取得できない候補が多かったため、OpenAlex検索APIで直接、抄録の残る高被引用論文（Childs 1978等）とOAの新着論文（三葉軸受論文等）を探索した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor最新枠・定番枠それぞれで本命候補の全文/抄録が取得できなかったため、OpenAlex検索APIによる補助調査を行った。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、『オープンアクセス』の論文でも、実際に機械で中身まで読めるかどうかは出版社サイトの作り次第でまったく違う、という体験でした。MDPI誌の弾性フォイルスラスト軸受の論文は創刊号で一度見送っていたのですが、今回は取得の仕方を変えたら無事に全文まで読めました。一方で同じくCC-BYのはずだったターボチャージャーの論文は、出版社サイトの認証チェックに阻まれて結局抄録すら読めず見送りに。『権利上は公開されている』ことと『実際に中身へたどり着けるか』は別問題なのだと実感しました。もう一つは、1970〜90年代のロータダイナミクスの古典論文は、今のデータベースを探しても抄録そのものが登録されていないものが意外と多いという発見です。そうした中で見つかったChildsさんのスペースシャトル・エンジンの不安定振動の論文は、短い抄録だけでも当時の緊張感が伝わってくる内容でした。 — 編集担当より"
     }
   ]
 }
