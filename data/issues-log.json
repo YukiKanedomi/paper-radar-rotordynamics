@@ -533,6 +533,115 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はrotor最新枠・定番枠それぞれで本命候補の全文/抄録が取得できなかったため、OpenAlex検索APIによる補助調査を行った。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、『オープンアクセス』の論文でも、実際に機械で中身まで読めるかどうかは出版社サイトの作り次第でまったく違う、という体験でした。MDPI誌の弾性フォイルスラスト軸受の論文は創刊号で一度見送っていたのですが、今回は取得の仕方を変えたら無事に全文まで読めました。一方で同じくCC-BYのはずだったターボチャージャーの論文は、出版社サイトの認証チェックに阻まれて結局抄録すら読めず見送りに。『権利上は公開されている』ことと『実際に中身へたどり着けるか』は別問題なのだと実感しました。もう一つは、1970〜90年代のロータダイナミクスの古典論文は、今のデータベースを探しても抄録そのものが登録されていないものが意外と多いという発見です。そうした中で見つかったChildsさんのスペースシャトル・エンジンの不安定振動の論文は、短い抄録だけでも当時の緊張感が伝わってくる内容でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-10",
+      "status": "published",
+      "headline": "第7号：『オープンアクセス』の壁に阻まれ、NASAの技術報告書に助けられた回",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。当初の本命候補は、foil最新枠がair foil thrust bearingの熱弾性流体連成モデル論文（Li, Wu, Shao & An, 2026, Elsevier International Journal of Thermal Sciences）、rotor最新枠が自動車ターボチャージャーの副同期分岐実験論文（Pesthy & Tóth-Nagy, 2026, Elsevier Mechanical Systems and Signal Processing）でした。どちらもOpenAlex・Unpaywallでは正式にOA（オープンアクセス）と表示されていましたが、実際にはScienceDirectのボット保護（Cloudflare）に阻まれ、全文どころか抄録の1文字も取得できず見送りに。代わりに、NASA Technical Reports Server（NTRS）で公開されている技術報告書——foilはガスフォイル軸受解析コードXLGFBTHの実測検証（Howard & San Andrés, 2010）、rotorはSSME高圧酸素ターボポンプ向け静圧軸受の試験装置報告（Childs & Hale, 1994）——を新たに探し当て、全文OAとして採用しました。foil最新枠・rotor最新枠のもう1件は、それぞれ抄録が確実に取得できたSAGE誌（Shao et al., 2025）とSPE Journal誌（Weng et al., 2026）の論文を抄録ベースで採用しています。",
+      "picked": [
+        {
+          "id": "ntrs:20100031130",
+          "title": "ガスフォイル軸受のロータダイナミクス解析ツールの新規評価（Howard & San Andrés, 2010）",
+          "why": "NASAグレン研究センターの実機ロータダイナミクス試験リグで、解析コードXLGFBTHの危険速度・振幅予測を実測ボード線図と比較した基礎資料。NASA技術報告書のため全文が無条件で読め、剛性・減衰係数の実数表まで確認できたため。"
+        },
+        {
+          "id": "doi:10.1177/13506501251401952",
+          "title": "複合バンプフォイル空気軸受で支持されたロータの動的挙動に関する数値的研究（Shao, Li, Wu, Xu & An, 2025）",
+          "why": "本命候補だった同著者グループの熱弾性流体連成モデル論文がScienceDirectで取得不能だったため、抄録が確実に取得できた同グループの関連論文（危険速度・振動モード・軸心軌跡の数値解析）を抄録ベースで採用。"
+        },
+        {
+          "id": "doi:10.1115/1.2927226",
+          "title": "高速静圧軸受のロータダイナミック係数を同定する試験装置（Childs & Hale, 1994）",
+          "why": "スペースシャトル・メインエンジンのボールベアリング摩耗問題を背景にした静圧軸受の試験装置報告。剛性・減衰・添加質量係数の実測データに加え、旋回周波数比0.5という安定性上の課題まで具体的に読み取れたため。"
+        },
+        {
+          "id": "doi:10.2118/234675-pa",
+          "title": "深井戸掘削管のスティックスリップ・ホワール振動——多次元パラメータ応答特性とリアルタイム定量診断（Weng et al., 2026）",
+          "why": "軸受・ターボ機械ではなく石油掘削の応用だが、スティックスリップとホワールという回転体力学の自励振動現象を、実坑井データで定量的な指標（SSI・WI・WIEP）にまで落とし込んでいる点が読み応えとして良質だったため。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Establishment of thermo-elastic-fluid coupling model of...air foil thrust bearing（Li, Wu, Shao & An, 2026, Elsevier IJTS）",
+          "note": "Unpaywallでは publisher hosted・CC BY-NC-ND のOAと表示されたが、ScienceDirectのアクセスがCloudflareのボット保護で403となり、要旨API（Crossref/OpenAlex/Semantic Scholar）にも抄録が登録されておらず、内容を一切裏取りできなかったため見送り。"
+        },
+        {
+          "title": "Experiments on the influence of oil temperature and pressure on subsynchronous bifurcation and shaft orbit behaviour in automotive turbochargers（Pesthy & Tóth-Nagy, 2026, Elsevier MSSP）",
+          "note": "こちらもUnpaywallではCC BYのOAと表示されたが、上と同じくScienceDirectが403で阻み、抄録すら取得できなかったため見送り。ターボチャージャーの副同期分岐・軸心軌跡という好題材だっただけに惜しい一件だった。"
+        },
+        {
+          "title": "rotor定番枠の高被引用候補の多く（Lund 1965以外の初期OpenAlex候補）",
+          "note": "当日のOpenAlex定番枠14件はいずれも非OAで、統計学・電力系統など『unbalance』『critical』等の語で誤ヒットした分野外候補も多かった。分野ガードと抄録取得可否で絞り込んだ結果、抄録が確実に取れる候補が少なく、最終的にNTRSで全文が読めるChilds & Hale (1994) を定番枠の主軸に据えた。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。最新枠は分野ガード通過後もarXivの一般流体力学論文が上位を占め、on-topicなOpenAlex候補は14件目以降に集中していた。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA16/抄録8）・定番枠14件（OA0/抄録14）。定番枠は統計学・電力系統論文の誤ヒットが上位を占めた。"
+          },
+          {
+            "name": "Unpaywall / Crossref / OpenAlex Works API（本文・抄録取得の裏取り）",
+            "scope": "foil・rotor 共通、選定候補の全文/抄録アクセス確認",
+            "terms": [
+              "DOI単位のUnpaywall照会（is_oa・oa_locations）",
+              "Crossref abstract照会",
+              "OpenAlex abstract_inverted_index照会"
+            ],
+            "hits": 0,
+            "note": "本命候補2件（Li et al. IJTS、Pesthy & Tóth-Nagy MSSP）はUnpaywallでOA表示だったが、ScienceDirectアクセスが403（Cloudflare）で全滅。Crossref/OpenAlex/Semantic Scholarのいずれにも抄録データが登録されておらず、代替候補への切り替えを判断した。"
+          },
+          {
+            "name": "NASA Technical Reports Server（NTRS）直接検索",
+            "scope": "foil・rotor 共通、全文OA代替候補の探索",
+            "terms": [
+              "gas foil bearing rotordynamic",
+              "rotordynamic coefficients hydrostatic bearing"
+            ],
+            "hits": 11,
+            "note": "ScienceDirectで取得不能になったOA候補の代わりに、NASA発の技術報告書（TM/CP）を直接検索。Howard & San Andrés (2010) とChilds & Hale (1994) を発見し、いずれも全文PDF/txtが無条件でダウンロードでき、公有（public domain）のため図もそのまま使用できた。"
+          },
+          {
+            "name": "OpenAlex（rotor定番枠の追加調査）",
+            "scope": "rotor 定番枠、抄録取得可否の確認",
+            "terms": [
+              "whirl instability / bearing stiffness damping coefficients 等（cited_by_count順、抄録有無で再フィルタ）"
+            ],
+            "hits": 30,
+            "note": "分野ガード通過かつ抄録が確実に取得できる候補を再抽出したところ、Lund (1965)「The Stability of an Elastic Rotor in Journal Bearings With Flexible, Damped Supports」等が見つかったが、今号はNTRSで全文が読めるChilds & Hale (1994) を優先した。この調査の途中でOpenAlexの1日あたりの無償クレジットを使い切り、以降の追加検索は翌日以降に持ち越した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号は本命のOA候補2件がScienceDirectのボット保護で読めないという事態を受け、NASA NTRSでの直接検索という通常のcollect.mjsフローには無い追加調査を行った。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、データベース上は同じ『オープンアクセス』でも、出版社のサイトがボット保護で固められていると人間が読むにも機械が読むにも実質アクセス不能になる、という体験でした。しかも今回はそれが2件続けて起きて、当初の本命候補をどちらも諦めることに。困っていたところ、NASAが自前で公開している技術報告書（NTRS）に同じくらい読み応えのある論文が見つかり、しかも公有（public domain）だから図もそのまま使えるという副産物までありました。『民間出版社のオープンアクセス』と『政府機関がそもそも著作権を主張しない公開』は似ているようで実務上の使い勝手がまったく違うのだと、身をもって学んだ回でした。 — 編集担当より"
     }
   ]
 }
