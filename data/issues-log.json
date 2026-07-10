@@ -642,6 +642,116 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号は本命のOA候補2件がScienceDirectのボット保護で読めないという事態を受け、NASA NTRSでの直接検索という通常のcollect.mjsフローには無い追加調査を行った。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、データベース上は同じ『オープンアクセス』でも、出版社のサイトがボット保護で固められていると人間が読むにも機械が読むにも実質アクセス不能になる、という体験でした。しかも今回はそれが2件続けて起きて、当初の本命候補をどちらも諦めることに。困っていたところ、NASAが自前で公開している技術報告書（NTRS）に同じくらい読み応えのある論文が見つかり、しかも公有（public domain）だから図もそのまま使えるという副産物までありました。『民間出版社のオープンアクセス』と『政府機関がそもそも著作権を主張しない公開』は似ているようで実務上の使い勝手がまったく違うのだと、身をもって学んだ回でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-11",
+      "status": "published",
+      "headline": "第8号：出版社サイトに阻まれた回、そして『高被引用421件の論文』が実は書評だった件",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foil最新枠の本命候補（Li, Wu, Shao & An 2026, Elsevier International Journal of Thermal Sciences）は前号（2026-07-10）でも見送った同誌の論文で、今回は改めて別のElsevier論文（Sarrazin & Liebich 2026, Journal of Manufacturing Processes「SLA-based rapid toolingによるconical gas foil bearingの製造」）を試しましたが、やはりScienceDirectのボット保護（403・CAPTCHA）で全文が読めず見送りました。rotor最新枠でもWiley「International Journal of Mechanical System Dynamics」誌（gold OA・CC-BY表示）の論文がCloudflareの認証チャレンジ（402/403）で読めず、NDT.net掲載の水力発電ロータ診断論文も403で弾かれました。そこで前号に続きNASA Technical Reports Server（NTRS）を直接検索したところ、foilは「Conceptual Design and Feasibility of Foil Bearings for Rotorcraft Engines: Hot Core Bearings」（Howard, 2007）、rotorは「Test Results for Rotordynamic Coefficients of the SSME HPOTP Turbine Interstage Seal with Two Swirl Brakes」（Childs, Baskharone & Ramsey, 1991）という、いずれも全文が無条件で読める技術報告書を発見し、全文OAとして採用しました。もう一つの発見として、rotor定番枠で被引用421件と高被引用だった「Rotordynamics prediction in engineering」（Parkinson, 1991, Journal of Sound and Vibration）をSemantic Scholarで確認したところ、実体はLalanne & Ferrarioの教科書に対する2段落の書評であることが判明し、要約対象として不適切なため除外しました。代わりに、抄録が詳細に取得できた「Chaotic motions of a rigid rotor in short journal bearings」（Adiletta, Guido & Rossi, 1996, Nonlinear Dynamics）を定番枠に採用しています。foil定番枠は、抄録が確実に取得できた「Calculation of Stiffness and Damping Coefficients for Elastically Supported Gas Foil Bearings」（Peng & Carpino, 1993, ASME Journal of Tribology）を抄録ベースで採用しました。",
+      "picked": [
+        {
+          "id": "ntrs:20080005559",
+          "title": "ロータクラフト用エンジンのホットセクションへのフォイル軸受適用——概念設計と実現性評価（Howard, 2007）",
+          "why": "NASAグレン研究センターの技術報告書で全文が無条件で読め、実機（GE CT7/T700）に相関させたロータダイナミクスモデルによる危険速度・安定性評価と、ミスアライメント試験の実データ（転がり軸受比約20倍の耐性等）まで確認できたため。foil最新枠のOA候補がElsevier系で軒並み読めなかった代わりの採用。"
+        },
+        {
+          "id": "doi:10.1115/1.2920982",
+          "title": "弾性支持されたガスフォイル軸受の剛性・減衰係数の計算（Peng & Carpino, 1993）",
+          "why": "被引用225件のフォイル軸受動特性係数の定番。抄録が詳細に取得でき、抄録の範囲内で誠実に紹介できたため（全文はASME非OAで抄録ベース）。"
+        },
+        {
+          "id": "ntrs:19920005139",
+          "title": "SSME高圧酸素ターボポンプ タービン間段シールのロータダイナミック係数試験——2種のスワールブレーキ比較（Childs, Baskharone & Ramsey, 1991）",
+          "why": "NASA CP（Rotordynamic Instability Problems in High-Performance Turbomachineryワークショップ）収録の技術報告書で全文が無条件で読め、ホワール周波数比・交差剛性の実測データ、SSMEの実際の振動問題を背景にした具体的な安定性改善の物語まで追えたため。rotor最新枠のOA候補（Wiley・NDT.net）が読めなかった代わりの採用。"
+        },
+        {
+          "id": "doi:10.1007/bf00045106",
+          "title": "短尺ジャーナル軸受に支持された剛体ロータのカオス運動（Adiletta, Guido & Rossi, 1996）",
+          "why": "本命候補だった被引用421件の論文が実は書評だったため除外し、代わりに選定。抄録がSpringerのメタデータから詳細に取得でき、カオス発現条件（εs>0.4等）まで具体的な数値付きで紹介できたため（被引用255件、抄録ベース）。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "On the manufacturing of conical gas foil bearings using SLA-based rapid tooling（Sarrazin & Liebich, 2026, Elsevier Journal of Manufacturing Processes）",
+          "note": "OpenAlexではhybrid OA（CC-BY）と表示されたが、ScienceDirectへのアクセスがCAPTCHA・ボット保護（403）で阻まれ、抄録以上の内容を確認できなかったため見送り。前号のScienceDirect遮断と同じパターン。"
+        },
+        {
+          "title": "Dynamic Analysis of Electrically Assisted Turbocharger Rotor Considering Contact Effects in Nut Structures（Liang et al., 2026, Wiley International Journal of Mechanical System Dynamics）",
+          "note": "OpenAlexではgold OA（CC-BY）と表示されたが、Wiley Online Libraryへのアクセスが402/403（Cloudflareの認証チャレンジ）で阻まれ、抄録以上を確認できず見送り。ScienceDirectだけでなくWileyでも同種の壁に当たった。"
+        },
+        {
+          "title": "Rotor-Bearing Hydrodynamic Modeling for Orbit-Based Diagnostics in Hydropower Units（NDT.net掲載, 2026）",
+          "note": "OA表示だったが、掲載先のNDT.netが403で内容確認不能。水力発電ロータの軸心軌跡診断という好題材だっただけに惜しい一件。"
+        },
+        {
+          "title": "Rotordynamics prediction in engineering（Parkinson, 1991, Journal of Sound and Vibration）",
+          "note": "OpenAlexの被引用数421件という高い数字に一度は本命候補にしたが、Semantic Scholarで正式タイトルを確認したところ「Rotordynamics prediction in engineering: 1990, by M. Lalanne and G. Ferrario」という教科書への書評であることが判明。要約に足る研究内容がないため除外。タイトル・被引用数だけでは実体が分からない好例だった。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。最新枠のOA候補の多くはarXivの一般流体力学論文で分野外、on-topicなOpenAlex候補（jmapro論文含む）はScienceDirectアクセス不可で採用できず。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA6/抄録7）・定番枠14件（OA0/抄録14）。定番枠は統計学・電力系統の誤ヒット（Unbalanced Repeated-Measures Models等）が上位を占め、被引用421件のParkinson(1991)は書評と判明し除外。"
+          },
+          {
+            "name": "OpenAlex Works API / Crossref / Semantic Scholar（抄録取得・書誌確認）",
+            "scope": "foil・rotor 共通、classic候補の抄録裏取り",
+            "terms": [
+              "DOI単位でabstract_inverted_index・dc.description・Crossref abstractを照会"
+            ],
+            "hits": 4,
+            "note": "Peng & Carpino (1993)・Adiletta et al. (1996) は詳細な抄録を取得（Adilettaは出版社ページのmeta descriptionタグから）。Parkinson (1991) はSemantic Scholarの正式タイトルで書評と判明。Childs & Baskharone (1993) 等の候補は抄録自体が非公開で断念。"
+          },
+          {
+            "name": "NASA Technical Reports Server（NTRS）直接検索",
+            "scope": "foil、全文OA代替候補の探索",
+            "terms": [
+              "gas foil bearing rotordynamic"
+            ],
+            "hits": 11,
+            "note": "ScienceDirectで読めなかったOA候補の代わりに実施。Howard (2007)「Conceptual Design and Feasibility of Foil Bearings for Rotorcraft Engines」を発見、全文PDF/txtが無条件でダウンロードでき採用。"
+          },
+          {
+            "name": "NASA Technical Reports Server（NTRS）直接検索",
+            "scope": "rotor、全文OA代替候補の探索",
+            "terms": [
+              "rotordynamic coefficients seal instability whirl"
+            ],
+            "hits": 7,
+            "note": "Childs, Baskharone & Ramsey (1991)「Test Results for Rotordynamic Coefficients of the SSME HPOTP Turbine Interstage Seal with Two Swirl Brakes」を発見、全文が無条件で読め採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はOA表示のはずの候補がScienceDirect・Wiley・NDT.netの3つの異なるプラットフォームでいずれもボット保護に阻まれるという、前号よりさらに広がった事態を受け、前号同様にNASA NTRSでの直接検索を行った。あわせて、高被引用の書誌情報だけで中身を判断せず実体（書評か研究論文か）を確認する手順の重要性を再認識した回だった。"
+      },
+      "afterword": "今号で一番『なるほど』だったのは、被引用421件という数字を見て『これは間違いなく良い定番だ』と思った論文が、開いてみたら実は他人の教科書についての2段落の書評だった、という出来事でした。被引用数やタイトルだけを見て中身を判断してはいけない、というのを実感した瞬間です。もう一つは、『オープンアクセス』というデータベース上のラベルが、ScienceDirectだけでなくWileyやNDT.netでも同じように実質アクセス不能になり得ると分かったこと。前号ではElsevier1社の問題かと思っていましたが、今号でそれが思い込みだったと分かりました。一方で、NASAの技術報告書はどちらの問題にも当てはまらず、今号も2本とも無条件で全文が読めました。派手さはなくても『確実に読める』という価値を、今号は特に強く感じました。 — 編集担当より"
     }
   ]
 }

@@ -55,7 +55,7 @@ description: 論文レーダー(軸受・ロータダイナミクス)の配信�
 8.5. **配信ノートを書く（`data/issues-log.json` に1エントリ追記）**：その号について、**検索の仕方・選定の経緯をやさしく**記録する。公開した日も**お休み(スキップ)した日も必ず**書く（お休み理由こそ読み手が知りたい）。フィールド：`date`/`status`(published|skipped)/`headline`/`intro`（検索・選定のやさしい説明）/`picked`（選んだ論文 `{id,title,why}`・idは papers.json の論文id）/`aside`（見送り・保留・スキップの内訳 `{title,note}`）/`searchLog`（**検索の記録**＝展開式で表示。`sources:[{name,scope,terms,hits,note}]`＋全体 `note`。`name`=arXiv/OpenAlex 等、`terms`=実際に使った検索語、`hits`=ヒット件数（`collect.mjs` 出力の各枠「最新枠 N件 / 定番枠 N件」やソース別件数を記録））/`afterword`（**編集後記**）。
    - **編集担当のキャラクター**："— 編集担当より" の一人称。**専門家ではない**が、配信を読んで**得られた“気づき”を一つ共有する**トーン。「今回ここが『なるほど』だった／こういう見方が面白かった」のように、素朴だが中身のある学びを添える。専門家ぶって断定せず、親しみやすく。読み手（この分野の専門家）と一緒に味わう距離感（※無邪気すぎ・知ったかぶり、どちらも避ける）。
    - **§0と両立**：`afterword` は**主観的な感想**でよいが、**事実の捏造はしない**（年・被引用・主張など事実部分は正確に。素人目線でも誤った断定はしない）。**架空の実在人物になりすまさない**（特定の実在個人を装わない＝あくまで編集担当ペルソナ）。`intro`/`aside` も実際に起きたこと（504・保留・スキップ理由）をやさしく正直に。「次はこんな〜」等の要望募集文は入れない。
-9. **品質チェック→公開**：`node scripts/validate-papers.mjs` で**配信品質ルーブリック**を確認（**ERROR ゼロが公開の必須条件**。WARN は深さの助言＝可能なら埋める）→ `npm run build`（prebuild で検証も自動実行）→ render-check（モバイル/PC両幅を目視・式や図の表示確認）→ commit → `git push`（GitHub Actions が自動デプロイ）。ライブURL `https://yukikanedomi.github.io/paper-radar-rotordynamics/` を確認。
+9. **品質チェック→公開**：`node scripts/validate-papers.mjs` で**配信品質ルーブリック**を確認（**ERROR ゼロが公開の必須条件**。WARN は深さの助言＝可能なら埋める）→ `npm run build`（prebuild で検証も自動実行）→ render-check（モバイル/PC両幅を目視・式や図の表示確認。**確認後は起動した preview サーバ・headless Chrome を必ず停止する**＝全PJ共通ルール。無人実行でも居残り禁止）→ commit → `git push`（GitHub Actions が自動デプロイ）。ライブURL `https://yukikanedomi.github.io/paper-radar-rotordynamics/` を確認。
 
 ## 自動モード（毎日1配信・人の確認なし）
 スケジュール実行（タスクスケジューラ）から呼ばれる無人運用。**§0を機械的に守るのが最優先**。手順3の人間チェックポイントは省略し、代わりに忠実性ゲートを必ず通す。
