@@ -19,6 +19,16 @@ export function streamOrSpecialLabel(p: Paper): string {
   return p.special ? "特別号" : streamLabel(p.stream);
 }
 
+// カード用の一言フック：hook があればそれ、無ければ easy の tldr の先頭文（長すぎれば省略）。
+// 自前の要約（忠実性チェック済み）由来なので §0 上の新リスクはない。
+export function cardHook(p: Paper): string {
+  const h = p.hook?.trim();
+  if (h) return h;
+  const first = (p.levels?.easy?.tldr ?? "").split("。")[0]?.trim() ?? "";
+  if (!first) return "";
+  return first.length > 90 ? `${first.slice(0, 90)}…` : `${first}。`;
+}
+
 // 表示タイトルは和訳を主に。和訳が無ければ原題そのまま。
 export function displayTitle(p: Paper): string {
   return p.titleJa?.trim() || p.title;

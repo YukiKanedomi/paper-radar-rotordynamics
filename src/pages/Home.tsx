@@ -10,6 +10,7 @@ import {
   shortMeta,
   displayTitle,
   originalTitle,
+  cardHook,
 } from "@/lib/paper";
 import { useFavorites, useRead } from "@/lib/prefs";
 
@@ -76,6 +77,15 @@ function HomeView({ data }: { data: PapersData }) {
   const [favOnly, setFavOnly] = useState(false);
   const [unreadOnly, setUnreadOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("added-desc");
+  // コンパクト表示（1行リスト）。localStorage に記憶
+  const [compact, setCompact] = useState(
+    () => localStorage.getItem("pr:compact") === "1",
+  );
+  const toggleCompact = () =>
+    setCompact((v) => {
+      localStorage.setItem("pr:compact", v ? "0" : "1");
+      return !v;
+    });
   const ql = q.trim().toLowerCase();
   const archive = papers
     .filter((p) => {
@@ -223,10 +233,35 @@ function HomeView({ data }: { data: PapersData }) {
               {SORTS[k].label}
             </span>
           ))}
+          <span
+            className={`f compact-toggle${compact ? " on" : ""}`}
+            onClick={toggleCompact}
+          >
+            コンパクト表示
+          </span>
         </div>
-        <div className="cards">
+        <div className={`cards${compact ? " compact" : ""}`}>
           {archive.length === 0 ? (
             <div className="empty">該当なし</div>
+          ) : compact ? (
+            archive.map((p) => (
+              <Link
+                key={p.id}
+                className={`crow${isRead(p.id) ? " read" : ""}`}
+                to={paperHref(p.id)}
+              >
+                <span
+                  className={`crow-dot${isRead(p.id) ? "" : " unread"}`}
+                  aria-label={isRead(p.id) ? "既読" : "未読"}
+                />
+                <span className="crow-tp">{meta.topics[p.topic] ?? p.topic}</span>
+                <span className="crow-t">{displayTitle(p)}</span>
+                {isFav(p.id) && (
+                  <Star size={12} className="fav-star crow-star" fill="currentColor" />
+                )}
+                <span className="crow-y">{p.year || ""}</span>
+              </Link>
+            ))
           ) : (
             archive.map((p) => (
               <Link
@@ -243,6 +278,7 @@ function HomeView({ data }: { data: PapersData }) {
                 </div>
                 <div className="ct">{displayTitle(p)}</div>
                 {originalTitle(p) && <div className="ct-orig">{originalTitle(p)}</div>}
+                {cardHook(p) && <div className="chook">{cardHook(p)}</div>}
                 <div className="cm">
                   <span className={`oa-mark${p.oa ? "" : " abs"}`}>
                     {p.oa ? "OA全文" : "抄録ベース"}
@@ -265,6 +301,7 @@ function DeliveryRow({ p, read, fav }: { p: Paper; read: boolean; fav: boolean }
     <Link className={`pl${read ? " read" : ""}`} to={paperHref(p.id)}>
       <div className="pt">{displayTitle(p)}</div>
       {originalTitle(p) && <div className="pt-orig">{originalTitle(p)}</div>}
+      {cardHook(p) && <div className="pt-hook">{cardHook(p)}</div>}
       <div className="pm">
         <span className={`chip2 ${chipClass}`}>{streamOrSpecialLabel(p)}</span>
         <span className="chip2 c-oa">{p.oa ? "OA" : "抄録"}</span>

@@ -237,6 +237,87 @@
   color: var(--mut);
   margin-top: 2px;
 }
+/* 一言フック（明朝のまま・タイトルより一段軽く） */
+.home-page .pl .pt-hook {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+.home-page .card .chook {
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0 0 7px;
+  opacity: 0.85;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* コンパクト表示（1行リスト） */
+.home-page .cards.compact {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px 0;
+  box-shadow: 0 3px 10px rgba(29, 33, 39, 0.035);
+}
+.home-page .crow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--soft);
+}
+.home-page .crow:last-child {
+  border-bottom: none;
+}
+.home-page .crow-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+}
+.home-page .crow-dot.unread {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.home-page .crow-tp {
+  flex: none;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+.home-page .crow-t {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home-page .crow.read .crow-t {
+  color: var(--mut);
+  font-weight: 500;
+}
+.home-page .crow-star {
+  flex: none;
+  margin-left: 0;
+}
+.home-page .crow-y {
+  flex: none;
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  color: var(--mut);
+}
 .home-page .empty {
   font-family: "Yu Gothic UI", sans-serif;
   color: var(--mut);
