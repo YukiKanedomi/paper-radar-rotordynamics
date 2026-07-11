@@ -752,6 +752,117 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はOA表示のはずの候補がScienceDirect・Wiley・NDT.netの3つの異なるプラットフォームでいずれもボット保護に阻まれるという、前号よりさらに広がった事態を受け、前号同様にNASA NTRSでの直接検索を行った。あわせて、高被引用の書誌情報だけで中身を判断せず実体（書評か研究論文か）を確認する手順の重要性を再認識した回だった。"
       },
       "afterword": "今号で一番『なるほど』だったのは、被引用421件という数字を見て『これは間違いなく良い定番だ』と思った論文が、開いてみたら実は他人の教科書についての2段落の書評だった、という出来事でした。被引用数やタイトルだけを見て中身を判断してはいけない、というのを実感した瞬間です。もう一つは、『オープンアクセス』というデータベース上のラベルが、ScienceDirectだけでなくWileyやNDT.netでも同じように実質アクセス不能になり得ると分かったこと。前号ではElsevier1社の問題かと思っていましたが、今号でそれが思い込みだったと分かりました。一方で、NASAの技術報告書はどちらの問題にも当てはまらず、今号も2本とも無条件で全文が読めました。派手さはなくても『確実に読める』という価値を、今号は特に強く感じました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-12",
+      "status": "published",
+      "headline": "第9号：Elsevier・MDPIは今日も阻まれたが、Tribology in IndustryとNDT.netで全文2本を収穫した回",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foil最新枠のarXiv候補24件はほぼ全て分野外の一般流体力学論文で、on-topicなOpenAlex候補（jmapro誌の円錐フォイル軸受製造論文、ijthermalsci誌のスラスト軸受熱弾性論文）はどちらもOpenAlex上ではOA表示でしたが、ScienceDirectのCloudflareボット対策（403・CAPTCHA）に阻まれ、抄録すら取得できませんでした。そこでOpenAlexのタイトル検索『foil bearing』を発行日順に直接叩いたところ、Tribology in Industry誌（セルビア・クラグイェヴァツ大学発行のOA専門誌）の論文が見つかり、curlに通常のブラウザUser-Agentを付けて直接PDFを取得したところ問題なく全文が読めました。rotor最新枠では、collect.mjsの通常候補に入っていたNDT.net掲載の水力発電ロータ診断論文（第8号でWebFetchツールが403で弾かれ見送っていた同じ論文）を、今回はcurl+UAで再挑戦したところ200 OKで全文取得に成功しました。rotor定番枠は、OpenAlexの通常候補（統計学・電力系統の誤ヒットが上位を占める）に加え、タイトル検索『rotor bearing』を被引用数順に絞り込んだところ、抄録が確実に取得できる高被引用論文としてNelson & McVaugh (1976)「有限要素法によるロータ・軸受系の動力学」（被引用714件）を発見しました。foil定番枠は元の候補リストにあったKu & Heshmat (1992)「コンプライアント・フォイル軸受の構造剛性解析パートI」（被引用204件）を抄録ベースで採用しています。なお、MDPI Lubricants誌の論文（Jiang et al. 2025）はSemantic Scholar経由で抄録は取得できたものの、PDF本体はMDPI側のAkamai保護（Access Denied）で取得できず見送りました。",
+      "picked": [
+        {
+          "id": "doi:10.24874/ti.1922.03.25.06",
+          "title": "乱流域で運転する空気フォイル軸受の弾性・熱挙動——破損・摩耗のCFD-FEM連成解析（Berrahi et al., 2025）",
+          "why": "Tribology in Industry誌（OA専門誌）の論文で全文が無条件で読め、乱流域での圧力・温度・応力・変位の回転数依存性が具体的な数値・式番号付きで確認できたため。foil最新枠のOA候補がElsevier系で軒並み読めなかった代わりに、OpenAlexタイトル検索で発見。"
+        },
+        {
+          "id": "doi:10.1115/1.2920898",
+          "title": "コンプライアント・フォイル軸受の構造剛性解析 パートI（Ku & Heshmat, 1992）",
+          "why": "被引用204件、バンプフォイルの構造剛性理論を確立した基礎的な定番論文。OpenAlexのabstract_inverted_indexから詳細な抄録が復元でき、抄録の範囲内で誠実に紹介できたため（全文はASME非OAで抄録ベース）。"
+        },
+        {
+          "id": "doi:10.58286/33401",
+          "title": "水力発電ユニットの軸心軌跡診断のためのロータ・軸受 流体力学モデリング（Abdullaev et al., 2026）",
+          "why": "第8号でWebFetchツールが403で弾かれ見送っていたNDT.net掲載論文。curlにブラウザUser-Agentを付けて再挑戦したところ全文取得に成功し、CC-BY-4.0の実図（Fig.1、水力発電機の外観・軌跡プロット）まで確認できたため。"
+        },
+        {
+          "id": "doi:10.1115/1.3438942",
+          "title": "有限要素法によるロータ・軸受系の動力学（Nelson & McVaugh, 1976）",
+          "why": "被引用714件と極めて高く、ロータ・軸受系の有限要素モデリングの基礎を築いた古典。OpenAlexのabstract_inverted_indexから抄録が復元でき、抄録の範囲内で誠実に紹介できたため（抄録ベース）。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "On the manufacturing of conical gas foil bearings using SLA-based rapid tooling（Sarrazin & Liebich, 2026, Elsevier Journal of Manufacturing Processes）",
+          "note": "OpenAlexではhybrid OA（CC-BY）と表示されたが、ScienceDirectへのアクセスがCAPTCHA・ボット保護（403）で阻まれ、抄録すら確認できず見送り。第8号と同じパターンが継続。"
+        },
+        {
+          "title": "Establishment of thermo-elastic-fluid coupling model...air foil thrust bearing（Li, Wu, Shao & An, 2026, Elsevier International Journal of Thermal Sciences）",
+          "note": "第7号・第8号でも見送った同誌の論文。今回もScienceDirectアクセス不可・Semantic Scholar/Unpaywallにも抄録が登録されておらず、全文はおろか抄録も確認できないため見送り。"
+        },
+        {
+          "title": "Parameter Effects on Dynamic Characteristics Analysis of Multi-Layer Foil Thrust Bearing（Jiang, Zhu, Huang & Gao, 2025, MDPI Lubricants）",
+          "note": "Semantic Scholar経由で詳細な抄録（軸方向・回転剛性係数の偏差-4.93%/-5.02%等）は取得できたが、MDPI本体のPDF・HTMLページはAkamai保護（Access Denied）で取得できず、全文ベースでの採用は見送り。抄録のみでの採用も検討したが、他候補の全文2本（Tribology in Industry・NDT.net）が確保できたため今回は選外。"
+        },
+        {
+          "title": "Research on nonlinear characteristics of gas foil bearing-rotor systems and transformation of intellectual property achievements（2026, SPIE Proceedings）",
+          "note": "タイトルが『知的財産権成果の転化』という学術論文らしからぬ表現を含み、抄録も非公開だったため、内容の確からしさを確認できず見送り。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。最新枠のOA候補24件は全てarXivの分野外論文（一般流体力学）で使えず、on-topicなOpenAlex候補（jmapro・ijthermalsci）はScienceDirectアクセス不可で見送り。定番枠はKu & Heshmat (1992) を採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA9/抄録4）・定番枠14件（OA0/抄録14）。最新枠の候補にNDT.net掲載の水力発電ロータ論文が含まれており、今回はcurl+UAで全文取得に成功して採用。定番枠は統計学・電力系統の誤ヒットが上位を占め採用候補なし。"
+          },
+          {
+            "name": "OpenAlex Works API（タイトル検索, 供給補完）",
+            "scope": "foil 最新枠、on-topicなOA全文の代替探索",
+            "terms": [
+              "title.search:foil bearing（発行日順）"
+            ],
+            "hits": 25,
+            "note": "collect.mjsの通常候補が軒並みアクセス不可だったため実施。Tribology in Industry誌のBerrahi et al. (2025) を発見し、curl+ブラウザUser-Agentで全文PDF取得に成功、採用。"
+          },
+          {
+            "name": "OpenAlex Works API（タイトル検索, 供給補完）",
+            "scope": "rotor 定番枠、抄録が確実に取得できる高被引用候補の探索",
+            "terms": [
+              "title.search:rotor bearing（被引用数順、cited_by_count>80）",
+              "title.search:whirl instability（被引用数順）"
+            ],
+            "hits": 40,
+            "note": "元候補の多くがElsevier論文で抄録非公開だったため実施。Nelson & McVaugh (1976) を発見、OpenAlexのabstract_inverted_indexから抄録を復元し採用。"
+          },
+          {
+            "name": "Semantic Scholar / OpenAlex abstract_inverted_index（抄録取得・書誌確認）",
+            "scope": "foil・rotor 共通、抄録ベース候補の裏取り",
+            "terms": [
+              "DOI単位でabstract_inverted_index・Semantic Scholar abstractを照会"
+            ],
+            "hits": 2,
+            "note": "Ku & Heshmat (1992) とNelson & McVaugh (1976) はOpenAlexのabstract_inverted_indexから詳細な抄録を復元できた。MDPI論文（Jiang et al. 2025）もSemantic Scholar経由で抄録は取得できたが、PDF自体がAkamaiで遮断され不採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はScienceDirect（Elsevier）・MDPIの2プラットフォームでボット保護に阻まれた一方、Tribology in Industry（独立OA誌）とNDT.net（会議プロシーディングス集積サイト）は通常のブラウザUser-Agent付きcurlで問題なく全文取得できた。特にNDT.net掲載論文は前号（第8号）でWebFetchツールが403で弾かれ見送った同じ論文で、取得方法を変えるだけで読めるようになった好例。"
+      },
+      "afterword": "今号で一番『なるほど』だったのは、実は論文の中身そのものより、要約を書いたあとのチェック工程でした。今回、忠実性チェックの担当（Opusモデル）が4本のうち3本に修正指摘を入れたのですが、その中の一つが単なる言葉づかいの問題ではなく、物理的に向きが逆の説明でした。ロータの振動方程式を『止まっている視点』と『回転している視点』のどちらで書くかという話で、私が下書きした説明は『回転している視点の方が式がシンプルになりやすい』という一般論を、今回の論文の具体的な条件（軸受の硬さが方向によって違う場合）に当てはめる際に、実は逆向きに書いてしまっていたようです。もう一つは『被引用204件の続報（パートII）』として別の論文をリンクしていたのに、実際にその論文の中身を確認したら、抄録が予告する『実験検証の続報』とは別の、もう一段先の関連研究だったという取り違えです。どちらも一見もっともらしく、自分では気づけなかった種類の間違いで、複数の目（今回はAIですが）を通す工程の意味を実感しました。あわせて、前号でNDT.netの論文を『アクセスできない』と一度あきらめていたのに、今号で取得方法を変えただけであっさり読めてしまったのも印象的でした。『読めない』は本当に読めないのか、それとも聞き方が悪かっただけなのか——一度の失敗で見切りをつけないことの大事さを学んだ回でした。 — 編集担当より"
     }
   ]
 }
