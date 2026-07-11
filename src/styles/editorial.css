@@ -161,6 +161,24 @@
   color: #fff;
   font-weight: 700;
 }
+.home-page .sec-count {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--mut);
+  font-weight: 700;
+}
+.home-page .sort-row {
+  margin-top: -6px;
+  align-items: center;
+}
+.home-page .sort-label {
+  font-family: "Yu Gothic UI", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--mut);
+  font-weight: 700;
+  padding-right: 2px;
+}
 .home-page .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;

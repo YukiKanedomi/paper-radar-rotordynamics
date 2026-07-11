@@ -13,6 +13,15 @@ import {
 } from "@/lib/paper";
 import { useFavorites, useRead } from "@/lib/prefs";
 
+// アーカイブの並び順（配信日＝dateAdded / 論文の発表年＝year）
+type SortKey = "added-desc" | "added-asc" | "year-desc" | "year-asc";
+const SORTS: Record<SortKey, { label: string; cmp: (a: Paper, b: Paper) => number }> = {
+  "added-desc": { label: "配信が新しい順", cmp: (a, b) => b.dateAdded.localeCompare(a.dateAdded) },
+  "added-asc": { label: "配信が古い順", cmp: (a, b) => a.dateAdded.localeCompare(b.dateAdded) },
+  "year-desc": { label: "発表年が新しい順", cmp: (a, b) => (b.year || 0) - (a.year || 0) },
+  "year-asc": { label: "発表年が古い順", cmp: (a, b) => (a.year || 0) - (b.year || 0) },
+};
+
 export default function Home() {
   const state = usePapers();
 
@@ -61,18 +70,23 @@ function HomeView({ data }: { data: PapersData }) {
   const { isRead } = useRead();
   const { isFav } = useFavorites();
 
-  // アーカイブ検索/フィルタ
+  // アーカイブ検索/フィルタ/並び順
   const [q, setQ] = useState("");
   const [flt, setFlt] = useState<"all" | string>("all");
   const [favOnly, setFavOnly] = useState(false);
+  const [unreadOnly, setUnreadOnly] = useState(false);
+  const [sort, setSort] = useState<SortKey>("added-desc");
   const ql = q.trim().toLowerCase();
-  const archive = papers.filter((p) => {
-    const okTopic = flt === "all" || p.topic === flt;
-    const hay = `${p.titleJa ?? ""} ${p.title} ${p.authors} ${p.venue}`.toLowerCase();
-    const okQ = !ql || hay.includes(ql);
-    const okFav = !favOnly || isFav(p.id);
-    return okTopic && okQ && okFav;
-  });
+  const archive = papers
+    .filter((p) => {
+      const okTopic = flt === "all" || p.topic === flt;
+      const hay = `${p.titleJa ?? ""} ${p.title} ${p.authors} ${p.venue}`.toLowerCase();
+      const okQ = !ql || hay.includes(ql);
+      const okFav = !favOnly || isFav(p.id);
+      const okUnread = !unreadOnly || !isRead(p.id);
+      return okTopic && okQ && okFav && okUnread;
+    })
+    .sort(SORTS[sort].cmp);
 
   return (
     <div className="home-page">
@@ -156,7 +170,9 @@ function HomeView({ data }: { data: PapersData }) {
         </Link>
 
         {/* アーカイブ */}
-        <div className="sec">アーカイブ</div>
+        <div className="sec">
+          アーカイブ<span className="sec-count">{archive.length} 件</span>
+        </div>
         <input
           className="search"
           placeholder="タイトル・著者で検索"
@@ -189,6 +205,24 @@ function HomeView({ data }: { data: PapersData }) {
           >
             ★ お気に入り
           </span>
+          <span
+            className={`f${unreadOnly ? " on" : ""}`}
+            onClick={() => setUnreadOnly((v) => !v)}
+          >
+            未読のみ
+          </span>
+        </div>
+        <div className="filters sort-row">
+          <span className="sort-label">並び順</span>
+          {(Object.keys(SORTS) as SortKey[]).map((k) => (
+            <span
+              key={k}
+              className={`f${sort === k ? " on" : ""}`}
+              onClick={() => setSort(k)}
+            >
+              {SORTS[k].label}
+            </span>
+          ))}
         </div>
         <div className="cards">
           {archive.length === 0 ? (
