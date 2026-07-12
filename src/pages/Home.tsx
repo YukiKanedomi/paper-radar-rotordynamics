@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import "@/styles/editorial.css";
 import { usePapers } from "@/lib/data";
-import type { Paper, PapersData } from "@/types";
+import type { Leveled, Paper, PapersData } from "@/types";
 import {
   paperHref,
   streamOrSpecialLabel,
@@ -122,12 +122,38 @@ function HomeView({ data }: { data: PapersData }) {
       localStorage.setItem("pr:compact", v ? "0" : "1");
       return !v;
     });
+  // 内容検索用の索引（タイトル・著者に加え、要約・フック・用語・豆知識・深掘り・章立て・引用まで）
+  const searchIndex = useMemo(() => {
+    const flat = (v?: Leveled) =>
+      !v ? "" : typeof v === "string" ? v : Object.values(v).join(" ");
+    const m = new Map<string, string>();
+    for (const p of papers) {
+      const parts: string[] = [
+        p.titleJa ?? "",
+        p.title,
+        p.authors,
+        p.venue,
+        p.doi,
+        p.hook ?? "",
+      ];
+      for (const lv of Object.values(p.levels))
+        parts.push(lv.tldr, lv.problem, lv.method, lv.result, lv.limit);
+      p.terms?.forEach((t) => parts.push(t.term, t.def));
+      p.trivia?.forEach((t) => parts.push(t.label, flat(t.text)));
+      p.deepDive?.forEach((d) => parts.push(d.title, flat(d.body)));
+      p.numbers?.forEach((n) => parts.push(n.v, n.l));
+      p.sections?.forEach((s) => parts.push(s.heading, flat(s.body)));
+      p.quotes?.forEach((qt) => parts.push(qt.text, qt.textJa ?? ""));
+      m.set(p.id, parts.join(" ").toLowerCase());
+    }
+    return m;
+  }, [papers]);
+
   const ql = q.trim().toLowerCase();
   const archive = papers
     .filter((p) => {
       const okTopic = flt === "all" || p.topic === flt;
-      const hay = `${p.titleJa ?? ""} ${p.title} ${p.authors} ${p.venue}`.toLowerCase();
-      const okQ = !ql || hay.includes(ql);
+      const okQ = !ql || (searchIndex.get(p.id) ?? "").includes(ql);
       const okFav = !favOnly || isFav(p.id);
       const okUnread = !unreadOnly || !isRead(p.id);
       return okTopic && okQ && okFav && okUnread;
@@ -265,7 +291,7 @@ function HomeView({ data }: { data: PapersData }) {
         </div>
         <input
           className="search"
-          placeholder="タイトル・著者で検索"
+          placeholder="タイトル・著者・内容で検索（用語・要約の中身もヒット）"
           value={q}
           onChange={(e) => setQ(e.target.value)}
         />

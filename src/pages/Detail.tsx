@@ -73,7 +73,15 @@ function DetailView({
   topicLabel: string;
   levelLabels: Record<Level, string>;
 }) {
-  const [num, setNum] = useState(2);
+  // 説明レベルは端末に記憶（次に開いた論文でも同じレベルで読める）
+  const [num, setNum] = useState(() => {
+    const v = Number(localStorage.getItem("pr:level"));
+    return v >= 1 && v <= 3 ? v : 2;
+  });
+  const changeLevel = (n: number) => {
+    setNum(n);
+    localStorage.setItem("pr:level", String(n));
+  };
   const [pop, setPop] = useState<PopState | null>(null);
   const levelKey = LEVEL_BY_NUM[num];
   const lv = p.levels[levelKey];
@@ -234,7 +242,7 @@ function DetailView({
             min={1}
             max={3}
             value={num}
-            onChange={(e) => setNum(Number(e.target.value))}
+            onChange={(e) => changeLevel(Number(e.target.value))}
           />
           <span className="ends">{levelLabels.expert}</span>
           <span className="now">{levelLabels[levelKey]}</span>
