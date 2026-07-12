@@ -863,6 +863,116 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はScienceDirect（Elsevier）・MDPIの2プラットフォームでボット保護に阻まれた一方、Tribology in Industry（独立OA誌）とNDT.net（会議プロシーディングス集積サイト）は通常のブラウザUser-Agent付きcurlで問題なく全文取得できた。特にNDT.net掲載論文は前号（第8号）でWebFetchツールが403で弾かれ見送った同じ論文で、取得方法を変えるだけで読めるようになった好例。"
       },
       "afterword": "今号で一番『なるほど』だったのは、実は論文の中身そのものより、要約を書いたあとのチェック工程でした。今回、忠実性チェックの担当（Opusモデル）が4本のうち3本に修正指摘を入れたのですが、その中の一つが単なる言葉づかいの問題ではなく、物理的に向きが逆の説明でした。ロータの振動方程式を『止まっている視点』と『回転している視点』のどちらで書くかという話で、私が下書きした説明は『回転している視点の方が式がシンプルになりやすい』という一般論を、今回の論文の具体的な条件（軸受の硬さが方向によって違う場合）に当てはめる際に、実は逆向きに書いてしまっていたようです。もう一つは『被引用204件の続報（パートII）』として別の論文をリンクしていたのに、実際にその論文の中身を確認したら、抄録が予告する『実験検証の続報』とは別の、もう一段先の関連研究だったという取り違えです。どちらも一見もっともらしく、自分では気づけなかった種類の間違いで、複数の目（今回はAIですが）を通す工程の意味を実感しました。あわせて、前号でNDT.netの論文を『アクセスできない』と一度あきらめていたのに、今号で取得方法を変えただけであっさり読めてしまったのも印象的でした。『読めない』は本当に読めないのか、それとも聞き方が悪かっただけなのか——一度の失敗で見切りをつけないことの大事さを学んだ回でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-13",
+      "status": "published",
+      "headline": "第10号：MDPI・Elsevierは今回もボット対策に阻まれたが、SpringerとMDPIの間接ルートで全文2本を確保した回",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの最新枠・定番枠を集めました。foil最新枠のarXiv候補（24件中20件がOA表示）はほぼ全てが分野外の一般流体力学・物理論文で、on-topicなOpenAlex候補（Journal of Manufacturing Processes誌の円錐フォイル軸受製造論文、International Journal of Thermal Sciences誌のスラスト軸受熱弾性論文）はどちらもOpenAlex上ではhybrid OA(CC-BY系)表示でしたが、ScienceDirectへの直接アクセスがCAPTCHA・ボット保護(403)に阻まれ、抄録すら取得できませんでした。そこでOpenAlexを「gas foil bearing」×CC-BYライセンス条件で直接検索したところ、Springer発行のForschung im Ingenieurwesen誌（センサー内蔵型ガスフォイル軸受の論文）がヒットし、SpringerのPDF直リンクは通常のブラウザUser-Agent付きcurlでそのまま取得でき、PyMuPDFで全文テキストと図を抽出できました。rotor最新枠でも同様に、通常候補の定番枠がSSR(電力系統)や統計学の誤ヒットばかりだったため、OpenAlexを「whirl instability」「subsynchronous vibration」等×CC-BYで直接検索したところMDPI Applied Sciences誌のホワール発熱論文が見つかりましたが、こちらはMDPI本体・ResearchGateミラーともにAkamai/Cloudflareのボット保護で直接アクセスできず、r.jina.ai経由の間接的な要約取得のみとなりました。この間接ルートで2回抄録取得を試みたところ、軸受寸法の数値が2回で食い違う(1回目と2回目でR1の値が明らかに異なる)という矛盾が見つかったため、具体的な数値は信頼できないと判断し、この論文については数値カード・章立てウォークスルーを意図的に空にして、定性的に裏取りできた内容と2つの逐語引用のみで構成しています（引用は125字以内の短い逐語のみを個別に依頼して再現性を確認）。foil定番枠は元の候補リストにあったHeshmat (1994)「空気フォイル軸受の高速化・高負荷化」（被引用222件）を抄録ベースで採用。rotor定番枠は、元候補の多くが統計学・電力系統の誤ヒットまたは既刊行だったため、OpenAlexを高被引用順・abstract必須条件で追加検索し、Mayes & Davies (1984)「亀裂ロータの多軸受系振動応答解析」（被引用282件）を発見しました。4本すべてを§0忠実性チェック(Opus)にかけたところ、Kliemank論文で「6.5krpm」を「6.5万rpm」と10倍誤記していた箇所、Heshmat論文でDN値の算出根拠を「回転数と負荷容量から」と誤って説明していた箇所、Liu論文で2つの逐語引用の出典セクション(Abstract/Conclusions)を取り違えていた箇所が見つかり、いずれも修正しました。",
+      "picked": [
+        {
+          "id": "doi:10.1007/s10010-025-00878-z",
+          "title": "センサー内蔵型ガスフォイル軸受——温度・リフトオフ状態・瞬時角速度をリアルタイム監視する（Kliemank et al., 2025）",
+          "why": "Springer発行のOA誌（CC BY 4.0）。foil最新枠のOA候補がElsevier系（ScienceDirect）で軒並みアクセス不能だった中、OpenAlexのCC-BYライセンス絞り込み検索で発見。PDFが通常のcurlで取得でき、PyMuPDFで全文テキストと図（Fig.1のCC BY実図）を抽出でき、深い読み応えのある要約が作れたため。"
+        },
+        {
+          "id": "doi:10.1115/1.2927211",
+          "title": "空気フォイル軸受の性能向上——高速化と負荷容量の飛躍（Heshmat, 1994）",
+          "why": "被引用222件。毎分132,000回転・DN値4.62×10⁶という具体的な実測値が抄録に豊富に含まれており、抄録の範囲だけで誠実に紹介できる定番論文だったため（全文はASME非OAで抄録ベース）。"
+        },
+        {
+          "id": "doi:10.3390/app16042069",
+          "title": "ホワール（旋回運動）の向きで軸受内の発熱パターンはこんなに変わる（Liu et al., 2026）",
+          "why": "MDPI発行のOA誌（CC BY）で、旋回の向き（前向き/後ろ向き）による発熱・温度分布の違いという明快で技術的に妥当な結論を持つため。ただしMDPI本体への直接アクセスができず、間接取得した数値に矛盾が見つかったため、numbers・sectionsは意図的に空にし、裏取りできた定性的内容と逐語確認済みの引用2件のみで構成した。"
+        },
+        {
+          "id": "doi:10.1115/1.3269142",
+          "title": "亀裂の入ったロータの振動応答解析——大型タービン発電機への適用（Mayes & Davies, 1984）",
+          "why": "被引用282件。rotor定番枠の通常候補が統計学・電力系統の誤ヒットや既刊行ばかりだったため、OpenAlexの高被引用順・abstract必須の追加検索で発見。亀裂ロータの振動解析における基礎的な引用文献の一つ。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "On the manufacturing of conical gas foil bearings using SLA-based rapid tooling（Sarrazin & Liebich, 2026, Elsevier Journal of Manufacturing Processes）",
+          "note": "OpenAlexではhybrid OA(CC-BY)と表示されたが、ScienceDirectへのアクセスがCAPTCHA・ボット保護(403)で阻まれ、抄録すら確認できず見送り。過去号と同じパターンが継続。"
+        },
+        {
+          "title": "Establishment of thermo-elastic-fluid coupling model...air foil thrust bearing（Li, Wu, Shao & An, 2026, Elsevier International Journal of Thermal Sciences）",
+          "note": "過去号でも見送った同誌の論文。今回もScienceDirectアクセス不可で見送り。"
+        },
+        {
+          "title": "Experiments on the influence of oil temperature and pressure on subsynchronous bifurcation and shaft orbit behaviour in automotive turbochargers（2026, Elsevier Mechanical Systems and Signal Processing）",
+          "note": "OpenAlex/UnpaywallではCC-BYのhybrid OAと表示されたが、ScienceDirectアクセスがCAPTCHA・ボット保護で阻まれ全文確認できず見送り。同テーマ・同系統の実験を報告するMDPI Lubricants誌の関連論文（Experimental Analysis of a Turbocharger, 2025）も見つけたが、rotor最新枠は本要約の対象を1件に絞る方針のため今回は選外。"
+        },
+        {
+          "title": "Study on the dynamic properties of the ball bearing considering cage flexibility（2026, Elsevier Mechanical Systems and Signal Processing）",
+          "note": "ケージのwhirl機構を扱うon-topicな候補だったが、ScienceDirectアクセス不可・抄録も非公開のため内容を確認できず見送り。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA4/抄録10）。最新枠のOA候補24件はほぼ全てarXivの分野外論文（一般流体力学）で使えず、on-topicなOpenAlex候補（jmapro・ijthermalsci誌）はScienceDirectアクセス不可で見送り。定番枠はHeshmat (1994) を採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 27,
+            "note": "最新枠13件（OA6/抄録7）・定番枠14件（OA0/抄録14）。定番枠は統計学・電力系統SSRの誤ヒットが上位を占め採用候補なし。最新枠のon-topic候補（ymssp誌の turbocharger論文等）もScienceDirectアクセス不可で見送り。"
+          },
+          {
+            "name": "OpenAlex Works API（CC-BYライセンス絞り込み検索, 供給補完）",
+            "scope": "foil 最新枠、アクセス可能なOA全文の代替探索",
+            "terms": [
+              "title_and_abstract.search:\"gas foil bearing\" + best_oa_location.license:cc-by（発行日順）"
+            ],
+            "hits": 5,
+            "note": "collect.mjsの通常候補（Elsevier系）が軒並みアクセス不可だったため実施。Springer発行のKliemank et al. (2025) を発見し、curlで全文PDF取得・PyMuPDFで図抽出に成功、採用。"
+          },
+          {
+            "name": "OpenAlex Works API（CC-BYライセンス絞り込み検索, 供給補完）",
+            "scope": "rotor 最新枠、アクセス可能なOA全文の代替探索",
+            "terms": [
+              "title_and_abstract.search:\"rotordynamic instability\" OR \"subsynchronous vibration\" OR \"whirl instability\" + best_oa_location.license:cc-by（発行日順）"
+            ],
+            "hits": 6,
+            "note": "MDPI Applied Sciences誌のLiu et al. (2026) を発見。MDPI本体・ResearchGateミラーともにボット保護でアクセスできず、r.jina.ai経由の間接取得のみ。2回の取得で軸受寸法の数値が食い違ったため、numbers/sectionsは意図的に空にして採用。"
+          },
+          {
+            "name": "OpenAlex Works API（タイトル・抄録検索、被引用数順, 供給補完）",
+            "scope": "rotor 定番枠、抄録が確実に取得できる高被引用候補の探索",
+            "terms": [
+              "title_and_abstract.search:\"rotor-bearing system\" OR \"seal rotordynamic\" OR \"rotordynamic coefficients\" OR \"oil whirl\" OR \"oil whip\" + has_abstract:true（被引用数順）"
+            ],
+            "hits": 7,
+            "note": "上位はロータダイナミクスの教科書・ハンドブック類（書籍のため対象外）だったため、書籍を除いた中からMayes & Davies (1984) を発見・採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はScienceDirect（Elsevier）・MDPI本体・ResearchGateの3プラットフォームでボット保護に阻まれた一方、Springer（link.springer.com）はPDF直リンクへの通常curlアクセスで問題なく全文取得できた。MDPIの内容はr.jina.ai経由の間接取得のみで、2回の取得結果に数値の食い違いが見つかったため、信頼できない具体的数値は使わないという判断をした。"
+      },
+      "afterword": "今号でいちばん「なるほど」だったのは、実は論文の中身ではなく、自分の情報収集のやり方についての気づきでした。MDPIの論文（ホワールの向きで軸受の発熱パターンが変わるという話）を読もうとして、サイトに直接アクセスできなかったので、別の経路で内容を要約してもらったんです。そうしたら、1回目と2回目で「軸受の半径がいくつか」という数字が明らかに違う値で返ってきました。中身の説明（前向きに旋回すると熱が一箇所に集まりやすく、後ろ向きだと二手に分かれる、という話）はどちらの取得でもぴったり一致していたのに、細かい数字だけが食い違う——これは今回初めて経験するパターンで、最初は「どっちが正しいんだろう」と迷いました。結局、どちらの数字が正しいか確かめる手段がなかったので、思い切って両方とも使わないことにして、確認が取れた定性的な話だけで記事を組み立てました。数字を書いた方が記事としては説得力が出るのに、それを削るという判断は、正直ちょっと惜しい気持ちもありましたが、「言っていることの中身は合っているけど、細部の数字は自信がない」という状態を、うやむやにせず正直に扱う、というのがこの配信らしいやり方なんだと腑に落ちた出来事でした。 — 編集担当より"
     }
   ]
 }
