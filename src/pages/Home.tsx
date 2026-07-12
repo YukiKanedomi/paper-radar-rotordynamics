@@ -11,6 +11,7 @@ import {
   displayTitle,
   originalTitle,
   cardHook,
+  readingMinutes,
 } from "@/lib/paper";
 import { useFavorites, useRead } from "@/lib/prefs";
 
@@ -68,8 +69,43 @@ function HomeView({ data }: { data: PapersData }) {
   }, [meta.currentIssue, papers]);
   const todays = papers.filter((p) => p.issue && p.issue === latestIssue);
 
+  // 配信停止の見える化：最終配信から2日以上あいたら控えめに知らせる
+  const staleDays = useMemo(() => {
+    if (!latestIssue) return 0;
+    const d = new Date(`${latestIssue}T00:00:00`);
+    if (Number.isNaN(d.getTime())) return 0;
+    return Math.floor((Date.now() - d.getTime()) / 864e5);
+  }, [latestIssue]);
+
   const { isRead } = useRead();
   const { isFav } = useFavorites();
+
+  // 足あと（蓄積の統計）
+  const stats = useMemo(() => {
+    const years = papers.map((p) => p.year).filter((y) => y > 0);
+    const decades = new Map<number, number>();
+    for (const y of years) {
+      const d = Math.floor(y / 10) * 10;
+      decades.set(d, (decades.get(d) ?? 0) + 1);
+    }
+    const dMin = Math.min(...decades.keys());
+    const dMax = Math.max(...decades.keys());
+    const bars: { decade: number; count: number }[] = [];
+    for (let d = dMin; d <= dMax; d += 10)
+      bars.push({ decade: d, count: decades.get(d) ?? 0 });
+    return {
+      total: papers.length,
+      oa: papers.filter((p) => p.oa).length,
+      yMin: years.length ? Math.min(...years) : 0,
+      yMax: years.length ? Math.max(...years) : 0,
+      bars,
+      barMax: Math.max(1, ...bars.map((b) => b.count)),
+    };
+  }, [papers]);
+  const readCount = papers.filter((p) => isRead(p.id)).length;
+  const readPct = papers.length
+    ? Math.round((readCount / papers.length) * 100)
+    : 0;
 
   // アーカイブ検索/フィルタ/並び順
   const [q, setQ] = useState("");
@@ -112,6 +148,11 @@ function HomeView({ data }: { data: PapersData }) {
             {latestIssue} 号 — 各トピック{" "}
             {Math.round(todays.length / Math.max(1, new Set(todays.map((p) => p.topic)).size))} 件
           </div>
+          {staleDays >= 2 && (
+            <div className="stale-note">
+              最終配信から {staleDays} 日あいています。自動配信が止まっていないか、PC側のタスク（スケジューラ）の確認をおすすめします。
+            </div>
+          )}
           <h2>本日のピックアップ</h2>
           {todays.length === 0 ? (
             <p className="tag" style={{ paddingBottom: 12 }}>
@@ -178,6 +219,45 @@ function HomeView({ data }: { data: PapersData }) {
           </span>
           <span className="ln-cta">読む →</span>
         </Link>
+
+        {/* 足あと（蓄積の統計） */}
+        <div className="sec">足あと</div>
+        <div className="stats">
+          <div className="st-tiles">
+            <div className="st">
+              <div className="v">{stats.total}</div>
+              <div className="l">配信論文</div>
+            </div>
+            <div className="st">
+              <div className="v">{readCount}</div>
+              <div className="l">既読 · {readPct}%</div>
+            </div>
+            <div className="st">
+              <div className="v">{stats.oa}</div>
+              <div className="l">OA全文</div>
+            </div>
+            <div className="st">
+              <div className="v">
+                {stats.yMin}–{stats.yMax}
+              </div>
+              <div className="l">発表年レンジ</div>
+            </div>
+          </div>
+          <div className="st-decades">
+            {stats.bars.map((b) => (
+              <div className="db" key={b.decade} title={`${b.decade}年代: ${b.count}本`}>
+                <div className="db-bar-wrap">
+                  <div
+                    className="db-bar"
+                    style={{ height: `${6 + Math.round((34 * b.count) / stats.barMax)}px` }}
+                  />
+                </div>
+                <div className="db-l">'{String(b.decade).slice(2)}</div>
+              </div>
+            ))}
+            <div className="st-cap">年代ごとの配信数</div>
+          </div>
+        </div>
 
         {/* アーカイブ */}
         <div className="sec">
@@ -284,7 +364,9 @@ function HomeView({ data }: { data: PapersData }) {
                     {p.oa ? "OA全文" : "抄録ベース"}
                   </span>
                   {" · "}
-                  {[shortMeta(p), streamOrSpecialLabel(p)].filter(Boolean).join(" · ")}
+                  {[shortMeta(p), streamOrSpecialLabel(p), `約${readingMinutes(p)}分`]
+                    .filter(Boolean)
+                    .join(" · ")}
                 </div>
               </Link>
             ))
@@ -305,7 +387,9 @@ function DeliveryRow({ p, read, fav }: { p: Paper; read: boolean; fav: boolean }
       <div className="pm">
         <span className={`chip2 ${chipClass}`}>{streamOrSpecialLabel(p)}</span>
         <span className="chip2 c-oa">{p.oa ? "OA" : "抄録"}</span>
-        {[p.authors, p.year ? String(p.year) : ""].filter(Boolean).join(" · ")}
+        {[p.authors, p.year ? String(p.year) : "", `約${readingMinutes(p)}分`]
+          .filter(Boolean)
+          .join(" · ")}
         {read && <span className="read-tag">既読</span>}
         {fav && <Star size={12} className="fav-star" fill="currentColor" />}
       </div>

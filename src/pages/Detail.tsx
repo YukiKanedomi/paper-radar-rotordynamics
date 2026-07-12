@@ -13,6 +13,7 @@ import {
   originalTitle,
   citationText,
   resolveLeveled,
+  readingMinutes,
 } from "@/lib/paper";
 import { useFavorites, useRead } from "@/lib/prefs";
 
@@ -94,6 +95,15 @@ function DetailView({
   }, [p.id]);
   const fav = isFav(p.id);
 
+  // スクロールすると現れる「← 論文レーダー」の追従ボタン（上まで戻らずにトップへ帰れる）
+  const [showBack, setShowBack] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowBack(window.scrollY > 480);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // 用語クリック → 固定ポップアップ（モックの #pop 相当）
   function onTerm(e: React.MouseEvent, t: Term) {
     e.stopPropagation();
@@ -151,6 +161,11 @@ function DetailView({
 
   return (
     <div className="detail-page" onClick={() => setPop(null)}>
+      {showBack && (
+        <Link to="/" className="float-back">
+          ← 論文レーダー
+        </Link>
+      )}
       {pop && (
         <div
           className="term-pop"
@@ -196,6 +211,7 @@ function DetailView({
           {p.year ? ` · ${p.year}` : ""}
           {citationText(p) ? ` · ${citationText(p)}` : ""}
           {p.doi ? ` · DOI:${p.doi}` : ""}
+          {` · 約${readingMinutes(p)}分`}
         </div>
         <div className="badges">
           {p.special ? (
