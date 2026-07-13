@@ -142,6 +142,8 @@ export const CATEGORIES: GraphCategory[] = [
       "短軸受理論",
       "Half-Sommerfeld境界条件",
       "くさび効果",
+      "限界サイクル振動(LCV)",
+      "Morton効果",
     ],
   },
   {
@@ -156,6 +158,7 @@ export const CATEGORIES: GraphCategory[] = [
       "修正レイノルズ数",
       "予旋回",
       "スワールブレーキ",
+      "ダンピングシール",
     ],
   },
 ];
@@ -310,6 +313,14 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "偏心率 ε", to: "オイルホイップ", label: "軌跡が直線に近いほど不安定性を緩和" },
   // --- 亀裂ロータの多軸受系振動応答解析（Mayes & Davies 1984） ---
   { from: "断面径の減少（亀裂モデル化）", to: "有限要素法", label: "亀裂を等価な剛性低下として組み込む" },
+  // --- ガスフォイル軸受のミスアライメント・アンバランス影響（Howard 2008） ---
+  { from: "軸受の剛性・減衰係数", to: "危険速度", label: "非線形な硬化が危険速度を押し上げる" },
+  // --- MASTリグの改良（Darden & Earhart 2012） ---
+  { from: "ダンピングシール", to: "交差剛性", label: "を抑え安定化力を高める" },
+  { from: "スワールブレーキ", to: "ダンピングシール", label: "に追加し不安定化力をさらに低減" },
+  { from: "限界サイクル振動(LCV)", to: "軸受の剛性・減衰係数", label: "の非線形な硬化で振幅が頭打ちになる" },
+  // --- 3パッドティルティングパッド軸受のMorton効果（Lin, Guo & Wang 2026・抄録ベース） ---
+  { from: "ティルティングパッド軸受", to: "Morton効果", label: "油膜温度の周方向偏りが引き金となる" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

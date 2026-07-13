@@ -973,6 +973,123 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はScienceDirect（Elsevier）・MDPI本体・ResearchGateの3プラットフォームでボット保護に阻まれた一方、Springer（link.springer.com）はPDF直リンクへの通常curlアクセスで問題なく全文取得できた。MDPIの内容はr.jina.ai経由の間接取得のみで、2回の取得結果に数値の食い違いが見つかったため、信頼できない具体的数値は使わないという判断をした。"
       },
       "afterword": "今号でいちばん「なるほど」だったのは、実は論文の中身ではなく、自分の情報収集のやり方についての気づきでした。MDPIの論文（ホワールの向きで軸受の発熱パターンが変わるという話）を読もうとして、サイトに直接アクセスできなかったので、別の経路で内容を要約してもらったんです。そうしたら、1回目と2回目で「軸受の半径がいくつか」という数字が明らかに違う値で返ってきました。中身の説明（前向きに旋回すると熱が一箇所に集まりやすく、後ろ向きだと二手に分かれる、という話）はどちらの取得でもぴったり一致していたのに、細かい数字だけが食い違う——これは今回初めて経験するパターンで、最初は「どっちが正しいんだろう」と迷いました。結局、どちらの数字が正しいか確かめる手段がなかったので、思い切って両方とも使わないことにして、確認が取れた定性的な話だけで記事を組み立てました。数字を書いた方が記事としては説得力が出るのに、それを削るという判断は、正直ちょっと惜しい気持ちもありましたが、「言っていることの中身は合っているけど、細部の数字は自信がない」という状態を、うやむやにせず正直に扱う、というのがこの配信らしいやり方なんだと腑に落ちた出来事でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-14",
+      "status": "published",
+      "headline": "第11号：ElsevierとMDPIが軒並みボット対策で閉ざされる中、NASAの政府刊行物2本で全文を確保した回",
+      "intro": "今日もcollect.mjsの日替わりローテーションでfoil・rotor両トピックの候補を集めましたが、良さそうなOA新着候補（foil：熱弾性流体連成モデルの空気膜スラスト軸受論文／rotor：Morton効果を扱う3パッドティルティングパッド軸受論文）は、いずれもMDPI・Elsevierへの直接アクセスがAkamai/Cloudflareのボット保護（Access Denied・Radware Captcha）で阻まれ、抄録すら公式サイトからは確認できませんでした。OpenAlex・Unpaywall・Semantic Scholar経由で抄録テキスト自体は取得できたため、この2本は正直に「抄録ベース」として、抄録に書かれている範囲だけで控えめに紹介しています。一方、各トピックのOA全文枠を埋めるため、NASA Technical Reports Server（NTRS）を直接検索したところ、フォイル軸受のミスアライメント・アンバランス実験（Howard, 2008）と、ロケットエンジン用シール動特性係数試験装置の改良報告（Darden & Earhart, 2012）という2本の技術資料が見つかりました。NASAの政府刊行物はcurlでの通常アクセスに対してボット対策が一切なく、PDF・全文テキストともにあっさり取得でき、PyMuPDFで実図（試験装置の断面図、シールキャリアの分解写真）まで抽出できました。商業出版社が軒並み閉ざされる一方でNASAだけは開いている、という対比が印象的な一日でした。foil定番枠は本来1999年のIordanoff論文（コンプライアントフォイルスラスト軸受の設計法）を抄録ベースで使う予定でしたが、NASA NTRS由来のHoward 2008論文の方がOA全文で読み応えがあったため差し替えました。rotor定番枠も同様に、当初候補だった2本（Tiwari et al. 2000、Muszynska & Goldman 1995）がOpenAlex・Semantic Scholar・Crossrefのいずれからも抄録を取得できなかったため見送り、OpenAlexの追加検索でDarden & Earhart 2012（NASA MSFC）を発見しました。4本すべてを§0忠実性チェック（Opus）にかけたところ、foil側では関連論文リンクのNTRS ID取り違えと、試験装置の断面図として保存した画像が実は別の図（バンプフォイル構造の模式図）だったという取り違えが、rotor側では新しく作った軸受の材質を「真鍮」と誤記していた箇所（正しくは青銅）と、引用元の節名の誤りが見つかり、いずれも修正しました。",
+      "picked": [
+        {
+          "id": "ntrs:20080022417",
+          "title": "ガスフォイル軸受のミスアライメント・アンバランス影響——非線形剛性がもたらす『予想外』の挙動（Howard, 2008）",
+          "why": "NASAグレン研究センターのOA技術メモランダム。ミスアライメント角の限界（玉軸受の約20倍）と、アンバランスを増やすほど軸受が硬くなり危険速度が上昇するという非線形な実験結果が、原文全文から具体的な数値とともに裏取りでき、深い要約が作れたため。"
+        },
+        {
+          "id": "doi:10.1016/j.ijthermalsci.2025.110633",
+          "title": "空気膜フォイルスラスト軸受の熱弾性流体連成モデル——構造の熱膨張を考慮した潤滑性能への影響（Li et al., 2026・抄録ベース）",
+          "why": "フォイル構造・スラストディスクの熱膨張まで組み込んだ3次元TEHDモデルという、foilトピックの物理的核心に直結するテーマ。ScienceDirectへの直接アクセスは不可だったが、抄録自体は具体的な検証内容を含んでおり、抄録の範囲で誠実に紹介できると判断した。"
+        },
+        {
+          "id": "ntrs:20120002874",
+          "title": "ロケットエンジン用シール動特性係数試験装置MASTリグの改良——低コスト化と静圧軸受試験への対応（Darden & Earhart, 2012）",
+          "why": "NASAマーシャル宇宙飛行センターのOA発表資料。環状シールの動特性係数（安定化力・不安定化力）を測る専用試験装置の実際の構成・改良内容を、ダンピングシールやスワールブレーキの物理的な役割の説明とあわせて具体的に紹介できたため。"
+        },
+        {
+          "id": "doi:10.3390/app16146936",
+          "title": "原子力蒸気タービン発電機の3パッドティルティングパッド軸受——Morton効果リスクを油膜温度差から読み解く（Lin et al., 2026・抄録ベース）",
+          "why": "Morton効果（油膜温度の周方向偏りが引き起こす熱起因の同期振動）という、rotorトピックにまだ無かった現象を扱う新着論文。MDPI本体へのアクセスは不可だったが、実機8基のデータとの照合結果や具体的な運転条件（すきま・油温）まで抄録に明記されており、抄録ベースでも読み応えのある紹介ができた。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Analysis of an Aerodynamic Compliant Foil Thrust Bearing: Method for a Rapid Design（Iordanoff, 1999, ASME J. Tribology）",
+          "note": "foil定番枠の当初候補（抄録ベース、被引用208件）。NASA NTRS由来のHoward 2008論文がOA全文で読み応えがあったため、こちらに差し替えて今回は見送った。"
+        },
+        {
+          "title": "Journal Bearing Impedance Descriptions for Rotordynamic Applications（Childs, Moes & van Leeuwen, 1977, ASME J. Lubrication Technology）",
+          "note": "動特性係数のインピーダンス法という基礎理論の論文。TU/eの機関リポジトリ経由でOAだったが、メタデータページは取得できたもののPDF本体はCloudflareのチャレンジ画面でブロックされ、全文取得できず見送った。"
+        },
+        {
+          "title": "EFFECT OF RADIAL INTERNAL CLEARANCE OF A BALL BEARING ON THE DYNAMICS OF A BALANCED HORIZONTAL ROTOR（Tiwari, Gupta & Prakash, 2000, J. Sound and Vibration）／Chaotic responses of unbalanced rotor/bearing/stator systems with looseness or rubs（Muszynska & Goldman, 1995, Chaos Solitons & Fractals）",
+          "note": "rotor定番枠の当初候補（いずれも高被引用）。OpenAlex・Semantic Scholar・Crossrefのいずれからも抄録テキストが取得できず（出版社が抄録を非公開にしている）、抄録ベースでも中身を誠実に書けないため見送った。"
+        },
+        {
+          "title": "Rotordynamics prediction in engineering（Parkinson, 1991, J. Sound and Vibration）",
+          "note": "被引用421件で候補に挙がったが、Semantic Scholarで確認したところ実体はLalanne & Ferrarioの著書に対する書評（book review）であり、独立した研究論文ではなかったため除外した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "foil 最新枠・定番枠",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA22/抄録2）・定番枠14件（OA4/抄録10）。最新枠のarXiv候補はほぼ全て分野外（一般流体力学・物理）で不採用。OpenAlex新着のijthermalsci論文は抄録ベースで採用、定番枠の当初候補（Iordanoff 1999）はNTRS由来の候補に差し替え。"
+          },
+          {
+            "name": "arXiv + OpenAlex（collect.mjs, 日替わりローテーション）",
+            "scope": "rotor 最新枠・定番枠",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 38,
+            "note": "最新枠24件（OA19/抄録5）・定番枠14件（OA0/抄録14）。最新枠のOpenAlex新着app16146936論文（Morton効果）は抄録ベースで採用。定番枠は統計学・電力系統の誤ヒットが多く、当初候補2本も抄録取得不可のため不採用。"
+          },
+          {
+            "name": "NASA Technical Reports Server（NTRS）直接検索, 供給補完",
+            "scope": "foil classic のOA全文候補探索",
+            "terms": [
+              "\"foil bearing\"（新着順）"
+            ],
+            "hits": 10,
+            "note": "Howard (2008)「Gas Foil Bearing Misalignment and Unbalance Effects」を発見。curlで全文PDF・テキストを問題なく取得でき、PyMuPDFで実図（試験装置断面図）を抽出、採用。"
+          },
+          {
+            "name": "NASA Technical Reports Server（NTRS）直接検索, 供給補完",
+            "scope": "rotor classic のOA全文候補探索",
+            "terms": [
+              "\"rotordynamic\" seal（新着順）",
+              "\"tilting pad\" bearing rotordynamic（新着順）"
+            ],
+            "hits": 12,
+            "note": "Darden & Earhart (2012頃)「Modifications to Marshall's Annular Seal Test (MAST) Rig」を発見。全文PDF・テキストを取得し、PyMuPDFでシールキャリア分解写真を抽出、採用。"
+          },
+          {
+            "name": "OpenAlex Works API（タイトル検索・被引用順, 供給補完）",
+            "scope": "rotor classic、抄録が確実に取得できる高被引用候補の追加探索",
+            "terms": [
+              "rotor bearing stability whirl",
+              "critical speed flexible rotor fluid film bearing",
+              "seal rotordynamic coefficients",
+              "squeeze film damper rotordynamics",
+              "rotordynamic coefficients tilting pad bearing",
+              "labyrinth seal rotordynamic force coefficients",
+              "subsynchronous vibration rotor instability"
+            ],
+            "hits": 63,
+            "note": "Ertas, Delgado & Vannini (2012)「Rotordynamic Force Coefficients for Three Types of Annular Gas Seals」等の候補を発見したが、最終的にはNTRS由来のDarden & Earhart論文を採用したため不使用。Childs, Moes & van Leeuwen (1977) はOAだったがPDFがCloudflareでブロックされ見送り。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はMDPI・Elsevier（ScienceDirect）・ASME（一部）・IOP Publishingへの直接アクセスがすべてAkamai/Cloudflare/Radwareのボット保護（Access Denied・Just a moment・Captcha）で阻まれた一方、NASA NTRS（ntrs.nasa.gov）はボット対策が一切なく、curlでの通常アクセスでPDF・全文テキストとも問題なく取得できた。"
+      },
+      "afterword": "今回いちばん「なるほど」だったのは、AIに指摘されて初めて気づいた自分の勘違いでした。フォイル軸受の実験装置を紹介する図として、論文からPDFの図を1枚抜き出して使ったのですが、あとから中身をよく確かめてもらったら、それは装置全体の写真ではなく、軸受の内部構造だけを描いた別の図だったんです。キャプションの文章としては筋が通っていたので、書いている間はまったく違和感がなかったのですが、実際に画像を開いて見比べたら一目瞭然の間違いでした。文章の整合性だけをいくら確認しても、「本当にその画像がその図なのか」は文章の中には答えがなくて、結局は画像そのものを見るしかないんですよね。当たり前のようで、今回みたいに何十枚もの図をまとめて処理していると、うっかり見落としてしまう類のミスなんだなと実感しました。あわせて、大手出版社のサイトが軒並み固く閉ざされていたのに、NASAの技術資料だけはすんなり読めたのも面白い発見でした。研究の入り口の広さって、内容の質だけでは決まらないんだなと、少し複雑な気持ちにもなりました。 — 編集担当より"
     }
   ]
 }

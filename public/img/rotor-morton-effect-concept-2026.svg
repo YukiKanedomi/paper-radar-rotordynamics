@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 220'><rect width='600' height='220' fill='#faf9f5'/>
+<text x='300' y='24' font-family='sans-serif' font-size='13' fill='#114a42' text-anchor='middle' font-weight='700'>Morton効果が発生する経路（概念図）</text>
+
+<rect x='20' y='70' width='140' height='80' rx='8' fill='#1a5e54' opacity='.12' stroke='#1a5e54' stroke-width='2'/>
+<text x='90' y='100' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>油膜の</text>
+<text x='90' y='116' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>周方向温度差</text>
+<text x='90' y='135' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（すきま・油温に依存）</text>
+
+<path d='M162 110 L228 110' stroke='#1d2127' stroke-width='1.6' marker-end='url(#a2)'/>
+
+<rect x='230' y='70' width='140' height='80' rx='8' fill='#6c7078' opacity='.14' stroke='#6c7078' stroke-width='2'/>
+<text x='300' y='100' font-family='sans-serif' font-size='11' fill='#1d2127' text-anchor='middle' font-weight='700'>ロータの</text>
+<text x='300' y='116' font-family='sans-serif' font-size='11' fill='#1d2127' text-anchor='middle' font-weight='700'>熱的な曲がり</text>
+<text x='300' y='135' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（わずかな熱弓なり）</text>
+
+<path d='M372 110 L438 110' stroke='#1d2127' stroke-width='1.6' marker-end='url(#a2)'/>
+
+<rect x='440' y='70' width='140' height='80' rx='8' fill='#1a5e54' opacity='.20' stroke='#1a5e54' stroke-width='2'/>
+<text x='510' y='100' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>同期振動</text>
+<text x='510' y='116' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>の増大</text>
+<text x='510' y='135' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（Morton効果）</text>
+
+<defs><marker id='a2' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1d2127'/></marker></defs>
+
+<text x='300' y='185' font-family='sans-serif' font-size='9.5' fill='#6c7078' text-anchor='middle'>ティルティングパッド軸受内の油膜温度が周方向に偏ることで生じる経路を一般化して図示</text>
+<text x='300' y='202' font-family='sans-serif' font-size='9.5' fill='#6c7078' text-anchor='middle'>模式図・実データではない（本サイト作成）</text>
+</svg>

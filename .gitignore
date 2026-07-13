@@ -10,3 +10,4 @@ scripts/.keyword-report.json
 
 scripts/logs/
 .collect-candidates.json
+scripts/.tmp/
