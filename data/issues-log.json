@@ -1090,6 +1090,119 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今日はMDPI・Elsevier（ScienceDirect）・ASME（一部）・IOP Publishingへの直接アクセスがすべてAkamai/Cloudflare/Radwareのボット保護（Access Denied・Just a moment・Captcha）で阻まれた一方、NASA NTRS（ntrs.nasa.gov）はボット対策が一切なく、curlでの通常アクセスでPDF・全文テキストとも問題なく取得できた。"
       },
       "afterword": "今回いちばん「なるほど」だったのは、AIに指摘されて初めて気づいた自分の勘違いでした。フォイル軸受の実験装置を紹介する図として、論文からPDFの図を1枚抜き出して使ったのですが、あとから中身をよく確かめてもらったら、それは装置全体の写真ではなく、軸受の内部構造だけを描いた別の図だったんです。キャプションの文章としては筋が通っていたので、書いている間はまったく違和感がなかったのですが、実際に画像を開いて見比べたら一目瞭然の間違いでした。文章の整合性だけをいくら確認しても、「本当にその画像がその図なのか」は文章の中には答えがなくて、結局は画像そのものを見るしかないんですよね。当たり前のようで、今回みたいに何十枚もの図をまとめて処理していると、うっかり見落としてしまう類のミスなんだなと実感しました。あわせて、大手出版社のサイトが軒並み固く閉ざされていたのに、NASAの技術資料だけはすんなり読めたのも面白い発見でした。研究の入り口の広さって、内容の質だけでは決まらないんだなと、少し複雑な気持ちにもなりました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-16",
+      "status": "published",
+      "headline": "軸受を『重なる箔』に置き換える計画の第一歩と、羽根すきまが軸を振り回す力——古いNASA報告書が全文で読めた号",
+      "intro": "いつも通りcollect.mjsでarXivとOpenAlexから候補を集め、フォイル軸受・ロータダイナミクスの物理を主役に選びました。ただ今号は、有力候補だったASME・Elsevier・MDPIなど主要出版社のサイトが軒並みボット保護(Cloudflare等)を強めていて、全文はおろか抄録さえ機械的に取得できないケースが目立ちました。そこで、OA全文の枠についてはNASAの技術報告アーカイブ(NTRS)を追加で探し、1993年と1980年の2本の技術報告書を見つけて全文で読み込みました。最新枠の抄録ベース2本はcollect.mjsの候補からそのまま選んでいます。",
+      "picked": [
+        {
+          "id": "ntrs:19940019942",
+          "title": "Foil Bearings（Elrod, 1993, NASA/MSFC）",
+          "why": "スペースシャトルの転がり軸受をコンプライアント・フォイル軸受に置き換える構想の基礎研究。全文が無料で読め、リーフ(金属箔)の組み立て形状とロータ挿入時の変形をCastiglianoの定理で解いた具体的な数値まで追えたため。"
+        },
+        {
+          "id": "doi:10.1115/1.4069723",
+          "title": "ロータディスクの受動的形状最適化によるガス・スラスト軸受性能の向上（Triebwasser et al., 2025）",
+          "why": "軸受に部品を足さず、ディスクの形をわずかに変えるだけで熱変形を打ち消すという発想が面白く、フォイル軸受トピックの最新枠として選定。全文は取得できずCC-BYライセンスながら抄録ベースで誠実に紹介。"
+        },
+        {
+          "id": "ntrs:19800021222",
+          "title": "Self-Excited Rotor Whirl Due to Tip-Seal Leakage Forces（Leie & Thomas, 1980, NASA CP-2133）",
+          "why": "今日「Alford force」として知られる系譜の現象——羽根すきまの漏れ流れが軸を振り回す力——を理論と実験の両面から扱った、テキサスA&M大学の第1回ロータダイナミクス不安定性ワークショップ収録論文。全文が読め、対策のしきり板が裏目に出る事例まで書かれていたため。"
+        },
+        {
+          "id": "doi:10.1016/j.ymssp.2026.114088",
+          "title": "ターボチャージャーの油温・油圧とサブシンクロナス分岐の実験（Pesthy & Tóth-Nagy, 2026）",
+          "why": "潤滑油の温度が上がるほど不安定振動の始まる回転数が下がるという、実務に直結する知見。ロータダイナミクストピックの最新枠として、抄録ベースで誠実に紹介。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "collect.mjsの有力候補（ASME/Elsevier/MDPIの論文群）",
+          "note": "衝動・低反動段のフォイルスラスト軸受論文や1970〜90年代のJournal of Sound and Vibrationの定番論文など、内容的に魅力的な候補が複数ありましたが、出版社サイトのボット保護で全文はおろか抄録の自動取得もできず、今号は見送りました。"
+        },
+        {
+          "title": "SSMEターボポンプの不安定問題（Childs, 1978）",
+          "note": "すきま励起・サブシンクロナス不安定の定番として最有力候補でしたが、既に過去号でアーカイブ済みのため今号では選びませんでした。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。arXiv側はほぼ全て他分野(ML・流体・通信等)に埋もれ、フォイル軸受として使えたのはOpenAlex新着のみ。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位はHeshmat 1983・DellaCorte 1999など既アーカイブ済みの定番が多数。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA10/抄録3。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA0/抄録14。統計学・電力系統など分野外の高被引用論文が混ざり、分野ガードで除外。"
+          },
+          {
+            "name": "NASA NTRS（追加検索）",
+            "scope": "主要出版社サイトのボット保護で全文取得できなかったため、OA全文の枠を埋める目的で追加検索",
+            "terms": [
+              "foil bearing rotordynamic stiffness damping",
+              "rotor whirl tip-seal leakage forces",
+              "rotordynamic instability"
+            ],
+            "note": "件数は正式には記録していないが、Foil BearingsとSelf-Excited Rotor Whirl Due to Tip-Seal Leakage Forcesの2本を全文取得できる形で発見。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はNTRS追加検索の分だけ通常のローテーションから外れている。"
+      },
+      "afterword": "今号でいちばん「なるほど」だったのは、1980年の論文に出てくる、羽根すきまの流れを乱して振動を抑えようとした対策が、配置を誤ると逆に別方向の振動を煽ってしまったという話です。「対策を打てば打つほど安全」ではなく、効果の乱れ方まで見極めて置き場所を選ばないといけないというのは、専門外の身には新鮮な発見でした。もうひとつ印象に残ったのは、今日の最新の論文サイトほど機械的に読みにくくなっていて、逆に1980年・1993年のNASAの古い技術報告書のほうがすんなり全文を読めたことです。オープンに残る記録の値打ちを、思わぬところで感じた回でした。 — 編集担当より"
     }
   ]
 }
