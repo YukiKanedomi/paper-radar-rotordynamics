@@ -1203,6 +1203,119 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はNTRS追加検索の分だけ通常のローテーションから外れている。"
       },
       "afterword": "今号でいちばん「なるほど」だったのは、1980年の論文に出てくる、羽根すきまの流れを乱して振動を抑えようとした対策が、配置を誤ると逆に別方向の振動を煽ってしまったという話です。「対策を打てば打つほど安全」ではなく、効果の乱れ方まで見極めて置き場所を選ばないといけないというのは、専門外の身には新鮮な発見でした。もうひとつ印象に残ったのは、今日の最新の論文サイトほど機械的に読みにくくなっていて、逆に1980年・1993年のNASAの古い技術報告書のほうがすんなり全文を読めたことです。オープンに残る記録の値打ちを、思わぬところで感じた回でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-17",
+      "status": "published",
+      "headline": "羽根の後端をギザギザにして送風なしで冷やす軸受と、歯をどちら側に付けるかでシールの安定性が変わるという実験——今号もNASAの技術報告アーカイブに助けられた号",
+      "intro": "いつも通りcollect.mjsでarXivとOpenAlexから候補を集めましたが、今号は候補の多くが分野外(自動運転・半導体成長・疫学など)のノイズか、あるいは既にアーカイブ済みの論文と同一で、フォイル軸受・ロータダイナミクスの定番候補として新規に使えるものが限られていました。また、Elsevier(ScienceDirect)・MDPIともボット保護が強く、CC-BYで公式にオープンなはずの論文でも本文にはアクセスできないケースが続きました。そこで定番枠の多くをNASAの技術報告アーカイブ(NTRS)からの追加検索に切り替え、フォイル軸受1本・ロータダイナミクス2本を全文で発見しました。抄録ベースの1本(ポーランドの研究グループによるアクティブ・ガスフォイル軸受の起動/惰行実験)は、本文が読めずハイライト(論文自身の要点4行)のみに基づく、意図的に控えめな紹介にしています。",
+      "picked": [
+        {
+          "id": "ntrs:20140010151",
+          "title": "シェブロン形状フォイルスラスト軸受——受動的な熱管理と潤滑剤混合による性能向上（Bruckner, 2013, NASA Glenn）",
+          "why": "航空機エンジンの排気ノズル(シェブロンノズル)と同じ発想で、羽根の後端をギザギザに切るだけで強制空冷なしに高速域の負荷容量低下を防いだという、シンプルながら効いた工夫が面白く選定。全文が読め、3種類の羽根形状の比較試験まで追えたため。"
+        },
+        {
+          "id": "doi:10.1016/j.measurement.2026.122020",
+          "title": "可変スリーブ径アクティブガスフォイルジャーナル軸受における起動・惰行時の摩擦と温度（Breńkacz et al., 2026）",
+          "why": "起動時より惰行(コーストダウン)時の方が摩擦の発熱が大きいという、実務上見落とされがちな知見のため、フォイル軸受トピックの最新枠として選定。本文はボット保護で取得できず、論文自身のハイライト(要点4行)のみに基づく抄録ベースの紹介。"
+        },
+        {
+          "id": "ntrs:19870012779",
+          "title": "ロータ側歯・ステータ側歯ラビリンスガスシールのロータダイナミック係数比較実験（Childs & Scharrer, 1987, NASA/Texas A&M）",
+          "why": "寸法を揃え歯の位置だけを変えた2つのシールを実測し、『ホワール周波数比』という総合指標で比べて初めて優劣が見えたという、実験の組み立て方自体が学びになる論文のため選定。全文が読め、ラビリンスシールの減衰係数を世界で初めて報告した論文でもある。"
+        },
+        {
+          "id": "ntrs:19920005142",
+          "title": "ラビリンスシールのロータダイナミック係数の算出とロータダイナミクス設計計算への応用（Weiser & Nordmann, 1991, NASA CP-3026）",
+          "why": "実際に稼働する高圧圧縮機のデータに4つの計算手法を当てはめたら、既存理論とは符号が逆(プラス)の剛性が出たという実機検証の説得力で選定。全文が読め、同号のChilds & Scharrer論文とラビリンスシールというテーマで響き合うため、ロータダイナミクストピックの最新枠とした。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "collect.mjsの候補（Elsevier・MDPIの論文群）",
+          "note": "三葉ガスフォイル軸受のFSI解析やティルティングパッド軸受のMorton効果評価など、内容的に有力な候補が複数ありましたが、CC-BYで公式にオープンなものも含めScienceDirect・MDPIともボット保護(Akamai等)で本文はおろかページの取得自体ができず、今号は見送りました。"
+        },
+        {
+          "title": "環状ギャップの傾き・トルク係数シミュレーション（Kuhr, Nordmann & Pelz, 2021）",
+          "note": "ロータダイナミクス最新枠の有力候補でしたが、既に過去号でアーカイブ済み(同一arXiv論文)と判明したため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。arXiv側は大半が分野外(自動運転・半導体・通信等)で、フォイル軸受として使えたのはOpenAlex新着のみ。Breńkacz et al.の論文はここから選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。OA候補(Radil & DellaCorte 2000等)はいずれも既アーカイブ済みで新規に使えず、NTRS追加検索に切り替えた。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA17/抄録7。有力に見えたKuhr et al.(環状ギャップの傾き・トルク係数)は既アーカイブ済みと判明。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位はMuszynska 1986やLund 1974など既アーカイブ済みか、抄録が非公開のJournal of Sound and Vibration掲載論文が多く、新規採用できなかった。"
+          },
+          {
+            "name": "NASA NTRS（追加検索）",
+            "scope": "ScienceDirect・MDPIのボット保護で本文取得できなかったため、OA全文の枠を埋める目的で追加検索",
+            "terms": [
+              "foil thrust bearing",
+              "rotor whirl instability bearing",
+              "rotordynamic instability turbomachinery seal"
+            ],
+            "note": "件数は正式には記録していないが、シェブロン形状フォイルスラスト軸受(Bruckner 2013)、teeth-on-rotor/teeth-on-stator比較(Childs & Scharrer 1987)、ラビリンス動特性係数の算出手法(Weiser & Nordmann 1991)の3本を全文取得できる形で発見。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はNTRS追加検索の分だけ通常のローテーションから外れている。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、ラビリンスシールの歯を回転する軸に付けるか、止まっている外側に付けるかという、一見どちらでもよさそうな設計上の選択が、実際に測ってみると安定性をはっきり左右したという1987年の実験です。しかも『押し返す力』と『それを抑える力』を別々に見ただけでは優劣が決まらず、両者の比という一段階まとめた指標で初めて差が見えた、というくだりに、単純な数値比較の落とし穴を教わった気がしました。もうひとつ、シェブロンノズル(航空機エンジンの排気口の工夫)の発想を軸受の羽根に応用したという話も、分野をまたいだ着想の面白さがありました。 — 編集担当より"
     }
   ]
 }
