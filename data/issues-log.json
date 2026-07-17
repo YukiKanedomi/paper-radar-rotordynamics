@@ -1316,6 +1316,132 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はNTRS追加検索の分だけ通常のローテーションから外れている。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、ラビリンスシールの歯を回転する軸に付けるか、止まっている外側に付けるかという、一見どちらでもよさそうな設計上の選択が、実際に測ってみると安定性をはっきり左右したという1987年の実験です。しかも『押し返す力』と『それを抑える力』を別々に見ただけでは優劣が決まらず、両者の比という一段階まとめた指標で初めて差が見えた、というくだりに、単純な数値比較の落とし穴を教わった気がしました。もうひとつ、シェブロンノズル(航空機エンジンの排気口の工夫)の発想を軸受の羽根に応用したという話も、分野をまたいだ着想の面白さがありました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-18",
+      "status": "published",
+      "headline": "溝を2本に分けるだけで負荷容量が上がるフォイル軸受と、蜂の巣状の壁がラビリンスの6倍減衰する理由——ロータダイナミクス定番枠でOA探しに苦労した号",
+      "intro": "いつも通りcollect.mjsでarXivとOpenAlexから候補を集めましたが、今号はロータダイナミクスの定番枠（OpenAlex被引用上位14件）でOA全文の候補が実質ゼロという状況に直面しました。唯一OAとされた1件は書籍らしき文献でアクセス経路も不確かだったため見送り、代わりにOpenAlexを別途直接検索して、NASA NTRSに全文が残る1980年代のシール研究（Childs, Elrod & Hale 1989）を新たに発掘しました。最新枠は逆に、新規候補5本がすべてElsevier論文で、OpenAlex・Crossref・Semantic Scholar・ScienceDirect直接アクセスのいずれからも抄録本文を取得できず、Web検索エンジンの検索結果スニペットから確認できた範囲だけを、抄録相当の情報として慎重に紹介する形にしました。フォイルガス軸受トピックは対照的に、Nature Scientific Reportsの早期公開論文が全文アクセスでき、圧縮性レイノルズ方程式から流体構造連成解析まで詳しく追えました。忠実性チェックでは、フォイル軸受の設計法論文で『どちらの手法が簡略化されているか』を抄録と逆に書いていた誤りと、ハニカムシール論文で試験回転数の下限を6倍過小（500rpmのはずが3000rpm）に誤記していた点が見つかり、いずれも出典に戻って修正しました。",
+      "picked": [
+        {
+          "id": "doi:10.1038/s41598-026-60543-5",
+          "title": "二重リング状マイクログルーブを持つ三葉ガスフォイル軸受の数値解析（Zhang et al., 2026, Scientific Reports）",
+          "why": "トップフォイルの溝を1本から間隔を空けた2本に分けるだけで負荷容量が1割前後増え、フォイルの変形は最大7%減るという、シンプルな工夫と明快な数値の組み合わせが良く、全文が読めて式・図まで追えたため選定。"
+        },
+        {
+          "id": "doi:10.1115/1.2834140",
+          "title": "空力コンプライアント・フォイルスラスト軸受の解析——迅速設計のための逆解析法（Iordanoff, 1999）",
+          "why": "目標性能から先に形状を決め、精密な計算はその後の検証・改良に回すという設計順序の発想が実務的で、被引用200件超の定番のため選定。抄録の範囲で慎重に紹介。"
+        },
+        {
+          "id": "doi:10.1115/1.3261911",
+          "title": "環状ハニカムシールの漏れ・ロータダイナミック係数試験（Childs, Elrod & Hale, 1989）",
+          "why": "スペースシャトルメインエンジンでラビリンスシールをハニカムシールに交換したら振動が収まったという実機経験の裏付けとして行われた試験で、ハニカムシールの減衰係数を世界で初めて系統的に報告した論文のため選定。全文が読め、ラビリンス・平滑シールとの3者比較まで追えた。"
+        },
+        {
+          "id": "doi:10.1016/j.ymssp.2026.113857",
+          "title": "ハニカム構造で減衰を高めたフォイル軸受が支える剛体ロータの非線形応答（Zhu et al., 2026）",
+          "why": "負のポアソン比（押すと横方向にも縮む）ハニカム構造と制振材を組み合わせてフォイル軸受の減衰不足を補うという着想が、今号のロータダイナミクス定番枠（ハニカムシール）とも響き合うため選定。原文本体には未接触で、検索エンジン経由で確認できた抄録相当の情報のみに基づく、意図的に控えめな紹介。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotordynamics of Turbomachinery（1988、被引用500件超）",
+          "note": "ロータダイナミクス定番枠でOpenAlex上は唯一のOA候補でしたが、書籍（Vance著と思われる）らしくDOIも無く、リンク先のEPFLアーカイブページも自動アクセスを拒否したため、全文アクセスを確認できず見送りました。"
+        },
+        {
+          "title": "An Iwatsubo-Based Solution for Labyrinth Seals（Childs & Scharrer, 1986, NASA NTRS）",
+          "note": "全文が読める良い候補でしたが、前号（2026-07-17）ですでにChilds & Scharrer 1987のラビリンスシール論文を紹介したばかりだったため、同じ著者・近い題材の連続を避け、今号はハニカムシールの論文を選びました。"
+        },
+        {
+          "title": "ロータダイナミクス最新枠のElsevier論文4本（ラビリンスシール×低温タービン、ボールベアリングのケージホワール、電磁軸受のPID制御 等）",
+          "note": "いずれもOpenAlex・Crossref・Semantic Scholar・ScienceDirect直接アクセスのすべてで抄録本文を取得できず、内容を確認できないため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv側は分野外のノイズが大半で、フォイル軸受として使えたのはOpenAlex新着のみ。Zhang et al.(Nature)の論文はここから選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位はいずれも既アーカイブ済みで、新規に使える中で最も被引用の多かったIordanoff 1999（208件）を選定。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA17/抄録7。arXiv側は分野外、OpenAlex新着側の新規候補5件はすべてElsevier論文で抄録取得不可。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位には統計学論文・風力発電の電力系統論文などキーワードが偶然一致しただけの分野外候補が混在。唯一のOA候補は書籍のため見送り。"
+          },
+          {
+            "name": "OpenAlex追加検索（OA限定, ロータダイナミクス定番枠）",
+            "scope": "被引用数の多い順・is_oa:true限定",
+            "terms": [
+              "rotordynamic coefficients seal",
+              "rotor bearing stability whirl",
+              "critical speed flexible rotor fluid film bearing"
+            ],
+            "hits": 3,
+            "note": "通常検索でOA候補が枯渇したため実施。NASA NTRSに全文が残るChilds, Elrod & Hale(1989、ハニカムシール)とChilds & Scharrer(1986、ラビリンスシール)を発見し、前者を選定。"
+          },
+          {
+            "name": "Web検索（ロータダイナミクス最新枠、抄録相当情報の確認）",
+            "scope": "該当候補のタイトルで検索",
+            "terms": [
+              "Nonlinear investigation on the dynamic responses of the rigid rotor system supported by damping-enhanced foil bearings with honeycomb structure abstract"
+            ],
+            "note": "ScienceDirect等への直接アクセスが軒並み失敗したため実施。SSRNプレプリントページの検索結果スニペットから、著者・DH/NPR構造・制振材といった要点を確認し、抄録相当の情報として利用（原文本体は未接触）。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はロータダイナミクス定番枠のOA追加検索・最新枠のWeb検索確認の分だけ、通常のローテーションから外れている。"
+      },
+      "afterword": "今号でいちばん『なるほど』だったのは、フォイル軸受の溝の論文です。溝を1本から2本に分けて間隔を空けるだけで支えられる荷重が増えるという結果自体も面白いのですが、それ以上に『圧力が一番高くなる場所』と『実際に一番荷重を支えられる条件』が必ずしも一致しない、という指摘に唸りました。間隔を広げるとピーク圧力は上がるのに、逆に荷重を支える力は間隔4mmの方が優れる——著者らは『局所的な圧力ピークの増加は、必ずしも軸受容量の向上にはつながらない』と書いていて、部分最適と全体最適は違う、という当たり前だけど見落としがちなことを、具体的な数字で示されると妙に納得してしまいました。 — 編集担当より"
     }
   ]
 }
