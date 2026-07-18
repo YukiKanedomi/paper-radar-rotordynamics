@@ -1442,6 +1442,132 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（数日で一巡）。今号はロータダイナミクス定番枠のOA追加検索・最新枠のWeb検索確認の分だけ、通常のローテーションから外れている。"
       },
       "afterword": "今号でいちばん『なるほど』だったのは、フォイル軸受の溝の論文です。溝を1本から2本に分けて間隔を空けるだけで支えられる荷重が増えるという結果自体も面白いのですが、それ以上に『圧力が一番高くなる場所』と『実際に一番荷重を支えられる条件』が必ずしも一致しない、という指摘に唸りました。間隔を広げるとピーク圧力は上がるのに、逆に荷重を支える力は間隔4mmの方が優れる——著者らは『局所的な圧力ピークの増加は、必ずしも軸受容量の向上にはつながらない』と書いていて、部分最適と全体最適は違う、という当たり前だけど見落としがちなことを、具体的な数字で示されると妙に納得してしまいました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-19",
+      "status": "published",
+      "headline": "3Dプリンタの型で作る円錐形フォイル軸受と、脚を375°Fで温めて共鳴ホワールを止めた1984年の現場記録",
+      "intro": "今日はcollect.mjsでいつも通りarXiv・OpenAlexの候補を集めましたが、フォイル軸受・ロータダイナミクスの両方で、CC-BYの新しい論文がWileyやElsevierのボット対策（Cloudflareのセキュリティチェック）に阻まれて全文を読めないという壁に何度もぶつかりました。フォイル軸受の最新枠は、円錐形ガスフォイル軸受(CGFB)をSLA光造形の型で作るという2026年のElsevier論文（ライセンス上はオープンアクセス）を抄録ベースで紹介する形に。ロータダイナミクスの最新枠も同様に、電動アシスト・ターボチャージャーのロータ論文（Wiley、CC-BY）を抄録ベースにしました。一方でOA全文を確保するため、NASAの技術報告書アーカイブ(NTRS)を直接検索し、フォイル軸受では1999年の剛性計測システムの研究ハイライトを、ロータダイナミクスでは1984年のロータダイナミクス不安定性ワークショップに収録された、実際の遠心圧縮機で起きた共鳴ホワールを支持脚の加熱だけで抑え込んだという現場記録を発掘しました。後者はスキャンOCRの文字が乱れていたため、逐語引用は使わずパラフレーズに徹しています。",
+      "picked": [
+        {
+          "id": "doi:10.1016/j.jmapro.2026.05.058",
+          "title": "SLA光造形の型を使った円錐形ガスフォイル軸受(CGFB)の製造法（Sarrazin & Liebich, 2026, Journal of Manufacturing Processes）",
+          "why": "ラジアル・スラスト荷重を1個で支えられる円錐形フォイル軸受は、まだ市販品も確立した作り方もない研究段階の技術。3Dプリンタの型で低コストに試作できるという切り口が新しく、今号の最新枠として選定。ライセンスはCC-BYだが本文取得ができず抄録ベース。"
+        },
+        {
+          "id": "ntrs:20050192219",
+          "title": "光ファイバー変位センサでフォイル軸受の動特性を測る、新しい試験システム（Howard, DellaCorte & Valco, 1999, NASA Glenn Research and Technology）",
+          "why": "フォイル軸受の耐久性（PS304コーティング）は進んだのに、振動安定性の理解が追いついていないという課題意識と、あえて簡易な計測法を選ぶ堅実な研究姿勢が良く、全文が読めるため定番枠として選定。"
+        },
+        {
+          "id": "doi:10.1002/msd2.70081",
+          "title": "電動アシスト・ターボチャージャーのロータ動特性——ナット構造の接触効果を考慮した解析（Liang et al., 2026, International Journal of Mechanical System Dynamics）",
+          "why": "ナットの締め方一つでプレロードが飽和したり、油膜ホワールの発生タイミングや運転可能な回転速度域が変わったりするという実務的な知見が興味深く、今号の最新枠として選定。CC-BY(OA)だが全文取得ができず抄録ベース。"
+        },
+        {
+          "id": "ntrs:19850005812",
+          "title": "大型遠心圧縮機で起きた共鳴ホワールを、運転を止めずに抑え込んだ実地記録（Bhat & Eierman, 1984, NASAロータダイナミクス不安定性ワークショップ）",
+          "why": "軸受を交換せず、支持脚を温めるという運転上の工夫だけで共鳴ホワールを抑え込んだという実地の解決策が印象的で、全文（当時のスキャン資料）が読めるため定番枠として選定。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotordynamics of Turbomachinery（Vance, 1988, 被引用500件超）",
+          "note": "OpenAlex上はOAとされていましたが、リンク先はEPFLの図書館カタログページで実際の本文PDFは無く、前号（2026-07-18）と同様の理由で見送りました。"
+        },
+        {
+          "title": "Rotordynamics prediction in engineering（Lalanne & Ferrario, 1990／1991）",
+          "note": "被引用数だけ見ると定番候補に見えましたが、中身を確認するとこれは書籍の書評（book review）で、独立した研究論文ではなかったため見送りました。"
+        },
+        {
+          "title": "Multi-Fault Diagnosis Using Lightweight Machine Learning Techniques for Rotordynamics Analysis（2026）",
+          "note": "ロータダイナミクス最新枠に3種類のDOIで重複出現するほど目立つ候補でしたが、機械学習が主役でロータの物理現象そのものが主役ではないため見送りました（本アプリの方針でML・数値手法は脇役）。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv側は分野外ノイズが大半で、フォイル軸受として使えたのはOpenAlex新着のみ。ここからSarrazin & Liebich(2026)を選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位は既アーカイブ済みが多く、新規のOA候補は無かったため、後述のNTRS直接検索でOA全文候補を別途確保。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。arXiv側の新規候補2件は既アーカイブ済み。OpenAlex新着側からLiang et al.(2026)を選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。唯一のOA候補(Vance 1988)は本文アクセス不可、上位の一部は分野外（統計学論文等）や書籍書評が混在していたため、後述のNTRS直接検索に切り替え。"
+          },
+          {
+            "name": "NASA NTRS 直接検索（OA全文の確保、foil/rotor）",
+            "scope": "キーワード検索",
+            "terms": [
+              "gas foil bearing rotordynamic performance",
+              "rotordynamic whirl instability bearing"
+            ],
+            "hits": 15,
+            "note": "通常の定番枠でOA全文候補が確保できなかったため実施。foilでは20050192219(剛性計測システム)、rotorでは19850005812(共鳴ホワール事例)を発掘。19850005812はスキャンOCRの文字乱れがあり逐語引用は使わずパラフレーズに徹した。"
+          },
+          {
+            "name": "ライセンス・全文アクセス確認（Unpaywall / Crossref / WebFetch）",
+            "scope": "選定候補の個別確認",
+            "terms": [
+              "jmapro.2026.05.058",
+              "msd2.70081"
+            ],
+            "note": "両論文ともUnpaywall・CrossrefでCC-BYのゴールドOAと確認できたが、出版社サイト(ScienceDirect / Wiley Online Library)がCloudflareのボット対策で本文取得を拒否したため、抄録（OpenAlex/Crossref記載の公式版）のみを出典とする抄録ベース扱いにした。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。加えて、定番枠のOA全文が確保できなかったためNASA NTRSの直接検索を追加で実施した（前号と同様のパターン）。"
+      },
+      "afterword": "今日一番印象に残ったのは、1984年の遠心圧縮機の話です。振動を抑える『正しい』解決策（軸受を交換する）がすぐには手に入らないとき、engineerたちが『圧縮機を支える脚をヒーターで温める』という一見遠回りな方法で、機械を止めずに切り抜けていました。温めると金属がわずかに伸びて、軸受の効き方が変わる——理屈は地味なのに、現場では確かに効いた、というところに、教科書の数式だけでは伝わらない現場の知恵を感じました。あわせて、CC-BYのオープンアクセス論文なのに、出版社サイトのボット対策で結局読めなかった、という今日ならではのつまずきも記録しておきます。 — 編集担当より"
     }
   ]
 }
