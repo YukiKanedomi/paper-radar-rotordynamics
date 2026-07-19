@@ -1568,6 +1568,119 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。加えて、定番枠のOA全文が確保できなかったためNASA NTRSの直接検索を追加で実施した（前号と同様のパターン）。"
       },
       "afterword": "今日一番印象に残ったのは、1984年の遠心圧縮機の話です。振動を抑える『正しい』解決策（軸受を交換する）がすぐには手に入らないとき、engineerたちが『圧縮機を支える脚をヒーターで温める』という一見遠回りな方法で、機械を止めずに切り抜けていました。温めると金属がわずかに伸びて、軸受の効き方が変わる——理屈は地味なのに、現場では確かに効いた、というところに、教科書の数式だけでは伝わらない現場の知恵を感じました。あわせて、CC-BYのオープンアクセス論文なのに、出版社サイトのボット対策で結局読めなかった、という今日ならではのつまずきも記録しておきます。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-20",
+      "status": "published",
+      "headline": "溶接なしで組み替えられる試作フォイル・スラスト軸受（NASA）と、円周方向の面積変化を取り込んだラビリンスシール解析（Childs & Scharrer）",
+      "intro": "今日もいつも通りcollect.mjsでarXiv・OpenAlexの候補を集めましたが、foil/rotorとも定番枠（被引用上位）の中に新規のOA全文候補が見つかりませんでした（上位はすでに過去号でアーカイブ済みか、抄録のみ）。そこでOpenAlexを対象を絞って直接検索し（open_access.is_oa:trueで絞り込み被引用順）、foilでは2008年のNASA/TM（フォイル・スラスト軸受の試作報告）、rotorでは1986年のASME論文（1984年にNASA/テキサスA&M大学のワークショップで発表されたラビリンスシール解析、Childs & Scharrer）を、いずれもNASA技術報告書アーカイブ(NTRS)経由の全文で発掘しました。最新枠（抄録ベース）はcollect.mjsの通常候補からfoil・rotorそれぞれ選定しています。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.2966418",
+          "title": "溶接なしで組み替えられる試作用フォイル・スラスト軸受の設計・製作・性能（Dykas, Bruckner, DellaCorte, Edmonds & Prahl, 2008, NASA/TM & ASME J. Tribology）",
+          "why": "フォイル・ジャーナル軸受に比べ情報の少ないスラスト軸受について、溶接なしで組み替えられる構造と実測性能（負荷容量125N、係数Dt=0.024）を示す実務的な内容で、全文（NASA/TM、実写真つき）が読めるため定番枠として選定。"
+        },
+        {
+          "id": "doi:10.1515/tjj-2024-0110",
+          "title": "軸受・コンプライアントフォイルガスシール・ロータを一体で解く結合系の動特性解析（Wang, Zhang, Wu & Jiang, 2025, International Journal of Turbo and Jet Engines）",
+          "why": "軸受・フォイル式ガスシール・ロータの3者連成という切り口が珍しく、幾何学的偏心の影響を扱っている点が今号のラビリンスシール論文とも響き合うため、最新枠として選定。全文アクセスができず抄録ベース。"
+        },
+        {
+          "id": "doi:10.1115/1.3239907",
+          "title": "ラビリンスシールの動特性係数を求める、見通しよく組み立てられた解析モデル（Childs & Scharrer, 1986, ASME J. Engineering for Gas Turbines and Power）",
+          "why": "先行モデル（Kostyuk・Iwatsubo等）が省いていた円周方向の面積変化を取り込み、実験との誤差を25%以内に抑えた、ラビリンスシール解析の基礎を作った研究。全文（1984年NASAワークショップ講演版）が読めるため定番枠として選定。"
+        },
+        {
+          "id": "doi:10.1115/1.4072322",
+          "title": "水素燃料電池用遠心圧縮機、羽根の変形とロータの動きを両方見て先端すきまを攻める（Sun, Xiong, Chen, Xue & Wang, 2026, ASME J. Engineering for Gas Turbines and Power）",
+          "why": "先端すきまの変動要因のうちロータダイナミクス由来が44.31%を占めると定量化し、実際にすきまを攻めて効率を上げた実務的な内容が今号の最新枠にふさわしいため選定。全文アクセスができず抄録ベース。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure and damping material（Zhu et al., 2025, Mechanical Systems and Signal Processing）",
+          "note": "前号(2026-07-19)で選んだハニカム構造フォイル軸受の論文とテーマが近く、同じ号での重複感を避けるため見送りました。"
+        },
+        {
+          "title": "Rotordynamics of Turbomachinery（Vance, 1988、被引用500件超）",
+          "note": "OpenAlex上はOAとされていますが、リンク先は今回もEPFLの図書館カタログページで本文PDFが無く、前々号までと同じ理由で見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 24,
+            "note": "OA19/抄録5。arXiv側(0-13件目)はほぼ分野外ノイズで、フォイル軸受として使えたのはOpenAlex新着分のみ。ここからWang et al.(2025)を選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。OA候補4件はいずれも既アーカイブ済みで新規なし。残りの非OA上位も既アーカイブ済みが多かったため、後述のOpenAlex直接検索でOA全文候補を別途確保。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。arXiv側の新規候補2件は既アーカイブ済み。OpenAlex新着側からSun et al.(2026)を選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。唯一のOA候補(Vance 1988)は本文アクセス不可（EPFL図書館カタログのみ）、他は統計学論文等の分野外ノイズや既アーカイブ済みが中心だったため、後述のOpenAlex直接検索に切り替え。"
+          },
+          {
+            "name": "OpenAlex直接検索（OA全文の確保、foil/rotor）",
+            "scope": "open_access.is_oa:trueで絞り込み、被引用数順",
+            "terms": [
+              "foil thrust bearing rotordynamic",
+              "rotordynamic coefficients seal",
+              "labyrinth seal rotordynamic"
+            ],
+            "note": "通常の定番枠でOA全文候補が確保できなかったため実施。foilでは「Design, Fabrication, and Performance of Foil Gas Thrust Bearings」(Dykas et al. 2008、NASA/TM経由の緑色OA)を、rotorでは「An Iwatsubo-Based Solution for Labyrinth Seals」(Childs & Scharrer 1986、同じくNASA/TM経由)を発掘。後者は式(18)を含むページをOCRでなく画像として直接読み、記号の読み違いがないか確認した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。定番枠のOA全文が2トピックとも確保できなかったため、OpenAlex APIの直接検索（OAフィルタ＋被引用順）を追加で実施した（07-19号までと同様のパターン）。"
+      },
+      "afterword": "今日はChilds & Scharrerという1986年のラビリンスシールの論文で、式そのものをOCRのテキストではなく、そのページをそのまま画像として見直す一幕がありました。古いスキャン文書だと文字認識が意外と怪しくて、変数の上付き・下付きが崩れて読めることがあるのですが、画像としてページをそのまま見ると、式がとてもきれいに——直接剛性・交差剛性・直接減衰・交差減衰という4つの係数がすっきり行列の形で——並んでいました。40年近く前の論文でも、確かめ方さえ間違えなければちゃんと裏が取れるのだと実感した収集作業でした。 — 編集担当より"
     }
   ]
 }
