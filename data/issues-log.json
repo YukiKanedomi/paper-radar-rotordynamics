@@ -1681,6 +1681,131 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。定番枠のOA全文が2トピックとも確保できなかったため、OpenAlex APIの直接検索（OAフィルタ＋被引用順）を追加で実施した（07-19号までと同様のパターン）。"
       },
       "afterword": "今日はChilds & Scharrerという1986年のラビリンスシールの論文で、式そのものをOCRのテキストではなく、そのページをそのまま画像として見直す一幕がありました。古いスキャン文書だと文字認識が意外と怪しくて、変数の上付き・下付きが崩れて読めることがあるのですが、画像としてページをそのまま見ると、式がとてもきれいに——直接剛性・交差剛性・直接減衰・交差減衰という4つの係数がすっきり行列の形で——並んでいました。40年近く前の論文でも、確かめ方さえ間違えなければちゃんと裏が取れるのだと実感した収集作業でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-21",
+      "status": "published",
+      "headline": "圧縮機の『サージ地図』を借りたフォイル軸受の性能マップ（NASA）と、歯数で優劣が逆転する段付きラビリンスシール（Scharrer）",
+      "intro": "いつも通りcollect.mjsでarXiv・OpenAlexの候補を集めましたが、foil/rotorとも今日の定番枠・最新枠の新規候補の多くはOpenAlexに抄録データが無く（DOIはあるがabstract_inverted_indexがnull）、Semantic Scholar・出版社サイト（MDPIは自動アクセスがブロックされ、reader経由の抽出でしのぎました）でも本文抄録を確保できず、抄録ベースとして書くための最低限の材料すら無い候補が大半でした。そこでNTRS（NASA技術報告書アーカイブ）とOpenAlexを『gas foil bearing rotordynamic』『seal rotordynamic coefficients whirl』等で直接検索し、foilはNASAグレン研究センターのDellaCorte et al.(2006)によるフォイル軸受『性能マップ』提案（NASA/TM、全文PD）を、rotorはScharrer(1989)による段付きラビリンスシールの解析（NASA CP収録のワークショップ講演、全文）を、それぞれ定番枠として発掘しました。最新枠は同様の直接検索でMDPI(Lubricants/Modelling)のOA全文2本を確保しています。§0の忠実性チェック（faithfulness-check）では、Scharrer論文の図についてNASA職員ではなく民間コントラクター(Rocketdyne)の著作である点が指摘され、実図の転載をやめて模式図に差し替えるという判断もありました。",
+      "picked": [
+        {
+          "id": "ntrs:20060051824",
+          "title": "フォイルガス軸受の『性能マップ』——ストライベック曲線を借りて安全余裕を可視化する（DellaCorte, Radil, Bruckner & Howard, 2006, NASA/TM—2006-214343）",
+          "why": "ターボ圧縮機の動作マップという発想をフォイル軸受に持ち込み、S'≈6という『いちばん涼しく走れる』運転点を実測データで示した内容が具体的で、全文（PD）で式・図とも裏取りできるため定番枠として選定。"
+        },
+        {
+          "id": "doi:10.3390/lubricants13110472",
+          "title": "多層フォイルスラスト軸受、すきまが狭く回転が遅いほど『気体のすべり』が軸剛性を最大5%動かす（Jiang, Zhu, Huang & Gao, 2025, Lubricants）",
+          "why": "境界すべり効果という細かい物理を動特性モデルに組み込み、小すきま・低速条件での剛性偏差を定量化した内容が、今号の定番枠（性能マップ）と『運転条件による軸受挙動の変化』というテーマで響き合うため最新枠として選定。"
+        },
+        {
+          "id": "ntrs:19890013530",
+          "title": "段付きラビリンスシール、5枚歯なら軸側・15枚歯ならケース側が安定——歯の数で『勝つ配置』が入れ替わる（Scharrer, 1989, NASA CP-3026）",
+          "why": "直線型ラビリンスシールの解析（Childs & Scharrer 1986、前々号で紹介）を段付き型に拡張した続編にあたり、歯配置の優劣が歯数で逆転するという具体的な発見があるため定番枠として選定。全文（NASA CP収録）で式・数値とも裏取りできる。"
+        },
+        {
+          "id": "doi:10.3390/modelling7040135",
+          "title": "自動玉バランサー、両方の玉が『釣り合い位置』に落ち着く確率はわずか5分の1（Mirkov, Pezo, Jovanović, Balać & Peković, 2026, Modelling）",
+          "why": "支持異方性下での自動玉バランサーの大域的な安定性を系統的に調べ、双安定性や準周期応答といった非直感的な挙動を定量的に示した内容が、今号のロータダイナミクス系の理解を広げるため最新枠として選定。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure and damping material（Zhu et al., 2025, Mechanical Systems and Signal Processing）",
+          "note": "foil最新枠の有力候補でしたが、OpenAlex・Semantic Scholarとも抄録データが無く（アブストラクトのインデックスがnull）、抄録ベースとして書くための最低限の材料すら確保できなかったため見送りました。"
+        },
+        {
+          "title": "Influence of structural deformation on the rotordynamic characteristics of shaft labyrinth seals in cryogenic liquid turbine expanders under thermal-fluid-solid coupling（Sun, Sun, Song & Wang, 2026, International Journal of Refrigeration）",
+          "note": "rotor最新枠の候補でしたが、同じく抄録データを確保できず見送りました。テーマ（極低温タービン膨張機のラビリンスシール）自体は今号の段付きラビリンスシールとも響き合う良い候補だっただけに残念でした。"
+        },
+        {
+          "title": "Hybrid Passive-Active Magnetic Bearing Design for Compact Turbomachinery（figshareプレプリント, 2026）",
+          "note": "foil最新枠でOAの候補として見つかりましたが、実際の内容は磁気軸受（マグレブ）が主題で、フォイルガス軸受という今号のトピックからは外れると判断し見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv側はほぼ分野外ノイズ。OpenAlex側の新規候補（Jiang et al. 2025含む）は大半が既アーカイブ済みの重複か抄録データ無しで、新規に使えたのは1本のみだった。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。新規候補はいずれも非OAで、OA4件は既アーカイブ済みだったため、後述のNTRS直接検索に切り替え。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA17/抄録7。arXiv側の新規候補は軒並み分野外。OpenAlex側の新規候補も抄録データ無し（Sun et al. 2026含む）が多かったため、後述のOpenAlex直接検索に切り替え。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。統計学・電力系統論文等の分野外ノイズや既アーカイブ済みが中心で、後述のNTRS直接検索に切り替え。"
+          },
+          {
+            "name": "NTRS直接検索（定番枠OA全文の確保, foil/rotor）",
+            "scope": "NASA技術報告書アーカイブをWeb検索",
+            "terms": [
+              "gas foil bearing rotordynamic",
+              "seal rotordynamic coefficients whirl"
+            ],
+            "note": "foilではDellaCorte, Radil, Bruckner & Howard(2006)の性能マップ提案（NASA/TM-2006-214343）を、rotorではScharrer(1989)の段付きラビリンスシール解析（NASA CP-3026収録）を発掘。いずれも全文PDFを取得し、図はページ画像として直接確認した。"
+          },
+          {
+            "name": "OpenAlex直接検索（最新枠OA全文の確保, foil/rotor）",
+            "scope": "2024年以降・発行日順で再検索",
+            "terms": [
+              "gas foil bearing rotordynamic",
+              "rotor whirl instability bearing stiffness damping"
+            ],
+            "note": "foilではJiang, Zhu, Huang & Gao(2025)の多層フォイルスラスト軸受論文（Lubricants）を、rotorではMirkov et al.(2026)の自動玉バランサー論文（Modelling）を発掘。MDPI本体は自動アクセスがブロックされ直接のPDF/HTML取得ができなかったため、reader経由でページ内容を抽出して要約の材料とした（citationNoteにその旨を明記）。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。定番枠・最新枠とも新規のOA全文候補が確保できなかったため、NTRS・OpenAlexへの直接検索を追加で実施した（07-19・07-20号までと同様のパターン）。"
+      },
+      "afterword": "今日は「パブリックドメインだと思っていた図が、実はそうとは言い切れない」という発見がありました。NASAが発行した技術文書だから中の図もすべて自由に使える、と最初は考えていたのですが、忠実性チェックで、著者がNASA職員ではなくRocketdyne社（民間の契約企業）の所属だと指摘を受けました。政府職員が作った著作物は自動的にパブリックドメインになりますが、政府に発表の場を借りただけの契約企業の著作物はそうとは限らない——同じ『NASAの文書』でも著者の所属によって話が変わってくるというのは、言われてみれば当然なのに見落としがちな点で、勉強になりました。結局その図は模式図に描き直しましたが、本文の内容そのものは変わらず面白く読めました。 — 編集担当より"
     }
   ]
 }
