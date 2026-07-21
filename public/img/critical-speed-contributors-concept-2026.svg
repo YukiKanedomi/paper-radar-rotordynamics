@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 250'><rect width='600' height='250' fill='#faf9f5'/>
+<text x='300' y='24' font-family='sans-serif' font-size='13' fill='#114a42' text-anchor='middle' font-weight='700'>遠心圧縮機の危険速度に効く要素（概念図）</text>
+
+<rect x='30' y='60' width='150' height='70' rx='8' fill='#1a5e54' opacity='.22' stroke='#1a5e54' stroke-width='2'/>
+<text x='105' y='90' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>フォイル軸受</text>
+<text x='105' y='106' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（動特性係数）</text>
+
+<rect x='225' y='60' width='150' height='70' rx='8' fill='#6c7078' opacity='.18' stroke='#6c7078' stroke-width='2'/>
+<text x='300' y='90' font-family='sans-serif' font-size='11' fill='#1d2127' text-anchor='middle' font-weight='700'>ラビリンスシール</text>
+<text x='300' y='106' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（漏れ流れの力）</text>
+
+<rect x='420' y='60' width='150' height='70' rx='8' fill='#6c7078' opacity='.18' stroke='#6c7078' stroke-width='2'/>
+<text x='495' y='90' font-family='sans-serif' font-size='11' fill='#1d2127' text-anchor='middle' font-weight='700'>インペラ</text>
+<text x='495' y='106' font-family='sans-serif' font-size='9.5' fill='#1d2127' text-anchor='middle'>（流体力）</text>
+
+<path d='M105 130 L105 150 L300 150 L300 165' stroke='#1d2127' stroke-width='1.6' fill='none' marker-end='url(#a3)'/>
+<path d='M300 130 L300 150' stroke='#1d2127' stroke-width='1.6' fill='none'/>
+<path d='M495 130 L495 150 L300 150' stroke='#1d2127' stroke-width='1.6' fill='none'/>
+
+<rect x='180' y='168' width='240' height='50' rx='8' fill='#1a5e54' opacity='.30' stroke='#1a5e54' stroke-width='2'/>
+<text x='300' y='198' font-family='sans-serif' font-size='11' fill='#114a42' text-anchor='middle' font-weight='700'>ロータダイナミクスモデル・危険速度</text>
+
+<defs><marker id='a3' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#1d2127'/></marker></defs>
+
+<text x='300' y='230' font-family='sans-serif' font-size='9.5' fill='#6c7078' text-anchor='middle'>危険速度を左右しうる3つの構成要素の関係を一般化して図示（各要素の寄与度は個々の設計に依存）</text>
+<text x='300' y='246' font-family='sans-serif' font-size='9.5' fill='#6c7078' text-anchor='middle'>模式図・実データではない（本サイト作成）</text>
+</svg>
