@@ -1941,6 +1941,126 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今日はfoil/rotorとも定番枠の新規OA候補が枯渇していたため、抄録ベースでの採用（Heshmat 1983・Ying 2023）と、日付順OAフィルタでの直接検索（Zhao 2026・Makhmudova 2026）を組み合わせた。"
    },
    "afterword": "今日いちばん『なるほど』だったのは、論文そのものが内部で数字を微妙に食い違えていることがある、という発見でした。非対称支持ロータの論文では、本文中で『1次の固有振動数は82.8Hz』と書かれている一方、結論部では『1次の危険速度は4,474回転/分』とあり、単位を揃えて計算し直すとこの2つはぴったり一致しません（4,474回転/分は82.8Hzではなく約74.6Hzに相当します）。最初は自分たちの変換ミスかと疑ったのですが、原文を何度読み直しても同じ数字が繰り返されていて、著者側の記載の揺れらしいとわかりました。論文レーダーは『出典に忠実』を大事にしているので、こういうときにきれいな数字に揃えて書き直したい誘惑もあるのですが、今回は『原文にはこう書いてある、ただし計算が合わない』とそのまま正直に書くことにしました。査読を経た論文でも、細部の数字は完璧ではないことがある——読み手として少し気が楽になる発見でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-07-23",
+   "status": "published",
+   "headline": "ガスフォイル軸受のバンプフォイルを最適化して分岐（急な暴れ）を消す研究と、ジャーナル軸受ロータがオイルホイップより早く不安定になる仕組みを実験で確かめた研究",
+   "intro": "今日もcollect.mjsで通常どおり候補を集めましたが、foilの最新枠(24件)はほぼ全てが分野外（燃焼・ロボット・量子化学など）のノイズで、定番枠(14件)は上位のほとんどが既にアーカイブ済みでした。rotorも同様で、最新枠(13件)の新規候補は抄録が非公開のElsevier論文が多く、定番枠(14件)の唯一のOA候補（Vance 1988『Rotordynamics of Turbomachinery』）は過去何度も本文アクセス不可で見送られてきた定番書です。そこでOpenAlexを対象を絞って直接検索し（open_access.is_oa:trueや被引用順で複数のフレーズを試す）、foilではバンプフォイルの剛性・減衰を最適化して自励的な分岐を消す2022年のNonlinear Dynamics誌の論文を、rotorではオイルホワール・オイルホイップの不安定閾値を2つの試験機で確かめた2014年のHindawi誌の論文を発掘しました。どちらもCC-BYのOA論文でしたが、掲載元サイトがCloudflareの保護で直接ダウンロードできず、Wayback Machineに残っていた過去のスナップショットから全文を救い出しました。foilの定番枠は被引用上位から新規のKim(2006)を、rotorの最新枠はOpenAlex直接検索でAljibori et al.(2025)を選びました。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.2540065",
+     "title": "トップフォイルの形状とバンプ剛性分布が異なる空気フォイル軸受の静的・動的性能に関するパラメトリック研究（Kim, 2006, ASME J. Tribology）",
+     "why": "円形連続トップフォイル軸受と3パッド予荷重軸受という2つの代表的な構造を、負荷容量・ロータダイナミクス性能の両面から横並びで比較した被引用上位（概数180件）の定番論文。3パッド軸受の方が負荷容量で劣るのに不安定発生速度は高いという逆転現象が具体的な数値（47,000rpm対24,000rpm）とともに示されており、定番枠として選定。全文アクセスができず抄録ベース。"
+    },
+    {
+     "id": "doi:10.1007/s11071-022-07837-1",
+     "title": "ガスフォイル軸受のエネルギー散逸を最適化し、アンバランスロータの限界サイクル分岐を消す（Papafragkos, Gavalas, Raptopoulos & Chasalevris, 2023, Nonlinear Dynamics）",
+     "why": "バンプフォイルの剛性・損失係数を最適化して気体膜の消散仕事を正に保ち、Neimark–Sacker分岐や周期倍分岐を回避する手法を示した論文。分岐フリーな運転速度範囲が最適化前のおよそ2倍に広がるという定量的な結果があり、CC-BYの全文（アテネ国立工科大学とカールスルーエ工科大学の共同研究）が読めるため最新枠として選定。"
+    },
+    {
+     "id": "doi:10.1155/2014/351261",
+     "title": "ジャーナル軸受で支持されたロータの不安定閾値について（Mendes & Cavalca, 2014, International Journal of Rotating Machinery）",
+     "why": "設計段階ではオイルホイップだけが不安定の目安として検討されがちだが、実は軸受配置によってはオイルホワール自体がオイルホイップよりずっと早く不安定を引き起こすことを、2つの試験機のFEMシミュレーションと実測（Bently Nevada近接センサ）で具体的に示した論文。CC-BYの全文が読め、式・数値ともに裏取りできたため定番枠として選定。"
+    },
+    {
+     "id": "doi:10.1515/nleng-2024-0079",
+     "title": "可変軸受プロファイルを考慮したロータのアンバランス荷重応答とシステム性能（Aljibori et al., 2025, Nonlinear Engineering）",
+     "why": "軸受内面のプロファイルを変える設計により、シャフトの偏差が大きい条件でも摩擦（7.02%減）や最大圧力（26.9%減）を抑えられることを示した論文。具体的な数値が抄録に明記されており、最新枠として選定。全文アクセスができず抄録ベース。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "The Dynamic Characteristics of a Turborotor Simulator Supported on Gas-Lubricated Foil Bearings（Licht, 1970, NASA CR-124620）",
+     "note": "NTRS経由で全文が読めるフォイル軸受ロータの古典的な実験論文（50,000rpmまでの安定性を実証）でしたが、被引用数が少なく（概数3件）、より新しい知見のあるPapafragkos et al.(2022/2023)を優先したため見送りました。"
+    },
+    {
+     "title": "Rotordynamics of Turbomachinery（Vance, 1988、被引用500件超）",
+     "note": "OpenAlex上はOAとされていますが、リンク先は今回もEPFLの図書館カタログページで本文PDFが無く、過去号までと同じ理由で見送りました。"
+    },
+    {
+     "title": "Whirl and whip instabilities in rotor-bearing system considering a nonlinear force model（de Castro, Cavalca & Nordmann, 2008）／EFFECT OF RADIAL INTERNAL CLEARANCE OF A BALL BEARING...（Tiwari, Gupta & Prakash, 2000）",
+     "note": "どちらもロータダイナミクスの主題にふさわしい内容でしたが、Elsevier系ジャーナルで抄録自体が非公開（publisher elided）で、抄録の範囲での忠実な要約が作れないため見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "直近数年・発行日順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。ほぼ全てが燃焼・ロボット・量子化学など分野外のノイズで、on-topicな新規候補はなし。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。上位はほぼ既アーカイブ済み。cite概数180件のKim(2006)のみ新規で、抄録ベースの定番枠として採用。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "直近数年・発行日順",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "OA8/抄録5。新規候補の多くがElsevier系で抄録非公開、または2026年出版でOpenAlexに抄録未収載。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。唯一のOA候補（Vance 1988）は本文アクセス不可で見送り。他は統計学論文等の分野外ノイズや既アーカイブ済みが中心。"
+     },
+     {
+      "name": "OpenAlex直接検索（OA全文の確保, foil/rotor）",
+      "scope": "open_access.is_oa:true または被引用順で複数フレーズを試行",
+      "terms": [
+       "foil thrust bearing rotordynamic",
+       "gas foil bearing whirl",
+       "rotordynamic coefficients seal",
+       "rotor bearing instability whirl",
+       "labyrinth seal rotordynamic",
+       "rotor unbalance response journal bearing"
+      ],
+      "note": "通常の枠でOA全文候補が確保できなかったため実施。foilでは「Optimizing energy dissipation in gas foil bearings」(Papafragkos et al. 2022/2023、Nonlinear Dynamics誌のCC-BY論文)を、rotorでは「On the Instability Threshold of Journal Bearing Supported Rotors」(Mendes & Cavalca 2014、Hindawi誌のCC-BY論文)を発掘。両方とも掲載元サイト（Springer/Hindawi）がCloudflareの保護で直接ダウンロードできず、Wayback Machineに残る過去のスナップショット（2017〜2022年頃）から全文PDFを取得した。rotorの最新枠は同じ直接検索の中でAljibori et al.(2025、De Gruyter誌)を抄録ベースで採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。定番枠・最新枠ともにfoil/rotor双方でOA全文が確保できなかったため、OpenAlex APIの直接検索（OAフィルタ・被引用順）を追加で実施した（07-19号・07-20号までと同様のパターン）。"
+   },
+   "afterword": "今日はHindawiの論文PDFに直接アクセスしようとしたら、Cloudflareの「Just a moment...」という確認ページに阻まれてしまう場面がありました。てっきり読めないものだと思いかけたのですが、試しにWayback Machine（インターネットアーカイブ）で調べてみたら、2017年に一度クロールされた完全な状態のPDFがそのまま残っていて、そこから全文を無事に読むことができました。今のサイトが塞がっていても、過去のアーカイブに救いがあることがあるのだと知った収集作業でした。もう一つ印象的だったのは、フォイル軸受の論文で「ロータが暴れ出す瞬間」を「バネの硬さ」ではなく「気体の膜が吸収しているエネルギーの収支」で捉え直していたことです。粘り気（減衰）を増やせば安心、という単純な話ではなく、むしろバネを柔らかくする方が効くという結果は、直感とは逆で新鮮でした。 — 編集担当より"
   }
  ]
 }

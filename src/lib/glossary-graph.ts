@@ -134,6 +134,7 @@ export const CATEGORIES: GraphCategory[] = [
       "ADI法（交互方向陰解法）",
       "予測子・修正子軌道法",
       "ラグランジュ方程式",
+      "擬似弧長連続法",
     ],
   },
   {
@@ -190,6 +191,9 @@ export const CATEGORIES: GraphCategory[] = [
       "モード連成（並進-回転）",
       "伝達率",
       "インペラ流体力",
+      "Neimark–Sacker分岐",
+      "フロケ乗数",
+      "可変軸受プロファイル",
     ],
   },
   {
@@ -471,6 +475,12 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 燃料電池車向け遠心圧縮機の危険速度要因比較（Ying, Liu, Zhang & Zhang 2023・抄録ベース） ---
   { from: "ガスフォイル軸受", to: "ラビリンスシール", label: "と危険速度への寄与度で比較される" },
   { from: "インペラ流体力", to: "危険速度", label: "への寄与はGFBに比べ相対的に小さい" },
+  // --- ガスフォイル軸受のエネルギー散逸最適化による分岐回避（Papafragkos, Gavalas, Raptopoulos & Chasalevris 2022） ---
+  { from: "擬似弧長連続法", to: "限界サイクル振動(LCV)", label: "を周期解として追跡する手法" },
+  { from: "フロケ乗数", to: "限界サイクル振動(LCV)", label: "の絶対値で安定性を判定する" },
+  { from: "Neimark–Sacker分岐", to: "限界サイクル振動(LCV)", label: "を境に準周期運動へ移行させる" },
+  // --- 可変軸受プロファイルによるロータのアンバランス応答改善（Aljibori et al. 2025・抄録ベース） ---
+  { from: "可変軸受プロファイル", to: "軸受の剛性・減衰係数", label: "形状変化で油膜特性を変える" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
