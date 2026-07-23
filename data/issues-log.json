@@ -2061,6 +2061,136 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。定番枠・最新枠ともにfoil/rotor双方でOA全文が確保できなかったため、OpenAlex APIの直接検索（OAフィルタ・被引用順）を追加で実施した（07-19号・07-20号までと同様のパターン）。"
    },
    "afterword": "今日はHindawiの論文PDFに直接アクセスしようとしたら、Cloudflareの「Just a moment...」という確認ページに阻まれてしまう場面がありました。てっきり読めないものだと思いかけたのですが、試しにWayback Machine（インターネットアーカイブ）で調べてみたら、2017年に一度クロールされた完全な状態のPDFがそのまま残っていて、そこから全文を無事に読むことができました。今のサイトが塞がっていても、過去のアーカイブに救いがあることがあるのだと知った収集作業でした。もう一つ印象的だったのは、フォイル軸受の論文で「ロータが暴れ出す瞬間」を「バネの硬さ」ではなく「気体の膜が吸収しているエネルギーの収支」で捉え直していたことです。粘り気（減衰）を増やせば安心、という単純な話ではなく、むしろバネを柔らかくする方が効くという結果は、直感とは逆で新鮮でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-07-24",
+   "status": "published",
+   "headline": "羽根を0.1mmから0.2mmに厚くするだけで圧力は1.45倍に——ガスフォイル軸受の理論・COMSOL・試作機の三点一致と、静圧スピンドルで鞍型・たる型の誤差が剛性と減衷を別々に狂わせる話",
+   "intro": "collect.mjsで通常どおり候補を集めましたが、foil・rotorとも「最新枠」は既刊と重複するものが大半で（foilの最新枠24件はarXiv側がほぼ分野外ノイズ、OpenAlex新着10件は全て既アーカイブ済み。rotorの最新枠13件も新規は2件のみでいずれも抄録なし）、そのままでは各トピック必須のOA全文を確保できませんでした。そこでtopics.jsonの全キーワード・直近4年・OpenAlex発行日順という条件でper-keywordの取得件数を広げた直接検索を追加実施し（foil: マージ73件・on-topic 71件、rotor: マージ118件・on-topic 73件）、foilはMDPI Lubricants誌のCC-BY論文（弾性-空力連成モデルの理論・COMSOL・試作機による静的性能検証）、rotorも同じくMDPI Lubricants誌のCC-BY論文（ロータ円筒度誤差が静圧スピンドルの動的剛性・減衷係数に与える影響）を発掘しました。両方ともMDPIのサイトが自動アクセスをAkamaiで遮断していたため、ヘッドレスブラウザ経由で正規のUser-Agentとして取得し、実図2枚ずつ（CC BY 4.0・出典明記）も救い出しています。定番枠はcollect.mjsの通常出力から、foilはFeng & Kaneko (2010)のバンプ型フォイル軸受リンク-バネモデル、rotorはTiwari, Gupta & Prakash (2000)の玉軸受すきま-ロータ動力学論文を選びました。後者は出版社(Elsevier)が抄録をAPI非公開にしており、ADS・ResearchGate等の複数の学術索引サイトの記載を突き合わせて抄録内容を再構成し、抄録ベースとして忠実に紹介しています。",
+   "picked": [
+    {
+     "id": "doi:10.3390/lubricants13120527",
+     "title": "弾性-空力連成モデルによるガスフォイル軸受の静的性能解析と実験検証（Li, Ning, Liang & Yang, 2025, Lubricants）",
+     "why": "マクロ要素梁-レイノルズ方程式の理論モデル・3次元COMSOL流体構造連成モデル・実物試作機の3系統で相互検証した論文。フォイル厚さを0.1mmから0.2mmにするだけで最大膜圧が1.36→1.97×10⁵ Paに上がるという具体的な数値と、試作機が設計目標25 Nを上回る30 N荷重でも安定リフトオフする実験結果が揃っており、最新枠として選定。CC-BY全文で図・数値ともに裏取りできた。"
+    },
+    {
+     "id": "doi:10.1115/1.4001169",
+     "title": "リンク-バネ構造とFEMシェルモデルによるバンプ型フォイル軸受の解析モデル（Feng & Kaneko, 2010, Journal of Tribology）",
+     "why": "バンプの弾性・バンプ間相互作用力・接触摩擦力・トップフォイル局所たわみの4要因を統合した解析モデルで、被引用163件の定番。半径すきま（フォイル構造のプリロード）に負荷容量を最大化する最適値が存在するという実務的に重要な指摘があり、定番枠として選定。全文アクセスができず抄録ベース。"
+    },
+    {
+     "id": "doi:10.3390/lubricants14050204",
+     "title": "ロータ円筒度誤差を考慮した静圧スピンドルの動的剛性・減衷係数のモデル化と実験検証（Wu, Hou, Wang, Wang, Fan, Zhang & Yu, 2026, Lubricants）",
+     "why": "ロータの円錐・鞍・たる型の円筒度誤差が、静圧スピンドルの動的剛性係数・減衷係数にそれぞれ異なる効き方をすることを理論解析と4本の実機ロータでの実験で示した論文。鞍型は主剛性を、たる型は主減衷を大きく変えるという非対称な結果が、加工誤差1µm未満という具体的な設計指針につながっており、最新枠として選定。CC-BY全文で図・数値ともに裏取りできた。"
+    },
+    {
+     "id": "doi:10.1006/jsvi.1999.3109",
+     "title": "玉軸受の半径内部すきまが水平ロータの動力学に与える影響（Tiwari, Gupta & Prakash, 2000, Journal of Sound and Vibration）",
+     "why": "玉軸受の半径内部すきまが、ロータの振れ回り応答を周期的なものから分数調波・カオス的なものまで変化させ、従来報告されていなかった「3番目の不安定領域」まで生むことを示した被引用270件超の定番。玉軸受支持ロータの非線形動力学の基礎として定番枠に選定。全文アクセスができず抄録ベース（出版社が抄録自体をAPI非公開にしており、複数の学術索引サイトの記載から再構成）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Rotor Dynamic Characteristics Supported by Multi-Pad Bump Foil Gas Bearings（Lubricants, 2025, OA）",
+     "note": "foilの最新枠で有力な対抗馬でしたが、今回はCEA(弾性-空力連成)フレームワークを理論・シミュレーション・実験の3系統で検証したLi, Ning, Liang & Yang (2025)の方が読み応えで上回ると判断し見送りました。"
+    },
+    {
+     "title": "Whirl and whip—Rotor/bearing stability problems（Muszyńska, 1986, Journal of Sound and Vibration）",
+     "note": "被引用270件超のロータダイナミクスの古典中の古典で最有力候補でしたが、出版社(Elsevier)が抄録自体をAPI非公開にしており、OpenAlex・Semantic Scholar・Crossref・Unpaywallのいずれからも抄録本文が一切取得できませんでした。抄録の範囲で忠実に書けないため、§0を優先してTiwari, Gupta & Prakash (2000)に切り替えました。"
+    },
+    {
+     "title": "Dynamic Response Modeling and Morton-Effect Stability Assessment of Three-Pad Tilting-Pad Journal Bearings（Lubricants, 2026, OA）",
+     "note": "rotorの最新枠で拡張検索に引っかかりましたが、実は前号までにすでにアーカイブ済みの論文（重複）でした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。arXiv側はカテゴリ緩和後もon-topicが3件未満で分野外ノイズ（燃焼・海氷・ロボット等）にフォールバック。OpenAlex新着10件は全て既アーカイブ済みで新規候補ゼロ。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。上位8件が既アーカイブ済み。非重複3件（Feng & Kaneko 2010／書籍レビュー1件／NASA報告1件）からFeng & Kaneko (2010)を採用。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA8/抄録5。非重複2件はいずれも抄録非公開のElsevier論文またはML主体の論文で主役条件に合わず。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。非重複8件のうち統計学論文・電力系統論文（『unbalance』『subsynchronous』の異分野一致）を除外し、Tiwari, Gupta & Prakash (2000)を採用。"
+     },
+     {
+      "name": "OpenAlex直接検索（OA全文の確保・拡張, foil/rotor 最新枠）",
+      "scope": "topics.jsonの全キーワード・直近4年・発行日順・per-keyword取得件数を4→15件に拡大",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 191,
+      "note": "通常枠(latest)ではfoil/rotorともOA全文の新規候補がゼロだったため実施。foil: マージ73件・on-topic 71件からLi, Ning, Liang & Yang (2025, CC-BY)を、rotor: マージ118件・on-topic 73件からWu, Hou, Wang, Wang, Fan, Zhang & Yu (2026, CC-BY)を発掘。両論文ともMDPIのサイトがAkamai保護で通常のHTTPリクエストを遮断しており、ヘッドレスChrome(実ブラウザUser-Agent)経由でHTML本文と実図を取得した。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。通常枠だけでは両トピックとも最新枠のOA全文が確保できなかったため、全キーワード・拡大per-keyword件数でのOpenAlex直接検索を追加実施した（07-20号までと同様のパターン）。"
+   },
+   "afterword": "今日いちばん面白かったのは、ロータ円筒度誤差の論文で「鞍型（真ん中がくびれた形）」と「たる型（真ん中が膨らんだ形）」という誤差の“形”の違いが、軸受の性質のうち別々の部分に効くという話でした。同じ大きさの誤差でも、鞍型だと軸受の「硬さ」（剛性）が変わり、たる型だと「揺れを抑える力」（減衷）が変わる、というのは素人目には意外で、誤差は大きさだけでなく形も見ないといけないのだと知りました。もう一つ、今日はMDPIの論文サイトに何度もアクセスを拒否されて手が止まりましたが、ブラウザとして正規に振る舞うだけで普通に読めることが分かり、機械的なブロックと本当の非公開はちゃんと見分けないといけないな、と実感した収集作業でした。 — 編集担当より"
   }
  ]
 }
