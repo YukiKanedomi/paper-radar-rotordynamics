@@ -2426,6 +2426,153 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠だけでは両トピックとも新規のOA全文が確保できなかったため、NASA NTRS・CILAMCE予稿集という補助的な検索先に切り替えて発掘した。本エントリは前セッションが収集・作り込み完了後・配信ノート記録前に中断したため翌日にまとめて記録しており、補助検索の正確な検索式・ヒット件数は再現できていない（基本枠の統計は候補キャッシュから正確に復元）。"
       },
       "afterword": "今回いちばん印象に残ったのは、Lund (1965)の『軸受支持を柔らかくするだけでは不安定化速度はむしろ下がる』という話でした。柔らかい支持＝振動を逃がしてくれて良さそうという素朴なイメージを持っていたのですが、そこに減衰が伴って初めて安定限界が大きく上がるとのことで、『柔らかさ』と『減衰』は別物として効いてくるのだと知りました。もう一つ、NASAのオイルフリー・ロータクラフト構想では、軸を太く短くするという一見シンプルな再設計だけで、起動のたびに危険速度を通過する設計から、危険速度を運転域の外に追い出す設計に変えられていたのも面白かったです。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-27",
+      "status": "published",
+      "headline": "摩擦計測実験とシミュレーションが毎分4.5krpm付近の『浮き上がり』で一致したガスフォイル軸受と、ロータ支持の粗さを入れ替えて安定限界を19%引き上げたスペースシャトル・メインエンジンのターボポンプ",
+      "intro": "本日のローテーション枠（foil最新24件/定番14件、rotor最新24件/定番14件）は、直近数週間の連続配信でほぼ食い尽くされており、foil・rotorともに基本枠の上位候補が軒並み既アーカイブ済みでした（foil定番はHeshmat・Ku&Heshmat系の既刊論文で占められ、rotor最新はarXiv側14件が完全に分野外）。そこでOpenAlexへの補助的な直接検索（gas foil bearing・compliant foil bearing・bump foil bearingの被引用順、rotor bearing stability・seal rotordynamicの被引用順、is_oa:true限定の新着検索）に切り替え、foilはMDPI Lubricants誌のリフトオフ挙動実験論文（Yu & Wang 2025, CC-BY）とASME論文の乾性摩擦解析（Le Lez, Arghir & Frêne, 2009）、rotorはNASA NTRS収録のスペースシャトル・メインエンジン ターボポンプ振動解析（Childs & Moyer, 1985）とASME最新号の潤滑油不足研究（Ono et al., 2026）を発掘しました。4本とも、Opus（faithfulness-check）による§0チェックで実際に修正が入りました（詳しくは選定理由欄）。特にChilds & Moyer論文はNASA NTRSのスキャンPDFをOCR抽出したため、OCR崩れを踏まえて逐語引用（quotes）は行わず、複数箇所での数値の一致を確認したうえでパラフレーズにとどめています。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants13020075",
+          "title": "ガスフォイル軸受のリフトオフ状態の動特性——摩擦計測実験と3次元マルチフィジックスCAEシミュレーションの照合（Yu & Wang, 2025）",
+          "why": "止まった状態から回転を始めて『浮き上がる』瞬間のガスフォイル軸受の挙動を、自作の摩擦計測ベンチと3次元FSIシミュレーションの両方で照合した論文。毎分4.5krpm付近で両者が一致する挙動を示す点があり最新枠として選定。CC-BY全文で式・数値まで裏取りできた。faithfulness-checkで「実験ベンチの支持の向き」の記述の誤り（『軸受側が回る』という自己矛盾）と、トルクの帰属（実験由来かシミュレーション由来か）の混同を検出・修正し、著者らが明記する『振動特性は完全には一致しない』という留保も追記した。"
+        },
+        {
+          "id": "doi:10.1115/1.2967481",
+          "title": "ガスフォイル軸受の安定限界とアンバランス応答の非線形数値予測（Le Lez, Arghir & Frêne, 2009）",
+          "why": "羽根のたわみだけでなく、そこに生じる乾性摩擦までもが軸受の安定性を高めるという、フォイル軸受非線形解析の定番論文。定番枠として選定。faithfulness-checkで巻号の誤り（Vol.130→正しくはVol.131号1、2009年発行）と、抄録の範囲を超えた断定（『手法が確立していなかった』）を検出・修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.3239676",
+          "title": "スペースシャトル・メインエンジン（SSME）高圧酸素ターボポンプ（HPOTP）の振動特性（Childs & Moyer, 1985）",
+          "why": "スペースシャトルのメインエンジンを支えた酸素ポンプが起こしていたサブシンクロナス振動を、実機に相関させたロータダイナミクスモデルで解析した歴史的な定番論文。NASA支援研究のためNTRSに全文が公開されており（政府調達研究としてパブリックドメイン）、定番枠として選定。faithfulness-checkで、875Ns/mの減衰を『軸受減衰』としていた誤り（原文は主インペラー位置の集中減衰で、軸受自体の減衰はほぼゼロと明記）と、ダンパーシールの粗さの向き（deepDiveの一部で回転側・固定側が逆になっていた）という2件の高深刻度の誤りを検出・修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4072362",
+          "title": "潤滑油不足（スターベーション）がジャーナル軸受支持の弾性ロータ系の安定性に与える影響——HB-AFT法によるパラメトリック研究（Ono et al., 2026）",
+          "why": "省エネのために潤滑油供給を絞るというアイデアが、ロータの安定性にどう影響するかを調和バランス法で調べた発行間もない論文。最新枠として選定。faithfulness-checkで、概念図の棒の高さの違いが抄録にない定量比較を示唆していた点と、『安定域を回復』という抄録にない言い回し（正しくは『拡大』）を検出・修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Rotordynamics of Turbomachinery（Vance, 1988）／Linear and Nonlinear Rotordynamics（Vance, Zeidan & Murphy, 2002）",
+          "note": "rotor定番枠の被引用上位に挙がる古典ですが、いずれも書籍（テキスト）であり論文レーダーの対象（個別研究論文）ではないため見送りました。"
+        },
+        {
+          "title": "Hybrid Passive-Active Magnetic Bearing Design for Compact Turbomachinery（Figshare投稿）",
+          "note": "foilの最新枠検索に前号に続き現れましたが、査読の確認できないFigshare投稿・被引用0のままで、信頼性を判断できず見送りました。"
+        },
+        {
+          "title": "Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure and damping material（Zhu et al., 2025, Mechanical Systems and Signal Processing）",
+          "note": "非OAで、Crossref・OpenAlex・Semantic Scholarのいずれからも抄録が取得できず、抄録ベースですら忠実に書けないため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 24,
+            "note": "OA19/抄録5。上位はほぼ既アーカイブ済みのフォイル軸受論文か分野外noise（arXiv側）で占められ、新規のOA全文候補が確保できず、OpenAlexへの補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件すべてが既アーカイブ済みで新規候補ゼロ。補助検索（被引用順の拡張クエリ）でLe Lez et al. (2008/2009)を発掘。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA6/抄録7。arXiv側は分野外ノイズが中心。既アーカイブ済みの重複を除くと新規のOA候補が乏しく、補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位は統計学・電力系統論文（『unbalance』『subsynchronous』の異分野一致）や書籍（Vance 1988/2002）が占め、書籍を除外したうえで補助検索によりChilds & Moyer (1985)を発掘。"
+          },
+          {
+            "name": "OpenAlex直接検索（被引用順の拡張, foil）",
+            "scope": "'gas foil bearing'（CC-BY限定）・'compliant foil bearing'・'bump foil bearing'・被引用数順",
+            "terms": [
+              "gas foil bearing",
+              "compliant foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 43,
+            "note": "CC-BY限定検索は軸受分野外のノイズが大半で不採用。'compliant foil bearing'被引用順の拡張検索でLe Lez, Arghir & Frêne (2008/2009) 『Nonlinear Numerical Prediction of Gas Foil Bearing Stability and Unbalanced Response』（被引用約70件）を採用。"
+          },
+          {
+            "name": "OpenAlex直接検索（OA新着限定, foil）",
+            "scope": "'gas foil bearing'・is_oa:true・2023年以降・発行日順",
+            "terms": [
+              "gas foil bearing"
+            ],
+            "hits": 16,
+            "note": "Yu & Wang (2025) 『Experimental Verification and Multi-Physics-Based CAE Simulation Methods...at Lift-Off State』（MDPI Lubricants, CC-BY）を採用。"
+          },
+          {
+            "name": "OpenAlex直接検索（被引用順の拡張, rotor）",
+            "scope": "'rotor bearing stability'・'seal rotordynamic'・被引用数順",
+            "terms": [
+              "rotor bearing stability",
+              "seal rotordynamic"
+            ],
+            "hits": 38,
+            "note": "'rotor bearing stability'被引用順の上位にChilds & Moyer (1985) 『Vibration Characteristics of the HPOTP of the SSME』（NASA NTRS収録・OA）を発見し採用。"
+          },
+          {
+            "name": "OpenAlex直接検索（OA新着限定, rotor）",
+            "scope": "'subsynchronous vibration'・'rotordynamics'・is_oa:true・発行日順",
+            "terms": [
+              "subsynchronous vibration",
+              "rotordynamics"
+            ],
+            "hits": 33,
+            "note": "この検索経路では新規のOA全文候補は採用に至らず、定番枠と合わせて非OA候補（Ono et al. 2026）を最新枠として採用した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。連続配信により基本枠の候補プールがほぼ枯渇していたため、両トピックとも被引用順・OA新着限定のOpenAlex直接検索を追加実施した。"
+      },
+      "afterword": "今日は、Childs & Moyer (1985)の論文で「軸受には実質ゼロの減衰しかない」と明記されていたのが印象的でした。ロケットエンジンのポンプを支える軸受なのだから頑丈で振動もよく抑えてくれるものだと勝手に思い込んでいたのですが、減衰を稼いでいたのは軸受そのものではなく、離れた場所（主インペラー付近）に追加した部品だったという構図に、最初のドラフトでは私自身も誤読して『軸受の減衰』と書いてしまいました。faithfulness-checkで指摘されて初めて、原文が意図的に『軸受自体には減衰がほぼ無い』と釘を刺していたことに気づいた次第です。もう一つ、Yu & Wangの実験では、支える側と支えられる側のどちらが動くかという配置の違いだけで、実機とは少し異なる測り方になると著者ら自身が注意書きしていて、実験というのは「測れた数字」だけでなく「何をどう固定して測ったか」まで含めて読まないといけないのだと勉強になりました。 — 編集担当より"
     }
   ]
 }
