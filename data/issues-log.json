@@ -2319,6 +2319,113 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。通常枠だけでは両トピックとも最新枠のOA全文が確保できなかったため、is_oa:true限定のOpenAlex直接検索を追加実施した（07-20号・07-24号と同様のパターン）。MDPI本体サイトはAkamaiによる自動アクセス遮断があり、テキスト抽出プロキシ(r.jina.ai)経由で全文・図URLを取得した。"
       },
       "afterword": "今日いちばん意外だったのは、Zhao et al.のバンプフォイル軸受の話で、「ロータのアンバランス（重心のわずかなずれ）を考慮した方が、むしろ安定に回せる速度が上がる」構成があったことです。外乱は普通は悪さをするものだと思っていたので、3枚・5枚にパッドを分けた構成では逆にアンバランスの遠心力が振動を抑える方向に働くというのは、素人目にはちょっとした発見でした。もう一つ、Kim & Ryuのターボチャージャーの論文では、赤外線カメラで見た温度差がわずか1℃程度でも、それが計測誤差とほぼ同じ大きさだと正直に書いてあったのが誠実だなと感じました。数字を出すだけでなく、その数字がどれだけ信頼できるかまで書く姿勢を、こちらの配信でも見習いたいと思います。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-26",
+      "status": "published",
+      "headline": "支持は『柔らかいだけ』だと不安定化速度がむしろ下がる——減衰があって初めて安定限界が上がるLund 1965と、軸を太く短くする再設計で曲げ危険速度を運転域の外まで追い出したNASAのオイルフリー・ロータクラフト構想",
+      "intro": "collect.mjsの通常ローテーション枠（foil最新24件/定番14件、rotor最新24件/定番14件）は、両トピックとも上位の大半が液滴・波・ロボット・電力系統など分野外ノイズか、既アーカイブ済みの軸受論文で占められていました（foil定番は既刊のフォイル軸受解析論文が並び、rotor最新はarXiv側14件が完全に分野外）。そこで基本枠に加えて的を絞った補助検索を行い、foilはNASA NTRSで『オイルフリー・ロータクラフトエンジン』のホットセクション適用を扱うHoward et al. (2008)の技術覚書と、Ku & Heshmat (1993)によるコンプライアント・フォイル軸受構造剛性解析のPart II（Part Iは既アーカイブ済み）を発掘。rotorはCILAMCE 2025予稿集からda Luz, Silva & Bavastri (2025)の粘弾性支持による旋回フラッター制御論文と、定番枠でLund (1965)の弾性ロータ安定性解析を選びました。基本枠の候補に埋もれず的を絞って探しに行った号のため、本エントリの検索記録は基本枠の統計に加え、この経緯を正直に記載しています（本号の作業ログは前セッションで中断されたため、補助検索の正確な検索式・ヒット件数は再現できず、実施した検索の種類と対象のみ記録します）。",
+      "picked": [
+        {
+          "id": "ntrs:20080015823",
+          "title": "オイルフリー・ロータクラフトエンジン概念設計——フォイル軸受はタービン側（ホットセクション）まで届くか（Howard, Bruckner, DellaCorte & Radil, NASA/TM 2008）",
+          "why": "フォイル軸受をヘリコプター用エンジンのタービン側まで含めて全区間に適用できるかを、実機相関ロータダイナミクスモデルで検討した概念設計研究。軸を太く短くし軸受位置も変える再設計で曲げ危険速度を運転上限の15%上まで押し上げられる、という具体的な設計比較があり最新枠として選定。NASA NTRS収録のためDOI・被引用数は付与されておらず、citationNoteにその旨を明記した。"
+        },
+        {
+          "id": "doi:10.1115/1.2921644",
+          "title": "コンプライアント・フォイル軸受の構造剛性解析 パートII——実験的検証（Ku & Heshmat, 1993）",
+          "why": "Part I（理論モデル）の実験検証編にあたる古典的な定番論文。抄録の範囲では波形バンプフォイルの理論剛性予測を光学式トラッキングによる実測で検証し、線形域では理論モデルが裏付けられたことのみが確認でき、非線形域の詳細や具体的な数値は抄録に無いため踏み込まず、定番枠として抄録ベースで紹介した。"
+        },
+        {
+          "id": "doi:10.55592/cilamce2025.v5i.14329",
+          "title": "粘弾性支持によるプロペラ旋回フラッター（ホワール・フラッター）の制御——温度依存剛性の効果を検証（da Luz, Silva & Bavastri, CILAMCE 2025）",
+          "why": "プロペラの旋回フラッターをゴム状の粘弾性支持で抑制できるかを数値解析で検証した論文。WLF則で温度依存の複素剛性を与えるという具体的な手法があり、温度が上がるほど効き目が弱まるという素直な結果も含めて最新枠として選定。CILAMCE予稿集はOA全文で入手でき、図・数式まで裏取りできた。"
+        },
+        {
+          "id": "doi:10.1115/1.3627335",
+          "title": "軸受支持の柔軟性・減衰を考慮した弾性ロータの安定性解析（Lund, 1965）",
+          "why": "軸受支持が柔軟なだけだと不安定化速度（しきい値速度）はむしろ下がるが、そこに減衰が加わると大幅に押し上げられる、という定量的な設計指針を示した古典。ロータダイナミクスの安定限界分野の基礎文献として定番枠で選定。抄録の範囲のみで忠実に紹介し、抄録ベースと明記した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "A Novel Measurement Method for Investigating the Lift-Off Behavior of Gas Polymer Bearings（Ghomashi & Liebich, 2025, J. Eng. Gas Turbines Power）",
+          "note": "前号に続き基本枠に再度現れましたが、非OAかつ抄録もUnpaywall/Crossref経由で取得できず、今回も見送りました。"
+        },
+        {
+          "title": "Hybrid Passive-Active Magnetic Bearing Design for Compact Turbomachinery（Figshare投稿）",
+          "note": "foilの最新枠検索に再度引っかかりましたが、査読の確認できないFigshare投稿・被引用0のままで、前号同様信頼性を判断できず見送りました。"
+        },
+        {
+          "title": "Whirl and whip—Rotor/bearing stability problems（Muszyńska, 1986, Journal of Sound and Vibration）",
+          "note": "rotor定番枠に再度挙がった被引用数の多い古典ですが、出版社(Elsevier)が抄録をAPI非公開にしており、前号同様に確認できず見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。上位はほぼ既アーカイブ済みのフォイル軸受解析論文か、arXiv側の分野外ノイズ。基本枠内では新規のOA全文候補が確保できず、NASA NTRSでの補助検索に切り替えた（正確な補助検索式・ヒット件数は前セッション中断のため再現不可）。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位はHeshmat, Shapiro & Gray (1982)など既アーカイブ済みの定番論文で占められ、Ku & Heshmat (1993) Part IIは基本枠の候補には現れなかった（NTRS/補助検索で発掘）。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA17/抄録7。arXiv側14件は波・ロボット・ソリトン等の完全な分野外ノイズ。OpenAlex側は既アーカイブ済みか分野周辺（ラビリンスシール・ボール軸受等）で占められ、CILAMCE予稿集の検索に切り替えた（正確な検索式・ヒット件数は再現不可）。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。Muszyńska (1986)・Childs系の既知候補が並ぶ中、抄録取得可能なLund (1965)を採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠だけでは両トピックとも新規のOA全文が確保できなかったため、NASA NTRS・CILAMCE予稿集という補助的な検索先に切り替えて発掘した。本エントリは前セッションが収集・作り込み完了後・配信ノート記録前に中断したため翌日にまとめて記録しており、補助検索の正確な検索式・ヒット件数は再現できていない（基本枠の統計は候補キャッシュから正確に復元）。"
+      },
+      "afterword": "今回いちばん印象に残ったのは、Lund (1965)の『軸受支持を柔らかくするだけでは不安定化速度はむしろ下がる』という話でした。柔らかい支持＝振動を逃がしてくれて良さそうという素朴なイメージを持っていたのですが、そこに減衰が伴って初めて安定限界が大きく上がるとのことで、『柔らかさ』と『減衰』は別物として効いてくるのだと知りました。もう一つ、NASAのオイルフリー・ロータクラフト構想では、軸を太く短くするという一見シンプルな再設計だけで、起動のたびに危険速度を通過する設計から、危険速度を運転域の外に追い出す設計に変えられていたのも面白かったです。 — 編集担当より"
     }
   ]
 }
