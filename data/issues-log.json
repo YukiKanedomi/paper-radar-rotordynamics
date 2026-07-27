@@ -2573,6 +2573,171 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。連続配信により基本枠の候補プールがほぼ枯渇していたため、両トピックとも被引用順・OA新着限定のOpenAlex直接検索を追加実施した。"
       },
       "afterword": "今日は、Childs & Moyer (1985)の論文で「軸受には実質ゼロの減衰しかない」と明記されていたのが印象的でした。ロケットエンジンのポンプを支える軸受なのだから頑丈で振動もよく抑えてくれるものだと勝手に思い込んでいたのですが、減衰を稼いでいたのは軸受そのものではなく、離れた場所（主インペラー付近）に追加した部品だったという構図に、最初のドラフトでは私自身も誤読して『軸受の減衰』と書いてしまいました。faithfulness-checkで指摘されて初めて、原文が意図的に『軸受自体には減衰がほぼ無い』と釘を刺していたことに気づいた次第です。もう一つ、Yu & Wangの実験では、支える側と支えられる側のどちらが動くかという配置の違いだけで、実機とは少し異なる測り方になると著者ら自身が注意書きしていて、実験というのは「測れた数字」だけでなく「何をどう固定して測ったか」まで含めて読まないといけないのだと勉強になりました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-28",
+      "status": "published",
+      "headline": "ミスアライメントが大きいほど硬くなるように振る舞うガスフォイル軸受と、入口の旋回を逆向きにするだけで安定するラビリンスシール",
+      "intro": "本日も日替わりローテーション枠（foil最新24件/定番14件、rotor最新24件/定番14件）は連続配信でほぼ食い尽くされており、新規かつ全文アクセス可能な候補が乏しい状態でした。そこで各トピックの全キーワードを使った補助的なOpenAlex展開検索（1キーワードあたり最大25件・被引用順および直近3年の発行日順）を行い、foilで106件・rotorで92件の分野一致候補（既配信を除くと新規はそれぞれ90件・92件）を確認しました。foilのOA候補として当初Bonello & Pham (2014, Journal of Sound and Vibration, CC-BY) を有力視しましたが、ScienceDirectの本文ページが自動アクセスをブロックしており全文を確認できなかったため、抄録のみでOA全文として扱うのは§0（嘘をつかない）に反すると判断し不採用としました。代わりにNASA/TMとして全文が無償公開されているHoward (2008) の芯ずれ実験論文（著者はNASA職員のため職務著作としてパブリックドメイン）を採用しています。MDPI（Lubricants等）の記事ページも本日はアクセス制御（Akamai）によりブロックされ、抄録以上の情報が取得できませんでした。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.4069576",
+          "title": "Rotor Dynamic of Bearing-Rotor System Supported by Gas Foil Bearing Under Two Housing Excitations（Sun et al., 2025）",
+          "why": "航空機搭載タービン冷凍機のガスフォイル軸受支持ロータが、ハウジング経由のランダム振動・過渡衝撃という2種の励振下でどう振る舞うかを有限要素モデルで調べ、第1世代よりも第3世代GFBのほうが励振に強いことを示した論文。foil最新枠として選定。faithfulness-checkで「航空機」という機体種類の限定（抄録は\"onboard\"としか述べていない）や、「世代が進むほど耐性が上がる」という一般化（抄録は第1世代と第3世代の2点比較のみ）を検出し、表現を後退させた。"
+        },
+        {
+          "id": "doi:10.1115/1.2966392",
+          "title": "Misalignment in Gas Foil Journal Bearings: An Experimental Study（Howard, 2008）",
+          "why": "ガスフォイル軸受がどこまでの芯ずれ（ミスアライメント）に耐えられるかをNASAグレン研究センターで実験し、玉軸受よりひと桁大きい値まで耐えることに加え、芯ずれが大きいほど軸受が硬くなったように振る舞い危険速度やサブシンクロナス振動の発生回転数まで変化することを示した論文。NASA/TMとして全文入手でき著者もNASA職員（パブリックドメイン）のため、foil定番のOA全文として選定。faithfulness-checkで熱電対の設置数の誤り（片方の軸受に8か所→正しくは両軸受合計8か所、各4か所）を検出・修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4068428",
+          "title": "Inlet Preswirl Effects on the Leakage and Dynamic Characteristics of a Labyrinth Seal（Wang et al., 2025）",
+          "why": "ラビリンスシールの入口予旋回の向き（正・負・ゼロ）を実験とCFDで比較し、旋回を逆向き（負の予旋回）にすると漏れ性能はほとんど変わらないままロータダイナミクス特性（交差剛性・有効減衰）が改善することを示した論文。rotor最新枠として選定。faithfulness-checkで「十分に解明されていなかった」という抄録にない研究ギャップの断定を検出し、事実記述に後退させた。"
+        },
+        {
+          "id": "doi:10.1115/1.3261054",
+          "title": "Analysis and Testing for Rotordynamic Coefficients of Turbulent Annular Seals With Different, Directionally-Homogeneous Surface-Roughness Treatment（Childs & Kim, 1985）",
+          "why": "環状シールの回転側を滑らかに保ったまま固定側だけをわざと粗くする「ダンピングシール」の考え方を、Hirsの乱流潤滑理論の拡張と4種類の粗さ処理の実験で検証した定番論文。NASA技術文書として全文入手できたためrotor定番のOA全文として選定。faithfulness-checkで「ノコギリ状の溝」という誤訳（正しくはローレット状の圧痕パターン=knurled-indentation）を5箇所で検出・修正し、理論と実測の乖離に関する記述の精緻化も行った。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "Bonello & Pham (2014) Journal of Sound and Vibration「フォイル空気軸受ロータの非線形動的応答の効率的計算」",
+          "note": "CC-BYオープンアクセスでfoil定番の有力候補でしたが、ScienceDirectの本文ページが自動アクセスをブロックし全文を確認できなかったため、抄録のみで「OA全文」と扱うのは誠実でないと判断し不採用としました（Howard 2008に差し替え）。"
+        },
+        {
+          "title": "Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure and damping material（Zhu et al., 2025, Mechanical Systems and Signal Processing）",
+          "note": "前号に続き候補に挙がりましたが、今回もOpenAlex・Crossref・Semantic Scholarのいずれからも抄録本文が取得できず、抄録ベースですら誠実に書けないため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv側は分野外ノイズが中心で、OpenAlex側も上位が既アーカイブ済みのため、補助検索（全キーワード展開）に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位はほぼ既アーカイブ済みで新規候補が乏しく、補助検索に切り替えた。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。既アーカイブ済みの重複を除くと新規候補が乏しく、補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位は統計学・電力系統論文（異分野一致）や書籍が占め、補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（定番枠拡張, foil）",
+            "scope": "topics.jsonのfoil全7語・被引用数順（1語あたり最大25件）",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 106,
+            "note": "分野一致106件中、既配信を除く新規90件を確認。Howard (2008)のミスアライメント実験論文（NASA/TM、パブリックドメイン）を発掘・採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（最新枠拡張, foil）",
+            "scope": "topics.jsonのfoil全7語・直近3年・発行日順（1語あたり最大25件）",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 70,
+            "note": "直近3年の新規70件を確認。Sun et al. (2025, JEGTP)のランダム振動・過渡衝撃応答論文を採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（定番枠拡張, rotor）",
+            "scope": "topics.jsonのrotor全8語・被引用数順（1語あたり最大25件）",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 92,
+            "note": "既配信を除く新規92件を確認。Childs & Kim (1985)の方向性均質粗さシール論文（NASA全文）を採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（最新枠拡張, rotor）",
+            "scope": "topics.jsonのrotor全8語・直近3年・発行日順（1語あたり最大25件）",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 86,
+            "note": "直近3年の新規86件を確認。Wang et al. (2025, JEGTP)の入口予旋回論文を採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。連続配信により基本枠の候補プールがほぼ枯渇していたため、両トピックとも全キーワードを使った展開検索（被引用順・直近3年発行日順）を追加実施した。"
+      },
+      "afterword": "今日いちばん「なるほど」と思ったのは、ガスフォイル軸受のミスアライメント（芯ずれ）実験の論文（Howard, 2008）です。玉軸受よりひと桁大きい芯ずれに耐えられるという結果自体も面白かったのですが、著者が「だからといって精度を落として作っていいわけではない」と釘を刺していた点が印象的でした。動力損失や摩耗、タービンの先端すきまといった別の理由で、実際に許される芯ずれはもっと小さくなるはずだと。頑丈であることと、実用上ちょうどよく作れることは別の話なのだと気づかされました。もう一つ、ラビリンスシールの論文（Wang et al., 2025）では、入口の流れの旋回方向を変えるだけで、漏れ量はほとんどそのままに安定性だけが変わるという結果も新鮮でした。 — 編集担当より"
     }
   ]
 }

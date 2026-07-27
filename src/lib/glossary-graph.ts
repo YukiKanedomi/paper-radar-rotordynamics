@@ -150,6 +150,8 @@ export const CATEGORIES: GraphCategory[] = [
       "WLF則（周波数-温度換算則）",
       "ロードセル",
       "多自由度構造モデル",
+      "Timoshenkoはり要素",
+      "機械インピーダンス法(Mechanical Impedance Method)",
     ],
   },
   {
@@ -222,6 +224,8 @@ export const CATEGORIES: GraphCategory[] = [
       "軸受支持の柔軟性・減衰",
       "軸受クリアランス（不感帯）",
       "油供給角度",
+      "ランダム振動励起",
+      "過渡衝撃励起",
     ],
   },
   {
@@ -244,6 +248,9 @@ export const CATEGORIES: GraphCategory[] = [
       "ブラジウスの式（Blasius摩擦則）",
       "段付きラビリンスシール",
       "乱流潤滑方程式(Hirsモデル)",
+      "周波数掃引ホワール軌道モデル(Frequency-Sweep Whirling Orbit Model)",
+      "表面粗さの方向性均質処理(Directionally-Homogeneous Roughness)",
+      "漸近周方向速度 Rω/2",
     ],
   },
 ];
@@ -559,6 +566,20 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "すきま励起力（クリアランス励起）", to: "安定限界（しきい値）", label: "が強いほどこれを引き下げる" },
   // --- 潤滑油不足がジャーナル軸受支持の弾性ロータ系の安定性に与える影響（Ono et al. 2026・抄録ベース） ---
   { from: "油供給角度", to: "潤滑油不足（スターベーション）", label: "の最適化で不安定化を緩和できる" },
+  // --- GFB支持ロータのランダム振動・過渡衝撃応答（Sun et al. 2025・抄録ベース） ---
+  { from: "Timoshenkoはり要素", to: "多自由度構造モデル", label: "ではり区間の曲げ・せん断変形を表現する" },
+  { from: "ランダム振動励起", to: "軸受の剛性・減衰係数", label: "への耐性は剛性分布の最適化で左右される" },
+  { from: "過渡衝撃励起", to: "軸心軌跡", label: "を受けた後の収束の速さが安定性の目安になる" },
+  // --- ガスフォイル軸受のミスアライメント耐性実験（Howard 2008, NASA/TM） ---
+  { from: "ミスアライメント", to: "危険速度", label: "が増えるほど見かけの軸受剛性が上がりピークが高回転数側へシフトする" },
+  { from: "ミスアライメント", to: "サブシンクロナス振動", label: "が増えるほどこの振動の発生回転数が上昇する" },
+  { from: "負荷容量", to: "ミスアライメント", label: "は実効的にこれを下げる方向に働く" },
+  // --- ラビリンスシールの入口予旋回が漏れ・動特性に与える影響（Wang et al. 2025・抄録ベース） ---
+  { from: "機械インピーダンス法(Mechanical Impedance Method)", to: "軸受の剛性・減衰係数", label: "を加振試験から同定する代表的な手法" },
+  { from: "周波数掃引ホワール軌道モデル(Frequency-Sweep Whirling Orbit Model)", to: "予旋回", label: "の局所的な影響をCFDで調べるのに使う" },
+  // --- 方向性均質表面粗さを持つ乱流環状シールの動特性係数（Childs & Kim 1985） ---
+  { from: "表面粗さの方向性均質処理(Directionally-Homogeneous Roughness)", to: "ダンピングシール", label: "が回転側を滑らかに・固定側を粗くする具体的な作り方" },
+  { from: "漸近周方向速度 Rω/2", to: "交差剛性", label: "が小さいほどこの不安定化剛性も小さくなる" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
