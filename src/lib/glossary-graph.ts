@@ -79,6 +79,9 @@ export const CATEGORIES: GraphCategory[] = [
       "円筒形気体軸受(平滑)",
       "レイノルズ方程式",
       "乾性摩擦（ドライフリクション）",
+      "軸方向熱勾配",
+      "ハイブリッド軸受(外部加圧併用)",
+      "空気ハンマー",
     ],
   },
   {
@@ -103,6 +106,8 @@ export const CATEGORIES: GraphCategory[] = [
       "半速振れ回り",
       "旋回フラッター（ホワール・フラッター）",
       "V-g-f線図",
+      "ケージ(保持器)不安定性",
+      "ころ-ケージポケットすきま",
     ],
   },
   {
@@ -226,6 +231,7 @@ export const CATEGORIES: GraphCategory[] = [
       "油供給角度",
       "ランダム振動励起",
       "過渡衝撃励起",
+      "オイルフィルムキャビテーション",
     ],
   },
   {
@@ -251,6 +257,7 @@ export const CATEGORIES: GraphCategory[] = [
       "周波数掃引ホワール軌道モデル(Frequency-Sweep Whirling Orbit Model)",
       "表面粗さの方向性均質処理(Directionally-Homogeneous Roughness)",
       "漸近周方向速度 Rω/2",
+      "ポケットガスシール(PGS)",
     ],
   },
 ];
@@ -580,6 +587,19 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 方向性均質表面粗さを持つ乱流環状シールの動特性係数（Childs & Kim 1985） ---
   { from: "表面粗さの方向性均質処理(Directionally-Homogeneous Roughness)", to: "ダンピングシール", label: "が回転側を滑らかに・固定側を粗くする具体的な作り方" },
   { from: "漸近周方向速度 Rω/2", to: "交差剛性", label: "が小さいほどこの不安定化剛性も小さくなる" },
+  // --- 内部温度分布実験（Radil & Zeszotek 2004） ---
+  { from: "軸方向熱勾配", to: "熱弾性流体力学(TEHD)解析", label: "を評価する対象" },
+  // --- ハイブリッドスラスト軸受比較（Ebewele, Lee & Kim 2025） ---
+  { from: "ハイブリッド軸受(外部加圧併用)", to: "静圧軸受", label: "の加圧機構を利用" },
+  { from: "ハイブリッド軸受(外部加圧併用)", to: "ガスフォイル軸受", label: "と組み合わせる（HFTB）" },
+  { from: "空気ハンマー", to: "ハイブリッド軸受(外部加圧併用)", label: "剛体パッド構成で起こりやすい不安定" },
+  // --- ORCHIDタービンのロータダイナミクス（Majer et al. 2025） ---
+  { from: "ポケットガスシール(PGS)", to: "ラビリンスシール", label: "の派生形（内部にポケット列を持つ）" },
+  { from: "ポケットガスシール(PGS)", to: "交差剛性", label: "を生む" },
+  { from: "オイルフィルムキャビテーション", to: "スクイーズフィルムダンパ(SFD)", label: "の減衰性能を劣化させる" },
+  // --- 円筒ころ軸受のケージ不安定性（Ghaisas, Wassgren & Sadeghi 2004） ---
+  { from: "ケージ(保持器)不安定性", to: "ホワール", label: "（ころの大径化）が内輪ホワールを誘発しうる" },
+  { from: "ケージ(保持器)不安定性", to: "ころ-ケージポケットすきま", label: "の大小に応じて発生しやすさが変化" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
