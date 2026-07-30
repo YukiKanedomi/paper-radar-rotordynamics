@@ -2904,6 +2904,191 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。連続配信により基本枠の候補プールがほぼ枯渇していたため、両トピックとも全キーワードを使った展開検索（被引用順・直近3年発行日順、同じ検索語のまま取得件数を拡大）を追加実施した。"
       },
       "afterword": "今日いちばん意外だったのは、フォイル軸受の温度計測実験（Radil & Zeszotek, 2004）です。空気の膜は軸受の端のほうで薄くなるはずだから、そこが一番熱くなるだろう、というのが理屈の上での予想でした。ところが実際に9個の温度センサーで測ってみると、一番熱かったのは端ではなく真ん中。理屈と実測がズレるとき、そこに何かまだ分かっていない現象が隠れているのだと、著者たちが「別の現象があるのかもしれない」と正直に書いているのが印象的でした。もう一つ、ORCHIDタービンの論文で「危険速度を通る」ことと「危険速度が無い」ことは全然違う、という当たり前だけど見落としがちな点に、要約を作りながら自分自身が一度引っかかりました。運転中に共振点を通過すること自体は普通で、大事なのは通過するときにちゃんと減衰が効いているかどうかなのだと、原文を読み直して学びました。 — 編集担当より"
+    },
+    {
+      "date": "2026-07-31",
+      "status": "published",
+      "headline": "ScienceDirect・ASME・MDPIが軒並みボット対策で読めなかった日、NASAの技術文書アーカイブに1980年の油膜ホワール実験と1997年のフォイル軸受試験装置が眠っていた",
+      "intro": "本日も日替わりローテーション枠（foil最新24件/定番14件、rotor最新13件/定番14件）はほぼ食い尽くされており、新規候補はfoil最新枠でゼロ、foil定番枠・rotor最新枠・rotor定番枠でも数件のみでした。そこでtopics.jsonの全キーワードを使った補助的なOpenAlex展開検索を実施し、foil最新78件・foil定番88件・rotor最新89件・rotor定番95件の分野一致かつ未配信の候補を確認しました。有力なOA候補（JSV誌のfoil-air bearing rotor論文、ASME Journal of Fluids Engineeringのrotordynamic force論文など）はいずれもCC-BYライセンスでしたが、ScienceDirect・ASME・MDPIの各出版社サイトが本日は軒並み自動アクセスをボット対策でブロックしており、ライセンス上はOAでも実際には全文を読めませんでした。そこでNASA技術報告サーバ（NTRS）を直接検索したところ、1997年のフォイル空気軸受試験装置の開発報告（DellaCorte）と、1980年の油膜軸受シャフト不安定性の実験研究（Holmes、テキサスA&M大学開催のロータダイナミクス不安定性ワークショップ会議録収録）が、どちらもPDFを直接ダウンロードでき全文で読めることを確認し、foil・rotor各定番枠のOA全文として採用しました。最新枠は、抄録の範囲で内容が濃く軸受・ロータダイナミクスの物理そのものを扱う論文（フォイル軸受のホワール不安定性解析、ロータ・ステータ接触のラブ動力学モデル）を抄録ベースで選定しています。",
+      "picked": [
+        {
+          "id": "ntrs:19970010249",
+          "title": "A New Foil Air Bearing Test Rig for Use to 700 C and 70,000 rpm（DellaCorte, NASA/TM 1997）",
+          "why": "700℃・70,000 rpmまでフォイル空気軸受のトルク（摩擦）・負荷容量・耐久性を測定できる新しい試験装置の開発報告。NASA技術覚書として全文入手でき、実測データ（動力損失130W、摩擦係数0.017等）も豊富なためfoil定番のOA全文として選定。faithfulness-checkを2ラウンド実施し、「試験に使った軸受の型式を誤って断定」「原文にない部品名（スラッジシール→正しくはスリンガシール）」「概念図で高速端のトルクが低速端を上回るよう描いてしまい原文にない大小関係を示唆」等を検出・修正した。"
+        },
+        {
+          "id": "doi:10.1134/s1052618825701493",
+          "title": "Analyzing Dynamic Rotor Instability on Gas Foil Bearings under High-Speed Electric Motor Testing（Nikiforov & Livanov, 2026）",
+          "why": "ガスフォイル軸受で支えた対称剛体ロータの「同時ホワール」（前方ホワールに軸受リーフとの乾性摩擦を伴う後方ホワールが併存する状態）を解析的に検討し、この自励振動が釣り合い状態に依存しないことを示した論文（抄録ベース）。faithfulness-checkで「前方→後方への時系列的な移行」という抄録の誤読（正しくは同時発生・併存）を検出し、「伴う」という抄録の表現に忠実な記述に修正した。"
+        },
+        {
+          "id": "ntrs:19800021225",
+          "title": "On the role of oil-film bearings in promoting shaft instability: Some experimental observations（Holmes, NASA CP-2133 1980）",
+          "why": "油膜軸受が引き起こすオイルホワール不安定性について、短軸受理論・長軸受理論による近似と剛体ロータ実験、さらに柔軟ロータへの外部点ダンピング・スクイーズフィルムアイソレータによる安定化効果を実証した古典的研究。テキサスA&M大学開催のロータダイナミクス不安定性ワークショップ会議録としてNASA NTRSに全文収録されており、rotor定番のOA全文として選定。faithfulness-checkを2ラウンド実施し、「短軸受理論と長軸受理論の対応が原文と逆」「支持減衰の下限の数値誤り」「引用の出典章の帰属誤り」等、複数のhigh severity指摘を修正した。"
+        },
+        {
+          "id": "doi:10.1177/10775463261429076",
+          "title": "Semi-analytical model for rub dynamics to investigate whirling（El-Mongy, El-Sayed, Vaziri & Wiercigroch, 2026）",
+          "why": "ロータ・ステータの接触（ラブ）による後方ホワールを、クーロン摩擦を含む半解析モデルで扱い、4次/5次ルンゲクッタ数値解と照合した論文（抄録ベース）。rotor最新枠として選定。faithfulness-checkで、接触・非接触を示す概念図の円の幾何が実際には接触していない誤りだったことを検出し座標を修正、また「摩擦を入れると解析解が一気に複雑になる」等の抄録にない断定も削除した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "ScienceDirect・ASME・MDPI掲載のCC-BY論文（複数件）",
+          "note": "foil latestの有力候補（Journal of Sound and Vibration誌のfoil-air bearing rotor論文、Applied Sciences誌のbump foil bearing論文等）はいずれもCC-BYでOpenAlex/Semantic Scholar上もOA判定でしたが、出版社サイトが本日は自動アクセスを一律ブロックしており、ライセンス上はOAでも実際には全文を読めなかったため見送りました。"
+        },
+        {
+          "title": "rotor latestのOA候補（Results in Engineering誌・Journal of Energy Storage誌等のElsevierゴールドOA論文）",
+          "note": "いずれもゴールドOAでしたが、ScienceDirectの記事ページがJavaScriptレンダリング前提のSPA構成で、自動取得では本文どころか概要も表示されなかったため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。分野一致の候補はすべて既配信済みで新規0件のため、補助検索（全キーワード展開）に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件はすべて既配信済み（1件のみ新規だが教科書のためtopic不適合）で、補助検索に切り替えた。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA6/抄録7。新規かつOA全文が取得できる候補がなく、補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位は異分野論文（統計学・電力系統）や既配信済みが占め、補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（最新枠拡張, foil）",
+            "scope": "topics.jsonのfoil全7語・直近4年・発行日順（1語あたり最大25件）",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 78,
+            "note": "分野一致・未配信の新規78件を確認。ScienceDirect/ASME/MDPI掲載のOA候補は本文アクセス不可のため、NASA NTRS直接検索でDellaCorte(1997)を採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（定番枠拡張, foil）",
+            "scope": "topics.jsonのfoil全7語・被引用数順（1語あたり最大25件）",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 88,
+            "note": "分野一致・未配信の新規88件を確認（うち1件は教科書のためtopic不適合として除外）。"
+          },
+          {
+            "name": "NASA NTRS直接検索（foil）",
+            "scope": "\"gas foil bearing rotordynamic\" / \"foil air bearing\" 等",
+            "terms": [
+              "gas foil bearing rotordynamic",
+              "foil air bearing"
+            ],
+            "hits": 20,
+            "note": "既配信分を除く新規候補多数を確認。PDF直接ダウンロード・全文抽出可能なDellaCorte(1997, NASA TM-107405)を採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（最新枠拡張, rotor）",
+            "scope": "topics.jsonのrotor全8語・直近4年・発行日順（1語あたり最大25件）",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 89,
+            "note": "分野一致・未配信の新規89件を確認。ゴールドOA候補（Results in Engineering誌等）は本文アクセス不可のため抄録ベースのEl-Mongy et al.(2026)を採用。"
+          },
+          {
+            "name": "OpenAlex全キーワード展開（定番枠拡張, rotor）",
+            "scope": "topics.jsonのrotor全8語・被引用数順（1語あたり最大25件）",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 95,
+            "note": "分野一致・未配信の新規95件を確認。"
+          },
+          {
+            "name": "NASA NTRS直接検索（rotor）",
+            "scope": "\"labyrinth seal rotordynamic\" / \"whirl instability rotor bearing\" 等",
+            "terms": [
+              "labyrinth seal rotordynamic",
+              "whirl instability rotor bearing"
+            ],
+            "hits": 20,
+            "note": "既配信分を除く新規候補多数を確認。PDF直接ダウンロード・全文抽出可能なHolmes(1980, NASA CP-2133)を採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠の候補プールがほぼ枯渇していたため、両トピックとも全キーワード展開検索に加えてNASA NTRSの直接検索を実施した。"
+      },
+      "afterword": "今日一番驚いたのは、有名な出版社のサイトが軒並み「ロボットではないですか」と機械的アクセスを弾いてきたことでした。CC-BYで無料公開されているはずの論文なのに、実際には読めない——ライセンスと実際のアクセス可能性は別物なのだと痛感しました。そのぶん救われたのが、NASAが1980年代・1990年代の古い技術報告をそのままPDFで無償公開し続けているアーカイブでした。特にHolmesという研究者が1980年に書いた油膜軸受の不安定性の実験論文は、ダンパーを軸に1つ付けるだけで不安定になる回転数を大きく後ろへ押し出せる、というシンプルな結論が今読んでも新鮮でした。40年以上前の実験が、今のガスフォイル軸受の議論とも地続きなのだと感じます。 — 編集担当より"
     }
   ]
 }
