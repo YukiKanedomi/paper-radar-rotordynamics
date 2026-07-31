@@ -3089,6 +3089,142 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠の候補プールがほぼ枯渇していたため、両トピックとも全キーワード展開検索に加えてNASA NTRSの直接検索を実施した。"
       },
       "afterword": "今日一番驚いたのは、有名な出版社のサイトが軒並み「ロボットではないですか」と機械的アクセスを弾いてきたことでした。CC-BYで無料公開されているはずの論文なのに、実際には読めない——ライセンスと実際のアクセス可能性は別物なのだと痛感しました。そのぶん救われたのが、NASAが1980年代・1990年代の古い技術報告をそのままPDFで無償公開し続けているアーカイブでした。特にHolmesという研究者が1980年に書いた油膜軸受の不安定性の実験論文は、ダンパーを軸に1つ付けるだけで不安定になる回転数を大きく後ろへ押し出せる、というシンプルな結論が今読んでも新鮮でした。40年以上前の実験が、今のガスフォイル軸受の議論とも地続きなのだと感じます。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-01",
+      "status": "published",
+      "headline": "OpenAlexの無料枠が日中に尽きるという初めての事態のなか、NASA/NTRSの技術報告庫でSSMEターボポンプ関連の1985年ハニカムシール実験と2004年フォイル軸受論文を発掘",
+      "intro": "本日はcollect.mjsの基本候補取得（foil最新24件/定番14件、rotor最新13件/定番14件）を終えたところで、OpenAlex APIが「本日の無料予算を使い切った（$0残高、リセットはUTC深夜）」というレート制限とは異なる恒久的なブロックを返すようになりました。基本枠だけでは、foil・rotor双方とも既配信のものが大半を占め、真に新規で軸受・ロータダイナミクスの物理を扱う候補が不足していたため、OpenAlex予算が尽きる直前に一度だけ実行できた被引用上位の拡張検索（各トピック上位20件）と、予算に依存しない無料の代替ソース（Crossref検索API・NASA NTRS直接検索・Unpaywall）を組み合わせて候補を補いました。foilは、抄録から内容を確認できたJEGTP誌の気体ポリマー軸受リフトオフ測定論文（Ghomashi & Liebich, 2025・抄録ベース）を最新枠に、NASA/TM経由で全文を読めたNASAグレン研究センターのフォイル軸受固体潤滑論文（DellaCorte, Zaldana & Radil, 2004）を定番のOA全文に選定。rotorは、Crossref検索で見つけたJEGTP誌の新しい対スワールデバイス論文（Gu, Zhang, Wu & Zhang, 2026・抄録ベース）を最新枠に、NASA NTRS直接検索で見つけたテキサスA&M大学のSSME高圧酸素ターボポンプ関連シール試験報告（Elrod, Nicks, Childs & Nelson, 1985）を定番のOA全文に選定しました。なおOpenAlex検索中に一度だけ見つけた「極低温タービン膨張機のラビリンスシール構造変形」という有力なrotor最新候補（Sun, Sun, Song & Wang, 2026）は、Elsevier誌のためCrossref・Semantic Scholar・Unpaywallいずれからも抄録本文を取得できず、§0（裏取りできない記述は書かない）に照らして見送りました。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.1609485",
+          "title": "A Systems Approach to the Solid Lubrication of Foil Air Bearings for Oil-Free Turbomachinery（DellaCorte, Zaldana & Radil, 2004／NASA/TM-2002-211482）",
+          "why": "PS304軸コーティング単独では負荷容量係数D=0.3にとどまる『新品・未慣らし』状態の弱点を、フォイル側コーティング（Al-Cu・Al2O3・ポリイミド）とPS304上の犠牲的上乗せ層（MoS2・ポリイミド）の組み合わせで克服し、慣らしなしでD≈1.0を達成した実験研究。NASA/TM全文が取得でき式・数値・逐語引用まで作り込めるためfoil定番のOA全文として選定。faithfulness-checkを2ラウンド実施し、初回で棒グラフの高さがラベルと食い違う誤解を招く図・負荷容量係数Dを『無次元』と誤記・荷重範囲の誤り・データ出所（先行研究と本研究の混同）等を検出、2回目の再チェックでも図キャプションの出所帰属が本文と逆になっていた点を発見し修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4069845",
+          "title": "A Novel Measurement Method for Investigating the Lift-Off Behavior of Gas Polymer Bearings（Ghomashi & Liebich, 2025）",
+          "why": "気体ポリマー軸受（GPB）のリフトオフ・タッチダウン挙動を左右する摩擦トルクを、既存装置より精密かつシンプルに測れる新しい試験治具（静的荷重印加＋供試体の荷重セル直接搭載）を提案した論文（抄録ベース）。foil最新枠として選定。faithfulness-checkで、抄録にない『GPBはポリマー製で金属フォイルの代替』という構造説明や、摩擦トルクと速度の因果関係の書き違え等のover-reachを検出・修正した。"
+        },
+        {
+          "id": "ntrs:19850024019",
+          "title": "A Comparison of Experimental and Theoretical Results for Rotordynamic Coefficients of Four Annular Gas Seals（Elrod, Nicks, Childs & Nelson, 1985／NASA-CR-176086）",
+          "why": "SSME高圧酸素ターボポンプのタービン間段シール実機インサートを含む4種の環状ガスシールを外部加振試験し、予旋回を与えない条件でハニカム型シールだけが安定化方向（負）の交差剛性を示すことを実証した、テキサスA&M大学の基礎研究。NASA-CR全文が取得できrotor定番のOA全文として選定。faithfulness-checkで『加振方式を円軌道加振と誤記（実際は並進調和加振）』『ハニカムシールとテーパーシールの寸法を取り違え』『同定していない付加質量係数の同定を主張』というhigh severity 3件を含む多数の指摘を検出し、2ラウンドかけてすべて修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4070568",
+          "title": "A Novel Reverse Swirl Generator Concept for Enhancing the Rotordynamic Stability of Annular Gas Seals Utilizing the Intrinsic Energy of Leakage Flow（Gu, Zhang, Wu & Zhang, 2026）",
+          "why": "漏れ流れ自身の圧力エネルギーを案内羽根と発散–収束キャビティで逆向きの旋回運動エネルギーに変換し、交差剛性の符号を反転させる新しい対スワールデバイスを提案した数値シミュレーション研究（抄録ベース）。rotor最新枠として選定。faithfulness-checkで、RSGを『能動的』装置と性格づける出典にない記述、交差剛性『3倍』の比較対象（大きさか符号か）の曖昧な扱い、概念図のレイアウト崩れ等を検出・修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "極低温液体タービン膨張機のラビリンスシール構造変形（Sun, Sun, Song & Wang, 2026）",
+          "note": "rotor最新枠の有力候補でしたが、Elsevier誌（International Journal of Refrigeration）のため、Crossref・Semantic Scholar・Unpaywallいずれからも抄録本文を取得できず、WebSearchでも関連論文の要約止まりで一次情報を確認できなかったため、抄録ベースの要約すら書けないと判断し見送りました。"
+        },
+        {
+          "title": "OpenAlexの日次無料予算の枯渇",
+          "note": "本日、収集の途中でOpenAlex APIが429ではなく『本日の無料予算を使い切った（dailyRemainingUsd: 0、リセットはUTC深夜）』という応答を返すようになりました。基本枠の取得自体はこの枯渇前に完了していましたが、候補を広げるための追加検索の一部が制限を受けました。Crossref検索API・NASA NTRS・Unpaywallは無料枠の影響を受けず、今回はこれらで代替できました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。うち軸受主題の候補（Probabilistic surrogate modeling for gas foil bearing stability等）はほぼ既配信済みで、新規のGPB論文を採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件は全て既配信済みのため、被引用順位を広げた拡張検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位・拡張（定番枠拡張, foil）",
+            "scope": "同キーワードで被引用順位を上位20件まで拡張（OpenAlex予算枯渇前に実行完了）",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 20,
+            "note": "未配信の新規候補を確認し、そのうちOA(green, NTRS経由)のDellaCorte et al.(2004)を採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。新規かつ軸受・ロータダイナミクスの物理が主題の候補が乏しく、Crossref補助検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位のほとんどが既配信済みまたは異分野論文のため、NASA NTRS直接検索に切り替えた。"
+          },
+          {
+            "name": "NASA NTRS直接検索（定番枠, rotor）",
+            "scope": "\"rotordynamic coefficients annular seal\"",
+            "terms": [
+              "rotordynamic coefficients annular seal"
+            ],
+            "hits": 20,
+            "note": "未配信のテキサスA&M大学（Childs研究室）のNASA CR/CP群を多数確認。PDF全文が直接ダウンロードできたElrod, Nicks, Childs & Nelson (1985)を採用。"
+          },
+          {
+            "name": "Crossref検索API（最新枠補助, rotor）",
+            "scope": "\"rotordynamic\" 2025-06以降・発行日順",
+            "terms": [
+              "rotordynamic"
+            ],
+            "hits": 15,
+            "note": "OpenAlexの予算枯渇後、無料のCrossref検索で代替。ASME JEGTP誌のGu et al.(2026)を全文取得できないまま抄録で確認し採用。同誌のより古典寄りの候補は既配信または数値解析中心のため見送り。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠の候補プールが薄く、かつOpenAlexの無料予算が日中に尽きたため、無料の代替ソース（Crossref検索API・NASA NTRS直接検索・Unpaywall）を組み合わせて候補を補った。"
+      },
+      "afterword": "今日いちばん驚いたのは、論文の検索エンジンにも『今日の分はもうおしまい』という日次予算があったことです。使っていたOpenAlexというサービスが、途中から『本日の無料枠を使い切りました、リセットは深夜です』と返すようになり、検索という当たり前の作業にもコストの裏側があるのだと実感しました。おかげで、代わりにNASAが無償で公開し続けている技術報告庫を頼ることになったのですが、そこで見つけた1985年の実験レポートが面白かったです。テキサスA&M大学が、スペースシャトルのメインエンジンのポンプに使われていたシールを4種類並べて試験し、蜂の巣のような形をしたハニカム型のシールだけが『軸の揺れを増やす力』ではなく『抑える力』を持つことを、40年前のデータで示していました。今の最新論文（同じ号に載せた逆スワール発生器の研究）が向き合っている問題と、根っこは同じなのだと知り、この分野の積み重ねの長さを感じた1日でした。 — 編集担当より"
     }
   ]
 }
