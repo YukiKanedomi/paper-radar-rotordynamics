@@ -3225,6 +3225,159 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本枠の候補プールが薄く、かつOpenAlexの無料予算が日中に尽きたため、無料の代替ソース（Crossref検索API・NASA NTRS直接検索・Unpaywall）を組み合わせて候補を補った。"
       },
       "afterword": "今日いちばん驚いたのは、論文の検索エンジンにも『今日の分はもうおしまい』という日次予算があったことです。使っていたOpenAlexというサービスが、途中から『本日の無料枠を使い切りました、リセットは深夜です』と返すようになり、検索という当たり前の作業にもコストの裏側があるのだと実感しました。おかげで、代わりにNASAが無償で公開し続けている技術報告庫を頼ることになったのですが、そこで見つけた1985年の実験レポートが面白かったです。テキサスA&M大学が、スペースシャトルのメインエンジンのポンプに使われていたシールを4種類並べて試験し、蜂の巣のような形をしたハニカム型のシールだけが『軸の揺れを増やす力』ではなく『抑える力』を持つことを、40年前のデータで示していました。今の最新論文（同じ号に載せた逆スワール発生器の研究）が向き合っている問題と、根っこは同じなのだと知り、この分野の積み重ねの長さを感じた1日でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-02",
+      "status": "published",
+      "headline": "定番枠の上位候補が既配信で埋まっていたため、NASA/arXivを深掘りしてfoil/rotorとも新規のOA全文2本ずつを発掘（第28号）",
+      "intro": "本日はcollect.mjsの基本候補取得（foil最新24件/定番14件、rotor最新13件/定番14件）から始めましたが、27号を重ねてきたこともあり、定番枠（被引用上位）の候補はfoil・rotorともほぼ全て既配信の論文で占められていました。そこで、同じ検索語でOpenAlexの取得件数を上位25件×各キーワードまで広げる深掘り検索を追加し、foilではNASAグレン研究センターの高温フォイル軸受動的剛性・減衰論文（Howard, DellaCorte, Valco, Prahl & Heshmat, 2001）、rotorではテキサスA&M大学の高速静圧軸受ロータダイナミック係数同定装置の論文（Childs & Hale, 1994）を発掘し、いずれもNASA NTRS経由でPDF全文を取得できました。最新枠は、foilで見つかったOpenAlex候補（Moraes et al. 2026）がBayesian Neural Networkによる代理モデル構築が主題でCLAUDE.mdの『ML/数値手法は脇役』方針に沿わなかったため見送り、代わりにOpenAlexの発行日ソート検索を広げてASME Turbo Expo 2025のガスフォイルスラスト軸受安定性論文（Sorgec & Liebich, 2025・抄録ベース）を採用しました。rotorの最新枠は、arXivを直接検索してMorton効果（熱アンバランス不安定）の実験論文（Plantegenet, Arghir, Hassini & Jolly）を発見。この論文は2019年にTribology Transactionsで出版済みですが、著者らが2025年12月にarXivへセルフアーカイブしたことで新規発掘に至った経緯です。4本とも§0の忠実性チェック（Opus）で最初はneeds_fixとなり、抄録の言い回しを断定に強めていた箇所（Sorgec論文）、OCR起因の数値取り違え（Childs & Hale論文のレイノルズ数比較）、既存用語定義との不整合（Morton効果の説明）などを2ラウンド以内で修正して公開しました。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000108982507",
+          "title": "Dynamic Stiffness and Damping Characteristics of a High-Temperature Air Foil Journal Bearing（Howard, DellaCorte, Valco, Prahl & Heshmat, 2001）",
+          "why": "軸受を電気ハンマーで叩いて自由振動させ、その減衰波形を「粘性減衰」「摩擦（クーロン）減衰」の2つのモデルに当てはめて誤差を比較することで、荷重・温度条件によってどちらの減衰機構が支配的かを地図化した実験研究。538℃までの高温域を含む点、動特性係数（剛性・減衰）という本配信の中核テーマに直結する点からfoil定番のOA全文として選定。faithfulness-checkで、Conclusion章の『剛性・減衰とも2〜3倍の範囲で変化』という記述が実際は剛性のみに関する記述で減衰には当てはまらない点、関連論文リンクのDOI誤り、概念図の領域分けが原文の記述（低荷重高温の粘性域・高荷重全域の摩擦域・その間の移行帯）と食い違っていた点などを検出・修正した。"
+        },
+        {
+          "id": "doi:10.1115/gt2025-154117",
+          "title": "Experimental Investigation of the Influence of Gas Foil Thrust Bearings on the Stability Behaviour of Rotor-Bearing Systems（Sorgec & Liebich, 2025）",
+          "why": "ラジアル（ジャーナル）側のフォイル軸受については安定性への影響がよく研究されてきた一方、アキシャル（スラスト）側の影響は解析でほぼ無視されてきたという盲点を指摘し、両方向ともガスフォイル軸受で支持した試験リグでスラスト軸受のアキシャルクリアランスを変える実験を行った論文（抄録ベース）。foil最新枠として選定。faithfulness-checkで、抄録の控えめな『影響しうる（can influence）』という表現を『発生回転数が変わることを確認した』と断定的に書き換えていた箇所を6箇所検出し、抄録どおりのトーンに戻す修正を行った。"
+        },
+        {
+          "id": "ntrs:19940029693",
+          "title": "A Test Apparatus and Facility to Identify the Rotordynamic Coefficients of High-Speed Hydrostatic Bearings（Childs & Hale, 1994）",
+          "why": "スペースシャトルメインエンジンの液体酸素ターボポンプで問題になっていた玉軸受の摩耗を背景に、代替候補の静圧軸受の剛性・減衰・添加質量係数を同定する専用試験装置を報告し、測定の結果ホワール周波数比が普通のジャーナル軸受と同水準（≈0.5）にとどまるという安定性上の課題を実証した基礎研究。rotor定番のOA全文として選定。faithfulness-checkで、水と液体酸素・液体水素のレイノルズ数比較において『周方向』と『合成（総合）』のレイノルズ数を取り違えていた誤り、水を使った理由を『腐食を避けるため』という出典にない理由付けにしていた点などhigh severityを含む指摘を検出・修正した。"
+        },
+        {
+          "id": "doi:10.1080/10402004.2019.1658836",
+          "title": "The Thermal Unbalance Effect Induced by a Journal Bearing in Rigid and Flexible Rotors: Experimental Analysis（Plantegenet, Arghir, Hassini & Jolly, 2019）",
+          "why": "ジャーナル軸受の発熱に起因する熱アンバランス効果（Morton効果）を、剛性・柔軟2種類の専用ロータ試験リグで再現した実験研究。特に柔軟ロータでは、同一の最終回転数でも起動にかける時間を180秒から80秒へ縮めるだけで安定から不安定（接触寸前）へ様変わりするという知見が印象的で、rotor最新枠として選定。2019年出版だが2025年12月のarXivセルフアーカイブにより新規発掘。faithfulness-checkで、著者名の綴り誤り（Hesseborn）、既配信の別論文（ティルティングパッド軸受のMorton効果）から流用していた用語定義が本論文（単純円筒ジャーナル軸受）の内容と矛盾していた点などを検出・修正した。"
+        }
+      ],
+      "aside": [],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。上位はほぼ既配信または機械学習主体（surrogate model等）の論文で占められており、CLAUDE.mdの『ML/数値手法は脇役』方針から見送り。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件は全て既配信済みのため、同キーワードで上位25件まで広げる深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位・深掘り（定番枠拡張, foil）",
+            "scope": "同7キーワードそれぞれ上位25件まで取得し、分野ガードでフィルタして被引用順に統合（107件）",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 107,
+            "note": "未配信のNASA/TM論文（Howard, DellaCorte, Valco, Prahl & Heshmat 2001、高温フォイル軸受の動的剛性・減衰）をNTRS経由でOA全文取得し採用。"
+          },
+          {
+            "name": "OpenAlex発行日順・深掘り（最新枠拡張, foil）",
+            "scope": "同7キーワード×2025年以降・発行日順で取得（80件）",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 80,
+            "note": "ASME Turbo Expo 2025のSorgec & Liebich (2025)（スラストフォイル軸受と安定性）を発見・抄録ベースで採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 13,
+            "note": "OA6/抄録7。新規かつ軸受・ロータダイナミクスの物理が主題の候補が乏しく、abstractを取得できない候補（Elsevier誌の極低温ラビリンドシール論文等）もあったため、arXiv直接検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位のほとんどが既配信済みまたは異分野論文のため、被引用上位25件までの深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位・深掘り（定番枠拡張, rotor）",
+            "scope": "同8キーワードそれぞれ上位25件まで取得し、分野ガードでフィルタして被引用順に統合（99件）",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 99,
+            "note": "テキサスA&M大学のChilds & Hale (1994)（高速静圧軸受のロータダイナミック係数同定装置）をNASA NTRS経由でOA全文取得し採用。"
+          },
+          {
+            "name": "arXiv直接検索（最新枠, rotor）",
+            "scope": "rotordynamic/whirl instability/rotor-bearing/journal bearing関連語・提出日順",
+            "terms": [
+              "rotordynamic",
+              "whirl instability",
+              "rotor-bearing",
+              "journal bearing",
+              "seal"
+            ],
+            "hits": 23,
+            "note": "Plantegenet, Arghir, Hassini & Jolly（2025年12月にarXivへセルフアーカイブしたMorton効果の実験論文、原論文は2019年Tribology Transactions掲載）を発見・OA全文で採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。27号を重ね基本枠（上位14〜24件）の候補プールが既配信で埋まってきたため、同じキーワードで取得件数を広げる深掘り検索と、NASA NTRS・arXivの直接検索を組み合わせて候補を補った。"
+      },
+      "afterword": "今日は「同じ検索語でも、もっと深く見れば新しい発見がある」ということを実感した1日でした。上位10件・20件だけを見ていると『もう新しい論文はないのかな』と思ってしまいますが、被引用順位を25位くらいまで広げただけで、1994年にテキサスA&M大学が作った静圧軸受の試験装置の論文や、2001年にNASAが測った高温フォイル軸受の減衰特性の論文が見つかりました。どちらも数十年前の研究ですが、今回初めてこの配信に載る「新規」の論文です。もう一つ印象に残ったのは、2019年に出版された論文が2025年12月にarXivへ改めて公開されたことで、今日「新着」として発掘できたケースがあったこと。論文の鮮度と、私たちがそれを見つけられる鮮度は、必ずしも同じではないのだと知りました。 — 編集担当より"
     }
   ]
 }
