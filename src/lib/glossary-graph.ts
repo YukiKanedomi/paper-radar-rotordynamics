@@ -118,6 +118,7 @@ export const CATEGORIES: GraphCategory[] = [
       "Jeffcottロータ",
       "ラブ（ロータ・ステータ接触）",
       "コニカルモード（円錐剛体モード）",
+      "ジャイロ効果",
     ],
   },
   {
@@ -170,6 +171,7 @@ export const CATEGORIES: GraphCategory[] = [
       "電気ハンマー加振（インパクト試験）",
       "疑似ランダム加振（マルチサイン波）",
       "高レイノルズ数軸受流れ（相似流体試験）",
+      "ヤコビアン行列",
     ],
   },
   {
@@ -250,6 +252,8 @@ export const CATEGORIES: GraphCategory[] = [
       "減衰機構マップ（粘性⇔摩擦）",
       "Newkirk効果",
       "ホットスポット・ハイスポット位相差",
+      "前史（prehistory）",
+      "油膜軸受",
     ],
   },
   {
@@ -662,6 +666,14 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "疑似ランダム加振（マルチサイン波）", to: "周波数応答関数（FRF）", label: "から高品質な同定データを得る" },
   { from: "高レイノルズ数軸受流れ（相似流体試験）", to: "添加質量係数", label: "が顕著に大きくなる要因" },
   { from: "静圧軸受", to: "ホワール周波数比", label: "を試験で同定する対象" },
+  // --- 高速オイルフリー・ターボ機械の非線形動解析（Bonello & Pham 2014） ---
+  { from: "ヤコビアン行列", to: "Hopf分岐", label: "支配的固有値の実部の符号から検出する" },
+  { from: "Hopf分岐", to: "限界サイクル振動(LCV)", label: "分岐点を境に周期振動が生まれる" },
+  { from: "ジャイロ効果", to: "固有振動数", label: "回転速度に応じて前向き・後ろ向きに分裂させる" },
+  // --- 高速回転機械の流体膜軸受モデリング・前史（Kiciński & Żywica 2025） ---
+  { from: "前史（prehistory）", to: "軸受の剛性・減衰係数", label: "を時間依存の量として扱う" },
+  { from: "オイルフィルムキャビテーション", to: "前史（prehistory）", label: "境界の履歴依存性が本質" },
+  { from: "油膜軸受", to: "オイルホイップ", label: "不安定しきい値を超えると生じる" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
