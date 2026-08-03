@@ -3524,6 +3524,124 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。28号を重ね基本枠（上位14〜24件）の候補プールが既配信で埋まってきたため、同じキーワードで被引用数・発行日ソートの取得件数を広げる深掘り検索を組み合わせて候補を補った。"
    },
    "afterword": "今日は、AIが『もっともらしい理由』を作文してしまう瞬間を目の当たりにしました。ある論文が、油の膜の不安定振動を指して1箇所だけ『medium whip』という聞き慣れない言葉を使っていたのですが、下書きの段階では『潤滑液が油に限らないシリコーン系の液体だから、あえて“oil”を避けたのだろう』という解釈が添えられていました。もっともらしく聞こえたのですが、忠実性チェックにかけたところ、同じ論文の別の場所ではふつうに『oil whirl』『oil whip』と書かれていて、その解釈は成り立たないことが分かりました。著者がなぜそこだけ言葉を変えたのか、論文自体は説明していないのです。もっともらしい説明ほど、実は裏取りが甘いことがある——今日はそれを痛感した1日でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-08-04",
+   "status": "published",
+   "headline": "定番枠の候補プールが既配信で埋まる中、DOEの企業技術報告書とスペイン・中国共同研究のOA全文を発掘（第30号）。OSTI報告書ではAI下書きが故障の『根本原因』を取り違えていたのを忠実性チェックで発見・全面修正",
+   "intro": "collect.mjsの基本候補取得に加え、29号までで定番枠（被引用上位）の候補がfoil・rotorともほぼ既配信で埋まっていたため、OpenAlexのtitle.search（\"foil bearing\"・\"rotordynamic\"・\"rotor bearing\"等）を使った深掘り検索で未配信の候補を探しました。foil最新枠では、MDPI（Applied Sciences）とASME（J. Fluids Engineering）のOA論文をいくつか見つけたものの、出版社サイトがボット対策（Akamai/Cloudflare）で本文PDF取得をブロックしており、全文を読めないまま『OA全文』と称するのは§0違反になるため見送りました。代わりに、米エネルギー省(DOE)のOSTI.govで全文が直接ダウンロードできたR&D Dynamics社の最終技術報告書（水素燃料電池トラック向けフォイル軸受支持コンプレッサー・エキスパンダーの開発報告）を採用しました。rotor最新枠も同様の事情で、ASMEの論文が本文取得できなかった代わりに、バルセロナのカタルーニャ工科大学(UPC)機関リポジトリ経由でPDFを取得できたZou, Presas他(2026)（ポンプ水車ロータ軸系の固有振動数、Journal of Energy Storage・CC BY）を採用しています。foil・rotorの定番枠は、OpenAlexの高被引用論文の中から未配信のLe Lez, Arghir & Frêne (2007)（バンプ型フォイル軸受構造の解析モデル）とF. F. Ehrich (1988)（軸受クリアランスによる高次分数調波応答）を抄録ベースで採用しました。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.2747638",
+     "title": "A New Bump-Type Foil Bearing Structure Analytical Model（Le Lez, Arghir & Frêne, 2007）",
+     "why": "バンプ型フォイル軸受の構造を、各バンプが3自由度で結ばれた多自由度系としてモデル化し、バンプ同士の押し合い（相互作用）を考慮しないと柔軟性を過大評価しがちだと指摘した解析モデル論文（抄録ベース）。foil定番枠として選定。faithfulness-checkで、抄録の \"tend to confirm\"（確認する傾向がある）というヘッジが下書きでは断定に変わっていた点、批判対象のモデル群の取り違え、本文と無関係なtriviaラベルなどを2ラウンドかけて修正した。"
+    },
+    {
+     "id": "doi:10.2172/2999857",
+     "title": "Foil Bearing Supported Compressor-Expander（R&D Dynamics Corporation, 2025, DOE最終技術報告書）",
+     "why": "水素燃料電池トラック向けにフォイル軸受支持の高速コンプレッサー・エキスパンダーを開発した企業の最終報告書。危険速度マージンの設計方針から、開発中に発生した高速不安定の原因究明、最終的にCOP1.18を達成するまでを実務ベースで記録している。foil最新枠のOA全文として選定。faithfulness-checkの初回ラウンドで、下書きが『故障の根本原因は組立誤差によるアンバランス（規格の10倍）』としていたのに対し、出典の実際の結論は『モーターロータの磁石スリーブに熱処理前のInconelが誤使用されていたこと』『モーターステータの磁気飽和』の2つであり、アンバランスは診断初期に見つかった別の（根本原因ではない）問題だったことがhigh severityで検出された。全文を読み直し、根本原因の記述を全面的に書き直した（2ラウンド）。"
+    },
+    {
+     "id": "doi:10.1016/j.est.2026.121878",
+     "title": "Investigation of the added mass effect and bearing stiffness on the rotordynamics of pump-turbine shaft systems（Zou, Presas, Han, Valentín, Egusquiza & Egusquiza, 2026）",
+     "why": "揚水発電用ポンプ水車ロータ軸系（全長約11m）について、水中のランナーが及ぼす『付加質量』効果と軸受剛性が、軸全体の固有振動数にどう影響するかをANSYS数値解析と実機打撃試験の両面から調べた論文。rotor最新枠のOA全文（CC BY）として選定。faithfulness-checkで、31%という固有振動数低下率が高次モード限定の数値であるにもかかわらず1次危険速度と結び付けて過大に読ませていた点、本文が明記する『数値モデルは1次固有振動数の低下自体を予測できていない』という重要な限界の欠落、式(19)の内容の一部欠落などを2ラウンドで修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.3269488",
+     "title": "High Order Subharmonic Response of High Speed Rotors in Bearing Clearance（F. F. Ehrich, 1988）",
+     "why": "軸受クリアランスに起因する剛性-たわみ特性の非対称性が関連する分数調波振動について、通常は2〜4次程度とされる中、8次・9次という高次の実例を報告し、有限差分法の数値モデルで応答特性を解析した古典的論文（抄録ベース）。rotor定番枠として選定。faithfulness-checkで『軸受の硬さが左右非対称』という物理的意味を取り違えた誤訳（high severity）を検出・修正したが、修正の際に別の箇所で今度は『回転数のn倍』と『固有振動数のn倍』を混同する新たな誤りを作ってしまい、2回目のチェックで再び検出・修正するという顛末になった。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "MDPI・ASMEのOA論文は本文取得できず見送り",
+     "note": "foilではMDPI Applied Sciences掲載のLu, Zhu & Lu (2025)（バンプフォイル軸受の多物理場連成解析）、rotorではASME J. Fluids Engineering掲載のGundersen et al. (2026)（多段軸流インペラの逆流誘起負交差結合剛性）が、いずれもCC-BYのOA論文としてメタデータ上は確認できたが、出版社サイトのボット対策（Akamai/Cloudflare）で本文PDFを取得できなかった。全文を読めないまま『OA全文』として深い要約を書くのは§0（全文未取得なら抄録ベースと明記）に反するため、この2本は見送り、代わりに全文を直接取得できたDOE最終報告書とUPCommonsリポジトリ経由のZou論文を採用した。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA21/抄録3。arXiv上位はほぼ全て磁気共振子・インバータ・PIV等の異分野論文で、軸受関連はOpenAlex新着側に集中。ML色の強い論文（サロゲートモデル等）は主役にしないため見送った。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。上位はほぼ全て既配信済み（DellaCorte系・Heshmat系等）。"
+     },
+     {
+      "name": "OpenAlex title.search深掘り（foil latest/classic拡張）",
+      "scope": "title.search:\"foil bearing\" を発行日順（2022年以降）・被引用数順の両方で再検索",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 197,
+      "note": "発行日順からLu, Zhu & Lu (2025, MDPI CC-BY)を発見したが本文取得不可のため見送り。被引用順からLe Lez, Arghir & Frêne (2007)を発掘・採用（foil定番）。R&D Dynamics社のDOE最終報告書（OSTI.gov、全文取得可）をfoil最新として採用。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "OA7/抄録6。arXiv上位に軸受・シール関連論文は無く、OpenAlex新着側から候補を探索。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。上位はほぼ既配信済み。"
+     },
+     {
+      "name": "OpenAlex title.search深掘り（rotor latest/classic拡張）",
+      "scope": "title.search:\"rotordynamic\"（発行日順）／title.search:\"rotor bearing\"（被引用数順）で再検索",
+      "terms": [
+       "rotordynamic",
+       "rotor bearing"
+      ],
+      "hits": 279,
+      "note": "発行日順からGundersen et al. (2026, ASME CC-BY)を発見したが本文取得不可のため見送り、代わりにZou, Presas他(2026, Journal of Energy Storage・UPCommonsでPDF取得可)をrotor最新として採用。被引用数順からEhrich (1988)を発掘・採用（rotor定番）。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。29号を重ね基本枠（上位14〜24件）の候補プールが既配信で埋まってきたため、OpenAlexのtitle.search機能で発行日順・被引用数順それぞれの上位を直接取得する深掘り検索を組み合わせて候補を補った。"
+   },
+   "afterword": "今日、ヒヤリとした出来事がありました。ある企業の技術報告書を読んで下書きを作ったとき、『モーターが高速回転で壊れる原因は、部品の組み立て誤差による重心のズレ（規格の10倍）でした』という、もっともらしいストーリーに仕上げてしまっていたのです。数字も具体的で、いかにも『原因究明の物語』らしく読めました。ところが忠実性チェックにかけたところ、報告書の後半をきちんと読むとそのアンバランスは実は早い段階で見つかって直された別の問題で、本当の原因は『モーターの部品に、本来必要な熱処理をしていない柔らかい金属材料が誤って使われていた』ことだったと分かりました。もっともらしく筋の通ったストーリーほど、実は先に見つかった数字に飛びついて後の展開を読み落としている――今日はそれを身をもって知る出来事でした。 — 編集担当より"
   }
  ]
 }
