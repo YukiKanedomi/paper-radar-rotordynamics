@@ -3807,6 +3807,140 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。30号を重ね基本枠（上位14〜24件）の候補プールがほぼ既配信で埋まったため、OpenAlex APIをkeyword毎にper-page拡張・ソート方式変更（被引用順トップ25・CC-BY限定の発行日順トップ20）で直接叩く深掘り検索を追加した。検索の途中でOpenAlexの日次予算が枯渇したため、以降の裏取りはCrossref・Semantic Scholar・各出版社ページへの直接アクセスに切り替えた。"
       },
       "afterword": "今日は、数字そのものは一字一句正しいのに、意味が変わってしまうという出来事がありました。「安定性の限界が33%も引き上げられた」という下書きの一文、数字は論文どおりで嘘ではありません。でも忠実性チェックにかけたら、原文の頭に「単純な円筒軸受と比べて」という一言が付いていることが分かりました。この一言が抜けると、まるで「くぼんだ軸受にナノ粒子入りの油を足しただけでそれだけ効果が上乗せされた」ように読めてしまいますが、本当は「くぼんだ形＋ナノ粒子入りの油」という組み合わせ全体を、何もしていない普通の円筒軸受と比べた数字だったのです。数字を正確に写しても、それが「何と比べた数字か」を書き忘れるだけで、読んだ人の頭の中では別の話になってしまう——今日はそれを実感した一日でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-06",
+      "status": "published",
+      "headline": "第32号：foil/rotorとも基本の候補プール（上位14〜24件）が既配信でほぼ埋まる中、OpenAlex直接クエリでの深掘りと、MDPI等のボット対策を回避するjina.aiリーダー経由の全文逐語取得で4件を確保。faithfulness-checkは4件とも要修正で、特にfoil最新は逐語出典にない数値・固有名・機構説明を広い範囲で削除する大幅修正になった",
+      "intro": "node scripts/collect.mjsの基本候補取得（foil/rotorとも各トピックのlatest・classic上位十数〜24件）を回したところ、上位候補の大半が既に31号までで配信済みでした。そこでOpenAlexのAPIを、collect.mjsが使うキーワードあたり上位4〜6件という制限を外し、per-page=25でcited_by_count順（定番向け）・publication_date順（最新向け）に直接取得し直す深掘り検索を行いました。この深掘りでfoil classicにPeng & Carpino (1994)、foil latestにDou et al. (2024、液体窒素中の推力型フォイル軸受)、rotor classicにLund (1967、静圧気体軸受のホワール不安定性・空気ハンマー)を発見。rotor latestのZhang et al. (2026、ガリウム系液体金属潤滑の非対称ヘリンボーン溝軸受)はcollect.mjsの通常出力の中に既に含まれていました。全文取得の過程で、MDPI・Elsevier・SpringerのCC-BY/OA論文が軒並みAkamai/Cloudflare等のボット対策で本文403（またはログイン誘導）となる問題に直面しましたが、今回はjina.aiのリーダーサービス（r.jina.ai経由でページを取得）を使うことで、MDPIの2本（Dou et al.とZhang et al.）については本文の逐語テキスト（Abstract・Introduction末尾・Conclusions全文・図表キャプション）を取得できました。取得した逐語テキストをもとに要約を作成し、4件ともfaithfulness-checkに掛けたところ、全件needs_fixと判定されました。とりわけDou et al.（foil最新）は、jina.ai経由で得た要約的な補足情報（DN値・液体窒素の密度/供給圧力の具体値・比較対象の実験文献名と図番号など）を、あたかも論文本文で確認済みであるかのように書いてしまっていた点が高深刻度で指摘され、これらの数値・固有名をすべて削除し、逐語確認できた範囲（Abstract・Introduction末尾2段落・Conclusions全文・図表キャプション）だけに要約を絞り込みました。また「液体窒素を燃料と一緒に積んでいる」という誤った文脈づけ、「気体膜」という誤った媒体表現（実際は液体窒素そのものが潤滑剤）も修正しました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants12070257",
+          "title": "Theoretical Evaluation of Lubrication Performance of Thrust-Type Foil Bearings in Liquid Nitrogen（Dou, Jiang, He, Cheng, Fang & Xu, 2024）",
+          "why": "再使用型液体ロケットターボポンプ向けに、転がり軸受の代替として液体窒素そのものを潤滑剤に使う推力型フォイル軸受を理論評価した論文。foil最新枠のOA全文（CC BY）として選定したが、jina.ai経由で得た二次的な要約情報（DN値・液体窒素の物性値・比較実験文献名と図番号）を出典で確認済みの記述として書いてしまっていた点、「燃料と一緒に積んでいる液体窒素」という誤った文脈づけ、「気体膜」という誤った媒体表現（実際は液体窒素という液体膜）などが1回目のfaithfulness-checkで高深刻度の指摘を多数受けた。逐語確認できたAbstract・Introduction末尾・Conclusions・図表キャプションの範囲だけに要約を絞り込み、確認できない数値・固有名・機構説明をすべて削除して修正、2回目の再検証で問題なしと判定された。"
+        },
+        {
+          "id": "doi:10.1080/10402009408983270",
+          "title": "Coulomb Friction Damping Effects in Elastically Supported Gas Foil Bearings（Peng & Carpino, 1994）",
+          "why": "フォイル軸受のサブフォイル構造に生じるクーロン摩擦を等価粘性減衰に置き換えて理論解析した定番論文（被引用約100件、抄録ベース）。foil定番枠として選定。faithfulness-checkで、抄録は『サブフォイル構造のクーロン摩擦』としか述べていないのに、要約全体（hook・trivia・用語定義・概念図）が『フォイル同士／波型の山どうしが擦れ合う』という具体的な摩擦発生界面を断定してしまっていた点が高深刻度で指摘された。摩擦がどの面で生じるかは抄録に書かれていない旨を明記し、界面の断定を全箇所から削除して修正した。"
+        },
+        {
+          "id": "doi:10.3390/lubricants14080301",
+          "title": "Dynamic Performance of Asymmetric Herringbone-Groove Journal Bearings Lubricated with Gallium-Based Liquid Metal（Zhang, Qian, Wang, Yu, Kong & Zhao, 2026）",
+          "why": "CT用X線管の回転陽極ロータ向けに、軸受両端で溝の長さをわざと不揃いにした非対称ヘリンボーン溝軸受（ガリウム系液体金属潤滑）の動的性能を評価した論文。rotor最新枠のOA全文（CC BY）として選定。faithfulness-checkで、偏心率0→0.9での減衰係数変化の条件表記の混乱、『reference[19]』という検証節の固有情報が逐語出典で未確認、ゼロ偏心時の『方向性の高圧領域』という記述を偏心荷重時の記述にも誤って流用していた点などが指摘され、条件表記の明確化・未確認固有情報の削除・図の描き直しで修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.3616933",
+          "title": "A Theoretical Analysis of Whirl Instability and Pneumatic Hammer for a Rigid Rotor in Pressurized Gas Journal Bearings（Lund, 1967）",
+          "why": "静圧気体ジャーナル軸受における剛体ロータの、回転誘起（ハイブリッド）不安定性と空気ハンマーという2つの不安定しきい値を理論解析した、被引用約110件の古典論文（抄録ベース）。rotor定番枠として選定。faithfulness-checkで、『早い時期の研究の一つ』という抄録に無い先行性の主張、『内蔵補償効果』という定訳とずれる訳語などが指摘され、先行性の主張を削除・訳語を『自成絞り効果』に修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "MDPI・Elsevier・Springerは本文403になりやすい、が今回jina.aiリーダーで打開",
+          "note": "候補の中で見つけたOA(CC-BY)論文のうち、MDPI・Elsevier(ScienceDirect)・Springerでホストされているものは、WebFetchでも直接fetchでもAkamai/Cloudflareのボット対策やログイン誘導リダイレクトで本文が読めないケースが続きました。今回、jina.aiのリーダーサービス（対象URLをhttps://r.jina.ai/<url>の形で経由取得）を試したところ、MDPIの2本については本文のレンダリング結果からAbstract・Introduction・Conclusions・図表キャプションを逐語で抜き出すことができました。Elsevier・Springerについては今回も本文取得に至らず、当該候補は見送りました。"
+        },
+        {
+          "title": "faithfulness-checkが『二次情報の混入』を的確に検出",
+          "note": "jina.aiのリーダーは要約・翻訳をかけて応答することがあり、その過程で『本文の背景として一般的に言われる数値』のような二次的な補足情報が混ざることがありました。これを一度そのまま出典確認済みの記述として書いてしまい、foil最新（Dou et al.）はfaithfulness-checkで最も多くの高深刻度指摘を受けました。逐語で確認できたテキストの範囲に要約を絞り込み、確認できない数値・固有名・機構説明を削除する形で修正しました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。arXiv上位はロボット制御・電力系統・流体力学など異分野論文が大半で、軸受関連はOpenAlex新着側（末尾）に集中していた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件はほぼ全て既配信済みで新規は書籍1件のみだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、'gas foil bearing' 被引用順トップ25）",
+            "scope": "per-page=25・cited_by_count順で直接取得し、既配信タイトルを除外",
+            "terms": [
+              "gas foil bearing"
+            ],
+            "hits": 25,
+            "note": "Peng & Carpino (1994) のクーロン摩擦減衰論文（被引用約100件）を発掘・採用（foil定番）。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、'foil journal bearing'/'foil thrust bearing' 発行日順トップ25・2023年以降）",
+            "scope": "per-page=25・publication_date順・from_publication_date=2023-01-01",
+            "terms": [
+              "foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 50,
+            "note": "Dou et al. (2024) の液体窒素中推力型フォイル軸受論文（Lubricants、CC-BY）を発掘。jina.aiリーダー経由で本文取得できたためfoil最新として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "identification of the dynamic force and moment characteristics",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA17/抄録7。arXiv上位は異分野論文が中心だったが、OpenAlex新着側でZhang et al. (2026) のガリウム系液体金属潤滑ヘリンボーン溝軸受論文（Lubricants、CC-BY）を発見・rotor最新として採用（深掘り不要で通常出力から確保）。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位はほぼ既配信済み（統計学論文・風力発電論文など分野ガードのノイズも含む）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、'rotor bearing stability'/'seal rotordynamic coefficients'/'whirl instability rotor' 被引用順トップ15）",
+            "scope": "per-page=25・cited_by_count順で直接取得し、既配信タイトルを除外",
+            "terms": [
+              "rotor bearing stability",
+              "seal rotordynamic coefficients",
+              "whirl instability rotor"
+            ],
+            "hits": 45,
+            "note": "Lund (1967) の静圧気体軸受ホワール不安定性・空気ハンマー理論（被引用約110件の古典）を発掘・採用（rotor定番）。同じ深掘りで見つかったChilds (1983) の環状シール論文・SSME HPFTP不安定性論文（Childs 1978）は既に既配信だった。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。32号を重ね基本枠（上位14〜24件）の候補プールがほぼ既配信で埋まったため、OpenAlex APIをkeyword毎にper-page=25へ拡張して直接叩く深掘り検索を追加した。全文取得はMDPI・Elsevier・SpringerのボットブロックによりWebFetch直接取得ができないケースが多く、jina.aiリーダー（r.jina.ai）経由の取得を今回初めて試し、MDPIの2本については逐語テキストの取得に成功した。"
+      },
+      "afterword": "今日、いちばん反省したのは「引用の出どころ」についてでした。液体窒素を使ったフォイル軸受の論文を読んでいて、下書きに「実験データ（Dickman, 2010）との比較で確認した」という一文を書いていました。もっともらしい書きぶりですが、忠実性チェックにかけたら、私が実際に確認できた原文（要約・序論の終わり・結論）のどこにもこの名前は出てこないと指摘されました。ウェブ経由で論文を読む過程で、本文の要約のような形で得た情報を、いつのまにか「原文で確認済み」であるかのように書いてしまっていたのです。数字や固有名詞は、それらしく見えるほど「本当に自分の目で原文の中に見た文字なのか」を疑ってかかる必要がある——今日はそれを痛感する出来事でした。同じ論文で、液体窒素を「ロケットの燃料と一緒に積んでいる」と書いてしまっていたのも、似た種類の勇み足でした。実際には燃料ではなく、実験室で安全に極低温環境を再現するための「模擬用の液体」として選ばれていただけ。もっともらしい物語を作る前に、原文が実際に何と言っているかへ、もう一度戻る。今日はその大切さを教わりました。 — 編集担当より"
     }
   ]
 }
