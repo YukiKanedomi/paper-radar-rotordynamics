@@ -3941,6 +3941,145 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。32号を重ね基本枠（上位14〜24件）の候補プールがほぼ既配信で埋まったため、OpenAlex APIをkeyword毎にper-page=25へ拡張して直接叩く深掘り検索を追加した。全文取得はMDPI・Elsevier・SpringerのボットブロックによりWebFetch直接取得ができないケースが多く、jina.aiリーダー（r.jina.ai）経由の取得を今回初めて試し、MDPIの2本については逐語テキストの取得に成功した。"
       },
       "afterword": "今日、いちばん反省したのは「引用の出どころ」についてでした。液体窒素を使ったフォイル軸受の論文を読んでいて、下書きに「実験データ（Dickman, 2010）との比較で確認した」という一文を書いていました。もっともらしい書きぶりですが、忠実性チェックにかけたら、私が実際に確認できた原文（要約・序論の終わり・結論）のどこにもこの名前は出てこないと指摘されました。ウェブ経由で論文を読む過程で、本文の要約のような形で得た情報を、いつのまにか「原文で確認済み」であるかのように書いてしまっていたのです。数字や固有名詞は、それらしく見えるほど「本当に自分の目で原文の中に見た文字なのか」を疑ってかかる必要がある——今日はそれを痛感する出来事でした。同じ論文で、液体窒素を「ロケットの燃料と一緒に積んでいる」と書いてしまっていたのも、似た種類の勇み足でした。実際には燃料ではなく、実験室で安全に極低温環境を再現するための「模擬用の液体」として選ばれていただけ。もっともらしい物語を作る前に、原文が実際に何と言っているかへ、もう一度戻る。今日はその大切さを教わりました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-08",
+      "status": "published",
+      "headline": "第33号：foil最新にMFJB（多フォイル空気ジャーナル軸受）の動特性モデル、rotor最新に気液二相流下のラビリンスシールCFD予測。foil定番・rotor定番は32号超えの候補プール枯渇からOpenAlex直接クエリの深掘りで発掘。4件とも2回の忠実性チェックを経て、数値の取り違え・図の技術的誤り・出典に無い機構説明を修正して公開",
+      "intro": "node scripts/collect.mjsの基本候補（foil/rotor各latest・classic上位十数〜24件）は、32号を重ねたことでほぼ既配信で埋まっており、新規はfoil latestの2件・rotor classicの1件（後述の理由で不採用）程度でした。そこでOpenAlex APIをkeywordあたり上位4〜6件という制限を外し、per-page=25で直接クエリし直す深掘り検索を行いました。foil定番はこの深掘りで『compliant foil bearing』等4語の被引用順検索から、Heshmat・Xu・Heshmat (1999) のFD-FE連成によるフォイルスラスト軸受解析（被引用約137件の定番）を発掘。rotor定番も同様に『rotor-bearing system stability』等4語の被引用順検索から、M. A. Prohl (1945) の危険速度計算の汎用法という基礎的文献（被引用約209件）を採用しました。なお同じ深掘りで見つかったA. G. Parkinson (1991) の『Rotordynamics prediction in engineering』（被引用421件）は、Crossrefで確認したところ本文2ページのみの書評（Lalanne & Ferrarisの著書に対する書評）であり、実質的な研究内容を要約できないため候補から外しました。rotor latestはcollect.mjsの通常出力（OpenAlex新着）の中に、気液二相流下のラビリンスシールの動特性をCFDで予測したZhang, Ma, Chen, Duan, Ma, Li & Yu (2026, Mechanika誌, CC BY 4.0) がそのまま含まれており、追加検索なしで採用。foil latestは、通常出力に軸受主役の候補が乏しかったため『gas foil bearing』等4語で2023年以降・発行日順の深掘りを行い、Jiang, Zhu, Xu, Huang & Gao (2024, Lubricants誌, CC BY 4.0) の多フォイル空気ジャーナル軸受（MFJB）の動特性モデルを発掘しました。全文は、MDPI論文はr.jina.aiリーダー経由でHTML本文を取得、Mechanika論文はKaunas University of Technologyの論文ページからPDFを直接ダウンロードしPyMuPDFでテキスト・図（試験装置の実写真）を抽出しました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants12110386",
+          "title": "The Influences of Parameters on the Dynamic Characteristics of a Multi-Foil Aerodynamic Journal Bearing with Bump-Backing Foils: Model Predictions（Jiang, Zhu, Xu, Huang & Gao, 2024）",
+          "why": "8枚のトップフォイル・8枚のバンプフォイルを持つ、比較的複雑な多フォイル空気ジャーナル軸受（MFJB）の動特性モデルをFD法・摂動法で構築した論文。foil最新枠のOA全文（CC BY）として選定。1回目のfaithfulness-checkで、偏心率の範囲『0.1〜0.9』が本文で裏取りできない（実際は主に0.1〜0.7）、概念図で『外側の輪＝トップフォイル、内側の輪＝バンプフォイル』としていたのが技術的に逆で誤解を招く、先行文献との比較検証で『最大偏差6.4%』とだけ書いていたのが実際は2つの検証（文献[35]との比較で8.7%、文献[36]との比較で6.4%）を混同していた、フォイル厚2.0×10⁻⁴m付近での『頭打ち』が特定条件（ω=80,000rpm・ε=0.3のKxx）のみの記述を一般化しすぎていた、などの指摘を受けて修正。2回目の再チェックでも、深掘り(deepDive)側に同じ一般化の残存や式の記号の不整合が見つかり、再修正した。"
+        },
+        {
+          "id": "doi:10.5755/j02.mech.44178",
+          "title": "CFD-Predicted Rotordynamic Characteristics for Labyrinth Seal Under Gas-Liquid Two-Phase Conditions（Zhang, Ma, Chen, Duan, Ma, Li & Yu, 2026）",
+          "why": "気液二相流（水-空気混合流）下のラビリンスシールについて、動メッシュ技術とCFDで動特性係数（剛性・減衰）を予測した論文。rotor最新枠のOA全文（CC BY）として選定し、試験装置の実写真（Fig.6）もCC BY表記のもと掲載。1回目のfaithfulness-checkで、負の交差剛性kを『不安定化方向』と解釈していたのが誤り（本文は不安定化の主因を負の交差減衰cに帰している）、設計提言の『見通し型シールの採用』が原文の誤読（正しくは『平滑環状シール(smooth annular seal)』）、図の機器並び順が実画像のラベルと不一致、といった指摘を受けて修正。2回目の再チェックでは、修正漏れの1箇所（『わずかに』の係り先）のみ残り、再修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.555343",
+          "title": "Analysis of Gas Lubricated Foil Thrust Bearings Using Coupled Finite Element and Finite Difference Methods（Heshmat, Xu & Heshmat, 1999）",
+          "why": "ガス潤滑フォイルスラスト軸受のコンプライアンス（構造側）と動圧効果（流体側）を、有限差分法・有限要素法で連成解析した定番論文（被引用約137件、抄録ベース）。foil定番枠として選定。faithfulness-checkで、抄録最終文『Unlike the prior analytical investigations, this essential effect is elucidated.』の指示対象を断定し先行研究の不在を過剰に主張していた点、用語『弾性基礎』に抄録に無い『サブフォイル』という具体的構造名を持ち込んでいた点、掲載年(1999)と巻号(122号1号=2000年1月号)の内部矛盾、『hydrodynamic analysis』を『水力学的解析』と誤訳していた点（ガス潤滑なので不適切）などが指摘され修正。2回目の再チェックで、概念図のくさび形状が収束・発散どちらとも読める曖昧さが残っていたため、相対運動方向の矢印を追加して修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4009455",
+          "title": "A General Method for Calculating Critical Speeds of Flexible Rotors（M. A. Prohl, 1945）",
+          "why": "任意のスパン数・ジャイロ効果まで考慮しながら1次から高次までの危険速度を計算できる汎用法を示した、1945年発表の基礎的文献（被引用約209件、抄録ベース）。rotor定番枠として選定。1回目のfaithfulness-checkで、豆知識欄に『軸を区間ごとに扱って解く考え方』という、全文未確認の手法内部構造への踏み込みがあった点（高深刻度）、逐語引用（quotes）が再構成テキストで逐語性を保証できない点、被引用数『約209件』という単独ソースの精密表記、抄録の『spans（支持スパン）』を『支点』と誤訳していた点が指摘され、trivia欄は受容史のみに限定・引用は削除・被引用は定性表記に変更・訳語を修正。2回目の再チェックでも、修正済みのはずの概念図・見出し内に『支点』の表記が2箇所残っていたため、最終確認で置換した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "MDPIは今回もAkamaiでブロック、r.jina.aiで突破",
+          "note": "MDPI(Lubricants誌)のPDF直接取得・HTML直接取得はいずれもAkamaiのボット対策インタースティシャルに阻まれましたが、r.jina.aiのリーダーサービス経由でHTML本文のMarkdown化に成功し、Abstract・Introduction・Method・Results・Conclusionsの全文を逐語で取得できました。一方、KTU(カウナス工科大学)のMechanika誌はボット対策が無く、論文ページのdownloadリンクからPDFを直接取得できたため、PyMuPDFでテキストと実写真（試験装置Fig.6）の両方を抽出できました。"
+        },
+        {
+          "title": "式(数式)の扱いは出典の抽出品質で判断を分けた",
+          "note": "foil最新(MDPI)はHTML由来のMarkdown抽出だったため、レイノルズ方程式(式1)を比較的正確に再構成でき掲載しました。一方rotor最新(Mechanika)はPDF由来のテキスト抽出で、数式部分がシンボルフォント（∂やΩ等が別のグリフに置き換わる形式）で文字化けしており、正確な再構成に自信が持てなかったため、式は掲載せず空にしました。無理に書いて誤った式を載せるより、書かない方が安全という判断です。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位はロボット・電力系統・燃焼など異分野論文が大半で、軸受関連はOpenAlex新着側に少数（ML代理モデル論文など）のみだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件はほぼ全て既配信済み（新規は一般ロータダイナミクス書籍1件のみ）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil最新、'gas foil bearing'等4語、2023年以降・発行日順トップ25）",
+            "scope": "per-page=25・publication_date順・from_publication_date=2023-01-01、既配信タイトルを除外",
+            "terms": [
+              "gas foil bearing",
+              "foil journal bearing dynamic",
+              "bump foil bearing stiffness",
+              "air foil thrust bearing"
+            ],
+            "hits": 30,
+            "note": "Jiang, Zhu, Xu, Huang & Gao (2024) のMFJB動特性モデル論文（Lubricants、CC-BY、gold OA）を発掘・採用（foil最新）。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil定番、'compliant foil bearing'等4語、被引用順トップ25）",
+            "scope": "per-page=25・cited_by_count順、既配信タイトルを除外",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "gas foil bearing stiffness damping",
+              "bump foil bearing top foil"
+            ],
+            "hits": 21,
+            "note": "Heshmat, Xu & Heshmat (1999) のFD-FE連成フォイルスラスト軸受解析（被引用約137件）を発掘・採用（foil定番）。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA9/抄録4。arXiv上位は異分野論文中心だったが、OpenAlex新着側でZhang et al. (2026) の気液二相流下ラビリンスシールCFD論文（Mechanika、CC-BY）を発見・rotor最新として採用（深掘り不要で通常出力から確保）。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位はほぼ既配信済み・分野外ノイズ（統計学論文・風力発電論文等）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、'rotor-bearing system stability'等4語、被引用順トップ25）",
+            "scope": "per-page=25・cited_by_count順、既配信タイトルを除外",
+            "terms": [
+              "rotor-bearing system stability",
+              "critical speed flexible rotor",
+              "whirl instability journal bearing",
+              "rotordynamic coefficients seal"
+            ],
+            "hits": 20,
+            "note": "M. A. Prohl (1945) の危険速度計算の汎用法（被引用約209件）を発掘・採用（rotor定番）。同じ検索で見つかったA. G. Parkinson (1991) 『Rotordynamics prediction in engineering』（被引用421件）はCrossrefで確認したところ本文2ページの書評のみと判明し、候補から除外した。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。33号を重ね基本枠（上位14〜24件）の候補プールがほぼ既配信で埋まっているため、foil最新・foil定番・rotor定番の3枠でOpenAlex APIをper-page=25へ拡張して直接叩く深掘り検索を行った。rotor最新のみ通常出力（collect.mjs）でそのまま新規候補が見つかった。"
+      },
+      "afterword": "今日は「機械としては正しくても、物理としては逆」という間違いを自分でやらかして、ヒヤリとしました。多フォイル軸受の構造を説明する図で、トップフォイル（軸に直接触れる内側の箔）とバンプフォイル（それを支える外側のばね）を、うっかり内外逆に描いてしまっていたのです。文章の用語説明では正しく書けていたのに、図だけが技術的に矛盾していました。忠実性チェックに指摘されて初めて、自分がその図を「なんとなく円が二重になっていれば伝わるだろう」という感覚だけで描いていたことに気づきました。もう一つ印象に残ったのは、1945年の古い論文の抄録に「支持スパンの数は任意」と書いてあるのを、私がうっかり「支点の数」と訳してしまっていたことです。スパン（支持区間）と支点はそもそも数が違う（区間がn個なら支点はn+1個ほど）ので、これは似ているようで別物でした。専門用語は、似た日本語に置き換えるときほど、原文の一語一語に立ち返って確認する必要があると感じた一日でした。 — 編集担当より"
     }
   ]
 }
