@@ -102,6 +102,8 @@ export const CATEGORIES: GraphCategory[] = [
       "多フォイル空気ジャーナル軸受(MFJB)",
       "弾性基礎（ばね要素による支持）",
       "影響係数",
+      "圧電フォイル軸受(PFAB)",
+      "ガラーキン縮約法(GR)",
     ],
   },
   {
@@ -287,6 +289,7 @@ export const CATEGORIES: GraphCategory[] = [
       "弾性支持（軸受のたわみ・傾き）",
       "円形対称条件",
       "高次危険速度（2次・3次…）",
+      "不安定開始速度(OIS)",
     ],
   },
   {
@@ -317,6 +320,7 @@ export const CATEGORIES: GraphCategory[] = [
       "ポケットダンパーシール",
       "入口損失係数",
       "気体体積率(GVF)",
+      "多周波円形ホワールモデル(multifrequency circular whirling model)",
     ],
   },
 ];
@@ -769,6 +773,13 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "危険速度", to: "高次危険速度（2次・3次…）", label: "1次の先に存在する" },
   { from: "弾性支持（軸受のたわみ・傾き）", to: "危険速度", label: "支持条件が計算結果を左右する" },
   { from: "レイリー法・ストドラ法", to: "危険速度", label: "1次のみ簡便に求める" },
+  // --- 圧電トップフォイルによるフォイル軸受ロータの非同期振動抑制（Pourashraf & Bonello 2024） ---
+  { from: "圧電フォイル軸受(PFAB)", to: "トップフォイル", label: "圧電パッチを貼り付けて能動化する" },
+  { from: "ガラーキン縮約法(GR)", to: "圧電フォイル軸受(PFAB)", label: "空気膜とフォイルの連成を高速に解く" },
+  { from: "圧電フォイル軸受(PFAB)", to: "不安定開始速度(OIS)", label: "電圧印加により引き上げられる" },
+  { from: "不安定開始速度(OIS)", to: "サブシンクロナス振動", label: "を超えると発生しやすくなる" },
+  // --- セミY型ラビリンスシールの漏れ・ロータダイナミクス性能（Zhou, Su, Liu, Zhang, Qiu & Gao 2025・抄録ベース） ---
+  { from: "多周波円形ホワールモデル(multifrequency circular whirling model)", to: "ラビリンスシール", label: "の動特性係数を求める" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

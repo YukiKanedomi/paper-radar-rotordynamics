@@ -4080,6 +4080,147 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。33号を重ね基本枠（上位14〜24件）の候補プールがほぼ既配信で埋まっているため、foil最新・foil定番・rotor定番の3枠でOpenAlex APIをper-page=25へ拡張して直接叩く深掘り検索を行った。rotor最新のみ通常出力（collect.mjs）でそのまま新規候補が見つかった。"
       },
       "afterword": "今日は「機械としては正しくても、物理としては逆」という間違いを自分でやらかして、ヒヤリとしました。多フォイル軸受の構造を説明する図で、トップフォイル（軸に直接触れる内側の箔）とバンプフォイル（それを支える外側のばね）を、うっかり内外逆に描いてしまっていたのです。文章の用語説明では正しく書けていたのに、図だけが技術的に矛盾していました。忠実性チェックに指摘されて初めて、自分がその図を「なんとなく円が二重になっていれば伝わるだろう」という感覚だけで描いていたことに気づきました。もう一つ印象に残ったのは、1945年の古い論文の抄録に「支持スパンの数は任意」と書いてあるのを、私がうっかり「支点の数」と訳してしまっていたことです。スパン（支持区間）と支点はそもそも数が違う（区間がn個なら支点はn+1個ほど）ので、これは似ているようで別物でした。専門用語は、似た日本語に置き換えるときほど、原文の一語一語に立ち返って確認する必要があると感じた一日でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-09",
+      "status": "published",
+      "headline": "第34号：foil最新に圧電トップフォイルでフォイル軸受の振動を抑える理論研究、rotor定番に1966年NASA報告書の「オイルホイップ」体系化。4件とも2回の忠実性チェックで年号・章番号の取り違えや過剰な一般化を修正して公開",
+      "intro": "node scripts/collect.mjsの基本候補（foil/rotor各latest・classic上位十数〜24件）は34号目にしてほぼ既配信で埋まっており、新規はfoil latestに2件（うち1件はML代理モデル中心のため軸受物理主役の原則から見送り）、rotor latestに数件（うち1件は書誌が破綻気味の抄録取得不可論文）程度でした。そこでOpenAlex APIを直接、より広いキーワード（例: 'foil bearing rotordynamic model'、'seal rotordynamic coefficients experimental'、title.search:'rotordynamic'など）で叩く深掘り検索を行いました。foil最新はPourashraf & Bonello (2024, J. Sound and Vibration) の圧電トップフォイル論文をManchester大学リポジトリの著者受理稿（全文）で確保。foil定番はGuo, Feng, Liu, Lyu & Zhang (2018, Mechanical Systems and Signal Processing) を抄録ベースで採用（全文はアクセス制限のため取得不可）。rotor定番は、危険速度の約2倍でオイルホイップが起こることを整理した1966年のNASA技術報告書（Edgar J. Gunter Jr. 著、NASA SP-113）をNTRSの全文（OCR）で確保——実にロータダイナミクス分野の古典です。rotor最新は、遠心ポンプ用の新しいラビリンスシール形状（セミY型）を提案するZhou, Su, Liu, Zhang, Qiu & Gao (2025, ASME J. Eng. Gas Turbines Power) を抄録ベースで採用しました（全文PDFはASMEのボット保護で取得できず）。",
+      "picked": [
+        {
+          "id": "doi:10.1016/j.jsv.2024.118675",
+          "title": "Suppression of nonsynchronous vibration in a foil air bearing rotor system through piezoelectric actuation of the top foil（Pourashraf & Bonello, 2024）",
+          "why": "フォイル軸受のトップフォイルに圧電パッチを貼り、電圧でサブシンクロナス振動を抑制する理論研究。foil最新枠のOA全文（Manchester大学リポジトリの著者受理稿）として選定。1回目のfaithfulness-checkで、単一パッド系のkHzフラッターが起こる速度域『8krpm付近』という出典に無い数値の捏造、他論文由来の混入termの残存、+13%の比較基準の取り違え（無電圧比→正しくは受動比）、負のフィルム厚を『非物理解』と誤って解釈していた点などが指摘され修正。2回目の再チェックでも、expert階層だけ+13%の基準修正が漏れていた点、既存term『サブシンクロナス振動』『トップフォイル』への他論文由来の汚染、著者受理稿であることの明記漏れが見つかり、再修正した。"
+        },
+        {
+          "id": "doi:10.1016/j.ymssp.2018.02.005",
+          "title": "Nonlinear dynamic analysis of rigid rotor supported by gas foil bearings（Guo, Feng, Liu, Lyu & Zhang, 2018）",
+          "why": "気体膜とフォイル構造がサブシンクロナス振動に与える影響を、統合非線形モデルと試験機実測の両方で調べた研究。foil定番枠として抄録ベースで選定。faithfulness-checkで、抄録に無い『非定常レイノルズ方程式』『バンプ／トップフォイル』という具体の追加、掲載巻号の誤り（108→正しくは107）、被引用数の自己矛盾した記述などが指摘され修正。2回目の再チェックで、用語定義『低流量・低荷重で生じやすい』という本論文の高アンバランス条件と食い違う一般化が残っていたため、削除した。"
+        },
+        {
+          "id": "ntrs:19670002613",
+          "title": "Dynamic Stability of Rotor-Bearing Systems（Edgar J. Gunter, Jr., NASA SP-113, 1966）",
+          "why": "オイルホイップ・内部摩擦不安定など、ロータの自励的な振れ回りの発生条件を体系的にまとめた基礎的なNASA技術報告書。rotor定番枠としてNTRSの全文（OCR）で選定。1回目のfaithfulness-checkで、オイルホイップの発見年を1924年としていた誤り（出典では1924年=Newkirkによる非同期不安定運動の実証、1925年=Newkirk & Taylorによる油膜起因オイルホイップの最初の報告、と明確に区別）、拡張Jeffcottモデルの解析章を『第5章』としていた誤り（正しくは第4章）など、章番号・年号にまたがる重大な指摘を受け大幅修正。2回目の再チェックでは、引用の句読点の細部、『裏付けた』という言い切りの強さ、異方性軸受剛性の効果に例外条件があることなど、軽微な点が残り再修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4069144",
+          "title": "Leakage and Rotordynamic Performance of a Semi-Y Labyrinth Seal Structure for Centrifugal Pump（Zhou, Su, Liu, Zhang, Qiu & Gao, 2025）",
+          "why": "遠心ポンプ向けに、Y字型の新しいラビリンスシール構造（セミY型）を提案し、漏れとロータダイナミクス性能を多周波の円形ホワールモデルで評価した研究。rotor最新枠として抄録ベースで選定。faithfulness-checkで、抄録に無い『見通し型ラビリンスシール』という用語の創作、既存の別手法『周波数掃引ホワール軌道モデル』への安易な同一視、実験データの主体（既存か著者らか）を断定していた点などが指摘され修正。2回目の再チェックでも、シール断面が『Y字』であるという名称からの推測が複数箇所に残っていたため、断定を弱めた。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "34号目にして候補プールの枯渇がさらに進行",
+          "note": "collect.mjsの標準候補（各枠上位十数〜24件）はほぼ全て既配信で埋まっており、4本のうち3本（foil latest・foil classic・rotor classic）はOpenAlexへの直接クエリによる深掘り検索で発掘しました。rotor latestのみ、標準候補に新規のASME論文が残っていました。"
+        },
+        {
+          "title": "ASME(asmedigitalcollection.asme.org)はCloudflareでブロック",
+          "note": "rotor latestの全文PDF（ASME J. Eng. Gas Turbines Power）はCloudflareのボット対策（JSチャレンジ）に阻まれ取得できず、抄録ベースでの紹介にとどめました。OpenAlexはこの論文を技術的にはOA（bronze）と分類していますが、実際にアクセスできない以上、抄録ベースとして扱っています。"
+        },
+        {
+          "title": "候補になったが見送った論文",
+          "note": "rotor latestの候補にあった『Influence of structural deformation on the rotordynamic characteristics of shaft labyrinth seals in cryogenic liquid turbine expanders』(2026)は、OpenAlex・Crossref・Semantic Scholarのいずれからも抄録が取得できず、内容を裏付けられないため見送りました。また『Hybrid Passive-Active Magnetic Bearing Design』(figshare)はフォイル軸受ではなく磁気軸受の話で、査読誌でもないため見送りました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は流体力学・ロボット等の異分野論文が大半で、OpenAlex新着側の新規候補は2件（うち1件はBNN/Random Forest代理モデル中心のためML主役と判断し不採用）のみだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中13件が既配信済み、残る1件（Linear and Nonlinear Rotordynamics教科書, 2002）はrotorトピック向けのため不採用。下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、'foil bearing rotordynamic model'等、被引用順）",
+            "scope": "search=クエリ・sort=cited_by_count:desc・per-page=10、2015年以降",
+            "terms": [
+              "gas foil bearing thermal",
+              "foil bearing dynamic coefficients experimental",
+              "foil bearing rotordynamic model"
+            ],
+            "hits": 10,
+            "note": "3語目でGuo, Feng, Liu, Lyu & Zhang (2018) のサブシンクロナス振動論文を含む複数の新規候補（Bonello & Hassan 2017 JSV等）を発掘。foil定番として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、'foil bearing high speed rotor test'等、関連度順・2023年以降）",
+            "scope": "search=クエリ・sort=relevance_score:desc・per-page=15、2023年以降",
+            "terms": [
+              "gas foil bearing stiffness damping identification",
+              "foil bearing high speed rotor test",
+              "gas foil thrust bearing performance"
+            ],
+            "hits": 15,
+            "note": "2語目でPourashraf & Bonello (2024) の圧電トップフォイル論文を発掘。foil最新として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。標準候補にZhou, Su, Liu, Zhang, Qiu & Gao (2025) のセミY型ラビリンスシール論文がそのまま含まれており、追加検索なしでrotor latestとして採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件中9件が既配信済み、残りは分野外ノイズ（統計学・電力系統論文の「unbalance」誤ヒット等）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、title.search:'rotordynamic'等、被引用順）",
+            "scope": "filter=title.search:クエリ・sort=cited_by_count:desc・per-page=20",
+            "terms": [
+              "rotordynamic",
+              "whirl instability rotor",
+              "seal rotordynamic coefficients",
+              "rotor-bearing system stability"
+            ],
+            "hits": 20,
+            "note": "1語目でGunter (1966) NASA SP-113『Dynamic Stability of Rotor-Bearing Systems』（被引用約100件、OA）を発掘。rotor定番として採用。同じ検索で見つかった高被引用の教科書類（Childs 1993, Vance 1988等）はいずれも既に候補検討済み・書籍のため見送り。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。34号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、foil最新・foil定番・rotor定番の3枠でOpenAlex APIへの直接クエリによる深掘り検索を行った。rotor最新のみ標準候補（collect.mjs）でそのまま新規候補が見つかった。"
+      },
+      "afterword": "今日いちばん印象に残ったのは、1966年のNASA報告書を読んでいて見つかった「1924年」と「1925年」のわずか1年の違いでした。1924年にNewkirkという人が「回転数と違うリズムで軸が振れ回る」現象そのものを初めて実証したのですが、それが油膜（オイルホイップ）のせいだと特定して報告したのは、翌1925年のNewkirkとTaylorだったのです。私は最初、この2つを同じ出来事として書いてしまい、忠実性チェックで指摘されて初めて、出典がこの2つをきちんと書き分けていることに気づきました。「誰が」「何を」「いつ」実証したのかを、たった1年の差でも丁寧に区別する——60年前の研究者たちの几帳面さに、こちらの読み方の粗さを教えられた気分です。 — 編集担当より"
     }
   ]
 }
