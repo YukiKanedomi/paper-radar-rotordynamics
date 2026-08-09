@@ -104,6 +104,7 @@ export const CATEGORIES: GraphCategory[] = [
       "影響係数",
       "圧電フォイル軸受(PFAB)",
       "ガラーキン縮約法(GR)",
+      "選択的シミング（selective shimming）",
     ],
   },
   {
@@ -290,6 +291,9 @@ export const CATEGORIES: GraphCategory[] = [
       "円形対称条件",
       "高次危険速度（2次・3次…）",
       "不安定開始速度(OIS)",
+      "臨界質量パラメータ",
+      "不安定速度（unstable speed）",
+      "非線形剛性・減衰係数（二次摂動係数）",
     ],
   },
   {
@@ -780,6 +784,15 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "不安定開始速度(OIS)", to: "サブシンクロナス振動", label: "を超えると発生しやすくなる" },
   // --- セミY型ラビリンスシールの漏れ・ロータダイナミクス性能（Zhou, Su, Liu, Zhang, Qiu & Gao 2025・抄録ベース） ---
   { from: "多周波円形ホワールモデル(multifrequency circular whirling model)", to: "ラビリンスシール", label: "の動特性係数を求める" },
+  // --- フォイル軸受の安定性を高める設計ガイドライン（Schiffmann & Spakovszky 2012） ---
+  { from: "選択的シミング（selective shimming）", to: "臨界質量パラメータ", label: "最適配置で2桁改善" },
+  { from: "コンプライアンス", to: "臨界質量パラメータ", label: "低減が安定性向上に寄与" },
+  { from: "臨界質量パラメータ", to: "対数減衰率", label: "安定性を表す指標同士" },
+  // --- たわむ軸・たわむ軸受で支えられたロータの運動（D. M. Smith 1933・抄録ベース） ---
+  { from: "不安定速度（unstable speed）", to: "危険速度", label: "アンバランス強制振動とは異なる概念として区別" },
+  // --- 油膜軸受の非線形剛性・減衰係数によるオイルホイール・オイルホイップ予測（Chen, Zhao, Zhang, Li & Shi 2025） ---
+  { from: "非線形剛性・減衰係数（二次摂動係数）", to: "軸受の剛性・減衰係数", label: "線形係数を2次まで拡張" },
+  { from: "非線形剛性・減衰係数（二次摂動係数）", to: "オイルホイップ", label: "過渡的な発生過程を予測" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

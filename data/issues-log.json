@@ -4221,6 +4221,161 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。34号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、foil最新・foil定番・rotor定番の3枠でOpenAlex APIへの直接クエリによる深掘り検索を行った。rotor最新のみ標準候補（collect.mjs）でそのまま新規候補が見つかった。"
       },
       "afterword": "今日いちばん印象に残ったのは、1966年のNASA報告書を読んでいて見つかった「1924年」と「1925年」のわずか1年の違いでした。1924年にNewkirkという人が「回転数と違うリズムで軸が振れ回る」現象そのものを初めて実証したのですが、それが油膜（オイルホイップ）のせいだと特定して報告したのは、翌1925年のNewkirkとTaylorだったのです。私は最初、この2つを同じ出来事として書いてしまい、忠実性チェックで指摘されて初めて、出典がこの2つをきちんと書き分けていることに気づきました。「誰が」「何を」「いつ」実証したのかを、たった1年の差でも丁寧に区別する——60年前の研究者たちの几帳面さに、こちらの読み方の粗さを教えられた気分です。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-10",
+      "status": "published",
+      "headline": "第35号：foil定番にフォイル軸受の選択的シミング設計指針（Schiffmann & Spakovszky 2012 OA全文）、rotor最新に油膜軸受の非線形係数でオイルホイール・ホイップを予測する研究（Chen et al 2025 OA全文）。4件とも忠実性チェックで数値の反転・断定の行き過ぎ等を修正し、途中で見つかった2件の重複候補（Scharrer 1989・He, Feng & Ren 2026）は代替候補に差し替えて公開。",
+      "intro": "node scripts/collect.mjsの標準候補は35号目にしてほぼ全て既配信で埋まっており、新規はfoil最新・rotor最新にわずかに残る程度でした。そこでOpenAlex APIへ直接、より広いキーワード（\"foil bearing whirl instability\"、\"foil bearing rotor stability experimental\"、\"critical speed flexible rotor\"、\"rotor bearing whirl instability\"等）で問い合わせる深掘り検索を行いました。foil定番はSchiffmann & Spakovszky (2012, J. Tribology) の選択的シミング論文をMIT DSpaceの出版社最終版PDFで全文確保。foil最新はXu, Shao, Yang & An (2024, Proc. IMechE Part C) のガスフォイル軸受ロータダイナミクス論文を抄録ベースで採用。rotor定番は当初Scharrer (1989) の段付きラビリンスシール論文を選んでいましたが、用語集の表記統一作業中にこれが第25号（2026-07-21配信）で既に紹介済みだったと判明し、D. M. Smith (1933, Proc. R. Soc. A) の『危険速度』と『不安定速度』を定義し分けた基礎文献に差し替えました。rotor最新も同様に、当初のHe, Feng & Ren (2026) が第29号（2026-07-06配信）で既配信と判明し、Chen, Zhao, Zhang, Li & Shi (2025, MDPI Machines) の油膜軸受非線形係数論文に差し替えてOA全文で確保しました。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.4007759",
+          "title": "Foil Bearing Design Guidelines for Improved Stability（Schiffmann & Spakovszky, 2012）",
+          "why": "フォイル軸受支持ロータの亜同期振動を、選択的シミングという静的な気体膜圧力分布の制御で抑える設計指針を示した基礎文献。foil定番枠のOA全文（MIT DSpace所蔵の出版社最終版PDF）として選定。1回目のfaithfulness-checkで、最適化の目的関数の一部の取り違え（『静的偏心の最小化』は誤りで、実際は平均正規化シム厚さの最小化）、『実機での実験検証は行われていない』という記述が原文（既発表実験データでの検証あり）と矛盾していた点、遺伝的アルゴリズムの『世代数5000』が実際は『評価回数5000』だった点などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1177/09544062231222974",
+          "title": "Numerical investigation on the rotordynamics of a high-speed air compressor supported by gas foil bearings（Xu, Shao, Yang & An, 2024）",
+          "why": "水素燃料電池用の高速空気圧縮機ロータを、ガスフォイル軸受のロータダイナミクスとしてリッカチ伝達マトリクス法で解析した研究。foil最新枠として抄録ベースで選定。faithfulness-checkで、抄録にない『燃料電池車』という用途限定、著者自身の主張（新規性やモデル精度）を客観的事実として断定していた箇所などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1098/rspa.1933.0158",
+          "title": "The motion of a rotor carried by a flexible shaft in flexible bearings（D. M. Smith, 1933）",
+          "why": "たわむ軸・たわむ軸受で支えられたロータの運動を解析し、『危険速度』と『不安定速度』を定義し分けた、ロータダイナミクス初期の基礎文献。rotor定番枠として抄録ベースで選定（OpenAlex上はOA表示だが、Royal Societyのサイトがボット対策で全文取得できなかったため抄録ベースとして扱った）。faithfulness-checkで、『最初に区別した』という出典にない先取権の主張、『自励』という出典にない機構の断定（いずれもhigh severity）などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/machines13060444",
+          "title": "Analytical and Experimental Investigation of Nonlinear Dynamic Characteristics of Hydrodynamic Bearings for Oil Film Instability Detection（Chen, Zhao, Zhang, Li & Shi, 2025）",
+          "why": "油膜軸受の力を偏心量まわりで2次まで展開し、非線形の剛性・減衰係数でオイルホイール・オイルホイップの発生を予測した研究。rotor最新枠のOA全文として選定。faithfulness-checkで、原文の『ほぼ数千倍(almost thousands of times)』という表現を『1000倍以上』と数値を反転・特定しすぎていた点（hookや数値カードなど11箇所に伝播）、概念図の線形係数カーブの向きが原文の傾向（偏心率0.5付近でゼロに近づく）と逆だった点が指摘され、修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "候補プールの枯渇、35号目も継続",
+          "note": "collect.mjsの標準候補は35号目にしてほぼ全て既配信で埋まっており、4本中3本（foil定番・rotor定番・rotor最新）はOpenAlexへの直接クエリによる深掘り検索で発掘した。"
+        },
+        {
+          "title": "『OA』のはずが読めない——MIT・EPFL・Royal SocietyのWAF",
+          "note": "OpenAlex上はOA(oa:true)と分類されていても、実際にはCloudflare/AWSのボット対策(CAPTCHA)に阻まれて全文取得できないケースが複数あった。MIT DSpaceとMDPIはr.jina.ai経由のプロキシで突破できたが、EPFL InfoscienceとRoyal Society Publishingは最後まで取得できず、Smith(1933)は抄録ベースとして扱った。"
+        },
+        {
+          "title": "重複の再発見",
+          "note": "候補選定時の重複チェックが不十分で、いったん選んだScharrer(1989)とHe, Feng & Ren(2026)が実は既配信済みだったことに、用語集の表記統一作業で気づいた。両方とも代替候補に差し替えた。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 24,
+            "note": "OA19/抄録5。ほぼ全てが既配信または分野外ノイズで、新規のon-topic候補はごくわずかだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中13件が既配信済みで、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、is_oa:true・被引用順）",
+            "scope": "filter=title_and_abstract.search:クエリ,open_access.is_oa:true・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing rotordynamic",
+              "foil journal bearing stiffness damping",
+              "foil bearing whirl instability",
+              "foil thrust bearing load capacity"
+            ],
+            "hits": 15,
+            "note": "3語目でSchiffmann & Spakovszky (2012) の選択的シミング論文（被引用約48件、OA）を発掘。foil定番として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、日付順・2024年以降）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=publication_date:desc・from_publication_date:2024-01-01",
+            "terms": [
+              "gas foil bearing dynamic coefficients",
+              "foil bearing rotor stability experimental",
+              "foil bearing nonlinear dynamic rotor",
+              "gas foil journal bearing performance test"
+            ],
+            "hits": 11,
+            "note": "2語目でXu, Shao, Yang & An (2024) のガスフォイル軸受ロータダイナミクス論文（抄録ベース）を発掘。foil最新として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA18/抄録6。ほぼ全てが既配信または分野外ノイズ（電力系統・波浪などの誤ヒット）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件中9件が既配信済みで、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、is_oa:true・被引用順）",
+            "scope": "filter=title_and_abstract.search:クエリ,open_access.is_oa:true・sort=cited_by_count:desc",
+            "terms": [
+              "rotor bearing whirl instability",
+              "seal rotordynamic force coefficients",
+              "critical speed flexible rotor",
+              "oil whip journal bearing stability"
+            ],
+            "hits": 45,
+            "note": "3語目でD. M. Smith (1933) の論文（被引用約125件、OA表示だが全文は取得不可）を発掘。1語目でScharrer (1989) も見つけたが、後に既配信と判明し不採用。rotor定番としてSmithを採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、is_oa:true・日付順・2024年以降）",
+            "scope": "filter=title_and_abstract.search:クエリ,open_access.is_oa:true・sort=publication_date:desc・from_publication_date:2024-01-01",
+            "terms": [
+              "rotor bearing whirl instability",
+              "critical speed flexible rotor",
+              "seal rotordynamic coefficients",
+              "subsynchronous vibration rotor bearing"
+            ],
+            "hits": 39,
+            "note": "1語目でChen, Zhao, Zhang, Li & Shi (2025, MDPI Machines) の油膜軸受非線形係数論文（OA）を発掘。rotor最新として採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。35号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠中3枠（foil定番・rotor定番・rotor最新）でOpenAlex APIへの直接クエリによる深掘り検索を行った。"
+      },
+      "afterword": "今日は、「OA(オープンアクセス)」という表示を鵜呑みにしてはいけないんだ、と痛感した日でした。1933年のD. M. Smithの論文は、データベース上では「diamond OA」——つまり無料で読めるはずの分類がついていたのですが、実際にRoyal Societyのサイトを開こうとすると、ロボットでないことを証明する認証に阻まれて、結局本文は一文字も読めませんでした。「OAですよ」という札と、「実際に読める」はイコールじゃないんですね。今回は正直に「抄録ベース」として紹介することにしましたが、これからも表示を鵜呑みにせず、実際に読めたかどうかを確かめようと思います。 — 編集担当より"
     }
   ]
 }
