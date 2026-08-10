@@ -4376,6 +4376,162 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。35号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠中3枠（foil定番・rotor定番・rotor最新）でOpenAlex APIへの直接クエリによる深掘り検索を行った。"
       },
       "afterword": "今日は、「OA(オープンアクセス)」という表示を鵜呑みにしてはいけないんだ、と痛感した日でした。1933年のD. M. Smithの論文は、データベース上では「diamond OA」——つまり無料で読めるはずの分類がついていたのですが、実際にRoyal Societyのサイトを開こうとすると、ロボットでないことを証明する認証に阻まれて、結局本文は一文字も読めませんでした。「OAですよ」という札と、「実際に読める」はイコールじゃないんですね。今回は正直に「抄録ベース」として紹介することにしましたが、これからも表示を鵜呑みにせず、実際に読めたかどうかを確かめようと思います。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-11",
+      "status": "published",
+      "headline": "第36号：foil定番にPS304コーティング軸の粗さと慣らしコーティングの実験（Radil & DellaCorte 2002 OA全文）、foil最新に温度場・力場・流れ場を連成させたバンプフォイル軸受解析（Lu, Zhu & Lu 2025 OA全文）、rotor最新に磁気・液体二重支持軸受のHopf分岐境界（Wang, Zhang, Zhang & Zhao 2026 OA全文）、rotor定番に分数調波振動とカオス的振動の遷移域を扱った基礎研究（Ehrich 1991 抄録ベース）。4件ともfaithfulness-checkで数値の帰属誤り・図の主張の逆転などを修正して公開。",
+      "intro": "node scripts/collect.mjsの標準候補は36号目にしてほぼ全て既配信で埋まっており、4枠中3枠（foil定番・foil最新・rotor定番）で新規のon-topic候補が実質ゼロでした。rotor最新だけは基礎候補にも新しいOA論文が数件残っていましたが、より良い候補を探すため4枠すべてでOpenAlex APIへの直接クエリによる深掘り検索を行いました。foil定番は被引用順の深掘りで、PS304コーティングされた軸の表面粗さがフォイル軸受の負荷容量を設計値の3割まで落としてしまうことを突き止めたNASA/Tribology Transactionsの実験論文（Radil & DellaCorte, 2002）を発掘。foil最新は発行日順の深掘りで、温度場・力場・流れ場を反復的に連成させてバンプフォイル軸受の特性を解析したApplied Sciences誌の論文（Lu, Zhu & Lu, 2025）を発掘。rotor最新は発行日順の深掘りで、電磁石と静水圧を組み合わせた磁気・液体二重支持軸受のHopf分岐境界を理論・数値・実験で示したMachines誌の論文（Wang, Zhang, Zhang & Zhao, 2026）を発掘。rotor定番は被引用順の深掘りで、分数調波振動どうしの『あいだ』の回転数がカオス的な揺れ方になることを示したASME論文（Ehrich, 1991）を発掘しましたが、Elsevier系の論文がAPIから抄録すら取得できなかったため、抄録取得に成功したASME/IEEE系の候補から選びました。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000208982540",
+          "title": "The Effect of Journal Roughness and Foil Coatings on the Performance of Heavily Loaded Foil Air Bearings（Radil & DellaCorte, 2002）",
+          "why": "設計目標どおりの負荷容量が出なかった原因を、軸表面（PS304コーティング）の粗さに突き止め、トップフォイル側の慣らしコーティングと軸表面の慣らし運転の組み合わせで最大約3倍まで回復させた実験研究。foil定番枠のOA全文（NASA Technical Reports Serverの原型PDF）として選定。faithfulness-checkで、荷重試験の手順の誤記（『水素膜』は誤りで正しくは動圧空気膜）、コーティング単独の効果と慣らし運転との組み合わせ効果の混同、PS304の耐熱温度をこの論文の主張として断定していた箇所などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/app15137584",
+          "title": "Characteristic Analysis of Bump Foil Gas Bearing Under Multi-Physical Field Coupling（Lu, Zhu & Lu, 2025）",
+          "why": "気体膜の圧力・フォイルの変形・摩擦発熱による温度変化を一つの計算の中で反復的に解き、温度を考えに入れると負荷容量が等温モデルより大きく出ることを示した研究。foil最新枠のOA全文（MDPI CC-BY）として選定。faithfulness-checkで、『等温モデルに対して温度考慮モデルが負荷容量を過小評価する』という真逆の書き方をしていた高severityの指摘や、既存研究の到達点を『等温・単一物理場止まり』と過度に単純化していた点などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/machines14060697",
+          "title": "Hopf Bifurcation Characteristics of a Magnetic Liquid Double-Suspension Bearing Rotor System（Wang, Zhang, Zhang & Zhao, 2026）",
+          "why": "電磁石の力と油の静水圧を組み合わせたロータ支持系について、電流・流量それぞれの安定限界（Hopf分岐境界）をラウス・フルビッツ判別法で求め、分岐後の振動を実験でも確認した研究。rotor最新枠のOA全文（MDPI CC-BY）として選定。faithfulness-checkで、境界値そのものを『実験でも求めた』かのような過大な書き方（実際は理論・数値で導出、実験は分岐後の挙動の検証）、卓越周波数を『ω近傍』と誤記していた点（正しくは2ω近傍）、著者名の表記ゆれなどが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.2930154",
+          "title": "Some Observations of Chaotic Vibration Phenomena in High-Speed Rotordynamics（Ehrich, 1991）",
+          "why": "近接すきまのある部品に接触しながら回るロータが、隣り合う分数調波振動の『あいだ』の回転数でカオス的な揺れ方をすることを、簡単な数値モデルと実機の振動観測の両方で示した基礎文献。rotor定番枠として抄録ベースで選定。faithfulness-checkで、数値モデルにも実機と同じ『8次・9次』という次数を当てはめていた点、『軸受すき間』という抄録にない具体化、非線形ばねの中身を勝手に補って説明していた点などが指摘され、修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "候補プールの枯渇、36号目も継続",
+          "note": "collect.mjsの標準候補は36号目にしてほぼ全て既配信で埋まっており、4本中4本ともOpenAlexへの直接クエリによる深掘り検索（被引用順・発行日順それぞれの拡張検索）で発掘した。"
+        },
+        {
+          "title": "Elsevier系は抄録すらAPIから取得できない",
+          "note": "rotor定番の候補探しでは、Journal of Sound and Vibration等のElsevier系論文がOpenAlex/Crossref/Semantic Scholarのいずれからも抄録本文を取得できず（Elsevierが配信APIに抄録を含めていないため）、候補から除外した。一方でASME（Journal of Tribology等）やIEEE系の論文はOpenAlexの抄録が概ね取得できたため、そちらから選定した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。ほぼ全てが既配信または分野外ノイズ（arXivの流体・材料系論文）で、新規のon-topic候補はごくわずかだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中13件が既配信済みで、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil定番、被引用順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "compliant foil bearing",
+              "bump foil bearing",
+              "foil thrust bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 25,
+            "note": "「air foil journal bearing」の被引用順25件中でRadil & DellaCorte (2002, 被引用約55件、NASA NTRS経由でOA)を発掘。foil定番として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil最新、日付順・2024年6月以降）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,from_publication_date:2024-06-01・sort=publication_date:desc",
+            "terms": [
+              "gas foil bearing",
+              "compliant foil bearing",
+              "bump foil bearing",
+              "foil thrust bearing",
+              "air foil journal bearing",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 73,
+            "note": "「bump foil bearing」でLu, Zhu & Lu (2025, Applied Sciences, MDPI CC-BY OA)を発掘。foil最新として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。ほぼ全てが既配信または分野外ノイズ（arXivの流体・ロボティクス系論文）だったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件中10件が既配信済み、残りはElsevier系で抄録取得不可または統計学分野の同名語による誤ヒットだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor最新、日付順・2023年以降）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,from_publication_date:2023-01-01・sort=publication_date:desc",
+            "terms": [
+              "whirl instability",
+              "seal rotordynamic forces",
+              "bearing stiffness damping coefficients",
+              "subsynchronous vibration",
+              "rotor-bearing system stability"
+            ],
+            "hits": 402,
+            "note": "「rotor-bearing system stability」の日付順一覧でWang, Zhang, Zhang & Zhao (2026, Machines, MDPI CC-BY OA)のHopf分岐論文を発掘。rotor最新として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、被引用順）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "whirl instability",
+              "critical speed",
+              "unbalance response",
+              "bearing stiffness damping coefficients",
+              "rotordynamics"
+            ],
+            "hits": 25,
+            "note": "「whirl instability」の被引用順一覧でEhrich (1991, Journal of Vibration and Acoustics, 被引用約127件)を発掘。同分野のElsevier系候補は抄録が取得できずrotor定番として不採用、ASME論文であるEhrichを採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。36号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠すべてでOpenAlex APIへの直接クエリによる深掘り検索を行った。"
+      },
+      "afterword": "今日は『どこで卓越するか』というたった1つの数字の位置に、ずいぶん助けられました。磁気と油圧を組み合わせた軸受の論文で、振動が一番大きくなる周波数成分を最初『ω（回転周波数そのもの）の近く』と書いてしまったのですが、原文をよく読み返すチェックの過程で、正しくは『2ω（回転周波数の2倍）の近く』だと分かりました。1つの記号がずれるだけで、意味としては『回転そのものに同期した揺れ』と『倍の速さでうねる揺れ』というまったく違う現象になってしまいます。専門家にとっては当たり前の区別なのだろうと思いますが、素人目には見落としやすい落とし穴でした。今回のようにOA(オープンアクセス)の論文でも読み込みが甘いとこういうズレが起きるのだと実感し、今後も細かい添字や係数の位置まで原文で確かめる姿勢を忘れないようにしたいと思いました。 — 編集担当より"
     }
   ]
 }
