@@ -4532,6 +4532,165 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。36号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠すべてでOpenAlex APIへの直接クエリによる深掘り検索を行った。"
       },
       "afterword": "今日は『どこで卓越するか』というたった1つの数字の位置に、ずいぶん助けられました。磁気と油圧を組み合わせた軸受の論文で、振動が一番大きくなる周波数成分を最初『ω（回転周波数そのもの）の近く』と書いてしまったのですが、原文をよく読み返すチェックの過程で、正しくは『2ω（回転周波数の2倍）の近く』だと分かりました。1つの記号がずれるだけで、意味としては『回転そのものに同期した揺れ』と『倍の速さでうねる揺れ』というまったく違う現象になってしまいます。専門家にとっては当たり前の区別なのだろうと思いますが、素人目には見落としやすい落とし穴でした。今回のようにOA(オープンアクセス)の論文でも読み込みが甘いとこういうズレが起きるのだと実感し、今後も細かい添字や係数の位置まで原文で確かめる姿勢を忘れないようにしたいと思いました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-13",
+      "status": "published",
+      "headline": "第37号：foil定番にフォイル軸受の3次元温度場を予測する熱流体力学モデル（Peng & Khonsari 2006 抄録ベース）、foil最新に線形化なしで求める時間領域同定法によるフォイル軸受の剛性・減衰係数計算（Feng, Liu, Li & Zhang 2023 OA全文）、rotor定番に予旋回が回転数以上に効く3種の環状ガスシールのクロスオーバー周波数比較（Ertas, Delgado & Vannini 2012 抄録ベース）、rotor最新に再使用ロケットターボポンプ向け液体メタン潤滑ハイブリッドティルティングパッド軸受の性能予測（Kim & Kim 2026 OA全文）。4件ともfaithfulness-checkで最大2ラウンドの指摘・修正を経て公開。",
+      "intro": "37号目を数え、node scripts/collect.mjsの基本候補（最新枠・定番枠）は、foil/rotorとも大半が既配信済みか分野外ノイズで埋まっていました（foil最新24件中、on-topicな新規候補は実質1〜2件のみ）。そこでOpenAlexへの直接クエリ（被引用順・発行日順、引用符付きフレーズ検索）による深掘りを4枠すべてで実施。深掘りで見つけたOA候補のうち、ScienceDirect（Bonello & Pham 2014）とHAL（Villa, Sinou & Thouverez 2006）はいずれも正規のオープンアクセスながら、ボット対策（CAPTCHA／Anubisのproof-of-work）に阻まれて全文取得ができませんでした。同じCC-BYでもMDPI（Lubricants・Materials）の論文は問題なく読めたため、そちらから改めてfoil最新・rotor最新のOA全文候補を選び直しました。抄録ベース2件（foil定番・rotor定番）は、深掘り検索で見つけた候補のうち抄録が取得できたものから選定しています。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.2197526",
+          "title": "A Thermohydrodynamic Analysis of Foil Journal Bearings（Peng & Khonsari, 2006）",
+          "why": "空気の圧縮性・粘度の温度依存性・フォイル面のコンプライアンスをあわせて考慮し、フォイルジャーナル軸受内の3次元温度場を予測する熱流体力学モデルを提示した研究。foil定番枠の抄録ベースとして選定。faithfulness-checkで、抄録に無い『これまで難しかった』という課題認識や『より正確に』という比較優位の表現を出典帰属付きで書いていた点、被引用数の精度表現などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/lubricants11070294",
+          "title": "Calculation of Dynamic Coefficients of Air Foil Journal Bearings Using Time-Domain Identification（Feng, Liu, Li & Zhang, 2023）",
+          "why": "軸受の剛性・減衰係数を求める際に必要だった複雑な線形化を避け、時間ごとのシミュレーションから直接係数を同定する新手法を提案し、フォイルの軸方向変形の仮定（1D/2D）による係数の違いが、文献で知られていた不安定開始速度の差に説明を与えることを示した研究。foil最新枠のOA全文（MDPI Lubricants、CC-BY）として選定。faithfulness-checkで、フィッティング誤差(NRMSE)と文献との定性的な一致を数値的に混同していた高severityの指摘、比較相手を『2Dモデル・周波数域摂動法』と誤って特定していた点、架空の『今後の課題』を書いていた点などが2ラウンドにわたり指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4004537",
+          "title": "Rotordynamic Force Coefficients for Three Types of Annular Gas Seals With Inlet Preswirl and High Differential Pressure Ratio（Ertas, Delgado & Vannini, 2012）",
+          "why": "ラビリンス・ハニカム・ダンピングシールという3種類の環状ガスシールを同一条件で実測比較し、回転速度よりも入口予旋回の強さの方が有効減衰・クロスオーバー周波数への影響が大きいことを示した研究。rotor定番枠の抄録ベースとして選定。faithfulness-checkで、概念図がFPDSのクロスオーバー周波数が最小という抄録の結論と逆に描かれていた高severityの指摘（3本の曲線比較を1本の模式図に描き直して解消）、抄録に無い研究動機を出典帰属付きで書いていた点などが指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/ma19112285",
+          "title": "Predictions of Liquid Methane (LCH4) Lubricated Hybrid Tilting Pad Journal Bearings for Reusable Rocket Turbopumps（Kim & Kim, 2026）",
+          "why": "NISTの物性データから液体メタンの密度・粘度を多項式近似し、静水圧・動圧を組み合わせたハイブリッドティルティングパッド軸受の性能を予測。供給圧力比を1.5から2に上げる区間の改善が大きく、それ以降は頭打ちになるという設計上の知見を示した研究。rotor最新枠のOA全文（MDPI Materials、CC-BY）として選定。faithfulness-checkで、原文引用の逐語不一致（'This limitation'→'These limitations'）という高severityの指摘、本文に無い『実験的検証は今後の課題』という記述、titleJaがhookの複製になっていた点などが2ラウンドにわたり指摘され、修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "候補プールの枯渇、37号目も継続",
+          "note": "collect.mjsの基本候補はfoil・rotorとも大半が既配信済みで、4本中4本ともOpenAlexへの直接クエリによる深掘り検索（被引用順・発行日順・引用符付きフレーズ検索）で発掘した。"
+        },
+        {
+          "title": "『オープンアクセス』でも全文が読めるとは限らない",
+          "note": "深掘りで見つけたBonello & Pham (2014, Journal of Sound and Vibration)とVilla, Sinou & Thouverez (2006, Communications in Nonlinear Science and Numerical Simulation)はいずれもOpenAlex上でOA（CC-BY等）と確認できたが、実際の取得はScienceDirectのCAPTCHAとHALのAnubis（ボット対策のproof-of-work）に阻まれて失敗。今号のOA全文2件はいずれもMDPI（Lubricants・Materials）へ切り替えて確保した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。ほぼ全てが既配信または分野外ノイズ（arXivの流体・制御・航空系論文）で、on-topicな新規候補は実質1〜2件のみだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件のほぼ全てが既配信済みだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、被引用順・per-page25×7語）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた上位30件から、Peng & Khonsari (2006, J. Tribology, 被引用約120件)の熱流体力学モデルをfoil定番として採用。同リストの他候補（San Andrés & Kim 2008等）は抄録が取得できず不採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（foil、CC-BY限定・日付順）",
+            "scope": "filter=title.search:クエリ,type:article,best_oa_location.license:cc-by・sort=publication_date:desc",
+            "terms": [
+              "gas foil bearing",
+              "foil journal bearing",
+              "bump foil bearing structure",
+              "foil bearing rotor dynamic"
+            ],
+            "hits": 20,
+            "note": "Bonello & Pham (2014, JSV)がCC-BYと判明したが本文取得はScienceDirectのCAPTCHAで失敗。代わりにMDPI Lubricantsから Feng, Liu, Li & Zhang (2023) の時間領域同定法の論文を発掘し、foil最新として採用（全文取得・図1の実図取得に成功）。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。既配信または分野外ノイズ（arXivの流体力学・水波論文）が中心で、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。多くが既配信済みか、統計学・電力系統など同名語による分野外ヒットだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、フレーズ検索・被引用順・per-page15×7語）",
+            "scope": "filter=title.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "rotor bearing stability",
+              "whirl instability rotor",
+              "seal rotordynamic coefficients",
+              "critical speed flexible rotor",
+              "unbalance response rotor bearing",
+              "annular seal dynamic coefficients",
+              "tilting pad bearing rotordynamic"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた上位30件から、Ertas, Delgado & Vannini (2012, ASME JEGTP, 被引用約100件)の3種シール比較をrotor定番として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（rotor、CC-BY限定・日付順）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,best_oa_location.license:cc-by・sort=publication_date:desc",
+            "terms": [
+              "rotor bearing system stability",
+              "whirl instability rotor",
+              "annular seal rotordynamic coefficients",
+              "critical speed flexible rotor",
+              "tilting pad journal bearing dynamic",
+              "unbalance response rotor bearing"
+            ],
+            "hits": 25,
+            "note": "Villa, Sinou & Thouverez (2006, CNSNS)がHAL経由でOAと判明したが、HALのボット対策(Anubis)で全文取得に失敗。代わりにMDPI Materialsから Kim & Kim (2026) の液体メタン潤滑ハイブリッドTPJB論文を発掘し、rotor最新として採用（全文取得・図1の実図取得に成功）。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。37号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠すべてでOpenAlex APIへの直接クエリによる深掘り検索を行った。"
+      },
+      "afterword": "今日は『オープンアクセス』という言葉の中身について考えさせられました。深掘り検索で見つけたJournal of Sound and VibrationとCommunications in Nonlinear Science and Numerical Simulationの2本は、どちらもデータベース上は正真正銘のOA（CC-BYや同等のライセンス）だったのですが、実際にPDFを取りに行くとScienceDirectはロボット判定のクイズ画面、HALの方は『Anubis』という名前のプルーフ・オブ・ワーク型のボット対策に阻まれて、結局どちらも読めませんでした。一方で同じCC-BYでもMDPIの論文はすんなり本文を読めて、図もそのまま使わせてもらえました。『OAだから読める』とは限らず、『どこに置かれているか』で読みやすさがずいぶん変わるのだと、今回初めて実感しました。 — 編集担当より"
     }
   ]
 }
