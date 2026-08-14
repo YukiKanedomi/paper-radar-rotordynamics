@@ -4691,6 +4691,141 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。37号を重ね基本枠の候補プールがほぼ既配信で埋まっているため、4枠すべてでOpenAlex APIへの直接クエリによる深掘り検索を行った。"
       },
       "afterword": "今日は『オープンアクセス』という言葉の中身について考えさせられました。深掘り検索で見つけたJournal of Sound and VibrationとCommunications in Nonlinear Science and Numerical Simulationの2本は、どちらもデータベース上は正真正銘のOA（CC-BYや同等のライセンス）だったのですが、実際にPDFを取りに行くとScienceDirectはロボット判定のクイズ画面、HALの方は『Anubis』という名前のプルーフ・オブ・ワーク型のボット対策に阻まれて、結局どちらも読めませんでした。一方で同じCC-BYでもMDPIの論文はすんなり本文を読めて、図もそのまま使わせてもらえました。『OAだから読める』とは限らず、『どこに置かれているか』で読みやすさがずいぶん変わるのだと、今回初めて実感しました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-14",
+      "status": "published",
+      "headline": "第38号：foil定番に重荷重下ガスフォイル軸受の静剛性・動特性モデル（Kim & San Andrés 2008 抄録ベース）、foil最新にガスフォイル軸受安定性のAI代理モデル（de Moraes, Sarrazin, Liebich & Fiori de Castro 2026 OA全文）、rotor定番に軸受反力を『インピーダンス』で捉える古典的定式化（Childs, Moes & van Leeuwen 1977 抄録ベース）、rotor最新に溝付きゴムライナー軸受の動的安定性（Zare Mehrjardi, Golzar Shahri & Dashti Rahmatabadi 2026 OA全文）。4件ともfaithfulness-checkで最大2ラウンドの指摘・修正を経て公開。",
+      "intro": "38号目。foil最新・rotor最新は通常のcollect.mjs候補（arXiv＋OpenAlex新着）からそのままon-topicな新規候補を確保できましたが、foil定番・rotor定番はcollect.mjsの基本候補が大半既配信済みか分野外ノイズ（arXivの流体・医療・電力系統論文等）で埋まっていたため、OpenAlexへの直接クエリ（被引用順・フレーズ検索）による深掘りで発掘しました。深掘りで見つけたrotor定番のChilds, Moes & van Leeuwen (1977)は、OpenAlex上でOA(green)と判定され全文PDFも入手できましたが、1977年のスキャンOCRが大きく崩れており本文を出典として使えなかったため、抄録ベースとして扱っています。",
+      "picked": [
+        {
+          "id": "doi:10.1115/1.2770494",
+          "title": "Heavily Loaded Gas Foil Bearings: A Model Anchored to Test Data（Kim & San Andrés, 2008）",
+          "why": "重荷重下のガスフォイル軸受で、軸中心が公称すきまを超える偏心に達すると静剛性が回転速度によらず一定値（フォイル構造剛性）に近づくという挙動を、レイノルズ方程式とフォイル弾性基礎モデルの連成で予測した研究。foil定番枠の抄録ベースとして選定。faithfulness-checkで、掲載誌名の誤り（Journal of Tribology→正しくはJournal of Engineering for Gas Turbines and Power）、抄録にない摩擦発生界面の特定、抄録にない小荷重域の推論への誤ヘッジなどが指摘され、2ラウンドで修正した。"
+        },
+        {
+          "id": "doi:10.1007/s40430-026-06500-9",
+          "title": "Probabilistic surrogate modeling for gas foil bearing stability（de Moraes, Sarrazin, Liebich & Fiori de Castro, 2026）",
+          "why": "製造誤差による軸受すきま形状のばらつきがガスフォイル軸受の安定性に与える影響を、25,326通りの物理シミュレーションで生成したデータからベイズニューラルネットワークとランダムフォレストで高速予測した研究。foil最新枠のOA全文（Springer、CC-BY）として選定。ML手法が主だが、物理的な安定性の仕組み（レイノルズ方程式・固有値の実部・くさび領域の感度）を中心に据えて要約。faithfulness-checkで、破損確率の推定手法の誤帰属（95%信頼区間→PDFのしきい値超過面積）、『トップフォイル』への固有名の過剰特定、原文自身が推論手法(Monte Carlo Dropout/NUTS)を併記している点への注記漏れなどが2ラウンドにわたり指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.3453021",
+          "title": "Journal Bearing Impedance Descriptions for Rotordynamic Applications（Childs, Moes & van Leeuwen, 1977）",
+          "why": "軸受反力を『インピーダンスベクトル』として定式化する表現方法を提案し、短軸受・長軸受の近似解に直接この記述を与え、既存のモビリティ表現との変換関係を導いた基礎的な論文。rotor定番枠の抄録ベースとして選定。faithfulness-checkで、抄録にない『電気回路由来』という説明を出典に誤帰属していた高severityの指摘、被引用数（Crossref65／OpenAlex87／Semantic Scholar98）の乖離を『概数』と言いつつ精密値で示していた自己矛盾などが2ラウンドにわたり指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/mca31040161",
+          "title": "Dynamic Stability Analysis of Grooved Rubber Hydrodynamic Journal Bearings Considering Elastic Deformation of the Liner（Zare Mehrjardi, Golzar Shahri & Dashti Rahmatabadi, 2026）",
+          "why": "水潤滑にも使われる溝付きゴムライナージャーナル軸受について、ライナーの実効剛性と溝本数（6・9・12）が静的性能と動的安定性（臨界質量）に与える影響を、レイノルズ方程式とウィンクラー弾性基礎モデルの連成有限要素解析で比較した研究。rotor最新枠のOA全文（MDPI、CC-BY）として選定。faithfulness-checkで、『圧力はやや落ちるだけなのに臨界質量ははっきり下がる』という誤った対比、『負荷容量は溝が多い方が有利』という出典と逆向きの主張などhigh severityの指摘を含め、2ラウンドにわたり修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "候補プールは半分が既配信、半分は正常に確保",
+          "note": "foil最新・rotor最新は通常のcollect.mjs候補（arXiv＋OpenAlex新着）からそのまま採用できたが、foil定番・rotor定番はcollect.mjsの基本候補が既配信済みや分野外ノイズで埋まっていたため、OpenAlex直接クエリによる深掘り検索で発掘した。"
+        },
+        {
+          "title": "1977年の論文はOA判定でも読めないことがある",
+          "note": "rotor定番のChilds, Moes & van Leeuwen (1977)はOpenAlex上でOA(green)と判定され、TU Eindhovenのリポジトリから実際にPDFも入手できたが、スキャンされた紙面のOCRが大きく崩れておりテキストとして信頼できなかった。全文が『取得できる』ことと『出典として使える』ことは別問題だと再確認し、抄録ベースとして扱った。"
+        },
+        {
+          "title": "MDPIはAkamai対策が必要",
+          "note": "rotor最新のMDPI論文はdoi.org経由の直接アクセスがAccess Deniedで弾かれたが、r.jina.aiのリーダープロキシ経由で本文・図の直接URLとも正常に取得できた。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。ほぼ全てが既配信または分野外ノイズ（arXivの熱流体・医療・ドローン等）だったが、Probabilistic surrogate modeling for gas foil bearing stability（de Moraes et al. 2026, OA）が新規on-topic候補として見つかり、foil最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位のほぼ全てが既配信済みだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、被引用順・per-page25×7語）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた上位30件から、Kim & San Andrés (2008, ASME J. Eng. Gas Turbines Power, 被引用約94件)の重荷重ガスフォイル軸受モデルをfoil定番として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。Dynamic Stability Analysis of Grooved Rubber Hydrodynamic Journal Bearings（Zare Mehrjardi et al. 2026, MDPI, OA）が新規on-topic候補として見つかり、rotor最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。統計学・電力系統など同名語（unbalance, subsynchronous）による分野外ヒットが多く、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（rotor、フレーズ検索・CC-BY限定・被引用順・per-page15×5語）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,open_access.is_oa:true・sort=cited_by_count:desc",
+            "terms": [
+              "rotordynamic instability journal bearing",
+              "flexible rotor critical speed fluid film bearing",
+              "annular seal rotordynamic coefficients",
+              "tilting pad journal bearing rotordynamics",
+              "squeeze film damper rotor"
+            ],
+            "hits": 40,
+            "note": "既配信を除いた上位40件から、Childs, Moes & van Leeuwen (1977, ASME J. Lubrication Technology)の軸受インピーダンス論文をrotor定番として採用（全文PDFも取得したがOCR不良のため抄録ベースで作成）。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・rotor最新は通常候補からそのまま確保できたが、foil定番・rotor定番はOpenAlex直接クエリによる深掘り検索が必要だった。"
+      },
+      "afterword": "今日は同じ『安定性』という言葉でも、指標の選び方で結論が変わりうることを実感しました。溝付きゴムライナー軸受の論文では、溝を増やすと圧力も負荷容量そのものも下がるのに、ライナーを硬くしたときの負荷容量の『伸び率』だけを見ると、なぜか溝が多い方が有利という結果が出てきます。一つの数値だけを見て「多い方がいい」「少ない方がいい」と早合点せず、何を測っているかまで確かめる大切さを、要約を作りながら教わりました。 — 編集担当より"
     }
   ]
 }
