@@ -4826,6 +4826,153 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・rotor最新は通常候補からそのまま確保できたが、foil定番・rotor定番はOpenAlex直接クエリによる深掘り検索が必要だった。"
       },
       "afterword": "今日は同じ『安定性』という言葉でも、指標の選び方で結論が変わりうることを実感しました。溝付きゴムライナー軸受の論文では、溝を増やすと圧力も負荷容量そのものも下がるのに、ライナーを硬くしたときの負荷容量の『伸び率』だけを見ると、なぜか溝が多い方が有利という結果が出てきます。一つの数値だけを見て「多い方がいい」「少ない方がいい」と早合点せず、何を測っているかまで確かめる大切さを、要約を作りながら教わりました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-15",
+      "status": "published",
+      "headline": "第39号：foil定番にバンプ型フォイル軸受の構造剛性・硬化現象（Rubio & San Andrés 2004/2006抄録ベース）、foil最新に多層フォイルスラスト軸受の圧力『ダブルウェッジ効果』（Jiang, Zhu, Huang & Gao 2025 OA全文）、rotor定番に乱流環状シールの動特性理論（Childs 1983抄録ベース）、rotor最新に液体潤滑球面スパイラル溝軸受とAI代理モデルによるロータ応答予測（Zhang, Yan, Sheng, Zhang, Li & Li 2026 OA全文）。4件ともfaithfulness-checkで2ラウンドの指摘・修正を経て公開。",
+      "intro": "39号目。rotor最新は通常のcollect.mjs候補（arXiv＋OpenAlex新着）からそのままon-topicな新規候補を確保できましたが、foil最新・foil定番・rotor定番はcollect.mjsの基本候補が大半既配信済みか分野外ノイズ（arXivのロボット・流体力学論文、統計学・電力系統分野の同名語ヒット等）で埋まっていたため、OpenAlexへの直接クエリ（foil最新はOA・日付順で深掘り、foil定番・rotor定番は被引用順・分野ガードで深掘り）による発掘を行いました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants13070285",
+          "title": "Static Characteristic Analysis of Multi-Layer Foil Thrust Bearing: Considering Parameter Effects（Jiang, Zhu, Huang & Gao, 2025）",
+          "why": "支持パネルの凸部が荷重で弾性変形することで圧力分布に生まれる『ダブルウェッジ効果』（圧力の二重ピーク）を、有限差分法・厚板要素・すべり効果込みのモデルで系統的に評価した研究。foil最新枠のOA全文（MDPI Lubricants、CC-BY）として選定。faithfulness-checkの1回目で、この二重ピークの原因を『支持パネルに凸構造が2つある』と誤って機構を捏造していたhigh severityの指摘（原文の正しい機構は『第1ピーク＝フォイルの基本くさび形状、第2ピーク＝凸部の弾性変形が生む新たなくさび』）を受け、タイトル・levels全段・図・用語・deepDiveを全面的に書き直した。2ラウンド目でも用語定義への修正取りこぼしが見つかり、追加修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.2056047",
+          "title": "Bump-Type Foil Bearing Structural Stiffness: Experiments and Predictions（Rubio & San Andrés, 2004/2006）",
+          "why": "市販のバンプ型フォイル軸受4個を無回転状態で静荷重試験し、荷重をかけるほど構造剛性が増す『硬化効果』とヒステリシスを実験・解析モデル両面で確認した定番研究。foil定番枠の抄録ベースとして選定。faithfulness-checkで、OpenAlexの年表記(2004)が実際の印刷号（2006年, Vol.128(3)）と乖離していた点、抄録で裏取りできない用語定義の混入、概念図に図形要素がなかった点などが2ラウンドにわたり指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.3254633",
+          "title": "Dynamic Analysis of Turbulent Annular Seals Based On Hirs' Lubrication Equation（Childs, 1983）",
+          "why": "多段遠心ポンプの段間シールを想定した高圧環状シールについて、Hirsの乱流潤滑方程式に基づき動特性係数（剛性・減衰・慣性）を導出し、スペースシャトルのメインエンジン高圧燃料ターボポンプに数値を当てはめた基礎的な論文。rotor定番枠の抄録ベースとして選定。faithfulness-checkで、抄録にない背景の誤帰属、原文表記『short-bearing』の訳語不統一、被引用数（Crossref105／OpenAlex153）の乖離を書きつつ数値レンジを示していた自己矛盾などが2ラウンドにわたり指摘され、修正した。"
+        },
+        {
+          "id": "doi:10.3390/app16168091",
+          "title": "Liquid-Lubricated Spiral Spherical-Groove Bearings: Static and Dynamic Characteristics and Hybrid Surrogate Model-Based Rotor Response Prediction（Zhang, Yan, Sheng, Zhang, Li & Li, 2026）",
+          "why": "液体潤滑の球面スパイラル溝軸受について、後ろ向きに振れ回ると減衰係数の符号が負に転じ油膜ホワールの引き金になりうることを示し、回転速度・振れ回り周波数比への既知の依存性を組み込んだ物理ガイド型AI代理モデルでロータ応答計算を約13万倍高速化した研究。rotor最新枠のOA全文（MDPI Applied Sciences、CC-BY）として選定。faithfulness-checkで、交差検証という誤った手法名の混入、2種類あるR²・2種類ある高速化率の表記精度、用語の適用範囲などが2ラウンドにわたり指摘され、修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "『もっともらしい機構』ほど裏取りが要る",
+          "note": "foil最新の要約は1回目のfaithfulness-checkで、圧力分布に二重ピークができる理由を『支持パネルに凸構造が2つあるから』と説明していたことが高severityの捏造として指摘された。原文を精読すると、正しくは『1つ目のピークはフォイル自体の基本的な折れ曲がり形状によるもの、2つ目のピークは支持パネルの凸部が荷重で弾性変形して新しいくさびができることによるもの』で、凸構造の数とは無関係だった。もっともらしく聞こえる説明ほど、原文の該当箇所に戻って確かめる必要があると再認識した。"
+        },
+        {
+          "title": "候補プールはfoil最新以外すべて深掘りが必要だった",
+          "note": "rotor最新は通常のcollect.mjs候補（arXiv＋OpenAlex新着）からそのまま採用できたが、foil最新・foil定番・rotor定番はcollect.mjsの基本候補が既配信済みや分野外ノイズで埋まっていたため、OpenAlex直接クエリによる深掘り検索で発掘した。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。上位はarXivの分野外ノイズ（クアッドロータ制御・外科ロボット等）と既配信で埋まっていたため、下記のOA限定・日付順の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（OA限定・日付順、foil最新の深掘り）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,open_access.is_oa:true,from_publication_date:2023-01-01・sort=publication_date:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 30,
+            "note": "既配信・分野外を除いた中から、Jiang, Zhu, Huang & Gao (2025, Lubricants, CC-BY)の多層フォイルスラスト軸受静特性論文をfoil最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位のほぼ全てが既配信済みだったため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil定番、被引用順・分野ガード適用）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc（keyword-core.mjsのCOREで足切り）",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた上位から、Rubio & San Andrés (2004/2006, J. Eng. Gas Turbines Power, 被引用約100件超)のバンプ型フォイル軸受構造剛性論文をfoil定番として採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。Zhang, Yan, Sheng, Zhang, Li & Li (2026, Applied Sciences, CC-BY)の液体潤滑球面スパイラル溝軸受論文が新規on-topic候補として見つかり、rotor最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。統計学・電力系統など同名語（unbalance, subsynchronous）による分野外ヒットが多く、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、被引用順・分野ガード適用）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc（keyword-core.mjsのCOREで足切り）",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 30,
+            "note": "既配信・分野外ノイズを除いた上位から、Childs (1983, J. Lubrication Technology, 被引用約150件超)の乱流環状シール動特性論文をrotor定番として採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。rotor最新のみ通常候補からそのまま確保でき、他の3枠はOpenAlex直接クエリによる深掘り検索が必要だった。"
+      },
+      "afterword": "今日いちばん印象に残ったのは、AIの下書きが一度、原文を早合点していたことでした。フォイル軸受の圧力に『山が2つ』できる理由を、最初は『出っぱりが2つあるから』と説明していたのですが、忠実性チェックで原文を読み直すと、本当は『1つ目の山はフォイル自体の折れ曲がり、2つ目の山は支えの板が荷重でたわんでできる新しい出っぱり』という、まったく別の理由でした。もう一本の論文では、ロータが逆向きに振れ回ると、軸受の『振動を抑える力』の符号そのものがマイナスに変わってしまうという話も読みました。原因を決めつけずに、都度どこにそう書いてあるかまで戻って確かめることの大切さを、今日は二重に教わった気がします。 — 編集担当より"
     }
   ]
 }
