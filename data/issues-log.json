@@ -4973,6 +4973,139 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。rotor最新のみ通常候補からそのまま確保でき、他の3枠はOpenAlex直接クエリによる深掘り検索が必要だった。"
       },
       "afterword": "今日いちばん印象に残ったのは、AIの下書きが一度、原文を早合点していたことでした。フォイル軸受の圧力に『山が2つ』できる理由を、最初は『出っぱりが2つあるから』と説明していたのですが、忠実性チェックで原文を読み直すと、本当は『1つ目の山はフォイル自体の折れ曲がり、2つ目の山は支えの板が荷重でたわんでできる新しい出っぱり』という、まったく別の理由でした。もう一本の論文では、ロータが逆向きに振れ回ると、軸受の『振動を抑える力』の符号そのものがマイナスに変わってしまうという話も読みました。原因を決めつけずに、都度どこにそう書いてあるかまで戻って確かめることの大切さを、今日は二重に教わった気がします。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-16",
+      "status": "published",
+      "headline": "第40号：foil定番に高温フォイル軸受用PS304コーティングの摩擦・摩耗研究（DellaCorte 2000 OA全文）・foil最新に圧電アクチュエータで能動制御するガスフォイル軸受（Gavalas & Chasalevris 2025抄録ベース）、rotor定番に5パッド・ティルティングパッド軸受の剛性・減衰係数設計曲線（Nicholas, Gunter & Allaire 1979抄録ベース）・rotor最新に油膜軸受+能動磁気軸受のSDP-PIP非線形制御（Sayed & El-Sayed 2026 OA全文）。4件とも忠実性チェックで指摘・修正を経て公開。",
+      "intro": "39号までの傾向どおり、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも既配信で埋まっていました。foil classic・foil latest・rotor classicはOpenAlexへの直接クエリ（被引用順の深掘り・OA限定日付順の深掘り）で発掘し、rotor latestは通常候補の中からon-topicな新規候補を確保できました。",
+      "picked": [
+        {
+          "id": "doi:10.1080/10402000008982337",
+          "title": "The Evaluation of a Modified Chrome Oxide Based High Temperature Solid Lubricant Coating for Foil Gas Bearings（DellaCorte, 2000）",
+          "why": "高温フォイル軸受用の固体潤滑コーティングPS304について、25〜650℃・始動停止3万サイクルの摩擦・摩耗試験とSEM/EDS分析を行い、摩擦係数は温度によらずほぼ一定なのに摩耗は常温で最大という意外な傾向を、潤滑剤の移着膜形成メカニズムから説明した研究。foil定番枠のOA全文（NASA Technical Memorandumの原稿PDFを取得、Tribology Transactions 2000年掲載）として選定。faithfulness-checkでは捏造は検出されなかったが、始動停止サイクルの秒数配分の誤読、ピンオンディスク試験とフォイル軸受試験の条件混同、荷重条件の一般化しすぎ、EDSの展開表記の誤りなど精緻化ミスが複数見つかり修正した。"
+        },
+        {
+          "id": "doi:10.1177/10775463251409130",
+          "title": "Active adaptation of a gas foil bearing system for high-speed rotor dynamics control（Gavalas & Chasalevris, 2025）",
+          "why": "ガスフォイル軸受の円周上に配置した圧電アクチュエータでトップフォイルの構成を能動的に切り替え、運転可能な円周速度を音速近傍まで拡張できることを数値実験で示した制御戦略。foil最新枠の抄録ベースとして選定。faithfulness-checkで、抄録にない一般的背景説明を『抄録に述べられている』と誤って出典帰属していた点、『バランス軸受／アンバランス軸受』という誤訳（正しくは軸ではなくロータ）、『軸受直径』と書くべきところを『ジャーナル直径』と混同した点などが指摘され修正した。"
+        },
+        {
+          "id": "doi:10.1080/05698197908982907",
+          "title": "Stiffness and Damping Coefficients for the Five-Pad Tilting-Pad Bearing（Nicholas, Gunter & Allaire, 1979）",
+          "why": "産業界で広く使われる5パッド・ティルティングパッド軸受について、有限要素法とパッド組立て法でプリロード・オフセット・L/D比などに対する剛性・減衰係数の設計曲線を示した基礎文献。rotor定番枠の抄録ベースとして選定。faithfulness-checkで、抄録には研究の動機・課題設定の記述が一切ないにもかかわらず一般知識（パッドの自己整列性など）を『抄録に述べられている』と書いていた誤帰属（high severity）と、概念図が構造的に不正確（パッドが円弧ではなく独立した完全円として描かれていた）だった点（high severity）が指摘され、両方を修正・図を再作成した。"
+        },
+        {
+          "id": "doi:10.3390/applmech7030068",
+          "title": "Nonlinear Vibration Control of a Hybrid Rotor–Bearing System Using a State-Dependent Parameter PIP Controller（Sayed & El-Sayed, 2026）",
+          "why": "油膜軸受と能動磁気軸受を並列に組み合わせたロータの油膜不安定（オイルホワール／オイルホイップ）を、状態依存パラメータ比例積分プラス(SDP-PIP)コントローラで軌道収束レベルまで抑え込んだ研究。rotor最新枠のOA全文（MDPI Applied Mechanics、CC-BY、2026年8月13日公開）として選定。faithfulness-checkで最も多くの指摘を受け、シャフト剛性・潤滑油粘度のロバスト性評価を『±20%程度』と単純化していた誤り（実際は剛性98〜120%・粘度0.008〜0.023Pa・sという非対称な範囲、5箇所に波及）、Conclusionsに存在しない記述への誤帰属、確認できない『二方式の実装』への言及、『実験装置がないため』という因果の推測などhigh severity 4件を含む多数の指摘を受け、すべて修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "抄録ベースの『何が問題だったか』は正直に書くほうが誠実",
+          "note": "foil最新・rotor定番の抄録ベース2件では、下書きの『何が問題だったか』欄が、ごく短い抄録には書かれていない一般的な背景知識（ティルティングパッド軸受の自己整列性、ガスフォイル軸受の非接触性など）を『抄録に述べられている』と誤って書いてしまっていました。faithfulness-checkの指摘を受けて、『抄録には動機の記述がない』こと自体を正直に書く形に直しました。短い抄録を無理に膨らませないほうが、結果として誠実な要約になると再確認しました。"
+        },
+        {
+          "title": "概念図も『技術的に正しいか』のチェックが要る",
+          "note": "rotor定番のティルティングパッド軸受の概念図は、当初『パッド』を単なる独立した円として描いてしまい、実際の軸受構造（ジャーナルを囲む円弧状のパッドが外側のピボットで傾動する）とは異なる、誤解を招く図になっていました。『模式・実データではない』と明記しているだけでは不十分で、模式図自体が構造として正しいかも別途チェックが必要だと学びました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。上位はarXivの分野外ノイズ（クアッドロータUAV制御・多重噴流衝突等）と既配信で埋まっていたため、既配信を除いたOpenAlex新着の中から2025年のGavalas & Chasalevris論文（非OA）をfoil最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 14,
+            "note": "上位14件のほぼ全てが既配信済みだったため、OpenAlexへの直接クエリ（被引用順・分野ガード適用、上位を除いた深掘り）で発掘。DellaCorte (2000, Tribology Transactions, 被引用約41〜74件・情報源で幅あり) のPS304コーティング論文をNASA Technical Memorandumの原稿PDFで全文取得し、foil定番として採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil定番、被引用順・分野ガード適用）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc・page2以降",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた中からDellaCorte (2000) を発掘。あわせてBonello & Hassan (2017, JSV) の foil-air bearing rotor system論文も見つけたが、OA表示はあったもののフルテキストPDFがアクセス制限（CAPTCHA）で取得できず、今回は見送った。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA10/抄録3。Sayed & El-Sayed (2026, Applied Mechanics/MDPI, CC-BY, 2026年8月13日公開) の油膜+能動磁気ハイブリッド軸受のSDP-PIP制御論文が新規on-topic候補として見つかり、全文PDFを取得してrotor最新として採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "上位14件は統計学・電力系統など同名語（unbalance, subsynchronous）による分野外ヒットと既配信で埋まっていたため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、被引用順・分野ガード適用）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc・page2以降",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 30,
+            "note": "既配信・分野外ノイズを除いた上位から、Nicholas, Gunter & Allaire (1979, ASLE Transactions, 被引用約64〜105件・情報源で幅あり) の5パッド・ティルティングパッド軸受設計曲線論文をrotor定番として採用。あわせてSchweizer (2009, JSV) のターボチャージャーロータ完全不安定論文やMuszyńska & Bently (1990, JSV) の識別手法論文も見つけたが、いずれもクローズドアクセスで信頼できる抄録テキストを取得できず今回は見送った。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・foil定番・rotor定番の3枠はOpenAlex直接クエリによる深掘り検索が必要だった（39号に続き、基本候補プールの枯渇が続いている）。"
+      },
+      "afterword": "今日は「抄録だけで語れることの範囲」を強く意識させられる日でした。ティルティングパッド軸受の論文は抄録がわずか3文しかなく、下書きの段階では「パッドが自由に傾くから安定性に優れる」という、専門分野ではよく知られた話を、まるで抄録に書いてあるかのように書いてしまっていました。忠実性チェックで指摘されて読み返すと、確かに抄録にはそんなことは一言も書かれていません。知っていることと、その論文が実際に述べていることは別物なんだと、当たり前のようで見落としがちなことを教わりました。もうひとつ印象的だったのは、ティルティングパッド軸受の概念図です。最初に描いた図は、パッドを単なる丸として並べただけで、実際の「軸を囲む円弧状の部品」という構造になっていませんでした。「模式図です」と断っていても、模式図そのものが物理的にあり得ない形をしていたら意味がない——今日はそのことを学びました。 — 編集担当より"
     }
   ]
 }
