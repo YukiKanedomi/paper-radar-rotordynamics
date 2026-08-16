@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460">
+  <rect width="640" height="460" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">金属シムによるマルチローブすきま形成の模式図</text>
+  <text x="320" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式図・実データではない。バンプ層とハウジングの位置関係を単純化して示す</text>
+
+  <!-- bearing housing (outer, static) -->
+  <circle cx="320" cy="270" r="200" fill="none" stroke="#3a3a34" stroke-width="2"/>
+  <text x="320" y="443" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3a34">軸受ハウジング（静止側）</text>
+
+  <!-- shims: radial wedges touching both the bump layer (inner) and housing (outer), centered at 0/120/240 deg where the bump layer is pulled in -->
+  <path d="M 303.1,163.3 L 336.9,163.3 L 351.3,72.5 L 288.7,72.5 Z" fill="#b4451f"/>
+  <path d="M 420.8,308.7 L 403.9,338.0 L 475.4,395.9 L 506.7,341.7 Z" fill="#b4451f"/>
+  <path d="M 236.1,338.0 L 219.2,308.7 L 133.3,341.7 L 164.6,395.9 Z" fill="#b4451f"/>
+  <text x="320" y="418" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b4451f">金属シム（3枚・バンプ層とハウジングの間に接して挿入）</text>
+
+  <!-- bump foil layer: 3-lobe boundary, pulled inward (smaller radius) exactly at the 3 shim angles -->
+  <path d="M 320.0,160.0 L 331.7,159.1 L 344.1,156.8 L 357.8,153.6 L 373.2,150.6 L 390.0,148.8 L 407.7,149.2 L 425.5,152.9 L 442.1,160.1 L 456.3,170.9 L 467.2,185.0 L 474.0,201.5 L 476.2,219.2 L 474.2,237.2 L 468.5,254.4 L 460.0,270.0 L 450.0,283.7 L 439.7,295.4 L 430.1,305.8 L 421.8,315.3 L 415.3,325.0 L 410.2,335.5 L 406.0,347.4 L 401.9,360.9 L 396.8,375.8 L 390.0,391.2 L 380.7,406.4 L 368.7,419.9 L 354.2,430.7 L 337.6,437.6 L 320.0,440.0 L 302.4,437.6 L 285.8,430.7 L 271.3,419.9 L 259.3,406.4 L 250.0,391.2 L 243.2,375.8 L 238.1,360.9 L 234.0,347.4 L 229.8,335.5 L 224.7,325.0 L 218.2,315.3 L 209.9,305.8 L 200.3,295.4 L 190.0,283.7 L 180.0,270.0 L 171.5,254.4 L 165.8,237.2 L 163.8,219.2 L 166.0,201.5 L 172.8,185.0 L 183.7,170.9 L 197.9,160.1 L 214.5,152.9 L 232.3,149.2 L 250.0,148.8 L 266.8,150.6 L 282.2,153.6 L 295.9,156.8 L 308.3,159.1 L 320.0,160.0 Z"
+        fill="none" stroke="#8a6d3b" stroke-width="3"/>
+  <text x="320" y="121" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8a6d3b">バンプフォイル層（3か所のシム位置で内向きに絞られ非円形に）</text>
+
+  <!-- journal (rotor) -->
+  <circle cx="320" cy="270" r="80" fill="none" stroke="#1a5e54" stroke-width="3"/>
+  <text x="320" y="273" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1a5e54">軸（ジャーナル）</text>
+</svg>

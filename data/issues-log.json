@@ -5106,6 +5106,171 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・foil定番・rotor定番の3枠はOpenAlex直接クエリによる深掘り検索が必要だった（39号に続き、基本候補プールの枯渇が続いている）。"
       },
       "afterword": "今日は「抄録だけで語れることの範囲」を強く意識させられる日でした。ティルティングパッド軸受の論文は抄録がわずか3文しかなく、下書きの段階では「パッドが自由に傾くから安定性に優れる」という、専門分野ではよく知られた話を、まるで抄録に書いてあるかのように書いてしまっていました。忠実性チェックで指摘されて読み返すと、確かに抄録にはそんなことは一言も書かれていません。知っていることと、その論文が実際に述べていることは別物なんだと、当たり前のようで見落としがちなことを教わりました。もうひとつ印象的だったのは、ティルティングパッド軸受の概念図です。最初に描いた図は、パッドを単なる丸として並べただけで、実際の「軸を囲む円弧状の部品」という構造になっていませんでした。「模式図です」と断っていても、模式図そのものが物理的にあり得ない形をしていたら意味がない——今日はそのことを学びました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-17",
+      "status": "published",
+      "headline": "第41号：foil最新にスラスト型フォイル軸受の曲面インクライン形状の実測+予測モデル(Hwang, Mehdi & Kim 2023 OA全文)・foil定番に金属シム予圧でGFBの振れ回りを遅らせる研究(Kim & San Andrés 2009抄録ベース)、rotor最新に非円形水潤滑軸受における乱流の安定化効果(Ren & Feng 2025 OA全文)・rotor定番にラビリンスシールの3次元CFDロータダイナミクス解析(Moore 2003抄録ベース)。4件とも忠実性チェックで概念図の誤り等の指摘を受け、修正・再検証を経て公開。",
+      "intro": "40号までの傾向どおり、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも既配信でほぼ埋まっていました。foil最新・foil定番・rotor定番はOpenAlexへの直接クエリ（被引用順・OA限定発行日順の深掘り）で発掘。rotor最新は当初arXiv候補（Mota et al. 2021）を選んでいましたが、実は2026-07-04号（第9号相当）で既に配信済みの重複だったことが検証段階で判明し、OpenAlexのCC-BY限定クエリで新たにRen & Feng (2025)の乱流論文を発掘して差し替えました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants11110480",
+          "title": "Static Performance Measurements and Model Predictions of Gas Foil Thrust Bearing with Curved Incline Geometry（Hwang, Mehdi & Kim, 2023）",
+          "why": "スラスト型ガスフォイル軸受の傾斜面(インクライン)の実際の高さを精密計測したところ、従来モデルが仮定する直線ではなく丸みを帯びた曲面であることを発見し、その形状を組み込んだ予測モデルで負荷容量・ドラッグトルクを再現した研究。foil最新枠のOA全文（MDPI Lubricants、CC-BYをr.jina.ai経由で取得）として選定。faithfulness-checkでは、概念図の曲線の向きが原文の実測傾向と逆（high、2ラウンド目でも再発しており座標計算で厳密に修正）、境界角の内外周対応の断定（med）、測定回数の表記ミス（med）、「実験でも確かめられた」という過剰主張（med）等が指摘され、すべて修正・再検証した。"
+        },
+        {
+          "id": "doi:10.1080/10402000902825721",
+          "title": "Effects of a Mechanical Preload on the Dynamic Force Response of Gas Foil Bearings: Measurements and Model Predictions（Kim & San Andrés, 2009）",
+          "why": "ガスフォイル軸受のバンプ層下に金属シムを3枚挟んでマルチローブすきま形状を作ることで、大振幅のサブシンクロナス振れ回りが始まる回転数を遅らせられることを実験と予測モデルで示した研究。foil定番枠の抄録ベースとして選定。faithfulness-checkでは、図の脚注が「油膜」（ガス軸受なのに誤った媒体）と「剛性・減衰を変える」（抄録に無い主張）を誤って出典帰属していた点（high）、抄録の『forced nonlinearity』という表現を「自励的な不安定性ではなく」と対比的に拡大解釈していた点（high）が指摘され修正。2ラウンド目の再検証でも、概念図のシム位置とバンプ層の絞り込み形状が数学的に矛盾している点（high）が新たに見つかり、極座標で正確に再計算して図を描き直した。"
+        },
+        {
+          "id": "doi:10.3390/lubricants13040139",
+          "title": "Turbulence Effects on the Dynamic Characteristics of Non-Circular Journal Bearings Under Large Sommerfeld Number Conditions（Ren & Feng, 2025）",
+          "why": "『乱流になると軸受は不安定になる』という円筒軸受での通説に反し、荷重が軽く高速回転な条件（大ゾンマーフェルト数）の二葉軸受・三段リセス軸受では、乱流がむしろ安定性を高める方向に働くことを計算と実機振動計測の両方で示した研究。rotor最新枠のOA全文（MDPI Lubricants、CC-BY）として選定。faithfulness-checkでは、原文中に『40krpm・80krpmで半周波数振動が現れる』という一文が他の2箇所の記述と矛盾しており、ドラフトが矛盾しない側の記述を採用した判断は妥当と評価された一方、S≈2を『反転点』と一般化していた点（med）、被引用数を『0〜1件前後』と根拠なく幅を持たせていた点（med）等が指摘され修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.1615248",
+          "title": "Three-Dimensional CFD Rotordynamic Analysis of Gas Labyrinth Seals（Moore, 2003）",
+          "why": "ラビリンスシールの室内に単一の駆動渦を仮定する従来のバルクフロー模型に代え、3次元CFDでシール内の流れを直接解くことで漏れ量・ロータダイナミクス予測の精度を上げた研究。rotor定番枠の抄録ベースとして選定。faithfulness-checkでは、「バルクフロー模型（3体積モデル）」という既存の用語ラベルの説明に、この論文の抄録には無い『3体積』という外部知識を混入させていた点（high）、『動特性係数』という抄録より踏み込んだ言い換えを図・タイトルにまで横断展開していた点（med）、概念図で歯がロータ側から生えているのに『ステータ側の歯』とラベルしていた矛盾（med）が指摘され、すべて修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "候補プールが枯渇し、深掘りクエリでもニアミスが起きた",
+          "note": "rotor最新枠は当初、arXivのプレプリント論文(Mota et al. 2021「軸受の境界パラメータ化による完全モデリング」)を選んでいましたが、papers.jsonへの追記後にvalidate-papers.mjsのID重複検出で、実は2026-07-04号で既に配信済みだったことが判明しました。40号を超えた候補プールの枯渇が進む中、目視での重複確認だけでは見落としが起きうることを再確認し、機械的なID/DOI重複チェックの重要性を実感しました。OpenAlexのCC-BYライセンス限定クエリに切り替えて発掘したRen & Feng (2025)の乱流論文は、結果としてより読み応えのある一本になりました。"
+        },
+        {
+          "title": "概念図は『向き』まで検算しないと嘘になる",
+          "note": "今号は4本中3本の概念図で、faithfulness-checkから幾何学的な誤りを指摘されました。曲線が原文の傾向と逆向き、シムの位置と軸受の絞り込み形状が数学的に矛盾、歯の描画位置とラベルが不一致——どれも『模式図・実データではない』と断っているだけでは救われない誤りでした。最終的には、SVGの座標を三角関数で厳密に計算し直すことで解決しました。模式図であっても、向き・位置関係といった定性的な正しさは検算が必要だと学びました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 24,
+            "note": "OA19/抄録5。arXiv上位は分野外ノイズ（物理・流体・制御系の無関係論文）で埋まり、OpenAlex新着側もほぼ既配信済みだったため深掘りへ。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件がほぼ全て既配信済みだったため、OpenAlexへの直接クエリ（per-page25の深掘り）に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、被引用順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 20,
+            "note": "既配信を除いた中からKim & San Andrés (2009, Tribology Transactions, 被引用約77〜86件)を発掘。OpenAlexのabstract_inverted_indexで抄録全文を取得。同時に見つかったBonello & Pham (2014, JSV, OA表示)はScienceDirectのCAPTCHAで全文取得できず見送った。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、発行日順・2023年以降・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=publication_date:desc・from_publication_date:2023-01-01",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 20,
+            "note": "既配信を除いた中からHwang, Mehdi & Kim (2023, Lubricants, CC-BY)を発掘。r.jina.ai経由でMDPI本文をほぼ完全に取得できた。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。当初arXiv候補のMota et al.(2021)は既配信の重複と判明し不採用（詳細は上記aside）。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（rotor最新、CC-BY限定・発行日順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,best_oa_location.license:cc-by・sort=publication_date:desc",
+            "terms": [
+              "rotordynamics",
+              "whirl instability",
+              "critical speed rotor",
+              "seal rotordynamic forces",
+              "journal bearing dynamic coefficients",
+              "subsynchronous vibration rotor",
+              "squeeze film damper",
+              "tilting pad journal bearing"
+            ],
+            "hits": 150,
+            "note": "Mota et al.の重複判明を受けた差し替え検索。既配信を除いた中からRen & Feng (2025, Lubricants, CC-BY)の乱流論文を発掘し、r.jina.ai経由で本文を取得。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件は統計学・電力系統など同名語による分野外ヒットと既配信で埋まっていたため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、被引用順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 25,
+            "note": "既配信・分野外ノイズを除いた上位から、Moore (2003, J Vib Acoust, 被引用約125〜129件)のラビリンスシールCFD論文をrotor定番として採用。OpenAlexで抄録全文を取得。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・foil定番・rotor最新（差し替え後）・rotor定番の4枠すべてでOpenAlex直接クエリによる深掘りが必要だった（40号に続き、基本候補プールの枯渇が続いている）。"
+      },
+      "afterword": "今日いちばん印象に残ったのは、Ren & Feng (2025)の論文の中に見つかった小さな矛盾です。『層流モデルと乱流モデルで、振れ回りが始まる回転数は40krpmと80krpmです』という一文があったのですが、その直前の説明を読むと、どちらの数字がどちらのモデルなのか、逆に読めてしまう。しかも実験結果と照らし合わせると、前後の文脈の方が正しそうだと分かりました。論文というのは完成された正しい文章の塊だと思い込んでいましたが、著者自身がうっかり主語を取り違えることもあるのだと、当たり前のことに気づかされました。一つの文だけを鵜呑みにせず、前後の記述や実験結果と照らし合わせて『どちらが本当か』を確かめる——今日はその大切さを実感した一日でした。 — 編集担当より"
     }
   ]
 }

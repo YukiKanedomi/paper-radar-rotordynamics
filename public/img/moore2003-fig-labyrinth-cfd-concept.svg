@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+  <rect width="640" height="420" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">ラビリンスシールのバルクフローモデル vs 3次元CFDの模式図</text>
+  <text x="320" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式図・実データではない。両モデルの考え方の違いを単純化して示す</text>
+
+  <!-- stator housing (static, teeth hang from here) -->
+  <rect x="60" y="90" width="520" height="30" fill="#e9e5d8" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="320" y="85" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3a34">ステータ（静止側ハウジング）</text>
+
+  <!-- teeth hanging down from stator -->
+  <polygon points="150,120 170,160 190,120" fill="#8a6d3b"/>
+  <polygon points="260,120 280,160 300,120" fill="#8a6d3b"/>
+  <polygon points="370,120 390,160 410,120" fill="#8a6d3b"/>
+  <polygon points="480,120 500,160 520,120" fill="#8a6d3b"/>
+  <text x="320" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8a6d3b">ステータ側の歯（ラビリンス）</text>
+
+  <!-- rotor shaft below -->
+  <rect x="60" y="250" width="520" height="40" fill="#e9e5d8" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="320" y="275" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3a34">ロータ軸</text>
+
+  <!-- bulk flow: single swirling vortex per cavity (schematic) -->
+  <ellipse cx="215" cy="210" rx="22" ry="14" fill="none" stroke="#4a6fa5" stroke-width="2"/>
+  <ellipse cx="325" cy="210" rx="22" ry="14" fill="none" stroke="#4a6fa5" stroke-width="2"/>
+  <ellipse cx="435" cy="210" rx="22" ry="14" fill="none" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="320" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4a6fa5">バルクフロー模型：室ごとに単一の駆動渦を仮定</text>
+
+  <!-- CFD detailed streamlines (schematic squiggles), separate panel row -->
+  <path d="M 195 355 q 8 -12 16 0 t 16 0" fill="none" stroke="#b4451f" stroke-width="1.3"/>
+  <path d="M 305 355 q 8 -12 16 0 t 16 0" fill="none" stroke="#b4451f" stroke-width="1.3"/>
+  <path d="M 195 365 q 10 8 20 0" fill="none" stroke="#b4451f" stroke-width="1"/>
+  <path d="M 305 365 q 10 8 20 0" fill="none" stroke="#b4451f" stroke-width="1"/>
+  <path d="M 415 355 q 8 -12 16 0 t 16 0" fill="none" stroke="#b4451f" stroke-width="1.3"/>
+  <path d="M 415 365 q 10 8 20 0" fill="none" stroke="#b4451f" stroke-width="1"/>
+  <text x="320" y="390" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b4451f">3次元CFD：室内の流れ構造を離散化して直接解く（幾何形状に制約なし）</text>
+
+  <line x1="60" y1="335" x2="580" y2="335" stroke="#c9c4b6" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

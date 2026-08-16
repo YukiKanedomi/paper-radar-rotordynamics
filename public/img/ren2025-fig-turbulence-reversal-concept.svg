@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">乱流の影響は条件で逆転する（模式図）</text>
+  <text x="320" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式図・実データではない。定性的な傾向のみを示す</text>
+
+  <line x1="90" y1="330" x2="560" y2="330" stroke="#3a3a34" stroke-width="1.5"/>
+  <line x1="90" y1="330" x2="90" y2="90" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="560" y="352" text-anchor="end" font-family="sans-serif" font-size="12" fill="#3a3a34">ゾンマーフェルト数 S（大＝高速・軽荷重）</text>
+  <text x="70" y="90" text-anchor="end" font-family="sans-serif" font-size="12" fill="#3a3a34">閾値速度（安定性の目安）</text>
+
+  <!-- laminar model line: monotonic-ish reference -->
+  <path d="M 90 200 L 320 230 L 560 250" fill="none" stroke="#8a6d3b" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="565" y="252" font-family="sans-serif" font-size="11" fill="#8a6d3b">層流モデル</text>
+
+  <!-- turbulence model: below laminar at small S, crosses above at large S -->
+  <path d="M 90 260 Q 250 300 320 235 Q 420 160 560 150" fill="none" stroke="#1a5e54" stroke-width="3"/>
+  <text x="565" y="150" font-family="sans-serif" font-size="11" fill="#1a5e54">乱流モデル</text>
+
+  <text x="120" y="285" font-family="sans-serif" font-size="11" fill="#b4451f">小さいSでは乱流が不利</text>
+  <text x="420" y="135" font-family="sans-serif" font-size="11" fill="#b4451f">大きいSでは乱流が有利</text>
+  <text x="320" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">反転が起こる具体的なSの値は軸受形状・係数ごとに異なる（模式図は傾向のみ）</text>
+</svg>
