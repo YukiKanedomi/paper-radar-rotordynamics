@@ -5271,6 +5271,164 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil最新・foil定番・rotor最新（差し替え後）・rotor定番の4枠すべてでOpenAlex直接クエリによる深掘りが必要だった（40号に続き、基本候補プールの枯渇が続いている）。"
       },
       "afterword": "今日いちばん印象に残ったのは、Ren & Feng (2025)の論文の中に見つかった小さな矛盾です。『層流モデルと乱流モデルで、振れ回りが始まる回転数は40krpmと80krpmです』という一文があったのですが、その直前の説明を読むと、どちらの数字がどちらのモデルなのか、逆に読めてしまう。しかも実験結果と照らし合わせると、前後の文脈の方が正しそうだと分かりました。論文というのは完成された正しい文章の塊だと思い込んでいましたが、著者自身がうっかり主語を取り違えることもあるのだと、当たり前のことに気づかされました。一つの文だけを鵜呑みにせず、前後の記述や実験結果と照らし合わせて『どちらが本当か』を確かめる——今日はその大切さを実感した一日でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-18",
+      "status": "published",
+      "headline": "第42号：foil定番にバンプ型フォイルスラスト軸受の熱特性(Liu, Li, Du & Nan 2021 OA全文)・foil最新にグリーン冷媒対応フォイル軸受の多目的最適化(Shi, Wang, Sun & Peng 2025抄録ベース)、rotor定番に流体スクイーズフィルムダンパの基礎理論(Griffin, Richardson & Yamanami 1966抄録ベース)・rotor最新にエアロスタティック軸受のマイクロホール絞り(Zhang, Lan, Lei, Cheng & Du 2026 OA全文)。4件とも忠実性チェックで指摘を受け、うち1件は見出しの土台が丸ごと崩れる誤りが見つかり大幅に組み直した。",
+      "intro": "42号目となり、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも定番・最新の大半が既配信で埋まっていました。foil定番・foil最新・rotor定番・rotor最新の4枠すべてでOpenAlexへの直接クエリ（被引用順・発行日順の深掘り、per-page25）が必要でした。rotor定番は当初「Rotordynamics prediction in engineering」(1991)という高被引用論文を検討しましたが、実体はLalanne & Ferrarioの教科書に対する書評（book review）であり、独立した研究論文として要約するのは不適切と判断して見送り、Griffin, Richardson & Yamanami (1966)のスクイーズフィルムダンパ論文に差し替えました。またrotor定番の別候補だったHirano, Guo & Kirk (2005)のCFDラビリンスシール解析論文は、前号(2026-08-17)に配信したMoore (2003)と主題が酷似していたため、多様性を優先して不採用にしました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/app11094311",
+          "title": "Thermal Characteristics Study of the Bump Foil Thrust Gas Bearing（Liu, Li, Du & Nan, 2021）",
+          "why": "バンプ型フォイルスラスト軸受の温度分布を3次元熱流体力学(THD)モデルと実験の両面で調べた研究。foil定番枠のOA全文（MDPI Applied Sciences、CC-BYをr.jina.ai経由で取得）として選定。faithfulness-checkの1回目では『焼き付き』という破損モードの断定や冷却効果の解釈が問題視され修正したが、2回目の再検証（全文をより深く読み直した結果）で、見出しに据えていた『ロータ温度251℃で軸受破損』という記述が、実は本論文自身の実験結果ではなく、Introductionで引用された別の論文（Ryu & San Andrés 2013、冷却流なしの別形式フォイル軸受の加熱試験）の報告値だったことが判明した。見出し・数値カード・図・章立てを、本論文自身の結果（冷却気体流量0.2 m³/minを境に冷却効果が伸び悩むこと、THDモデルの妥当性が『ある程度』確認されたこと）を軸に全面的に組み直した。"
+        },
+        {
+          "id": "doi:10.1063/5.0285165",
+          "title": "Elasto-hydrodynamic performance investigation and optimization of gas foil bearings-rotor system for green vapor compression refrigeration cycle（Shi, Wang, Sun & Peng, 2025）",
+          "why": "グリーン冷媒が流れるガスフォイル軸受-ロータ系を、負荷容量・冷媒蒸気膜圧力・減衰の3指標で多目的最適化した研究。foil最新枠の抄録ベースとして選定。faithfulness-checkでは、抄録にない『脱フロン』という政策的フレーミングを見出しに加えていた点、多目的最適化の結果を『冷媒前提で設計し直した』という因果の付け替えで表現していた点、数値カードに抄録記載の比較基準（平均値・最大値との比較）が抜けていた点（いずれもmed）が指摘され、抄録の語彙に忠実な表現へ修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.3645878",
+          "title": "A Study of Fluid Squeeze-Film Damping（Griffin, Richardson & Yamanami, 1966）",
+          "why": "近接する2枚の板の相対運動が生む流体スクイーズフィルムの減衰作用について、線形化解析と近似設計式を示した1966年の基礎的研究。rotor定番枠の抄録ベースとして選定。faithfulness-checkでは、OpenAlexが自動展開した著者フルネーム『Hilary Richardson』『Shoichi Yamanami』がCrossrefの正式表記（H. H. Richardson、S. Yamanami）と食い違っていた点（high）、被引用数が出典間で143〜175件と幅があるのに単一の概数として提示していた点、原題は『Fluid』なのに全編で『気体』専用のダンパであるかのように枠づけていた点、概念図で減衰力の矢印の向きが力学的に誤っていた点などが指摘され、著者名の訂正を含め修正した。"
+        },
+        {
+          "id": "doi:10.3390/lubricants14080314",
+          "title": "Comparison of Nonlinear Dynamics for Rotor Supported by Aerostatic Journal Bearings with Small-Hole and Micro-Hole Restrictors（Zhang, Lan, Lei, Cheng & Du, 2026）",
+          "why": "エアロスタティックジャーナル軸受の給気孔を、従来の小孔絞り(0.132mm×12個)からマイクロホール(0.082mm×32個)に変えることで、半速振れ回りが発生するしきい値回転速度を10.5%引き上げられることを数値解析と実機計測で示した研究。rotor最新枠のOA全文（MDPI Lubricants、CC-BY）として選定。faithfulness-checkでは、『従来より一桁小さい』という数値的に誤った誇張（実際は約1.6分の1）、出典にない『線形摂動法』という手法名の混入、前号の候補だったHirano論文を誤って指す関連リンク（いずれもhigh）が指摘され修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "見出しの土台が、実は他人の論文の数字だった",
+          "note": "Liu et al.(2021)の要約では、当初『ロータ温度251℃で軸受が焼き付いた』という一文を見出し・数値カード・図の中心に据えていました。1回目のfaithfulness-checkでは『焼き付き→破損』という語の強さだけを問題視しましたが、2回目に全文をより深く照合したところ、251℃という数字は本論文自身の実験結果ではなく、Introductionで引用されていた別の論文（冷却流なしで加熱試験をした、形式の異なるフォイル軸受の破損データ）だったことが判明しました。抄録や図表キャプションの拾い読みだけでは、本文中の引用と自説の境目を見誤ることがある——その教訓から、見出しを本論文自身の結果（冷却気体流量が0.2 m³/minを超えると効果が伸び悩むこと）に組み替えました。"
+        },
+        {
+          "title": "候補プールの枯渇は42号でも継続",
+          "note": "foil・rotorとも定番・最新の4枠すべてでOpenAlexへの直接クエリ（被引用順・発行日順、per-page25の深掘り）が必要でした。rotor定番の候補だった『Rotordynamics prediction in engineering』(1991)は、タイトルだけでは研究論文に見えましたが、実体はLalanne & Ferrarioの教科書への書評（1ページ程度の紹介文）で、独立した論文として深く要約するには不向きと判断し不採用にしました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は分野外ノイズ（流体・制御・ロボティクス系の無関係論文）で埋まり、OpenAlex新着側もほぼ既配信済みだったため深掘りへ。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件がほぼ全て既配信済みだったため、OpenAlexへの直接クエリ（per-page25の深掘り）に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil定番、OA限定・被引用順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,open_access.is_oa:true・sort=cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 20,
+            "note": "既配信を除いた中から、Bonello & Hassan (2017, JSV) をOA最有力候補として検討したが、Manchester大学リポジトリがCloudflareのボット対策で全文・抄録とも取得不能なため見送り。次点のLiu, Li, Du & Nan (2021, Applied Sciences, CC-BY) をr.jina.ai経由で全文取得し採用。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil最新、発行日順・2024年以降・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,from_publication_date:2024-01-01・sort=publication_date:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "air foil journal bearing",
+              "foil bearing rotordynamic"
+            ],
+            "hits": 30,
+            "note": "既配信を除いた中からShi, Wang, Sun & Peng (2025, Physics of Fluids) を発掘。非OAのため抄録ベースで採用。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位・OpenAlex新着側とも既配信・分野外ノイズで埋まっていたため深掘りへ。"
+          },
+          {
+            "name": "OpenAlex直接クエリ（rotor最新、OA限定・発行日順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article,from_publication_date:2024-01-01,open_access.is_oa:true・sort=publication_date:desc",
+            "terms": [
+              "rotordynamic",
+              "rotor-bearing system stability",
+              "whirl instability",
+              "seal rotordynamic forces",
+              "critical speed rotor",
+              "subsynchronous vibration rotor"
+            ],
+            "hits": 25,
+            "note": "『Calculation and experimental verification of steam turbine journal bearing dynamic coefficients』(Rządkowski et al. 2026, MSSP)をハイブリッドOA候補として検討したが、ScienceDirectがボット対策で全文取得不能なため見送り。次点のZhang, Lan, Lei, Cheng & Du (2026, Lubricants, CC-BY) をr.jina.ai経由で全文取得し採用。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件は統計学・電力系統など同名語による分野外ヒットと既配信で埋まっていたため、下記の深掘り検索に切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor定番、被引用順・per-page25）",
+            "scope": "filter=title_and_abstract.search:クエリ,type:article・sort=cited_by_count:desc",
+            "terms": [
+              "rotor bearing system stability",
+              "whirl instability rotor",
+              "seal rotordynamic force",
+              "journal bearing dynamic coefficients",
+              "flexible rotor critical speed",
+              "squeeze film damper"
+            ],
+            "hits": 25,
+            "note": "『Rotordynamics prediction in engineering』(1991) は高被引用だったが、実体がLalanne & Ferrarioの教科書への書評だったため不採用。次点のHirano, Guo & Kirk (2005) は前号のMoore(2003)と主題が酷似するため不採用。最終的にGriffin, Richardson & Yamanami (1966, J. Basic Engineering, 被引用143〜175件) のスクイーズフィルムダンパ論文を採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil定番・foil最新・rotor定番・rotor最新の4枠すべてでOpenAlex直接クエリによる深掘りが必要だった（41号に続き、基本候補プールの枯渇が続いている）。今号は候補選定の過程で、Cloudflare/ボット対策により全文取得できないOA候補（Bonello 2017、Rządkowski et al. 2026）が2件あり、いずれも次点候補に切り替えて対応した。"
+      },
+      "afterword": "今日いちばん驚いたのは、フォイル軸受の論文を読んでいて『251℃で軸受が壊れた』という一文を見出しの中心に据えていたのに、忠実性チェックを2回通したあとになって、それが実はこの論文自身の実験結果ではなく、著者たちが背景説明として引用していた『別の論文』の数字だったと分かったことです。同じ段落の中に自分たちの実験結果と他人の実験結果が並んで書かれていると、どちらがどちらの成果なのか、読み飛ばすと簡単に取り違えてしまう。論文の『主語』を最後まで疑ってかかることの大切さを、身をもって知った一日でした。おかげで見出しは地味になりましたが（『冷却ガスを増やしても限界がある』という話に落ち着きました）、こちらの方が正直な内容になったと思います。 — 編集担当より"
     }
   ]
 }

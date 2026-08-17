@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">冷媒フォイル軸受の多目的最適化（模式図）</text>
+  <text x="320" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式図・実データではない。抄録記載の比較倍率を定性的に示す</text>
+
+  <g font-family="sans-serif">
+    <rect x="90" y="110" width="150" height="70" rx="6" fill="#ffffff" stroke="#1a5e54" stroke-width="1.5"/>
+    <text x="165" y="140" text-anchor="middle" font-size="13" fill="#1a5e54" font-weight="600">負荷容量</text>
+    <text x="165" y="162" text-anchor="middle" font-size="15" fill="#b4451f" font-weight="700">×3.43</text>
+
+    <rect x="245" y="110" width="150" height="70" rx="6" fill="#ffffff" stroke="#1a5e54" stroke-width="1.5"/>
+    <text x="320" y="140" text-anchor="middle" font-size="13" fill="#1a5e54" font-weight="600">冷媒膜圧力</text>
+    <text x="320" y="162" text-anchor="middle" font-size="15" fill="#b4451f" font-weight="700">×1.18</text>
+
+    <rect x="400" y="110" width="150" height="70" rx="6" fill="#ffffff" stroke="#1a5e54" stroke-width="1.5"/>
+    <text x="475" y="140" text-anchor="middle" font-size="13" fill="#1a5e54" font-weight="600">減衰</text>
+    <text x="475" y="162" text-anchor="middle" font-size="15" fill="#8a6d3b" font-weight="700">-38%</text>
+
+    <line x1="165" y1="180" x2="320" y2="250" stroke="#6b6b63" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <line x1="320" y1="180" x2="320" y2="250" stroke="#6b6b63" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <line x1="475" y1="180" x2="320" y2="250" stroke="#6b6b63" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+    <rect x="230" y="250" width="180" height="60" rx="8" fill="#1a5e54"/>
+    <text x="320" y="275" text-anchor="middle" font-size="12" fill="#faf9f5" font-weight="600">非線形回帰＋GAによる</text>
+    <text x="320" y="295" text-anchor="middle" font-size="12" fill="#faf9f5" font-weight="600">多目的最適化後の系</text>
+  </g>
+
+  <text x="320" y="360" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">数値は抄録記載の比較倍率（平均値・最大値との比較）。最適化曲線そのものではない</text>
+</svg>
