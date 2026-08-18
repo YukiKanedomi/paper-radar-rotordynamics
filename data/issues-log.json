@@ -5429,6 +5429,140 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil定番・foil最新・rotor定番・rotor最新の4枠すべてでOpenAlex直接クエリによる深掘りが必要だった（41号に続き、基本候補プールの枯渇が続いている）。今号は候補選定の過程で、Cloudflare/ボット対策により全文取得できないOA候補（Bonello 2017、Rządkowski et al. 2026）が2件あり、いずれも次点候補に切り替えて対応した。"
       },
       "afterword": "今日いちばん驚いたのは、フォイル軸受の論文を読んでいて『251℃で軸受が壊れた』という一文を見出しの中心に据えていたのに、忠実性チェックを2回通したあとになって、それが実はこの論文自身の実験結果ではなく、著者たちが背景説明として引用していた『別の論文』の数字だったと分かったことです。同じ段落の中に自分たちの実験結果と他人の実験結果が並んで書かれていると、どちらがどちらの成果なのか、読み飛ばすと簡単に取り違えてしまう。論文の『主語』を最後まで疑ってかかることの大切さを、身をもって知った一日でした。おかげで見出しは地味になりましたが（『冷却ガスを増やしても限界がある』という話に落ち着きました）、こちらの方が正直な内容になったと思います。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-19",
+      "status": "published",
+      "headline": "第43号：foil最新に厚肉トップフォイル軸受の非線形動的応答(Hu, Yang, Hou, Wang, Wu, Ni & Li 2023 OA全文)・foil定番に高荷重ガスフォイル軸受の実測モデル(Kim & San Andrés 2005抄録ベース)、rotor定番に多孔質気体軸受の厳密解(San Andrés, Yang & Devitt 2021 OA全文)・rotor最新に水潤滑ジャーナル軸受のすきま依存性(Cho, Kim, Choi, Sim & Hwang 2026抄録ベース)。4件とも忠実性チェックで指摘を受けて修正し、うち1件は数式の指数の誤り（高重要度）が見つかった。",
+      "intro": "43号目となり、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも定番・最新の大半が既配信で埋まっていました。foil定番・rotor最新・rotor定番の3枠でOpenAlexへの直接クエリ（フレーズを変えた複数系統、OA優先・非OA混合、被引用順/発行日順）による深掘りが必要でした。rotor定番では、Texas A&M大学のターボマシナリー・シンポジウムの定番チュートリアル論文（Zeidan, Design And Application Of Squeeze Film Dampers In Rotating Machinery）をいったん有力候補にしましたが、リポジトリ(OakTrust)がCloudflareのボット対策で全文取得できず、次点のSan Andrés, Yang & Devitt (2021)の多孔質気体軸受論文に差し替えました。",
+      "picked": [
+        {
+          "id": "doi:10.3390/lubricants11100453",
+          "title": "Nonlinear Dynamic Responses of Rigid Rotor Supported by Thick Top Foil Bearings（Hu, Yang, Hou, Wang, Wu, Ni & Li, 2023）",
+          "why": "荷重に強い新型「厚肉トップフォイル軸受(TTFB)」を支持したロータの非線形動的応答を、時間域シミュレーションと対称試験機での実測の両面から調べた研究。foil最新枠のOA全文（MDPI Lubricants、CC-BYをr.jina.ai経由で取得）として選定。faithfulness-checkでは、すきま・荷重を振ったパラメータスタディが実は「シミュレーションのみ」（実測はバンプ剛性3水準のみ）だった点をラベル無しで実測と混同していた点、バンプフォイルまで「剛体近似」と誤記していた点（実際はばね要素でモデル化）、原文の「先行研究の知見と矛盾する」という表現を「逆の傾向」という独自の因果解釈に言い換えていた点などが指摘され、2ラウンドかけて修正した。"
+        },
+        {
+          "id": "doi:10.1115/gt2005-68486",
+          "title": "Heavily Loaded Gas Foil Bearings: A Model Anchored to Test Data（Kim & San Andrés, 2005）",
+          "why": "ガスフォイル軸受が大荷重下でどうふるまうかを、実測データに合わせた解析モデルで予測した2005年のASME Turbo Expo論文。foil定番枠の抄録ベースとして選定。faithfulness-checkでは、著者の所属機関について抄録に無い情報を「本文の紹介より」と偽って付記していた（機関名の表記も誤り）、被引用数がOpenAlex(104件)とSemantic Scholar(146件)で4割ほど乖離していたのに単一の数値として提示していた、抄録に無い「クーロン摩擦減衰」というモデル名を使っていた、などの指摘を受け修正した。"
+        },
+        {
+          "id": "doi:10.3390/app11177949",
+          "title": "Porous Gas Journal Bearings: An Exact Solution Revisited and Force Coefficients for Stable Rotordynamic Performance（San Andrés, Yang & Devitt, 2021）",
+          "why": "多孔質材料を通してじわっと給気する「多孔質気体軸受」について、1970年代に確立された厳密解を最新のFE計算・実験データで検証し直した研究。rotor定番枠のOA全文（MDPI Applied Sciences、CC-BY）として選定。faithfulness-checkの1回目で、掲載した支配方程式（レイノルズ方程式）の一項がΩR²と書かれていたが、原文を読み直すとΩR/2（分数）が正しいという、KaTeXでそのままレンダリングされる高重要度の誤りが見つかった。ほかにも「1960年代から商用化」という史実の誤り、Moriの先行研究の数値の取り違えなど複数の指摘があり、2ラウンドかけてすべて修正した。"
+        },
+        {
+          "id": "doi:10.5293/kfma.2026.29.4.010",
+          "title": "Rotordynamic Performance Measurements and Model Predictions of Water-Lubricated Journal Bearings with Different Radial Clearances（Cho, Kim, Choi, Sim & Hwang, 2026）",
+          "why": "水潤滑ジャーナル軸受の半径すきまを2水準（35 µm・70 µm）で変え、振動応答を実測して解析モデルと比較した2026年発表の新しい論文。rotor最新枠の抄録ベースとして選定。faithfulness-checkでは、抄録に無い「先行研究が少ない」という空白主張を3レベルすべてに書いていた点、概念図で回転数の半分の周波数（0.5X成分）をかえって高い周波数として描いてしまっていた点（物理的に逆）が指摘され修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "数式の指数が「2乗」ではなく「2分の1」だった",
+          "note": "San Andrés, Yang & Devitt (2021)の多孔質気体軸受論文で、支配方程式の一項を「ΩR²」としてKaTeX表示していましたが、原文（MathJaxの崩れたテキスト変換）を1文字ずつ読み直したところ、正しくは「ΩR/2」（分数）でした。原論文の速度数の定義式から逆算しても分数でないと数値が合わず、忠実性チェックの1回目で高重要度の指摘として検出され、公開前に修正できました。"
+        },
+        {
+          "title": "すきまが振動の“波形”を変える様子を描いた概念図が、最初は物理的に逆だった",
+          "note": "Cho et al.(2026)の水潤滑軸受論文で、「すきまが広がると回転数の半分の周波数（0.5X成分）が支配的になる」という結果を波形イメージで示そうとしましたが、最初に描いた図は0.5X側の波を1X側より短い周期（＝高い周波数）で描いてしまい、内容と正反対でした。忠実性チェックで指摘され、0.5X側の周期を1X側の約2倍にして描き直しました。"
+        },
+        {
+          "title": "Texas A&Mのスクイーズフィルムダンパ論文はCloudflareに阻まれ見送り",
+          "note": "rotor定番の候補として、Texas A&M大学ターボマシナリー・シンポジウムの定番チュートリアル「Design And Application Of Squeeze Film Dampers In Rotating Machinery」(Zeidan)を検討しましたが、リポジトリ(OakTrust)がCloudflareのセキュリティ検証ページを返すのみで全文が取得できず、r.jina.ai経由でも突破できませんでした。無理に抄録だけで薄く紹介するより確実な選択として、次点のSan Andrés, Yang & Devitt (2021)に差し替えました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は分野外ノイズ（重力波検出器・EVスケジューリング等の無関係論文）で埋まり、OpenAlex新着側の良質な候補（三葉ガスフォイル軸受のFSI解析等）もほぼ既配信済みだった。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件のうち主要な定番論文（Heshmat 1983等）はほぼ既配信済みだったため、直接クエリでの深掘りに切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、複数フレーズ・OA優先/非OA不問）",
+            "scope": "search=フレーズ, filter=open_access.is_oa:true 等, 各per-page15〜25",
+            "terms": [
+              "compliant foil gas bearing stiffness damping",
+              "bump foil bearing rotor dynamic",
+              "foil air bearing load capacity",
+              "oil-free turbomachinery foil bearing",
+              "gas foil journal bearing stiffness damping coefficients（被引用順・OA不問）"
+            ],
+            "hits": 95,
+            "note": "MDPI(Lubricants/Applied Sciences)のCC-BY論文を中心に多数の未配信候補を発掘。foil最新にHu et al.(2023)を採用。foil定番はOA候補が軒並み既配信のため、被引用順の非OA検索でKim & San Andrés (2005)を発掘。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は流体力学・ロボティクス系の分野外ノイズ。OpenAlex新着側の良質な候補も大半が既配信済みだった。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件は統計学・電力系統など同名語による分野外ヒットと既配信で埋まっていたため、直接クエリに切り替えた。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、複数フレーズ）",
+            "scope": "search=フレーズ, sort=publication_date:desc または cited_by_count:desc, 各per-page15〜25",
+            "terms": [
+              "rotordynamic coefficients journal bearing experimental",
+              "rotor stability instability threshold speed bearing",
+              "squeeze film damper nonlinear rotor dynamics",
+              "rotor bearing system stability whirl",
+              "critical speed flexible rotor fluid film bearing",
+              "seal rotordynamic coefficients"
+            ],
+            "hits": 130,
+            "note": "水潤滑ジャーナル軸受（KFMA誌, Cho et al. 2026）をrotor最新に採用。rotor定番はZeidan(1996)のTAMUチュートリアルをCloudflareブロックで断念し、San Andrés, Yang & Devitt (2021)の多孔質気体軸受論文（Applied Sciences, CC-BY）を採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。43号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠中3枠でOpenAlex直接クエリによる深掘りが必要だった。今号は全文取得できないOA候補が1件（Zeidan, TAMU OakTrust, Cloudflare）あり、次点候補に切り替えて対応した。"
+      },
+      "afterword": "今号でいちばん背筋が伸びたのは、多孔質気体軸受の論文の数式を紹介しようとして、支配方程式の一項を「ΩR²」と書いてしまっていたことです。原文のPDFを変換したテキストは数式部分がぐちゃぐちゃに崩れていて、パッと見では「2」という文字が上付きの指数なのか、それとも「2分の1」の分母なのか区別がつきにくいものでした。忠実性チェックが1文字ずつ照合してくれたおかげで、公開前に「ΩR/2」が正しいと分かり、事なきを得ました。数式は自分の目にも“もっともらしく”見えてしまうので、機械的な裏取りの大切さを実感した一日でした。 — 編集担当より"
     }
   ]
 }

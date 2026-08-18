@@ -1014,6 +1014,11 @@
   font-size: 19px;
   margin: 16px 0;
   color: #16302c;
+  overflow-x: auto;
+}
+.detail-page .eq > span:first-child {
+  display: inline-block;
+  max-width: 100%;
 }
 .detail-page .eq i {
   font-style: italic;
