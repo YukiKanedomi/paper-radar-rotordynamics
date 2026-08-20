@@ -5563,6 +5563,128 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。43号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠中3枠でOpenAlex直接クエリによる深掘りが必要だった。今号は全文取得できないOA候補が1件（Zeidan, TAMU OakTrust, Cloudflare）あり、次点候補に切り替えて対応した。"
       },
       "afterword": "今号でいちばん背筋が伸びたのは、多孔質気体軸受の論文の数式を紹介しようとして、支配方程式の一項を「ΩR²」と書いてしまっていたことです。原文のPDFを変換したテキストは数式部分がぐちゃぐちゃに崩れていて、パッと見では「2」という文字が上付きの指数なのか、それとも「2分の1」の分母なのか区別がつきにくいものでした。忠実性チェックが1文字ずつ照合してくれたおかげで、公開前に「ΩR/2」が正しいと分かり、事なきを得ました。数式は自分の目にも“もっともらしく”見えてしまうので、機械的な裏取りの大切さを実感した一日でした。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-21",
+      "status": "published",
+      "headline": "第44号：foil/rotor各2件（Ren & Zhang 2025 OA全文・DellaCorte & Bruckner 2010 OA全文／Barbi, Cavallini Jr., Steffen Jr. & Silva 2026 OA全文・Scharrer 1988抄録ベース）。今号は候補選定の途中で2件が表記ゆれによる重複見落としと判明し差し替え、忠実性チェックでは数値の自己矛盾やover-reachが複数見つかり2ラウンドかけて修正した。",
+      "intro": "44号目となり、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも定番・最新の大半が既配信で埋まっていました。4枠すべてでOpenAlexへの直接クエリ（フレーズを変えた複数系統、発行日順・被引用順、OA優先だが非OAも許容）による深掘りが必要でした。今号は選定の途中で2つのつまずきがありました：foil定番で最初に選んだDellaCorte, Radil, Bruckner & Howard (2008)論文と、rotor最新で最初に選んだZhang, Ma, Chen, Duan & Ma (2026)のCFDラビリンスシール論文が、どちらも既配信タイトルとの表記ゆれ（読点の位置・\"on\"の有無）でタイトル完全一致による重複チェックをすり抜けてしまい、全文取得・図抽出まで進めた後にDOIベースで照合し直して既配信と判明しました。以後はDOI基準の重複チェックに切り替え、foil定番はDellaCorte & Bruckner (2010)のレビュー論文へ、rotor最新はBarbi, Cavallini Jr., Steffen Jr. & Silva (2026)へ差し替えました。",
+      "picked": [
+        {
+          "id": "doi:10.1088/1742-6596/3043/1/012034",
+          "title": "Critical speed analysis on high-speed foil bearing rotor of fuel cell air compressor（Ren & Zhang, 2025）",
+          "why": "燃料電池車用空気圧縮機のロータ-フォイル軸受系について、2次元・3次元FEMモデルで危険速度を計算し比較検証した研究。foil最新枠のOA全文（IOP Conference Series、CC-BY）として選定。faithfulness-checkでは、低次モード（第1・第2）で3D解析と2D解析に実は8〜12%の差があるのに『ほぼ同じ危険速度を言い当てた』と過大に書いていた点、37.48%という安全マージンの数値に原文にない独自の算出式を付けて、しかもその式で計算し直すと数値が再現できなかった点、軸受剛性・減衰の算出根拠を『参考文献に基づく』と誤って書いていた点などが2ラウンドにわたり指摘され、本文セクションの記述も含めて修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.4002271",
+          "title": "Remaining Technical Challenges and Future Plans for Oil-Free Turbomachinery（DellaCorte & Bruckner, 2010）",
+          "why": "フォイル軸受を用いたオイルフリー・ターボ機械の技術発展史と、より大型・重量級のロータへのスケーラビリティを論じたNASAのレビュー論文。foil定番枠のOA全文（NASA/TM、パブリックドメイン）として選定。faithfulness-checkでは、原文が示す200mm径軸受の負荷容量『8倍・約4800kN』という数値が原文内で自己矛盾している（8倍則からは約48kNのはず）のをそのまま出してしまい高重要度の指摘を受け、いったん『原文のlb値から換算すると約1000lb』と自分で数値を補って書き直したところ、これも実際には原文のその部分がOCR上判読不能で埋められない数値であり、2回目の忠実性チェックで『捏造』として高重要度の指摘を受けた。最終的には原文で確実に読み取れる数値（10000 lb ≒ 44.5kN、6kNの8倍と整合）のみに絞り、kN側の換算表記の誤記である旨を明記する形に修正した。"
+        },
+        {
+          "id": "doi:10.1007/s40430-026-06490-8",
+          "title": "CFD-based analysis of dynamic coefficients in labyrinth seals with teeth on stator: comparison with bulk-flow models（Barbi, Cavallini Jr., Steffen Jr. & Silva, 2026）",
+          "why": "ラビリンスシールの動特性係数を求めるCFD解析で、計算領域（入口・出口の軸方向長さ）を変えると直接剛性の符号が反転するという現象を発見した研究。rotor最新枠のOA全文（Journal of the Brazilian Society of Mechanical Sciences and Engineering、CC-BY）として選定。faithfulness-checkでは、この符号反転を『不安定化↔安定化』と出典にない安定性評価に結びつけていた点、比較対象の2つのバルクフローコード（LABY3・XLLaby1CV）の系譜説明が原文の記述と食い違っていた点（Childs & Scharrerモデルの位置づけ）、数値範囲がTableの実測値の外側にわずかにはみ出していた点などが2ラウンドにわたり指摘され修正した。図もFigure 3(a)単体のつもりが隣接パネルの一部やキャプション断片が写り込んでいたため再クロップした。"
+        },
+        {
+          "id": "doi:10.1115/1.3269513",
+          "title": "Theory Versus Experiment for the Rotordynamic Coefficients of Labyrinth Gas Seals: Part I—A Two Control Volume Model（Scharrer, 1988）",
+          "why": "ラビリンスシールのキャビティ内再循環速度を初めて理論モデルに組み込んだとされる、2コントロールボリュームモデルの基礎理論論文。rotor定番枠の抄録ベースとして選定。faithfulness-checkでは、概念図が『制御体積1（キャビティ）』『制御体積2（キャビティ）』という隣接する2つのキャビティの内訳を描いていたが、この内訳自体が抄録では確認できない具体的すぎる主張だったため高重要度の指摘を受け、歯すきまの漏れ流れとキャビティ内再循環という抄録で確実に裏付けられる要素だけを示す図に差し替えた。termsの定義文も同様に内訳を断定しない表現に後退させた。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "タイトルの表記ゆれで、重複チェックが2回すり抜けた",
+          "note": "『Design, Fabrication and Performance』と『Design, Fabrication, and Performance』（読点1つの違い）、『CFD-Predicted on Rotordynamic Characteristics』と『CFD-Predicted Rotordynamic Characteristics』（\"on\"の有無）という、ごく些細な表記ゆれのために、タイトル完全一致による重複チェックが2回すり抜けました。どちらも全文を読み込み図まで抽出した後でDOIベースの照合に切り替えて発覚し、選定をやり直しました。以後は候補選定の最初の段階でDOIベースの重複チェックを徹底することにしました。"
+        },
+        {
+          "title": "『原文が矛盾している数値』を扱うときに、自分で埋めてしまった",
+          "note": "DellaCorte & Bruckner (2010)のレビュー論文で、200mm径軸受の負荷容量について原文が『8倍・約4800kN』と書いているのに、100mm径の6kNの8倍と計算が合わない（正しくは約48kN）という、原文自身の内部矛盾がありました。最初はこの数値をそのまま出してしまい指摘を受け、次に『原文のポンド表記を換算すると』と自分で数値を補って書き直したのですが、実はそのポンド表記の部分はPDFの文字が潰れて判読できない箇所で、これも忠実性チェックで『捏造』と判定されました。最終的には、原文の中で確実に読み取れる別の数値（200mm側のポンド表記）だけを根拠にして、kN側の換算表記に誤記があるという事実だけを書くところに落ち着きました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 24,
+            "note": "OA20/抄録4。上位はarXivの分野外ノイズと、OpenAlex新着側の候補はほぼ既配信済みで埋まっていた。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中、最初に選んだDellaCorte et al.(2008)を含め大半が既配信済みと判明（表記ゆれで1件見落とし）。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、\"foil bearing\"フレーズ）",
+            "scope": "title_and_abstract.search、発行日順(from 2025-06-01)と被引用順の2系統、各per-page46〜50",
+            "terms": [
+              "foil bearing"
+            ],
+            "hits": 96,
+            "note": "発行日順でRen & Zhang (2025)のIOP Conf Series論文（危険速度解析）を発掘。被引用順ではDellaCorte 2008が既配信と判明したため、OSTI/NTRS経由でDellaCorte & Bruckner (2010)のレビュー論文に切り替え。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA7/抄録6。CFD-Predicted labyrinth seal論文（Zhang et al.）を最初に選定したが表記ゆれで既配信と後日判明。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件はほぼ既配信または書籍・分野外で、直接クエリに切り替え。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、\"labyrinth seal\"・\"rotordynamic\"フレーズ）",
+            "scope": "title_and_abstract.search、OA限定/被引用順、各per-page50",
+            "terms": [
+              "labyrinth seal",
+              "rotordynamic"
+            ],
+            "hits": 125,
+            "note": "\"labyrinth seal\"検索でBarbi et al.(2026)のCFD対バルクフローモデル比較論文（rotor最新、Springer OA・CC-BY）を発掘。\"rotordynamic\"被引用順検索でScharrer(1988)の2コントロールボリューム基礎理論論文（rotor定番、抄録ベース）を発掘。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。44号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠全てでOpenAlex直接クエリによる深掘りが必要だった。うち2枠（foil定番・rotor最新）は最初に選んだ候補がタイトル表記ゆれで重複チェックをすり抜けており、DOIベースの再照合で気づいて差し替えた。"
+      },
+      "afterword": "今号は「気づいたら同じ論文を2回配信しかけていた」という冷や汗ものの回でした。原因はタイトルの読点1つ、英単語1つの有無。人間なら「同じ論文だ」とすぐ分かる違いなのに、文字列の完全一致でチェックしていたせいで機械的にはすり抜けてしまうんですね。もう一つ印象に残ったのは、フォイル軸受のレビュー論文にあった「200mm径だと負荷容量が8倍で4800kN」という数値が、実は原文自身の中で計算が合っていなかったこと。最初はそれをそのまま書いてしまい、次は「じゃあ元のポンド表記ならこうだろう」と自分で埋めてしまい、結局それも読み取れない箇所だったと判明しました。数値が合わない箇所を見つけたら、埋めずに「合わない」と書くだけにする——今回いちばん腑に落ちた教訓です。 — 編集担当より"
     }
   ]
 }
