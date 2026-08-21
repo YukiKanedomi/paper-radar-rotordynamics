@@ -5685,6 +5685,159 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。44号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠全てでOpenAlex直接クエリによる深掘りが必要だった。うち2枠（foil定番・rotor最新）は最初に選んだ候補がタイトル表記ゆれで重複チェックをすり抜けており、DOIベースの再照合で気づいて差し替えた。"
       },
       "afterword": "今号は「気づいたら同じ論文を2回配信しかけていた」という冷や汗ものの回でした。原因はタイトルの読点1つ、英単語1つの有無。人間なら「同じ論文だ」とすぐ分かる違いなのに、文字列の完全一致でチェックしていたせいで機械的にはすり抜けてしまうんですね。もう一つ印象に残ったのは、フォイル軸受のレビュー論文にあった「200mm径だと負荷容量が8倍で4800kN」という数値が、実は原文自身の中で計算が合っていなかったこと。最初はそれをそのまま書いてしまい、次は「じゃあ元のポンド表記ならこうだろう」と自分で埋めてしまい、結局それも読み取れない箇所だったと判明しました。数値が合わない箇所を見つけたら、埋めずに「合わない」と書くだけにする——今回いちばん腑に落ちた教訓です。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-22",
+      "status": "published",
+      "headline": "第45号：foil/rotor各2件（Bonello 2019 OA全文・He, Feng & Ren 2025抄録ベース／Childs & Ramsey 1991 OA全文・Comsa, Hyun, Delgado & Cizmas 2026抄録ベース）。今号は候補選定の過程で2件の2026年新着論文（Elsevier誌）を抄録が全く取得できず断念、忠実性チェックでは4件とも2ラウンドの修正を経た。",
+      "intro": "45号目でも、collect.mjsの基本候補（各枠の上位）はfoil・rotorとも定番・最新の大半が既配信で埋まっていました。4枠すべてでOpenAlexへの直接クエリ（フレーズを変えた複数系統、被引用順・発行日順）による深掘りが必要でした。今号はさらに一つ壁がありました：foil最新枠とrotor最新枠で最初に見つけた2026年公開の新着論文（いずれもElsevier誌）が、OpenAlex・Crossref・Semantic Scholarのどこにも抄録データが登録されておらず、ScienceDirectへの直接アクセスもCloudflareのボット保護で阻まれ、抄録すら確認できませんでした。§0（推測で埋めない）に反するため、この2件は使わず、抄録が確実に取得できる代替候補（He, Feng & Ren 2025／Comsa, Hyun, Delgado & Cizmas 2026）に差し替えました。",
+      "picked": [
+        {
+          "id": "doi:10.1016/j.ymssp.2019.04.018",
+          "title": "The Extraction of Campbell Diagrams from the Dynamical System Representation of a Foil-Air Bearing Rotor Model（Bonello, 2019）",
+          "why": "フォイル空気軸受支持ロータのCampbell図を、従来の力係数法を経由せず動力学系モデルの固有値解析から直接抽出する手法を示した研究。foil定番枠のOA全文（Mechanical Systems and Signal Processing、著者最終稿がマンチェスター大学リポジトリで公開）として選定。faithfulness-checkでは、3つの検証ケースのうち実際には主要ケース（3パッド軸受）でしか全モードの個別シミュレーション検証が行われていないのに『3ケースすべてで厳密一致』と一般化していた点、『食い違いを完全に解消した』という結論が実は『同一の計算モデルで比較した場合』という限定付きだった点（先行研究とのわずかな残差は空気膜の離散化手法の違いによる）が2ラウンドにわたり指摘され修正した。用語表記についても、既に配信済みの『Campbell図』という表記が既存papers.jsonにあることが判明し、自分がドラフトで使っていた『キャンベル線図』という訳語を全箇所差し替えて統一した。"
+        },
+        {
+          "id": "doi:10.1115/1.4069088",
+          "title": "Numerical and Experimental Investigation of a Novel Gas Foil Bearing With a Slotted Bump Foil Structure（He, Feng & Ren, 2025）",
+          "why": "バンプフォイルにスロットを設けることで負荷容量とアンチオーバーターニング能力を高めつつ、リフトオフ速度と温度上昇を下げた新構造を数値・実験の両面で示した研究。foil最新枠の抄録ベースとして選定（全文は未取得）。faithfulness-checkでは、抄録に本数の記載がないのに『スロットを一つ』と描写・図示していた点、『摩擦も減らせる』という抄録にない断定を混ぜていた点が指摘され、抄録の範囲に忠実な表現へ修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.2920587",
+          "title": "Seal-Rotordynamic-Coefficient Test Results for a Model SSME ATD-HPFTP Turbine Interstage Seal With and Without a Swirl Brake（Childs & Ramsey, 1991）",
+          "why": "スペースシャトル用ターボポンプの段間シール模型で、スワールブレーキ（旋回抑制用リブ）が不安定化力（交差剛性）を大きく減らす効果を実測した研究。rotor定番枠のOA全文（Journal of Tribology、NASA技術報告版がNTRSで公開）として選定。faithfulness-checkでは、OpenAlexの著者名寄せ誤り（同名の別分野研究者と混同された『Christopher Bronk Ramsey』）をそのまま採用していた点、シールの『歯先径（直径）』を『半径』と誤記していた点、理論と実測の食い違いの向き（低速で妥当・高速で悪化のはずが逆に書かれていた箇所）を2ラウンドにわたり指摘され修正した。原論文自体に内部矛盾（直接減衰Cについて本文と結論部で評価が逆）がある箇所は、その矛盾ごと明記する形にした。"
+        },
+        {
+          "id": "doi:10.1080/10402004.2026.2635394",
+          "title": "An Experimental and Numerical Investigation of the Rotordynamic Force Coefficients of a Gas Labyrinth Seal: Part 1—Experimental Results（Comsa, Hyun, Delgado & Cizmas, 2026）",
+          "why": "6枚歯のガスラビリンスシールを単一周波数・多周波数の擬似ランダム波形で加振し、動特性係数を求めた実験研究（全2部シリーズの第1部）。rotor最新枠の抄録ベースとして選定。faithfulness-checkでは、抄録に無い続編（第2部）の数値解析手法名（バルクフローモデル・Spalart-Allmaras乱流モデル）を推測で書き足していた点が高重要度の指摘を受け削除、概念図が歯の配置（ロータ側かステータ側か）を抄録にない形で断定して描いていた点も修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "抄録データが一つも見つからず、2件を候補から外した",
+          "note": "OpenAlex新着枠で見つけたElsevier誌の2026年新着論文2件（gas foil bearingの摩耗シミュレーション論文、cryogenic turbine expanderのラビリンスシール論文）は、いずれもOpenAlex・Crossref・Semantic Scholarのどこにも抄録が登録されておらず、ScienceDirectへの直接アクセスもCloudflareのボット保護（r.jina.ai経由の迂回も含め）で阻まれました。抄録すら確認できない論文は、抄録ベースの紹介すら書けない（§0：推測で埋めない）ため、両方とも候補から外し、抄録が確実に取得できる代替候補に差し替えました。"
+        },
+        {
+          "title": "既配信の用語表記との重複に気づいた",
+          "note": "Bonello (2019) 論文の要約を書く際、原題の直訳から『キャンベル線図』という訳語を使っていましたが、既にpapers.jsonに『Campbell図』という表記で同じ概念の用語が登録されていたことが分かり、19箇所すべてを『Campbell図』に差し替えました。表記ゆれは用語集・関係グラフでノードが分裂する原因になるため、新しい論文を書き起こすたびに既存表記の確認が欠かせません。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は分野外ノイズ（cat OR検索の緩和による混入）。OpenAlex新着側の候補はほぼ既配信済み。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中13件が既配信済み（DOIベース照合）。唯一の新規（書籍『Linear and Nonlinear Rotordynamics』）は教科書のため見送り。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、複数フレーズ×is_oa:true）",
+            "scope": "title_and_abstract.search、cited_by_count:desc、open_access.is_oa:true、per-page15",
+            "terms": [
+              "gas foil bearing",
+              "foil bearing rotordynamic",
+              "compliant foil bearing",
+              "bump foil bearing stiffness",
+              "air foil journal bearing"
+            ],
+            "hits": 45,
+            "note": "OA限定の深掘りでBonello (2019)のCampbell図論文（Manchester大学リポジトリ経由でPDF取得成功）を発掘。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、has_abstract:true・非OA・2023年以降）",
+            "scope": "title_and_abstract.search、publication_date:desc、open_access.is_oa:false、has_abstract:true",
+            "terms": [
+              "gas foil bearing",
+              "foil thrust bearing",
+              "bump foil bearing"
+            ],
+            "hits": 16,
+            "note": "He, Feng & Ren (2025)のスロット付きバンプフォイル軸受論文を発掘（抄録あり・全文なし）。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は分野外ノイズ。OpenAlex新着側で発掘したラビリンスシール論文（cryogenic turbine expander）は抄録が取得できず見送り。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件中13件が既配信または分野外（統計学・電力系統）。唯一の新規『Rotordynamics of Turbomachinery』(Vance 1988)は書籍のため見送り。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、複数フレーズ×is_oa:true）",
+            "scope": "title_and_abstract.search、cited_by_count:desc、open_access.is_oa:true、per-page12",
+            "terms": [
+              "whirl instability rotor",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration rotor",
+              "rotor-bearing system stability",
+              "critical speed rotor bearing"
+            ],
+            "hits": 66,
+            "note": "OA限定の深掘りでChilds & Ramsey (1991)のSSMEスワールブレーキ論文を発掘（NASA NTRS経由でPDF取得成功）。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、has_abstract:true・非OA・2023年以降）",
+            "scope": "title_and_abstract.search、publication_date:desc、open_access.is_oa:false、has_abstract:true",
+            "terms": [
+              "labyrinth seal rotordynamic",
+              "seal rotordynamic coefficients",
+              "subsynchronous vibration",
+              "rotor bearing stability"
+            ],
+            "hits": 33,
+            "note": "Comsa, Hyun, Delgado & Cizmas (2026)のガスラビリンスシール実験論文（全2部の第1部）を発掘。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。45号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠全てでOpenAlex直接クエリによる深掘りが必要だった。うち2枠は最初に見つけた候補（Elsevier誌2026年新着論文）が抄録データを一切持たず、has_abstract:trueフィルタを使った再検索で代替候補に差し替えた。"
+      },
+      "afterword": "今号は「読めない論文には手を出さない」という基本を、久しぶりに正面から試された回でした。OpenAlexで見つけた2026年の新着論文が、内容としては（タイトルを見る限り）とても面白そうだったのに、抄録すら手に入らないという壁にぶつかったんです。全文が読めない論文は「抄録ベースで」と割り切ってきましたが、抄録すら空っぽだと、もう何も書けません。当たり前のようで、今回初めて実感を伴って腑に落ちました。もう一つ驚いたのは、自分が新しく訳した『キャンベル線図』という言葉が、実は過去の号ですでに『Campbell図』として登録されていたこと。同じ図の呼び方が号によってバラバラだと、用語集で別々の言葉として扱われてしまうんですね。地道な言葉選びの積み重ねが、後から読む人の分かりやすさにつながるんだなと感じました。 — 編集担当より"
     }
   ]
 }
