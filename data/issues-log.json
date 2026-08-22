@@ -5838,6 +5838,159 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。45号でもcollect.mjsの基本候補プールはfoil・rotorとも大半が既配信済みで、4枠全てでOpenAlex直接クエリによる深掘りが必要だった。うち2枠は最初に見つけた候補（Elsevier誌2026年新着論文）が抄録データを一切持たず、has_abstract:trueフィルタを使った再検索で代替候補に差し替えた。"
       },
       "afterword": "今号は「読めない論文には手を出さない」という基本を、久しぶりに正面から試された回でした。OpenAlexで見つけた2026年の新着論文が、内容としては（タイトルを見る限り）とても面白そうだったのに、抄録すら手に入らないという壁にぶつかったんです。全文が読めない論文は「抄録ベースで」と割り切ってきましたが、抄録すら空っぽだと、もう何も書けません。当たり前のようで、今回初めて実感を伴って腑に落ちました。もう一つ驚いたのは、自分が新しく訳した『キャンベル線図』という言葉が、実は過去の号ですでに『Campbell図』として登録されていたこと。同じ図の呼び方が号によってバラバラだと、用語集で別々の言葉として扱われてしまうんですね。地道な言葉選びの積み重ねが、後から読む人の分かりやすさにつながるんだなと感じました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-23",
+      "status": "published",
+      "headline": "第46号：foil/rotor各2件（Hu, Ding, Wu, Wang, Liang & Meng 2024 OA全文・Peng & Khonsari 2004抄録ベース／Chauhan & Kumar 2026抄録ベース・Sinha 2013 OA全文）。今号もcollect.mjsの基本候補は大半が既配信済みで、4枠すべてOpenAlex直接クエリの深掘りが必要。忠実性チェックはHu et al. 2024とSinha 2013が2ラウンド、Peng & Khonsari 2004とChauhan & Kumar 2026が1ラウンドの修正を経て公開。",
+      "intro": "46号目も、collect.mjsが日替わりで選ぶキーワードは7〜8語すべてが毎日クエリされるため、foil・rotorとも定番枠の上位はほぼ既配信で埋まっていました。foil最新枠はarXivの分野外ノイズとOpenAlex新着の重複ばかりで、rotor定番枠の新規候補は書籍（Vance『Rotordynamics of Turbomachinery』・実体はLalanne & Ferraris著書の書評だった論文）のみという状況。そこでfoil・rotorそれぞれ、被引用順の深掘り（引用順位を通常の上位14件からさらに広げる）と、is_oa:true限定・発行日順の深掘りを行い、Hu et al.(2024, Friction誌CC-BY)とSinha(2013, JSV・著者のHALリポジトリ経由CC BY 4.0)というOA全文2件、Peng & Khonsari(2004)とChauhan & Kumar(2026)という抄録ベース2件を発掘しました。",
+      "picked": [
+        {
+          "id": "doi:10.1007/s40544-024-0889-0",
+          "title": "Theoretical and experimental research on static stiffness, performance, and lift-off characteristics of multi-layer gas foil thrust bearings（Hu, Ding, Wu, Wang, Liang & Meng, 2024）",
+          "why": "従来のバンプ型フォイルではなく、トップフォイル・バックボード・ミドルフォイル・ボトムフォイルの4層を重ねる新構造のスラストフォイル軸受について、気体潤滑(FVM)とフォイル構造の接触解析(FEM)を完全連成させたモデルを構築し、専用試験装置による実測で検証した研究。foil最新枠のOA全文（Springer/Friction誌、CC-BY 4.0）として選定。faithfulness-checkでは2ラウンドの修正が入った：(1) 予圧・荷重・回転数の相互作用検討はCOMSOL+MATLABの数値シミュレーションのみで実測はしていないのに『実験』『交互作用実験』と書いていた箇所を『シミュレーション』『交互作用解析』へ訂正（実際に実測で検証されたのは無回転時の静荷重-変位曲線と回転時の荷重-ギャップ曲線の2つだけ）、(2) 押し込み変位40→160µmでの変形量を『200µmの押し込みで』と数値-条件の対応を取り違えていた箇所、(3) 『リフトオフして摩擦がほぼゼロになった』という原文にない誇張、を修正した。"
+        },
+        {
+          "id": "doi:10.1115/1.1739242",
+          "title": "Hydrodynamic Analysis of Compliant Foil Bearings With Compressible Air Flow（Peng & Khonsari, 2004）",
+          "why": "気体の圧縮性と軸受面のコンプライアンス（たわみやすさ）の両方を考慮したフォイルジャーナル軸受の流体力学モデルで、Hu et al.(2024)を含む後年の多くのフォイル軸受研究に参照文献として引かれている定番的な一本。抄録が4文と極めて短いため、foil定番枠の抄録ベースとして選定。faithfulness-checkでは、抄録に無い『レイノルズ方程式』『連成』という具体的な手法名をexpertレベルで断定していた過剰記述（over-reach）、被引用数を出典間で異なる値（Crossref104・Semantic Scholar115・OpenAlex125）のうち最も高い値だけを『120件前後』と書いていた点を修正した。"
+        },
+        {
+          "id": "doi:10.1177/13506501261475076",
+          "title": "Effect of surface roughness and micropolar lubricants on performance of capillary compensated hole-entry hybrid journal bearing（Chauhan & Kumar, 2026）",
+          "why": "毛細管絞り補償型の穴入口ハイブリッドジャーナル軸受について、表面粗さとマイクロポーラ潤滑油を組み合わせた場合の影響を有限要素法で調べた研究。軸受流量18.9%減・最小油膜厚さ5%増という抄録記載の具体的数値をrotor最新枠の抄録ベースとして選定。faithfulness-checkでは、抄録に無い『これまで研究が少なく効果がよくわかっていなかった』という研究ギャップの断定、および非OA論文なのに『本文の紹介より』と出所を偽装していたtriviaを削除した。"
+        },
+        {
+          "id": "doi:10.1016/j.jsv.2012.11.033",
+          "title": "Rotordynamic analysis of asymmetric turbofan rotor due to fan blade-loss event with contact-impact rub loads（Sinha, 2013）",
+          "why": "ジェットエンジンのファンブレードが1枚脱落した後の非対称ロータについて、羽根をプレツイスト薄肉シェルとしてモデル化し、軸の曲げ・内部減衰・ジャイロ効果・羽根先端のラブ摩擦力まで含む完全な非線形運動方程式を導出、固有振動数の分裂（58.45Hz→58.35/59.97Hz）や危険速度、ウィンドミリング中のホワール挙動を明らかにした研究。rotor定番枠のOA全文（著者のHALリポジトリ、CC BY 4.0）として選定。faithfulness-checkでは2ラウンドの修正が入った：(1) 検証に使われた実測ひずみゲージデータは本論文自身の実験ではなく既発表の別のリグ試験（高圧圧縮機翼）のものであり、かつ計測位置は『ブレード先端』ではなく『翼根（フィレット部）』だったのに、当初は『実際に羽根をこすらせた実験データ』『先端のひずみ』と誤記していた点、(2) 本論文の新規性主張（非対称柔軟翼ロータの強制過渡応答をラブ面柔軟性込みで扱った初の論文）を、実際は著者の先行研究の達成である『固定座標系での統一的定式化』にすり替えていた点を修正した。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "抄録すら取得できない2026年新着論文が今号も2件あった",
+          "note": "foil最新枠で見つけた「水素燃料電池コンプレッサ用ガスフォイル軸受の摩耗を物理拘束型ニューラルネットで予測する」論文と、rotor最新枠で見つけた「極低温タービン膨張機のラビリンスシールの構造変形」論文は、いずれもOpenAlex・Crossref・Semantic Scholar・Unpaywallのどこにも抄録が登録されておらず、ScienceDirectの記事ページもCloudflareのボット保護（r.jina.ai経由の迂回含め）に阻まれ、タイトル以上の情報が一切得られませんでした。抄録すら無い論文は§0（推測で埋めない）に反するため候補から外しました。"
+        },
+        {
+          "title": "低品質なOA論文を見送った",
+          "note": "foil定番枠の代替候補として一度は「Gas Foil Bearingsに関する総説」（インドの新興オープンアクセス誌）を試しましたが、参考文献にWikipediaや未公刊の学位論文が並び、内容も一般的な教科書的説明の域を出ない薄いものだったため、配信の質を保つため見送りました。かわりにPeng & Khonsari (2004)という、他の多くの論文から引用される確立した定番文献を選び直しました。"
+        },
+        {
+          "title": "「書籍」を誤って論文候補に含めそうになった",
+          "note": "rotor定番枠の被引用上位に『Rotordynamics of Turbomachinery』（Vance, 1988）という高被引用（509件）の候補が挙がりましたが、正体は書籍でDOIが無く、全文の所在も曖昧でした。foil側でも同様に『Linear and Nonlinear Rotordynamics: A Modern Treatment with Applications』という候補が挙がりましたが、こちらは実際には別の書籍（Lalanne & Ferraris著）の書評記事（被引用0件）でした。どちらも本来の論文候補ではないため除外しました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位は分野外ノイズ、OpenAlex新着側は磁気軸受論文（技術分野が異なり見送り）と抄録取得不能な摩耗シミュレーション論文以外すべて既配信済み。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件中13件が既配信済み。唯一の新規候補は書評記事（書籍の書評、被引用0件）のため見送り。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、7キーワード×cited_by_count:desc・per-page25）",
+            "scope": "title_and_abstract.search、cited_by_count:desc",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 40,
+            "note": "被引用上位を通常の14件よりさらに深く見て、Peng & Khonsari(2004、J. Tribology、被引用100件超)を発掘。上位40件中ほぼ全て既配信済みだった。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、is_oa:true・2024年以降・publication_date:desc）",
+            "scope": "title_and_abstract.search、is_oa:true、from_publication_date:2024-01-01",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 26,
+            "note": "OA限定・日付順の深掘りでHu et al.(2024, Friction誌CC-BY)を発掘。r.jina.ai経由でSpringerLinkの全文HTMLを取得できた。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。この中からChauhan & Kumar(2026、穴入口ハイブリッド軸受)を発見・選定。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。上位14件中の新規候補2件はいずれも書籍（Vance 1988）・書評記事（Lalanne & Ferraris書評）で見送り。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、8キーワード×cited_by_count:desc・per-page25）",
+            "scope": "title_and_abstract.search、cited_by_count:desc",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration"
+            ],
+            "hits": 186,
+            "note": "被引用上位の深掘りでSinha(2013, JSV、著者のHALリポジトリ経由でCC BY 4.0全文取得)を発掘。同時に見つかった『Nonlinear dynamic modeling of surface defects in rolling element bearing systems』(2008)は全ソースで抄録が取得できず見送り。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。46号でもcollect.mjsの基本候補プール（各枠上位14件）は大半が既配信済みで、4枠全てでOpenAlexへの直接クエリによる深掘りが必要だった。foilはcited_by_count順を40件・rotorは186件まで広げて新規候補を探した。"
+      },
+      "afterword": "今号でおもしろかったのは、被引用数の高い「定番」候補を深掘りしていくと、途中で「書籍」や「書評記事」が紛れ込んでくることでした。Vance先生の有名な教科書『Rotordynamics of Turbomachinery』も、Lalanne & Ferrarisの本の書評記事も、タイトルだけ見ると本物の研究論文と見分けがつきません。被引用数が509件もあったVanceの本は一瞬「これは良い候補だ」と思ったのですが、よく見るとDOIが無く出版形態が論文ではありませんでした。件数やタイトルだけで判断せず、素性を一つずつ確認する地道さが必要なんだなと実感しました。もう一つ印象的だったのは、Sinha(2013)論文の検証で「ひずみゲージは羽根の先端ではなく根元（フィレット部）についていた」という指摘を受けたこと。専門家でない自分には最初「先端」も「根元」も大差なく感じましたが、力学的にはまったく違う場所で、修正して初めて「そうか、根元は応力が集中しやすい場所だから測るんだ」と腑に落ちました。 — 編集担当より"
     }
   ]
 }
