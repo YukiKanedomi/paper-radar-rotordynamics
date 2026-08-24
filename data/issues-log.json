@@ -6112,6 +6112,131 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。47号もfoil定番枠は候補ゼロ、rotor両枠も新規候補の多くがアブストラクト取得不能で、OpenAlexへの直接クエリによる深掘りが必要だった。"
       },
       "afterword": "今回印象に残ったのは、データベースの「OA（オープンアクセス）」という表示を鵜呑みにしてはいけない、という発見でした。Samanta, Murmu & Khonsariのレビュー論文は、OpenAlexもUnpaywallも「OA全文あり」と判定していたのですが、実際にリンクを踏むと保存先のリポジトリで「現在利用できません」と表示され、結局は抄録だけを頼りに書くことになりました。もう一つ、まったく別の軸受（フォイル軸受とミスアライメント気体軸受）を扱う2本の論文で、どちらも「回転数の半分の速さで振れ回る」という同じ現象（半速振れ回り）が主役級の話題として出てきたのも面白い偶然でした。仕組みも軸受の種類も違うのに、不安定化するときには同じような周波数の型に落ち着くというのは、素人目には不思議に感じます。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-25",
+      "status": "published",
+      "headline": "第48号：foil/rotor各2件（Howard 1999 OA全文・Ryu & San Andrés 2013抄録ベース／Nelson & Nguyen 1987 OA全文・Kleynhans & Childs 1997抄録ベース）。今号もcollect.mjsの基本候補プールは大半が既配信済みで、ScienceDirect等のbotブロックを避けてNASA NTRS収録論文へ深掘りした。",
+      "intro": "48号目も、collect.mjsが選ぶ基本候補（各枠上位14〜24件）は大半が既配信済みでした。foil定番枠は上位14件がほぼ全件既配信、foil最新枠のarXiv上位も分野外ノイズ（航空宇宙・流体制御等）ばかりで、新規のfoil軸受論文はほとんど見つかりませんでした。そこでOpenAlexへ直接、被引用数順・OA限定などの条件でクエリを掘り下げたところ、有望な候補（Chinese Journal of Aeronauticsに載った2020年・2021年の論文）が見つかったものの、掲載元のScienceDirectがボット対策で本文取得を403で拒み続け、実際には読めませんでした。そこで検索範囲をNASA NTRSや大学リポジトリなど実際にアクセスできるホストに絞り込み、Samuel A. Howardによる1999年のNASA/CRレポート（オイルフリー・ターボチャージャの設計フィージビリティ研究）と、Nelson & Nguyenによる1987年のNASA CP論文（環状シールのHirs式とMoody式比較）を発掘しました。foilのもう1件はRyu & San Andrés(2013)の焼き付き事例報告を抄録ベースで、rotorのもう1件はKleynhans & Childs(1997)のハニカムシール音響研究を抄録ベースで採用しています。",
+      "picked": [
+        {
+          "id": "ntrs:19990018837",
+          "title": "Rotordynamics and Design Methods of an Oil-Free Turbocharger（Howard, 1999）",
+          "why": "ディーゼルトラック用ターボチャージャをフォイル軸受で支持する設計フィージビリティ研究。危険速度マップと対数減衰率による安定性解析、遠心応力・熱成長の評価まで踏み込み、短尺・長尺2案のトレードオフを具体的な数値で示している。foil定番枠のOA全文（NASA NTRS収録）として選定。faithfulness-checkは2ラウンドで通過（応力比較の向きの誤り等を修正）。"
+        },
+        {
+          "id": "doi:10.1115/1.4025079",
+          "title": "On the Failure of a Gas Foil Bearing: High Temperature Operation Without Cooling Flow（Ryu & San Andrés, 2013）",
+          "why": "冷却空気を止めたまま高温のロータを回し続けた結果、軸受が焼き付いた事例の報告。原因分析だけでなく「a cautionary tale and a lesson in humility」という率直な結びが印象的。foil最新枠の抄録ベースとして選定。faithfulness-checkは2ラウンドで通過（250°Cの解釈の曖昧さ等を修正）。"
+        },
+        {
+          "id": "doi:10.1115/1.3261306",
+          "title": "Comparison of Hirs' Equation With Moody's Equation for Determining Rotordynamic Coefficients of Annular Pressure Seals（Nelson & Nguyen, 1987）",
+          "why": "粗い表面を持つ環状シールで、従来のHirs式が実測より弱い剛性を予測しがちだった理由の一端を、摩擦係数モデルの違いから明らかにした基礎研究。rotor定番枠のOA全文（NASA CP版・NTRS収録）として選定。faithfulness-checkは2ラウンドで通過（Lomakinの年代の誤記載、Conclusions節の要約漏れ等を修正）。"
+        },
+        {
+          "id": "doi:10.1115/1.2817079",
+          "title": "The Acoustic Influence of Cell Depth on the Rotordynamic Characteristics of Smooth-Rotor/Honeycomb-Stator Annular Gas Seals（Kleynhans & Childs, 1997）",
+          "why": "ハニカムシールの小部屋が音の伝わる速さを大きく下げてしまい、単純なバネ・ダンパのモデルでは動特性を表せなくなることを示した研究。rotor最新枠の抄録ベースとして選定。faithfulness-checkは2ラウンドで通過（一次遅れ関数の用語誤り等を修正）。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "OpenAlex/Unpaywallが「OA」と判定していても、実際には読めないことが複数あった",
+          "note": "Zhou et al.(2020)とYu, Guo & Li(2021)、いずれもChinese Journal of Aeronauticsに載った良さそうな候補でしたが、掲載元のScienceDirectがボット対策（Akamai）で403を返し続け、本文を確認できませんでした。データベース上の「OA」表示を鵜呑みにせず、実際にアクセスできたNASA NTRS収録の2件に差し替えています。"
+        },
+        {
+          "title": "ML主体の候補は見送り",
+          "note": "「物理誘導ニューラルネットワークによるガスフォイル軸受-ロータ系の摩耗シミュレーション」（2026）は抄録も取得できずタイトルのみで、かつ手法がML主体と見られたため候補から外しました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing"
+            ],
+            "hits": 24,
+            "note": "OA21/抄録3。arXiv上位8件はほぼ分野外ノイズ（サイクロローター翼形状最適化、ベイズ最適化等）。OpenAlex新着側の新規候補もほぼ全て既配信済みで使えるものがなかった。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件がほぼ全件既配信済み。新規候補の『Linear and Nonlinear Rotordynamics: A Modern Treatment with Applications』はタイトルから期待したが、実際には教科書の書評記事（Applied Mechanics Reviews誌）と判明し除外した。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、信頼できるアクセス先に限定）",
+            "scope": "\"gas foil bearing\" \"foil bearing\" 等 × best_oa_location.is_oa:true、NASA NTRS・大学リポジトリのURLパターンに絞って再選別",
+            "terms": [
+              "gas foil bearing",
+              "foil bearing rotor dynamic",
+              "foil bearing thermal effects"
+            ],
+            "hits": 45,
+            "note": "ScienceDirect・MDPI・Hindawi等はボット対策で本文取得が403ブロックされたため、NASA NTRS（ntrs.nasa.gov）や大学リポジトリのURLを持つ候補に絞り込み。Howard(1999, NASA/CR)を発掘、PDF取得・全文照合に成功。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 13,
+            "note": "OA8/抄録5。新規候補（ラビリンスシールの構造変形、水潤滑軸受の測定等）の多くは抄録取得不能または既配信済みで、使えるものが無かった。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。新規候補は統計学・電力系統など分野外ノイズが混じり（\"unbalance\"の語義違い等）、on-topicな新規候補が無かった。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、信頼できるアクセス先に限定）",
+            "scope": "annular seal rotordynamic / labyrinth seal rotordynamic coefficients 等 × best_oa_location.is_oa:true、NASA NTRS・大学リポジトリに絞って再選別。非OA候補は通常検索で抄録を確認",
+            "terms": [
+              "annular seal rotordynamic coefficients",
+              "labyrinth seal rotordynamic coefficients",
+              "honeycomb seal rotordynamic"
+            ],
+            "hits": 30,
+            "note": "Nelson & Nguyen(1987, NASA CP/ASME J. Tribology)をNTRSで発掘・全文照合。Kleynhans & Childs(1997)はOpenAlexの抄録から発掘したが全文はScienceDirectで403のため抄録ベースとして採用。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。48号は基本候補プールの枯渇に加え、ScienceDirect・MDPI・Hindawi等主要出版社のボット対策により全文取得できない候補が多く、NASA NTRSと大学リポジトリに的を絞った深掘りが必要だった。"
+      },
+      "afterword": "今号は「同じロータダイナミクスの問題でも、原因の見え方はいろいろある」と感じた回でした。粗いシール（ハニカムなど）は昔から『実測より剛性が弱く予測されがち』という悩みがあったそうですが、Nelson & Nguyen(1987)を読むと、その原因の一端は摩擦係数の計算式が表面の粗さを考慮していなかったからだと分かります。ところが同じ「ハニカムシール」を扱うKleynhans & Childs(1997)は、まったく別の角度から——ハニカムの小部屋が音の伝わる速さを遅くしてしまうという音響的な効果から——シールの力の伝わり方が単純なバネ・ダンパでは表せなくなる理由を説明していました。同じ部品でも、注目する物理が違うと全く別の話に見えるのが面白い発見でした。もう一つ印象に残ったのは、フォイル軸受の焼き付き事故を報告したRyu & San Andrés(2013)の結びの一文です。「a cautionary tale and a lesson in humility（慎重さを促す教訓であり、謙虚さを学ぶ機会だった）」——実験が失敗した理由を率直に認める研究者の言葉に、技術論文らしからぬ誠実さを感じました。 — 編集担当より"
     }
   ]
 }

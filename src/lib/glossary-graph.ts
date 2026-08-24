@@ -134,6 +134,8 @@ export const CATEGORIES: GraphCategory[] = [
       "フルフォイル構造モーダルモデル(FFSMM)",
       "圧縮性流れ",
       "熱弾性不安定性",
+      "軸受数Λ(bearing number)",
+      "無冷却運転（no forced cooling flow）",
     ],
   },
   {
@@ -236,6 +238,7 @@ export const CATEGORIES: GraphCategory[] = [
       "MRF（多重参照座標系）",
       "旋回ロータ法（Precessional Rotor Method）",
       "Hirsのバルクフロー理論",
+      "Moody線図（Moody's equation）",
     ],
   },
   {
@@ -412,6 +415,8 @@ export const CATEGORIES: GraphCategory[] = [
       "1コントロールボリュームモデル(1CV)",
       "2コントロールボリュームモデル",
       "再循環（キャビティ内再循環流れ）",
+      "音響インピーダンス関数（lead-lag／lag伝達関数）",
+      "有効音速（音響的挙動）",
     ],
   },
 ];
@@ -1027,6 +1032,18 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "捩り-横連成不安定", to: "フロケ理論", label: "安定性を判定する手法" },
   // --- フォイル軸受技術の発展レビュー（Samanta, Murmu & Khonsari 2019） ---
   { from: "熱弾性不安定性", to: "サーマルランナウェイ", label: "進行すると至る" },
+  // --- オイルフリー・ターボチャージャの設計フィージビリティ研究（Howard 1999） ---
+  { from: "軸受数Λ(bearing number)", to: "偏心率 ε", label: "から軸受すきま等の設計値を決める" },
+  { from: "軸受数Λ(bearing number)", to: "対数減衰率", label: "で規定した軸受形状の安定性を評価する" },
+  // --- ガスフォイル軸受の熱起因焼き付き事例（Ryu & San Andrés 2013・抄録ベース） ---
+  { from: "無冷却運転（no forced cooling flow）", to: "半径すきま", label: "が続くと熱膨張ですきまを閉じさせる" },
+  { from: "半径すきま", to: "焼き付き（シージャー）", label: "が閉じきると発生する" },
+  // --- 環状シールのHirs式とMoody式の比較（Nelson & Nguyen 1987） ---
+  { from: "Moody線図（Moody's equation）", to: "直接剛性", label: "の予測をHirs式より粗いシールで大きくする" },
+  { from: "ロマキン効果", to: "直接剛性", label: "として現れる環状シールの復元力" },
+  // --- ハニカムシールの音響的挙動（Kleynhans & Childs 1997・抄録ベース） ---
+  { from: "2コントロールボリュームモデル", to: "有効音速（音響的挙動）", label: "でハニカムセルを容量要素として表し低下させる" },
+  { from: "有効音速（音響的挙動）", to: "音響インピーダンス関数（lead-lag／lag伝達関数）", label: "の低下が周波数依存の力を生み必要とする" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
