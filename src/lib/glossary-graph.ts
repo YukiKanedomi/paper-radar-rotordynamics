@@ -130,6 +130,10 @@ export const CATEGORIES: GraphCategory[] = [
       "接触対（コンタクトペア）",
       "動的指数関数型クーロン摩擦モデル",
       "低荷重域・高荷重域（多層フォイルの二段剛性）",
+      "ゲンベル条件",
+      "フルフォイル構造モーダルモデル(FFSMM)",
+      "圧縮性流れ",
+      "熱弾性不安定性",
     ],
   },
   {
@@ -169,6 +173,8 @@ export const CATEGORIES: GraphCategory[] = [
       "過渡非線形動解析(TNDA)",
       "力係数法(FC法)",
       "ウィンドミリング(windmilling)",
+      "ジンバル角（Cardan角）",
+      "自在継手（ユニバーサルジョイント）",
     ],
   },
   {
@@ -229,6 +235,7 @@ export const CATEGORIES: GraphCategory[] = [
       "多目的最適化（負荷容量・冷媒蒸気膜圧力・減衰）",
       "MRF（多重参照座標系）",
       "旋回ロータ法（Precessional Rotor Method）",
+      "Hirsのバルクフロー理論",
     ],
   },
   {
@@ -365,6 +372,8 @@ export const CATEGORIES: GraphCategory[] = [
       "マイクロポーラ潤滑",
       "非対称ロータ（ブレードロスによる非対称化）",
       "固有振動数の分裂（非対称ロータ）",
+      "捩り-横連成不安定",
+      "フロケ理論",
     ],
   },
   {
@@ -1007,6 +1016,17 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "非対称ロータ（ブレードロスによる非対称化）", to: "固有振動数の分裂（非対称ロータ）", label: "が対称性を崩し引き起こす" },
   { from: "固有振動数の分裂（非対称ロータ）", to: "危険速度", label: "分裂したモードがそれぞれ危険速度になる" },
   { from: "ウィンドミリング(windmilling)", to: "ホワール", label: "低速回転で前後のホワールが共存する" },
+  // --- フォイル空気軸受ロータ系の実験・理論相関（Bonello & Bin Hassan 2017） ---
+  { from: "ゲンベル条件", to: "不安定開始速度(OIS)", label: "課すと発生を遅らせる" },
+  { from: "フルフォイル構造モーダルモデル(FFSMM)", to: "バンプフォイル", label: "個々のバンプの慣性まで表現する" },
+  // --- ミスアライメントを持つ乱流気体軸受の非線形解析（Ayed & Lahmar 2026） ---
+  { from: "ジンバル角（Cardan角）", to: "ミスアライメント", label: "傾きを角度として表現する" },
+  { from: "Hirsのバルクフロー理論", to: "レイノルズ方程式", label: "乱流を考慮した修正版を導出する" },
+  // --- 自在継手駆動系の捩り-横連成安定性（DeSmidt, Wang & Smith 2002） ---
+  { from: "自在継手（ユニバーサルジョイント）", to: "捩り-横連成不安定", label: "周期的な励振源となり引き起こす" },
+  { from: "捩り-横連成不安定", to: "フロケ理論", label: "安定性を判定する手法" },
+  // --- フォイル軸受技術の発展レビュー（Samanta, Murmu & Khonsari 2019） ---
+  { from: "熱弾性不安定性", to: "サーマルランナウェイ", label: "進行すると至る" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

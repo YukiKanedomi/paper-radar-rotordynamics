@@ -5991,6 +5991,127 @@
         "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。46号でもcollect.mjsの基本候補プール（各枠上位14件）は大半が既配信済みで、4枠全てでOpenAlexへの直接クエリによる深掘りが必要だった。foilはcited_by_count順を40件・rotorは186件まで広げて新規候補を探した。"
       },
       "afterword": "今号でおもしろかったのは、被引用数の高い「定番」候補を深掘りしていくと、途中で「書籍」や「書評記事」が紛れ込んでくることでした。Vance先生の有名な教科書『Rotordynamics of Turbomachinery』も、Lalanne & Ferrarisの本の書評記事も、タイトルだけ見ると本物の研究論文と見分けがつきません。被引用数が509件もあったVanceの本は一瞬「これは良い候補だ」と思ったのですが、よく見るとDOIが無く出版形態が論文ではありませんでした。件数やタイトルだけで判断せず、素性を一つずつ確認する地道さが必要なんだなと実感しました。もう一つ印象的だったのは、Sinha(2013)論文の検証で「ひずみゲージは羽根の先端ではなく根元（フィレット部）についていた」という指摘を受けたこと。専門家でない自分には最初「先端」も「根元」も大差なく感じましたが、力学的にはまったく違う場所で、修正して初めて「そうか、根元は応力が集中しやすい場所だから測るんだ」と腑に落ちました。 — 編集担当より"
+    },
+    {
+      "date": "2026-08-24",
+      "status": "published",
+      "headline": "第47号：foil/rotor各2件（Bonello & Bin Hassan 2017 OA全文・Samanta, Murmu & Khonsari 2019抄録ベース／Ayed & Lahmar 2026 OA全文・DeSmidt, Wang & Smith 2002抄録ベース）。今号もcollect.mjsの基本候補プールは大半が既配信済みで、foil・rotor両枠でOpenAlex直接クエリの深掘りが必要だった。",
+      "intro": "47号目も、collect.mjsが選ぶ基本候補（各枠上位14〜24件）は大半が既配信済みでした。特にfoil定番枠は上位14件が全件既配信で、新規候補ゼロという状況。foil最新枠もほとんどが既配信論文の再ヒットで、新規に見つかった数件のうちアブストラクトが取得できるものは限られていました。そこでOpenAlexへ直接、被引用数順・OA限定などの条件でクエリを掘り下げ、foilは「The evolution of foil bearing technology」（Samanta, Murmu & Khonsari, 2019, Tribology International誌の総説）と「An Experimental and Theoretical Analysis of a Foil-Air Bearing Rotor System」（Bonello & Bin Hassan, マンチェスター大学）を発掘。rotorも同様に深掘りし、DeSmidt, Wang & Smith（2002, 自在継手駆動系の理論研究）とAyed & Lahmar（2026, Tribologia誌でCC-BY全文公開）を選定しました。",
+      "picked": [
+        {
+          "id": "doi:10.1016/j.jsv.2017.10.036",
+          "title": "An Experimental and Theoretical Analysis of a Foil-Air Bearing Rotor System（Bonello & Bin Hassan, 2017）",
+          "why": "フォイル空気軸受ロータ系の実験装置と、バンプフォイルの慣性まで含む詳細な理論モデルを相関させた研究。回転数を上げると出てくる半速振れ回り→1/3速への分岐という非線形現象を、実験・理論の両方で確認し、負圧の扱い方（ゲンベル条件）の妥当性にも実験的な裏付けを与えている。foil最新枠のOA全文（マンチェスター大学リポジトリの著者最終稿）として選定。faithfulness-checkは1ラウンドで通過。"
+        },
+        {
+          "id": "doi:10.1016/j.triboint.2019.03.021",
+          "title": "The evolution of foil bearing technology（Samanta, Murmu & Khonsari, 2019）",
+          "why": "フォイル軸受技術の発展を「幾何構成・圧縮性流れ」「動的性能・安定性」「摩擦特性」「熱弾性不安定性」の4テーマで俯瞰したレビュー論文。foil定番枠の候補として選定したが、OpenAlex上はOAフラグが立っているものの、著者リポジトリ（LSU）は「現在利用できません」、Elsevier本体は有料アクセスで実際には全文を読めなかったため、抄録ベースとして扱った。faithfulness-checkは1ラウンドで通過。"
+        },
+        {
+          "id": "doi:10.30678/fjt.176240",
+          "title": "Analysis of nonlinear dynamic behavior of misaligned turbulent gas journal bearings using FEM（Ayed & Lahmar, 2026）",
+          "why": "軸受のミスアライメント（縦・横の傾き）が気体ジャーナル軸受-ロータ系の非線形挙動に与える影響を、有限要素法で調べた研究。ミスアライメントが高速域で顕著な不安定化要因になる一方、乱流の影響はほぼ無いという結果を示している。rotor最新枠のOA全文（CC BY 4.0、フィンランドのTribologia誌）として選定。faithfulness-checkは1ラウンドで通過。"
+        },
+        {
+          "id": "doi:10.1115/1.1460907",
+          "title": "Coupled Torsion-Lateral Stability of a Shaft-Disk System Driven Through a Universal Joint（DeSmidt, Wang & Smith, 2002）",
+          "why": "自在継手（ユニバーサルジョイント）で駆動される軸-円板系について、捩り振動と横振動の連成によって生まれる新しい不安定領域を、フロケ理論で明らかにした理論研究。rotor定番枠の抄録ベースとして選定。faithfulness-checkは1ラウンドで通過。"
+        }
+      ],
+      "aside": [
+        {
+          "title": "抄録すら取得できない非OA論文が複数あった",
+          "note": "rotor latest枠で見つけた「double-V honeycomb構造とダンピング材を持つフォイル軸受-ロータ系」（Zhu et al., 2025, MSSP誌）と、rotor classic枠で見つけた「転がり軸受系の表面欠陥の非線形動的モデリング」（Rafsanjani et al., 2008, JSV誌）は、OpenAlex・Crossref・Semantic Scholar・Unpaywallのいずれにもアブストラクトが登録されておらず、ScienceDirectの記事ページも403で弾かれ、タイトル以上の情報が得られませんでした。抄録すら無い論文は§0（推測で埋めない）に反するため候補から外しました。"
+        },
+        {
+          "title": "「OA」と表示されていても実際には読めないことがあった",
+          "note": "foil定番枠の本命候補だったSamanta, Murmu & Khonsari (2019)は、OpenAlex・Unpaywallともis_oa:trueと判定していましたが、実際にリンク先（LSU大学リポジトリ）を開くと「This document is currently not available here.」と表示され、出版社（Elsevier）側も403で弾かれました。データベース上の\"OA\"表示を鵜呑みにせず、実際にアクセスできるかどうかを確認したうえで、今回は抄録ベースとして扱いました。"
+        }
+      ],
+      "searchLog": {
+        "sources": [
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, foil）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients",
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing"
+            ],
+            "hits": 24,
+            "note": "OA19/抄録5。arXiv上位8件は分野外ノイズ（フィルタ・データセンター等）。OpenAlex新着側の新規候補もほぼ全て既配信・アブストラクト取得不能で、使えたのは磁気軸受寄りの1件のみだったため見送り。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, foil）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "oil-free turbomachinery bearing",
+              "gas foil bearing",
+              "bump foil bearing",
+              "air foil journal bearing",
+              "foil thrust bearing",
+              "compliant foil bearing",
+              "foil bearing rotordynamic coefficients"
+            ],
+            "hits": 14,
+            "note": "OA4/抄録10。上位14件が全件既配信済みで新規候補ゼロ。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（foil、\"foil bearing\"×is_oa:true・cited_by_count:desc・30件）",
+            "scope": "title_and_abstract.search:foil bearing, best_oa_location.is_oa:true",
+            "terms": [
+              "foil bearing"
+            ],
+            "hits": 30,
+            "note": "Samanta, Murmu & Khonsari (2019, 総説, 被引用148) を発掘。同時にBonello & Bin Hassan (2017) 等の関連論文タイトルも把握し、個別タイトル検索で全文PDF（マンチェスター大学リポジトリ）を取得。"
+          },
+          {
+            "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+            "scope": "本日のローテーション語・直近数年・発行日順",
+            "terms": [
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed",
+              "whirl instability",
+              "bearing stiffness damping coefficients"
+            ],
+            "hits": 13,
+            "note": "OA10/抄録3。新規候補のうち honeycomb seal（非OA・抄録取得不能）とmisaligned turbulent gas journal bearings（Ayed & Lahmar、OA・CC-BY）を発見。"
+          },
+          {
+            "name": "OpenAlex被引用上位（定番枠, rotor）",
+            "scope": "本日のローテーション語・被引用数の多い順",
+            "terms": [
+              "whirl instability",
+              "bearing stiffness damping coefficients",
+              "seal rotordynamic forces",
+              "subsynchronous vibration",
+              "rotordynamics",
+              "rotor-bearing system stability",
+              "unbalance response",
+              "critical speed"
+            ],
+            "hits": 14,
+            "note": "OA1/抄録13。新規候補（Rotordynamics of Turbomachinery=書籍、Rafsanjani et al.=抄録取得不能）はいずれも採用できず見送り。"
+          },
+          {
+            "name": "OpenAlex直接クエリ深掘り（rotor、\"rotor bearing dynamics stability\"×cited_by_count:desc・40件）",
+            "scope": "title_and_abstract.search:rotor bearing dynamics stability",
+            "terms": [
+              "rotor bearing dynamics stability"
+            ],
+            "hits": 40,
+            "note": "DeSmidt, Wang & Smith (2002, 自在継手駆動系の捩り-横連成安定性, 被引用54) を発掘。同クエリ上位には磁気軸受制御系の論文が多数出たが、CLAUDE.mdの「ML・制御は脇役」方針に沿い、物理主体の本論文を選定。"
+          }
+        ],
+        "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。47号もfoil定番枠は候補ゼロ、rotor両枠も新規候補の多くがアブストラクト取得不能で、OpenAlexへの直接クエリによる深掘りが必要だった。"
+      },
+      "afterword": "今回印象に残ったのは、データベースの「OA（オープンアクセス）」という表示を鵜呑みにしてはいけない、という発見でした。Samanta, Murmu & Khonsariのレビュー論文は、OpenAlexもUnpaywallも「OA全文あり」と判定していたのですが、実際にリンクを踏むと保存先のリポジトリで「現在利用できません」と表示され、結局は抄録だけを頼りに書くことになりました。もう一つ、まったく別の軸受（フォイル軸受とミスアライメント気体軸受）を扱う2本の論文で、どちらも「回転数の半分の速さで振れ回る」という同じ現象（半速振れ回り）が主役級の話題として出てきたのも面白い偶然でした。仕組みも軸受の種類も違うのに、不安定化するときには同じような周波数の型に落ち着くというのは、素人目には不思議に感じます。 — 編集担当より"
     }
   ]
 }
