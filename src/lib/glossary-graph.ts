@@ -136,6 +136,10 @@ export const CATEGORIES: GraphCategory[] = [
       "熱弾性不安定性",
       "軸受数Λ(bearing number)",
       "無冷却運転（no forced cooling flow）",
+      "疑似静的モデル（quasi-static model）",
+      "アクティブバンプフォイル軸受(ABFB)",
+      "形状記憶合金(SMA)ばね",
+      "サブフォイル(sub-foil)",
     ],
   },
   {
@@ -177,6 +181,7 @@ export const CATEGORIES: GraphCategory[] = [
       "ウィンドミリング(windmilling)",
       "ジンバル角（Cardan角）",
       "自在継手（ユニバーサルジョイント）",
+      "5自由度剛体ロータモデル",
     ],
   },
   {
@@ -239,6 +244,7 @@ export const CATEGORIES: GraphCategory[] = [
       "旋回ロータ法（Precessional Rotor Method）",
       "Hirsのバルクフロー理論",
       "Moody線図（Moody's equation）",
+      "流体力のフーリエ級数近似(CFD由来)",
     ],
   },
   {
@@ -1044,6 +1050,20 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- ハニカムシールの音響的挙動（Kleynhans & Childs 1997・抄録ベース） ---
   { from: "2コントロールボリュームモデル", to: "有効音速（音響的挙動）", label: "でハニカムセルを容量要素として表し低下させる" },
   { from: "有効音速（音響的挙動）", to: "音響インピーダンス関数（lead-lag／lag伝達関数）", label: "の低下が周波数依存の力を生み必要とする" },
+  // --- ガスフォイル軸受の動特性研究レビュー（Jin, Li & Du 2024） ---
+  { from: "疑似静的モデル（quasi-static model）", to: "クーロン摩擦減衰", label: "ヒステリシス曲線の面積から評価する" },
+  { from: "バンプフォイル", to: "アクティブバンプフォイル軸受(ABFB)", label: "に圧電アクチュエータを加えて予圧を可変にする" },
+  { from: "形状記憶合金(SMA)ばね", to: "軸受の剛性・減衰係数", label: "を相変態に伴う温度制御で切り替える" },
+  // --- 波形サブフォイルを持つロータ動特性係数予測（Carpino & Talmage 2006・抄録ベース） ---
+  { from: "サブフォイル(sub-foil)", to: "軸受の剛性・減衰係数", label: "の半径・周方向連成たわみから予測する" },
+  { from: "サブフォイル(sub-foil)", to: "クーロン摩擦減衰", label: "の面間摩擦を等価粘性摩擦として近似する" },
+  // --- RO海水淡水化用高圧遠心ポンプの非線形ロータダイナミクス（Sayed, El-Sayed & Friswell 2026） ---
+  { from: "5自由度剛体ロータモデル", to: "アンバランス応答", label: "の運動方程式にアンバランス力を含める" },
+  { from: "流体力のフーリエ級数近似(CFD由来)", to: "5自由度剛体ロータモデル", label: "羽根車の流体力として組み込む" },
+  { from: "水潤滑ジャーナル軸受", to: "レイノルズ方程式", label: "の有限差分解で軸受力を求める" },
+  // --- 流体膜ジャーナル軸受の動特性係数レビュー（Lund 1987・抄録ベース） ---
+  { from: "軸受の剛性・減衰係数", to: "アンバランス応答", label: "摂動法で求めロータダイナミクス計算に使う" },
+  { from: "軸受の剛性・減衰係数", to: "安定限界（しきい値）", label: "から自励振動の始まる速度を判定する" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
