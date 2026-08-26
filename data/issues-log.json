@@ -6370,6 +6370,138 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、ASME Digital Collection・ScienceDirectのボット対策で本文取得できない候補が多く、OpenAlexへの直接クエリ（被引用数・OA・発行日の条件を変えて複数回）とMDPI/Nature等アクセス可能な媒体への絞り込みが必要だった。"
    },
    "afterword": "今号は「同じ論文でも、引用のされ方まで読むと理解が一段深まる」と実感した回でした。Carpino & Talmage(2006)の抄録はモデルの作り方だけを淡々と書いていて、周波数や摩擦係数を変えるとどう変化するかの具体的な傾向までは書かれていません。ところが同時に読んだJin, Li & Du(2024)のレビューが、この論文を引用しながら『加振周波数が高いほど、また軌道が小さいほど、散逸するエネルギーと減衰の効きめは小さくなる。逆に摩擦係数が大きすぎると、フォイル構造がまるで硬い軸受のようになってしまう』とまとめてくれていて、抄録だけでは見えなかった中身が立体的に見えてきました。もう一つ印象に残ったのは、レビュー論文が『不安定になり始める回転速度』の予測ですら計算手法によって大きく食い違うことがある、と率直に書いていたことです。専門家の間でも計算の前提次第で答えが変わりうる、という当たり前だけれど忘れがちな事実を、あらためて教えてもらいました。 — 編集担当より"
+  },
+  {
+   "date": "2026-08-27",
+   "status": "published",
+   "headline": "第50号：foil/rotor各2件（Le Lez, Arghir & Frêne 2006抄録ベース・Bou-Saïd, Lahmar, Mouassa & Bouchehit 2020 OA全文／Özgüven & Özkan 1984抄録ベース・Zhang, Wang, Yu, Zhu & Zhao 2026 OA全文）。今号もcollect.mjsの基本候補は大半が既配信済みで、OpenAlexへの直接クエリで新規候補を発掘した。",
+   "intro": "50号目も、collect.mjsの基本候補（foil定番枠上位14件・最新枠上位24件、rotor定番枠上位14件・最新枠上位24件）はほぼ既配信済みか分野外ノイズでした。foil最新枠のarXiv上位はPDE制御・湿潤現象などフォイル軸受と無関係な論文が並び、foil定番枠は上位14件中13件が既配信済みでした。rotor側も同様で、定番枠には統計学の『Unbalanced Repeated-Measures Models』のような語義違いの誤検出が混ざりました。そこでOpenAlexへ直接、被引用数順・OA限定・キーワードを変えて何度も掘り下げ、有望な候補を探しています。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.2390717",
+     "title": "Static and Dynamic Characterization of a Bump-Type Foil Bearing Structure（Le Lez, Arghir & Frêne, 2006）",
+     "why": "バンプ型フォイル軸受の構造部分を、大変位理論と摩擦を考慮した有限要素モデルで解析し、既存の簡易解析モデルがバンプ間相互作用を無視して柔軟性を過大評価しがちだと指摘した研究。foil定番枠の抄録ベースとして選定（Journal of Tribologyは全文非公開）。同じ著者らの2007年続報が、同時収録のBou-Saïd他(2020)論文でも参照文献として引用されている。"
+    },
+    {
+     "id": "doi:10.3390/lubricants8020014",
+     "title": "Dynamic Performances of Foil Bearing Supporting a Jeffcot Flexible Rotor System Using FEM（Bou-Saïd, Lahmar, Mouassa & Bouchehit, 2020）",
+     "why": "フォイル軸受に支持されたJeffcott柔軟ロータの非線形応答を、圧縮性レイノルズ方程式とロータ運動方程式のパーティション型連成で解析。ロータ質量を5kgから7kgに増やすと振れ回りが消えるという具体的な知見と、Garrett式・MITI式という2つのフォイル軸受系統の紹介を含む。foil最新枠のOA全文として選定（MDPI、r.jina.ai経由で全文取得）。"
+    },
+    {
+     "id": "doi:10.1115/1.3269158",
+     "title": "Whirl Speeds and Unbalance Response of Multibearing Rotors Using Finite Elements（Özgüven & Özkan, 1984）",
+     "why": "剛体円板・分布定数有限要素・柔軟な多軸受を統合したロータ・軸受系モデルで、危険速度とアンバランス応答を計算するプログラムを開発。軸受が等方性ならシャフト自体の内部減衰はアンバランス応答に影響しないという知見を含む。rotor定番枠の抄録ベースとして選定（Journal of Vibration and Acousticsは全文非公開）。"
+    },
+    {
+     "id": "doi:10.3390/lubricants14020079",
+     "title": "The Influence of Misalignment on the Performance of the Herringbone Groove Journal Bearing-Rotor System（Zhang, Wang, Yu, Zhu & Zhao, 2026）",
+     "why": "ヘリンボーン溝軸受-ロータ連成系への平行・角度ミスアライメントの影響を、渦動解析・過渡比較・自製試験機実験の3段階で検証。角度ミスアライメントの方が油膜厚さ・圧力への影響が大きいこと、軌道の楕円率は変わっても振れ回りの周波数機構自体は変わらないことを定量的に示している。rotor最新枠のOA全文として選定（MDPI、r.jina.ai経由で全文取得）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "OA表示があっても本文に到達できない候補",
+     "note": "rotor最新枠の候補だったKim & Ryu「On the Dynamic Response of a Cryogenic Hybrid Journal Bearing due to Pneumatic Hammer」（ASME Turbo Expo 2025、Unpaywall上はCC-BYのOA表示）は、ASME Digital CollectionがPDF・HTMLページとも403でブロックし続け、全文照合ができなかったため見送りました。同様にChinese Journal of Aeronautics掲載の『Numerical and experimental investigation on dynamic performance of bump foil journal bearing』（hybrid OA）もScienceDirectのボット対策に阻まれています。"
+    },
+    {
+     "title": "抄録が実は本文ではなかった候補",
+     "note": "rotor定番枠で見つけたZeidan「Design And Application Of Squeeze Film Dampers In Rotating Machinery」（1996、OA）は、OpenAlexに登録された『抄録』が実際には著者略歴の一節（コピー時のずれと見られる）で、論文本体の内容を正しく要約できないため見送りました。韓国語の『Understanding Misalignment-Induced Gravity Critical Speed』も同様に、取得できたテキストが本文の見出し・書誌情報の断片にとどまり、内容を誠実に紹介できる状態ではありませんでした。"
+    },
+    {
+     "title": "抄録自体が存在しない高被引用の定番候補",
+     "note": "San Andrés & Kim「Forced nonlinear response of gas foil bearing supported rotors」(2008, 被引用122)や、Muszynska & Goldman「Chaotic responses of unbalanced rotor/bearing/stator systems with looseness or rubs」(1995, 被引用191)は、いずれも高被引用の定番論文ながら、OpenAlex・Semantic Scholar・Crossrefのどこにも抄録本文が登録されておらず（出版社が配信していない）、抄録ベースの要約すら誠実に書けないため候補から外しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。arXiv上位はPDE制御・湿潤現象・サイバーフィジカルシステム等、フォイル軸受と無関係な論文がほとんどだった。OpenAlex新着側も大半が既配信済み。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。上位14件中13件が既配信済み。残る1件は焦点の合わない一般教科書だった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、被引用・OA両面）",
+      "scope": "\"gas foil bearing rotor\" / \"foil bearing dynamic coefficient\" / \"bump type foil bearing\" / \"gas lubricated foil bearing\" 等 × cited_by_count順・open_access.is_oa:true限定を使い分けて複数回再検索",
+      "terms": [
+       "gas foil bearing rotor",
+       "bump type foil bearing",
+       "foil bearing rotor dynamic",
+       "foil thrust bearing"
+      ],
+      "hits": 100,
+      "note": "既配信を除いた新規候補群からLe Lez, Arghir & Frêne(2006)とBou-Saïd他(2020)を発掘。San Andrés & Kim(2008、被引用122)は抄録が存在せず見送り。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA21/抄録3。arXiv上位はロボット四足歩行・自由表面波・磁化ウェイク等、ロータダイナミクスと無関係な論文が大半だった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。統計学の『Unbalanced Repeated-Measures Models』など『unbalance』の語義違いによる誤検出が混じり、on-topicな新規候補はほぼ無かった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、被引用・OA両面）",
+      "scope": "\"rotordynamic stability seal\" / \"subsynchronous vibration rotor\" / \"flexible rotor bearing whirl\" 等 × cited_by_count順・open_access.is_oa:true限定・publication_date順を使い分けて複数回再検索",
+      "terms": [
+       "rotordynamic stability seal",
+       "subsynchronous vibration rotor",
+       "flexible rotor bearing whirl",
+       "rotordynamic seal analysis",
+       "subsynchronous instability rotor bearing"
+      ],
+      "hits": 130,
+      "note": "Özgüven & Özkan(1984)とZhang他(2026)を発掘。Zeidan(1996、OA)はOpenAlex登録の抄録が著者略歴の誤登録だったため、ASME Turbo Expo 2025のKim & Ryu論文（CC-BY表示）はASME Digital Collectionの403ブロックで全文照合できず、それぞれ見送った。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、ASME Digital Collection・ScienceDirectのボット対策で本文取得できない候補が複数あり、OpenAlexへの直接クエリ（被引用数・OA・発行日の条件を変えて複数回）とMDPI（r.jina.ai経由）への絞り込みが必要だった。"
+   },
+   "afterword": "今号、一番『なるほど』だったのは、ヘリンボーン溝軸受の論文が示した『ミスアライメントは軌道の形は変えるが、振れ回りの周波数の仕組みは変えない』という結果でした。軸受がズレると、軸の中心が描く軌跡は円からぺしゃんこの楕円に変わる（楕円率が0.94から0.33へ）のに、揺れる速さ（回転数に対する比率）はほとんど動かないというのです。素人目には『壊れ方』は一様に悪化しそうなものですが、実際には『どんな形で揺れるか』と『なぜその速さで揺れるか』は別々の仕組みで、片方だけが影響を受けることもあるのだと知りました。もう一つ、今号は『OA(オープンアクセス)表示があっても実際には読めない』論文に何度も出会いました。ライセンス上はCC-BYで誰でも読めるはずなのに、出版社サイトのボット対策で本文にたどり着けない、というのは検索していて地味に印象的でした。 — 編集担当より"
   }
  ]
 }

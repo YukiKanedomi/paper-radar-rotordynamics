@@ -140,6 +140,8 @@ export const CATEGORIES: GraphCategory[] = [
       "アクティブバンプフォイル軸受(ABFB)",
       "形状記憶合金(SMA)ばね",
       "サブフォイル(sub-foil)",
+      "ガレット式(Garrett-type)フォイル軸受",
+      "MITI式(Mohawk Innovative Technology)フォイル軸受",
     ],
   },
   {
@@ -182,6 +184,8 @@ export const CATEGORIES: GraphCategory[] = [
       "ジンバル角（Cardan角）",
       "自在継手（ユニバーサルジョイント）",
       "5自由度剛体ロータモデル",
+      "楕円率 ε0（軌道の扁平度指標）",
+      "歳差比 λ（プリセッション比）",
     ],
   },
   {
@@ -245,6 +249,7 @@ export const CATEGORIES: GraphCategory[] = [
       "Hirsのバルクフロー理論",
       "Moody線図（Moody's equation）",
       "流体力のフーリエ級数近似(CFD由来)",
+      "大変位理論（幾何学的非線形）",
     ],
   },
   {
@@ -1064,6 +1069,16 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 流体膜ジャーナル軸受の動特性係数レビュー（Lund 1987・抄録ベース） ---
   { from: "軸受の剛性・減衰係数", to: "アンバランス応答", label: "摂動法で求めロータダイナミクス計算に使う" },
   { from: "軸受の剛性・減衰係数", to: "安定限界（しきい値）", label: "から自励振動の始まる速度を判定する" },
+  // --- バンプ型フォイル軸受構造の静的・動的特性評価（Le Lez, Arghir & Frêne 2006・抄録ベース） ---
+  { from: "有限要素法", to: "大変位理論（幾何学的非線形）", label: "大変形を扱うために採用" },
+  // --- フォイル軸受支持Jeffcott柔軟ロータの動的性能解析（Bou-Saïd, Lahmar, Mouassa & Bouchehit 2020） ---
+  { from: "MITI式(Mohawk Innovative Technology)フォイル軸受", to: "バンプフォイル", label: "波形のバンプ構造を採用" },
+  { from: "ガレット式(Garrett-type)フォイル軸受", to: "トップフォイル", label: "重ね巻きシートで構成" },
+  { from: "軸受数Λ(bearing number)", to: "レイノルズ方程式", label: "を支配する無次元数" },
+  // --- ヘリンボーン溝ジャーナル軸受-ロータ系のミスアライメント影響（Zhang, Wang, Yu, Zhu & Zhao 2026） ---
+  { from: "ミスアライメント", to: "軸受の剛性・減衰係数", label: "を非対称に変化させる" },
+  { from: "楕円率 ε0（軌道の扁平度指標）", to: "軸心軌跡", label: "軌道の扁平さを定量化" },
+  { from: "歳差比 λ（プリセッション比）", to: "半速振れ回り", label: "が0.5に近いことで同定される" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
