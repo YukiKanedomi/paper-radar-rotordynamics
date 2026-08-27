@@ -250,6 +250,7 @@ export const CATEGORIES: GraphCategory[] = [
       "Moody線図（Moody's equation）",
       "流体力のフーリエ級数近似(CFD由来)",
       "大変位理論（幾何学的非線形）",
+      "多体動力学モデル",
     ],
   },
   {
@@ -388,6 +389,7 @@ export const CATEGORIES: GraphCategory[] = [
       "固有振動数の分裂（非対称ロータ）",
       "捩り-横連成不安定",
       "フロケ理論",
+      "不平衡磁気吸引力",
     ],
   },
   {
@@ -1079,6 +1081,10 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "ミスアライメント", to: "軸受の剛性・減衰係数", label: "を非対称に変化させる" },
   { from: "楕円率 ε0（軌道の扁平度指標）", to: "軸心軌跡", label: "軌道の扁平さを定量化" },
   { from: "歳差比 λ（プリセッション比）", to: "半速振れ回り", label: "が0.5に近いことで同定される" },
+  // --- 水潤滑軸受支持の熱制御循環ポンプの連成振動解析（Luo, Hou, Zou, Hao & Zhou 2026） ---
+  { from: "不平衡磁気吸引力", to: "軸受の剛性・減衰係数", label: "負の剛性として実効支持剛性を弱める" },
+  { from: "水潤滑ジャーナル軸受", to: "不平衡磁気吸引力", label: "正の水膜剛性と競合する" },
+  { from: "多体動力学モデル", to: "集中定数モデル", label: "複数部品を集中質量で連結する" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
