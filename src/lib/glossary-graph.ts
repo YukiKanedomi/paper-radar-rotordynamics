@@ -145,6 +145,10 @@ export const CATEGORIES: GraphCategory[] = [
       "自己作動型軸受（セルフアクティング）",
       "ワイプ摩耗(wipe-wear)",
       "多重ヘリンボーン(マルチ構造)テクスチャ",
+      "アスペリティ接触",
+      "圧縮性数 Λc",
+      "多孔質ティルティングパッドガススラスト軸受(PTPGTB)",
+      "傘型ダンパー",
     ],
   },
   {
@@ -260,6 +264,7 @@ export const CATEGORIES: GraphCategory[] = [
       "二重スプール軸系（ダブルスプールシャフト）",
       "デュアル荷重計測系（自己検証型）",
       "線形インピーダンスモデル(linear impedance model)",
+      "Load Between Pad (LBP)配置",
     ],
   },
   {
@@ -1109,6 +1114,16 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "二重スプール軸系（ダブルスプールシャフト）", to: "静圧軸受", label: "軌道周波数と回転速度を独立に与える試験治具" },
   { from: "デュアル荷重計測系（自己検証型）", to: "直接剛性", label: "2系統の一致度から精度を検証" },
   { from: "線形インピーダンスモデル(linear impedance model)", to: "軸受の剛性・減衰係数", label: "動的力と変位から係数を抽出" },
+  // --- フォイルスラスト軸受の性能限定要因（Dykas 2006 博士論文） ---
+  { from: "アスペリティ接触", to: "負荷容量", label: "表面粗さが接触を招き低下させる" },
+  { from: "圧縮性数 Λc", to: "負荷容量", label: "無次元化して比較する物差し" },
+  { from: "PS304コーティング", to: "アスペリティ接触", label: "表面粗さがあると生じやすい" },
+  // --- 傘型ダンパー付き多孔質ティルティングパッド気体スラスト軸受（Han et al. 2025・抄録ベース） ---
+  { from: "多孔質ティルティングパッドガススラスト軸受(PTPGTB)", to: "スラスト軸受", label: "多孔質静圧＋ティルティングパッド動圧の一種" },
+  { from: "傘型ダンパー", to: "負荷容量", label: "エネルギー散逸を増し高める" },
+  // --- 潤滑油不足下のティルティングパッド軸受の非線形過渡解析（Masuda & Inoue 2025・抄録ベース） ---
+  { from: "潤滑油不足（スターベーション）", to: "サブシンクロナス振動", label: "高速・低流量で広帯域振動を誘発" },
+  { from: "Load-On-Pad (LOP)配置", to: "Load Between Pad (LBP)配置", label: "対になるパッド配置" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

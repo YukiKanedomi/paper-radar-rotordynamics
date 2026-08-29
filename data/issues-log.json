@@ -6788,6 +6788,156 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、Elsevier(ScienceDirect)・AIP(pubs.aip.org)のCloudflare/Radwareボット対策で本文取得できない候補が複数あり、OpenAlexへの直接クエリとNASA技術報告サーバ(NTRS)の直接検索が必要だった。"
    },
    "afterword": "今号一番印象に残ったのは、Capaldiさんの1993年の技術報告に出てくる『2つの違うセンサーで同時に測る』という発想でした。軸受にかかる力を圧電式とひずみゲージ式という原理の異なる2種類のセンサーで同時に測り、両者の答えが1.8%しかズレていないことを確認してから初めて『測れた』と言う——これは目新しい技術というより、地道な検証の積み重ねなのですが、30年前の報告書にすでにこの姿勢が徹底されていたことに、静かな迫力を感じました。もう一つ、今号は忠実性チェックで『出版年』の間違いを指摘されました。NASA技術報告のID番号（受入年）と実際の出版年がずれていることがあり、機械的にIDの年を使うと事実を誤って伝えてしまうところでした。数字は裏取りしないと信じてはいけない、という当たり前のことをあらためて実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-08-30",
+   "status": "published",
+   "headline": "第53号：foil/rotor各2件（Dykas 2006博士論文OA全文・Han他2025抄録ベース／Jery他1984 OA全文・Masuda & Inoue 2025抄録ベース）。今号もcollect.mjsの基本候補は大半が既配信済みで、OpenAlex直接クエリでの深掘りにより両トピックともOA全文の新規候補を発掘した。",
+   "intro": "53号目も、collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠24件・定番枠14件）はほぼ既配信済みか分野外の誤検出でした。foil最新枠のarXiv上位は揚水発電・低高度無線・気泡崩壊など無関係な論文ばかりで、classic枠14件中13件が既配信済み。rotor classic枠も統計学の『Unbalanced Repeated-Measures Models』のような語義違いの誤検出が上位を占めました。そこでOpenAlexへ直接、被引用数順・発行日順でperPageを拡大して深掘りし、foil classicでCase Western Reserve大学の博士論文（OhioLink ETDで全文公開）、rotor classicで1984年のNASA会議論文集の1章（NTRSで全文公開、Caltechのインペラ流体力実験）を発掘しました。両OA候補とも全文PDFのテキスト抽出に成功しましたが、Jery論文は1984年の古いスキャンでOCR崩れがあったため、逐語引用（quotes）と章立てウォークスルー（sections）は使わず、パラフレーズのみで構成しています。foil latest・rotor latestは新しめの論文（Tribology Transactions・JEGTP）を抄録ベースで採用しました。",
+   "picked": [
+    {
+     "id": "openalex:W2263940064",
+     "title": "Factors Influencing the Performance of Foil Gas Thrust Bearings for Oil-Free Turbomachinery Applications（Brian D. Dykas, 2006）",
+     "why": "フォイルガススラスト軸受の負荷容量を制限する要因を、表面状態（粗さ・コーティング）と熱管理の2軸で系統的に実験評価したCase Western Reserve大学の博士論文。「冷却がないと回転数を上げるほど負荷容量が下がる」という、当時の常識に反する発見を含む。foil classic枠のOA全文としてOhioLink ETDから発掘（被引用55件・OpenAlex）。"
+    },
+    {
+     "id": "doi:10.1080/10402004.2025.2482607",
+     "title": "Theoretical and Experimental Study on a Novel Porous Tilting Pad Gas Thrust Bearing with Umbrella-Type Dampers（Han, Li, Wang, Yang & Zhang, 2025）",
+     "why": "傘のようにすぼまって粘弾性材料を圧縮する積層造形製ダンパーを、多孔質ティルティングパッド気体スラスト軸受に組み合わせた研究。foil latest枠の抄録ベースとして選定（Tribology Transactionsは全文非公開）。"
+    },
+    {
+     "id": "openalex:W2119287744",
+     "title": "Hydrodynamic Impeller Stiffness, Damping, and Inertia in the Rotordynamics of Centrifugal Flow Pumps（B. Jery, A. J. Acosta, C. E. Brennen, T. K. Caughey, 1984）",
+     "why": "遠心ポンプのインペラが円形ホワール運動をする際に受ける流体力を、剛性・減衰・慣性の3行列に初めて完全に分解して実測したCaltechの実験研究。対角がほぼ等しく非対角が反対称という力行列の構造を実証した。rotor classic枠のOA全文としてNASA技術報告サーバ(NTRS)から発掘（NASA CP-2338所収、被引用は集計サービス間で12〜20件の差があり概数も出さず）。"
+    },
+    {
+     "id": "doi:10.1115/1.4069605",
+     "title": "Nonlinear Transient Analysis of Tilting Pad Journal Bearings Under Starved Lubrication（Tasuku Masuda & Tsuyoshi Inoue, 2025）",
+     "why": "油供給不足（starved lubrication）下のティルティングパッドジャーナル軸受に生じるサブシンクロナス振動を、非線形過渡解析で数値的に評価した研究。パッド配置（LOP/LBP）による振動レベルの違いを報告。rotor latest枠の抄録ベースとして選定（JEGTP・ASMEは全文非公開）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "全文がボット対策・有料壁に阻まれた候補",
+     "note": "rotor classicの有力候補だったVilla, Sinou & Thouverez「Stability and vibration analysis of a complex flexible rotor bearing system」（2006, CNSNS, OA）はHAL（フランスの学術リポジトリ）でホストされていましたが、Anubisというproof-of-work型のボット対策に阻まれ全文取得できませんでした。foil classicの候補だったBonello & Pham「The efficient computation of the nonlinear dynamic response of a foil-air bearing rotor system」（2014, JSV）もScienceDirectのCAPTCHAに阻まれ、IOP Publishingの高速マイクロガスタービン用フォイル軸受論文（2006）は有料壁でした。教科書John Vance「Rotordynamics of Turbomachinery」（1988, cite=509, EPFLリポジトリでOA表示）は前号でも見送った通り、書籍一冊を単一の「論文」として要約するのは本アプリのデータモデルに合わないため今回も見送りました。"
+    },
+    {
+     "title": "内容や出典の信頼性を理由に見送った候補",
+     "note": "\"State-of-the-Art Review on Gas Foil Bearings for Turbomachinery\"（2025, OA）は著者名が記載されておらず掲載誌も聞き慣れないジャーナルだったため、内容の信頼性を優先して見送りました。中国語の学術誌論文2本（バンプフォイル軸受の摩擦挙動、螺旋溝スラスト軸受）はサーバー接続の問題でPDF取得できず、韓国語ジャーナルの水素電気自動車用スラスト軸受論文は有料データベース経由のみで断念しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 24,
+      "note": "OA21/抄録3。arXiv上位は揚水発電・低高度無線・気泡崩壊など無関係な論文ばかりだった。新規on-topicはML主体の論文1件のみで見送り。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。候補14件中13件が既配信済みだった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、被引用上位・新着、perPage拡大）",
+      "scope": "topics.jsonの全キーワード × cited_by_count順（perPage25）、および直近3年 publication_date順（perPage20）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 105,
+      "note": "新規69件中、Dykas博士論文（OhioLink ETD、cite=55、OA）とHan et al. 2025（抄録ベース）を採用。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。ラビリンスシールのrotordynamics論文2件が候補になったが、classic枠のOA発掘を優先しlatestは別候補（Masuda & Inoue）を採用。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。統計学・電力系統分野の誤検出が上位を占め、on-topicな新規候補はほぼ無かった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、被引用上位、perPage拡大）",
+      "scope": "topics.jsonの全キーワード × cited_by_count順（perPage25）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 114,
+      "note": "新規84件中、Jery et al. 1984（NTRS経由でOA全文、被引用12〜20件で乖離）を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor latest、発行日順、perPage拡大）",
+      "scope": "topics.jsonの全キーワード × publication_date順（perPage20・直近3年）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 35,
+      "note": "抄録ありの新規35件からMasuda & Inoue 2025（starved lubrication TPJB）を抄録ベースで採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プール（perPage6〜24）がほぼ既配信済みで枯渇していたため、OpenAlexへの直接クエリでperPageを20〜25に拡大した深掘りが両トピックで必要だった。"
+   },
+   "afterword": "今号で一番印象に残ったのは、1984年のNASA会議論文集（Jery, Acosta, Brennenらの論文）に出てくる一文でした。実験で見つかった「力の行列がきれいに対角＝等しい・非対角＝反対称になる」という規則性について、著者ら自身が「この形になるべき理論的な必然性はなく、これまでしばしば仮定として使われてきたが、実験で確かめられたのは私たちの知る限り初めてだ」と書いていたのです。てっきり理論から導かれる当然の帰結だと思って読み進めていたので、忠実性チェックで「それは出典の主張と逆です」と指摘されて初めて、著者たちが「驚くべき結果」として扱っていたことに気づきました。数十年前の実験報告でも、著者自身が自分の発見の意外性を正直に書き残しているのだな、と新鮮でした。 — 編集担当より"
   }
  ]
 }
