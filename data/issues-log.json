@@ -6938,6 +6938,148 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プール（perPage6〜24）がほぼ既配信済みで枯渇していたため、OpenAlexへの直接クエリでperPageを20〜25に拡大した深掘りが両トピックで必要だった。"
    },
    "afterword": "今号で一番印象に残ったのは、1984年のNASA会議論文集（Jery, Acosta, Brennenらの論文）に出てくる一文でした。実験で見つかった「力の行列がきれいに対角＝等しい・非対角＝反対称になる」という規則性について、著者ら自身が「この形になるべき理論的な必然性はなく、これまでしばしば仮定として使われてきたが、実験で確かめられたのは私たちの知る限り初めてだ」と書いていたのです。てっきり理論から導かれる当然の帰結だと思って読み進めていたので、忠実性チェックで「それは出典の主張と逆です」と指摘されて初めて、著者たちが「驚くべき結果」として扱っていたことに気づきました。数十年前の実験報告でも、著者自身が自分の発見の意外性を正直に書き残しているのだな、と新鮮でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-08-31",
+   "status": "published",
+   "headline": "第54号：foil/rotor各2件（Rubio & San Andrés 2006抄録ベース・Dickman 2010修士論文OA全文／Nelson 1985抄録ベース・Nordmann et al. 1987 NASA会議録OA全文）。今号は候補選定の途中で重複を2回発見・差し替え、忠実性チェックでは過剰主張・数値の誤帰属・出典に無い理論の帰属などhigh severityの指摘が複数あり2ラウンドかけて修正した。",
+   "intro": "54号目も、collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠24件・定番枠14件）はほぼ既配信済みか分野外の誤検出でした。foil・rotorとも最新枠のarXiv上位は揚水発電・低高度無線・気泡崩壊など無関係な論文ばかりで、classic枠も大半が既配信済みでした。そこでOpenAlexへ直接、topics.jsonの主要キーワードで被引用数順に検索を広げ、foilではRubio & San Andrés(2006)のバンプ型フォイル軸受の構造剛性・摩擦特性の論文（抄録ベース）とDickman(2010)のオープンソース・フォイルスラスト軸受の修士論文（OhioLink ETDで全文公開）を発掘しました。rotorではNelson(1985)のテーパー付き環状シールの論文（抄録ベース）を採用。latest枠は難航し、最初に選んだChilds & Hale(1994)、次に選んだScharrer(1989)の段付きラビリンスシール論文がいずれも既配信済みと判明（後者は忠実性チェック後、issues-logの過去記録を読み返していて発覚した際どい見落としでした）、3件目としてNordmann et al.(1987)の平行溝シールと平滑シールを比較した論文（NASA技術報告サーバで全文公開）を採用しています。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.2360602",
+     "title": "Structural Stiffness, Dry Friction Coefficient, and Equivalent Viscous Damping in a Bump-Type Foil Gas Bearing（Dario Rubio & Luis San Andrés, 2006）",
+     "why": "フォイル軸受を回転させずに加振し、気体膜とは別のバンプ構造そのものが持つ剛性・乾性摩擦係数・等価粘性減衰を同定した実験研究。摩擦係数が荷重振幅とともに増える様子や、小振幅でのスティックスリップによる硬化効果を報告している。foil classic枠の抄録ベースとして選定（Journal of Engineering for Gas Turbines and Powerは全文非公開、被引用87件）。"
+    },
+    {
+     "id": "openalex:W2597465591",
+     "title": "An Investigation of Gas Foil Thrust Bearing Performance and its Influencing Factors（Joseph Robert Dickman, 2010）",
+     "why": "公開図面のオープンソース・フォイルスラスト軸受を3台製作し、同じランナーで比べた2台の間で負荷容量に約3割の差が生じることを実測で示したCase Western Reserve大学の修士論文。foil latest枠のOA全文としてOhioLink ETDから発掘（被引用36件）。"
+    },
+    {
+     "id": "doi:10.1115/1.3261062",
+     "title": "Rotordynamic Coefficients for Compressible Flow in Tapered Annular Seals（C. C. Nelson, 1985）",
+     "why": "SSME高圧酸化剤ターボポンプを想定した先細り(テーパー)形状の環状シールについて、予旋回とテーパーの強さがそれぞれ交差剛性・直接剛性に与える影響を理論的に整理した研究。rotor classic枠の抄録ベースとして選定（Journal of Tribologyは全文非公開、被引用63件）。"
+    },
+    {
+     "id": "ntrs:19870012773",
+     "title": "Rotordynamic Coefficients and Leakage Flow of Parallel Grooved Seals and Smooth Seals（R. Nordmann, F.J. Dietzen, W. Janson, A. Frei, S. Florjancic, 1987）",
+     "why": "遠心ポンプのシールに周方向の平行溝を刻むと、漏れは減る一方で剛性・減衰も下がるというトレードオフを、理論モデルと水を使った試験機の実測の両方で示した独仏スイスの産学連携研究。rotor latest枠のOA全文としてNASA技術報告サーバ(NTRS)から発掘（被引用22件）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "危うく見逃しかけた重複が2回",
+     "note": "rotor latestのOA候補として最初にChilds & Hale(1994)「A Test Apparatus and Facility to Identify the Rotordynamic Coefficients of High-Speed Hydrostatic Bearings」をNASA NTRSから全文取得し内容も読み込んでいましたが、papers.jsonとの重複チェックで2026-07-10配信分（同一DOI）とまったく同じ論文だと判明し差し替え。次に選んだScharrer(1989)「Rotordynamic Coefficients for Stepped Labyrinth Gas Seals」は要約・忠実性チェックまで終えた後、issues-logの過去記録（第25号 2026-07-21）に『同じ論文を紹介済み』という記述を見つけて発覚しました。IDだけを見た重複チェックでは、出典を辿る過程でDOI表記からNTRSのアクセッション番号に変えたタイミングでチェックが漏れていました。54号を重ねると同じ研究室・同じ論文が候補に繰り返し浮上しやすく、IDだけでなくタイトル・著者での突き合わせも欠かせないと痛感しました。"
+    },
+    {
+     "title": "OA表示を鵜呑みにできなかった候補",
+     "note": "John Vance「Rotordynamics of Turbomachinery」（1988, 被引用509）はOpenAlexでoa_status=greenと表示されますが、リンク先はEPFLの書誌レコードのみでPDF本体が無く、実質的に全文取得できませんでした。書籍という性質上「論文」として要約する形式にも合わないため見送りました。Ma et al.(2021)の二重ロータ・スクイーズフィルムダンパー論文（Chinese Journal of Aeronautics、CC-BY-NC-NDでOA表示）もOpenAlex/Unpaywall上はOAですが、ScienceDirectのbot対策で本文PDFの直接取得に失敗し、Zeidan(1996)のスクイーズフィルムダンパー解説（Texas A&M OakTrustリポジトリ）も同様にアクセス制御で断念しました。"
+    },
+    {
+     "title": "忠実性チェックで見つかったhigh severityの指摘",
+     "note": "Nelson(1985)の概念図は『収束テーパー』と説明しながら実際には左右のすきまが同じ台形を描いてしまっており、図とキャプションが矛盾するhigh severityの指摘を受け形状を描き直しました。Scharrer(1989、後に重複で差し替え）の要約では、出典に一度も登場しないHirsモデルを『使用した理論』として帰属させてしまうhigh severityの捏造があり、Dickman(2010)の要約では試験速度域(実際は0-40kRPMだが80kRPMと誤記)と『3台間で30%のばらつき』（実際は同一ランナーの2台間の値）という2箇所のhigh severity指摘があり、いずれも該当箇所を出典に忠実な表現に修正しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 24,
+      "note": "OA19/抄録5。arXiv上位は揚水発電・超音波トランスデューサ・低高度無線など無関係な論文ばかりで、on-topicな新規候補はなかった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。候補14件中13件が既配信済みだった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、キーワード別タイトル検索・被引用順）",
+      "scope": "「foil thrust bearing」「compliant foil bearing」「foil journal bearing」「bump foil bearing」「oil-free turbomachinery」の5語でtitle.search、各上位10〜15件",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil journal bearing",
+       "bump foil bearing",
+       "oil-free turbomachinery"
+      ],
+      "hits": 58,
+      "note": "既配信除外・抄録ありで絞り込み、Rubio & San Andrés(2006)を採用。あわせて別ルートでDickman(2010)修士論文もOA全文として発掘。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。arXivは無関係、OpenAlex側はほぼ既配信済みだった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。1位が統計学の『Unbalanced Repeated-Measures Models』という語義違いの誤検出で、on-topic新規候補はほぼ無かった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、キーワード別タイトル検索・被引用順）",
+      "scope": "「seal rotordynamic」「critical speed rotor」「subsynchronous vibration」「bearing damping coefficients rotor」「whirl instability rotor」の5語でtitle.search、各上位13〜15件",
+      "terms": [
+       "seal rotordynamic",
+       "critical speed rotor",
+       "subsynchronous vibration",
+       "bearing damping coefficients rotor",
+       "whirl instability rotor"
+      ],
+      "hits": 66,
+      "note": "Nelson(1985)を採用。高被引用の「Whirl and whip instabilities...」(2008, cite=182)は抄録が確認できず見送り。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) API検索（rotor latestのOA発掘）",
+      "scope": "\"rotordynamic coefficients seal\" でフルテキスト検索",
+      "terms": [
+       "rotordynamic coefficients seal"
+      ],
+      "hits": 20,
+      "note": "Childs & Hale(1994)が既配信と重複、続いて選んだScharrer(1989)「段付きラビリンスシール」も後に既配信（第25号）と判明。最終的にNordmann et al.(1987)「平行溝シールと平滑シールの比較」がPDF・全文とも取得可能かつ未配信と確認し採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プール（perPage14〜24）がほぼ既配信済みで枯渇していたため、OpenAlexへのキーワード別直接クエリとNASA NTRSのフルテキスト検索による深掘りが両トピックで必要だった。"
+   },
+   "afterword": "今号は『危うい発見』の連続でした。OpenAlexの『OA』表示は鵜呑みにできず、Vanceの教科書は表示上OAなのにPDF本体が無く、CC-BYの論文でも出版社サイトのボット対策で結局読めないことがある——ここまでは想定内でしたが、一番ヒヤリとしたのは、忠実性チェックまで終えたScharrer(1989)の論文が、実は1か月以上前の号ですでに紹介済みだったと、issues-logの古い記録を読み返していて気づいたことでした。IDだけの重複チェックは、出典を辿るうちにDOI表記からNTRSのアクセッション番号に持ち替えた瞬間に穴が空くのだと分かり、確認作業そのものの「確認方法」を見直す必要を実感しました。 — 編集担当より"
   }
  ]
 }
