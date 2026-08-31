@@ -7080,6 +7080,159 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プール（perPage14〜24）がほぼ既配信済みで枯渇していたため、OpenAlexへのキーワード別直接クエリとNASA NTRSのフルテキスト検索による深掘りが両トピックで必要だった。"
    },
    "afterword": "今号は『危うい発見』の連続でした。OpenAlexの『OA』表示は鵜呑みにできず、Vanceの教科書は表示上OAなのにPDF本体が無く、CC-BYの論文でも出版社サイトのボット対策で結局読めないことがある——ここまでは想定内でしたが、一番ヒヤリとしたのは、忠実性チェックまで終えたScharrer(1989)の論文が、実は1か月以上前の号ですでに紹介済みだったと、issues-logの古い記録を読み返していて気づいたことでした。IDだけの重複チェックは、出典を辿るうちにDOI表記からNTRSのアクセッション番号に持ち替えた瞬間に穴が空くのだと分かり、確認作業そのものの「確認方法」を見直す必要を実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-01",
+   "status": "published",
+   "headline": "第55号：foil/rotor各2件（Salehi, Heshmat & Walton 2003抄録ベース・Bruckner 2012 NASA技術メモOA全文／Colding-Jørgensen 1980 NASA会議録OA全文・Rządkowski他2026抄録ベース）。今号もcollect.mjsの基本候補がほぼ既配信済みで、OpenAlexへの直接クエリで深掘りした。忠実性チェックではhigh severityの指摘が3件（意味の反転・自社実験への誤帰属・著者不一致のタグ）あり、いずれも出典に忠実な表現へ修正した。",
+   "intro": "55号目も、collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠13件・定番枠14件）は既配信済みか分野外の誤検出がほとんどでした。特にfoilの最新枠はarXiv上位が多孔質円筒の圧密・血流中の血小板シミュレーション・電子顕微鏡の設計など無関係な論文ばかりで、foil定番枠も14件中13件が既配信済みでした。そこでOpenAlexへtopics.json外の関連語（tilting pad gas bearing、herringbone groove gas bearing、squeeze film damper rotorなど）で直接クエリを広げ、foilではSalehi, Heshmat & Walton(2003)のバンプフォイル摩擦減衰の論文（抄録ベース）とBruckner(2012)のNASA技術メモ（フォイルスラスト軸受の性能、NASA職員著作のため実図もパブリックドメインとして使用）を発掘。rotorでは、1980年にNASAルイス研究センターが刊行した会議録『Rotordynamic Instability Problems in High-Performance Turbomachinery』に収録されたColding-Jørgensenの論文（羽根車まわりの流体力とロータ安定性の関係、OA全文）と、Rządkowski他(2026)の蒸気タービン軸受動特性係数に関する最新論文（抄録ベース、全文はWiley/Elsevier側のボット対策で取得できず）を採用しました。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.1575774",
+     "title": "On the Frictional Damping Characterization of Compliant Bump Foils（Mohsen Salehi, Hooshang Heshmat & James F. Walton, 2003）",
+     "why": "フォイル軸受のバンプフォイル構造を転がり軸受用の高温対応ダンパーに応用し、周波数・振幅・荷重に対する摩擦減衰特性を実験的に評価した研究。560℃という高温下でも大きな不釣合いに耐えて運転できたと報告している。foil classic枠の抄録ベースとして選定（Journal of Tribologyは全文非公開、被引用約77件）。"
+    },
+    {
+     "id": "ntrs:20120003368",
+     "title": "Performance of Simple Gas Foil Thrust Bearings in Air（Robert J. Bruckner, 2012, NASA/TM—2012-217262）",
+     "why": "フォイルジャーナル軸受とは異なり、フォイルスラスト軸受は回転数を上げても負荷容量が頭打ち・低下する『ドロップオフ』を持つことを、既報データの再整理から示したNASA技術メモ。foil latest枠のOA全文としてNTRSから発掘（NASA職員の職務著作のためパブリックドメイン、実図2枚を掲載）。"
+    },
+    {
+     "id": "openalex:W761687658",
+     "title": "Effect of Fluid Forces on Rotor Stability of Centrifugal Compressors and Pumps（J. Colding-Jørgensen, 1980）",
+     "why": "遠心ポンプ・圧縮機の羽根車まわりの流れが軸に及ぼす力（インペラ流体力）を渦の特異点法でモデル化し、交差剛性の符号や直接減衰の負値化を通じてロータを不安定化しうることを示した理論研究。rotor classic枠のOA全文として、NASAルイス研究センター刊行の1980年ワークショップ会議録から発掘（著者はデンマーク工科大学、被引用は少数）。"
+    },
+    {
+     "id": "doi:10.1016/j.ymssp.2026.114732",
+     "title": "Calculation and Experimental Verification of Steam Turbine Journal Bearing Dynamic Coefficients Based on Experimental Trajectory（Romuald Rządkowski, Rajasekhara Reddy Mutra, Arkadiusz Koprowski & Leszek Kubitz, 2026）",
+     "why": "1MW蒸気タービンの実機で測定した軸の軌跡から、CFDと線形回帰法を組み合わせて軸受動特性係数を求める新しい手法を提案。手法間で係数自体はばらついても、危険速度の予測は実機の値に比較的近かったと報告している。rotor latest枠の抄録ベースとして選定（Mechanical Systems and Signal Processingは全文非公開）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "OpenAlexの『OA』表示に頼れない場面がまた続いた",
+     "note": "Bechiri, Bouchehit & Bou-Saïd(2026)の多孔質ガス軸受論文（Lubrication Science誌）はOpenAlex/Unpaywall上でOA(hybrid, CC-BY-NC-ND)と表示されますが、Wiley Online LibraryのCAPTCHA/ボット対策で本文にアクセスできず断念。同様にMDPI(Coatings誌)のS-CO2軸受論文も直接アクセスは403エラーで拒否され、プロキシ経由の取得は試せたものの、著者名が明らかに不自然な形（イニシャルのみ）で抽出されるなど中間処理の信頼性に疑問があったため、この経路での全文引用は見送りました。最終的にfoil latestのOA枠は、確実に生テキストを取得・検証できるNASA NTRS(Bruckner 2012)に切り替えています。"
+    },
+    {
+     "title": "遠心ポンプの1980年論文という掘り出し物",
+     "note": "rotor classic枠は、topics.jsonのキーワードだけでは候補が出尽くしていたため、『squeeze film damper rotor』『labyrinth seal rotordynamic coefficients』などの周辺語でOpenAlexを直接検索。その過程で見つけたColding-Jørgensen(1980)は、Vance(1988)やLalanne & Ferraris(1991)のような教科書（『論文』としての要約に不向きなため見送り）とは違い、正真正銘の会議論文でNASA NTRSから全文PDFが取得できました。著者はNASA職員ではないため、著作権の扱いが不確実と判断し、実図の転載は行わず概念図のみで紹介しています。"
+    },
+    {
+     "title": "忠実性チェックで見つかったhigh severityの指摘",
+     "note": "Colding-Jørgensen論文の要約では、原文の『不安定化効果が現れない区間が高流量側へ移動する』を『不安定域そのものが高流量側へ移動する』と対象を取り違えて書いてしまうhigh severityの誤りがあり、3か所を訂正しました。Bruckner論文の要約では、フォイルスラスト軸受の高速ドロップオフという発見を『既報データの再整理と自らの実験の両方から確認』としてしまいましたが、実際は既報データ（Heshmat・Dykasらのデータの再プロット）のみが根拠で、自社の新規実験データはドロップオフを示していなかったため、この誤った帰属を削除しました。Salehi論文の要約では、関連論文欄に『同じ著者陣の関連研究』とタグ付けしていましたが、著者はまったく重ならず、事実誤認として修正しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA21/抄録3。arXiv上位8件はいずれも分野外（多孔質円筒の圧密、血小板の血流シミュレーション、電子顕微鏡設計など）。OpenAlex側のfoil bearing関連候補はほぼ既配信済みだった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。14件中13件が既配信済みで、未使用は1件（Linear and Nonlinear Rotordynamics、教科書のため見送り）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、周辺語でtitle_and_abstract.search）",
+      "scope": "「tilting pad gas bearing」「herringbone groove gas bearing」「gas lubricated bearing dynamic coefficients」「top foil bearing performance」「foil bearing high speed rotor」「gas foil bearing stability」の6語、被引用順・発行日順の両方",
+      "terms": [
+       "tilting pad gas bearing",
+       "herringbone groove gas bearing",
+       "gas lubricated bearing dynamic coefficients",
+       "top foil bearing performance",
+       "foil bearing high speed rotor",
+       "gas foil bearing stability"
+      ],
+      "hits": 42,
+      "note": "Salehi, Heshmat & Walton(2003)を発掘。あわせてNASA NTRS直接検索でBruckner(2012)のOA全文も発掘。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索（foil latestのOA発掘）",
+      "scope": "「foil thrust bearing NASA」でOpenAlex経由のNTRS収載論文を検索",
+      "terms": [
+       "foil thrust bearing NASA"
+      ],
+      "hits": 1,
+      "note": "Bruckner(2012)のNASA/TM—2012-217262を発掘。PyMuPDFで本文・図を抽出し、NASA職員の職務著作としてパブリックドメイン扱いで実図2枚を掲載。"
+     },
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "OA10/抄録3。arXiv候補のうち発行済みのものは既配信済み。OpenAlex新着候補5件が未使用だった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。上位は統計学の誤検出（Unbalanced Repeated-Measures Models）や電力系統の話題（PMSG風力発電）で分野外。Vance(1988)・Lalanne & Ferraris(1991)は教科書のため見送り。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、周辺語でtitle_and_abstract.search）",
+      "scope": "「squeeze film damper rotor」「magnetic bearing rotordynamics」「labyrinth seal rotordynamic coefficients」「journal bearing dynamic coefficients」「rotor unbalance response critical speed」「logarithmic decrement rotor stability」の6語、被引用順・発行日順の両方",
+      "terms": [
+       "squeeze film damper rotor",
+       "magnetic bearing rotordynamics",
+       "labyrinth seal rotordynamic coefficients",
+       "journal bearing dynamic coefficients",
+       "rotor unbalance response critical speed",
+       "logarithmic decrement rotor stability"
+      ],
+      "hits": 50,
+      "note": "Rządkowski他(2026)を発掘（全文はWiley/Elsevier側のボット対策で未取得のため抄録ベース）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、impeller関連語）",
+      "scope": "「impeller rotordynamic force」でtitle_and_abstract.search、被引用順",
+      "terms": [
+       "impeller rotordynamic force"
+      ],
+      "hits": 1,
+      "note": "Colding-Jørgensen(1980)のNASA会議録論文を発掘。NTRSから全文PDFを取得しPyMuPDFでテキスト抽出（OCR起因のレイアウト崩れがあり、地の文は明瞭だが数式・添字部分は不明瞭なため式の掲載は見送った）。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号も基本候補プールがほぼ既配信済みで枯渇していたため、topics.json外の周辺語によるOpenAlex直接クエリでの深掘りが両トピックで必要だった。"
+   },
+   "afterword": "今号でいちばん印象に残ったのは、Bruckner(2012)のNASA技報を読んでいて見つけた『フォイルスラスト軸受は、ジャーナル軸受と違って回転数を上げても負荷容量が頭打ちになる』という話でした。同じ『フォイル軸受』でも、軸を横から支えるか、軸方向に受け止めるかで速度に対する振る舞いがまるで違う、というのは言われてみると当たり前のようで、実測データを再整理して初めてはっきり見えてくる類いの発見なのだと感じました。一方で自分の書いた要約が、その発見の根拠を『既報データの再整理』ではなく『自分たちの新しい実験でも確認した』と取り違えていたことに、忠実性チェックで気づかされました。出典の『何が新しい実験で、何が過去のデータの再利用か』を丁寧に見分けることの大切さを、今回はとりわけ実感しています。 — 編集担当より"
   }
  ]
 }
