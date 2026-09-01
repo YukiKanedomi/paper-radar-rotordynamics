@@ -7233,6 +7233,134 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号も基本候補プールがほぼ既配信済みで枯渇していたため、topics.json外の周辺語によるOpenAlex直接クエリでの深掘りが両トピックで必要だった。"
    },
    "afterword": "今号でいちばん印象に残ったのは、Bruckner(2012)のNASA技報を読んでいて見つけた『フォイルスラスト軸受は、ジャーナル軸受と違って回転数を上げても負荷容量が頭打ちになる』という話でした。同じ『フォイル軸受』でも、軸を横から支えるか、軸方向に受け止めるかで速度に対する振る舞いがまるで違う、というのは言われてみると当たり前のようで、実測データを再整理して初めてはっきり見えてくる類いの発見なのだと感じました。一方で自分の書いた要約が、その発見の根拠を『既報データの再整理』ではなく『自分たちの新しい実験でも確認した』と取り違えていたことに、忠実性チェックで気づかされました。出典の『何が新しい実験で、何が過去のデータの再利用か』を丁寧に見分けることの大切さを、今回はとりわけ実感しています。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-02",
+   "status": "published",
+   "headline": "第56号：foil/rotor各2件（Bruckner & Puleo 2008 NASA技術メモOA全文・Lee他2004抄録ベース／Ertas他(GE Aerospace) DOE最終報告書OA全文・Kim & Lee 1994 NASA会議録OA全文）。今号もcollect.mjsの基本候補がほぼ既配信済みで、OpenAlex・NASA NTRS・DOE OSTIへの直接クエリで深掘りした。忠実性チェックで4件ともhigh〜med severityの指摘を受け、2ラウンドかけて出典に忠実な表現に修正している。",
+   "intro": "56号目も、collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠13件・定番枠14件）はほぼ既配信済みか分野外の誤検出でした。そこでOpenAlexへ「gas foil bearing」「rotor-bearing system」「critical speed」「squeeze film damper」などの語で直接クエリを広げ、あわせてNASA NTRS・DOE OSTIも検索。foilではNASAグレン研究センターのBruckner & Puleo(2008、圧力・温度を振った負荷容量試験のNASA技術メモ、OA全文)と、Lee他(2004、フォイル軸受で支えた超危険速度ロータのアンバランス応答、Tribology Transactions、抄録ベース)を採用。rotorではGE Aerospace ResearchによるDOE最終報告書(sCO2オイルフリー・ターボ機械の27krpm試験リグ設計、ロータダイナミクス章あり、OA全文)と、Kim & Lee(1994、NASAワークショップ会議録、アンチスワール・セルフインジェクション・シールの予備試験、OA全文・OCR判読のため逐語引用なし)を採用しました。",
+   "picked": [
+    {
+     "id": "ntrs:20080022426",
+     "title": "Compliant Foil Journal Bearing Performance at Alternate Pressures and Temperatures（Robert J. Bruckner & Bernadette J. Puleo, 2008, NASA/TM—2008-215219）",
+     "why": "フォイル軸受の性能データがこれまで1気圧の条件に限られていた中、周囲圧力(0.1〜2.5気圧)・温度(25〜500℃)を系統的に振った負荷容量試験を行い、0.5気圧を下回ると潤滑不足で負荷容量が急減することを示したNASA技術メモ。foil latest枠のOA全文としてNASA NTRSから発掘（同じNASAグレン研究センターの著者による職務著作のためパブリックドメイン、実図1枚を掲載）。"
+    },
+    {
+     "id": "doi:10.1080/05698190490279038",
+     "title": "Unbalance Response of a Super-Critical Rotor Supported by Foil Bearings—Comparison with Test Results（Yeongdo Lee, T. H. Kim, Chang-Hoon Kim, N. S. Lee & Dongho Choi, 2004, Tribology Transactions）",
+     "why": "曲げ危険速度を超えて運転する超危険速度ロータを、粘弾性フォイル軸受(VEFB)と従来のバンプフォイル軸受で支えたときの振動軌跡を、有限要素法・摂動法による計算と既発表の実測データで比較した研究。foil classic枠の抄録ベースとして選定（Tribology Transactionsは全文非公開、被引用約45件）。"
+    },
+    {
+     "id": "doi:10.2172/3017565",
+     "title": "Novel Modular Heat Engines with sCO2 Bottoming Cycle Utilizing Advanced Oil-Free Turbomachinery（Bugra Ertas他, GE Aerospace Research, DOE最終報告書 DE-FE0031617）",
+     "why": "天然ガス圧送用ガスタービンの排熱回収を狙うsCO2オイルフリー・ターボ機械について、27krpm・3軸受支持の試験リグを設計し、危険速度マップとアンバランス応答解析、積層造形ハイブリッド気体軸受の試作評価をまとめたDOE報告書。rotor latest枠のOA全文としてDOE OSTIから発掘（組立・回転試験は未実施で、プロジェクト全体は2/3の完了度にあると正直に報告している）。"
+    },
+    {
+     "id": "ntrs:19940029674",
+     "title": "Test Results for Rotordynamic Coefficients of Anti-Swirl Self-Injection Seals（C. H. Kim & Y. B. Lee, Korea Institute of Science and Technology, NASA会議録 1994刊行）",
+     "why": "環状シールのステータに開けた穴から入口の流れを逆向きに自己注入し、周方向流れ(スワール)を能動的に打ち消す新しいシールを試作・試験した予備研究。最良構成でホワール周波数比がダンピングシールに対し2倍(factor of 2)改善したと報告している。rotor classic枠のOA全文としてNASA NTRSから発掘（会議録のスキャンOCRのため逐語引用は行わず要約のみ）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "候補の重複に危うく気づかず終わるところだった",
+     "note": "foil latestの最初の候補として選んだDOE報告書(R&D Dynamics社「Foil Bearing Supported Compressor-Expander」)は、実は前号（2026-09-01）ですでに配信済みでした。用語表記の統一チェック（既存papers.jsonとの照合）の過程で偶然気づき、慌てて別候補（Bruckner & Puleo 2008）に差し替えました。今後は候補選定の初期段階でid/DOIの重複確認を徹底する必要があります。"
+    },
+    {
+     "title": "ScienceDirect・SpringerのOAは『表示上OA』でも読めないことが多い",
+     "note": "Chinese Journal of Aeronautics(多層フォイルスラスト軸受、CC-BY)とJournal of Vibration Engineering & Technologies(危険速度通過時の振幅解析、hybrid OA)は、OpenAlex/Unpaywall上でOA表示でしたが、実際にアクセスするとScienceDirectはCAPTCHA、SpringerはIDP認証ページにリダイレクトされ、どちらも本文を取得できませんでした。最終的にJVET論文は抄録ベースとしての採用も見送り、代わりに確実に全文が取れるNASA NTRS・DOE OSTIの資料に候補を切り替えています。"
+    },
+    {
+     "title": "忠実性チェックで見つかった指摘（2ラウンド）",
+     "note": "4件とも初回チェックでneeds_fixとなりました。Bruckner論文では、図から目視で読み取った具体的な負荷容量係数の数値(「0.3から1.65へ」等)が本文中に明記されていないとの指摘を受け削除。Lee他(2004)論文では、抄録が『弾性支持の構造減衰を高めると振動が抑えられる』と述べているだけなのに、要約が『VEFBは従来型バンプフォイル軸受より優れている』という抄録にない比較優位の結論にすり替えていたとの指摘を受け、全面的に書き直しました。Ertas他のDOE報告書では、原文が挙げる3つの技術リスクを取り違えていた点、及び『ハードウェア製作は完了』という一歩踏み込んだ表現を、原文どおり『次の試験段階に進む準備が整っている』に修正。Kim & Lee論文では、3つの試作シールがすべて12穴共通なのに穴数が構成ごとに増えるかのような誤読を招く記述を修正しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 37,
+      "note": "foil 24件(OA21/抄録3)・rotor 13件(OA7/抄録6)。arXiv上位はモーメント法・多孔質円筒・スペクトル演算子学習など分野外が大半で、OpenAlex側もほぼ既配信済みだった。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件(OA4/抄録10)・rotor 14件(OA1/抄録13)。上位はほぼ既配信済み。rotor定番の上位には統計学（Unbalanced Repeated-Measures Models）や風力発電の誤検出も含まれた。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（\"gas foil bearing\" title_and_abstract、被引用順）",
+      "scope": "cited_by_count>30、被引用順",
+      "terms": [
+       "\"gas foil bearing\""
+      ],
+      "hits": 21,
+      "note": "既配信の定番論文が大半を占めたが、Lee他(2004、超危険速度ロータのアンバランス応答、OA=bronzeだが実際は403で抄録ベースに切替)を発掘。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索（foil latest再選定）",
+      "scope": "「gas foil bearing」「foil thrust bearing NASA」等",
+      "terms": [
+       "gas foil bearing",
+       "compliant foil journal bearing"
+      ],
+      "hits": 25,
+      "note": "候補重複（前号既配信のDOE報告書）に気づき差し替え。Bruckner & Puleo(2008)のNASA/TM-2008-215219（GT2008-50174としてASME発表・OpenAlex被引用8件）を発掘、PyMuPDFで全文・図9を抽出。"
+     },
+     {
+      "name": "DOE OSTI 直接検索（foil/rotor、oil-free turbomachinery関連）",
+      "scope": "\"foil bearing\" のOSTI API検索",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 25,
+      "note": "R&D Dynamics社の報告書（doi:10.2172/2999857）が前号既配信と判明し不採用。GE Aerospace ResearchのErtas他報告書（doi:10.2172/3017565、sCO2オイルフリー・ターボ機械の27krpm試験リグ、ロータダイナミクス章あり）をrotor latestに採用。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索（rotor classic、ロータダイナミクス不安定性ワークショップ）",
+      "scope": "「rotordynamic seal whirl instability」でNASA CP(Rotordynamic Instability Problems in High-Performance Turbomachinery)シリーズを検索",
+      "terms": [
+       "rotordynamic seal whirl instability"
+      ],
+      "hits": 14,
+      "note": "Kim & Lee(1994)のアンチスワール・セルフインジェクション・シール論文を発掘。スキャンOCRで語順の崩れがあり、逐語引用は行わず要約にとどめた。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号も基本候補プールがほぼ既配信済みで枯渇していたため、OpenAlex直接クエリに加えNASA NTRS・DOE OSTIへの直接検索が両トピックで必要だった。"
+   },
+   "afterword": "今号でヒヤッとしたのは、foil latestの最初の候補（DOE助成のR&Dダイナミクス社による燃料電池コンプレッサー開発報告書）が、実は前号ですでに配信済みだったと後から気づいたことでした。候補のタイトルやDOIだけを見ていると『新しい候補』のつもりで読み進めてしまいがちですが、既存の用語集と照らし合わせる作業の中で『この定義、見覚えがある』と気づけたのは、地道な表記統一チェックのおかげでした。もう一つ印象的だったのは、GEのエンジニアたちがまとめたロータ試験リグの報告書で、『プロジェクトは2/3完了、実機の試験はまだできていない』と正直に書いてあったことです。華々しい成果だけでなく、道半ばの状態も率直に記録に残す姿勢は、この配信が目指す『嘘をつかない』紹介と通じるものがあると感じました。 — 編集担当より"
   }
  ]
 }
