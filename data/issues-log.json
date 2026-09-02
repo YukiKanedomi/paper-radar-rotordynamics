@@ -7361,6 +7361,138 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号も基本候補プールがほぼ既配信済みで枯渇していたため、OpenAlex直接クエリに加えNASA NTRS・DOE OSTIへの直接検索が両トピックで必要だった。"
    },
    "afterword": "今号でヒヤッとしたのは、foil latestの最初の候補（DOE助成のR&Dダイナミクス社による燃料電池コンプレッサー開発報告書）が、実は前号ですでに配信済みだったと後から気づいたことでした。候補のタイトルやDOIだけを見ていると『新しい候補』のつもりで読み進めてしまいがちですが、既存の用語集と照らし合わせる作業の中で『この定義、見覚えがある』と気づけたのは、地道な表記統一チェックのおかげでした。もう一つ印象的だったのは、GEのエンジニアたちがまとめたロータ試験リグの報告書で、『プロジェクトは2/3完了、実機の試験はまだできていない』と正直に書いてあったことです。華々しい成果だけでなく、道半ばの状態も率直に記録に残す姿勢は、この配信が目指す『嘘をつかない』紹介と通じるものがあると感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-03",
+   "status": "published",
+   "headline": "第57号：foil/rotor各2件（Bruckner 2009 NASA技術メモOA全文・Morris他2024抄録ベース／Nelson 1984 NASAワークショップ講演OA全文・Uusitalo他2026抄録ベース）。今号はScienceDirect・MDPI・HALがそろってボット遮断され、NASA NTRSの直接検索と全文APIに頼って両トピックのOA全文を確保した。",
+   "intro": "57号目もcollect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠13件・定番枠14件）はほぼ既配信済みで、foil最新枠はarXivの分野外誤検出（グリッドフォーミング変換器やナマズの移動など）ばかりでした。そこでOpenAlexへ直接、幅広い被引用順・発行日順クエリを重ねて候補プールを深掘りしましたが、今号はScienceDirect・MDPI・HALの本文ページがいずれもCloudflareのボット判定で遮断され、抄録すら取れない事態が続きました。最終的に、全文APIを備えるNASA NTRSへ「gas foil bearing」「rotordynamics whirl instability」等で直接検索をかけ、foilはBruckner(2009、高圧下のガスフォイル軸受と発電機すきまの風損実測、NASA技術メモ、OA全文)を、rotorはNelson(1984、表面粗さを持つ環状ガスシールのロータダイナミック係数解析、NASAワークショップ講演、OA全文・古いスキャンのため逐語引用は見送り)を採用しました。もう1件ずつは、S3経由で抄録だけ確認できたASMEレビュー論文(Morris他2024、フォイル軸受コーティングの研究動向)と、Results in Engineering誌の統合設計論文(Uusitalo他2026、ヒートポンプ用遠心圧縮機の空力・電磁・磁気軸受・ロータダイナミクス統合設計、抄録ベース)を採用しています。",
+   "picked": [
+    {
+     "id": "ntrs:20090042819",
+     "title": "Windage Power Loss in Gas Foil Bearings and the Rotor-Stator Clearance of High Speed Generators Operating in High Pressure Environments（Robert J. Bruckner, 2009, NASA/TM—2009-215826）",
+     "why": "宇宙用の閉サイクル原子力発電システムを想定し、ガスフォイル軸受と発電機ロータ・ステータ間隙の『風損』を、最大48気圧・42,000rpmでHe/N2/CO2を使って直接測定したNASA技術メモ。foil classic枠のOA全文としてNASA NTRSから発掘（テイラー・クエット流れ理論による整理、著者はNASAグレン研究センターの職員のためパブリックドメイン）。"
+    },
+    {
+     "id": "doi:10.1115/1.4065986",
+     "title": "Air Foil Thrust and Journal Bearing Coatings: A Review（Nick Morris, Ramin Rahmani, Homer Rahnejat, Bharat Bhushan, 2024, Journal of Tribology）",
+     "why": "起動・停止時の直接接触からフォイル軸受表面を守る表面コーティング技術について、これまでの研究動向を整理したASMEのレビュー論文。foil latest枠の抄録ベースとして選定（ASME Digital Collectionが本文アクセス不可のため抄録の範囲に限定して紹介）。"
+    },
+    {
+     "id": "ntrs:19850005826",
+     "title": "Analysis for Leakage and Rotordynamic Coefficients of Surface Roughened Tapered Annular Gas Seals（C. C. Nelson, Texas A&M University, 1984, NASA主催ワークショップ講演）",
+     "why": "スペースシャトルの高圧酸化剤ターボポンプのタービン段間シールに相当する例で、ステータをハニカム面にすると交差剛性・漏れ量は約9%減る一方、直接剛性が約10%・直接減衰が約2%下がるというトレードオフを、Hirsの乱流バルクフロー理論で計算した研究。rotor classic枠のOA全文としてNASA NTRSから発掘（1980年代のスキャン文書でOCR品質が低いため逐語引用は行わず要約のみ）。"
+    },
+    {
+     "id": "doi:10.1016/j.rineng.2026.111466",
+     "title": "Co-design of high-speed centrifugal compressors for heat pumps including aerodynamic-, electromagnetic-, rotordynamic design, and bearing control（Antti Uusitalo他, LUT University, 2026, Results in Engineering）",
+     "why": "大型ヒートポンプ向けの高速遠心圧縮機について、羽根車の空力設計・モーターの電磁設計・能動磁気軸受の寸法/制御・ロータダイナミクス解析・冷却解析を一体で扱う統合設計手法を示し、実験用ヒートポンプ試験設備向けの500kW級圧縮機ユニットで実際に適用した論文。rotor latest枠の抄録ベースとして選定（CC-BYのオープンアクセス誌だがScienceDirect側の本文ページが遮断され抄録のみで紹介）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "ScienceDirect・MDPI・HALが一斉にボット遮断",
+     "note": "今号はChinese Journal of Aeronautics・MDPI各誌（Lubricants等）・HAL(フランスの学術リポジトリ)のいずれも、直接アクセスすると『Just a moment...』のCloudflare認証ページに阻まれ、抄録すら取得できませんでした。唯一OpenAlexのAPI経由で抄録本文を復元できたケース(rineng2026)を除き、この日はアクセス障壁の低いNASA NTRS(全文テキストAPIを直接提供)に候補を絞らざるを得ませんでした。"
+    },
+    {
+     "title": "OpenAlexの日次利用枠を使い切った",
+     "note": "候補の深掘りクエリを重ねた結果、OpenAlex APIが『Insufficient budget（本日分の無料枠を使い切った、日本時間午前9時頃にリセット）』を返すようになりました。以降はSemantic Scholar・Crossref・NASA NTRSへ切り替えて作業を続けています。"
+    },
+    {
+     "title": "忠実性チェックで見つかった指摘（1〜2ラウンド）",
+     "note": "4件とも初回チェックでneeds_fixとなりました。Bruckner論文では、試験リグの最大許容荷重（約55N）と実際に提示されたデータの荷重（14N）を混同していた点、および抄録の『45気圧』と本文データの『48気圧』の食い違いを修正。Nelson論文では、テーパを大きくしたときに約50%増えるのが『交差結合剛性』ではなく『直接剛性』である可能性が高いと指摘を受け、同一文書内の他の記述との整合性を踏まえて修正しました（1980年代のスキャンOCRでK/kの判別が難しい箇所）。Results in Engineering論文では、収集時に抄録の末尾が欠落しており、『500kW級圧縮機ユニットでの実証』という抄録に明記された事実を誤って『確認できない』と書いてしまっていた点を修正しました。ASMEレビュー論文では、抄録にない『トップフォイル』という部位の特定や『寿命を決める』という強い断定を、抄録の言葉に戻しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 37,
+      "note": "foil 24件(OA20/抄録4)・rotor 13件(OA9/抄録4)。foilのarXiv上位は分野外誤検出(グリッドフォーミング変換器・ナマズの移動等)ばかりで使える候補なし。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件(OA4/抄録10)・rotor 14件(OA1/抄録13)。非重複はfoil1件(2002年の一般ロータダイナミクス総説)・rotor数件のみで、いずれも今号の主役には弱いと判断。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil全7語・被引用順/発行日順、per_page拡張）",
+      "scope": "title_and_abstract.search、cited_by_count:desc および publication_date:desc",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 40,
+      "note": "Tribology International等の非OA定番論文多数と、ASMEレビュー論文(doi:10.1115/1.4065986)・MDPI論文数件を発掘。ASMEレビューは抄録のみ確認できたためfoil latestに採用。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor全8語・OA限定、被引用順/直近3年）",
+      "scope": "title_and_abstract.search、OA限定",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 16,
+      "note": "Vance「Rotordynamics of Turbomachinery」教科書(1988)等を発見したがOA全文へのアクセスがCAPTCHAで遮断。Results in Engineering誌の統合設計論文(2026)がCC-BYで抄録を確認できrotor latestに採用。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索",
+      "scope": "\"gas foil bearing\" / \"rotordynamics whirl instability\" / \"seal rotordynamic coefficients\"",
+      "terms": [
+       "gas foil bearing",
+       "rotordynamics whirl instability bearing",
+       "seal rotordynamic coefficients"
+      ],
+      "hits": 35,
+      "note": "ScienceDirect・MDPIが軒並み遮断される中、全文テキストAPIを直接提供するNTRSに頼って両トピックのOA全文候補を確保。Bruckner(2009、フォイル軸受・発電機すきまの風損)とNelson(1984、環状ガスシールのロータダイナミック係数)を発掘し、いずれも重複なしを確認のうえ採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、ScienceDirect・MDPI・HALのボット遮断が重なり、NASA NTRSの全文APIへの依存度が特に高い号になった。"
+   },
+   "afterword": "今号はとにかく『壁』にぶつかり続けた回でした。いつもは頼れるMDPIやScienceDirectが、今日に限って軒並みCloudflareの認証ページに阻まれ、抄録一つ拾えない。OpenAlexまで日次の無料枠を使い切ってしまい、途中からは半ば手探りでNASAの技術報告サーバだけを頼りに候補を探すことになりました。それでも救われたのは、NASAの古い技術メモや会議録が、今でも変わらず全文をそのまま公開し続けてくれていたことです。1984年の学会発表をテキストで丸ごと読めるというのは、当たり前ではないのだと今日はしみじみ感じました。もう一つ印象的だったのは、OCRの崩れた古い文書を読み解く過程で「テーパを大きくすると50%増えるのは、交差結合剛性ではなく直接剛性ではないか」という細かな読み違いに気づけたことです。文字が崩れていても、同じ文書の別の箇所と突き合わせれば筋が通るかどうかは分かる——地道な裏取りの大切さを、あらためて実感した号でした。 — 編集担当より"
   }
  ]
 }

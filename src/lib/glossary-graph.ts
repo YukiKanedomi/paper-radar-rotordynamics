@@ -158,6 +158,10 @@ export const CATEGORIES: GraphCategory[] = [
       "設計世代（Generation I〜III）",
       "粘弾性フォイル軸受(VEFB)",
       "超危険速度ロータ（スーパークリティカルロータ）",
+      "テイラー・クエット流れ",
+      "テイラー数",
+      "風損（ウィンデージロス）",
+      "複合コーティング",
     ],
   },
   {
@@ -275,6 +279,7 @@ export const CATEGORIES: GraphCategory[] = [
       "線形インピーダンスモデル(linear impedance model)",
       "Load Between Pad (LBP)配置",
       "線形回帰法（軌跡ベースの同定）",
+      "統合設計（co-design）",
     ],
   },
   {
@@ -463,6 +468,7 @@ export const CATEGORIES: GraphCategory[] = [
       "平行溝シール（パラレルグルーブシール）",
       "アンチスワール・セルフインジェクション機構",
       "インパルスハンマー加振法（周波数領域同定）",
+      "環状ガスシール",
     ],
   },
 ];
@@ -1191,6 +1197,11 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "アンチスワール・セルフインジェクション機構", to: "ホワール周波数比", label: "改善指標として評価" },
   { from: "アンチスワール・セルフインジェクション機構", to: "ダンピングシール", label: "と安定性・漏れ性能を比較" },
   { from: "インパルスハンマー加振法（周波数領域同定）", to: "交差剛性", label: "を周波数応答から同定する" },
+  // --- 高圧ガスフォイル軸受・発電機すきまの風損実測（Bruckner, NASA/TM-2009-215826） ---
+  { from: "テイラー数", to: "テイラー・クエット流れ", label: "値によって層流・渦・乱流の遷移を決める" },
+  { from: "テイラー・クエット流れ", to: "風損（ウィンデージロス）", label: "乱流域でトルクが気体密度に依存する主因になる" },
+  // --- 表面粗さを持つテーパ付き環状ガスシールの解析（Nelson, NASA CP-2338） ---
+  { from: "環状ガスシール", to: "交差剛性", label: "旋回流を通じて生み出す" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
