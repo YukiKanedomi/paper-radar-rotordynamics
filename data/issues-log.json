@@ -7493,6 +7493,154 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、ScienceDirect・MDPI・HALのボット遮断が重なり、NASA NTRSの全文APIへの依存度が特に高い号になった。"
    },
    "afterword": "今号はとにかく『壁』にぶつかり続けた回でした。いつもは頼れるMDPIやScienceDirectが、今日に限って軒並みCloudflareの認証ページに阻まれ、抄録一つ拾えない。OpenAlexまで日次の無料枠を使い切ってしまい、途中からは半ば手探りでNASAの技術報告サーバだけを頼りに候補を探すことになりました。それでも救われたのは、NASAの古い技術メモや会議録が、今でも変わらず全文をそのまま公開し続けてくれていたことです。1984年の学会発表をテキストで丸ごと読めるというのは、当たり前ではないのだと今日はしみじみ感じました。もう一つ印象的だったのは、OCRの崩れた古い文書を読み解く過程で「テーパを大きくすると50%増えるのは、交差結合剛性ではなく直接剛性ではないか」という細かな読み違いに気づけたことです。文字が崩れていても、同じ文書の別の箇所と突き合わせれば筋が通るかどうかは分かる——地道な裏取りの大切さを、あらためて実感した号でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-04",
+   "status": "published",
+   "headline": "第58号：foil/rotor各2件（Bauman 2005 NASA技術メモOA全文・Jung他2025抄録ベース／Wyssmann 1986 NASAワークショップ講演OA全文・Hasis他2026抄録ベース）。今号はcollect.mjsの基本候補がほぼ既配信で埋まり、OpenAlexの深掘りクエリ中に日次無料枠も枯渇。NASA NTRSの直接検索とASME論文の抄録確認で乗り切った。",
+   "intro": "58号目、collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠24件・定番枠14件）を重複チェックしたところ、非重複はfoilの2002年ロータダイナミクス教科書1件のみ、rotorはほぼ0件という状態でした。そこでOpenAlexへ直接、topics.jsonの全キーワード・per-page拡張で被引用順/発行日順の深掘りクエリを重ね、foilではNASA/TM由来の試験リグ論文とASMEの新着論文を発掘できましたが、rotor向けのOA限定クエリを実行中にOpenAlexが「Insufficient budget」で日次無料枠切れになりました。以降はCrossref・Semantic ScholarでASME論文の抄録を確認し、NASA NTRSの検索APIへ「seal rotordynamic coefficients」等で直接クエリして候補を確保しました。最終的にfoilはBauman(2005、オイルフリー・スラストフォイル軸受の専用試験装置。設計・校正とともに、試験片加熱用の空気自体が軸受を押し返す『カウンターロード』現象を発見、NASA技術メモ、OA全文)とJung他(2025、スラスト・ハイブリッド気体軸受の熱流体力学モデルと試験データ検証、ASME、抄録ベース)を、rotorはWyssmann(1986年NASAワークショップ講演、ラビリンスシールの動特性係数の理論と実測、2体積バルクフローモデルと新設の水試験装置、OA全文)とHasis他(2026、擬似スペクトル法による環状液体シールの動特性係数の効率的推定、ASME、抄録ベース)を採用しました。",
+   "picked": [
+    {
+     "id": "ntrs:20050160253",
+     "title": "An Oil-Free Thrust Foil Bearing Facility Design, Calibration, and Operation（Steve Bauman, 2005, NASA/TM—2005-213568）",
+     "why": "オイルフリー・ガスタービン向けスラストフォイル軸受を評価するための高速・高温専用試験装置（直径100mmまで・最高80,000rpm・650℃）の設計・校正・初期運転結果をまとめたNASA技術メモ。foil classic枠のOA全文としてNASA NTRSから発掘。試験片加熱用の空気(スラストエア)が軸受を押し返して荷重を軽くする『カウンターロード』現象の発見と、正味荷重を求める経験式の導出が読みどころ。"
+    },
+    {
+     "id": "doi:10.1115/1.4069781",
+     "title": "A Thermohydrodynamic Model and Analysis for a Thrust Hybrid Gas Bearing System and Its Validation With Test Data（Wonbae Jung, Adolfo Delgado, Anthony Dudlo, Sang-Guk Kang, Chol-Bum M. Kweon, 2025, Journal of Engineering for Gas Turbines and Power）",
+     "why": "オイルフリー・ターボチャージャ用スラスト・ハイブリッド気体軸受について、レイノルズ方程式と熱エネルギー輸送式を連成させた熱流体力学モデルを構築し、実測した膜温度データと比較検証した論文。foil latest枠の抄録ベースとして選定（ASME Digital Collectionが本文アクセス不可のため抄録の範囲に限定して紹介）。"
+    },
+    {
+     "id": "ntrs:19870012778",
+     "title": "Theory and Measurements of Labyrinth Seal Coefficients for Rotor Stability of Turbocompressors（H.R. Wyssmann, Sulzer-Escher Wyss Ltd., 1986年NASAワークショップ講演・1987年公開）",
+     "why": "ラビリンスシールがロータに及ぼす動特性係数（交差剛性・減衰係数）を、2体積バルクフローモデルの理論予測と、テキサスA&M大学のガスシール実測・新設した水運転式試験装置の初期実測とで比較した研究。rotor classic枠のOA全文としてNASA NTRSから発掘。減衰係数が入口旋回速度に依らず安定（＝シールを受動的ダンパーとみなせる）という結論と、直接剛性・交差減衰では理論と実測が食い違うという正直な限界の両方を報告している点が読みどころ。"
+    },
+    {
+     "id": "doi:10.1115/1.4072516",
+     "title": "An Efficient Scheme for Estimating Rotordynamic Coefficients of Liquid Annular Seals by a Pseudo-Spectral Method（Fahd Bin Abdul Hasis, I. R. Praveen Krishna, Vinayaravi R., 2026, Journal of Tribology）",
+     "why": "環状液体シールの動特性係数を、修正Hirs理論による拡張レイノルズ潤滑方程式に対する擬似スペクトル法で効率的に推定する手法を提案した論文。rotor latest枠の抄録ベースとして選定（ASME Digital Collectionが本文アクセス不可のため抄録の範囲に限定して紹介）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "58号を重ねて基本候補プールがほぼ枯渇",
+     "note": "collect.mjsが返す当日の候補（foil/rotorそれぞれ最新枠24件・定番枠14件）を既配信IDと突き合わせたところ、非重複はfoilの2002年ロータダイナミクス教科書1件のみで、rotorは実質0件でした。topics.jsonの全キーワード・被引用順/発行日順でper-page拡張した深掘りクエリでも、上位はほとんど既配信済み。今号はさらにOpenAlex直接クエリでOA限定・広範囲の候補出しを重ねて、ようやく使える候補にたどり着きました。"
+    },
+    {
+     "title": "OpenAlexの日次無料枠が深掘り中に枯渇",
+     "note": "rotor向けのOA限定・被引用順クエリを実行している最中に、OpenAlex APIが『Insufficient budget（本日分の無料枠を使い切った）』のHTTP 429を返すようになりました。以降はCrossref・Semantic ScholarでASME論文の抄録確認を、NASA NTRSの検索APIで候補の直接発掘を行いました。"
+    },
+    {
+     "title": "忠実性チェックで見つかった指摘（1〜2ラウンド）",
+     "note": "4件とも初回チェックでneeds_fixとなりました。もっとも重要だったのはBauman論文で、『荷重を印加する空気（ピストン背後の加圧）』『ピストンを浮かせる静圧軸受の空気（207kPa）』『試験片を加熱するスラストエア（軸受-ランナー間を通過）』という完全に別系統の3つの空気を、要約が混同して『荷重をかける空気が軸受を浮かせる』と書いていた点。原文の中心的発見（軸受を押し返すのはスラストエアのみ）を正しく書き直しました。Wyssmann論文では、原文『the theory gives generally larger cross-coupling stiffness (in the algebraic sense)』の『代数的に大きい』（＝負の値としては絶対値が小さい）という意味を取り違え、符号関係を逆に書いていた点と、結びの『追加測定が理論と実測の食い違いを解消する糸口になりうる』という一文を見落として『見通しは示されていない』と書いていた点を修正しました。抄録ベースの2件（Jung、Hasis）では、抄録にない解釈（hydrodynamic effectを『粘性発熱』と言い換える等）の混入をそれぞれ削り、抄録の言葉に戻しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 48,
+      "note": "foil 24件(OA20/抄録4)・rotor 24件(OA20/抄録4)。foilのarXiv上位は分野外誤検出（乱流境界層・爆轟波・空調負荷制御等）ばかりで使える候補なし。rotorのarXiv上位も同様（毛細管波・落下する柔軟シート等）。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件(OA4/抄録10)・rotor 14件(OA1/抄録13)。ほぼ全件が既配信済みで、rotorは『Unbalanced Repeated-Measures Models』等の統計学分野の誤検出も混じっていた。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil全7語・rotor全8語、被引用順・per-page拡張）",
+      "scope": "title_and_abstract.search、cited_by_count:desc、per-page 25",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 40,
+      "note": "foilはSan Andrés系のFEトップフォイルモデル論文等の非OA定番を多数発掘（今号は不採用）。rotorはLund(1974)・Muszynska(1986)等の古典を発見したが、いずれも既配信済みと判明。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、OA限定・被引用順）",
+      "scope": "title_and_abstract.search、is_oa:true、cited_by_count:desc",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 20,
+      "note": "NASA NTRS収録の『An Oil-Free Thrust Foil Bearing Facility Design, Calibration, and Operation』(Bauman, 2005)を発掘。rotor側の同種クエリはOpenAlexが日次無料枠切れ(429 Insufficient budget)で実行できず。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索",
+      "scope": "\"seal rotordynamic coefficients\" 等",
+      "terms": [
+       "rotordynamic seal stiffness damping coefficients"
+      ],
+      "hits": 15,
+      "note": "OpenAlex枯渇後、rotor classic枠を確保するためNTRSへ直接検索。Wyssmann(1986年NASAワークショップ講演、ラビリンスシール係数の理論と実測)を発掘し重複なしを確認のうえ採用。同時に多数のChilds/Texas A&M系のシール動特性係数レポートも見つかったが今号は見送り。"
+     },
+     {
+      "name": "Crossref / Semantic Scholar（抄録確認）",
+      "scope": "ASME論文DOI個別照会",
+      "terms": [
+       "10.1115/1.4069781",
+       "10.1115/1.4072516"
+      ],
+      "hits": 2,
+      "note": "OpenAlexが抄録を持たない・枯渇後の代替として、ASME Journal of Engineering for Gas Turbines and Power / Journal of Tribologyの2論文の抄録をCrossref APIで直接取得し、抄録ベースの候補として採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、深掘りクエリの途中でOpenAlexの日次無料枠が尽きるという新しい制約に直面し、NASA NTRSの全文APIとCrossrefの抄録APIへの依存度が特に高い号になった。"
+   },
+   "afterword": "今号でいちばん冷や汗をかいたのは、忠実性チェックがBauman論文の要約から見つけた『空気の取り違え』でした。この試験装置には、荷重をかける空気・ピストンを浮かせる静圧軸受の空気・試験片を加熱するスラストエア、という3つの別系統の空気が出てきます。最初の下書きでは、この3つを『荷重をかけるための空気』とひとまとめにしてしまい、原文がいちばん伝えたかった発見（加熱用の空気が軸受を押し返して荷重を狂わせる、という意外な因果関係）を取り違えて書いてしまっていました。長い技術文書を要約するとき、似たような部品が何度も出てくると、いつの間にか別々のものを混ぜてしまう——今日はその典型例を目の当たりにした気がします。もう一つ印象に残ったのは、OpenAlexの無料枠を使い切ってしまった場面です。いつもの調べ方が突然使えなくなっても、NASAの技術報告サーバやCrossrefのような別の入り口が残っていて、そこを頼れば候補を探し続けられる。一本道に頼りきらないことの大切さを、今日はあらためて実感しました。 — 編集担当より"
   }
  ]
 }
