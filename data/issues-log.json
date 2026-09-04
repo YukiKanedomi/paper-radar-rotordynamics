@@ -7641,6 +7641,139 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。今号は基本候補プールの枯渇に加え、深掘りクエリの途中でOpenAlexの日次無料枠が尽きるという新しい制約に直面し、NASA NTRSの全文APIとCrossrefの抄録APIへの依存度が特に高い号になった。"
    },
    "afterword": "今号でいちばん冷や汗をかいたのは、忠実性チェックがBauman論文の要約から見つけた『空気の取り違え』でした。この試験装置には、荷重をかける空気・ピストンを浮かせる静圧軸受の空気・試験片を加熱するスラストエア、という3つの別系統の空気が出てきます。最初の下書きでは、この3つを『荷重をかけるための空気』とひとまとめにしてしまい、原文がいちばん伝えたかった発見（加熱用の空気が軸受を押し返して荷重を狂わせる、という意外な因果関係）を取り違えて書いてしまっていました。長い技術文書を要約するとき、似たような部品が何度も出てくると、いつの間にか別々のものを混ぜてしまう——今日はその典型例を目の当たりにした気がします。もう一つ印象に残ったのは、OpenAlexの無料枠を使い切ってしまった場面です。いつもの調べ方が突然使えなくなっても、NASAの技術報告サーバやCrossrefのような別の入り口が残っていて、そこを頼れば候補を探し続けられる。一本道に頼りきらないことの大切さを、今日はあらためて実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-05",
+   "status": "published",
+   "headline": "第59号：foil/rotor各2件（NASA PS400（DellaCorte & Edmonds, 2009, NASA技術メモ）OA全文・Park, Kim & Sim(2021, 圧電フォイル軸受)抄録ベース／Crandall(1982, NASAワークショップ講演)OA全文・Nouioua他(2026, Scientific Reports)抄録ベース）。候補プール枯渇が続くなか、忠実性チェックが『コーティングの施工対象取り違え』と『AI二次要約の数値混入』という2つの重大な誤りを本番前に食い止めた号。",
+   "intro": "collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠13件・定番枠14件）を既配信IDと突き合わせたところ、非重複はfoil定番でロータダイナミクスの教科書1件のみ、rotor定番は0件という、59号にしてほぼ完全な枯渇状態でした。foil最新枠も、arXivの新着上位は分野外（アビ翼の空力・爆轟波・空調負荷等）ばかりで、非重複の中で軸受物理として使えたのは磁気軸受・ML主体のガスフォイル軸受論文の2件だけでした。そこでOpenAlexへ直接、topics.jsonのキーワードでper-page 25まで広げた深掘りクエリを、被引用順とOA限定(is_oa:true)の両方でfoil・rotor双方にかけました。foilではNASA/TM由来の『PS400』コーティング論文とMDPIの圧電フォイル軸受論文を、rotorではNASA NTRSへの直接検索（『rotordynamic instability whirl bearing』等）でクランドールの1982年ワークショップ講演を発掘しました。rotor latestはScientific Reportsの2026年新着（ロータ・ステータの片側接触に関する論文）を採用しています。全文取得はNTRS収録の2件（PS400・クランドール）のみ成功し、MDPI・Nature.comは今回いずれもボット対策の壁に阻まれ抄録ベースにとどめました。",
+   "picked": [
+    {
+     "id": "ntrs:20090033769",
+     "title": "NASA PS400: A New High Temperature Solid Lubricant Coating for High Temperature Wear Applications（C. DellaCorte, B.J. Edmonds, 2009, NASA/TM—2009-215678）",
+     "why": "オイルフリー・フォイル軸受システムのシャフト側に塗る高温固体潤滑コーティングの新配合『PS400』を、前世代PS304が抱えていた高温膨張・表面粗さの問題と対比しながら開発・評価したNASA技術メモ。foil classic枠のOA全文としてNASA NTRSから発掘。忠実性チェックで『フォイル軸受の表面に塗る』という施工対象の取り違えが見つかり、『軸(シャフト)側に塗り、無コートのフォイルと摺動する』という原文どおりの構図に全面的に書き直した。"
+    },
+    {
+     "id": "doi:10.3390/app11052330",
+     "title": "Rotordynamic Analysis of Piezoelectric Gas Foil Bearings with a Mechanical Preload Control Based on Structural Parameter Identifications（Jisu Park, Donghee Kim, Kyuho Sim, 2021, Applied Sciences）",
+     "why": "3個の圧電(PZT)アクチュエータでバンプフォイル構造を能動的に押し出し、運転中にプリロードを可変にする『可変ガスフォイル軸受(C-GFB)』の提案論文。foil latest枠の抄録ベースとして選定。当初の下書きはMDPI本文が読めなかった際にAI二次要約(r.jina.ai)の数値・数式を『抄録に記載』と誤って書いてしまっていたが、忠実性チェックで発覚し、OpenAlexから復元した完全な抄録のみを根拠に全面的に書き直した。"
+    },
+    {
+     "id": "ntrs:19830007376",
+     "title": "Heuristic Explanation of Journal Bearing Instability（Stephen H. Crandall, 1982, NASA CP-2250所収）",
+     "why": "ジャーナル軸受の『半周波数ホワール』『オイルホイップ』が、なぜ回転数の半分の速さを境目にするのかを、軸受を油循環ポンプに見立てた直感的な仮説で説明し、通常の動的安定性解析とも突き合わせたNASAワークショップ講演。rotor classic枠のOA全文としてNASA NTRSから発掘。忠実性チェックで位相速度の記号(RΩ→Rω)、ワークショップの主催・開催情報の誤り、Robertson(1933)への帰属範囲（無荷重の場合のみ）などが見つかり修正した。"
+    },
+    {
+     "id": "doi:10.1038/s41598-026-69513-3",
+     "title": "Duty cycle shapes multi-mode transient responses in intermittent rotor–stator rub with no evidence of Sommerfeld capture（Mourad Nouioua et al., 2026, Scientific Reports）",
+     "why": "ロータが1次危険速度を片側接触(ラブ)しながら通過する過渡応答を、駆動トルクに上限のある現実的なマルチモードモデルで解析し、接触時間が1回転の約1/10にとどまるためゾンマーフェルト捕捉が起きないことを示した論文。rotor latest枠の抄録ベースとして選定。当初は文字数制限で途切れた抄録しか参照できておらず『デューティ比の詳細は確認できない』と書いていたが、OpenAlexから完全な抄録を復元したところ実際にはその数値が書かれていたため、内容を大幅に加筆・訂正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "候補プールの枯渇がついにrotor定番枠も直撃",
+     "note": "これまでfoil側で顕著だった基本候補の枯渇が、59号目でrotor定番枠にも及びました。collect.mjsが返す定番候補14件のうち非重複は0件で、統計学分野の『Unbalanced Repeated-Measures Models』のような分野外の誤検出も混じっていました。OpenAlexへの直接深掘りクエリ（被引用順・OA限定の両方）を両トピックで実行し、幸い今回はOpenAlexの日次無料枠切れには遭遇しませんでした。"
+    },
+    {
+     "title": "『OA』の看板と『今読めるか』は別問題",
+     "note": "IOP Publishingの2006年論文（foil bearing stability analysis）はOpenAlex上でOA表示だったが、実際にWebFetchで開けたのは抄録のみで本文は機関購読が必要でした。MDPIの圧電論文は直接fetch・r.jina.ai経由とも403で本文取得不可、Scientific Reportsの2026年論文はcurl直叩きではHTMLが取れたものの、そこからの本文テキスト抽出処理が環境側の問題で失敗し、結局は抄録のみでの紹介に落ち着きました。"
+    },
+    {
+     "title": "忠実性チェックが本番前に止めた2つの重大な誤り",
+     "note": "PS400論文では、コーティングを『フォイル軸受の表面に塗る』と全レベルで書いていましたが、実際は軸(シャフト)側に塗り、相手のフォイル軸受自体は無コートという逆の構図でした。圧電フォイル軸受論文では、MDPI本文が読めずAI二次要約(r.jina.ai)を頼った際、そこに含まれていた数式・数値（アクチュエータの配置角度・PZT係数の式・剛性値など）を『抄録に記載されている』と誤ってラベル付けしたまま下書きに残ってしまっていました。どちらも忠実性チェックの初回判定でhigh severityとして検出され、公開前に発見・修正できました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 37,
+      "note": "foil 24件(OA21/抄録3)・rotor 13件(OA9/抄録4)。foilのarXiv上位は分野外誤検出（アビ翼の空力・爆轟波・空調負荷制御等）ばかりで使える候補なし。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件(OA4/抄録10)・rotor 14件(OA1/抄録13)。ほぼ全件が既配信済みで、rotorは統計学『Unbalanced Repeated-Measures Models』のような分野外の誤検出も混じっていた。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil5語・rotor5語、被引用順・per-page 25）",
+      "scope": "title_and_abstract.search、cited_by_count:desc",
+      "terms": [
+       "gas foil bearing",
+       "compliant foil bearing",
+       "bump foil bearing",
+       "foil thrust bearing",
+       "air foil journal bearing",
+       "whirl instability rotor",
+       "rotor bearing system stability",
+       "seal rotordynamic forces",
+       "subsynchronous vibration rotor",
+       "critical speed rotor bearing"
+      ],
+      "hits": 60,
+      "note": "foilはSan Andrés系のFEトップフォイルモデル論文等の高被引用・非OA定番を多数発掘したが、抄録すら取得できず不採用。rotorはH.F. Black(1969、環状シールの流体力に関する古典論文)を発掘したが、より確実に全文が取れるNTRS由来のクランドール論文を優先し不採用。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil、OA限定・被引用順）",
+      "scope": "title_and_abstract.search、is_oa:true、cited_by_count:desc、per-page 25",
+      "terms": [
+       "gas foil bearing",
+       "compliant foil bearing",
+       "bump foil bearing",
+       "foil thrust bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 30,
+      "note": "IOP Publishing(2006、foil bearing stability analysis)とMDPI圧電論文(2021)を発掘。IOPは抄録のみ取得可（本文は機関購読が必要と判明し不採用）、MDPIは抄録ベースで採用。NASA PS400(2009)もこのクエリ上位で発見。"
+     },
+     {
+      "name": "NASA技術報告サーバ(NTRS) 直接検索",
+      "scope": "「rotordynamic instability whirl bearing」等",
+      "terms": [
+       "rotordynamic instability whirl bearing",
+       "seal rotordynamic coefficients",
+       "critical speed rotor bearing stability"
+      ],
+      "hits": 44,
+      "note": "Crandall(1982年NASAワークショップ講演、ジャーナル軸受不安定性の直感的説明)を発掘・採用。同時に多数のNASA CP収録論文（1980年代のロータダイナミクス不安定性ワークショップ関連）も見つかったが今号は見送り。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。59号目にしてrotor定番枠も含めた基本候補プールの実質的な枯渇に直面し、OpenAlex直接クエリ（被引用順・OA限定の両系統）とNASA NTRS直接検索を両トピックで組み合わせて候補を確保した。"
+   },
+   "afterword": "今号でいちばん肝を冷やしたのは、圧電フォイル軸受の論文で、本文が読めなかったときにAIによる二次要約を使ったら、そこに紛れ込んでいた数式や数値を『抄録に書いてあること』だと思い込んで、そのまま下書きに残してしまっていたことでした。数字が具体的で、いかにも本物らしく見えるほど、出どころを疑う手間を惜しんでしまう——これは分野を問わず起こりうる落とし穴だなと感じました。幸い、要約を出典と一字一句突き合わせるチェックが本番の前に引っかけてくれて、最終的には確実な情報（抄録に書かれている範囲）だけに絞り直せました。もう一つ印象的だったのは、PS400という軸受コーティングの論文で、私はてっきり『フォイル(薄い金属箔)の表面に塗る』のだと思い込んでいたのですが、実際には軸(回転する棒の方)に塗って、フォイル側はコーティングなしのまま擦り合わせる、という逆の構図でした。似たような専門用語が並ぶ文章では、思い込みで読み進めてしまうと簡単に取り違えてしまうのだと、今日はあらためて実感しました。 — 編集担当より"
   }
  ]
 }
