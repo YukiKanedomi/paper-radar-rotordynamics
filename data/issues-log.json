@@ -7774,6 +7774,120 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。59号目にしてrotor定番枠も含めた基本候補プールの実質的な枯渇に直面し、OpenAlex直接クエリ（被引用順・OA限定の両系統）とNASA NTRS直接検索を両トピックで組み合わせて候補を確保した。"
    },
    "afterword": "今号でいちばん肝を冷やしたのは、圧電フォイル軸受の論文で、本文が読めなかったときにAIによる二次要約を使ったら、そこに紛れ込んでいた数式や数値を『抄録に書いてあること』だと思い込んで、そのまま下書きに残してしまっていたことでした。数字が具体的で、いかにも本物らしく見えるほど、出どころを疑う手間を惜しんでしまう——これは分野を問わず起こりうる落とし穴だなと感じました。幸い、要約を出典と一字一句突き合わせるチェックが本番の前に引っかけてくれて、最終的には確実な情報（抄録に書かれている範囲）だけに絞り直せました。もう一つ印象的だったのは、PS400という軸受コーティングの論文で、私はてっきり『フォイル(薄い金属箔)の表面に塗る』のだと思い込んでいたのですが、実際には軸(回転する棒の方)に塗って、フォイル側はコーティングなしのまま擦り合わせる、という逆の構図でした。似たような専門用語が並ぶ文章では、思い込みで読み進めてしまうと簡単に取り違えてしまうのだと、今日はあらためて実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-06",
+   "status": "published",
+   "headline": "第60号：foil/rotor各2件（Pourashraf & Bonello 2023、フォイル空気軸受-ロータ連成系の新しいガラーキン縮約法・OA全文／Salehi, Swanson & Heshmat 2001、コンプライアントフォイル軸受の熱特性・抄録ベース／Villa, Sinou & Thouverez 2008、複雑な柔軟ロータ-軸受系の安定性・振動解析・OA全文／Zhu他 2026、サイフォン式軸流ポンプ起動時のロータダイナミクス・抄録ベース）",
+   "intro": "collect.mjsの基本候補は、foil最新枠24件(OA21/抄録3)・定番枠14件(OA4/抄録10)、rotor最新枠13件(OA7/抄録6)・定番枠14件(OA1/抄録13)でしたが、既配信IDと突き合わせるとfoil定番14件は全て既配信、foil最新も分野外ノイズ（arXivの空力・爆轟波論文等）とOpenAlex新着の既配信重複で新規候補が実質ゼロという状態でした。60号目にして候補プールの枯渇がfoil・rotor両トピックの両枠に及んだため、OpenAlexへtopics.jsonの全キーワードで直接クエリ（per-page 25、被引用順・発行日順の両方）をかけて深掘りしました。foilでは115件、rotorでは84件の非重複候補を抽出し、その中から軸受・ロータダイナミクスの物理が主役の論文を選定しています。",
+   "picked": [
+    {
+     "id": "doi:10.1016/j.jsv.2022.117367",
+     "title": "A new Galerkin Reduction approach for the analysis of a fully coupled foil air bearing rotor system with bilinear foil model（Talieh Pourashraf, Philip Bonello, 2023, Journal of Sound and Vibration）",
+     "why": "フォイル空気軸受(FAB)-ロータ連成系の高速計算法（ガラーキン縮約法）を、トップフォイルがバンプフォイルから離脱する現象まで扱えるように拡張し、従来の線形力係数法では検出できない「トップフォイルフラッター」という不安定性の検出を実現した論文。foil latest枠のOA全文として、OpenAlex深掘りで発見した候補のUnpaywall情報からUniversity of Manchesterの機関リポジトリに全文PDFがあることを確認して採用。忠実性チェック2ラウンドで、原文の論理を逆に読んでいた「不安定速度の誤分類」の記述や、トップフォイルの変位方向（内側にたわむのを「浮き上がる」と誤記）等を修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.1308038",
+     "title": "Thermal Features of Compliant Foil Bearings—Theory and Experiments（Mohsen Salehi, Erik Swanson, Hooshang Heshmat, 2001, Journal of Tribology）",
+     "why": "クエット近似に基づく簡易熱モデルと、100mm径フォイル軸受・最大30,000rpmでの実測を照合し、軸受内の熱が主にトップフォイル経由の伝導（平均約80%）で逃げていることを示した定番論文。foil classic枠の抄録ベースとして選定（全文は商業誌のため未取得）。忠実性チェックで、伝導・対流の推定ロジックを抄録と逆に書いていた誤りと、抄録にない「気体膜の減衰の温度依存」という前提の混入を修正した。"
+    },
+    {
+     "id": "doi:10.1016/j.cnsns.2006.06.012",
+     "title": "Stability and vibration analysis of a complex flexible rotor bearing system（Cristiano Villa, Jean-Jacques Sinou, Fabrice Thouverez, 2008, Communications in Nonlinear Science and Numerical Simulation）",
+     "why": "玉軸受のすきま・ヘルツ接触非線形性を持つロータの周期応答を、縮約付き調和バランス法と周波数領域の安定性解析で調べ、跳躍現象・2つの安定解の共存・回転数によるホワール方向の反転を示した論文。rotor classic枠のOA全文として、HAL（フランス機関リポジトリ）のAnubisボット対策で直接アクセスできなかったため、Wayback Machineのアーカイブ経由で全文PDFを取得して採用。忠実性チェック2ラウンドで、equations:[]の方針と矛盾していた本文中のインライン数式表記の削除、「不安定領域」という誤った呼称の訂正等を行った。"
+    },
+    {
+     "id": "doi:10.3390/w18172178",
+     "title": "Evolution of Unsteady Internal Flow and Rotordynamic Characteristics of Siphon Vertical Axial-Flow Pump During Start-Up（Yadong Zhu他, 2026, Water）",
+     "why": "サイフォン式縦型軸流ポンプの起動過程を、トルクバランス方程式による動的回転速度更新を伴う非定常CFDで解析し、内部流れが乱れた旋回状態から整流状態へ移行する様子と、径方向力が流れの乱れに敏感に反応する様子を示した論文。rotor latest枠の抄録ベースとして選定（Water誌自体はゴールドOAだが、ScienceDirect等と同様のボット対策のため全文は未取得）。忠実性チェックは1ラウンドで通過。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "候補プールの枯渇がfoil・rotor両トピックの両枠に拡大",
+     "note": "collect.mjsの基本候補は、foil定番枠14件が全件既配信、foil最新枠24件も分野外ノイズと既配信重複で新規ゼロという状態でした。OpenAlexへの直接深掘りクエリ（topics.jsonの全キーワード×per-page25、被引用順・発行日順の両方）で、foil115件・rotor84件の非重複候補プールを新たに確保しました。"
+    },
+    {
+     "title": "商業出版社サイトが軒並みボット対策の壁に",
+     "note": "本文取得を試みたScienceDirect（Elsevier）・MDPI・IOP Publishingは、いずれもこの実行環境からのアクセスが403またはCAPTCHAチャレンジでブロックされました。唯一、HAL（フランス国立機関リポジトリ）はAnubisというボット対策で直接アクセスできませんでしたが、Wayback Machineに保存されたアーカイブ経由でPDF全文の取得に成功しました。一方、University of Manchesterの機関リポジトリは直接アクセスできました。機関リポジトリでも対策の有無は様々だと分かりました。"
+    },
+    {
+     "title": "忠実性チェック2ラウンドで見つかった論理の逆転",
+     "note": "foil latestの論文では『先行研究が不安定速度を誤分類していた』という原文の指摘を、要約作成時に主語・対象を取り違えて逆の説明にしてしまっていました。foil classicの論文でも、軸受内の熱がどちらの経路（伝導/対流）で実測され、どちらが差分推定かという抄録の論理を逆に書いていました。どちらも1回目の忠実性チェックで検出され、原文を読み直して訂正しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 37,
+      "note": "foil 24件(OA21/抄録3)・rotor 13件(OA7/抄録6)。foilのarXiv上位は分野外（アビ翼の空力・反応性気液流・爆轟波・空調負荷制御等）ばかりで使える候補なし。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件(OA4/抄録10)・rotor 14件(OA1/抄録13)。foil14件は全て既配信、rotorも統計学・電力系統の分野外誤検出を含め全て既配信または対象外。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（foil7語・rotor8語、被引用順+発行日順、per-page 25）",
+      "scope": "title_and_abstract.search、cited_by_count:desc / publication_date:desc",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 199,
+      "note": "foil115件・rotor84件の非重複候補を抽出。foilはSan Andrés系の高被引用非OA論文とManchester大学機関リポジトリのOA論文を、rotorはHAL機関リポジトリのOA論文とMDPI(Water誌)の新着論文を発掘。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。60号目にして基本候補プールの枯渇がfoil・rotor両トピックに及んだため、OpenAlexへの直接深掘りクエリで候補を確保した。"
+   },
+   "afterword": "今号でいちばん印象に残ったのは、Villa, Sinou & Thouverezの論文にあった「回転数をほんのわずか変えるだけで、ロータの振れ回る向きが丸ごと入れ替わる」という発見でした。24.8Hzでは時計回りに振れ回っていたのが、26.0Hzではもう反時計回りになっている——間の1Hzちょっとの範囲でひっくり返るというのは、素人目には直感に反する話でした。玉軸受の「すきまを超えたところから急に力が立ち上がる」という単純な非線形性だけで、こんな劇的な変化が起きるのだと知って、非線形な系の面白さと怖さを同時に感じた号でした。 — 編集担当より"
   }
  ]
 }
