@@ -7888,6 +7888,126 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。60号目にして基本候補プールの枯渇がfoil・rotor両トピックに及んだため、OpenAlexへの直接深掘りクエリで候補を確保した。"
    },
    "afterword": "今号でいちばん印象に残ったのは、Villa, Sinou & Thouverezの論文にあった「回転数をほんのわずか変えるだけで、ロータの振れ回る向きが丸ごと入れ替わる」という発見でした。24.8Hzでは時計回りに振れ回っていたのが、26.0Hzではもう反時計回りになっている——間の1Hzちょっとの範囲でひっくり返るというのは、素人目には直感に反する話でした。玉軸受の「すきまを超えたところから急に力が立ち上がる」という単純な非線形性だけで、こんな劇的な変化が起きるのだと知って、非線形な系の面白さと怖さを同時に感じた号でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-07",
+   "status": "published",
+   "headline": "第61号：foil/rotor各2件（Bonello & Pham 2014 フォイル空気軸受ロータの非線形動的応答の効率計算・抄録ベース／Howard, Bruckner & Radil 2010 T700エンジン後方軸受のフォイル軸受化・OA全文／Millsaps & Martinez-Sanchez 1994 ラビリンスシールの上流キャビティ連成・OA全文／Proctor & Gunter 2007 高速シール試験ロータのSFD安定性解析・OA全文）",
+   "intro": "collect.mjsの基本候補は、foil定番枠14件・最新枠24件、rotor定番枠14件・最新枠24件でしたが、既配信IDと突き合わせるとfoil定番14件はほぼ全て既配信、foil最新もarXiv上のノイズ（分野外の流体力学・制御論文）と既配信重複で新規候補が実質ゼロでした（60号に続き2日連続の枯渇）。OpenAlexへの直接深掘りクエリ（title_and_abstract.search、per-page 25、被引用順/発行日順）で新規候補を探し始めたところ、途中でOpenAlexの日次無料予算が枯渇（Insufficient budget エラー）し、それ以降は一切のOpenAlex検索ができなくなりました。以降はNASA NTRS（NASA技術報告リポジトリ）を主な情報源に切り替え、キーワード検索と全文取得を行いました。",
+   "picked": [
+    {
+     "id": "doi:10.1016/j.jsv.2014.03.001",
+     "title": "The efficient computation of the nonlinear dynamic response of a foil-air bearing rotor system（Philip Bonello, H.M. Pham, 2014, Journal of Sound and Vibration）",
+     "why": "フォイル空気軸受-ロータ系の非線形動的応答を、格子を使わないガラーキン縮約法(GR)と有限差分法(FD)の2通りの状態方程式定式化、時間領域の陰的積分と新しいハーモニックバランス法(HB)の2通りの解法で計算する枠組みを提案した論文。foil latest枠として選定。全文はCC-BYで公開されているはずだがScienceDirect・マンチェスター大学リポジトリとも今回はアクセスをブロックされ取得できなかったため、抄録ベース(oa:false)として扱った。忠実性チェックで『時間領域の陽解法』という記述が原文の『implicit integration（陰的積分）』と正反対だった誤りを発見・修正し、抄録に無い『クーロン摩擦減衰』という用語や、抄録に登場しない解析ツールとの関連づけ（related）も削除した。"
+    },
+    {
+     "id": "ntrs:20100015409",
+     "title": "Advancements Toward Oil-Free Rotorcraft Propulsion（Samuel A. Howard, Robert J. Bruckner, Kevin C. Radil, 2010, NASA/TM—2010-216094）",
+     "why": "GE T700ヘリコプターエンジンの後方（高温側）軸受だけをガスフォイル軸受に置き換える構想の、4段階開発プロセスのうち最初の2段階（ロータダイナミクス実現性評価・軸受単体の予備試験）を報告したNASA技術報告。foil classic枠として選定。当初はfoil classic枠にDellaCorte(1997)『The Role of Tribology in the Development of an Oil-Free Turbocharger』（NASA会議発表資料）を選んでいたが、忠実性チェックでNTRSにPDF本文が存在せず抄録のみだと判明し、oa:trueの表示（OA全文バッジ）と『抄録ベース』という自己記述が画面上で矛盾する問題が指摘されたため、全文を確認できるこの論文に差し替えた。"
+    },
+    {
+     "id": "ntrs:19940029680",
+     "title": "Rotordynamic Forces in Labyrinth Seals: Theory and Experiment（Knox T. Millsaps, Manuel Martinez-Sanchez, 1994, NASA CP, Texas A&M大学ワークショップ）",
+     "why": "ラビリンスシールが生む交差力・直接減衰について、上流キャビティとの流れの非一様な連成を組み込んだ集中定数モデルとMIT試験設備(LSTF)の実験を組み合わせ、従来モデルが説明できなかった実測値の増幅（最大4倍程度）を説明した論文。rotor classic枠として選定。忠実性チェックで、上流/下流の取り違え（実際は上流スワールキャビティ側のギャップが未制御だった）、増幅率の数値の混用（試験条件の値と理論上の最大値を混同）、単調性の誤り（面積比1.35付近で最大というピーク構造を『小さいほど大きい』と誤記）、関連論文リンクのDOI違い（Muszynska論文のDOIを誤って参照）等、複数の誤りを修正した。"
+    },
+    {
+     "id": "ntrs:20070025190",
+     "title": "Stability Analysis of a High-Speed Seal Test Rotor With Marginal and Extended Squeeze-Film Dampers—Theoretical and Experimental Results（Margaret P. Proctor, Edgar J. Gunter, 2007, NASA/TM—2007-214849）",
+     "why": "目標速度に届かなかった高速シール試験ロータの異常振動を、油膜スクイーズフィルムダンパ(SFD)の長さを延長する改修で解決した実例研究。rotor latest枠として選定。忠実性チェックで最も重かった指摘は、PDFから切り出して掲載した実データ図(Fig.3)について、原文自身に『著者の許諾なしに複製しないこと』という再配布制限の注記があり、共著者が民間企業(RODYN)所属でもあるため『米国政府作成物としてパブリックドメイン』という主張が成立しない、というものだった。実図は撤回し、同じ物理関係を説明する概念図（模式・実データではないと明記）に差し替えた。あわせて、解析による予測値（33,000rpm・33,600rpmのロックアップ、43,140rpm到達）と実測値（40,444rpmまでの滑らかな運転）が混同されていた箇所も、解析/実測を明示する形に修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "OpenAlexの日次無料予算が実行中に枯渇",
+     "note": "collect.mjsの基本候補取得後、新規候補を広げるためのOpenAlex直接クエリを重ねたところ、『Insufficient budget. This request costs $0.0001 but you only have $0 remaining. Resets at midnight UTC』というエラーで即日中は一切使えなくなりました（429の一時的なレート超過とは別物で、待っても回復しません）。以降はNASA NTRS（無料・無制限）を主な情報源に切り替え、4件全てをNTRS由来の候補から選びました。"
+    },
+    {
+     "title": "候補プールの枯渇でfoil classicの一次選択がライセンス上不成立に",
+     "note": "foil classic枠に当初選んだDellaCorte(1997)のNASA会議発表資料は、NTRSに抄録しか収録されておらずPDF本文がありませんでした。忠実性チェックで『oa:trueなのに全文は未取得』という自己矛盾（画面には『OA全文』バッジが出るのに本文は抄録ベースの深さしかない）を指摘され、全文を確認できる別のNASA技術報告（Howard, Bruckner & Radil 2010）に差し替えました。"
+    },
+    {
+     "title": "実データ図の著作権を、原文の注記から見直した",
+     "note": "Proctor & Gunter (2007) のNASA/TMから切り出した実データ図を『米国政府作成物だからパブリックドメイン』として一度は掲載しましたが、忠実性チェックで、この報告書自体が表紙裏に『著者の許諾なしに複製しないこと』という制限を明記しており、共著者の一人が民間企業（RODYN Vibration Analysis）所属であることも判明しました。NASA技術報告だからといって一律にパブリックドメインとは限らない、という教訓を得て、実図は概念図に差し替えました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 48,
+      "note": "foil 24件(OA19/抄録5)・rotor 24件(OA20/抄録4)。arXiv上位はほぼ全て分野外（鳥の翼の空力・爆轟波・空調負荷制御等）で使える候補なし。OpenAlex新着はほぼ既配信または分野外誤検出。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件・rotor 14件。foilは全件既配信。rotorも上位はほぼ既配信または分野外（統計学・電力系統）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（直後の個別照会で日次予算が枯渇）",
+      "scope": "title_and_abstract.search、cited_by_count:desc / publication_date:desc、per-page 25",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "compliant foil bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "rotordynamics"
+      ],
+      "hits": 148,
+      "note": "foil65件・rotor83件の非重複候補を確保できたが、その直後に個別論文の抄録取得（work単体API）を重ねたところOpenAlexが日次予算切れ（Insufficient budget）となり、以降は一切のOpenAlex呼び出しができなくなった。"
+     },
+     {
+      "name": "NASA NTRS（citations/search API、キーワード検索）",
+      "scope": "OpenAlex枯渇後の代替情報源。foil/rotorの物理キーワードで個別検索",
+      "terms": [
+       "gas foil bearing rotordynamic",
+       "compliant foil bearing coating wear",
+       "foil thrust bearing design fabrication",
+       "seal rotordynamic coefficients labyrinth",
+       "squeeze film damper rotor stability",
+       "rotordynamic instability turbomachinery workshop"
+      ],
+      "hits": 62,
+      "note": "既配信と重複しない候補（Howard, Bruckner & Radil 2010／Millsaps & Martinez-Sanchez 1994／Proctor & Gunter 2007 等）をここから発掘。1993年テキサスA&Mワークショップ収録論文群、NASAグレン研究センターの技術覚書群が主な発掘源。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールの枯渇（61号目）に加えOpenAlexの日次予算枯渇が重なったため、今号は4件全てNASA NTRS由来（うち1件は抄録のみで全文未取得のため抄録ベース）という構成になった。"
+   },
+   "afterword": "今号でいちばん驚いたのは、Proctor & Gunter (2007) から切り出した図を、公開後の忠実性チェックで撤回することになった経緯でした。「NASAの技術報告だから政府著作物でパブリックドメインのはず」と思い込んでいたのですが、その報告書の表紙裏には「著者の許可なく複製しないこと」という注記があり、しかも共著者の一人は民間の解析ソフト会社の方でした。国の機関が出している資料でも、中身までは無条件にフリーとは限らない——当たり前と言えば当たり前ですが、思い込みで判断せず出典の細部まで確認する大切さを実感した号でした。 — 編集担当より"
   }
  ]
 }
