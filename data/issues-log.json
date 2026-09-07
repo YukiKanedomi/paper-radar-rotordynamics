@@ -8008,6 +8008,119 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールの枯渇（61号目）に加えOpenAlexの日次予算枯渇が重なったため、今号は4件全てNASA NTRS由来（うち1件は抄録のみで全文未取得のため抄録ベース）という構成になった。"
    },
    "afterword": "今号でいちばん驚いたのは、Proctor & Gunter (2007) から切り出した図を、公開後の忠実性チェックで撤回することになった経緯でした。「NASAの技術報告だから政府著作物でパブリックドメインのはず」と思い込んでいたのですが、その報告書の表紙裏には「著者の許可なく複製しないこと」という注記があり、しかも共著者の一人は民間の解析ソフト会社の方でした。国の機関が出している資料でも、中身までは無条件にフリーとは限らない——当たり前と言えば当たり前ですが、思い込みで判断せず出典の細部まで確認する大切さを実感した号でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-08",
+   "status": "published",
+   "headline": "第62号：foil/rotor各2件（Vleugels et al. 2006 マイクロガスタービン用フォイル軸受の安定性解析・抄録ベース／Hu et al. 2024 ガスフォイルスラスト軸受の境界角度最適設計・OA全文／Hirano, Guo & Kirk 2005 ラビリンスシールのCFD対バルクフロー比較・抄録ベース／Tresser, Dolev & Bucher 2017 パラメトリック励振による低速バランシング・OA全文）",
+   "intro": "collect.mjsの基本候補（foil定番14件・最新24件、rotor定番14件・最新24件）は、62号目にしてfoil定番枠がほぼ全て既配信、foil最新枠もarXiv上位が分野外ノイズ（半導体・爆轟波・強化学習等）で埋まる状態でした。rotor latest枠には幸い未配信のarXiv論文（Tresser et al. 2017）が残っていましたが、foil classic・foil latest・rotor classicの3枠はOpenAlexへの直接深掘りクエリ（is_oa:trueやbest_oa_location.license:cc-by条件を加えた被引用順/CC-BY限定検索）で新規候補を探しました。",
+   "picked": [
+    {
+     "id": "doi:10.1088/0960-1317/16/9/s16",
+     "title": "High-speed bearings for micro gas turbines: stability analysis of foil bearings（Peter Vleugels et al., 2006, Journal of Micromechanics and Microengineering）",
+     "why": "手のひらサイズの超小型ガスタービン（50万rpm超）向けフォイル軸受の安定性解析。foil classic枠として選定。出版社サイトは購読限定で全文アクセス不可のため抄録ベース。忠実性チェックで「同一ジオメトリ」（抄録は“similar geometry”）という言い過ぎ、被引用数をOpenAlex単独値47件で確定表示していた点（Semantic Scholarと13%乖離）、triviaの「研究で知られていた」という出典に無い評価語を指摘され、いずれも修正した。"
+    },
+    {
+     "id": "doi:10.3390/lubricants12050143",
+     "title": "Optimal Design of Boundary Angle for Gas Foil Thrust Bearing Thermal Performance（Bin Hu et al., 2024, Lubricants）",
+     "why": "ガスフォイルスラスト軸受のトップフォイルを分ける境界線を斜めに傾け、負荷容量を保ったまま熱特性を改善する新設計。CC-BYのMDPI論文で、r.jina.ai経由の全文取得に成功しfoil latest枠として選定。忠実性チェックで最も重大だったのは「+5°の軸受が最高温度最も低い」という記述が実は原文の「−5°」の取り違えだったという符号エラーの発見。加えて数値予測(57.4/65.8℃)を「実験」と誤記していた点、9角度（数値解析）と5角度（実験）の範囲混同、「3枚の羽根」（正しくは6枚）等、複数箇所を修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.1808426",
+     "title": "Application of Computational Fluid Dynamics Analysis for Rotating Machinery—Part II: Labyrinth Seal Analysis（Toshio Hirano, Zenglin Guo, R. G. Kirk, 2005）",
+     "why": "ラビリンスシールのロータダイナミック力を、CFD(CFX TASCFlow)と実務用バルクフロープログラム(DYNLAB)で比較した論文。rotor classic枠として選定。抄録のみで全文アクセス不可のため抄録ベース。忠実性チェックで、解析対象の“compressor eye seal”（圧縮機アイシール＝羽根車入口部）を「軸端シール」と誤訳していた技術的な取り違えを発見。また抄録の“pessimistic prediction”を「実際より高め・安全側」とCFD側を真値扱いする過剰解釈だった点、hookで「危ない方向」と「安全マージン」が矛盾していた点も修正した。"
+    },
+    {
+     "id": "doi:10.1016/j.jsv.2017.11.029",
+     "title": "Dynamic balancing of super-critical rotating structures using slow-speed data via parametric excitation（Shachar Tresser, Amit Dolev, Izhak Bucher, 2017）",
+     "why": "危険速度よりずっと低い回転数（8Hz）のまま、パラメトリック励振でアンバランスを高精度に検出するバランシング法。rotor latest枠として選定。当初arXivプレプリントとして収集したが、実際にはJournal of Sound and Vibration 415(2017)59-77として正式出版されていたことが判明し、venue/DOIをJSV側の情報に訂正（arXiv版はgreen OAの全文ソースとして維持）。また「アンバランス投影量との線形関係」という原文に無い表現、精度「92.1%」という原文に存在しない逆算値（正しくは原文記載の「92%」）も忠実性チェックで発見・修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "基本候補プールが62号目でほぼ枯渇",
+     "note": "foil classic枠はcollect.mjsの14件中ほぼ全てが既配信済みで、OpenAlexへの直接深掘りクエリ（is_oa:trueやCC-BYライセンス限定条件を加えた検索）で新規候補を探しました。rotor classic枠も同様で、“seal rotordynamic force”という語での深掘りからHirano et al. 2005を発掘しました。"
+    },
+    {
+     "title": "MDPI・IOPの本文アクセスは日によって明暗",
+     "note": "今号はr.jina.ai経由でMDPI(Lubricants誌)の全文取得に成功しましたが、同じ手法でIOPscience(Vleugels論文)は購読ゲートに阻まれ抄録止まりでした。以前のメモにもあるとおり、出版社側のボット対策の強さは日によって変わるため、1つの経路に固執せず早めに次点候補（抄録ベース）へ切り替える判断をしました。"
+    },
+    {
+     "title": "プレプリントだと思っていた論文が実は正式出版されていた",
+     "note": "Tresser et al. 2017はarXiv上のメタデータだけでは2017年のプレプリントに見えましたが、忠実性チェックの過程でJournal of Sound and Vibration誌に正式出版されていた（DOI付き）ことが分かりました。arXiv版は出版社版と同内容のgreen OA全文として扱い、書誌情報は正式な出版情報に訂正しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex新着（最新枠, foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 48,
+      "note": "foil 24件(OA21/抄録3)・rotor 24件(OA19/抄録5)。foil最新枠のarXiv上位はほぼ分野外（半導体デバイス・爆轟波・強化学習等）。rotor latest枠にTresser et al. 2017(1704.08530)が未配信で残っていた。"
+     },
+     {
+      "name": "OpenAlex被引用上位（定番枠, foil/rotor）",
+      "scope": "本日のローテーション語・被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 28,
+      "note": "foil 14件・rotor 14件。foilはほぼ全件既配信（62号分の蓄積）。rotorも上位はほぼ既配信または対象外（統計学の論文・風力発電の電力系統論文等）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（is_oa:true / CC-BYライセンス限定）",
+      "scope": "title_and_abstract.search、is_oa:true または best_oa_location.license:cc-by、per-page 20〜25",
+      "terms": [
+       "gas foil bearing",
+       "foil journal bearing",
+       "foil air bearing"
+      ],
+      "hits": 25,
+      "note": "is_oa:true条件でVleugels et al. 2006（cite=47、ただし実アクセスは購読ゲートで不可）、CC-BY限定条件でHu et al. 2024（Lubricants、r.jina.ai経由で全文取得成功）を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（rotor、通常検索）",
+      "scope": "title_and_abstract.search、cited_by_count:desc、per-page 25",
+      "terms": [
+       "rotor bearing stability",
+       "critical speed rotor",
+       "seal rotordynamic force"
+      ],
+      "hits": 19,
+      "note": "“seal rotordynamic force”でHirano, Guo & Kirk 2005を含む複数の未配信ASME論文を発掘。他の2語は既配信または分野外（統計学・風力発電）が大半だった。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil classic・foil latest・rotor classicの3枠は基本候補プールの枯渇によりOpenAlex直接深掘りクエリで発掘し、rotor latestのみ基本候補プールから選定した。"
+   },
+   "afterword": "今号でいちばん印象に残ったのは、Hu et al. 2024の要約ドラフトに紛れ込んでいた「+5°」と「−5°」の取り違えでした。原論文は境界角度を9段階で比較していて、平均温度が一番低いのは−10°、最高温度が一番低いのは−5°という、似たようで違う2つの結論を並べて書いていたのですが、自分で書いた時にこの2つを混同してしまっていました。忠実性チェックに数値を一つひとつ原文と突き合わせてもらって初めて、「似ている数字・似ている記号ほど、うっかり取り違えやすい」という当たり前の教訓に気づかされました。 — 編集担当より"
   }
  ]
 }
