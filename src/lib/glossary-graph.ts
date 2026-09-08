@@ -177,6 +177,9 @@ export const CATEGORIES: GraphCategory[] = [
       "境界角度（GFTBトップフォイル）",
       "極限負荷容量（摩擦トルク急増点）",
       "ガスフォイルスラスト軸受(GFTB)",
+      "簡易弾性基礎モデル(SEFM)",
+      "連成流体構造モデル",
+      "ダンピングリーフフォイル（支持層）",
     ],
   },
   {
@@ -229,6 +232,8 @@ export const CATEGORIES: GraphCategory[] = [
       "デチューニングパラメータ σ",
       "モーダルアンバランス（投影量）",
       "Duffing型硬化非線形性",
+      "局所共振（Local Resonance）",
+      "き裂呼吸モデル（breathing crack model）",
     ],
   },
   {
@@ -1293,6 +1298,21 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "パラメトリック増幅器(PA)", to: "パラメトリック励振", label: "非線形項で応答を頭打ちにして実現" },
   { from: "トライアル質量法（2回運転によるバランシング）", to: "アンバランス応答", label: "2回の運転から逆算" },
   { from: "パラメトリック増幅器(PA)", to: "超危険速度ロータ（スーパークリティカルロータ）", label: "低速のままバランシング可能にする" },
+  // --- ガスフォイル軸受支持ロータの安定性レビュー（Khamari, Kumar & Behera 2023） ---
+  { from: "プリロード（予圧）", to: "くさび効果", label: "強めるほどこの効果が強まると示唆される" },
+  { from: "簡易弾性基礎モデル(SEFM)", to: "コンプライアンス", label: "流体膜圧力に比例する線形ばねとして近似" },
+  { from: "連成流体構造モデル", to: "簡易弾性基礎モデル(SEFM)", label: "バンプ間相互作用・接触状態を取り込み精緻化" },
+  { from: "クーロン摩擦減衰", to: "不安定開始速度(OIS)", label: "摩擦係数を高めると改善する例が報告される" },
+  // --- 支持層付きフォイル軸受と第2・第3世代の負荷容量比較（Bulat & Sigachev 2025・抄録ベース） ---
+  { from: "ダンピングリーフフォイル（支持層）", to: "設計世代（Generation I〜III）", label: "既存世代とは別軸で内部減衰を高める工夫" },
+  { from: "ダンピングリーフフォイル（支持層）", to: "内部減衰", label: "追加する薄板層が生む" },
+  // --- 拡張き裂ジェフコットロータの局所共振によるき裂検出（Gómez-Mancilla et al. 2004） ---
+  { from: "Jeffcottロータ", to: "き裂呼吸モデル（breathing crack model）", label: "回転角に応じた周期的な剛性変化として組み込む" },
+  { from: "き裂呼吸モデル（breathing crack model）", to: "局所共振（Local Resonance）", label: "危険速度の分数倍に振動ピークを生む" },
+  { from: "局所共振（Local Resonance）", to: "危険速度", label: "分数倍の位置に現れる" },
+  // --- たわみロータのアンバランス応答の計算と実験（Lund & Orcutt 1967） ---
+  { from: "軸受の剛性・減衰係数", to: "ジャイロ効果", label: "を含めた運動方程式でアンバランス応答を計算" },
+  { from: "ジャイロ効果", to: "危険速度", label: "曲げ振動の周波数に影響する" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

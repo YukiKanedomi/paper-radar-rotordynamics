@@ -8121,6 +8121,122 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。foil classic・foil latest・rotor classicの3枠は基本候補プールの枯渇によりOpenAlex直接深掘りクエリで発掘し、rotor latestのみ基本候補プールから選定した。"
    },
    "afterword": "今号でいちばん印象に残ったのは、Hu et al. 2024の要約ドラフトに紛れ込んでいた「+5°」と「−5°」の取り違えでした。原論文は境界角度を9段階で比較していて、平均温度が一番低いのは−10°、最高温度が一番低いのは−5°という、似たようで違う2つの結論を並べて書いていたのですが、自分で書いた時にこの2つを混同してしまっていました。忠実性チェックに数値を一つひとつ原文と突き合わせてもらって初めて、「似ている数字・似ている記号ほど、うっかり取り違えやすい」という当たり前の教訓に気づかされました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-09",
+   "status": "published",
+   "headline": "第63号：foil/rotor各2件（Khamari, Kumar & Behera 2023 ガスフォイル軸受支持ロータの安定性レビュー・OA全文／Bulat & Sigachev 2025 支持層付きフォイル軸受の負荷容量比較・抄録ベース／Gómez-Mancilla et al. 2004 拡張き裂ジェフコットロータの局所共振・OA全文／Lund & Orcutt 1967 たわみロータのアンバランス応答・抄録ベース）",
+   "intro": "collect.mjsの基本候補（foil定番14件・最新24件、rotor定番14件・最新24件）は63号目でほぼ枯渇し、4枠のうち即採用できたのは0件でした。foil最新枠のarXiv上位は完全に分野外（ターボファン効率劣化・相対論的流体・半導体ダイオード等）、foil定番枠・rotor定番枠も上位14件がほぼ全て既配信済みでした。そこでOpenAlexへの直接クエリ（title.search + is_oa条件、被引用順/日付順）とarXiv APIへの直接クエリ（abs:rotordynamics等）で候補を掘り直しました。",
+   "picked": [
+    {
+     "id": "doi:10.24874/ti.1381.09.22.01",
+     "title": "A Review on Modeling and Stability Aspects of Gas Foil Bearing Supported Rotors（Debanshu S. Khamari, Jitesh Kumar, Suraj K. Behera, 2023, Tribology in Industry）",
+     "why": "ガスフォイル軸受支持ロータの性能予測モデルと安定化策を2023年までの文献で体系的に整理した、著者ら曰く『この観点では初』のレビュー。foil classic枠として選定。CC-BY-NCで実図は使わず概念図のみとした。忠実性チェックで、原文では『冷却ガス供給圧の上昇がサブシンクロナス発生を遅らせる』話と『加熱すると危険速度がやや上がり振幅が下がる』話が別々に書かれているのを混同していた点、時間領域シミュレーション予測値(14,400rpm)を『実験結果』と誤記していた点、実在する第5章（今後の課題11項目）が要約から丸ごと抜け落ちていた点を発見・修正した。"
+    },
+    {
+     "id": "doi:10.3103/s1068799825040129",
+     "title": "Comparison of the Load-Bearing Capacity of Foil Bearings with a Supporting Layer with Foil Gas-Dynamic Bearings of the Second and Third Generations（M. P. Bulat, S. I. Sigachev, 2025, Russian Aeronautics）",
+     "why": "制振用の薄板（ダンピングリーフフォイル）を追加した支持層付きフォイル軸受の負荷容量を、第2・第3世代フォイル軸受と比較した論文。foil latest枠として選定（抄録ベース）。忠実性チェックで、抄録が『試作した』とは書いていないのに『試作し』と書いていた点、『内部減衰により』のところを『内部減衰の増加により』と抄録にない増加のニュアンスを足していた点を修正した。"
+    },
+    {
+     "id": "doi:10.1016/j.crme.2004.09.007",
+     "title": "The influence of crack-imbalance orientation and orbital evolution for an extended cracked Jeffcott rotor（J. Gómez-Mancilla, Jean-Jacques Sinou, V. R. Nosov, F. Thouverez, A. Zambrano, 2004, Comptes Rendus Mécanique）",
+     "why": "き裂とアンバランスの向きが未知でも、危険速度の1/2・1/3付近に現れる『局所共振』の軌道を見ればき裂を検出できることを数値解析で示した論文。arXiv上の著者self-archive版（0801.3019）で全文を確認しrotor latest枠として選定。忠実性チェックで、逐語引用がPDF原文と一語違っていた点（Forの脱落）、『局所共振の振動振幅・軌道はφdに依存しない』としていたが原文は『Ω≈1/2の軌道（内側ループ）のみ』依存しないと述べており振幅は逆に大きく変動すると書かれていた点（過剰な一般化）を発見・修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.3610155",
+     "title": "Calculations and Experiments on the Unbalance Response of a Flexible Rotor（J. W. Lund, F. K. Orcutt, 1967, Journal of Engineering for Industry）",
+     "why": "軸受を4つの剛性係数・4つの減衰係数でモデル化しジャイロ効果を含めて解いたアンバランス応答の計算を、両端・中央に円盤を持つたわみ軸の実験（3,000〜24,000rpm、3次危険速度域）と比較した定番論文。rotor classic枠として選定（抄録ベース）。忠実性チェックで、triviaに書いた『Lundが摂動法を後に確立した』という時系列が裏取り不可だった点、『振れ回りは楕円を描くことを確認』という記述が実は解析上の一般論であって実験で確認した結果ではなかった点、silicone（シリコーン油）を『シリコン』と誤記していた点を修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "基本候補プールが63号目でほぼゼロに",
+     "note": "foil classic・foil latest・rotor classicの3枠は、collect.mjsの基本候補（上位14〜24件）の中に新規候補がほぼ残っておらず、OpenAlexへの直接クエリ（title.search条件を絞った被引用順/日付順の再検索）で掘り直しました。rotor latestも基本候補の大半が統計学論文や電力系統論文などの分野外ノイズで、arXiv APIへの直接クエリ（abs:rotordynamics、abs:critical speed AND abs:rotor 等）に切り替えました。"
+    },
+    {
+     "title": "『OA・CC-BY』のはずが軒並みボット対策で読めなかった",
+     "note": "SAGE(Cheng et al. 2019)・AIP Advances(Zhang et al. 2026)・ScienceDirect(Gao et al. 2023)はいずれもOpenAlex上でCC-BYと確認できたにもかかわらず、Cloudflareの認証チャレンジ等で全文取得ができませんでした。Texas A&MのOAKTrustリポジトリ(Zeidan 1996)も同様にブロックされ、NASA NTRSの.txt全文API(Elrod & Childs 1988)やJ-STAGEのPDF(Ishii et al. 1997)は取得自体は成功したものの、古いスキャン原稿でOCRが単語単位に分解されてしまい、逐語引用に使える品質ではありませんでした。最終的に本文を確保できたのは、ボット対策の薄いTribology in Industry誌のサイトと、著者自身がself-archiveしたarXivのPDFの2件でした。"
+    },
+    {
+     "title": "『新着』のarXiv論文が、実はすでに配信済みだった",
+     "note": "arXiv APIで見つけた候補のうち2件（1704.08530、2512.14210）は、arXiv上のIDだけを見ると未配信の新規論文に見えましたが、arXivが記録する`arxiv:doi`タグ（正式な出版先を示す情報）を確認したところ、どちらもすでに別の号でDOIベースの`id`として配信済みだったことが分かりました。とくに2512.14210は2025年12月にarXiv投稿されたばかりに見えて、実際は2019年にTribology Transactions誌へ出版済みだった論文の著者self-archive版で、arXiv IDだけで重複判定していたら見逃していたところでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs（arXiv＋OpenAlex新着／被引用上位、foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順／被引用数順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 65,
+      "note": "foil最新枠24件(OA21/抄録3)・foil定番枠14件(OA4/抄録10)・rotor最新枠13件(OA9/抄録4)・rotor定番枠14件(OA1/抄録13)。foil最新枠のarXiv上位が完全に分野外ノイズで、4枠とも新規のOA全文候補は基本候補内には残っていなかった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（title.search、foil）",
+      "scope": "title.search:\"gas foil bearing\"、is_oa true/false・publication_date絞り込みを併用",
+      "terms": [
+       "gas foil bearing"
+      ],
+      "hits": 46,
+      "note": "is_oa:true・被引用順でKhamari et al. 2023レビューを発掘。is_oa:false・2023年以降・日付順でBulat & Sigachev 2025を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ深掘り（title.search、rotor）",
+      "scope": "title.search:\"rotor-bearing system\" / \"rotor system\"、被引用順",
+      "terms": [
+       "rotor-bearing system",
+       "rotor system"
+      ],
+      "hits": 65,
+      "note": "上位のほとんどが既配信。Vance『Rotordynamics of Turbomachinery』(教科書・全文非対象)や、AIP Advances・SAGE論文（CC-BYだが全文取得不可）を発見したが最終的には不採用。"
+     },
+     {
+      "name": "arXiv API直接クエリ（rotor）",
+      "scope": "abs:rotordynamics、abs:\"critical speed\" AND abs:rotor、abs:\"journal bearing\" AND abs:rotor 等、投稿日順",
+      "terms": [
+       "rotordynamics",
+       "bearing stiffness and damping",
+       "unbalance response",
+       "critical speed AND rotor",
+       "whirl instability",
+       "journal bearing AND rotor"
+      ],
+      "hits": 13,
+      "note": "1704.08530・2512.14210はarxiv:doiタグの確認で既配信と判明し除外。0801.3019(→doi:10.1016/j.crme.2004.09.007)がrotor latest枠として採用。"
+     },
+     {
+      "name": "NASA NTRS / J-STAGE / OAKTrust（全文取得を試みたが不採用）",
+      "scope": "NTRS .txt全文API、J-STAGE PDF、TAMU OAKTrust",
+      "terms": [
+       "rotordynamic seal",
+       "honeycomb seal",
+       "labyrinth seal rotordynamic force",
+       "squeeze film damper"
+      ],
+      "hits": 0,
+      "note": "Elrod & Childs 1988(honeycomb seal, NASA-CR)とIshii et al. 1997(labyrinth seal, J-STAGE)は全文取得に成功したが、スキャン原稿のOCRが単語単位に分解され逐語引用に使えず不採用。Zeidan 1996(TAMU OAKTrust)はCloudflareにブロックされ不採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが4枠とも枯渇していたため、今号は全て手動のOpenAlex直接クエリ・arXiv API直接クエリで発掘した。"
+   },
+   "afterword": "今号でいちばんヒヤッとしたのは、arXivで見つけた『2025年12月投稿の新着プレプリント』が、実は2019年にすでに雑誌に載っていて、しかもうちのアプリにすでに配信済みだったと分かった瞬間でした。arXivのIDだけを見ていたら気づけなかったのですが、arXivには元の出版先のDOIを記録するタグがあって、そこを確認したら『あ、これもう読者に届けてる』とすぐ分かりました。新しく見える情報でも、もう一段掘ると実は既知だった、ということがあるのだと勉強になりました。 — 編集担当より"
   }
  ]
 }
