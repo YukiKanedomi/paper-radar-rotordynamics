@@ -183,6 +183,10 @@ export const CATEGORIES: GraphCategory[] = [
       "構造減衰",
       "動的たわみ振幅（無次元）δ*",
       "無溶接組立て（量産ガスフォイル軸受）",
+      "メタルメッシュフォイル軸受(MMFB)",
+      "バンプ型フォイル軸受(BFB)",
+      "材料損失係数",
+      "エッジロード",
     ],
   },
   {
@@ -237,6 +241,8 @@ export const CATEGORIES: GraphCategory[] = [
       "Duffing型硬化非線形性",
       "局所共振（Local Resonance）",
       "き裂呼吸モデル（breathing crack model）",
+      "振れ回り角周波数",
+      "バックフロー（逆流）",
     ],
   },
   {
@@ -314,6 +320,8 @@ export const CATEGORIES: GraphCategory[] = [
       "線形回帰法（軌跡ベースの同定）",
       "統合設計（co-design）",
       "偏心3次元CFDモデル（シール漏れ流れ）",
+      "拡張カルマンフィルタ(EKF)",
+      "Gauss-Markovモデル",
     ],
   },
   {
@@ -326,6 +334,7 @@ export const CATEGORIES: GraphCategory[] = [
       "危険速度",
       "交差剛性",
       "有効減衰",
+      "交差減衰",
       "傾き・モーメント係数",
       "クーロン摩擦減衰",
       "分離余裕",
@@ -1337,6 +1346,17 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 230mm級ガスフォイルスラスト軸受試験機（Lubell et al. 2025・抄録ベース） ---
   { from: "ガスフォイルスラスト軸受(GFTB)", to: "ロード・ロス曲線（Load-Loss Curve）", label: "の実測データを試験機で取得する" },
   { from: "ガスフォイル軸受", to: "無溶接組立て（量産ガスフォイル軸受）", label: "を保ったまま大型化する量産設計の要件" },
+  // --- メタルメッシュフォイル軸受とバンプ型フォイル軸受の比較（San Andrés & Chirathadam 2012） ---
+  { from: "メタルメッシュフォイル軸受(MMFB)", to: "材料損失係数", label: "がバンプ型フォイル軸受より大きい値を示す" },
+  { from: "バンプ型フォイル軸受(BFB)", to: "リフトオフ速度", label: "がメタルメッシュ型より高い回転数になる" },
+  // --- ガスフォイルジャーナル軸受のミスアライメント実験（Howard 2008） ---
+  { from: "ミスアライメント", to: "エッジロード", label: "を引き起こし局所的な膜厚減少を招く" },
+  { from: "エッジロード", to: "コーストダウン時間", label: "による発熱・動力損失増加が短縮させる" },
+  // --- 拡張カルマンフィルタによる軸受係数同定（Miller & Howard 2008） ---
+  { from: "拡張カルマンフィルタ(EKF)", to: "交差減衰", label: "の同定精度が直接減衰より大幅に低いことを示した" },
+  // --- 逆流が誘起する負の交差剛性（Gundersen et al. 2026） ---
+  { from: "バックフロー（逆流）", to: "交差剛性", label: "が羽根車流路間の圧力差を生み負の値をもたらす" },
+  { from: "振れ回り角周波数", to: "交差剛性", label: "が負のとき不安定化力として現れる" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

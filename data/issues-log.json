@@ -8304,6 +8304,120 @@
     "note": "前日セッションの中断により、基本候補プールを超えてこの4件へたどり着いた経路（追加の検索クエリ・候補間の比較検討）は再現できなかった。収集フェーズ自体は完了しており、公開前の再検証（faithfulness-check 2ラウンド）は本ノート作成時に改めて実施した。"
    },
    "afterword": "今回いちばん『なるほど』だったのは、図の描き方の失敗でした。バンプフォイル（波型のバネ）が荷重を受けてつぶれる様子を描こうとして、最初は『何もしていない状態はまっすぐな線、荷重を受けると波打つ』と描いてしまったのですが、これは物理的に逆でした。実際はバネ自体がもともと波型で、荷重を受けると波の高さが低くつぶれる、というのが正しい変形の仕方です。言われてみれば当たり前なのですが、絵にする段になって初めて自分の理解が浅かったことに気づきました。図は言葉より嘘がバレやすい、と実感した回でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-11",
+   "status": "published",
+   "headline": "第65号：foil/rotor各2件（San Andrés & Chirathadam 2012 メタルメッシュ対バンプ型フォイル軸受の比較・抄録ベース／Howard 2008 ガスフォイル軸受のミスアライメント実験・OA全文／Miller & Howard 2008 拡張カルマンフィルタによる軸受係数同定・OA全文／Gundersen et al. 2026 逆流が誘起する負の交差剛性・抄録ベース）",
+   "intro": "collect.mjsの基本候補（foil最新24件・定番14件、rotor最新24件・定番14件）は65号目でほぼ枯渇しており、foil最新枠のarXiv上位は完全に分野外（データ同化・機械学習・音響メタマテリアル等）で、4枠とも新規のOA全文候補は残っていませんでした。そこでOpenAlexへの直接クエリ（title.search条件を絞った被引用順／日付順の再検索）で候補を掘り直し、foilはNi/PTFEコーティング比較やメタルメッシュ軸受比較など複数の候補を発掘しました。あわせてarXivで『foil bearing』の完全一致フレーズ検索を試したところ0件で、この分野の文献がほぼarXivに存在しないことも確認しました。全文入手についても、ScienceDirect・ASMEの記事ページはいずれもボット対策で取得できなかったため、過去の号と同様にNASA NTRSの検索API（citations/search）で全文取得可能な候補を探索し、foil・rotorそれぞれでOA全文の候補（Howard 2008、Miller & Howard 2008）を発掘しました。なお1987年のワークショップ論文（Dietzen & Nordmann、環状シール係数のCFD計算）はNTRSの.txt全文APIで取得できたものの、OCRの単語順序自体が大きく乱れており（列の読み取り順が入れ替わった様子）逐語の裏取りができないため不採用としました。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.4007061",
+     "title": "A Metal Mesh Foil Bearing and a Bump-Type Foil Bearing: Comparison of Performance for Two Similar Size Gas Bearings（Luis San Andrés, Thomas Abraham Chirathadam, 2012, ASME J. Eng. Gas Turbines Power）",
+     "why": "テキサスA&M大学のSan Andrésグループによる、金網で支持するメタルメッシュ型フォイル軸受(MMFB)と従来のバンプ型フォイル軸受(BFB)の一対一比較。foil classic枠として選定（抄録ベース、被引用72件）。MMFBの材料減衰がBFBの2〜3倍という具体的な数値が抄録に明記されており、抄録ベースでも読み応えのある比較データが得られた。"
+    },
+    {
+     "id": "ntrs:20080023401",
+     "title": "Misalignment in Gas Foil Journal Bearings: An Experimental Study（Samuel A. Howard, 2008, NASA/TM—2008-215223）",
+     "why": "ガスフォイル軸受が『ミスアライメントに強い』という定説を、実際に軸受を壊れるまで傾けて検証した実験研究。foil latest枠として選定し、NASA技術メモの全文をNTRSから入手して作成。角接触玉軸受の一桁以上のミスアライメントに耐えるという結果に加え、熱電対を取り付けた軸受セットだけが早く壊れたという偶発的な観察も隠さず報告している点を評価した。"
+    },
+    {
+     "id": "ntrs:20080039638",
+     "title": "Identifying Bearing Rotordynamic Coefficients Using an Extended Kalman Filter（Brad A. Miller, Samuel A. Howard, 2008, NASA/TM—2008-215298）",
+     "why": "軸受の剛性・減衰係数を、ノイズを含む振動データから拡張カルマンフィルタで逆算できるかを数値シミュレーションで検証した研究。rotor classic枠として選定し全文で作成。交差減衰の推定精度が低いこと、軌道の一致だけでは同定の成功を判断できないことを正直に報告している点が、本アプリの『嘘をつかない』方針と相性が良いと判断した。"
+    },
+    {
+     "id": "doi:10.1115/1.4071435",
+     "title": "Backflow-Induced Negative Cross-Coupled Stiffness—A Numerical Study of Multistage Axial-Flow Impeller Rotordynamic Forces（Ted Ø. S. Gundersen, Erik A. Torbergsen, Boris Balakin, Bjørn J. Arntzen, Alex C. Hoffmann, 2026, ASME J. Fluids Eng.）",
+     "why": "多段軸流ポンプの羽根車が生むロータダイナミック力を、振れ回り周波数を振った過渡CFDで評価し、部分負荷運転時の逆流（バックフロー）が負の交差剛性を生む機構を示した最新の数値研究。rotor latest枠として選定（抄録ベース。本文ライセンスはCC BY 4.0だが、ASMEサイトのボット対策で全文は取得できなかった）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "arXivに『foil bearing』はほぼ存在しない",
+     "note": "arXiv APIで完全一致フレーズ『foil bearing』を検索したところ0件でした。この分野の研究はASME・Elsevier・NASA技報が主戦場で、著者self-archiveも稀であることが改めて確認できました。"
+    },
+    {
+     "title": "1987年の論文はOCRが単語の順序ごと乱れていて不採用",
+     "note": "Dietzen & Nordmann(1987)の環状シール係数のCFD論文は、NTRSの.txt全文APIで取得はできたものの、文章の単語順序自体が大きく入れ替わっており（多段組みの列を読む順番が崩れたと見られる）逐語での裏取りができないと判断し、今号では採用を見送りました。同様の理由でSchallhorn et al.(2000)のスクイーズフィルムダンパー論文も不採用としています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs（arXiv＋OpenAlex新着／被引用上位、foil/rotor）",
+      "scope": "本日のローテーション語・直近数年・発行日順／被引用数順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 76,
+      "note": "foil最新枠24件(OA20/抄録4)・foil定番枠14件(OA4/抄録10)・rotor最新枠24件(OA20/抄録4)・rotor定番枠14件(OA1/抄録13)。上位はほぼ既配信または分野外ノイズで、4枠とも新規採用には至らなかった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（title.search、foil：gas foil bearing）",
+      "scope": "is_oa true/false・被引用順/日付順(2025年以降)",
+      "terms": [
+       "gas foil bearing"
+      ],
+      "hits": 401,
+      "note": "被引用順（is_oa:true, 86件中）でSan Andrés & Chirathadam 2012を発掘。日付順(2025年以降)ではML主体論文が多く、フォイル軸受の物理を主役にした新規のOA最新候補は確保できなかった。"
+     },
+     {
+      "name": "NTRS検索API（citations/search、foil：gas foil bearing）",
+      "scope": "全文取得可能候補の探索",
+      "terms": [
+       "gas foil bearing"
+      ],
+      "hits": 11,
+      "note": "Howard(2008)のミスアライメント実験論文を発掘。"
+     },
+     {
+      "name": "NTRS検索API（citations/search、rotor：rotordynamic coefficients / squeeze film damper）",
+      "scope": "全文取得可能候補の探索",
+      "terms": [
+       "rotordynamic coefficients",
+       "squeeze film damper"
+      ],
+      "hits": 107,
+      "note": "Miller & Howard(2008)のEKF論文を発掘。Dietzen & Nordmann(1987)とSchallhorn et al.(2000)はOCR品質の問題で不採用。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（title.search、rotor：rotordynamic / rotor-bearing system）",
+      "scope": "has_abstract:true・日付順(2025年以降)／被引用順",
+      "terms": [
+       "rotordynamic",
+       "rotor-bearing system"
+      ],
+      "hits": 875,
+      "note": "日付順の候補からGundersen et al.(2026)の逆流-交差剛性論文を発掘。"
+     },
+     {
+      "name": "arXiv API直接クエリ（foil：foil bearing フレーズ検索）",
+      "scope": "投稿日順",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 0,
+      "note": "完全一致フレーズでは0件。分野の性質上arXivにはほぼ存在しないことを確認。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが枯渇していたため、今号も大半を手動のOpenAlex直接クエリ・NTRS検索APIで発掘した。"
+   },
+   "afterword": "今回、地味だけど心に残ったのは、Howard(2008)の実験で『温度を測るために取り付けた熱電対が、軸受の締め付き具合を変えてしまい、壊れる傾き角が変わった』というくだりでした。測定するための道具が、測定対象そのものに影響を与えてしまうというのは実験科学のあるあるだとは知っていましたが、著者がそれを隠さずに正直に書いているのを読んで、『測った』と『測ろうとしたものをそのまま測れた』は別のことなのだ、と改めて感じました。 — 編集担当より"
   }
  ]
 }
