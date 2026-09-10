@@ -16,8 +16,10 @@
 
 ## 2. アーキテクチャ
 ```
-収集(/collect・私が実行) → data/papers.json(蓄積) → React+shadcn 静的サイト → GitHub Pages → スマホ/PC
+収集(collect スキル・毎朝5:30に無人実行) → data/papers.json(蓄積) → React+shadcn 静的サイト → GitHub Pages → スマホ/PC
 ```
+- **自動運転（2026-09-06 確認・稼働中）**: タスクスケジューラ `PaperRadarRotordynamicsDaily`（毎日 5:30）が Git bash 経由で `scripts/daily-collect.sh` を起動し、`claude -p --model sonnet` で収集から push まで無人で行う。ログは `scripts/logs/`。止めるときは `Disable-ScheduledTask -TaskName 'PaperRadarRotordynamicsDaily'`、状態は `Get-ScheduledTaskInfo -TaskName 'PaperRadarRotordynamicsDaily'`。この2PJ（turbo・rotordynamics）だけ bash ランチャーで、他PJの定時ジョブは PowerShell ランチャー（正典は `headless-job` スキル）。
+- 仕組みは turbo と共通。**仕様が食い違ったら `paper-radar-turbo/CLAUDE.md` を正として同期する**（2026-09-06 に titleJa・citationCount・issue・図のライセンス規則を同期済み）。
 - データ(`papers.json`)と表示を分離。アプリは静的ビルドで `papers.json` を読み描画。
 - 収集は Claude Code がローカルで実行（arXiv＋OpenAlex/Semantic Scholar）。**ソースはハイブリッド**：OA/arXiv＝全文で深い要約・図/式を拾う／有料＝抄録ベース要約＋原文リンク。
 
@@ -30,16 +32,20 @@
   "stream": "classic" | "latest",
   "source": "arxiv" | "openalex" | "semanticscholar",
   "oa": true,                       // オープンアクセスか（false=抄録ベース）
-  "title": "…", "authors": "…", "year": 1983, "venue": "…",
+  "title": "…",                     // 原題（英語論文はそのまま保持）
+  "titleJa": "…",                   // 英語論文の忠実な和訳タイトル（任意。和訳主・原題副で表示）
+  "authors": "…", "year": 1983, "venue": "…",
   "doi": "", "url": "", "pdfUrl": "",
   "citationNote": "定番（高被引用）",   // 概数 or 定性。不明なら空
+  "citationCount": 900,             // OpenAlex cited_by_count（任意・概数。信頼できる時のみ。不明なら省略）
+  "issue": "2026-06-27",            // 配信号（任意）。currentIssue と一致＝「今日の配信」。dateAdded とは別概念
   "levels": {                        // 説明レベル3段階（slider用）
     "easy":   { "tldr": "…", "problem": "…", "method": "…", "result": "…", "limit": "…" },
     "std":    { "tldr": "…", "problem": "…", "method": "…", "result": "…", "limit": "…" },
     "expert": { "tldr": "…", "problem": "…", "method": "…", "result": "…", "limit": "…" }
   },
   "equations": [ { "tex": "…", "caption": "…（原文 式N）" } ],
-  "figures":  [ { "type":"original|concept", "src":"", "caption":"…（conceptは『模式・実データではない』と明記）" } ],
+  "figures":  [ { "type":"original|concept", "src":"", "caption":"…（conceptは『模式・実データではない』と明記）", "credit":"出典・ライセンス（originalは必須）", "creditUrl":"" } ],
   "numbers":  [ { "v": "↑ 負荷容量", "l": "剛体比で向上" } ],
   "terms":    [ { "term": "コンプライアンス", "def": "やさしい定義" } ],
   "trivia":   [ { "label": "由来", "text": "…" } ],
@@ -48,11 +54,12 @@
   "seed": true        // 種データの印（本実装の/collectで検証・拡張・置換）
 }
 ```
-`meta` にトピック定義・凡例を持つ。**画面ラベルは meta から引く**。
+`meta` にトピック定義・凡例＋ `currentIssue`（最新配信号）を持つ。**画面ラベルは meta から引く**。
+- **配信号（issue）と追加日（dateAdded）は別**：`dateAdded` はシステムに入れた日、`issue` は編集判断で「今日の配信」に載せた号。ストック（過去に取得したが今日の号には載せない論文）は `issue` を付けない。「今日の配信」は `issue == meta.currentIssue` で判定。
 
 ## 4. 画面
 **ホーム（読む画面・設定なし）**
-- 今日の配信（最新 `dateAdded` の号、各トピック2件、定番/最新/OAバッジ）
+- 今日の配信（最新 `issue`＝`meta.currentIssue` の号、各トピック2件、定番/最新/OA(抄録)バッジ）
 - アーカイブ（検索＋トピックfilter＋カード。QOL方式の蓄積一覧）
 - **設定パネルは置かない**（キーワード/配信数の調整はアプリでは行わない。下記運用参照）
 
@@ -67,7 +74,7 @@
 
 ## 5. デザイン方針
 - **洗練。絵文字は使わない。** 単色アクセント＝深いティール `#1a5e54` ＋ ニュートラル ＋ 暖色ペーパー `#faf9f5`、本文は明朝（Hiragino Mincho/Yu Mincho）、UI/ラベルはサンセリフ。
-- frontend-design で方向維持、theme-factory でトークン化可。**render-check でモバイル/PC両幅を必ず目視**。仕上げに `/code-review`。数式は KaTeX。
+- frontend-design で方向維持。**render-check でモバイル/PC両幅を必ず目視**。仕上げに `/code-review`。数式は KaTeX。
 
 ## 6. 技術スタック / デプロイ
 - Vite + React + TypeScript + Tailwind + shadcn/ui（shadcn MCP活用）。lucide-react は使うが**装飾的絵文字は不可**。
@@ -76,8 +83,12 @@
 
 ## 7. 収集・運用（/collect）
 - 各トピック **latest（arXiv/OpenAlex 日付順）＋ classic（OpenAlex/Semantic Scholar 被引用上位）を各1件＝計2件/トピック**。
+- **配信に必ず1件は OA（全文）を含める**：2件のうち最低1件は OA 全文（抄録だけだと薄いため深掘り用）。定番が有料なら最新（arXiv等）を OA にする／逆も可。両方 OA でもよい。
+- **英語論文は `titleJa`（忠実な和訳タイトル）を付ける**。意味を変えない。和訳主・原題副で表示される。
+- **被引用は OpenAlex `cited_by_count` を `citationCount` に**（概数として扱い、信頼できる時のみ。不明なら省略）。
 - 取得→ **levels 3段階を出典に忠実に生成**（OAは全文、有料は抄録ベースと明記）。`terms`/`trivia`/`equations`/`figures` を埋める（§0厳守）。
-- 重複は `id`/DOI で判定し新規のみ `papers.json` に追記、`dateAdded` 付与 → `git push` で公開更新。
+- **実図のライセンス規則（重要）**：論文の実図(`type:"original"`)を載せてよいのは **CC-BY/CC0/パブリックドメイン**（gold OA・政府技報等）の時だけ。`credit`（出典・ライセンス）と `creditUrl` を必ず付ける。**出版社"free-to-read"(bronze) や arXiv標準ライセンスの図は再配布不可＝転載しない**。その場合は**正しい概念図（`type:"concept"`・『模式』明記）**のみとし、原図は原文リンクで参照。**外部の無関係なストック写真は使わない**（誤解防止）。
+- 重複は `id`/DOI で判定し新規のみ `papers.json` に追記、`dateAdded`＋`issue` 付与・`meta.currentIssue` 更新 → `git push` で公開更新。今日の号に載せないストックは `issue` を付けない。
 - **検索ワードの調整＝`topics.json` を更新**（アプリUIではなく**チャットで**。私が幅広くなるよう提案・調整、またはユーザー指示で増減）。配信数は2件/トピック固定。
 
 ## 8. マイルストーン（新プロジェクトでの順序）

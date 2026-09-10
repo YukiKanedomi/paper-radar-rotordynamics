@@ -8237,6 +8237,73 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが4枠とも枯渇していたため、今号は全て手動のOpenAlex直接クエリ・arXiv API直接クエリで発掘した。"
    },
    "afterword": "今号でいちばんヒヤッとしたのは、arXivで見つけた『2025年12月投稿の新着プレプリント』が、実は2019年にすでに雑誌に載っていて、しかもうちのアプリにすでに配信済みだったと分かった瞬間でした。arXivのIDだけを見ていたら気づけなかったのですが、arXivには元の出版先のDOIを記録するタグがあって、そこを確認したら『あ、これもう読者に届けてる』とすぐ分かりました。新しく見える情報でも、もう一段掘ると実は既知だった、ということがあるのだと勉強になりました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-10",
+   "status": "published",
+   "headline": "第64号：foil/rotor各2件（Ku 1993 バンプフォイル構造減衰の実験的研究・OA全文／Lubell, Weissert & Chauhan 2025 230mm級ガスフォイルスラスト軸受試験機・抄録ベース／Childs & Ramsey 1990 SSMEタービン間段シールのスワールブレーキ試験・OA全文／Xue et al. 2024 ヘリカル溝ステータ液体シールの比較・抄録ベース）",
+   "intro": "本号のもとになる収集・作り込みは2026-09-10の自動セッションで完了していましたが、配信ノート作成とcommit/pushの手前で中断し、papers.jsonへの追記・用語マップ更新は済んでいるのに未公開のまま残っていました。2026-09-11にこの状態を検知し、公開前に4件すべてへ§0忠実性チェック（faithfulness-check）を改めて実施したところ、修正すべき点が複数見つかったため、2ラウンドの検証・修正を経てから今号として公開しました。",
+   "picked": [
+    {
+     "id": "ntrs:19940029688",
+     "title": "An Experimental and Theoretical Study of Structural Damping in Compliant Foil Bearings（C.-P. Roger Ku, 1993/94, NASA CP）",
+     "why": "フォイル軸受のバネ部分（バンプフォイル）が振動をどれだけ吸収するか（構造減衰）を初めて実測した研究。foil classic枠として選定し全文で作成。忠実性チェックで、静荷重の値（本文・図キャプションでは135Nだが、原著Table2のSI単位欄の誤植『145N』を誤って採用していた）、無次元たわみ振幅δ*の式の分母の係数の位置ミス、概念図がバンプフォイルの無負荷時の形状を誤って平坦な直線として描いていた点（実際は無負荷時も波型で、荷重時に山がつぶれて低くなる）を発見・修正した。著者所属が民間企業でNTRSのライセンス区分もパブリックドメインと確認できないため、実図は転載せず概念図とした。"
+    },
+    {
+     "id": "doi:10.1115/gt2025-153334",
+     "title": "Design, Commissioning and Testing of a 230 mm Gas Foil Thrust Bearing Test Rig（Daniel Lubell, Dennis Weissert, Navjot S. Chauhan, 2025, ASME Turbo Expo）",
+     "why": "文献上知られる限り最大となる230mm径のガスフォイルスラスト軸受と、その専用試験機の開発報告。foil latest枠として選定（抄録ベース）。忠実性チェックで、関連論文欄の著者名が実在しない組み合わせ（正しくはDellaCorte, Radil, Bruckner & Howard）になっていた点、抄録にない断定（試験機が計測を意図的に省いたとする記述、試験リグが『存在しなかった』とする記述）を発見・修正した。"
+    },
+    {
+     "id": "ntrs:19920005140",
+     "title": "Seal-Rotordynamic-Coefficient Test Results for a Model SSME ATD-HPFTP Turbine Interstage Seal With and Without a Swirl Brake（Dara W. Childs, Christopher Ramsey, 1990年ワークショップ・1991年NASA CP刊行）",
+     "why": "旋回流を止める『スワールブレーキ』というシール構造が、ロータを不安定にする力をどれだけ減らすかを模型試験で実証した定番研究。rotor classic枠として選定し全文で作成。忠実性チェックで、直接減衰Cの理論-実験一致について要約が『良好』と書いていたが、原文の個別結果の章は『理論が大幅に過大評価』、まとめの章は逆に『過小評価』と記述しており原文自体に内部矛盾があることを見落としていた点、『DOIなし・被引用数非掲載』としていたが実際はASME Journal of Tribology版が存在し被引用があった点を発見・修正した。実図はライセンス区分がパブリックドメインと確認できないため概念図とした。"
+    },
+    {
+     "id": "doi:10.1016/j.cja.2024.07.001",
+     "title": "A comparison of static and rotordynamic characteristics for two types of liquid annular seals with and without helical grooved stator（Wensong Xue, Hailong Qiu, Tianhao Wang, Zhigang Li, Jun Li, 2024, Chinese Journal of Aeronautics）",
+     "why": "ロータ側平行溝とステータ側らせん溝を組み合わせた新型液体シールが、漏れを約22%減らしつつ安定性も上げることをCFDで示した研究。rotor latest枠として選定（抄録ベース）。忠実性チェックで、抄録原文の『effective stiffness（有効剛性）』を『direct stiffness（直接剛性）』と取り違えていた点（シールのロータダイナミクスでは別概念）を発見・修正し、用語表記も既存号で使っていた『有効剛性(Keff)』に統一した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "前号（第64号）が公開前に止まっていた",
+     "note": "本号の収集・作り込みは2026-09-10の自動セッションで完了していましたが、配信ノート作成とcommit/pushの手前で中断し未公開のまま残っていました。2026-09-11に気づき、公開前にもう一段の確認を入れました。"
+    },
+    {
+     "title": "実図の掲載を2件とも見送り",
+     "note": "Ku論文・Childs & Ramsey論文はどちらもNASA CP収録で、著者が民間企業・大学（NASA職員ではない）に所属しています。NTRSのライセンス区分（GOV_PUBLIC_USE_PERMITTED）は『政府による公開利用許諾』であって『パブリックドメイン』そのものではないと分かったため、CC-BY/CC0/PDへの該当を確認できない実図の転載は見送り、本文の記述に基づく概念図に差し替えました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs（arXiv＋OpenAlex新着／被引用上位、foil/rotor）",
+      "scope": "2026-09-10のローテーション語・直近数年・発行日順／被引用数順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 65,
+      "note": "foil最新枠24件(OA20/抄録4)・foil定番枠14件(OA4/抄録10)・rotor最新枠13件(OA7/抄録6)・rotor定番枠14件(OA1/抄録13)。中断したセッションが残した候補ファイルから復元した数値。"
+     }
+    ],
+    "note": "前日セッションの中断により、基本候補プールを超えてこの4件へたどり着いた経路（追加の検索クエリ・候補間の比較検討）は再現できなかった。収集フェーズ自体は完了しており、公開前の再検証（faithfulness-check 2ラウンド）は本ノート作成時に改めて実施した。"
+   },
+   "afterword": "今回いちばん『なるほど』だったのは、図の描き方の失敗でした。バンプフォイル（波型のバネ）が荷重を受けてつぶれる様子を描こうとして、最初は『何もしていない状態はまっすぐな線、荷重を受けると波打つ』と描いてしまったのですが、これは物理的に逆でした。実際はバネ自体がもともと波型で、荷重を受けると波の高さが低くつぶれる、というのが正しい変形の仕方です。言われてみれば当たり前なのですが、絵にする段になって初めて自分の理解が浅かったことに気づきました。図は言葉より嘘がバレやすい、と実感した回でした。 — 編集担当より"
   }
  ]
 }
