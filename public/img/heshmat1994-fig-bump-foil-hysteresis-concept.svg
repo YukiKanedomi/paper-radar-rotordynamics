@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+  <rect width="640" height="420" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">バンプフォイルの荷重-たわみ挙動（模式図）</text>
+  <text x="320" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式図・実データではない。バンプフォイル構造減衰の一般的な機構を示すイメージ（本論文の測定結果ではない）</text>
+
+  <line x1="110" y1="350" x2="110" y2="90" stroke="#3a3a34" stroke-width="1.5"/>
+  <line x1="110" y1="220" x2="560" y2="220" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="560" y="245" text-anchor="end" font-family="sans-serif" font-size="12" fill="#3a3a34">たわみ（振動振幅）</text>
+  <text x="90" y="90" text-anchor="end" font-family="sans-serif" font-size="12" fill="#3a3a34">荷重</text>
+
+  <path d="M 150 300 C 250 260, 350 130, 520 120 C 350 175, 260 220, 150 300 Z"
+        fill="#1a5e54" fill-opacity="0.14" stroke="#1a5e54" stroke-width="2.5"/>
+  <path d="M 150 300 C 250 260, 350 130, 520 120" fill="none" stroke="#1a5e54" stroke-width="2.5"/>
+  <path d="M 520 120 C 350 175, 260 220, 150 300" fill="none" stroke="#8a6d3b" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+  <text x="380" y="150" font-family="sans-serif" font-size="11" fill="#1a5e54">負荷（バンプが押し縮む）</text>
+  <text x="300" y="255" font-family="sans-serif" font-size="11" fill="#8a6d3b">除荷（摩擦で遅れる、一般的なイメージ）</text>
+  <text x="320" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">一般に、ループの面積が大きいほど散逸するエネルギーが大きいとされる（本論文の測定値ではない）</text>
+</svg>

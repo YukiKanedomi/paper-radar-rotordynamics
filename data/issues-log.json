@@ -8418,6 +8418,139 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが枯渇していたため、今号も大半を手動のOpenAlex直接クエリ・NTRS検索APIで発掘した。"
    },
    "afterword": "今回、地味だけど心に残ったのは、Howard(2008)の実験で『温度を測るために取り付けた熱電対が、軸受の締め付き具合を変えてしまい、壊れる傾き角が変わった』というくだりでした。測定するための道具が、測定対象そのものに影響を与えてしまうというのは実験科学のあるあるだとは知っていましたが、著者がそれを隠さずに正直に書いているのを読んで、『測った』と『測ろうとしたものをそのまま測れた』は別のことなのだ、と改めて感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-12",
+   "status": "published",
+   "headline": "第66号：バンプフォイルの摩擦、フォイル軸受の大型化試算、ロータのラブ、スキャロップシールの二律背反",
+   "intro": "本日のcollect.mjsの基本候補（foil/rotorとも最新枠24件・定番枠14件）は、直近の配信が続いたことでほとんどが既配信または分野外（AIデータセンターや脚ロボットなど無関係なarXiv新着）で埋まっており、そのまま選べる新規候補はfoilで2件・rotorで数件のみでした。そこでOpenAlexへの直接クエリ（cited_by_count順・per-page拡大）とNASA NTRS検索APIでの深掘りを行い、foil classicにHeshmat & Ku(1994)の抄録ベース論文、foil latestにNASA技術メモのBruckner(2010)論文、rotor classicにMa et al.(2015)のCC-BY全文論文、rotor latestにIzemenko et al.(2024)のCC-BY全文論文を発掘しました。4件中3件がOA全文で読み応えのある号になっています。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.2927050",
+     "title": "Structural Damping of Self-Acting Compliant Foil Journal Bearings（Hooshang Heshmat, C.-P. Roger Ku, 1994, Journal of Tribology）",
+     "why": "フォイル軸受の弾性支持構造（バンプフォイル）の動的剛性・等価粘性減衰係数を、非回転軸への2軸シェーカー加振で実験的に求めた基礎研究。foil classic枠として選定（抄録ベース、被引用87件）。抄録の記述範囲を厳密に守り、抄録に無いクーロン摩擦への言及や理論モデルとの一致度への踏み込みは行わず、控えめな要約に留めた。"
+    },
+    {
+     "id": "ntrs:20100033735",
+     "title": "An Assessment of Gas Foil Bearing Scalability and the Potential Benefits to Civilian Turbofan Engines（Robert J. Bruckner, 2010, NASA/TM-2010-216732）",
+     "why": "小型機で実用化されてきたフォイル軸受を、120kN級推力の民間ターボファンエンジンへ適用できるか机上で試算したNASA技術メモ。foil latest枠として選定し全文で作成。150mm径の実証データは著者自身の実験ではなく別文献(Heshmat & Xu, 2003)由来であること、燃費削減3.05%はオイル系撤去だけでなくチップクリアランス縮小も含む複数要因の合算であることを、要約側で明確に区別した。"
+    },
+    {
+     "id": "doi:10.1016/j.apm.2014.11.009",
+     "title": "Dynamic characteristics analysis of a rotor–stator system under different rubbing forms（Hui Ma, Qianbin Zhao, Xueyan Zhao, Qingkai Han, Bangchun Wen, 2015, Applied Mathematical Modelling）",
+     "why": "ロータ・ステータ間の「ラブ（こすれ接触）」について、環状に接触する形と4本のピンで受け止める形の2種類をFEモデルで比較した数値解析研究。rotor classic枠として選定（CC BY 4.0全文、被引用約100件）。4点ラブがサブシンクロナス振動を抑える一方で別の高調波を強めるという、単純な善し悪しでは語れない結果を丁寧に追った。"
+    },
+    {
+     "id": "doi:10.31891/2079-1372-2024-114-4-14-23",
+     "title": "Leakage and rotordynamic coefficients of labyrinth-scallop seals（V. Izemenko, A. Zahorulko, Yu. Zahorulko, 2024, Problems of Tribology）",
+     "why": "ラビリンスとスキャロップ（貝殻状の溝）を組み合わせたシールの漏れ量と動特性係数をCFDで計算し、文献の環状・ラビリンスシールのデータと比較した研究。rotor latest枠として選定（CC BY 4.0全文）。動特性係数の計算対象がラビリンス-スキャロップ複合形状ではなくスキャロップ単体である点、比較データが別文献由来である点を、抄録の主張とは切り分けて要約に明記した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "基本候補プールがほぼ枯渇していた日",
+     "note": "foil/rotorとも、collect.mjsの基本候補（最新枠・定番枠あわせて計約76件）のうち、既配信でない・かつ分野の主役（軸受・ロータダイナミクスの物理）に合う新規候補はごくわずかでした。今号はOpenAlexへの直接クエリ（キーワード全体×cited_by_count順、per-page拡大）とNASA NTRS検索APIでの深掘りに多くの時間を使っています。"
+    },
+    {
+     "title": "SSRN・ASMEサイトはボット対策で全文が取れない",
+     "note": "rotor latestの候補として、AIP Advances掲載の磁性流体軸受論文（CC BY・OpenAlex上はOA）とASME Open Journal of Engineering掲載のスワールブレーキ論文（CC BY・PDF直リンクあり）を試しましたが、いずれも出版社サイトのボット対策（SSRNは403、ASME/AIPはCloudflareの確認画面）でPDFを取得できず、全文が取れた候補（Izemenko et al. 2024）に差し替えました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。うち新規候補は2件のみで、いずれも磁気軸受・ML主体のため主役から外れると判断。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13）。うち新規候補はVance(1988)の書籍カタログ記録（全文なしのため不採用）等わずか。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：キーワード全体×cited_by_count順、per-page拡大）",
+      "scope": "被引用上位の深掘り（基本候補プールの枯渇対策）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 58,
+      "note": "Heshmat & Ku(1994)の構造減衰論文を発掘。"
+     },
+     {
+      "name": "NASA NTRS検索API（foil：test rig / rotordynamic / thrust bearing 関連）",
+      "scope": "全文取得可能候補の探索",
+      "terms": [
+       "gas foil bearing rotordynamic",
+       "foil air bearing test rig",
+       "foil thrust bearing oil-free turbomachinery"
+      ],
+      "hits": 24,
+      "note": "Bruckner(2010)のスケーラビリティ評価論文を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：キーワード全体×cited_by_count順、per-page拡大）",
+      "scope": "被引用上位の深掘り",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 58,
+      "note": "Ma et al.(2015)のロータ・ステータラブ論文を発掘（HAL版CC BY 4.0で全文取得）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：CC-BY・2023年以降、publication_date順）",
+      "scope": "全文取得可能なOA最新候補の探索",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 26,
+      "note": "Izemenko et al.(2024)のラビリンス-スキャロップシール論文を発掘（Problems of Tribology誌よりPDF直接取得）。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリ・NTRS検索APIでの深掘りが中心になった。"
+   },
+   "afterword": "今日いちばん面白かったのは、Izemenko et al.(2024)のスキャロップシールの話でした。漏れを減らすための工夫（周方向の流れをせき止める溝）が、低い周波数帯（40〜70Hz）では逆に軸を不安定にする方向に働くことがある、という結果です。てっきり『漏れが減る＝良いシール』という単純な話だと思っていたのですが、動特性係数のグラフを見ると、同じ形状でも周波数によって振る舞いが逆転する場面があり、『シールの良し悪しは一言では言えない』という当たり前だけど見落としがちなことを、数字で突きつけられた気がしました。 — 編集担当より"
   }
  ]
 }
