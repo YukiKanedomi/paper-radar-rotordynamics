@@ -8551,6 +8551,123 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリ・NTRS検索APIでの深掘りが中心になった。"
    },
    "afterword": "今日いちばん面白かったのは、Izemenko et al.(2024)のスキャロップシールの話でした。漏れを減らすための工夫（周方向の流れをせき止める溝）が、低い周波数帯（40〜70Hz）では逆に軸を不安定にする方向に働くことがある、という結果です。てっきり『漏れが減る＝良いシール』という単純な話だと思っていたのですが、動特性係数のグラフを見ると、同じ形状でも周波数によって振る舞いが逆転する場面があり、『シールの良し悪しは一言では言えない』という当たり前だけど見落としがちなことを、数字で突きつけられた気がしました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-13",
+   "status": "published",
+   "headline": "第67号：フォイル軸受のバンプが束になると硬くなる話と、遠心ポンプの『ただの隙間』が軸受になる話",
+   "intro": "collect.mjsの基本候補（foil/rotorとも最新枠・定番枠あわせて計約76件）は、直近66号分の配信でほとんどが既配信または分野外（無関係なarXiv新着）に埋まっており、そのまま選べる新規候補はごくわずかでした。そこでOpenAlexへの直接クエリ（トピックの全キーワード×被引用上位／OA限定、per-page拡大）で深掘りし、foil classicにKu & Heshmat(1994)の抄録ベース理論論文、foil latestにBin Hassan & Bonello(2017)のOA全文論文、rotor classicにBlack(1969)の抄録ベース古典、rotor latestにTian et al.(2014/2015)のOA全文論文を発掘しました。OA全文2本はいずれも出版社サイトが403やCloudflareのボット確認で塞がっており、大学の機関リポジトリ（University of Manchester、Universidade do Minho）で公開されている著者版から取得しています。",
+   "picked": [
+    {
+     "id": "doi:10.1080/10402009408983325",
+     "title": "Structural Stiffness and Coulomb Damping in Compliant Foil Journal Bearings: Theoretical Considerations（C.-P. Roger Ku, Hooshang Heshmat, 1994, Tribology Transactions）",
+     "why": "コンプライアントフォイル軸受の支持構造（バンプフォイル）の構造剛性と減衰係数を、ジャーナル中心の摂動とヒステリシスループ解析から予測する理論モデルの論文。foil classic枠として選定（抄録ベース、被引用91件）。抄録に無い具体的な数値やモデル検証の詳細には踏み込まず、抄録の記述範囲に忠実に留めた。"
+    },
+    {
+     "id": "doi:10.1016/j.jsv.2017.02.028",
+     "title": "A New Modal-Based Approach for Modelling the Bump Foil Structure in the Simultaneous Solution of Foil-Air Bearing Rotor Dynamic Problems（Mohd Firdaus Bin Hassan, Philip Bonello, 2017, Journal of Sound and Vibration）",
+     "why": "従来の独立バネダンパ型バンプモデルに代えて、有限要素解析と実験で検証したモーダルモデル（FFSMM）を提案した論文。foil latest枠として選定し、University of Manchester機関リポジトリの著者最終稿から全文で作成。理想化条件でのFE周波数と、実験比較用に条件を変更した別のFEモデルの周波数を混同しないよう区別し、著者らの推測表現（likely reason）もヘッジのまま伝えた。"
+    },
+    {
+     "id": "doi:10.1243/jmes_jour_1969_011_025_02",
+     "title": "Effects of Hydraulic Forces in Annular Pressure Seals on the Vibrations of Centrifugal Pump Rotors（H. F. Black, 1969, Journal of Mechanical Engineering Science）",
+     "why": "遠心ポンプの羽根車シール・バランスピストンシールの環状クリアランスが静圧軸受として働き、その流体力がロータ振動や高速不安定振動に及ぼす影響を解析した古典的論文。rotor classic枠として選定（抄録ベース、被引用119件）。忠実性チェックで『hydrostatic bearing』を『動水圧軸受』と誤訳していたのを『静圧軸受』に訂正し、ロマキン効果への根拠のない言及も削除した。"
+    },
+    {
+     "id": "doi:10.1007/s11044-014-9420-0",
+     "title": "Coupling Dynamics of a Geared Multibody System Supported by ElastoHydroDynamic Lubricated Cylindrical Joints（Qiang Tian, Qianfei Xiao, Yanlei Sun, Haiyan Hu, Hui Liu, Paulo Flores, 2014/2015, Multibody System Dynamics）",
+     "why": "歯車付きロータの軸受（EHD潤滑円筒ジョイント）と歯車の噛み合いを同時に扱う計算手法の論文。rotor latest枠として選定し、Universidade do Minho機関リポジトリの著者版から全文で作成。摩擦モデルの効果が確認できたのは低速（2.4rpm）かつ噛み合い点通過の瞬間に限られることを明記し、高速（1500rpm）では効果が明確でなかった点も落とさなかった。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "基本候補プールがほぼ枯渇していた日",
+     "note": "66号分の配信を経て、collect.mjsの基本候補のうち新規かつ分野の主役（軸受・ロータダイナミクスの物理）に合う候補はfoil・rotorともごくわずかでした。今号はOpenAlexへの直接クエリ（キーワード全体×被引用上位、per-page拡大）による深掘りが中心です。"
+    },
+    {
+     "title": "出版社サイトのボット対策でOA全文が2本ともブロックされた日",
+     "note": "OA全文候補として最初に見つけたMDPI Applied Sciences掲載論文とAIP Advances掲載論文は、いずれも技術的にはオープンアクセスながら、出版社サイトのボット対策（AkamaiのAccess Denied、Cloudflareの確認画面）でPDF・HTML本文とも取得できませんでした。代わりに、著者が大学の機関リポジトリ（University of Manchester、Universidade do Minho）に自己アーカイブしている版を探して全文を取得しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、ただしarXiv分は軍用機フリート最適化等の分野外ノイズが大半）・定番枠14件（OA4/抄録10）。新規候補はごくわずかで、そのまま選べる良い候補はなかった。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA8/抄録5）・定番枠14件（OA1/抄録13）。この中でZhang et al.(2026, AIP Advances、磁気-液体二重支持軸受)がOA候補として目に留まったが、後日全文取得を試みた際に出版社サイトがCloudflareの確認画面でブロックし断念。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：キーワード別×cited_by_count順、per-page25、重複除去後）",
+      "scope": "被引用上位の深掘り（基本候補プールの枯渇対策）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 82,
+      "note": "Ku & Heshmat(1994)の理論論文を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：OA限定、per-page15、重複除去後）",
+      "scope": "全文取得可能なOA候補の探索",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 55,
+      "note": "Sarrazin & Liebich(2023, MDPI)を発見したが出版社サイトがAkamaiでブロック。代わりにBin Hassan & Bonello(2017)をUniversity of Manchester機関リポジトリ（著者最終稿）で発見・取得。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：キーワード別×cited_by_count順、per-page20、重複除去後）",
+      "scope": "被引用上位の深掘り",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 148,
+      "note": "H.F. Black(1969)の古典的論文と、Tian et al.(2014/2015)の歯車付きマルチボディ系論文を発掘。同じ結果群にあったEhrich(1994, JSME)のdiamond OA論文も試したが、スキャンPDFで文字抽出不能のため不採用。Tian et al.はUniversidade do Minho機関リポジトリ（著者版）でPDFを取得。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリでの深掘りと、機関リポジトリ経由でのOA全文取得が中心になった。"
+   },
+   "afterword": "今日いちばん印象に残ったのは、Bin Hassan & Bonello(2017)の『バンプが26個つながっていると、1個だけのときよりずっと硬くなる』という話でした。よく考えれば当たり前のようで、実際に有限要素解析の数字（単独バンプ0.94MN/mに対し、つながった構造では溶接端側で3.2MN/m）を見せられると、部品同士のつながり方ひとつで挙動がここまで変わるのかと実感しました。もう一つ、OA（オープンアクセス）のはずの論文2本が出版社サイトのボット対策で結局読めず、大学の機関リポジトリに救われたのも今号らしい出来事でした。「無料で読める」と「実際に読める」は必ずしも同じではないのだなと、地味に勉強になりました。 — 編集担当より"
   }
  ]
 }
