@@ -8668,6 +8668,127 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリでの深掘りと、機関リポジトリ経由でのOA全文取得が中心になった。"
    },
    "afterword": "今日いちばん印象に残ったのは、Bin Hassan & Bonello(2017)の『バンプが26個つながっていると、1個だけのときよりずっと硬くなる』という話でした。よく考えれば当たり前のようで、実際に有限要素解析の数字（単独バンプ0.94MN/mに対し、つながった構造では溶接端側で3.2MN/m）を見せられると、部品同士のつながり方ひとつで挙動がここまで変わるのかと実感しました。もう一つ、OA（オープンアクセス）のはずの論文2本が出版社サイトのボット対策で結局読めず、大学の機関リポジトリに救われたのも今号らしい出来事でした。「無料で読める」と「実際に読める」は必ずしも同じではないのだなと、地味に勉強になりました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-15",
+   "status": "published",
+   "headline": "第68号：軸受の中の圧力は測れない、だから温度で確かめるという話と、油膜の壁が柔らかいと『半分』が崩れる話",
+   "intro": "collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠13件・定番枠14件）は、これまでの67号分の配信でclassic枠（被引用上位）の大半が既配信に埋まっており、そのまま選べる新規候補はfoilで1件（一般的なロータダイナミクス書籍）、rotorではほぼゼロという状態でした。latest枠もarXiv側は「bearing」等の語に引っかかった分野外ノイズ（宇宙機の航法、MHD流れ、タービン設計サロゲート等）が大半でした。そこでOpenAlexへの直接クエリ（トピックのキーワードごとに被引用上位per-page25、および開放アクセス限定per-page25、重複除去）で深掘りし、foil classicにDykas & Howard(2004)の抄録ベース事例研究、foil latestにBruckner, DellaCorte & Prahl(2005)のNASA技術メモランダム（OA全文）、rotor classicにMajumdar, Brewe & Khonsari(1988)のNASA技術報告（OA全文、ただし旧いスキャンPDFのOCR）、rotor latestにEl-Sayed & Sayed(2022)のOA全文論文を発掘しました。",
+   "picked": [
+    {
+     "id": "doi:10.1080/05698190490493391",
+     "title": "Journal Design Considerations for Turbomachine Shafts Supported on Foil Air Bearings（Brian Dykas, Samuel A. Howard, 2004, Tribology Transactions）",
+     "why": "NASAグレン研究センターでの高速試験中に繰り返し起きたシャフト破損の原因を、実験とFE解析で『非一様な熱成長』と特定した事例研究。foil classic枠として選定（抄録ベース、被引用72件）。抄録に無い具体的な試験数値までは踏み込まず、抄録の記述範囲にとどめた。"
+    },
+    {
+     "id": "ntrs:20050203843",
+     "title": "Analytic Modeling of the Hydrodynamic, Thermal, and Structural Behavior of Foil Thrust Bearings（Robert J. Bruckner, Christopher DellaCorte, Joseph M. Prahl, 2005, NASA/TM—2005-213811）",
+     "why": "気体膜・熱・フォイル構造を連成させた解析モデルを、圧力の直接計測が困難という制約のもとで温度計測により間接検証した論文。foil latest枠として選定し、NASA STI（NTRS）から全文と実物写真（パブリックドメイン）を取得。圧力場そのものの検証ではなく温度場の一致による間接検証にとどまる点を明記した。"
+    },
+    {
+     "id": "doi:10.1115/1.3261562",
+     "title": "Stability of a Rigid Rotor Supported on Flexible Oil Journal Bearings（Bankim C. Majumdar, David E. Brewe, Michael M. Khonsari, 1988, Journal of Tribology）",
+     "why": "軸受ライナー自体の弾性変形を組み込んだ安定性解析。高偏心率かつ柔らかいライナーで『半周波数ホワール』の目安が大きく崩れることを示している。rotor classic枠として選定（NASA/AVSCOM技術報告としてNTRSからOA全文取得）。ただし原本が旧いスキャンPDFでOCRの文字間隔が乱れているため、逐語引用（quotes）は行わずパラフレーズにとどめた。"
+    },
+    {
+     "id": "doi:10.1007/s11071-021-06965-4",
+     "title": "Bifurcation analysis of rotor/bearing system using third-order journal bearing stiffness and damping coefficients（T. A. El-Sayed, Hussein Sayed, 2022, Nonlinear Dynamics）",
+     "why": "ジャーナル軸受力を3次まで系統的に求め、Hopf分岐が亜臨界か超臨界かをロータ剛性比・荷重で判別した論文。rotor latest枠として選定（CC BY 4.0のOA全文、被引用33件）。求めた近似係数をレイノルズ方程式の直接積分解と突き合わせて検証している点を含め、原文に忠実に紹介した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "候補プールがfoil・rotorとも枯渇していた日",
+     "note": "67号分の配信を経て、collect.mjsの基本候補のうちclassic枠（被引用上位）は両トピックともほぼ既配信で埋まっていました。今号はOpenAlexへの直接クエリ（キーワード別×被引用上位・OA限定、per-page拡大）による深掘りが中心です。"
+    },
+    {
+     "title": "タイトル末尾の©記号に一度だまされた日",
+     "note": "深掘り候補の1本（Peng & Carpino, 1994）は、OpenAlex上のタイトル末尾に著作権記号『©』が付いていたため、既配信リストとの単純な文字列一致チェックをすり抜けてしまいました。DOIで直接照合し直したところ2026-08-06追加の既配信候補（dateAdded一致）だったと判明し、候補から外しています。"
+    },
+    {
+     "title": "1988年のNASA報告はスキャンPDFだった日",
+     "note": "rotor classicに選んだMajumdar, Brewe & Khonsari(1988)は、NTRSで全文が読める（オープンアクセス）ものの、原本が古いスキャンPDFで、文字認識（OCR）テキストは単語の内部に余分な空白が入るなど乱れていました。内容の要約（パラフレーズ）には問題ありませんが、一字一句の正確さが要る逐語引用（quotes）は今回見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、うちarXiv分は分野外ノイズが大半）・定番枠14件（OA4/抄録10、うち新規はロータダイナミクス書籍1件のみ）。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA9/抄録4）・定番枠14件（OA1/抄録13）。定番枠は上位のほとんどが既配信で、新規候補はごくわずかだった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：キーワード別×cited_by_count順、per-page25、重複除去後）",
+      "scope": "被引用上位の深掘り（基本候補プールの枯渇対策）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 82,
+      "note": "Dykas & Howard(2004)の事例研究を発掘。Peng & Carpino(1994)はDOI照合で既配信（2026-08-06追加）と判明し除外。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：OA限定、per-page25、重複除去後）",
+      "scope": "全文取得可能なOA候補の探索",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "oil-free turbomachinery bearing",
+       "foil bearing rotordynamic"
+      ],
+      "hits": 122,
+      "note": "MDPI・ScienceDirect掲載のOA候補数本は出版社サイトのボット対策で本文取得に失敗。NASA NTRS（Bruckner et al. 2005）に切り替えて全文と実物写真を取得。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：キーワード別×cited_by_count順、per-page25、重複除去後）",
+      "scope": "被引用上位・OA限定の両方で深掘り",
+      "terms": [
+       "whirl instability",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotor-bearing system stability",
+       "bearing stiffness damping coefficients",
+       "critical speed rotor"
+      ],
+      "hits": 140,
+      "note": "Muszynska(1986, Journal of Sound and Vibration)の古典的論文も見つけたが、OpenAlex・Crossref・Semantic Scholarのいずれにも抄録が登録されておらず、抄録ベースの要約が作れないため断念。代わりにMajumdar, Brewe & Khonsari(1988)とEl-Sayed & Sayed(2022)を採用。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇気味だったため、今号はOpenAlex直接クエリでの深掘りが中心になった。"
+   },
+   "afterword": "今日いちばん『なるほど』だったのは、Bruckner et al.(2005)のNASA報告に出てきた一言でした。フォイル軸受の中の圧力は、測ろうとすると軸受表面やフォイルの動きそのものを乱してしまうので、直接測るのがほぼ不可能なのだそうです。そこで彼らは、代わりに壊さずに測れる『温度』を測り、計算モデルが予測した温度と実測を突き合わせることで、間接的にモデルの正しさを確かめていました。測りたいものを直接測れないときに、測れる別のものを介して確かめるというやり方は、この分野に限らずいろいろな場面でありそうだなと感じました。もう一つ、1988年のNASA報告（Majumdarら）で、油膜軸受の壁が柔らかくて軸の偏心も大きいと、『回転数の半分の速さで振れ回る』というよく聞く目安が0.3〜0.58まで大きくばらつくという結果も印象的でした。単純な目安ほど、条件次第で崩れることがあるのだと勉強になりました。 — 編集担当より"
   }
  ]
 }
