@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440">
+  <rect width="640" height="440" fill="#faf9f5"/>
+  <text x="320" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">偏心の種類による軸心軌跡の違いの模式図</text>
+  <text x="320" y="50" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">模式図・実データではない。中心シフト／半径拡大／両方の複合を単純化して示す</text>
+  <text x="320" y="64" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">（こぶの数は簡略化。抄録記載は11個）</text>
+
+  <!-- panel 1: stator eccentricity -->
+  <text x="115" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" font-weight="600">ステータ偏心</text>
+  <circle cx="115" cy="205" r="65" fill="none" stroke="#c9c4b6" stroke-width="1.5"/>
+  <path d="M 108,198 l 14,14 M 122,198 l -14,14" stroke="#6b6b63" stroke-width="1.2"/>
+  <text x="115" y="227" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6b6b63">拡大前の中心</text>
+  <path d="M 140,195 m -22,0 a 22,22 0 1,0 44,0 a 22,22 0 1,0 -44,0" fill="none" stroke="#c9c4b6" stroke-width="1" stroke-dasharray="2,2"/>
+  <path id="lobe1" d="M 140,173
+    C 145,177 148,183 145,188
+    C 152,186 158,189 158,195
+    C 158,201 152,204 145,202
+    C 148,207 145,213 140,217
+    C 135,213 132,207 135,202
+    C 128,204 122,201 122,195
+    C 122,189 128,186 135,188
+    C 132,183 135,177 140,173 Z" fill="none" stroke="#1a5e54" stroke-width="1.6"/>
+  <text x="115" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1a5e54">振れ回り中心がシフトし、</text>
+  <text x="115" y="314" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1a5e54">こぶ状のうねりが重なる</text>
+
+  <!-- panel 2: rotor eccentricity -->
+  <text x="320" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" font-weight="600">ロータ偏心</text>
+  <circle cx="320" cy="205" r="65" fill="none" stroke="#c9c4b6" stroke-width="1.5"/>
+  <circle cx="320" cy="205" r="20" fill="none" stroke="#c9c4b6" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="320" y="180" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6b6b63">拡大前（基準）</text>
+  <circle cx="320" cy="205" r="46" fill="none" stroke="#b4451f" stroke-width="2"/>
+  <text x="320" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#b4451f">基準（点線）より半径が</text>
+  <text x="320" y="314" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#b4451f">拡大する（アンバランス類似）</text>
+
+  <!-- panel 3: mixed eccentricity -->
+  <text x="525" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" font-weight="600">混合偏心</text>
+  <circle cx="525" cy="205" r="65" fill="none" stroke="#c9c4b6" stroke-width="1.5"/>
+  <g transform="translate(548,193)">
+    <path d="M 0,-28 C 9,-19 18,-14 14,0 C 23,5 18,19 5,17 C 5,28 -9,26 -11,14 C -23,17 -23,2 -13,-3 C -18,-14 -7,-26 0,-28 Z" fill="none" stroke="#8a6d3b" stroke-width="1.8"/>
+  </g>
+  <text x="525" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8a6d3b">中心シフトと半径拡大が</text>
+  <text x="525" y="314" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8a6d3b">同時に起き悪影響が最大</text>
+
+  <line x1="222" y1="80" x2="222" y2="330" stroke="#c9c4b6" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="428" y1="80" x2="428" y2="330" stroke="#c9c4b6" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

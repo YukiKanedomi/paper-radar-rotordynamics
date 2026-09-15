@@ -8789,6 +8789,139 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇気味だったため、今号はOpenAlex直接クエリでの深掘りが中心になった。"
    },
    "afterword": "今日いちばん『なるほど』だったのは、Bruckner et al.(2005)のNASA報告に出てきた一言でした。フォイル軸受の中の圧力は、測ろうとすると軸受表面やフォイルの動きそのものを乱してしまうので、直接測るのがほぼ不可能なのだそうです。そこで彼らは、代わりに壊さずに測れる『温度』を測り、計算モデルが予測した温度と実測を突き合わせることで、間接的にモデルの正しさを確かめていました。測りたいものを直接測れないときに、測れる別のものを介して確かめるというやり方は、この分野に限らずいろいろな場面でありそうだなと感じました。もう一つ、1988年のNASA報告（Majumdarら）で、油膜軸受の壁が柔らかくて軸の偏心も大きいと、『回転数の半分の速さで振れ回る』というよく聞く目安が0.3〜0.58まで大きくばらつくという結果も印象的でした。単純な目安ほど、条件次第で崩れることがあるのだと勉強になりました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-16",
+   "status": "published",
+   "headline": "第69号：軸受の『自己修復』と『暴走』を分ける1枚の性能マップと、1982年の実験が366rad/sを言い当てた話",
+   "intro": "collect.mjsの基本候補（foil最新枠24件・定番枠14件、rotor最新枠24件・定番枠14件）は、68号分の配信を経て両トピックとも定番枠（被引用上位）のほとんどが既配信で埋まっており、最新枠もarXiv側は分野外ノイズ（レーザー物理・LLM推論スケジューラ等）が大半でした。そこでOpenAlexへの直接クエリ（topics.jsonの全キーワード×被引用上位/新着、重複除去）とNASA NTRS APIへの複数キーワード検索で深掘りし、foil classicにHoward, Bruckner, DellaCorte & Radil(2007)のNASA技術メモランダム（OA全文）、foil latestにYin et al.(2025)の抄録ベース論文、rotor classicにBently & Muszynska(1982)のNASA会議録論文（OA全文、ただし1980年代の粗いスキャンPDF）、rotor latestにWang et al.(2026)の抄録ベース論文を発掘しました。今号は候補選定後の忠実性チェックで実質的な誤りが複数見つかり、修正に手間をかけた号でもあります（詳しくは豆知識欄）。",
+   "picked": [
+    {
+     "id": "ntrs:20070006848",
+     "title": "Gas Foil Bearing Technology Advancements for Closed Brayton Cycle Turbines（Samuel A. Howard, Robert J. Bruckner, Christopher DellaCorte, Kevin C. Radil, 2007, NASA/TM—2007-214470）",
+     "why": "宇宙用原子力発電（クローズドブレイトンサイクル）のタービン発電機を想定し、ガスフォイル軸受の高圧下の動力損失・ウィンデージ損失・起動トルク・ミスアライメント耐性をまとめて実験評価した研究。foil classic枠として選定（NASA/米陸軍研究所のOA全文）。ただし報告書冒頭に『著者の許可なく複製しない』という注記があったため、実図の転載は避け、本サイト作成の概念図に差し替えて掲載した。"
+    },
+    {
+     "id": "doi:10.1108/ilt-06-2024-0225",
+     "title": "Influence of flexible arch structure on radial dynamic pressure gas foil bearing under variable working conditions（Bifeng Yin, Junxian Liu, Hekun Jia, Nanrong Hu, Zeyuan Zhou, 2025, Industrial Lubrication and Tribology）",
+     "why": "バンプフォイルの形状を『フレキシブルアーチ構造』に変え、応力集中の緩和と表面温度上昇のトレードオフを力学-熱モデルで予測した研究。foil latest枠として選定（抄録ベース）。抄録に無い具体的形状の断定を避け、抄録の記述範囲にとどめた。"
+    },
+    {
+     "id": "ntrs:19830007378",
+     "title": "Stability evaluation of rotor/bearing system（Donald E. Bently, Agnieszka Muszynska, 1982, NASA Lewis Research Center収録の会議論文）",
+     "why": "回転軸に既知の摂動力を加える『摂動試験』で油膜軸受の動特性係数を同定し、軸受を『能動的フィードバック機構』として捉えるモデルとともにオイルホワールの不安定化回転数を予測・実験検証した研究。rotor classic枠として選定（OA全文、ただし1980年代の粗いスキャンPDF）。共著者ムシンスカは4年後の1986年に本サイトでも既に紹介した『Whirl and whip』を単著で発表しており、本論文はその実験的な土台にあたる。"
+    },
+    {
+     "id": "doi:10.1177/09544062261481216",
+     "title": "Rotational accuracy of an aerostatic motorized spindle under gas-magnetic field coupling（Wenbo Wang, Wenhang Du, Guangzhou Wang, Guoqing Zhang, Xiangjun Chen, Hechun Yu, 2026, Proceedings of the Institution of Mechanical Engineers, Part C）",
+     "why": "静圧気体軸受とモータを一体化したスピンドルで、ステータ・ロータの組み立て偏心が生む不平衡磁気吸引力の影響を、気体軸受と電磁界を連成させたシミュレーションと実験で検証した研究。rotor latest枠として選定（抄録ベース）。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "『もう配信済みだった』が2回起きた日",
+     "note": "候補選定の初期段階で本命にしかけた論文が2本、直前のDOI照合で既配信と判明しました。1本はタイトルの語順がわずかに違う（『CFD-Predicted on Rotordynamic』vs既配信の『CFD-Predicted Rotordynamic』）だけで、先頭一致による簡易重複チェックをすり抜けていました。もう1本も同様の見落としで、8月中旬に追加済みだったものです。以後はタイトルの部分一致だけでなくDOI・NTRS IDでの厳密照合を徹底しました。"
+    },
+    {
+     "title": "出版社サイトのボット対策に阻まれた日",
+     "note": "OpenAlexで『オープンアクセス』と表示されていた候補のうち、ScienceDirect（Elsevier）・MDPI・AIP・SAGE系の論文は軒並みボット対策（403エラー）で自動アクセスによる全文取得ができませんでした。代わりにNASA NTRS（フォイル軸受・ロータダイナミクス研究の主要な蓄積先）から直接アクセスできるOA全文を探し、今号の2本（Howard et al. 2007、Bently & Muszynska 1982）を確保しています。"
+    },
+    {
+     "title": "忠実性チェックが誤りを2つ見つけた日",
+     "note": "1982年の論文はスキャンPDFのOCR品質が粗く、安定判別式の3次項係数に本来存在しない『1.29』という数字が紛れ込んでいました（別の図の断片をOCRが誤って式の一部として読み取ったとみられます）。数値を検算して原文と食い違うことを確認し、削除しました。また同じ論文で『オイルホイップ』と『オイルホワール』（どちらも軸受の自励振動だが別の現象）を取り違えていた箇所も忠実性チェックで見つかり、全面的に修正しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、うちarXiv分の大半は分野外ノイズ）・定番枠14件（OA4/抄録10、新規候補はごくわずか）。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4、arXiv分は流体力学一般の分野外ノイズが大半）・定番枠14件（OA1/抄録13、新規候補はごくわずか）。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：topics.json全7キーワード×cited_by_count順/新着順、per-page25/15、重複除去後の上位20件ずつを確認）",
+      "scope": "基本候補プール枯渇対策の深掘り",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 20,
+      "note": "classic・recentそれぞれ上位20件（重複除去後の全件数は未集計）を確認。多くがElsevier/MDPI等のボット対策で本文取得不可だった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：topics.json全8キーワード×cited_by_count順/新着順、per-page25/15、重複除去後の上位20件ずつを確認）",
+      "scope": "基本候補プール枯渇対策の深掘り",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 20,
+      "note": "classic・recentそれぞれ上位20件（重複除去後の全件数は未集計）を確認。当初本命にしていた候補2本がDOI照合で既配信と判明し除外。"
+     },
+     {
+      "name": "NASA NTRS API検索（foil）",
+      "scope": "全文入手性が高いNASA/軍技報の探索",
+      "terms": [
+       "gas foil bearing"
+      ],
+      "hits": 15,
+      "note": "Howard, Bruckner, DellaCorte & Radil(2007)のCBCタービン向けGFB技報を発掘。"
+     },
+     {
+      "name": "NASA NTRS API検索（rotor：複数クエリ）",
+      "scope": "全文入手性が高いNASA技報の探索",
+      "terms": [
+       "seal rotordynamic coefficients",
+       "whirl instability rotor bearing",
+       "labyrinth seal dynamic coefficients",
+       "rotordynamic stability turbopump",
+       "annular seal rotordynamic coefficients test",
+       "squeeze film damper rotordynamics"
+      ],
+      "hits": 59,
+      "note": "多くがChilds等の1980年代シール動特性研究で既配信済みだったが、Bently & Muszynska(1982)の摂動試験論文を発掘。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリとNASA NTRS検索での深掘りが中心になった。"
+   },
+   "afterword": "今日いちばん印象に残ったのは、1982年の論文（Bently & Muszynskaさんの摂動試験の研究）に出てきた、軸受を『ばねやダンパのような受け身の部品』ではなく『回転のエネルギーの一部を勝手に振動のエネルギーへ変換してしまう、能動的な部品』として捉える、という見方でした。素人的には軸受というのはただ軸を支えているだけの静かな部品だと思っていたのですが、この論文を読むと、軸受は回転している間じゅう絶えずエネルギーのやり取りをしている『働き者』なのだと分かります。もう一つ、今回は古いスキャン論文のOCR文字が一部化けていて、それをそのまま信じて式の係数を書き写してしまった箇所がありました。幸い後工程の確認で数値を検算し直したところ矛盾に気づいて直せましたが、『昔の資料ほど、読めているようで読めていない部分がある』ということを実感した回でもありました。 — 編集担当より"
   }
  ]
 }
