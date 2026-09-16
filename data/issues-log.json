@@ -8922,6 +8922,140 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号はOpenAlex直接クエリとNASA NTRS検索での深掘りが中心になった。"
    },
    "afterword": "今日いちばん印象に残ったのは、1982年の論文（Bently & Muszynskaさんの摂動試験の研究）に出てきた、軸受を『ばねやダンパのような受け身の部品』ではなく『回転のエネルギーの一部を勝手に振動のエネルギーへ変換してしまう、能動的な部品』として捉える、という見方でした。素人的には軸受というのはただ軸を支えているだけの静かな部品だと思っていたのですが、この論文を読むと、軸受は回転している間じゅう絶えずエネルギーのやり取りをしている『働き者』なのだと分かります。もう一つ、今回は古いスキャン論文のOCR文字が一部化けていて、それをそのまま信じて式の係数を書き写してしまった箇所がありました。幸い後工程の確認で数値を検算し直したところ矛盾に気づいて直せましたが、『昔の資料ほど、読めているようで読めていない部分がある』ということを実感した回でもありました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-17",
+   "status": "published",
+   "headline": "第70号：金網の軸受は『へたる』、無重力の宇宙ロータは軟らかい軸受を求め、理論が先に予言した『逆回転する振動』を実験が的中させた",
+   "intro": "collect.mjsの基本候補は、foil topicでほぼ全滅（最新枠10件・定番枠14件のうち、on-topicな新規候補は事実上0件）という強い枯渇に直面しました。OpenAlexへの直接クエリ（foil 8キーワード×cited_by_count順/新着順、rotor 8キーワード×同）で深掘りし、foil classicにSan Andrés, Chirathadam & Kim(2009)のメタルメッシュフォイル軸受の実測論文（抄録ベース）、foil latestにHoward & DellaCorte(2006)のNASA技術メモランダム（宇宙用原子力発電向けガスフォイル軸受、OA全文）を発掘しました。rotor topicはNASA NTRS APIでの検索から、当初R. Holmes(1980)の油膜ホワール論文を本命にしましたが、忠実性チェックの過程で既に2026-07-31号で配信済みの重複と判明し（タイトル完全一致にもかかわらず検索クエリの一部で重複チェックが漏れていました）、同じNTRS検索結果プールから次点のSubbiah, Bhat, Sankar & Rao(1985)の後方ホワール論文に差し替えました。rotor latestはcollect.mjsの基本候補プール内からWei et al.(2026)の気液二相流潤滑論文（抄録ベース）を選定しています。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.3159379",
+     "title": "Measurement of Structural Stiffness and Damping Coefficients in a Metal Mesh Foil Bearing（Luis San Andrés, Thomas Abraham Chirathadam, Tae-Ho Kim, 2009, Journal of Engineering for Gas Turbines and Power）",
+     "why": "金網（メタルメッシュ）を弾性支持に使うガスフォイル軸受の構造剛性・減衰係数を、静荷重試験と電磁加振試験で実測した研究。foil classic枠として選定（抄録ベース）。忠実性チェックで『compactness 20%』の誤訳（圧縮率→正しくは金属充填密度）を修正した。"
+    },
+    {
+     "id": "ntrs:20060008714",
+     "title": "Gas Foil Bearings for Space Propulsion Nuclear Electric Power Generation（Samuel A. Howard, Christopher DellaCorte, 2006, NASA/TM—2006-214115）",
+     "why": "宇宙用原子力発電（クローズドブレイトンサイクル）のタービン発電機を想定し、ガスフォイル軸受支持ロータの危険速度・アンバランス応答・安定性をロータダイナミクス解析で検証した研究。foil latest枠として選定（NASA職員の職務著作によるOA全文、原論文Fig.1をパブリックドメインとして掲載）。忠実性チェックでOCRの指数抜け（軸受剛性の桁）や、減衰係数のレンジ表記（宇宙運転/地上試験で条件が異なる2値であること）を修正した。"
+    },
+    {
+     "id": "ntrs:19860020700",
+     "title": "Backward Whirl in a Simple Rotor Supported on Hydrodynamic Bearings（R. Subbiah, R.B. Bhat, T.S. Sankar, J.S. Rao, 1985, NASA CP-2409『Instability in Rotating Machinery』）",
+     "why": "軸受の非対称な特性により理論的に予測されていた『後方ホワール』（回転方向と逆向きの振れ回り）を、あえてその条件を満たすよう設計した試験ロータで実験的にねらって再現した研究。rotor classic枠として選定（OA全文）。当初はR. Holmes(1980)の別論文を選んでいたが、忠実性チェックで既配信（2026-07-31号）の重複と判明したため差し替えた。差し替え後の忠実性チェックでも収録会議の誤り（NASA CP-2443→正しくはCP-2409）が見つかり修正した。"
+    },
+    {
+     "id": "doi:10.1108/ilt-11-2025-0522",
+     "title": "Experimental study on vibration and temperature rise characteristics of rotor-bearing system lubricated by gas–liquid two-phase fluid（Chunjie Wei, Junchao Kong, Qiangqiang Zhang, Shengwen Liao, Lianjie Gu, 2026, Industrial Lubrication and Tribology）",
+     "why": "気液二相流体で潤滑されたロータ-軸受系の振動・温度上昇特性を、構造パラメータ（支持間隔・ロータ質量）や潤滑油粘度を変えた実験装置で調べた研究。rotor latest枠として選定（抄録ベース）。忠実性チェックで、抄録が述べていない因果関係（ロータ質量→支持剛性）の付加や、研究背景の過剰な断定を修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "foil topicの基本候補プールがほぼ枯渇した日",
+     "note": "collect.mjsの基本候補（foil最新枠10件・定番枠14件）を確認したところ、定番枠は被引用上位のほぼ全件が既配信済み、最新枠も1件（磁気軸受、フォイル軸受ではない分野ノイズ）を除いて全て既配信でした。OpenAlexへの直接クエリ（『metal mesh foil bearing』『foil bearing high temperature』等8つの追加キーワード）で深掘りし、ようやく2本の新規候補を確保しています。"
+    },
+    {
+     "title": "『既に配信済みだった』を忠実性チェックが見つけた日",
+     "note": "rotor classicの本命として選んでいたR. Holmes(1980)の油膜ホワール論文は、実はすでに2026-07-31号で配信済みでした。候補選定時のDOI/NTRS ID照合では見落としており（このNTRS検索クエリのバッチだけ重複チェックのロジックを組み込み忘れていました）、忠実性チェックのサブエージェントが既存papers.jsonを独自に確認して発見してくれました。同じ検索結果プールから次点候補（Subbiah et al. 1985）に差し替えています。"
+    },
+    {
+     "title": "同じ年に見えて別の会議録だった日",
+     "note": "差し替え後のSubbiah論文についても、収録会議をNTRS IDの見た目の類似から『NASA CP-2443（1986年）』と誤って記載していました。忠実性チェックが原論文のNTRS親レコードを直接確認し、正しくは『NASA CP-2409（Instability in Rotating Machinery、1985年）』という別の会議録であることが判明し、修正しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 24,
+      "note": "最新枠10件（OA6/抄録4）・定番枠14件（OA4/抄録10）。定番枠は被引用上位のほぼ全件が既配信、最新枠も1件を除き既配信または分野外ノイズだった。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "最新枠10件（OA6/抄録4）・定番枠14件（OA1/抄録13、うち2件は統計学・電力系統の分野外ノイズ）。latest枠のWei et al.(2026)を採用。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：追加8キーワード×cited_by_count順、per-page10）",
+      "scope": "基本候補プール枯渇対策の深掘り",
+      "terms": [
+       "metal mesh foil bearing",
+       "foil bearing high temperature",
+       "three pad foil bearing",
+       "foil bearing experimental identification",
+       "gas foil bearing nonlinear rotordynamic",
+       "foil bearing coating tribology",
+       "multi-leaf foil bearing",
+       "foil bearing test rig high speed"
+      ],
+      "hits": 80,
+      "note": "San Andrés, Chirathadam & Kim(2009)のMMFB構造剛性論文を発掘。全文アクセス可能なOA候補（MDPI Lubricants等）は複数見つかったが、ボット対策（403）で本文取得できず断念。"
+     },
+     {
+      "name": "NASA NTRS API検索（foil：3クエリ）",
+      "scope": "全文入手性が高いNASA技報の探索",
+      "terms": [
+       "gas foil journal bearing performance",
+       "foil bearing rotor system dynamic",
+       "compliant foil bearing design"
+      ],
+      "hits": 30,
+      "note": "Howard & DellaCorte(2006)の宇宙用原子力発電向けGFB技報（NASA/TM-2006-214115）を発掘。全文取得しFig.1をパブリックドメイン図として掲載。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：追加8キーワード×cited_by_count順）",
+      "scope": "rotor classicの深掘り",
+      "terms": [
+       "annular seal rotordynamic coefficients",
+       "labyrinth seal rotordynamic",
+       "squeeze film damper rotor stability",
+       "rotor bearing system instability threshold speed",
+       "flexible rotor balancing critical speed",
+       "journal bearing dynamic coefficients experimental",
+       "magnetic bearing rotor stability",
+       "tilting pad journal bearing dynamic coefficients"
+      ],
+      "hits": 64,
+      "note": "候補の多くが被引用上位の分野外ノイズ（統計学書籍、書籍のTOCのみでOpenAlexに全文アブストラクトが無いもの等）で、有効な非重複候補は少数だった。"
+     },
+     {
+      "name": "NASA NTRS API検索（rotor：4クエリ）",
+      "scope": "全文入手性が高いNASA技報の探索",
+      "terms": [
+       "seal rotordynamic coefficients",
+       "rotor bearing whirl instability",
+       "squeeze film damper",
+       "critical speed flexible rotor"
+      ],
+      "hits": 39,
+      "note": "当初R. Holmes(1980)の油膜ホワール論文を選定したが既配信と判明し除外。同じ検索結果からSubbiah, Bhat, Sankar & Rao(1985)の後方ホワール論文に差し替えた。"
+     }
+    ],
+    "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号もOpenAlex直接クエリとNASA NTRS検索での深掘りが中心になった。"
+   },
+   "afterword": "今日いちばん印象に残ったのは、Subbiah et al.(1985)の論文に出てきた『後方ホワール』という現象でした。ロータは自転している向きと同じ向きに振れ回る（前方ホワール）のが普通だと思っていたのですが、軸受の剛性・減衰が方向によって違うと、危険速度が2つに分かれて、その間だけ自転と逆向きに軸の中心が振れ回ることがあるというのは、ちょっと直感に反していて面白かったです。しかも理論の方が先に『ここで逆回転が起きるはず』と予言していて、実験はそれを『わざと』再現するために軸受を設計した、という順番も新鮮でした。もう一つ、今回は選んでいた論文が実は既に配信済みだったと後から気づく、という失敗もありました。幸い忠実性チェックの段階で発見できましたが、『前に読んだはずなのに気づかなかった』ということが起きるのは、いくら機械的にチェックしていても油断できないものだと実感しました。 — 編集担当より"
   }
  ]
 }

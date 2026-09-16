@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+  <rect width="640" height="420" fill="#faf9f5"/>
+  <text x="320" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">分岐した危険速度の間で起きる後方ホワール（模式図）</text>
+  <text x="320" y="52" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">模式図・実データではない。危険速度2200/2600rpmは実験結果、間の帯は理論予測</text>
+  <text x="320" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">実測は2500rpm・軸受すきま1条件のみ（ロータの自転は反時計回り）</text>
+
+  <!-- axis -->
+  <line x1="80" y1="220" x2="580" y2="220" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="580" y="245" text-anchor="end" font-family="sans-serif" font-size="11" fill="#3a3a34">回転数 (rpm)</text>
+
+  <circle cx="180" cy="220" r="5" fill="#1a5e54"/>
+  <text x="180" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1a5e54">2150rpm</text>
+  <text x="180" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">前方ホワール</text>
+
+  <circle cx="300" cy="220" r="5" fill="#b4451f"/>
+  <text x="300" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b4451f">2200rpm</text>
+  <text x="300" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">分岐危険速度①</text>
+
+  <circle cx="380" cy="220" r="6" fill="#8a6d3b"/>
+  <text x="380" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8a6d3b">2500rpm</text>
+  <text x="380" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">後方ホワール</text>
+
+  <circle cx="460" cy="220" r="5" fill="#b4451f"/>
+  <text x="460" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b4451f">2600rpm</text>
+  <text x="460" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">分岐危険速度②</text>
+
+  <circle cx="540" cy="220" r="5" fill="#1a5e54"/>
+  <text x="540" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1a5e54">3000rpm</text>
+  <text x="540" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">前方ホワール</text>
+
+  <rect x="300" y="215" width="160" height="10" fill="#8a6d3b" opacity="0.2"/>
+  <text x="380" y="270" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6b6b63">（帯は理論予測域。実測は2500rpmの1点のみ）</text>
+
+  <!-- orbit diagrams -->
+  <text x="150" y="290" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" font-weight="600">前方ホワール（軌跡）</text>
+  <circle cx="150" cy="345" r="35" fill="none" stroke="#1a5e54" stroke-width="2.5"/>
+  <path d="M 150 310 A 35 35 0 0 1 185 345" fill="none" stroke="#1a5e54" stroke-width="3" marker-end="url(#arrowFwd)"/>
+  <text x="150" y="390" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">回転と同じ向き（反時計回り）</text>
+
+  <text x="480" y="290" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" font-weight="600">後方ホワール（軌跡）</text>
+  <circle cx="480" cy="345" r="35" fill="none" stroke="#b4451f" stroke-width="2.5"/>
+  <path d="M 480 310 A 35 35 0 0 0 445 345" fill="none" stroke="#b4451f" stroke-width="3" marker-end="url(#arrowBwd)"/>
+  <text x="480" y="390" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3a3a34">回転と逆向き（時計回り）</text>
+
+  <defs>
+    <marker id="arrowFwd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1a5e54"/>
+    </marker>
+    <marker id="arrowBwd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#b4451f"/>
+    </marker>
+  </defs>
+</svg>
