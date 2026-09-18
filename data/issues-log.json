@@ -9056,6 +9056,114 @@
     "note": "検索語はtopics.jsonの全キーワードから日替わりローテーションで自動選択（collect.mjs出力の「本日の検索語」のとおり）。基本候補プールが両トピックとも枯渇していたため、今号もOpenAlex直接クエリとNASA NTRS検索での深掘りが中心になった。"
    },
    "afterword": "今日いちばん印象に残ったのは、Subbiah et al.(1985)の論文に出てきた『後方ホワール』という現象でした。ロータは自転している向きと同じ向きに振れ回る（前方ホワール）のが普通だと思っていたのですが、軸受の剛性・減衰が方向によって違うと、危険速度が2つに分かれて、その間だけ自転と逆向きに軸の中心が振れ回ることがあるというのは、ちょっと直感に反していて面白かったです。しかも理論の方が先に『ここで逆回転が起きるはず』と予言していて、実験はそれを『わざと』再現するために軸受を設計した、という順番も新鮮でした。もう一つ、今回は選んでいた論文が実は既に配信済みだったと後から気づく、という失敗もありました。幸い忠実性チェックの段階で発見できましたが、『前に読んだはずなのに気づかなかった』ということが起きるのは、いくら機械的にチェックしていても油断できないものだと実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-19",
+   "status": "published",
+   "headline": "第71号：フォイル軸受の箔には『ゆっくり押す硬さ』と『揺らす硬さ』がある、ターボチャージャには『あえて足すアンバランス』が効く、油で潤滑したフォイル軸受はオイルホイップを消した",
+   "intro": "collect.mjsの基本候補は、foil・rotorともほぼ既配信で埋まっていました（foil定番枠は14件中13件が既配信（残る1件は書評）、rotor定番枠も分野外ノイズか既配信）。そこでOpenAlexに直接、OA限定・被引用順や新着順で追加クエリをかけて深掘りしました。全文の取得は出版社サイトの多く（Elsevier・EDP Sciences・OakTrust・DTU Orbit・Hindawi）がボット対策で403になり、Kirk & Alsaeed(2011)はバージニア工科大のリポジトリ経由（原論文と同じHindawi版PDF・CC BY）、Larsen et al.(2015)は変換サービス経由で全文を読めました。抄録ベースの2本はSpringerのページから抄録を確認できたものを選んでいます。foil topicの最新枠に残っていた2026年のガスフォイル軸受摩耗論文（Elsevier）と、rotor最新枠のセクタ型ラビリンスシール論文（Elsevier）は、抄録すら取得できなかったため、抄録の範囲で忠実に書くこともできず見送りました。",
+   "picked": [
+    {
+     "id": "doi:10.1051/meca/2014066",
+     "title": "Experimental and theoretical analysis of a rigid rotor supported by air foil bearings（Larsen, Hansen & Santos, 2015, Mechanics & Industry）",
+     "why": "3パッド空気フォイル軸受の剛性・減衰を専用試験台で実測し、箔の『静的剛性』と『動的剛性』を区別するモデルと突き合わせた研究。foil classic枠として選定（OA全文・CC BY）。忠実性チェックで、摩擦を考慮すると複数解が出るため定常解では摩擦を0にする、という論理の向きを取り違えていた箇所を修正した。"
+    },
+    {
+     "id": "doi:10.1007/s42417-024-01465-2",
+     "title": "Experimental Study of Rotor Vibrations on Oil-Lubricated Foil Bearings of Various Designs（Li et al., 2024, Journal of Vibration Engineering & Technologies）",
+     "why": "通常は気体で使うフォイル軸受を油で潤滑し、設計・製造法の違いがロータ振動に与える影響を実験した研究。foil latest枠として選定（抄録ベース）。忠実性チェックで、抄録では結論として書かれた利点を研究の『目標』と読み替えていた箇所などを修正した。"
+    },
+    {
+     "id": "doi:10.1155/2011/952869",
+     "title": "Induced Unbalance as a Method for Improving the Dynamic Stability of High-Speed Turbochargers（Kirk & Alsaeed, 2011, International Journal of Rotating Machinery）",
+     "why": "フローティングリング軸受で支えられたターボチャージャに、あえてアンバランスを足してサブシンクロナス振動を抑えられるかを非線形時間過渡解析と固有値解析で調べた研究。rotor classic枠として選定（OA全文・CC BY、原論文Fig.6・Fig.8を転載）。忠実性チェックで、比較実験が先行報告・途中経過であることの書き方や、計算条件（10〜150krpmは元のアンバランスのみ、誘起アンバランスは3水準）の区別などを修正した。"
+    },
+    {
+     "id": "doi:10.1007/s11071-026-12966-y",
+     "title": "Numerical and experimental investigation of the performance of an aerostatic bearing with a smooth concave surface（Cao et al., 2026, Nonlinear Dynamics）",
+     "why": "滑らかな凹面を持つ静圧空気軸受で、剛性と減衰のトレードオフ・空気ハンマーに対する安定性がどう変わるかを数値・実験で調べた研究。rotor latest枠として選定（抄録ベース）。忠実性チェックで、抄録に無い機構の断定（図中の注記）や関連論文タグの誤りなどを修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Elsevierの新着2本を見送った日",
+     "note": "foil最新枠のガスフォイル軸受摩耗シミュレーション論文（Mechanical Systems and Signal Processing、2026）と、rotor最新枠のセクタ型ラビリンスシール論文（International Journal of Mechanical Sciences、2026）は主題としては魅力的でしたが、OpenAlex・Crossref・Semantic Scholarのいずれにも抄録が無く、ScienceDirectのページもロボット確認画面で開けませんでした。抄録が確認できないものは要約を書けないため、今回は載せていません。"
+    },
+    {
+     "title": "OA全文の取得経路が細かった日",
+     "note": "全文が読めたのは、機関リポジトリ（バージニア工科大）と、EDP SciencesのPDFを変換サービス経由で読む方法の2つだけでした。Larsen et al.(2015)は出版社のPDFに直接アクセスできなかったため、原論文の図の転載は見送り、概念図（模式・実データではない）のみとしています。"
+    },
+    {
+     "title": "分野外のOAノイズ",
+     "note": "foilの最新枠にはOA論文が21件並びましたが、そのほとんどは制御・通信・材料など分野外のarXiv新着で、フォイル軸受としての候補は磁気軸受の設計論文が1件あっただけでした（軸受の種類が違うため採用せず）。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。定番枠は1件（書評）を除き既配信、最新枠はほとんどが分野外のarXiv新着で、新規のフォイル軸受候補は2件（磁気軸受1・ガスフォイル軸受摩耗1）のみ。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外ノイズを含む）。新規で分野に合うのは静圧空気軸受・ラビリンスシール数件のみ。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：OA限定・被引用順／新着順／非OA被引用順）",
+      "scope": "基本候補枯渇の深掘り（各クエリper-page25、既配信を除外して確認）",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "air foil bearing",
+       "bump-type foil bearing",
+       "foil bearing rotordynamic",
+       "gas bearing rotor",
+       "gas foil bearing",
+       "foil thrust bearing",
+       "bump foil"
+      ],
+      "hits": 225,
+      "note": "Larsen et al.(2015)（OA・CC BY）、Li et al.(2024)（Springer・抄録）を発掘。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：OA限定・被引用順）",
+      "scope": "基本候補枯渇の深掘り（各クエリper-page25）",
+      "terms": [
+       "rotordynamic",
+       "rotor bearing instability whirl",
+       "seal rotordynamic coefficients",
+       "rotor bearing system stability"
+      ],
+      "hits": 100,
+      "note": "Kirk & Alsaeed(2011)（Hindawi・CC BY、バージニア工科大リポジトリ経由で全文取得）を発掘。"
+     }
+    ],
+    "note": "追加クエリの件数は、各クエリの取得件数（25件）の合計。既配信との重複はタイトル・DOIで機械的に除外した。出版社サイトの多くが403で、全文・抄録の取得可否が候補選定の実質的な制約になった。"
+   },
+   "afterword": "今回いちばん『なるほど』と思ったのは、Larsen et al.(2015)で、フォイル軸受の箔の『硬さ』が1つの数字では決まらない、という点でした。ゆっくり押していくときの硬さと、その途中で細かく揺らしたときの硬さは別物で、前者を後者にも使うと軸受の硬さを大きく低く見積もってしまう、という結果でした。ばねの硬さを一つの定数だと思っていたので、箔の中で摩擦が滑ったり止まったりするだけで、使う数字を変える必要が出てくるというのは新鮮でした。もう一つ、Kirk & Alsaeed(2011)は、ターボチャージャの振れ回りを抑えるために、あえてアンバランスを足す、という発想が直感に反して面白かったです。ただし論文の中でも、足しすぎると回転と同じ周期の振動が大きくなるとされていて、ちょうど良い量を探す話になっていました。 — 編集担当より"
   }
  ]
 }
