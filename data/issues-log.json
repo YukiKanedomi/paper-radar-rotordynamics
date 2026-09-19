@@ -9164,6 +9164,130 @@
     "note": "追加クエリの件数は、各クエリの取得件数（25件）の合計。既配信との重複はタイトル・DOIで機械的に除外した。出版社サイトの多くが403で、全文・抄録の取得可否が候補選定の実質的な制約になった。"
    },
    "afterword": "今回いちばん『なるほど』と思ったのは、Larsen et al.(2015)で、フォイル軸受の箔の『硬さ』が1つの数字では決まらない、という点でした。ゆっくり押していくときの硬さと、その途中で細かく揺らしたときの硬さは別物で、前者を後者にも使うと軸受の硬さを大きく低く見積もってしまう、という結果でした。ばねの硬さを一つの定数だと思っていたので、箔の中で摩擦が滑ったり止まったりするだけで、使う数字を変える必要が出てくるというのは新鮮でした。もう一つ、Kirk & Alsaeed(2011)は、ターボチャージャの振れ回りを抑えるために、あえてアンバランスを足す、という発想が直感に反して面白かったです。ただし論文の中でも、足しすぎると回転と同じ周期の振動が大きくなるとされていて、ちょうど良い量を探す話になっていました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-20",
+   "status": "published",
+   "headline": "第72号：フォイル軸受は『ゆっくりした始動』が苦手、端に荷重をかけると軸受が約47倍硬くなっても近くの危険速度は動かない",
+   "intro": "collect.mjsの基本候補は、この号もほぼ既配信か分野外でした（foil定番枠14件中13件が既配信で残る1件は書評、foil最新枠はほとんど分野外のarXiv新着、rotor定番枠も統計学や電力系統などの分野外か既配信）。そこでOpenAlexに直接、OA限定・被引用順や新着順の追加クエリをかけ、Crossrefで2025年以降の新着、NASA NTRSでフォイル軸受の技術報告を探しました。全文が読めたのは、NASA NTRS（米陸軍研究所の技術報告、.txtの全文API）と、Copernicus Publications（Mechanical Sciences、CC BY 4.0）の2つでした。Texas A&M大学のリポジトリ（OakTrust）とEPFLのリポジトリはボット対策で403/405になり、Elsevierは今回も本文・抄録とも取得できませんでした。抄録ベースの2本はどちらもASMEのJournal of Tribologyで、Crossrefに抄録が載っていたものです。",
+   "picked": [
+    {
+     "id": "ntrs:20120012857",
+     "title": "Foil Bearing Starting Considerations and Requirements for Rotorcraft Engine Applications（Radil & DellaCorte, 2009, ARL-TR-4873）",
+     "why": "回転翼機エンジンサイズのフォイル軸受を、従来型のゆっくりした始動を想定して100回始動・停止させ、軸のコーティング（PS304）と箔の樹脂がどうなるかを調べた技術報告。foil classic枠として選定（OA全文・米国政府職員の著作物として原報告Fig.1・3・5・6を転載）。忠実性チェックで、『500rpm/sまで』という上限に読める書き方、図5が100回全体でなく76〜100回目の区間であること、T700の加速率の逆算値を報告の記述のように書いていた点などを修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.4072152",
+     "title": "A Synergistic Theoretical and Experimental Study on the Dynamic Behavior of Multi-Layer Gas Foil Thrust Bearings（Zhang & Hu, 2026, Journal of Tribology）",
+     "why": "多層のガスフォイルスラスト軸受の動特性係数を、箔構造の等価剛性・減衰を組み込んだモデルと高速試験台の加振試験で調べた研究。foil latest枠として選定（抄録ベース）。忠実性チェックで、抄録に無い箔の材質・形の断定や、概念図の注記と描画内容の食い違いなどを修正した。"
+    },
+    {
+     "id": "doi:10.5194/ms-17-857-2026",
+     "title": "Shaft-flexibility-induced hydrodynamic support redistribution and modal response in a multi-support bearing-rotor system（Zhang, Li, Xu, Guo & Yuan, 2026, Mechanical Sciences）",
+     "why": "3ディスク・4支持の油膜軸受ロータ系に端荷重をかけ、4つの軸受の姿勢と油膜係数が不均一に再配分されること、その一方で低次の危険速度はほとんど動かないことを示した研究。rotor latest枠として選定（OA全文・CC BY 4.0、原論文Fig.1・12・15を転載、2026年9月18日公開）。忠実性チェックで、式(15)のジャイロ項の回転速度Ωの脱落、式(18)の原文の誤植の扱い、図の説明の言い換えなどを修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.1611502",
+     "title": "Rotordynamic-Coefficient and Leakage Characteristics for Hole-Pattern-Stator Annular Gas Seals—Measurements Versus Predictions（Childs & Wade, 2004, Journal of Tribology）",
+     "why": "穴パターンのステータを持つ環状ガスシールを供給圧70barで実測し、周波数依存の剛性・減衰係数と漏れを2コントロールボリューム模型の予測と比べた研究。rotor classic枠として選定（抄録ベース）。忠実性チェックで、hookの『動特性係数と漏れが一致』という抄録を超える書き方、試験条件を総当たりと読ませる数値カードなどを修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Elsevierの新着を今回も見送った",
+     "note": "foil最新枠のガスフォイル軸受摩耗シミュレーション論文（Mechanical Systems and Signal Processing、2026）は、前号に続いてOpenAlex・Crossref・Semantic Scholarに抄録が無く、ScienceDirectのページも403で開けませんでした。Tribology International 2026年のフォイル軸受の摩耗自己センシングの論文も、OpenAlexに抄録がありませんでした。抄録が確認できないものは要約を書けないため載せていません。"
+    },
+    {
+     "title": "全文を取れなかった有望候補",
+     "note": "Texas A&M大学のリポジトリにあるヘリウムターボコンプレッサ向けフォイル軸受の論文（2001年）と、EPFLのリポジトリにあるスパイラル溝付きガスフォイルスラスト軸受の論文（Tribology International、2018年）は、OpenAlex上ではOAでしたが、リポジトリのボット対策で403/405となり全文を読めませんでした。"
+    },
+    {
+     "title": "抄録ベース2本の位置づけ",
+     "note": "Zhang & Hu(2026)とChilds & Wade(2004)は、抄録に書かれた範囲だけで要約しています。数値や一致の程度は抄録に無いので書いていません。概念図は、どちらも『模式・実データではない』ことを図中にも明記しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。定番枠は1件（書評）を除き既配信、最新枠はほとんどが分野外のarXiv新着で、新規のフォイル軸受候補は2件（磁気軸受1・ガスフォイル軸受摩耗1）のみ。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外ノイズを含む）。新規で分野に合うのは静圧・多支持軸受、ラビリンスシール数件のみ。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil：OA限定・被引用順／新着順）",
+      "scope": "基本候補枯渇の深掘り（各クエリ上位25件、既配信をタイトル・DOIで除外）",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "air foil",
+       "gas bearing rotor"
+      ],
+      "hits": 125,
+      "note": "5クエリ×25件。Texas A&M・EPFLのリポジトリ上のOA論文を見つけたが全文は取得できず。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor：被引用順）",
+      "scope": "基本候補枯渇の深掘り（各クエリ上位25件）",
+      "terms": [
+       "seal rotordynamic",
+       "rotor-bearing system stability",
+       "subsynchronous vibration rotor",
+       "critical speed rotor"
+      ],
+      "hits": 100,
+      "note": "Childs & Wade(2004)を発掘（抄録はCrossref経由で確認）。"
+     },
+     {
+      "name": "Crossref（2025年以降のフォイル軸受）",
+      "scope": "query.bibliographic、2025-01-01以降の論文、各クエリ40件",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing rotor",
+       "air foil bearing thermal",
+       "foil thrust bearing"
+      ],
+      "hits": 160,
+      "note": "抄録が載っているASME・Sageの論文からZhang & Hu(2026)を選定。Elsevierの論文は抄録なし。"
+     },
+     {
+      "name": "NASA NTRS（フォイル軸受）",
+      "scope": "技術報告サーバの全文検索、既配信を除外して確認",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 40,
+      "note": "Radil & DellaCorte(2009)を選定（.txtの全文を取得）。"
+     }
+    ],
+    "note": "追加クエリの件数は、各クエリの取得件数（25件・40件）の合計。既配信との重複はタイトル・DOIで機械的に除外した。Copernicus（Mechanical Sciences）のOA全文は、ボット対策にかからずPDFをそのまま取得できた。"
+   },
+   "afterword": "今回いちばん『なるほど』と思ったのは、Zhang et al.(2026)で、荷重端の軸受の硬さが約47倍（2884rpmでの直接剛性のトレース）になっても、近くの危険速度は0.001%も動かない、という結果でした。硬さの数字だけを見ていると、軸受が強くなれば共振の回転数も大きく動きそうに思えるのですが、論文では『そのモードがその軸受の場所をどれだけ使っているか（参加度）』のほうが効く、と説明されていました。もう一つ、Radil & DellaCorte(2009)では、始動が『ゆっくり』だと、空気の膜ができるまでこすれる時間が長くなるぶん、軸受にはむしろ厳しい条件になる、という見方が新鮮でした。本文では、実機のエンジンより遅い加速で100回試験することが、あえて厳しい側の条件として選ばれていました。ただし、どちらも計算や限られた回数の試験に基づく結果で、著者自身が限界も書いているところは、読んでいて安心しました。 — 編集担当より"
   }
  ]
 }
