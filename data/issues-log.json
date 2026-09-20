@@ -9288,6 +9288,132 @@
     "note": "追加クエリの件数は、各クエリの取得件数（25件・40件）の合計。既配信との重複はタイトル・DOIで機械的に除外した。Copernicus（Mechanical Sciences）のOA全文は、ボット対策にかからずPDFをそのまま取得できた。"
    },
    "afterword": "今回いちばん『なるほど』と思ったのは、Zhang et al.(2026)で、荷重端の軸受の硬さが約47倍（2884rpmでの直接剛性のトレース）になっても、近くの危険速度は0.001%も動かない、という結果でした。硬さの数字だけを見ていると、軸受が強くなれば共振の回転数も大きく動きそうに思えるのですが、論文では『そのモードがその軸受の場所をどれだけ使っているか（参加度）』のほうが効く、と説明されていました。もう一つ、Radil & DellaCorte(2009)では、始動が『ゆっくり』だと、空気の膜ができるまでこすれる時間が長くなるぶん、軸受にはむしろ厳しい条件になる、という見方が新鮮でした。本文では、実機のエンジンより遅い加速で100回試験することが、あえて厳しい側の条件として選ばれていました。ただし、どちらも計算や限られた回数の試験に基づく結果で、著者自身が限界も書いているところは、読んでいて安心しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-21",
+   "status": "published",
+   "headline": "第73号：フォイル軸受は油の実験とテープレコーダーから生まれた、スクイーズフィルムダンパは『弱すぎても効きすぎても』効かない",
+   "intro": "collect.mjsの基本候補は、この号もほぼ既配信か分野外でした（foil定番枠14件中13件が既配信で残る1件は教科書、foil最新枠は流体・制御・通信などの分野外のarXiv新着ばかり、rotor定番枠も統計学・電力系統などの分野外か既配信）。そこでOpenAlexに直接、キーワード別の新着順・被引用順の追加クエリをかけ、NASA NTRSでフォイル軸受とロータダイナミクスの技術報告を探しました。全文が読めたのは、NASA NTRSの2本（.txtの全文API）です。Elsevier（Mechanical Systems and Signal Processing、International Journal of Mechanical Sciences）の新着は、OpenAlex・Crossref・Semantic Scholarのどれにも抄録が無く、要約が書けないため見送りました。抄録ベースの2本は、どちらもASMEのJournal of Engineering for Gas Turbines and Powerで、抄録がOpenAlexに載っていたものです。",
+   "picked": [
+    {
+     "id": "ntrs:20120012590",
+     "title": "Technical Development Path for Foil Gas Bearings（DellaCorte, 2008, IJTC 2008）",
+     "why": "フォイル軸受が、油膜の観察実験とテープ記録装置の空気膜から生まれ、第1〜第3世代へ進んだ道筋を、NASAの著者がたどった短い会議論文。foil classic枠として選定（OA全文・NTRSで一般公開）。原論文の3枚の図は、出典の記載が無く、第三者の図の可能性を否定できないため転載せず、年表の概念図にとどめた。忠実性チェックで、原論文の図番号が本文とキャプションで1つずれている点（番号を出さない）、実用化の年代の推定、Blokらへの帰属、被引用数の記載（数値を出さず空に）、著作権の断定などを修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.4069737",
+     "title": "Development of Hydrocarbon Gas Compressor With Integral Motor and Foil Bearing（Lee & Lee, 2025, JEGTP）",
+     "why": "フォイル軸受と高速の一体型モータを備えた、炭化水素ガス用のターボ圧縮機の開発と試験の紹介。foil latest枠として選定（抄録ベース）。忠実性チェックで、実証されたのは『高速一体型モータと組み合わせたフォイル軸受の健全性』であること（モータの健全性と並列に書かない）、抄録に無い『回転軸が外へ出ない構造』という機構の記述、環境面の貢献が見込み（would）である点などを修正した。"
+    },
+    {
+     "id": "ntrs:19750025323",
+     "title": "Design and Application of Squeeze Film Dampers for Turbomachinery Stabilization（Gunter, Barrett & Allaire, 1975, NASA CR-143631）",
+     "why": "スクイーズフィルムダンパの油膜力の導出、安定性マップによる寸法決め、非線形の過渡解析、実機の遠心圧縮機の例までをまとめた大学の報告書。rotor classic枠として選定（OA全文）。原本はスキャンで式・表の多くが崩れているため、式は載せず、地の文と、逐語が確認できる3か所の引用に限った。図は転載せず概念図のみ。忠実性チェックで、周方向油溝の効果の理由づけ（最大圧力1/4・片側の力1/8・正味1/4）、OCRで読みが揺れる危険速度4,200/4,300 rpmの扱い、圧縮機の実例の帰属、円形同期歳差運動という条件の明記などを修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.4070335",
+     "title": "Influence of Oil Conducting Ducts on Squeeze Film Damper Forces（Giampaolo, Arghir, Festjens, Esnouf & Benyoucef, 2026, JEGTP）",
+     "why": "SFDの給油・回収ダクトの圧力を、一定とせずにモデル化すると、ロータの旋回に追従して振動し、条件によってはダンパ力に影響する、という研究。rotor latest枠として選定（抄録ベース）。同じSFDの1975年の報告と並べて読める。忠実性チェックで、回収ダクトが『使われている』という断定（抄録は関心が示されているまで）、『ある特定の運転条件』の訳、複数の給油オリフィスを簡略化して描いた図の注記などを修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Elsevierの新着を今回も見送った",
+     "note": "foilの新着（Zhu et al. 2025 のダブルV型ハニカム構造のフォイル軸受-ロータ系、Zhao et al. 2025 の起動時の動特性と摩耗、Zhou et al. 2026 の水素燃料電池用空気圧縮機の摩耗シミュレーション）と、rotorの新着（制御モーメントジャイロの高速潤滑軸受、ボルト接合ロータの加速過程）は、OpenAlex・Crossref・Semantic Scholarに抄録が無く、要約が書けないため載せていません。"
+    },
+    {
+     "title": "全文が崩れていた・使わなかった候補",
+     "note": "NASA NTRSの、Doyle(1980)「Field experiences with rotordynamic instability」は、.txtが1語ごとに改行された状態で、読み取れませんでした。Vance & Noah(1986)のトルクホワール理論は、.txtが文字ごとに空白の入ったOCRで、逐語の確認ができないため見送りました。"
+    },
+    {
+     "title": "抄録ベース2本の位置づけ",
+     "note": "Lee & Lee(2025)とGiampaolo et al.(2026)は、抄録に書かれた範囲だけで要約しています。回転数・圧力・寸法・圧力振動の大きさなどの数値は抄録に無いので書いていません。概念図は、どちらも『模式・実データではない』ことを図中にも明記しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA19/抄録5）・定番枠14件（OA4/抄録10）。定番枠は1件（教科書）を除き既配信、最新枠は分野外のarXiv新着ばかりで、新規のフォイル軸受候補は無かった。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA10/抄録3）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外ノイズを含む）。新規で分野に合うのは、ハイブリッド軸受・シール数件のみ。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil）",
+      "scope": "基本候補枯渇の深掘り（新着順・被引用順、各クエリ上位25件、既配信をタイトル・DOIで除外）",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "air foil bearing"
+      ],
+      "hits": 150,
+      "note": "3語×新着順・被引用順×25件。被引用順は分野外の論文が多く、新着順からElsevier・ASMEの2025年以降の論文を見つけた。ASMEのLee & Lee(2025)は抄録が取れた。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor）",
+      "scope": "基本候補枯渇の深掘り（新着順・被引用順、各クエリ上位25件、既配信を除外）",
+      "terms": [
+       "rotordynamic",
+       "journal bearing stability rotor",
+       "squeeze film damper rotor",
+       "squeeze film damper（被引用順）"
+      ],
+      "hits": 100,
+      "note": "抄録が載っているものに絞って（has_abstract）調べ、ASMEのGiampaolo et al.(2026)を選定した。"
+     },
+     {
+      "name": "NASA NTRS（foil）",
+      "scope": "技術報告サーバの全文検索、既配信を除外して確認（各クエリ上位40件）",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "compliant foil journal bearing",
+       "gas bearing rotordynamics"
+      ],
+      "hits": 257,
+      "note": "DellaCorte(2008)を選定（.txtの全文を取得）。ヒット数は各クエリの総ヒット数の合計。"
+     },
+     {
+      "name": "NASA NTRS（rotor）",
+      "scope": "技術報告サーバの全文検索、既配信を除外して確認（各クエリ上位40件）",
+      "terms": [
+       "rotordynamic",
+       "rotor whirl instability",
+       "fluid film bearing rotor stability",
+       "seal rotordynamic coefficients"
+      ],
+      "hits": 545,
+      "note": "Gunter, Barrett & Allaire(1975)を選定（.txtの全文を取得）。ヒット数は各クエリの総ヒット数の合計。"
+     }
+    ],
+    "note": "ヒット数のうちNTRSは総ヒット数、それ以外は取得件数。既配信との重複はタイトル・DOIで機械的に除外した。Elsevierの論文の抄録は、OpenAlex・Crossref・Semantic Scholarで確認したが取れなかった。"
+   },
+   "afterword": "今回いちばん『なるほど』と思ったのは、Gunter et al.(1975)で、スクイーズフィルムダンパは減衰が小さすぎても大きすぎても不安定になり、不つり合いが大きい例では、ダンパを入れた側のほうが力の伝わり方（伝達率）が0.74から2.15に悪化しうる、と示されていた点です。ダンピングは多いほど安心、と素朴に思っていたので、『効く窓』の狭さが新鮮でした。もう一つ、DellaCorte(2008)を読んで、フォイル軸受の出発点が、油の潤滑を観察する実験と、テープレコーダーの『やっかいな現象』だったことが面白かったです。しかも論文は、油潤滑の箔軸受を研究した当時の研究者たちが、その発見がガス軸受にとって重要だと気づいたことを示す記録はほとんど無い、とも書いていました。ただ、Gunter et al.は1975年の大学の報告で、計算例の数値はある一つのロータ・ダンパのものだと、読んでいて分かりました。同じSFDの2026年の研究が、油を送る管の圧力を『一定』としてよいのか、と問い直していたのも、時代を超えたつながりを感じました。 — 編集担当より"
   }
  ]
 }

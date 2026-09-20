@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <rect width="720" height="420" fill="#faf9f5"/>
+  <text x="360" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">スクイーズフィルムダンパ(SFD)の構成と「効く窓」（模式図）</text>
+  <text x="360" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。報告の記述を概念化した図で、原報告の図ではない。寸法・数値は描いていない。</text>
+
+  <circle cx="190" cy="190" r="118" fill="#ece8dc" stroke="#3a3a34" stroke-width="2.5"/>
+  <circle cx="190" cy="190" r="92" fill="#c9a86b" opacity="0.55"/>
+  <circle cx="200" cy="184" r="84" fill="#3a3a34"/>
+  <text x="200" y="182" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#faf9f5">ジャーナル</text>
+  <text x="200" y="198" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#faf9f5">（回転せず旋回）</text>
+  <text x="190" y="336" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">ハウジング（外側）と油膜（すきま）。</text>
+  <text x="190" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">すきまは図では誇張してある</text>
+  <text x="190" y="378" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1a5e54">保持ばね（リテーナスプリング）で</text>
+  <text x="190" y="394" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1a5e54">ジャーナルを支える（図には描画せず）</text>
+
+  <text x="520" y="102" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#3a3a34" font-weight="600">支持の減衰の大きさと安定性（定性的な模式）</text>
+  <rect x="360" y="130" width="90" height="46" fill="#f0d9d0" stroke="#b4451f"/>
+  <rect x="450" y="130" width="140" height="46" fill="#dfeae6" stroke="#1a5e54"/>
+  <rect x="590" y="130" width="90" height="46" fill="#f0d9d0" stroke="#b4451f"/>
+  <text x="405" y="150" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">小さすぎ</text><text x="405" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b4451f">不安定</text>
+  <text x="520" y="150" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">適正な範囲</text><text x="520" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1a5e54">安定</text>
+  <text x="635" y="150" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">大きすぎ</text><text x="635" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b4451f">不安定</text>
+  <text x="520" y="196" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">左から右へ、支持の減衰が大きくなる向き（目盛りは付けていない）</text>
+
+  <text x="520" y="240" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">報告の例では、空力の交差結合が大きいほど</text>
+  <text x="520" y="258" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">この「窓」が狭く、支持剛性の上限も厳しくなる。</text>
+  <text x="520" y="290" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">また、偏心が大きくなるとダンパの剛性・減衰が</text>
+  <text x="520" y="308" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">急に増え、窓から外れてしまいうる。</text>
+  <text x="520" y="352" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">窓の幅や位置は機械ごとに異なる。数値は本文の計算例を参照。</text>
+</svg>

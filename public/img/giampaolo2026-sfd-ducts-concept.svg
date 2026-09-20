@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">SFDの給油ダクトと回収ダクト（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。抄録の記述（給油側と回収側のダクト、ロータの旋回）を概念化。</text>
+  <text x="340" y="66" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">給油オリフィスは抄録では複数だが、図では簡略化。位置・寸法も説明用の仮のもの。</text>
+
+  <circle cx="340" cy="210" r="112" fill="#ece8dc" stroke="#3a3a34" stroke-width="2.5"/>
+  <circle cx="340" cy="210" r="94" fill="#c9a86b" opacity="0.55"/>
+  <circle cx="346" cy="206" r="86" fill="#3a3a34"/>
+  <text x="346" y="210" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#faf9f5">ロータ側（旋回）</text>
+  <path d="M290 150 A64 64 0 0 1 402 158" stroke="#b4451f" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b4451f"/></marker></defs>
+
+  <rect x="60" y="196" width="150" height="26" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+  <text x="135" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1a5e54">給油ダクト → 給油オリフィス</text>
+  <path d="M40 209 L58 209" stroke="#1a5e54" stroke-width="2" marker-end="url(#g)"/>
+  <defs><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a5e54"/></marker></defs>
+  <text x="60" y="244" font-family="sans-serif" font-size="11" fill="#3a3a34">ポンプから</text>
+
+  <rect x="470" y="196" width="150" height="26" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+  <text x="545" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1a5e54">回収オリフィス → 回収ダクト</text>
+  <path d="M622 209 L642 209" stroke="#1a5e54" stroke-width="2" marker-end="url(#g)"/>
+  <text x="520" y="244" font-family="sans-serif" font-size="11" fill="#3a3a34">出口オリフィスから排出</text>
+
+  <text x="340" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">従来のモデルは両ダクトの圧力を一定と仮定。抄録によれば、モデル化するとダクト内の圧力は</text>
+  <text x="340" y="370" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">ロータの旋回に追従して振動し、条件によってはダンパ力への影響が無視できない。</text>
+</svg>
