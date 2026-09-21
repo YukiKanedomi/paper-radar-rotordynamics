@@ -9414,6 +9414,136 @@
     "note": "ヒット数のうちNTRSは総ヒット数、それ以外は取得件数。既配信との重複はタイトル・DOIで機械的に除外した。Elsevierの論文の抄録は、OpenAlex・Crossref・Semantic Scholarで確認したが取れなかった。"
    },
    "afterword": "今回いちばん『なるほど』と思ったのは、Gunter et al.(1975)で、スクイーズフィルムダンパは減衰が小さすぎても大きすぎても不安定になり、不つり合いが大きい例では、ダンパを入れた側のほうが力の伝わり方（伝達率）が0.74から2.15に悪化しうる、と示されていた点です。ダンピングは多いほど安心、と素朴に思っていたので、『効く窓』の狭さが新鮮でした。もう一つ、DellaCorte(2008)を読んで、フォイル軸受の出発点が、油の潤滑を観察する実験と、テープレコーダーの『やっかいな現象』だったことが面白かったです。しかも論文は、油潤滑の箔軸受を研究した当時の研究者たちが、その発見がガス軸受にとって重要だと気づいたことを示す記録はほとんど無い、とも書いていました。ただ、Gunter et al.は1975年の大学の報告で、計算例の数値はある一つのロータ・ダンパのものだと、読んでいて分かりました。同じSFDの2026年の研究が、油を送る管の圧力を『一定』としてよいのか、と問い直していたのも、時代を超えたつながりを感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-22",
+   "status": "published",
+   "headline": "第74号：フォイルの材質を変えるだけで硬さと『離陸』の圧力が変わる、危険速度を超えた振れ回りの犯人はスプラインの摩擦だった",
+   "intro": "collect.mjsの基本候補は、この号もほぼ既配信か分野外でした（foil定番枠14件中13件が既配信で、残る1件は教科書。foil最新枠24件は、既配信か、電力・流体・制御などの分野外のarXiv新着ばかり。rotor定番枠は統計学・電力系統などの分野外か既配信）。そこでOpenAlexに直接、フレーズ検索で被引用順・新着順の追加クエリをかけ、NASA NTRSも探しました。全文が読めたのは2本です。J-STAGE（JSMEのオープンアクセス誌）の2016年の論文と、NTRSの1984年の講演集の1本です。一方、Hindawi（Dimond et al. 2009）、DTU Orbit（von Osmanski et al. 2017の後刷）、EPFLのInfoscience、Texas A&MのOAKTrustは、いずれも本文PDFに403や405を返され、読めませんでした。NTRSにあったRuscitto et al.（1978、NASA CR-135368）のフォイル軸受の報告は、.txtも、PDFのテキスト層も、1語ごとに改行された崩れたOCRで、数値の逐語確認が難しいため見送りました。抄録ベースの2本は、ASMEの2本（2025年のCao et al.のJournal of Tribology、Bird et al.のJournal of Engineering for Gas Turbines and Power）です。foilの定番枠に選んだZheng et al.（2016）は、被引用が10件台で、定番と呼べるほどの数ではありません。候補プールの枯渇で、被引用上位の未配信のフォイル軸受のOA全文が見つからず、堅実な実験・解析例として、定番枠にあてました。",
+   "picked": [
+    {
+     "id": "doi:10.1299/jamdsm.2016jamdsm0027",
+     "title": "Numerical and experimental study on the dynamic characteristics of the foil journal bearing with double-layer protuberant support（Zheng, Chen, Lai, Zhang & Hou, 2016, JAMDSM）",
+     "why": "トップフォイルの下に、突起をもつフォイルを2層入れたガスフォイル軸受を、突起フォイルの材質（ステンレス鋼／ベリリウム青銅）だけ変えた2つで、数値解析とターボエキスパンダの実験の両方から比べた論文。foil classic枠として選定（OA全文・J-STAGE）。定番と呼べる被引用ではないため、被引用は10件台と明記した。原論文の図は、再利用ライセンスの表示が見当たらず、転載していない（概念図のみ）。忠実性チェックで、『裏づけられた』『確かめた』という原文より強い言い方（原文は suggest／speculate）、離陸速度と遮断速度の定義の書き分け、『線形摂動法による従来モデル』という主語の誤り、渦電流センサの取付位置、ロータの『質量』と『重量』の取り違え、モデルが先行研究由来である点、などを修正した。式は原文のPDFの画像で確認した3本（式(1)(2)(5)）のみ載せている。"
+    },
+    {
+     "id": "doi:10.1115/1.4068912",
+     "title": "A Measurement Method for Vibration Characterization in Gas Foil Bearing Rotor Systems Based on PVDF Sensor（Cao et al., 2025, Journal of Tribology）",
+     "why": "気体膜の圧力をPVDFセンサのアレイで測り、その分布を積分した力を運動方程式に入れてロータの振動を求める手法。foil latest枠として選定（抄録ベース）。忠実性チェックで、関連論文の原題の誤り（instantaneous angular speed を instability と書いていた）、抄録に無い『空気の膜』『曲線』『薄い』『直接』『再現』といった具体化、出典間の出版日の違い（OpenAlex 2025年6月、Crossref 2025年7月）の併記などを修正した。"
+    },
+    {
+     "id": "ntrs:19850005811",
+     "title": "Control of Rotordynamic Instability in a Typical Gas Turbine's Power Rotor System（Veikos, Page & Tornillo, 1984, NASA Lewis Research Center講演集）",
+     "why": "ガスタービンの動力ロータで、危険速度を超えると起きる非同期のホワールの原因がスプラインのすべり摩擦であることを、解析（スプライン要素を入れた固有値解析）と試験（実機・リグ）から示し、対策（潤滑・微小なミスアライメント・可撓カップリング・スクイーズフィルムダンパ）を整理した講演録。rotor classic枠として選定（OA全文・NTRS）。原本はスキャンで、式は載せず、地の文と結論の逐語引用3か所に限った。図は転載せず概念図のみ。忠実性チェックで、『NASA Lewis主催ワークショップ』という主催の断定（メタデータで確認できない）、SFDを2分割したときの荷重容量『半分ごとに1/4』（原文は『両半分の合計で1/4』）、OCRで崩れた記号Ωの意味の断定、ミスアライメントの効果の説明の帰属、『ダンパの試験は実施予定（pending）』の書き分けなどを修正した。"
+    },
+    {
+     "id": "doi:10.1115/1.4066711",
+     "title": "Rotordynamics of a Single-Stage Brush Seal in Isolation: The Effects of Variable Stiffness and Back Plate Geometry（Bird et al., 2025, JEGTP）",
+     "why": "ブラシシールを単体で試験し、毛の直径とバックプレート形状が、漏れと動特性係数に及ぼす影響を調べた実験研究。rotor latest枠として選定（抄録ベース）。ラビリンスシール・ハニカムシールの既配信に、ブラシシールが加わる。忠実性チェックで、抄録の『わずかな干渉（slight interference）』をバックプレートの取付干渉と決めつけていた点、原題の 'Variable Stiffness' の訳、『直接剛性』『直接減衰』への結果の帰属（抄録は『直接の動特性係数』は圧力差で増えるとだけ述べる）、図の説明（一般的な構成であり、抄録の記述ではない）などを修正した。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Elsevierの2026年の新着を、今回も見送った",
+     "note": "foilの新着（Zhou et al. 2026 の水素燃料電池用空気圧縮機のガスフォイル軸受-ロータ系の摩耗シミュレーション）と、rotorの新着（Le et al. 2026 の扇形ラビリンスシール、Sun et al. 2026 の極低温液体タービンエキスパンダのシャフトラビリンスシール）は、OpenAlex・Crossref・Semantic Scholarのどれにも抄録が無く、出版社のページ（ScienceDirect）もアクセスできなかったため、要約が書けず、載せていません。"
+    },
+    {
+     "title": "全文が読めなかった有望候補",
+     "note": "Dimond et al. (2009) の、傾斜パッド軸受・固定形状ジャーナル軸受の動特性係数の同定法と試験結果のレビュー（Hindawi、CC-BY）は、本文PDFに403を返されました。von Osmanski et al. (2017) の摩擦を考慮した空気フォイル軸受の連成モデルのDTU後刷、EPFLの3D積層造形フォイル軸受（2020）の論文も、アクセスできませんでした。Ruscitto et al. (1978) のNASA報告は、テキストの崩れが大きく見送りました。"
+    },
+    {
+     "title": "抄録ベース2本の位置づけ",
+     "note": "Cao et al. (2025) と Bird et al. (2025) は、抄録に書かれた範囲だけで要約しています。センサの数・寸法・圧力や係数の値などは抄録に無いので、書いていません。概念図は、どちらも『模式・実データではない』ことを図中にも明記しました。Bird et al. については、OpenAlexがOA（hybrid）と記録していますが、Crossrefのライセンス記録とは食い違い、出版社のPDFは取得できなかったため、oaはfalse（抄録ベース）としています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。最新枠は分野外のarXiv新着と既配信ばかりで、新規のフォイル軸受候補は、ほぼ無かった。定番枠は、1件（教科書）を除き既配信。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA8/抄録5）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外ノイズを含む）。新規で分野に合う候補は、ラビリンスシールなど数件のみだったが、抄録が取れなかった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil・OA限定・被引用順）",
+      "scope": "基本候補枯渇の深掘り（is_oa:true、被引用順、各クエリ上位25件、既配信をタイトル・DOIで除外）",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotordynamic",
+       "air bearing",
+       "\"gas foil bearing\"",
+       "\"foil bearing\"",
+       "\"foil journal bearing\"",
+       "\"foil thrust bearing\"",
+       "\"air foil bearing\""
+      ],
+      "hits": 188,
+      "note": "引用符なしの語（foil bearing、air bearing）は分野外の論文が多く混じった。フレーズ検索の結果から、J-STAGEのZheng et al. (2016) を選定（.pdfのテキストが読める）。ヒット数は取得件数の合計。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotor・OA限定・被引用順）",
+      "scope": "基本候補枯渇の深掘り（is_oa:true、被引用順、各クエリ上位25件、既配信を除外）",
+      "terms": [
+       "\"rotordynamic\"",
+       "\"rotor-bearing system\"",
+       "\"critical speed\" rotor"
+      ],
+      "hits": 75,
+      "note": "Dimond et al. (2009)（Hindawi）などを見つけたが、本文PDFは取得できなかった。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（新着順・2024年6月以降・抄録の有無を確認）",
+      "scope": "foilとrotorの直近論文を、抄録がある候補に絞って確認（各クエリ上位40件、既配信を除外）",
+      "terms": [
+       "\"foil bearing\"",
+       "\"gas bearing\" rotor",
+       "\"rotordynamic\" bearing",
+       "\"subsynchronous\" rotor",
+       "\"seal\" rotordynamic"
+      ],
+      "hits": 173,
+      "note": "抄録が付いた候補から、ASMEのCao et al. (2025) とBird et al. (2025) を選定。ヒット数は取得件数の合計。"
+     },
+     {
+      "name": "NASA NTRS（foil・rotor）",
+      "scope": "技術報告サーバの全文検索、既配信を除外して確認（各クエリ上位25件）",
+      "terms": [
+       "foil air bearing",
+       "compliant foil bearing",
+       "gas bearing rotordynamic instability"
+      ],
+      "hits": 132,
+      "note": "Veikos et al. (1984) を選定（.txtの全文を取得）。Ruscitto et al. (1978) は本文のテキストが崩れており見送り。ヒット数は各クエリの総ヒット数の合計。"
+     }
+    ],
+    "note": "ヒット数のうちNTRSは総ヒット数、それ以外は取得件数。既配信との重複はタイトル・DOIで機械的に除外した。Elsevierの2026年の論文の抄録は、OpenAlex・Crossref・Semantic Scholarで確認したが取れなかった。Hindawi・DTU Orbit・EPFL Infoscience・Texas A&MのOAKTrustは、本文PDFが取得できなかった。"
+   },
+   "afterword": "今回いちばん『なるほど』と思ったのは、Veikos et al.(1984)で、危険速度を超えると回転より遅い振れ回りが止まらなくなる原因が、軸をつなぐスプラインのすべり摩擦だった、という点です。『ずれは悪いもの』と素朴に思っていたのに、試験装置ではスプラインに約1/8度を超えるずれを与えると不安定が弱まり、実機でも、組立て時にずれを測って選り分けると、過大な振れ回りのエンジンがほぼなくなった、と書かれていました。ただ、著者は『許容範囲に収まったが、なくなったわけではない』とも書いていて、なくすための本命は、可撓カップリングかスクイーズフィルムダンパだ、という整理でした。しかもダンパをこのエンジンに入れた試験は、発表の時点では『実施予定』とされていて、報告が正直だと感じました。もう一つ、Zheng et al.(2016)は、突起フォイルの材質を変えただけで、離陸に必要な供給圧力が0.37 MPa（ベリリウム青銅）から0.52 MPa（ステンレス）に上がっていて、『硬い軸受は離陸しにくい』という感覚を数字で見られたのが面白かったです。ただ、これは2つの軸受・1台の試験機の結果なので、一般則として読むのは早いと思います。 — 編集担当より"
   }
  ]
 }

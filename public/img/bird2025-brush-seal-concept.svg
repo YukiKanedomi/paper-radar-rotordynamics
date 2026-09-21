@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">ブラシシールの構成（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。一般的な構成の例で、前板を含む配置や、毛の本数・長さ・角度、板の形状は説明用の仮のもの。</text>
+
+  <rect x="70" y="300" width="540" height="40" fill="#3a3a34"/>
+  <text x="340" y="326" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#faf9f5">ロータ（回転軸）　→ 回転</text>
+
+  <rect x="200" y="106" width="34" height="130" fill="#ece8dc" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="217" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3a34">前板</text>
+  <rect x="280" y="106" width="50" height="170" fill="#ece8dc" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="305" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3a34">バックプレート</text>
+
+  <g stroke="#1a5e54" stroke-width="2.2" fill="none">
+    <path d="M234 170 L262 300"/><path d="M236 165 L266 300"/><path d="M238 160 L270 300"/><path d="M240 155 L274 300"/><path d="M242 150 L278 300"/>
+  </g>
+  <text x="196" y="262" font-family="sans-serif" font-size="11" fill="#1a5e54" text-anchor="end">毛（ブリストル）の束</text>
+
+  <path d="M110 170 L180 170" stroke="#b4451f" stroke-width="3" marker-end="url(#r)"/>
+  <text x="145" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b4451f">高圧側</text>
+  <path d="M380 170 L450 170" stroke="#b4451f" stroke-width="3" marker-end="url(#r)" opacity="0.5"/>
+  <text x="415" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b4451f">低圧側</text>
+  <defs><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b4451f"/></marker></defs>
+
+  <text x="60" y="366" font-family="sans-serif" font-size="12" fill="#3a3a34">論文が比べた2つの因子（抄録）：毛の直径が異なる2種類のシール、通常／圧力逃がし形のバックプレート。</text>
+  <text x="60" y="384" font-family="sans-serif" font-size="11" fill="#6b6b63">圧力逃がし形の形状や、わずかな干渉がどの部分のものかは抄録に無いため、この図には描いていない。</text>
+</svg>

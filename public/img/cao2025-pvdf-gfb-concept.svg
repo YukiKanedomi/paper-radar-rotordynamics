@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">気体膜の圧力から、ロータの振動を導く流れ（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。抄録に書かれた手順を並べた図で、センサの数・配置・数式の形は含まない。</text>
+
+  <g font-family="sans-serif" font-size="12" text-anchor="middle">
+    <rect x="30" y="100" width="118" height="76" rx="6" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+    <text x="89" y="128" fill="#1a5e54" font-weight="600">PVDFセンサ</text><text x="89" y="146" fill="#1a5e54">アレイで気体膜の</text><text x="89" y="162" fill="#1a5e54">圧力を測る</text>
+
+    <rect x="172" y="100" width="118" height="76" rx="6" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+    <text x="231" y="128" fill="#1a5e54" font-weight="600">補間・当てはめ</text><text x="231" y="146" fill="#1a5e54">測点の圧力から</text><text x="231" y="162" fill="#1a5e54">分布関数を得る</text>
+
+    <rect x="314" y="100" width="118" height="76" rx="6" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+    <text x="373" y="128" fill="#1a5e54" font-weight="600">積分</text><text x="373" y="146" fill="#1a5e54">分布関数を積分して</text><text x="373" y="162" fill="#1a5e54">気体膜力を算出</text>
+
+    <rect x="456" y="100" width="118" height="76" rx="6" fill="#dfeae6" stroke="#1a5e54" stroke-width="2"/>
+    <text x="515" y="128" fill="#1a5e54" font-weight="600">運動方程式</text><text x="515" y="146" fill="#1a5e54">膜力を組み込み、</text><text x="515" y="162" fill="#1a5e54">ロータ振動を計算</text>
+  </g>
+  <g stroke="#1a5e54" stroke-width="2" fill="none">
+    <path d="M150 138 L170 138" marker-end="url(#g)"/><path d="M292 138 L312 138" marker-end="url(#g)"/><path d="M434 138 L454 138" marker-end="url(#g)"/>
+  </g>
+  <defs><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a5e54"/></marker></defs>
+
+  <g font-family="sans-serif" font-size="12" text-anchor="middle">
+    <rect x="30" y="236" width="250" height="60" rx="6" fill="#ece8dc" stroke="#3a3a34" stroke-width="1.5"/>
+    <text x="155" y="260" fill="#3a3a34" font-weight="600">検証1：圧力の理論予測と実測の比較</text><text x="155" y="278" fill="#3a3a34">複数の運転速度で照合（抄録）</text>
+    <rect x="324" y="236" width="250" height="60" rx="6" fill="#ece8dc" stroke="#3a3a34" stroke-width="1.5"/>
+    <text x="449" y="260" fill="#3a3a34" font-weight="600">検証2：自由減速試験の振幅</text><text x="449" y="278" fill="#3a3a34">計算した振幅が実測とよく一致（抄録）</text>
+  </g>
+  <path d="M89 178 L89 232" stroke="#3a3a34" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M515 178 L515 208 L449 208 L449 232" stroke="#3a3a34" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+  <text x="340" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">気体膜の圧力を測り、その力でロータの振動を説明しようとする、という考え方の概念図。</text>
+  <text x="340" y="370" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">具体的な手法の細部（センサの取り付け、補間の方法など）は抄録に無いため、描いていない。</text>
+</svg>

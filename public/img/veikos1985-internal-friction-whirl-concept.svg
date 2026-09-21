@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">内部摩擦による非同期ホワールと、外部減衰の効き方（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。軸に数値は無く、曲線の形も説明用の仮のもの。</text>
+
+  <line x1="90" y1="300" x2="610" y2="300" stroke="#3a3a34" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="90" y1="300" x2="90" y2="80" stroke="#3a3a34" stroke-width="1.5" marker-end="url(#a)"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3a3a34"/></marker></defs>
+  <text x="610" y="322" text-anchor="end" font-family="sans-serif" font-size="12" fill="#3a3a34">ロータ回転数 →</text>
+  <text x="80" y="76" text-anchor="start" font-family="sans-serif" font-size="12" fill="#3a3a34">対数減衰率（大きいほど安定）</text>
+  <line x1="90" y1="210" x2="600" y2="210" stroke="#8a8a80" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="96" y="226" font-family="sans-serif" font-size="11" fill="#6b6b63">0（これより下は不安定）</text>
+
+  <line x1="272" y1="300" x2="272" y2="90" stroke="#8a8a80" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="272" y="318" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b63">危険速度付近</text>
+
+  <path d="M110 130 C200 140 250 170 272 210 C310 280 480 290 590 290" stroke="#b4451f" stroke-width="3" fill="none"/>
+  <text x="520" y="278" font-family="sans-serif" font-size="12" fill="#b4451f" text-anchor="middle">外部減衰が小さい</text>
+  <circle cx="272" cy="210" r="5" fill="#b4451f"/>
+  <text x="285" y="196" font-family="sans-serif" font-size="11" fill="#b4451f">ここで0を横切る</text>
+
+  <path d="M110 110 C220 118 330 130 440 150 C500 162 550 176 590 190" stroke="#1a5e54" stroke-width="3" fill="none"/>
+  <text x="500" y="140" font-family="sans-serif" font-size="12" fill="#1a5e54" text-anchor="middle">適切な外部減衰を追加</text>
+  <text x="340" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">スプライン等のすべり摩擦は、危険速度を超えると振れ回りを助長する側に働く。</text>
+  <text x="340" y="378" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">軸受位置に外部減衰（スクイーズフィルムダンパ等）を足すと、不安定になる回転数が上がる（論文の結論）。</text>
+</svg>

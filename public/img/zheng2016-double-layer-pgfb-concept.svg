@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">二層の突起状支持フォイルをもつ軸受の断面（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。軸受を周方向に広げた断面のイメージ。寸法・突起数・形状は説明用の仮のもの。</text>
+
+  <rect x="60" y="86" width="560" height="22" fill="#3a3a34"/>
+  <text x="340" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#faf9f5">ジャーナル（回転軸の表面）→ 右向きに移動</text>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3a3a34"/></marker></defs>
+
+  <rect x="60" y="108" width="560" height="14" fill="#dfeae6" opacity="0.8"/>
+  <text x="70" y="119" font-family="sans-serif" font-size="11" fill="#1a5e54">気体膜（実際はごく薄い）</text>
+
+  <path d="M60 130 L620 130" stroke="#1a5e54" stroke-width="3"/>
+  <text x="626" y="126" font-family="sans-serif" font-size="10" fill="#1a5e54">トップ</text>
+  <text x="626" y="138" font-family="sans-serif" font-size="10" fill="#1a5e54">フォイル</text>
+
+  <g fill="#c9a86b" stroke="#8a6d34" stroke-width="1.2">
+    <circle cx="130" cy="138" r="8"/><circle cx="230" cy="138" r="8"/><circle cx="330" cy="138" r="8"/><circle cx="430" cy="138" r="8"/><circle cx="530" cy="138" r="8"/>
+  </g>
+  <path d="M60 154 L620 154" stroke="#8a6d34" stroke-width="3"/>
+  <text x="626" y="158" font-family="sans-serif" font-size="10" fill="#8a6d34">中層</text>
+
+  <g fill="#b4451f" fill-opacity="0.75" stroke="#7a2d10" stroke-width="1.2">
+    <circle cx="180" cy="162" r="8"/><circle cx="280" cy="162" r="8"/><circle cx="380" cy="162" r="8"/><circle cx="480" cy="162" r="8"/><circle cx="580" cy="162" r="8"/>
+  </g>
+  <path d="M60 178 L620 178" stroke="#7a2d10" stroke-width="3"/>
+  <text x="626" y="182" font-family="sans-serif" font-size="10" fill="#7a2d10">下層</text>
+
+  <rect x="60" y="182" width="560" height="26" fill="#ece8dc" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="340" y="200" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">軸受ハウジング</text>
+
+  <text x="60" y="252" font-family="sans-serif" font-size="13" fill="#3a3a34" font-weight="600">論文の記述に基づく要点</text>
+  <text x="60" y="276" font-family="sans-serif" font-size="12" fill="#3a3a34">・トップフォイルの下に、突起（半球状の支持点）をもつフォイルが2層入る。</text>
+  <text x="60" y="296" font-family="sans-serif" font-size="12" fill="#3a3a34">・下層の突起列は、中層の隣り合う突起列の中央に位置するように配置される。</text>
+  <text x="60" y="316" font-family="sans-serif" font-size="12" fill="#3a3a34">・3枚のフォイルは同じ端で軸受ハウジングに固定され、反対側の端は自由。</text>
+  <text x="60" y="336" font-family="sans-serif" font-size="12" fill="#3a3a34">・実験では、突起フォイルの材質（ステンレス鋼／ベリリウム青銅）だけを変えた2つの軸受を比べた。</text>
+  <text x="60" y="366" font-family="sans-serif" font-size="11" fill="#6b6b63">図の突起の数・間隔・大きさは説明用。原論文の図は転載していない。</text>
+</svg>
