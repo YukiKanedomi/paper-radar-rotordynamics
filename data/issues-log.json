@@ -9544,6 +9544,117 @@
     "note": "ヒット数のうちNTRSは総ヒット数、それ以外は取得件数。既配信との重複はタイトル・DOIで機械的に除外した。Elsevierの2026年の論文の抄録は、OpenAlex・Crossref・Semantic Scholarで確認したが取れなかった。Hindawi・DTU Orbit・EPFL Infoscience・Texas A&MのOAKTrustは、本文PDFが取得できなかった。"
    },
    "afterword": "今回いちばん『なるほど』と思ったのは、Veikos et al.(1984)で、危険速度を超えると回転より遅い振れ回りが止まらなくなる原因が、軸をつなぐスプラインのすべり摩擦だった、という点です。『ずれは悪いもの』と素朴に思っていたのに、試験装置ではスプラインに約1/8度を超えるずれを与えると不安定が弱まり、実機でも、組立て時にずれを測って選り分けると、過大な振れ回りのエンジンがほぼなくなった、と書かれていました。ただ、著者は『許容範囲に収まったが、なくなったわけではない』とも書いていて、なくすための本命は、可撓カップリングかスクイーズフィルムダンパだ、という整理でした。しかもダンパをこのエンジンに入れた試験は、発表の時点では『実施予定』とされていて、報告が正直だと感じました。もう一つ、Zheng et al.(2016)は、突起フォイルの材質を変えただけで、離陸に必要な供給圧力が0.37 MPa（ベリリウム青銅）から0.52 MPa（ステンレス）に上がっていて、『硬い軸受は離陸しにくい』という感覚を数字で見られたのが面白かったです。ただ、これは2つの軸受・1台の試験機の結果なので、一般則として読むのは早いと思います。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-23",
+   "status": "published",
+   "headline": "第75号：中間報告の正直さと、シールの旋回を弱めると漏れが増えて旋回が戻ってくる話",
+   "intro": "collect.mjsの基本候補は今回も枯渇気味で、foil最新枠24件中4件・定番枠14件中10件が既配信、rotor最新枠13件中7件・定番枠14件中4件が既配信でした（残りの多くは分野外のarXiv新着や統計学・電力系統など）。いったんASME(Eickhoff et al. 2026)とMSSP(Pesthy & Tóth-Nagy 2026)を選びましたが、papers.jsonの重複チェックで使っていた比較キーにプレフィックス（doi:）の付け忘れがあり、実は両方とも2026年7月に配信済みだったことが判明し、選定をやり直しました。改めてNASA NTRSとOpenAlexへの直接クエリで探し、フォイル軸受はCarpino(1991、極低温ターボポンプ向け解析コード開発の中間報告)とBreńkacz et al.(2021、超高速カメラでのフォイル振動計測)、ロータダイナミクスはAddlesee et al.(1994、シール入口ホワールの模型実験)とHu et al.(2026、魚鱗状ホールパターンダンピングシール)に差し替えました。全文が読めたのはNTRSの2本（Carpino、Addlesee）です。ASME・MDPI・SAGE・Hindawiの出版社サイトはこの日は軒並みボット対策で本文PDFがブロックされ、抄録ベースで作った論文が2本（Breńkacz、Hu）あります。",
+   "picked": [
+    {
+     "id": "doi:10.3390/app11020878",
+     "title": "Experimental Research on Foil Vibrations in a Gas Foil Bearing Carried Out Using an Ultra-High-Speed Camera（Breńkacz, Bagiński & Żywica, 2021, Applied Sciences）",
+     "why": "フォイル軸受の中で薄いフォイル自体がどう振動しているかを、軸受用センサの代わりに超高速デジタルカメラで直接撮影するという、著者らによれば初めての実験手法。foil latest枠として選定（抄録ベース）。本論文自体はCC-BYのオープンアクセスだが、出版社サイトのボット対策で全文PDFが取得できなかったため抄録ベースで作成。忠実性チェックで、『薄い金属のフォイル』という材質の書き足し、『初めて』という著者の主張を客観的事実のように書いていた点、limitに『原文（有料）』と誤って書いていた点（実際はCC-BYで無料、単に全文が未取得なだけ）などを修正した。"
+    },
+    {
+     "id": "ntrs:19910018917",
+     "title": "Analysis of foil bearings for high speed operation in cryogenic applications（Carpino, 1991, NASA Space Transportation Propulsion Technology Symposium）",
+     "why": "液体推進薬ロケットの極低温ターボポンプ向けフォイル軸受の解析コードを開発する、プロジェクト途中の中間報告。フォイルの大変形有限要素モデルと流体膜圧力を連成させる新しい反復解法を提案し、単一フォイルのテストで収束性の改善を示した。foil classic枠として選定（OA全文・NTRS）。忠実性チェックで、venue（収録先）の誤り（『Rotordynamic Instability Problems』ワークショップだと思い込んでいたが、実際は別のNASAシンポジウムの論文集だった）、『2年計画の中間報告』という断定（実際は次年度の計画を述べる時点で、計画年数自体は本文から確認できない）などを修正した。式は原文に無いため equations は空、OCRが崩れているため逐語引用（quotes）も使っていない。"
+    },
+    {
+     "id": "doi:10.1016/j.icheatmasstransfer.2026.112570",
+     "title": "Leakage and rotordynamic characteristics of the bionic fish-scale-like hole-pattern damping seal（Hu et al., 2026, International Communications in Heat and Mass Transfer）",
+     "why": "魚の鱗が織りなす模様が流れ抵抗を下げる効果を反転させ、穴の並びを魚鱗状にした新しいダンピングシールを設計し、ハニカム型・円形穴型と比べて漏れ量と動特性を数値シミュレーションと実験の両方で評価した研究。rotor latest枠として選定（抄録ベース）。忠実性チェックで、『魚鱗状の並べ方を試した例はこれまでなかった』という抄録に無い新規性の主張（3段階すべてに入っていた捏造）を削除し、limitの『原文（有料）』の誤記も修正した。numbersの『12〜14%』『122%』は抄録の数値と完全一致することを確認済み。"
+    },
+    {
+     "id": "ntrs:19940029679",
+     "title": "Whirl measurements on leakage flows in turbomachine models（Addlesee, Altiparmak & Pan, 1994, NASA Lewis Research Center発行の論文集）",
+     "why": "多段遠心ポンプの軸シール入口における流体のホワール（旋回流れ）を、半径流れ・環状流れの2種類の模型実験でレーザードップラー流速計により計測した研究。rotor classic枠として選定（OA全文・NTRS）。忠実性チェックで最も多くの修正が入った論文で、『区間長あたりの残存比 C=exp(-aL)=0.42』を『極限ホワール比（約0.4）』と取り違えていた誤り、『偏心条件のデータも示されている』という誤り（実際は同心条件のデータのみで偏心は『未解析』の言及にとどまる）、venue（NASA Lewis Research Center主催かは書誌情報からは確認できない）などを修正した。式はOCRの崩れが大きいため equations は空にしている。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "選定をやり直した理由",
+     "note": "候補選定の重複チェックで、papers.json内のDOI表記（プレフィックスなし）と候補一覧のDOI表記（doi:プレフィックス付き）を正しく揃えずに比較してしまい、実際には既配信の2論文（ASMEのミスアライメント論文、MSSPのターボチャージャ論文）を『新規』と誤判定していました。papers.jsonへの書き込み直前の最終チェックで発覚し、両方を差し替えています。"
+    },
+    {
+     "title": "出版社サイトがそろってブロックされた日",
+     "note": "ASME・MDPI・SAGE・Hindawiの本文PDFは、いずれもCloudflareやAkamai等のボット対策により403やアクセス拒否を返しました。CC-BYで本来は誰でも読めるはずの論文（Breńkacz et al. 2021など）も含め、この日は全文取得の成功率がとても低く、NASA NTRS（米国政府の技術報告サーバ）だけが安定して読めました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "collect.mjs基本候補（foil：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。最新枠は宇宙工学・電力系統などの分野外arXiv新着が大半で、フォイル軸受の新規候補は限られた。定番枠は10件が既配信。"
+     },
+     {
+      "name": "collect.mjs基本候補（rotor：最新枠+定番枠）",
+      "scope": "arXiv新着＋OpenAlex新着・被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA9/抄録4）・定番枠14件（OA1/抄録13、統計学・風力発電などの分野外ノイズを含む）。"
+     },
+     {
+      "name": "NASA NTRS（foil bearing）",
+      "scope": "技術報告サーバの全文検索、既配信を除外して確認（上位100件を確認）",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 152,
+      "note": "総ヒット152件中、確認した100件の大半が既配信（DellaCorte・Radil等の既出著者による関連論文群）。Carpino (1991) を新規候補として発見。"
+     },
+     {
+      "name": "NASA NTRS（rotordynamic seal whirl instability）",
+      "scope": "技術報告サーバの全文検索",
+      "terms": [
+       "rotordynamic seal whirl instability"
+      ],
+      "hits": 14,
+      "note": "Addlesee, Altiparmak & Pan (1994) を新規候補として発見。同シンポジウムの姉妹論文（Veikos et al. 1984）は前号で既に使用済み。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（foil bearing・タイトル検索・CC-BYライセンス限定）",
+      "scope": "title.search:foil bearing、best_oa_location.license:cc-by|cc0、被引用順上位25件",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 25,
+      "note": "Breńkacz, Bagiński & Żywica (2021) を新規候補として発見。他にSAGE・Hindawi・Elsevier論文も見つかったが本文がブロックされ見送り。"
+     },
+     {
+      "name": "OpenAlex直接クエリ（rotordynamic・新着順）",
+      "scope": "title.search:rotordynamic、2020年以降、新着順上位40件",
+      "terms": [
+       "rotordynamic"
+      ],
+      "hits": 40,
+      "note": "Hu et al. (2026) の魚鱗状ダンピングシール論文を新規候補として発見。Crossref・Semantic Scholarでも抄録が取れない候補（Zhou et al. 2026、Le et al. 2026、Sun et al. 2026）は見送った。"
+     }
+    ],
+    "note": "既配信との重複はpapers.json内のid（doi:/arxiv:/ntrs:プレフィックス付き）で機械的に照合。今号の作業中に、このプレフィックスの付け忘れによる誤判定が発覚し、選定を一部やり直した（asideに詳細）。"
+   },
+   "afterword": "今回いちばん印象に残ったのは、Addlesee et al.(1994)に出てくる、シールの旋回を弱めようとすると起きる『押し戻し』でした。シールの入口に放射状の溝を切って流体の旋回を弱めると、たしかにホワール速度は落ちるのですが、そのぶんシール入口の圧力が上がって漏れが増え、漏れが増えるとまた旋回が強まる、という循環が起きると書かれていました。何かを直接弱めようとしても、系全体で帳尻を合わせるように押し戻されることがあるのだと知り、単純に『対策を強めれば効果も強まる』ものではないのだと感じました。もう一つ、Carpino(1991)は研究の中間報告で、まだ単一のフォイル1枚のテストしか終わっていない段階のものでしたが、『次年度はこれをやる予定』という計画をそのまま正直に書いていて、完成した成果だけを並べるのとは違う読み味がありました。 — 編集担当より"
   }
  ]
 }

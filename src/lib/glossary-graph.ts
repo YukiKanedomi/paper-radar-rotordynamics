@@ -210,6 +210,10 @@ export const CATEGORIES: GraphCategory[] = [
       "ターボエキスパンダ",
       "気体膜圧力分布",
       "気体膜力",
+      "大変形有限要素法（フォイル形状計算）",
+      "修正direct forward iteration法（連成解法）",
+      "極低温フォイル軸受",
+      "超高速カメラ計測（フォイル軸受）",
     ],
   },
   {
@@ -588,6 +592,9 @@ export const CATEGORIES: GraphCategory[] = [
       "バックプレート",
       "圧力逃がし形バックプレート",
       "パッキング密度",
+      "シール入口ホワール",
+      "ホワール制御デバイス（放射状溝）",
+      "魚鱗状ホールパターンダンピングシール(F-HPDS)",
     ],
   },
 ];
@@ -1528,6 +1535,17 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "ブラシシール", to: "バックプレート", label: "の毛の束を低圧側から支える" },
   { from: "ブラシシール", to: "漏れ流量", label: "を抑える" },
   { from: "パッキング密度", to: "ブラシシール", label: "が低いと減衰係数が小さくなった（抄録）" },
+  // --- 極低温フォイル軸受の連成解法（Carpino 1991） ---
+  { from: "大変形有限要素法（フォイル形状計算）", to: "修正direct forward iteration法（連成解法）", label: "で形状を求める" },
+  { from: "修正direct forward iteration法（連成解法）", to: "極低温フォイル軸受", label: "の解析に用いる" },
+  // --- シール入口ホワールの計測（Addlesee, Altiparmak & Pan 1994） ---
+  { from: "シール入口ホワール", to: "環状ギャップ", label: "が軸方向に発展する" },
+  { from: "ホワール制御デバイス（放射状溝）", to: "シール入口ホワール", label: "を弱める" },
+  // --- 超高速カメラによるフォイル振動計測（Breńkacz et al. 2021） ---
+  { from: "超高速カメラ計測（フォイル軸受）", to: "ガスフォイル軸受", label: "の振動を直接撮影する" },
+  // --- 魚鱗状ホールパターンダンピングシール（Hu et al. 2026） ---
+  { from: "魚鱗状ホールパターンダンピングシール(F-HPDS)", to: "ロマキン効果", label: "を強めて剛性を高める" },
+  { from: "魚鱗状ホールパターンダンピングシール(F-HPDS)", to: "ハニカムシール", label: "と漏れ・動特性を比較" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
