@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <rect width="680" height="400" fill="#faf9f5"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1a5e54" font-weight="600">ゲンベル条件は負圧を大気圧で頭打ちにする近似（模式図）</text>
+  <text x="340" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。圧力分布の形・位置は説明用の仮のもの。</text>
+
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3a3a34"/></marker></defs>
+  <line x1="80" y1="290" x2="620" y2="290" stroke="#3a3a34" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="80" y1="290" x2="80" y2="80" stroke="#3a3a34" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="350" y="326" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#3a3a34">周方向の位置（左が前縁＝気体の入口側、右が後縁）</text>
+  <text x="30" y="185" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#3a3a34" transform="rotate(-90 30 185)">気体膜の圧力</text>
+
+  <line x1="80" y1="200" x2="600" y2="200" stroke="#8a8a80" stroke-width="1.2" stroke-dasharray="2 4"/>
+  <text x="596" y="192" text-anchor="end" font-family="sans-serif" font-size="12" fill="#6b6b63">大気圧</text>
+
+  <path d="M90 200 C 100 240, 130 250, 160 230 C 200 200, 240 120, 330 100 C 400 90, 450 150, 500 190 C 530 205, 560 202, 590 200" fill="none" stroke="#1a5e54" stroke-width="3"/>
+  <text x="340" y="88" font-family="sans-serif" font-size="12" fill="#1a5e54">負圧を含む圧力分布（大気圧より下がる部分がある）</text>
+
+  <path d="M90 200 L 165 200" fill="none" stroke="#b4451f" stroke-width="3" stroke-dasharray="7 4"/>
+  <text x="90" y="182" font-family="sans-serif" font-size="12" fill="#b4451f">大気圧に切り上げた線</text>
+  <text x="90" y="198" font-family="sans-serif" font-size="12" fill="#b4451f" dy="-1"> </text>
+
+  <path d="M100 205 L 100 244" stroke="#3a3a34" stroke-width="1.2" marker-end="url(#ar)"/>
+  <text x="112" y="270" font-family="sans-serif" font-size="12" fill="#3a3a34">自由前縁（前縁が固定されていない構成）付近の負圧：</text>
+  <text x="112" y="286" font-family="sans-serif" font-size="12" fill="#3a3a34">トップフォイルを吸い寄せる（抄録がいう吸引効果）。頭打ちでは表せない</text>
+</svg>
