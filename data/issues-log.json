@@ -9882,6 +9882,132 @@
     "note": "標準候補の検索語は topics.json の全キーワードから日替わりローテーションで自動選択されたもの。追加の直接クエリは、標準候補で新規の on-topic が尽きたため。"
    },
    "afterword": "今日「なるほど」と思ったのは、Tang ほかの図17です。周囲温度を100℃から700℃まで上げていくと、軸が描く小さな楕円は、大きさは少し変わるだけで、場所が右上へどんどんずれていきます。原文は「応答は回転と同じ周波数が支配的で1周期のまま」と書いていて、熱曲げは揺れの種類を増やすというより、揺れの中心をずらす荷重として働いているのだそうです。振動といえば振幅や共振ばかり考えていた私には、「中心そのものが動く」という見方が新鮮でした。もう一つは、Howard (1999) の設計の進め方です。まず軸受の硬さだけで共振の位置を決め、あとから減衰を足して安定になる最小値（315 N·s/m）を求め、試験装置の値（350〜525 N·s/m）と見比べる。一つずつ順に決めていく段取りが、素人にも追いやすく感じました（前号の可変速パワータービンと同じ著者でもあります）。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-26",
+   "status": "published",
+   "headline": "油膜ダンパの端のすきまを動かす2026年の実験と、支持の減衰を選ぶ1972年の設計図——4本とも全文で",
+   "intro": "今日は、検索プールの上位がほとんど既配信だったため、OpenAlexとNASAの技術報告サーバ（NTRS）を直接検索して、まだ載せていない全文読みの候補を探しました。その結果、今号は4本すべてがオープンアクセスの全文ベースです。フォイル軸受は、バンプ裏当て付きマルチフォイル軸受の2024年の計算研究（CC BY）と、軸に埋めたセンサで空気膜の厚さを直接測った1978年のNASA報告書。ロータダイナミクスは、圧電素子でダンパ端のすきまを動かす2026年9月24日公開の実験（CC BY）と、支持側の質量・剛性・減衰の選び方を示した1972年のNASA報告書です。後者2本は、支持の減衰をどう選ぶかという同じ問いに、半世紀の差で答えている組み合わせになりました。1978年と1972年の報告書はスキャン文書で、文字認識の品質が悪い部分があります。逐語の引用は控え、読めた部分だけで要約し、その旨を各論文に明記しています。",
+   "picked": [
+    {
+     "id": "doi:10.3390/lubricants12070246",
+     "title": "バンプ裏当て付きマルチフォイル型空力ジャーナル軸受の静特性に及ぼすパラメータの影響（Jiang ほか 2024）",
+     "why": "既配信の単一リング型フォイル軸受と違い、複数枚のトップ箔を持つ型の静特性をパラメータごとに整理していて、偏心率0.7という計算の信頼範囲まで正直に示している。CC BYで実図も載せられる。"
+    },
+    {
+     "id": "ntrs:19780013529",
+     "title": "自動車用ガスタービン向けコンプライアント面軸受 第I部 ジャーナル軸受の性能（Ruscitto ほか 1978）",
+     "why": "軸に埋めたセンサで空気膜の厚さを直接測るという、フォイル軸受の「見えない膜」を見にいった古典。短い軸受ほど膜が薄くなるという端部漏れの効果が、数字で示されている。"
+    },
+    {
+     "id": "doi:10.3390/vibration9040063",
+     "title": "圧電アクチュエータ駆動のISFDを組み込んだ空気軸受の減衰調整（Zhang ほか 2026）",
+     "why": "減衰を動かせるダンパという新しい発想で、「狭めすぎると振動が増える」という最適値の存在まで実験で示した。公開されたばかりの論文。"
+    },
+    {
+     "id": "ntrs:19720020849",
+     "title": "弾性軸受に支えられた単質量たわみロータの動的応答に及ぼす支持の柔軟性と減衰の影響（Kirk & Gunter 1972）",
+     "why": "支持側の質量・剛性・減衰をどう選べば危険速度の山を抑えられるかを、設計図表の形で示した古典。今号の2026年の実験を読むための土台になる。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "最新枠の有力候補（2026年のガスフォイル軸受の摩耗シミュレーション、ラビリンスシールの流れとロータダイナミクス）",
+     "note": "どちらも出版社サイトの抄録が機械取得できず（OpenAlex・Crossref・Semantic Scholarに抄録なし、出版社ページは403）、抄録ベースでも出典に忠実に書けないため見送りました。"
+    },
+    {
+     "title": "Hindawi・MDPI 一部の全文",
+     "note": "ボット保護で本文PDFが取れない論文（例：Hindawiの「ティルティングパッド軸受理論の総説」）は見送りました。MDPIは別ルートで全文を取得できた分を採用しています。"
+    },
+    {
+     "title": "本日の検索プール",
+     "note": "arXiv側の該当候補（Kuhr 2022など）は既配信で、新規の分野内候補が枯れていました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv",
+      "scope": "最新枠（foil / rotor）",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "note": "分野内の新規候補は無し（該当2本は既配信、他は他分野）。"
+     },
+     {
+      "name": "OpenAlex",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3）・定番枠14件（OA4/抄録10）。上位は大半が既配信。"
+     },
+     {
+      "name": "OpenAlex",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA8/抄録5）・定番枠14件（OA1/抄録13）。定番には他分野の高被引用も混在。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "OA・抄録つきの追加探索（フォイル軸受・ロータ）",
+      "terms": [
+       "foil bearing",
+       "foil journal bearing",
+       "foil thrust bearing",
+       "foil air bearing",
+       "rotordynamic",
+       "rotor-bearing system stability",
+       "subsynchronous vibration rotor",
+       "seal rotordynamic",
+       "unbalance response rotor"
+      ],
+      "note": "2023年以降を発行日順に、抄録つきの未配信候補を確認。ここからJiang 2024とZhang 2026を選定。"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "公開技術報告書の全文検索",
+      "terms": [
+       "compliant surface bearing automotive gas turbine",
+       "rotor whirl instability fluid film bearing",
+       "rotordynamic stability turbomachinery seal",
+       "critical speed flexible rotor damping",
+       "foil bearing rotor dynamic"
+      ],
+      "note": "ここからRuscitto 1978とKirk & Gunter 1972を選定。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。候補プールが既配信で埋まっていたため、OpenAlexとNTRSの直接検索を補助に使った。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、ダンパは効かせすぎると逆効果になる、という話が、1972年の計算と2026年の実験の両方に出てきたことです。1972年の報告書では、支持の減衰を増やしすぎると力が土台に伝わりやすくなり、最適な値があるとされています。2026年の実験では、ダンパ端のすきまを狭めすぎると、初期すきま0.1 mmの試験で振動がかえって増えました。理由の説明は少し違いますが（後者は流体の閉じ込めで硬くなるためと著者は述べています）、「多ければ多いほど良いわけではない」という感覚は共通しているようで、面白く感じました。また、1978年の報告書のように、軸の中にセンサを埋めて膜の厚さを測るという発想に、当時の人の工夫を感じました。 — 編集担当より"
   }
  ]
 }
