@@ -10008,6 +10008,145 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。候補プールが既配信で埋まっていたため、OpenAlexとNTRSの直接検索を補助に使った。"
    },
    "afterword": "今日いちばん「なるほど」と思ったのは、ダンパは効かせすぎると逆効果になる、という話が、1972年の計算と2026年の実験の両方に出てきたことです。1972年の報告書では、支持の減衰を増やしすぎると力が土台に伝わりやすくなり、最適な値があるとされています。2026年の実験では、ダンパ端のすきまを狭めすぎると、初期すきま0.1 mmの試験で振動がかえって増えました。理由の説明は少し違いますが（後者は流体の閉じ込めで硬くなるためと著者は述べています）、「多ければ多いほど良いわけではない」という感覚は共通しているようで、面白く感じました。また、1978年の報告書のように、軸の中にセンサを埋めて膜の厚さを測るという発想に、当時の人の工夫を感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-27",
+   "status": "published",
+   "headline": "箔の梁に載せたパッド（1977年）と、軸が傾くと効いてくる箔の3次元構造（2021年）、圧力で閉じるシールと、玉軸受が硬くなると生まれる二安定——4本とも全文で",
+   "intro": "今日も、検索プールの上位はほとんど既配信でした（フォイル軸受・ロータとも最新枠24件・定番枠14件のうち、新規の分野内候補はごくわずか）。そこで、OpenAlexの直接検索、NASAの技術報告サーバ（NTRS）、arXivの直接検索で、まだ載せていない全文読みの候補を探しました。今号は4本すべてがオープンアクセスの全文ベースで、抄録だけの論文はありません。フォイル軸受は、箔の梁に硬いカーボンのパッドを載せたスラスト軸受の1977年のNASA報告と、バンプ箔を3次元のシェルで解いて軸の傾きを調べた2021年の計算研究（CC BY）。ロータダイナミクスは、圧力で軸に近づき空気膜に浮くシールの動特性を計算と実測で調べた2024年の論文（CC BY表示）と、玉軸受の剛性が変形で変わることが生む二安定を示した2003年のNASA報告です。途中で、arXivで見つけたMorton効果の実験論文（Plantegenetほか）が、DOI形式のidですでに配信済みだったことに気づき、見送りました。",
+   "picked": [
+    {
+     "id": "ntrs:19770024558",
+     "title": "箔支持の弾性パッド型ガススラスト軸受の実験的評価（Nemeth 1977）",
+     "why": "「箔を張る」のではなく「硬いパッドを箔の梁に載せる」というスラスト軸受の発想を、9000 rpmまで実際に試した古典。扇形は低荷重でこすれ、角形はこすれない、という違いが数字で残っている。"
+    },
+    {
+     "id": "doi:10.1007/s40544-020-0427-7",
+     "title": "摩擦を考慮したバンプ型ガスフォイル軸受の効率的な3次元フォイル構造モデル（Gu ほか 2021）",
+     "why": "前号で紹介した1978年の試験軸受を、計算モデルの検証に使っている点が面白い。軸が傾いたときに、2次元の箔モデルでは反力トルクが大きく（向きが逆になる成分も）違ってくる、という具体的な差が示され、CC BYで実図も載せられる。"
+    },
+    {
+     "id": "doi:10.1115/1.4063549",
+     "title": "適応型フィルムライディングシールの動特性評価（Bird ほか 2024）",
+     "why": "シールの流体力を、剛性と減衰の係数の「地図」にして、圧力で閉じるシールの動きの予測につないだ研究。すきまが縮むほど膜の剛性・減衰が増える、という関係が計算の係数マップで示され、圧力をかけたときの動きは実測と比べられている。既配信のブラシシール研究と同じ研究グループ。"
+    },
+    {
+     "id": "ntrs:20030068294",
+     "title": "回転速度と荷重に依存する非線形の軸受剛性を用いた、玉軸受支持ロータのアンバランス応答予測（Fleming & Poplawski 2003）",
+     "why": "軸受が「変形するほど硬くなる」だけで、回転を上げるときと下げるときで振幅が変わる二安定が出ることを示した。前号の「支持の減衰」の話と、減衰が二安定を消すという形でつながる。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "Plantegenet ほか「ジャーナル軸受が生む熱アンバランス効果」（arXiv 2512.14210）",
+     "note": "arXiv上のMorton効果の実験論文で、内容は良いのですが、すでにDOI形式のid（10.1080/10402004.2019.1658836）で配信済みでした。arXivのidとDOIのidでは機械的な重複判定をすり抜けるため、タイトルでも照合して見送りました。"
+    },
+    {
+     "title": "最新枠の有力候補（2026年のガスフォイル軸受の摩耗シミュレーション、ラビリンスシールの流れとロータダイナミクス、極低温液体タービンの軸ラビリンスシール）",
+     "note": "OpenAlexとCrossrefに抄録が載っておらず（出版社ページやSemantic Scholarでの確認までは行っていません）、抄録ベースでも出典に忠実に書けないため見送りました。摩耗シミュレーションは、ニューラルネットワークが主役の論文でもあります。"
+    },
+    {
+     "title": "大学リポジトリの全文（DTU Orbit、Manchester、Texas A&M）",
+     "note": "本日は、DTU・Manchesterの全文PDFと、Texas A&MのOAKTrustがボット対策（403）で取得できませんでした。例：von Osmanski ほか2017（空気フォイル軸受と摩擦）、Bonello らの2020年のトップフォイル離脱の研究は、全文が読めなかったため見送りました。"
+    },
+    {
+     "title": "Elrod & Childs 1986（先細り環状ガスシール、Texas A&M）",
+     "note": "NASAの技術報告として全文が取れましたが、スキャン起源のOCRが崩れ、約1万2千行と量も大きかったため、今回は見送りました。"
+    },
+    {
+     "title": "本日の検索プール",
+     "note": "arXiv側の分野内の新規候補は、Kuhr 2022の3本（既配信）を除くと、機械学習・数値解法寄りのものが中心でした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、arXivを含む）・定番枠14件（OA4/抄録10）。定番枠は全件が既配信。最新枠は他分野の論文が混在し、分野内の新規は少数。"
+     },
+     {
+      "name": "OpenAlex（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4、arXivを含む）・定番枠14件（OA1/抄録13）。定番には他分野の高被引用（統計・電力系）も混在。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "OA限定の追加探索（フォイル軸受は被引用順、ロータは発行日順、各25件まで）",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotordynamic",
+       "aerodynamic bearing",
+       "compliant surface bearing",
+       "gas foil bearing",
+       "foil journal bearing",
+       "bump foil",
+       "foil thrust bearing",
+       "air foil bearing",
+       "rotordynamic",
+       "rotor bearing dynamics",
+       "critical speed rotor",
+       "seal rotordynamic",
+       "journal bearing stability"
+      ],
+      "note": "既配信を除いた未配信のOA候補を確認。ここからGu 2021とBird 2024を選定（Bird 2024はロータ側の直接検索で見つけた）。"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "公開技術報告書の全文検索（各25件まで）",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "compliant foil journal bearing",
+       "whirl instability rotor",
+       "rotordynamic seal",
+       "rotor bearing stability critical speed",
+       "squeeze film damper rotor",
+       "rotordynamic stability turbomachinery",
+       "labyrinth seal rotordynamic",
+       "cross-coupled stiffness"
+      ],
+      "note": "ここからNemeth 1977とFleming & Poplawski 2003を選定。"
+     },
+     {
+      "name": "arXiv（直接検索）",
+      "scope": "発行日順・各15件",
+      "terms": [
+       "foil bearing",
+       "gas bearing AND rotor",
+       "rotordynamic",
+       "rotor-bearing",
+       "annular seal",
+       "journal bearing",
+       "critical speed AND rotor"
+      ],
+      "note": "分野内で未配信のものは、機械学習・数値解法寄りが中心で今回は選ばず。Morton効果の実験論文は既配信と判明。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRS・arXivの直接検索を補助に使った。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、玉軸受は変形するほど硬くなる、という性質だけで、回転を上げるときと下げるときで振幅が変わる、という話です。同じ回転数なのに、どちらから来たかで答えが変わるなんて、機械の中でそんなことが起きうるのか、と驚きました。報告書によれば、適度なダンパがあればこの現象は消えるそうで、前号の「支持の減衰をどう選ぶか」という話が、こんなところにもつながっているように感じました。もう一つは、1977年の報告書と2021年の計算論文が、フォイル軸受を挟んで、同じ号に並んだことです。前号の1978年の試験軸受が、2021年の計算モデルの答え合わせに今も使われていると知って、古い実測データの息の長さを感じました。 — 編集担当より"
   }
  ]
 }

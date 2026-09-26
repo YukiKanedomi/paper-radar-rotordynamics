@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#faf9f5"/>
+  <text x="320" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1a5e54" font-weight="600">振幅で軸受が硬くなると、上げ側と下げ側で応答が変わる（模式図）</text>
+  <text x="320" y="54" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b6b63">模式・実データではない。曲線の形・ジャンプの位置・数値は論文の結果とは一致しない</text>
+
+  <line x1="70" y1="330" x2="590" y2="330" stroke="#3a3a34" stroke-width="1.5"/>
+  <line x1="70" y1="330" x2="70" y2="80" stroke="#3a3a34" stroke-width="1.5"/>
+  <text x="330" y="360" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34">回転速度 →</text>
+  <text x="34" y="205" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3a3a34" transform="rotate(-90 34 205)">振動振幅 →</text>
+
+  <path d="M 90 320 C 180 316 250 290 300 210 C 320 170 335 130 345 105" fill="none" stroke="#1a5e54" stroke-width="3"/>
+  <line x1="345" y1="105" x2="345" y2="300" stroke="#1a5e54" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <path d="M 345 300 C 400 306 500 310 570 304" fill="none" stroke="#1a5e54" stroke-width="3"/>
+
+  <path d="M 570 304 C 500 310 420 300 350 298 C 320 296 300 296 285 295" fill="none" stroke="#a23b2a" stroke-width="3" stroke-dasharray="8,5"/>
+  <line x1="285" y1="295" x2="285" y2="222" stroke="#a23b2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <text x="100" y="108" font-family="sans-serif" font-size="12" fill="#1a5e54">実線：回転を上げていくとき</text>
+  <text x="100" y="126" font-family="sans-serif" font-size="12" fill="#a23b2a">破線：回転を下げていくとき</text>
+  <text x="358" y="150" font-family="sans-serif" font-size="12" fill="#1a5e54">上げ側は、より高い速度で</text>
+  <text x="358" y="166" font-family="sans-serif" font-size="12" fill="#1a5e54">振幅が急に下がる（ジャンプ）</text>
+  <text x="96" y="262" font-family="sans-serif" font-size="12" fill="#a23b2a">下げ側は、より低い速度で</text>
+  <text x="96" y="278" font-family="sans-serif" font-size="12" fill="#a23b2a">振幅が急に上がる</text>
+  <rect x="285" y="326" width="60" height="8" fill="#8a6d3b"/>
+  <text x="315" y="382" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8a6d3b">この速度域では振幅が2通りとりうる（二安定）</text>
+</svg>
