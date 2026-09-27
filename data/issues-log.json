@@ -10147,6 +10147,114 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRS・arXivの直接検索を補助に使った。"
    },
    "afterword": "今日いちばん「なるほど」と思ったのは、玉軸受は変形するほど硬くなる、という性質だけで、回転を上げるときと下げるときで振幅が変わる、という話です。同じ回転数なのに、どちらから来たかで答えが変わるなんて、機械の中でそんなことが起きうるのか、と驚きました。報告書によれば、適度なダンパがあればこの現象は消えるそうで、前号の「支持の減衰をどう選ぶか」という話が、こんなところにもつながっているように感じました。もう一つは、1977年の報告書と2021年の計算論文が、フォイル軸受を挟んで、同じ号に並んだことです。前号の1978年の試験軸受が、2021年の計算モデルの答え合わせに今も使われていると知って、古い実測データの息の長さを感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-28",
+   "status": "published",
+   "headline": "パッドをずらして載せるだけの1974年の設計理論、多弧に姿を変える多層フォイル、計算上『不安定』でも軸は別の道を見つける1991年のSFD、そしてわざと不安定にする試験リグ",
+   "intro": "今日も、collect.mjsの候補プールは既配信で埋まっていました（foil最新枠24件・定番枠14件のうち、分野内で新規なのはごくわずか。rotorも同様で、最新枠の有力候補5本のうち4本がすでに配信済みと判明）。そこで、OpenAlexの直接検索とNASA技術報告サーバ（NTRS）で追加探索し、今号の4本を選びました。foilは、パッドを箔梁の非対称な位置に載せる設計理論を1次元解析で確立した1974年のNASA報告（全文・パブリックドメイン）と、荷重で姿を変える多層フォイルを流体-構造連成で調べた2025年の論文（CC BYですが出版社サイトのボット対策で本文が取得できず、抄録ベースにしました）。rotorは、スクイーズフィルムダンパ支持ロータの『二安定』応答の安定性を理論・数値・実験の3方向から調べた1991年のNASA会議論文集（全文）と、産業用の超臨界圧縮機を模したアクティブ磁気軸受の試験リグを報告した2011年の論文（抄録ベース）です。",
+   "picked": [
+    {
+     "id": "ntrs:19740021819",
+     "title": "全金属の弾性パッド型ガス潤滑スラスト軸受の解析（Anderson 1974）",
+     "why": "硬いパッドを箔の梁の非対称な位置に載せるだけで傾きが生まれる、という設計理論を1次元解析で確立し、従来のピボット式パッド軸受と計算上ほぼ同じ性能になることを示した。3年後の1977年に実際に軸受を作って試したNemethの報告（前号で紹介）の理論的な土台にあたる。"
+    },
+    {
+     "id": "doi:10.1016/j.cja.2025.103557",
+     "title": "流体-構造連成にもとづく多層スラスト型ガスフォイル軸受の数値解析（Wang et al. 2025）",
+     "why": "荷重が増えるとトップフォイルが単一の弧から複数の弧に姿を変え、気体膜に新しいくさびができるという、双方向の気体-構造連成が生む幾何学的な変化が具体的に語られている。CC BYで公開されているが、本文はScienceDirectのボット対策で取得できず、抄録の範囲で誠実に紹介した。"
+    },
+    {
+     "id": "ntrs:19920005132",
+     "title": "スクイーズフィルムダンパ支持ロータの定常応答と二安定応答の安定性（Meng 1991）",
+     "why": "円形の振れ方が計算上『不安定』と判定される条件でも、実際には別の安定な振動（分数調波）に落ち着くことが多いという、線形安定性解析の限界を実験も交えて示した論文。最後に『二安定応答はこれ以上追う価値がない』と結論しているのも率直で面白い。"
+    },
+    {
+     "id": "doi:10.1109/tmech.2011.2160456",
+     "title": "柔軟ロータ用アクティブ磁気軸受試験リグの設計・構築・モデル化（Mushi, Lin & Allaire 2011）",
+     "why": "通常の支持用AMBとは別に、実機で起きる予測しにくい不安定化力をわざと加えられる2つの追加AMBを組み込んだ試験リグ。安定化制御の検証のために、あえて不安定を作り出せる装置を作るという発想が興味深い。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "rotor最新枠の有力候補のうち、すでに既配信だったもの",
+     "note": "T-Type Labyrinth Seals Dynamic Response Evaluation、Shaft-flexibility-induced hydrodynamic support redistribution、Thermally Induced Dynamics of an Aero-Engine AMB-Rotor System、Dynamic Performance of Asymmetric Herringbone-Groove Journal Bearings、Rotordynamic Performance Measurements of Water-Lubricated Journal Bearingsは、いずれもDOIで既配信と判明し除外しました。"
+    },
+    {
+     "title": "foil最新枠で見送ったもの",
+     "note": "Design and analysis of a slotted bump foil bearing with a grooved sleeve（既配信）、Thermo-aerodynamic analysis of herringbone groove air foil thrust bearing（既配信）は重複。High-fidelity wear simulation of gas foil bearing-rotor systems（物理誘導ニューラルネットワークが主役）はML主役のため見送りました。"
+    },
+    {
+     "title": "本文を取得できなかった候補",
+     "note": "ScienceDirect（Chinese Journal of Aeronautics、A state-of-the-art review on uncertainty analysis of rotor systems）とEPFL Infoscience（A Review of Grooved Dynamic Gas Bearings、CC BY-NC-ND）は、いずれもCloudflare等のボット対策で本文が取得できず、前者は抄録ベースで採用、後者は見送りました。Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure（Zhu et al. 2025）も、抄録がOpenAlex/Semantic Scholar/Crossrefいずれにも登録されておらず、誠実に書ける材料が無いため見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA19/抄録5、arXiv側はドローン・電力網等の分野外ノイズが中心）・定番枠14件（OA4/抄録10）。定番枠は上位14件すべてが既配信だった。"
+     },
+     {
+      "name": "OpenAlex（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統など分野外の高被引用が混在）。最新枠の分野内候補5本のうち4本が既配信と判明。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（foilは被引用順・発行日順、rotorは被引用順。各15〜40件）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability"
+      ],
+      "note": "既配信を除いた未配信のOA/抄録候補を確認。ここからWang et al. 2025（多層スラスト型ガスフォイル軸受）とMushi, Lin & Allaire 2011（AMB試験リグ）を選定。"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "公開技術報告書の全文検索（各25件まで）",
+      "terms": [
+       "gas foil bearing",
+       "rotor bearing whirl instability",
+       "rolling element bearing rotordynamics",
+       "ball bearing vibration rotor",
+       "squeeze film damper rotor"
+      ],
+      "note": "ここからAnderson 1974（全金属弾性パッド型スラスト軸受）とMeng 1991（SFD支持ロータの二安定応答）を選定。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRSの直接検索を補助に使った。"
+   },
+   "afterword": "今日いちばん『なるほど』と思ったのは、1991年のスクイーズフィルムダンパの報告書です。計算上『この振れ方は不安定』と判定された条件でも、実際の軸は律儀にその振れ方を保とうとせず、別の安定な振動（分数調波というもの）を勝手に見つけて回り続ける、という話でした。『不安定』という判定が、実は『特定の振れ方を続けるなら』という限定つきの話だったと知って、機械の安定性の議論も一枚岩ではないのだと感じました。報告書が最後に『この現象はもう追わなくていい』と言い切っているのも、理論と実務のちょうどいい距離感を感じて面白かったです。もう一つは、1974年の設計理論（パッドを箔にわざとずらして載せる）が、3年後の1977年の実験報告（前号で紹介）につながっていたと分かったことです。今号と前号が理論と実験の関係でつながっているのを見つけられたのは、古い報告書を読む楽しみの一つだと思いました。 — 編集担当より"
   }
  ]
 }
