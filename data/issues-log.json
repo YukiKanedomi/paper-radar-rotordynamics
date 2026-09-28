@@ -10255,6 +10255,123 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRSの直接検索を補助に使った。"
    },
    "afterword": "今日いちばん『なるほど』と思ったのは、1991年のスクイーズフィルムダンパの報告書です。計算上『この振れ方は不安定』と判定された条件でも、実際の軸は律儀にその振れ方を保とうとせず、別の安定な振動（分数調波というもの）を勝手に見つけて回り続ける、という話でした。『不安定』という判定が、実は『特定の振れ方を続けるなら』という限定つきの話だったと知って、機械の安定性の議論も一枚岩ではないのだと感じました。報告書が最後に『この現象はもう追わなくていい』と言い切っているのも、理論と実務のちょうどいい距離感を感じて面白かったです。もう一つは、1974年の設計理論（パッドを箔にわざとずらして載せる）が、3年後の1977年の実験報告（前号で紹介）につながっていたと分かったことです。今号と前号が理論と実験の関係でつながっているのを見つけられたのは、古い報告書を読む楽しみの一つだと思いました。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-29",
+   "status": "published",
+   "headline": "「シミュレータ試験を飛ばすな」というNASAの4ステップ、金属メッシュで減衰を稼ぐフォイル軸受、1975年のSFD設計手順、そしてすきま比0.3%の攻防",
+   "intro": "今日もcollect.mjsの候補プールは既配信で埋まっていました（foilは最新枠・定番枠とも新規がごくわずか、rotorも新規は数本）。そこでOpenAlexの直接検索とNASA技術報告サーバ（NTRS）で広げ、今号の4本を選びました。foilは、フォイル軸受機をどう開発すれば失敗しにくいかを4段階でまとめた2010年のNASA報告（全文・NASA職員のみの著者でパブリックドメイン）と、バンプ箔に金属メッシュを組み合わせて減衰を高めた2024年のJ-STAGE論文（全文・CC BY-NC-NDなので図は転載せず概念図のみ）。rotorは、スクイーズフィルムダンパ(SFD)を多質量ロータに設計する手順を計算例つきで示した1975年のNASA技術ノート（全文）と、SFDのすきま比の最適値を理論・数値・実験で探った2026年のScientific Reports論文（全文・CC BY-NC-ND）です。抄録ベースの候補も探しましたが、Elsevier（MSSP誌の2026年の2本）は出版社サイトでも抄録が取得できず、書ける材料が無かったため見送り、結果的に今号は4本とも全文ベースになりました。忠実性チェックでは4本とも指摘があり、特に1975年報告では、文字認識で崩れた式を私が誤って復元していた箇所（式番号つき）を削除しました。",
+   "picked": [
+    {
+     "id": "ntrs:20100040419",
+     "title": "オイルフリー軸支持系のための統合手法：成功への4ステップ（Howard, DellaCorte & Bruckner 2010）",
+     "why": "設計→軸受単体試験→模擬ロータ試験→実機、という4段階のうち、著者らの経験では模擬ロータ試験が最も飛ばされがちで、その省略が失敗の原因になったと書いている。負荷容量の経験則を逆に使ってリフトオフ速度やサイズを見積もる例も具体的。"
+    },
+    {
+     "id": "doi:10.2474/trol.19.345",
+     "title": "バンプ・金属メッシュ型フォイル軸受の静的・動的特性の評価（Kuwata & Ochiai 2024）",
+     "why": "波形のバンプ箔に金属メッシュを組み合わせただけの単純な構造で、静止時ハンマ試験の損失係数が11.132%から17.956%に増える一方、浮上する回転数は同じ約20,000 rpm。ただし剛性は下がると本文も認めている点が正直。"
+    },
+    {
+     "id": "ntrs:19750007925",
+     "title": "多質量弾性ロータ軸受系のための油膜スクイーズフィルムダンパ軸受の設計（Cunningham, Gunter & Fleming 1975）",
+     "why": "単質点ロータのデータから最適な支持減衰を決め、それを5質量ロータのダンパ寸法にまで落とし込む設計手順。解析上、1次危険速度で振れ幅1/16・軸受荷重1/36。一方で、不つりあいが中央に集中するとダンパが過負荷になり剛支持より悪化する例も示している。"
+    },
+    {
+     "id": "doi:10.1038/s41598-026-44261-6",
+     "title": "スクイーズフィルムダンパの性能に対するすきま比の支配機構（Yang et al. 2026）",
+     "why": "すきま比は「小さいほど良い」ではなく、0.3%を境にキャビテーション側と空気巻き込み側のせめぎ合いが入れ替わり、そこで油膜の連続性が最大になるという結論。1975年の設計手順と並べると、同じSFDの設計の50年後の姿が見える。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録すら取得できず見送った2026年の候補",
+     "note": "High-fidelity wear simulation of gas foil bearing-rotor systems（MSSP 2026）と Numerical and experimental analysis of a bolted-joint rotor-bearing system with squirrel cage elastic supports（MSSP 2026）は、OpenAlex・Semantic Scholar・Crossrefに抄録が無く、Elsevierのページも自動取得できなかったため、抄録の範囲でも書けず見送りました（前者は物理誘導ニューラルネットワークが主役という点も理由の一つです）。"
+    },
+    {
+     "title": "本文にアクセスできなかった候補",
+     "note": "テキサスA&M大学のリポジトリ（SFD設計の1996年報告、ヘリウムターボ圧縮機のフォイル軸受の2001年報告）とDTUの機関リポジトリ（Osmanskiら2017のフォイル軸受モデル）は、Cloudflareの確認画面で本文PDFが取得できず見送りました。"
+    },
+    {
+     "title": "候補プールが枯渇していた枠",
+     "note": "collect.mjsのfoil定番枠は14件中ほぼ全てが既配信、rotor最新枠のarXiv候補も既配信でした。新規分は分野外（統計学や電力系統など）の高被引用論文が中心でした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、arXivはドローン・電力・流体などの分野外が大半）・定番枠14件（OA4/抄録10）。分野内の新規はごくわずか。"
+     },
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA12/抄録1）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外の高被引用が混在）。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（is_oa:true、被引用順・発行日順、各キーワード25件まで）",
+      "terms": [
+       "gas foil bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "bump foil",
+       "air foil bearing",
+       "foil bearing rotordynamic",
+       "foil bearing thermal",
+       "foil bearing lift-off",
+       "rotordynamic",
+       "squeeze film damper",
+       "rotor bearing stability",
+       "critical speed rotor",
+       "seal rotordynamic coefficients",
+       "oil whirl",
+       "journal bearing stiffness damping",
+       "flexible rotor balancing"
+      ],
+      "note": "既配信を除いた未配信のOA候補を確認。ここからKuwata & Ochiai 2024とYang et al. 2026を選定。"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "公開技術報告書の全文検索（各25件まで）",
+      "terms": [
+       "foil bearing",
+       "foil air bearing rotordynamic",
+       "gas foil bearing oil-free turbomachinery",
+       "rotordynamic instability seal",
+       "squeeze film damper rotor",
+       "rotor bearing whirl stability",
+       "critical speed flexible rotor",
+       "oil-free turbine engine rotordynamic"
+      ],
+      "note": "ここからHoward et al. 2010とCunningham et al. 1975を選定。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRSの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、2010年のNASA報告の、模擬ロータ試験は「いちばん飛ばされやすいのに、飛ばすと失敗しやすい」という著者らの実感でした。本物のハードウェアで壊すより、同じ質量・形の模擬品で壊すほうが安く直せて、失敗への周りの許容度も高い、という説明が素朴で腑に落ちました。もう一つは、1975年のSFD設計手順と2026年のすきま比の論文が、同じ「ダンパは効かせすぎても足りなくても悪化する」という話につながっていたことです。前者は減衰が過大でも過小でも悪く、後者はすきまが小さすぎても大きすぎても二相流で悪化する、という形で出てきて、最適点がある設計というのは半世紀たっても変わらないのだと感じました。最後に反省として、1975年の報告では、文字が崩れた式を私が「それらしく」復元して載せてしまい、チェックで指摘されて削除しました。崩れた式は復元しないというルールの大切さを、身をもって知った一日でした。 — 編集担当より"
   }
  ]
 }

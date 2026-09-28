@@ -22,6 +22,7 @@ export const CATEGORIES: GraphCategory[] = [
     label: "フォイル軸受・気体潤滑",
     color: "#1a5e54",
     terms: [
+      "オイルフリー・ターボ機械",
       "弾性パッド型スラスト軸受",
       "ランナ",
       "3次元シェル要素モデル（フォイル構造）",
@@ -393,6 +394,7 @@ export const CATEGORIES: GraphCategory[] = [
     label: "ロータの安定性・動特性",
     color: "#b4451f",
     terms: [
+      "ロータダイナミクス",
       "二安定運転",
       "一体型スクイーズフィルムダンパ(ISFD)",
       "端部シールすきま",
@@ -1678,6 +1680,11 @@ export const CURATED_EDGES: CuratedEdge[] = [
   // --- 柔軟ロータ用AMB試験リグ（Mushi, Lin & Allaire 2011） ---
   { from: "能動磁気軸受", to: "μ-シンセシス制御", label: "の安定化コントローラ設計に使われる" },
   { from: "モデルベース制御設計（電磁気-ロータダイナミクス統合）", to: "μ-シンセシス制御", label: "の検証手段として実装される" },
+  // --- 今号（2026-09-29）: 統合手法・メッシュ型フォイル・SFD設計 ---
+  { from: "ガスフォイル軸受", to: "オイルフリー・ターボ機械", label: "の主な軸受技術" },
+  { from: "負荷容量係数 D", to: "負荷容量", label: "を経験則で見積もる係数" },
+  { from: "スクイーズフィルムダンパ(SFD)", to: "伝達率", label: "で軸受・基礎への伝達力を下げる" },
+  { from: "オイルフィルムキャビテーション", to: "スクイーズフィルムダンパ(SFD)", label: "膜の連続性を損ない性能に影響する" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
