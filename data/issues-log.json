@@ -10372,6 +10372,114 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlex・NTRSの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
    },
    "afterword": "今日いちばん「なるほど」と思ったのは、2010年のNASA報告の、模擬ロータ試験は「いちばん飛ばされやすいのに、飛ばすと失敗しやすい」という著者らの実感でした。本物のハードウェアで壊すより、同じ質量・形の模擬品で壊すほうが安く直せて、失敗への周りの許容度も高い、という説明が素朴で腑に落ちました。もう一つは、1975年のSFD設計手順と2026年のすきま比の論文が、同じ「ダンパは効かせすぎても足りなくても悪化する」という話につながっていたことです。前者は減衰が過大でも過小でも悪く、後者はすきまが小さすぎても大きすぎても二相流で悪化する、という形で出てきて、最適点がある設計というのは半世紀たっても変わらないのだと感じました。最後に反省として、1975年の報告では、文字が崩れた式を私が「それらしく」復元して載せてしまい、チェックで指摘されて削除しました。崩れた式は復元しないというルールの大切さを、身をもって知った一日でした。 — 編集担当より"
+  },
+  {
+   "date": "2026-09-30",
+   "status": "published",
+   "headline": "高温フォイル軸受の材料探し、「簡便法」の検証、気泡入りシールの周波数依存、振動から油の量を当てる",
+   "intro": "今日もcollect.mjsの候補プールは既配信でほぼ埋まっていたため、OpenAlexの直接検索（OA限定）で広げました。foilは、フォイル軸受を300 °C超で使うための材料探しを潤滑剤なしの摩擦試験で行った1996年のNASA報告（全文・パブリックドメイン扱いだが共著者に非NASA所属がいるため図は転載せず概念図のみ）と、古典的な線形力係数法（LFCM）を直接線形化と比べて精度と見逃しを調べた2022年のManchester大学の論文（著者受理原稿・全文、概念図のみ）です。rotorは、溝付き環状シールに気泡が混じると動特性係数が加振周波数に依存するようになることを計算で示した2011年の論文（全文・概念図のみ）と、ロータの振動から給油量・給油温度・アンバランスを推定する2026年のMeccanica論文（全文・CC BYなので実図2点を掲載）です。抄録ベースの候補も探しましたが、Elsevierの2026年の3本（扇形ラビリンスシール、極低温膨張タービンのシール、GFBの摩耗解析）は、OpenAlex・Crossref・Semantic Scholar・出版社ページのどこからも抄録が取れず、書ける材料が無かったため見送り、今号は4本とも全文ベースになりました。忠実性チェックでは初回は4本とも指摘があり、原文内で記述が食い違う箇所（例：Arghir論文の抄録と序論の気体体積率の範囲）は片方に決め打ちせず、食い違いをそのまま注記する形に直しました。",
+   "picked": [
+    {
+     "id": "ntrs:19960048686",
+     "title": "フォイル軸受の候補材料の摩擦・摩耗特性（Laskowski & DellaCorte 1996）",
+     "why": "定常運転中は接触しないフォイル軸受でも、起動停止では箔とジャーナルがこすれる。その短い接触のための材料探しが、使用温度を300 °Cから650 °Cへ広げる壁になっている、という問題の立て方が具体的。結論も「潤滑なしの金属の組合せは長期の実用に向かない」と正直。"
+    },
+    {
+     "id": "doi:10.1016/j.ymssp.2021.108714",
+     "title": "フォイル空気軸受ロータ系のモード解析：2つの線形化手法の比較（Bonello & Pourashraf 2022）",
+     "why": "半世紀以上使われてきた「剛性・減衰係数」の方法が、思ったより先行研究の指摘ほど悪くない一方で、軸はほとんど動かずトップフォイルだけが羽ばたくモードは原理的に見えない、という線引きがはっきりしている。"
+    },
+    {
+     "id": "doi:10.13111/2066-8201.2011.3.3.1",
+     "title": "気泡を含む二相流におけるテクスチャ付き環状シールのロータダイナミクス解析（Arghir et al. 2011）",
+     "why": "深い溝の中の液体が多いほど、少量の気泡でも圧縮性が効いてくる、という機構が式(12)(13)で追える。結論も「深刻ではないが、高い加振周波数では考慮すべき」と控えめ。"
+    },
+    {
+     "id": "doi:10.1007/s11012-026-02090-x",
+     "title": "ロータの振動応答を用いた、ジャーナル軸受の給油流量・給油温度のモデルベース監視（Oliveira & Daniel 2026）",
+     "why": "油の管にセンサーを付けずに、振動だけから給油量・油温・アンバランスを同時に推定する発想。ただし検証は同一モデルの合成データで、実機検証は今後の課題と著者自身が書いている。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録すら取得できず見送った2026年の候補",
+     "note": "Flow mechanisms and rotordynamics of sectorial labyrinth seals（IJMS 2026）、High-fidelity wear simulation of gas foil bearing-rotor systems（MSSP 2026）、Influence of structural deformation on the rotordynamic characteristics of shaft labyrinth seals in cryogenic liquid turbine expanders（IJR 2026）は、抄録がどの公開データにも無く、ScienceDirectも自動取得できなかったため、抄録の範囲でも書けず見送りました。"
+    },
+    {
+     "title": "本文にアクセスできなかった候補",
+     "note": "テキサスA&M大学のリポジトリ（ヘリウムターボ圧縮機のフォイル軸受2001年報告など）、DTUの機関リポジトリ（Osmanskiら2017）、Hindawi、EPFL、AIP・ASMEは、ボット対策の確認画面で本文が取得できませんでした。"
+    },
+    {
+     "title": "今号で使わなかった候補",
+     "note": "Nordmann & Dietzen 1989（NASAワークショップ、偏心軸位置のシール係数）は取得できましたが、OCR起因で式が崩れており、より状態の良いArghir 2011を選びました。Sci Rep 2026のフライス削り用の磁気-玉軸受ハイブリッドロータは、軸受・ロータの物理の主役から外れるため見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA21/抄録3、arXivは流体・制御・数値解析などの分野外が大半）・定番枠14件（OA4/抄録10）。未配信の分野内候補は最新枠2件・定番枠1件のみ。"
+     },
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 27,
+      "note": "最新枠13件（OA8/抄録5）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外の高被引用が混在）。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（OA限定・被引用順／発行日順、各語25件まで）",
+      "terms": [
+       "gas foil bearing",
+       "foil air bearing",
+       "foil thrust bearing",
+       "bump foil",
+       "rotordynamic coefficients seal",
+       "squeeze film damper",
+       "tilting pad bearing rotordynamic",
+       "rotor-bearing whirl instability",
+       "fluid film bearing rotordynamics",
+       "critical speed rotor",
+       "rotordynamic",
+       "rotor bearing dynamics",
+       "journal bearing",
+       "annular seal"
+      ],
+      "note": "既配信を除いた未配信のOA候補を確認。ここからBonello & Pourashraf 2022、Arghir et al. 2011、Oliveira & Daniel 2026を選定。DellaCorte & Laskowski 1996はOpenAlexの直接検索で見つけ、NASA NTRSから全文を取得。"
+     },
+     {
+      "name": "Crossref・Semantic Scholar・Springer/ScienceDirect",
+      "scope": "抄録の確認（Elsevier 3本）",
+      "terms": [
+       "（DOI直接照会）"
+      ],
+      "note": "抄録が取得できず見送り。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlexの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、Bonello論文の、簡便法は「軸受を剛性と減衰の係数に置き換えてしまう」から、置き換えたものの中にしかない動き（トップフォイルだけが羽ばたくモード）は、原理的に見えないという整理でした。精度の良し悪しの話ではなく、何を計算の外に出したかで見えなくなるものが決まる、という見方が新鮮でした。もう一つは、Arghir論文で、抄録と序論で気体の割合の範囲が違って書かれていたり、結論と本文で周波数依存の説明が揃っていなかったりする点です。こういう場合、片方を選んで断定せず、食い違いを食い違いのまま書くのが正しいのだと、チェックでの指摘から学びました。最後に、Oliveira論文は、著者自身が今後の課題として実験による検証を挙げている点が誠実でした。これは主観ですが、数値実験の良い結果を読むときは、測定に使ったデータの出どころを確認するのが大事だと感じました。 — 編集担当より"
   }
  ]
 }
