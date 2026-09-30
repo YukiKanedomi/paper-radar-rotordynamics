@@ -10480,6 +10480,115 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、OpenAlexの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
    },
    "afterword": "今日いちばん「なるほど」と思ったのは、Bonello論文の、簡便法は「軸受を剛性と減衰の係数に置き換えてしまう」から、置き換えたものの中にしかない動き（トップフォイルだけが羽ばたくモード）は、原理的に見えないという整理でした。精度の良し悪しの話ではなく、何を計算の外に出したかで見えなくなるものが決まる、という見方が新鮮でした。もう一つは、Arghir論文で、抄録と序論で気体の割合の範囲が違って書かれていたり、結論と本文で周波数依存の説明が揃っていなかったりする点です。こういう場合、片方を選んで断定せず、食い違いを食い違いのまま書くのが正しいのだと、チェックでの指摘から学びました。最後に、Oliveira論文は、著者自身が今後の課題として実験による検証を挙げている点が誠実でした。これは主観ですが、数値実験の良い結果を読むときは、測定に使ったデータの出どころを確認するのが大事だと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-01",
+   "status": "published",
+   "headline": "GFBの浮上を超音波で見分ける試み、フォイル軸受の冷却空気の当て方、波形軸受の振れ回り、3Dプリントのダイヤ穴シール",
+   "intro": "今日もcollect.mjsの候補プールはほぼ既配信で、未配信で分野内のものは数本しか残っていませんでした。そこでOpenAlexとNASA NTRSを直接検索して広げました。foilは、ガスフォイル軸受のリフトオフ（浮き上がり）を摩擦トルクではなく音響放出（AE）で見分けられるかを試した2024年のTU Berlinの論文（全文・CC BY、概念図のみ）と、抽気空気で軸受の温度と温度勾配を抑える3方式を比べた2006年のNASA報告（全文・概念図のみ。共著者に非NASA所属がいるため図は転載せず）です。rotorは、内面に3つの波をつけたジャーナル軸受を空気軸受リグで平滑軸受と比べた1995年のNASA報告（全文・古いスキャンのため数値は本文で確認できるものだけ使用、概念図のみ）と、3Dプリントしたダイヤ穴の環状ガスシールの動特性を調べた2025年のJEGTP論文（抄録ベース）です。抄録ベースの候補は、Elsevierの2026年のシール論文の多くで抄録が取れなかったため、抄録が取れたASMEの論文を選びました。忠実性チェックでは4本とも指摘があり、圧電ディスクの寸法の読み違い、「初の」「主因」といった強い言い回し、抄録外の一般論の断定などを直しました。",
+   "picked": [
+    {
+     "id": "doi:10.1007/s10010-024-00755-1",
+     "title": "ガスフォイル軸受のリフトオフ検出へのAE適用（Ahmadzadeh et al. 2024）",
+     "why": "浮き上がりの判定に使う摩擦トルクは実機に組み込みにくい、という困りごとから出発して、信号の「乱れ（エントロピー）」がトルクと似た動きをすることを示した。データが少ないことを著者自身が明記している点も誠実。"
+    },
+    {
+     "id": "ntrs:20060052399",
+     "title": "オイルフリーターボ機械のための熱管理手法（Radil, DellaCorte & Zeszotek 2006）",
+     "why": "「冷却空気」は冷やすためでなく温度のばらつきを許容範囲に保つためのもの、という位置づけが分かりやすい。流量が不適切だと温度勾配をかえって悪化させる例も正直に載っている。"
+    },
+    {
+     "id": "ntrs:19950015988",
+     "title": "ウェーブジャーナル軸受：圧力実測と分数周波ホワールのしきい値（Walker, Dimofte & Addy 1995）",
+     "why": "荷重ゼロの平滑軸受が回り始めてすぐに振れ回り、ウェーブ軸受は約800〜900 rpmまで耐えて、その後も軌道を抑えた、という対比が明快。ただし低速・無負荷の空気軸受での結果。"
+    },
+    {
+     "id": "doi:10.1115/1.4069929",
+     "title": "積層造形したテクスチャパターン付き環状ガスシールの動特性（Hyun, Moody & Delgado 2025）",
+     "why": "穴の大きさを軸方向に変えたシールが、基準シールより剛性・減衰が大きく、速度が上がると差が縮むという傾向（抄録）。抄録ベースなので、中身は抄録の範囲に限った。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録が取れず見送った2026年の候補",
+     "note": "扇形ラビリンスシール（IJMS 2026）、極低温膨張タービンのシール（IJR 2026）などElsevierの論文は、抄録がOpenAlex・Crossrefのどちらにも無く、書ける材料が無かったため見送りました。"
+    },
+    {
+     "title": "今号で使わなかった候補",
+     "note": "NTRSには、スクイーズフィルムダンパやシール試験の1980年代の報告が多く残っていますが、今号は状態の良い2本を選びました。また、本文が読めるOA論文でも、出版社サイトがボット対策で取得できないものは候補から外しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4、arXivは流体・制御などの分野外が大半）・定番枠14件（OA4/抄録10）。ほぼ全て既配信で、未配信の分野内候補は無し。"
+     },
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外が混在）。大半が既配信または分野外。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（全文テキストAPIのある報告）",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing stiffness damping",
+       "foil journal bearing rotordynamic",
+       "air bearing compliant surface",
+       "seal rotordynamic coefficients",
+       "squeeze film damper",
+       "hydrodynamic journal bearing stability",
+       "oil whirl whirl",
+       "tilting pad bearing dynamic coefficients",
+       "critical speed flexible rotor"
+      ],
+      "note": "未配信の報告を確認。ここからRadil et al. 2006とWalker et al. 1995を選定。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "2024年以降の発行日順（各語25件）",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "air foil thrust bearing",
+       "aerodynamic bearing compliant",
+       "rotordynamic coefficients seal",
+       "journal bearing rotor instability",
+       "squeeze film damper rotor",
+       "tilting pad journal bearing dynamic",
+       "annular seal rotordynamic",
+       "oil whirl"
+      ],
+      "note": "未配信の候補を確認。ここからAhmadzadeh et al. 2024（Unpaywall経由でCC BYの全文を取得）とHyun et al. 2025（抄録あり）を選定。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、NTRSとOpenAlexの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、フォイル軸受の「冷却空気」は軸受をしっかり冷やすためのものではなく、温度のばらつきを許容範囲に収めるためのもの、という整理でした。冷やす量を増やせば良い話ではなく、0.06 m³/minの低流量では前端だけが冷えて、かえって温度勾配が46%増えた例が載っていて、「冷却」の発想を少し改めさせられました。もう一つは、AEの論文が、データが少ないから一般的な結論は出せない、と自分で書いていた点です。予備的な結果を予備的なものとして出す書き方は、読む側としても助かります。最後に、波形軸受の報告は、ウェーブ軸受も完全に安定だったわけではなく、振れ回りは出たがその大きさを抑えた、という結果で、「安定」の中身を分けて読むのが大事だと感じました。これは主観ですが、形を少し変えるだけで軌道の大きさが変わるという話は、素人目にも面白いです。 — 編集担当より"
   }
  ]
 }
