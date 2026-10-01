@@ -10589,6 +10589,117 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、NTRSとOpenAlexの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
    },
    "afterword": "今日いちばん「なるほど」と思ったのは、フォイル軸受の「冷却空気」は軸受をしっかり冷やすためのものではなく、温度のばらつきを許容範囲に収めるためのもの、という整理でした。冷やす量を増やせば良い話ではなく、0.06 m³/minの低流量では前端だけが冷えて、かえって温度勾配が46%増えた例が載っていて、「冷却」の発想を少し改めさせられました。もう一つは、AEの論文が、データが少ないから一般的な結論は出せない、と自分で書いていた点です。予備的な結果を予備的なものとして出す書き方は、読む側としても助かります。最後に、波形軸受の報告は、ウェーブ軸受も完全に安定だったわけではなく、振れ回りは出たがその大きさを抑えた、という結果で、「安定」の中身を分けて読むのが大事だと感じました。これは主観ですが、形を少し変えるだけで軌道の大きさが変わるという話は、素人目にも面白いです。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-02",
+   "status": "published",
+   "headline": "箔軸受を一端から熱しても回り続けたロータ、空気フォイル軸受ロータの危険速度、ラビリンスシールのCFD対バルクフロー、テーパー付きシールの最適なすきま比",
+   "intro": "今日も collect.mjs の候補プールはほぼ既配信で、foilの最新枠24件のうち分野内の未配信は数本、rotorの定番枠は統計学や電力系統など分野外が混ざる状態でした。そこでNASA NTRSとOpenAlexを直接検索して広げました。foilは、空気フォイル軸受で支えたマイクロガスタービンのロータの危険速度や安定性を伝達マトリクス法で解いた2025年のTribology Transactions論文（抄録ベース）と、箔軸受ロータの一端をヒータで熱して温度差のもとでの運転を調べた1970年のAmpex社の報告（NASA契約・全文・概念図のみ）です。rotorは、6歯ガスラビリンスシールの動特性をバルクフロー・モデルとCFDで予測した2026年のTribology Transactions論文（抄録ベース）と、入口/出口のすきま比を変えた4種のテーパー付き環状ガスシールを最高16,000 rpmで試験した1986年のテキサスA&Mの報告（NASA補助金・全文・概念図のみ）です。古い2本はどちらもスキャン起源の本文なので、読み取りが確かな部分だけを使い、崩れた数値は載せませんでした。",
+   "picked": [
+    {
+     "id": "doi:10.1080/10402004.2025.2474553",
+     "title": "空気フォイル軸受支持のマイクロガスタービンのロータダイナミクス（Li et al. 2025）",
+     "why": "箔の変形を含む空気膜の軸受特性から、ロータ系の危険速度・安定性・不つりあい応答までを一本の流れで解いている。抄録に書かれた範囲（0〜150,000 rpmに4次までの危険速度）だけを使った。"
+    },
+    {
+     "id": "ntrs:19720004762",
+     "title": "箔軸受ロータの加熱と温度勾配のもとでの運転（Licht 1970）",
+     "why": "箔表面が約800°Fに達しても回り続け、再起動もできた、という結果が率直。実験条件が実機より過酷だったと著者自身が書いている点も誠実で、結論は「だろう」という留保つき。"
+    },
+    {
+     "id": "doi:10.1080/10402004.2026.2635391",
+     "title": "ガスラビリンスシールのロータダイナミック力係数：数値シミュレーション（Comsa & Cizmas 2026）",
+     "why": "シール動特性の予測を、軽いバルクフロー・モデルと重いCFDで比べ、「CFDのほうが当たるが計算費用は桁違い」と述べている。抄録の範囲に限った。"
+    },
+    {
+     "id": "ntrs:19860023270",
+     "title": "テーパー付き環状ガスシールの漏れ・圧力勾配・ロータダイナミック係数（Elrod & Childs 1986）",
+     "why": "入口/出口すきま比を1.0〜2.5で変えた4種を同じ試験機で比べ、剛性が最大のすきま比と最も安定なすきま比が違う、という結果が分かりやすい。入口損失の扱いが予測を左右するという指摘も参考になる。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録が取れず見送った2026年の候補",
+     "note": "ガスフォイル軸受の摩耗シミュレーション（MSSP 2026）や扇形ラビリンスシール（IJMS 2026）などElsevierの論文は、抄録がOpenAlex・Crossref・Semantic Scholarのいずれにも無く、出版社ページも取得できなかったため、書ける材料が無く見送りました。"
+    },
+    {
+     "title": "全文が取れなかったOAの候補",
+     "note": "溝付きダイナミックガス軸受のレビュー（Applied Mechanics Reviews 2019、EPFLの機関リポジトリにOA写し）は、リポジトリがこちらからのアクセスを拒否（HTTP 405）したため、全文を確認できず見送りました。"
+    },
+    {
+     "title": "今号で使わなかった候補",
+     "note": "NASA NTRSのMini-BRU/BIPS箔軸受開発報告（1978）は、スキャンの崩れが大きく数値の裏取りが難しいため見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4、arXivは光学・ロボティクスなど分野外が大半）・定番枠14件（OA4/抄録10）。ほぼ全て既配信で、未配信の分野内候補は最新枠のOpenAlex 1〜2件のみ。"
+     },
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外が混在）。大半が既配信または分野外。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（全文テキストAPIのある報告）",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing rotordynamic",
+       "compliant foil bearing",
+       "hydrodynamic gas bearing stability",
+       "rotordynamic seal",
+       "squeeze film damper",
+       "rotor instability whirl",
+       "gas bearing",
+       "gas lubricated bearing",
+       "foil bearing stability",
+       "air bearing rotordynamic",
+       "hydrodynamic foil"
+      ],
+      "note": "未配信の報告を確認。ここからLicht 1970とElrod & Childs 1986を選定。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "被引用順・2025年以降の発行日順（各語25件）",
+      "terms": [
+       "foil bearing",
+       "gas bearing foil",
+       "foil air bearing rotor",
+       "labyrinth seal rotordynamic",
+       "rotor bearing critical speed unbalance response",
+       "whirl instability rotor"
+      ],
+      "note": "未配信の候補と、抄録の有無を確認。ここからLi et al. 2025とComsa & Cizmas 2026（どちらも抄録あり）を選定。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーション（collect.mjs）。候補プールが既配信で埋まっていたため、NTRSとOpenAlexの直接検索を補助に使った。ヒット件数はcollect.mjs出力の最新枠＋定番枠の合計。"
+   },
+   "afterword": "今日いちばん「なるほど」と思ったのは、1970年の箔軸受の加熱実験で、うまくいった結果と同じ重さで「うまくいきすぎない理由」まで書いてあることでした。1回目は加熱しすぎて箔表面が約800°Fに達したのに回り続けた、と報告する一方で、傷が出たのは冷却用の空気のジェットで箔が局所的に冷えて縮んだ場所で、実機なら加圧用の空気を予熱すれば避けられるだろう、と原因まで推測しています。もう一つは、テーパー付きシールの報告で、剛性がいちばん高いすきま比（1.5〜2.0）と、いちばん安定なすきま比（2.5）が違っていたことです。「どれが一番よいか」は、何を良いとするかで答えが変わるのだと感じました。ラビリンスシールのCFDの論文は、CFDのほうが当たるけれど計算費用ははるかに高い、と抄録の最後に書いていて、道具の使い分けを考える材料になりました。これは素人目線の感想です。 — 編集担当より"
   }
  ]
 }
