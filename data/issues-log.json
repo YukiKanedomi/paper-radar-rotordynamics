@@ -10907,6 +10907,128 @@
     "note": "検索語は collect.mjs の日替わり選択をそのまま記録。直接検索の件数は、取りまとめていないため記載していない。"
    },
    "afterword": "— 編集担当より\n今回は、軸受そのものより『まわりの仕掛け』が主役の号でした。Schmiedの報告を読んで『なるほど』と思ったのは、圧力が上がると、ロータを不安定にする力も、抑える力も、両方大きくなる点です。スワールブレーキは不安定にするほうだけを弱めて、抑えるほうは残すので、圧力が上がるほど安定側に傾く、という筋道でした。ただし、ラビリンスの型を間違えると、後ろ向きの旋回が不安定になる、という落とし穴まで書かれていて、組合せの大事さが伝わりました。Lichtの報告のほうは、1970年に『ホワールが出なかった』と言い切るのではなく、剛性の低さなどの弱点も自分で並べているところが、読んでいて信頼できると感じました。素人の感想ですが、強みと弱みを同じ温度で書いてある報告は、読み返したくなります。"
+  },
+  {
+   "date": "2026-10-05",
+   "status": "published",
+   "headline": "スパイラルグルーブ付きガスフォイルスラスト軸受、フォイル軸受のモジュール式試験リグ、幾何学的非線形ロータの後方ホワール、スクイーズフィルムダンパのロックアップ",
+   "intro": "今日も collect.mjs の候補プールは、ほぼ既配信か分野外でした。foilの最新枠のarXivは、粒子輸送や半導体結晶などの他分野ばかりで、定番枠は14件すべてが既配信でした。rotorは最新枠のOpenAlexに未配信が2件ほどあるだけで、定番枠には統計学や電力系統の論文が混ざっていました。そこで OpenAlex とNASA NTRSを直接検索して広げました。出版社サイト（Elsevier、ASME、Wiley、MDPI、テキサスA&M大学のリポジトリ）の多くは本文を取得できず、取得できる本文のあるものから選びました。foilは、EPFLのリポジトリにある著者の受理原稿が読めた、ガスフォイルスラスト軸受のトップフォイルに螺旋溝を刻む案を計算で調べた2019年のTribology International論文（全文・概念図のみ）と、設計変更を試しやすいモジュール式のフォイル軸受試験リグを紹介する2024年のPAMM論文（本文は取得できず抄録ベース）です。rotorは、軸のたわみで軸が硬くなる効果（幾何学的非線形）を入れて、ロータとステータがこすれる乾性摩擦の後方ホワールを閉じた式で予測する2026年のApplied Sciences論文（CC BY、全文・概念図のみ）と、NASAのシール試験リグでスクイーズフィルムダンパの長さが足りず起きたホワールと、ダンパのロックアップを調べた2007年の学会報告（NTRS収録、全文・概念図のみ）です。なお最新枠・定番枠の区分は、今日は候補の出どころ（新着検索か被引用順の検索か）で便宜的に付けています。",
+   "picked": [
+    {
+     "id": "doi:10.1016/j.triboint.2018.11.003",
+     "title": "スパイラルグルーブを付けたガスフォイルスラスト軸受の性能ポテンシャル（Guenat & Schiffmann 2019）",
+     "why": "荷重容量が最大で約70%増える、または同じ荷重で抵抗トルクが約40%減る、という利点と、限界荷重はむしろ下がるという弱点の両方が、論文の中で正直に並べられている。計算だけの研究なので、その点も要約に明記した。"
+    },
+    {
+     "id": "doi:10.1002/pamm.202400109",
+     "title": "ガスフォイル軸受で支持するロータのためのモジュール式試験リグ（Sorgec & Liebich 2024）",
+     "why": "軸受そのものではなく、設計変更を実験で試しやすくする装置の工夫が主題。抄録に数値の結果が無いため、結果の中身は書かず、抄録の範囲に限った。"
+    },
+    {
+     "id": "doi:10.3390/app16199780",
+     "title": "幾何学的非線形ロータ／ステータ接触系における自励後方ホワール予測の一般化解析枠組み（Wang et al. 2026）",
+     "why": "軸が大きくたわむと硬くなる効果を入れると、後方ホワールの振幅が自分で頭打ちになり、成立条件も厳しくなる、という筋道が、式と数値で追える。著者自身が適用範囲（相対すべり継続比が0.7より大きいこと）と、実験検証が今後の課題であることを明記している。"
+    },
+    {
+     "id": "ntrs:20070031910",
+     "title": "スクイーズフィルムダンパを備えたシール試験リグのホワール運動（Proctor & Gunter 2007）",
+     "why": "実機の試験で起きたホワールと高い危険速度応答に対し、ダンパ長の変更とロックアップの機構が、実験と解析の両方で語られている。長いダンパでも大きなアンバランスではロックアップする、という限界も報告自身が書いている。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "本文が取れなかった2026年の候補",
+     "note": "シェル付きのスラスト型多層ガスフォイル軸受の軸方向摂動への応答（Aerospace Science and Technology 2026）、ガスフォイル軸受ロータ系の摩耗シミュレーション（MSSP 2026）、二重V字ハニカム構造のフォイル軸受ロータ系（MSSP 2025）は、OpenAlexにもSemantic ScholarにもCrossrefにも抄録が無く、出版社ページ（ScienceDirect）もボット対策で読めないため、書ける材料が足りず見送りました。"
+    },
+    {
+     "title": "使えなかった候補",
+     "note": "Chen（2001）のヘリウムターボ圧縮機へのフォイル軸受の適用は、NTRSではなくFermilab由来のスキャン画像PDFで、文字を取り出せなかったため見送りました。テキサスA&M大学のリポジトリ（OAKTrust）の論文は、接続が拒否されて取得できませんでした。Carpino & Talmage（2003）のフォイルジャーナル軸受の予測は、助成金の進捗報告の4ページで、深く紹介できる材料が少ないため見送りました。Crandall（1980）の回転部分の減衰が不安定を生む理由は、本文テキストが1語ずつ分断されて読めなかったため見送りました。"
+    },
+    {
+     "title": "Heshmatモデルの結果との照合",
+     "note": "Guenat & Schiffmann の論文は、自分たちのモデルをHeshmatの結果と照らして確認しています（最大の相対偏差1.9%）。この照合を、私たちが再現したわけではありません。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・foil）",
+      "scope": "新着＋被引用上位（定番枠）— foil",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA18/抄録6、arXivは分野外が大半）・定番枠14件（OA4/抄録10）。定番枠は全件が既配信。"
+     },
+     {
+      "name": "OpenAlex・arXiv（collect.mjs・rotor）",
+      "scope": "新着＋被引用上位（定番枠）— rotor",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 38,
+      "note": "最新枠24件（OA20/抄録4）・定番枠14件（OA1/抄録13、統計学・電力系統などの分野外が混在）。最新枠のOpenAlexに未配信が数件。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "候補プール枯渇時の追加探索（タイトル・抄録検索、被引用順・新着順、OAに限る検索を含む）",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "foil bearing rotordynamic",
+       "air foil bearing",
+       "foil air bearing",
+       "bump foil",
+       "foil thrust bearing",
+       "gas bearing rotor dynamic",
+       "rotordynamic",
+       "oil whip whirl rotor bearing",
+       "seal rotordynamic coefficients",
+       "rotor bearing stability"
+      ],
+      "note": "ここから Guenat & Schiffmann 2019、Sorgec & Liebich 2024、Wang et al. 2026 を選んだ。直接検索の件数は、取りまとめていないため記載していない。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "NASA技術報告サーバのメタデータ検索（全文テキストAPIの有無で絞り込み）",
+      "terms": [
+       "foil bearing",
+       "gas foil journal bearing rotordynamic",
+       "rotordynamic stability whirl",
+       "seal rotordynamic",
+       "oil-free foil air bearing turbomachinery",
+       "gas foil bearing thermal",
+       "foil bearing rotordynamic test",
+       "squeeze film damper rotor",
+       "rotor critical speed bearing",
+       "gas bearing stability whirl",
+       "hydrodynamic bearing stiffness damping coefficients"
+      ],
+      "note": "ここから Proctor & Gunter 2007 を選んだ。NTRSの報告はDOIが無いため、IDとタイトルの両方で既配信かを確認した。"
+     },
+     {
+      "name": "Crossref・Semantic Scholar（抄録・被引用の確認）",
+      "scope": "選んだ論文と見送った候補のメタデータ確認",
+      "terms": [],
+      "note": "Wang et al. 2026 の抄録をCrossrefで、Guenat & Schiffmann 2019 の被引用をSemantic Scholarで確認。被引用はOpenAlexの30件とSemantic Scholarの26件で食い違うため、数値は出していない。"
+     }
+    ],
+    "note": "検索語は collect.mjs の日替わり選択をそのまま記録。OpenAlex・NTRSの直接検索の語は、実際に使ったものを列挙した。"
+   },
+   "afterword": "— 編集担当より\n今回『なるほど』と思ったのは、Proctorらの報告の、ダンパを長くすると減衰が長さの3乗で増える、という話です。ダンパの長さを2倍にすると、同じ偏心率で減衰が8倍になる、と報告に書かれていました。ところが、それで万事解決ではなく、アンバランスが大きいと、長いダンパでも油膜が急に硬くなる『ロックアップ』が起きる、とも書かれていて、効く場面と効かない場面を両方見せてくれる報告だと感じました。Wangらの論文では、軸が硬くなると後方ホワールの振幅が頭打ちになる、という結果が面白かったです。ただし、これは計算の上での話で、著者自身が、実験での確認はこれからだと書いていました。素人の感想ですが、『うまくいった』と『まだ確かめていない』を同じ文章の中で分けて書いてある論文は、安心して読める気がします。"
   }
  ]
 }
