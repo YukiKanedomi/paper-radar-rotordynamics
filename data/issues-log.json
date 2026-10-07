@@ -11282,25 +11282,79 @@
    "searchLog": {
     "sources": [
      {
-      "name": "arXiv＋OpenAlex（foil）",
-      "scope": "最新枠・定番枠",
-      "terms": "bump foil bearing,air foil journal bearing,foil thrust bearing,compliant foil bearing,foil bearing rotordynamic coefficients,oil-free turbomachinery bearing",
-      "hits": "最新枠 24件 / 定番枠 14件",
-      "note": "ほぼ既配信"
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順・直近数年）",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "ほぼ既配信、または分野外。"
      },
      {
-      "name": "arXiv＋OpenAlex（rotor）",
-      "scope": "最新枠・定番枠",
-      "terms": "seal rotordynamic forces,subsynchronous vibration,rotordynamics,rotor-bearing system stability,unbalance response,critical speed",
-      "hits": "最新枠 13件 / 定番枠 14件",
-      "note": "ほぼ既配信"
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用上位",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "大半が既配信（rotorは統計学・電力系統などの分野外も混入）。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順・直近数年）",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "ほぼ既配信、または分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "大半が既配信（rotorは統計学・電力系統などの分野外も混入）。"
      },
      {
       "name": "NASA NTRS",
       "scope": "未配信の定番OA候補の深掘り",
-      "terms": "foil air bearing / gas foil bearing / foil journal bearing / foil thrust bearing / rotor instability whirl / squeeze film damper / annular seal 等",
-      "hits": "各25件まで",
-      "note": "全文が読める候補は見つかったが、最新枠の相方が揃わなかった"
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing",
+       "foil journal bearing",
+       "foil thrust bearing",
+       "rotor instability whirl",
+       "squeeze film damper rotor",
+       "rotordynamic coefficients annular seal",
+       "fluid film bearing rotordynamic"
+      ],
+      "hits": 25,
+      "note": "各クエリ上位25件まで。全文が読める候補は見つかったが、最新枠の相方が揃わなかった。"
      }
     ],
     "note": "抄録の取得は OpenAlex・Crossref・Semantic Scholar・出版社ページ（403）の順に試しましたが、いずれも不可でした。"
