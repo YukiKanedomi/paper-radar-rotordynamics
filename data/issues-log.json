@@ -11268,6 +11268,44 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
    },
    "afterword": "今回「なるほど」と思ったのは、古い報告ほど「まだ分かっていないこと」を隠さず書いていることでした。内部摩擦不安定の報告は、不安定が起こる周波数は予測どおりだったのに、振れの大きさは当てられなかった、とはっきり書いています。2003年のフォイル軸受の経過報告も、これから直す点を並べていて、箔の曲げと膜の効果を外して計算し直すと軸方向に大きな変化が出る、という確認が1行あるだけで、なぜ箔をただのばねとして扱わないのかが分かりました。私は専門家ではないので細部までは追えませんが、「何が効いているか」を一度外して確かめる、という素朴な方法の強さと、分からないことを分からないと書く姿勢の両方が、読んでいて気持ちよかったです。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-08",
+   "status": "skipped",
+   "headline": "お休み：候補プールの枯渇で、抄録まで裏取りできる「最新」のfoil論文が見つかりませんでした",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foilの定番枠14件のうち13件、rotorの定番枠も大半が既配信か分野外（統計学・電力系統など）でした。そこでNASA技術報告サーバで未配信の定番を探し、Bhushanらによる1978年のコンプライアント軸受のコーティング報告書（foil）と、Muszynska 1994年の流体ホワール／ホイップ（rotor）という、全文が読める2本までは見つけました。ただ「最新」枠の相方が問題でした。foilで未配信の新着は2026年10月号の多層スラストガスフォイル軸受の論文だけでしたが、OpenAlex・Crossref・Semantic Scholarのどこにも抄録がなく、出版社ページも403で開けず、中身を確かめられませんでした。抄録なしで要約を書くと推測で埋めることになるため、見送りました。",
+   "picked": [],
+   "aside": {
+    "title": "見送った候補",
+    "note": "foil：Wang et al. 2026「多層スラストガスフォイル軸受のロータ軸方向擾乱に対する動的応答と安定性」（抄録が取得できず）。rotor：扇形ラビリンスシールの流れとロータダイナミクス（Le et al. 2026）、極低温液体タービンエキスパンダのラビリンスシール（Sun et al. 2026）も同様に抄録が取得できませんでした。全文が読めた2本（Bhushan et al. 1978 / Muszynska 1994）は、相方が揃う日のために取ってあります。"
+   },
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv＋OpenAlex（foil）",
+      "scope": "最新枠・定番枠",
+      "terms": "bump foil bearing,air foil journal bearing,foil thrust bearing,compliant foil bearing,foil bearing rotordynamic coefficients,oil-free turbomachinery bearing",
+      "hits": "最新枠 24件 / 定番枠 14件",
+      "note": "ほぼ既配信"
+     },
+     {
+      "name": "arXiv＋OpenAlex（rotor）",
+      "scope": "最新枠・定番枠",
+      "terms": "seal rotordynamic forces,subsynchronous vibration,rotordynamics,rotor-bearing system stability,unbalance response,critical speed",
+      "hits": "最新枠 13件 / 定番枠 14件",
+      "note": "ほぼ既配信"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "未配信の定番OA候補の深掘り",
+      "terms": "foil air bearing / gas foil bearing / foil journal bearing / foil thrust bearing / rotor instability whirl / squeeze film damper / annular seal 等",
+      "hits": "各25件まで",
+      "note": "全文が読める候補は見つかったが、最新枠の相方が揃わなかった"
+     }
+    ],
+    "note": "抄録の取得は OpenAlex・Crossref・Semantic Scholar・出版社ページ（403）の順に試しましたが、いずれも不可でした。"
+   },
+   "afterword": "— 編集担当より\n今日はお休みです。候補を探すほど、この分野の「読める定番」はだいぶ読み尽くしたのだな、と実感しました。無理に新着を要約して穴を埋めるより、出さない日があるほうがこのアプリらしいと思っています。"
   }
  ]
 }
