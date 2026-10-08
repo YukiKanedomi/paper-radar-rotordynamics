@@ -23,6 +23,10 @@ export const CATEGORIES: GraphCategory[] = [
     color: "#1a5e54",
     terms: [
       "ポリイミドコーティング",
+      "放射状直線溝",
+      "Generation II フォイル軸受",
+      "ポリイミド結合フッ化黒鉛（PBGF）",
+      "ケイ酸塩結合黒鉛／酸化カドミウム（SBGC）",
       "最大負荷容量に対する割合（%LC）",
       "PEM燃料電池（PEMFC）",
       "非線形回帰分析",
@@ -434,6 +438,14 @@ export const CATEGORIES: GraphCategory[] = [
     color: "#b4451f",
     terms: [
       "内部摩擦不安定",
+      "連続ロータ（連続体ロータ）",
+      "リミットポイント",
+      "ジャンプ現象",
+      "多重尺度法",
+      "ギアカップリング",
+      "遊星歯車",
+      "Conti-Barbara数（ギアカップリング）",
+      "不安定モード",
       "締まりばめ継手（焼きばめ）",
       "Curvicカップリング",
       "歯車–ロータ–軸受系",
@@ -1840,6 +1852,17 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "外部減衰（点ダンピング）", to: "内部摩擦不安定", label: "の振れ回りを小さくする（本報告の解析）" },
   { from: "動的伝達誤差(DTE)", to: "歯車–ロータ–軸受系", label: "の振動の指標（抄録）" },
   { from: "局所柔性（軸の3次元的な局所の柔らかさ）", to: "危険速度", label: "を無視すると危険速度がずれる（抄録）" },
+  // --- 第90号（Panda & Behera 2026／Wagner & Sliney 1984／Malgol ほか 2026／Buehlmann & Luzi 1989） ---
+  { from: "放射状直線溝", to: "トップフォイル", label: "の面に彫る溝（抄録）" },
+  { from: "放射状直線溝", to: "負荷容量", label: "を高めるねらいの溝（抄録では顕著に増加）" },
+  { from: "Generation II フォイル軸受", to: "設計世代（Generation I〜III）", label: "の一つ" },
+  { from: "ポリイミド結合フッ化黒鉛（PBGF）", to: "高温固体潤滑コーティング", label: "の一種（ポリイミドを結合剤とする）" },
+  { from: "ケイ酸塩結合黒鉛／酸化カドミウム（SBGC）", to: "高温固体潤滑コーティング", label: "の一種（ケイ酸塩を結合剤とする）" },
+  { from: "多重尺度法", to: "ジャンプ現象", label: "共振時の振幅方程式から跳躍を予測するのに使う（抄録）" },
+  { from: "リミットポイント", to: "ジャンプ現象", label: "の折り返し点で振幅が跳ぶ" },
+  { from: "ギアカップリング", to: "サブシンクロナス振動", label: "低荷重で励振する（本報告）" },
+  { from: "遊星歯車", to: "ギアカップリング", label: "と組み合わさる設備で不安定が生じた（本報告）" },
+  { from: "Conti-Barbara数（ギアカップリング）", to: "ギアカップリング", label: "の挙動の粗い目安" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();
