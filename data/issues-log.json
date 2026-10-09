@@ -11531,6 +11531,135 @@
     "note": "検索語は日替わりローテーションで自動選択された語です。NASA NTRSとOpenAlexの直接検索、抄録の補完は、候補プールが枯渇していたための手動の追加検索です。"
    },
    "afterword": "今回「なるほど」と思ったのは、ギアカップリングの報告にある「目安の数」の話です。報告によると、この設備では、不安定になった元の設計も、直した後の設計も、目安の数はどちらも10未満でした。それでも不安定になったのは元の設計だけで、報告はその差を、不安定なモードの固有振動数が運転速度より下にあったかどうか、で説明しています。便利な目安があっても、最後は固有振動数と運転速度の位置関係を見ないといけないのだな、と素人ながら感じました（これは報告の記述を私なりに読んだ感想で、ほかの設備にも当てはまるかは分かりません）。もう一つ、1984年の皮膜の報告で「9000回という数は一部恣意的だった」と正直に書かれていたのも、読んでいて安心感がありました。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-10",
+   "status": "published",
+   "headline": "フォイル軸受の剛性・減衰を「面積×係数」で見積もる経験則（2010年）、21ポンドのロータを空気で支えた張力型フォイル軸受（1970年）、張出し型圧縮機の現場での不安定（1980年）、シール動特性を測る試験設備（1985年）",
+   "intro": "今日も collect.mjs の候補プールは、ほとんどが既配信か分野外でした。foilの最新枠はarXivの記事が流体や制御など別分野ばかりで、OpenAlex新着も大半が既配信、定番枠は14件のうち13件が既配信（残り1件は書籍）。rotorも最新枠のarXivは別分野、定番枠は統計学や電力系統の論文が混ざっていました。そこでNASA NTRSを直接検索して未配信の全文（OA）を探しました。昨日までの号で候補にしながら抄録が取れず見送った2026年の論文（Wang ほか、Le ほか）は、今日も抄録が取得できず、抄録ベースでも書けませんでした。その結果、今日は4本とも全文が読めるNASAの報告書・会議録になりました。foilはDellaCorte 2010（NASA技術メモ）とLicht 1970（NASA契約報告書）、rotorはHudson & Wittman 1980（NASA会議録）とChilds ほか 1985（NASA契約報告書）です。最新枠・定番枠の区分は発行年で便宜的に付けており、4本とも古い報告のため「最新」とは言えない点はご承知ください。Licht・Hudson & Wittman・Childs ほかは著者が民間企業や大学の所属のため、図は転載せず概念図のみです。いずれも古いスキャン由来で、表や図中の数値は確認できないものがあります。",
+   "picked": [
+    {
+     "id": "ntrs:20110003624",
+     "title": "オイルフリーターボ機械向けコンプライアント面ガス軸受の剛性・減衰係数の見積もり（DellaCorte 2010）",
+     "why": "フォイル軸受は剛性・減衰が見積もりにくい、という長年の悩みに、公開データを面積で正規化して経験則にした報告。著者自身が「減衰のデータは不確かさを持って見る」と書いている点も含めて紹介した。"
+    },
+    {
+     "id": "ntrs:19700016313",
+     "title": "フォイルガス軸受試験リグの設計・製作・試験（Licht 1970）",
+     "why": "21ポンドの長いロータを、張力型の薄い箔の空気軸受で、縦・横の両姿勢で5万回転/分近くまで回した実験。半速振れ回りが出なかったことと、箔も軸と一緒に動けることが振れ幅を許す、という説明が面白かった。"
+    },
+    {
+     "id": "ntrs:19800021210",
+     "title": "張出し配置の歯車式遠心圧縮機のサブシンクロナス不安定（Hudson & Wittman 1980）",
+     "why": "設計時の解析は問題なし、工場試験も合格だったのに現場で不安定になり、軸受を幅広にして解消した現場報告。励振力の正体は特定できなかったと正直に書いている。"
+    },
+    {
+     "id": "ntrs:19850011107",
+     "title": "環状ガスシールのロータダイナミック係数——理論と実験の比較 第1部：試験設備と装置（Childs ほか 1985）",
+     "why": "ロータを外から1つの周波数で揺すり、反力から8個の係数を分けて求める試験設備の報告。測定結果は後続報告に回されており、この号では設備と手順の紹介にとどめた。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録が取得できず見送った2026年の候補",
+     "note": "Wang ほか（スラスト型多層ガスフォイル軸受の動的応答と安定性、Aerospace Science and Technology 2026）とLe ほか（扇形ラビリンスシールの流れとロータダイナミクス、Int. J. Mech. Sci. 2026）は、OpenAlex・Crossref・Semantic Scholarに抄録が無く、ScienceDirectも自動取得を弾かれたため、抄録ベースでも書けず見送りました。"
+    },
+    {
+     "title": "見送ったNASA報告",
+     "note": "Bruckner 2015「フォイル軸受の受動的熱管理」は論文ではなく米国特許の全文だったため見送りました。Bhushan ほか 1978（自動車用ガスタービンのコンプライアント面軸受の材料・コーティング、約16万字の契約報告書）は、前号までのコーティング寄りの話題と重なるため見送りました。DellaCorte 2011（オイルフリー軸受系のロータダイナミクス総説）は、今日採用したDellaCorte 2010と内容が大きく重なるため見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順・直近数年）",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA18/抄録6。arXivの14件はフォイル軸受と無関係。OpenAlex新着10件のうち未配信は抄録なしの1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。13件が既配信、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順・直近数年）",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA20/抄録4。arXivは別分野が大半。OpenAlex新着10件のうち、分野内の未配信はラビリンスシールの2026年の2件（抄録なし）。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。未配信は書籍・統計学・電力系統・転がり軸受の欠陥モデルなど。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "未配信の全文候補の深掘り（件数は検索語ごとの総ヒット数）",
+      "terms": [
+       "foil bearing",
+       "gas foil journal bearing",
+       "compliant foil air bearing",
+       "foil bearing stiffness damping",
+       "oil-free turbomachinery",
+       "foil thrust bearing",
+       "rotordynamic seal",
+       "rotor bearing instability"
+      ],
+      "hits": 151,
+      "note": "「foil bearing」151件、「rotordynamic seal」146件、「rotor bearing instability」75件など。上位25件ずつを既配信と突き合わせ、全文テキスト（.txt）が取れるものから選んだ。"
+     },
+     {
+      "name": "Crossref・Semantic Scholar・出版社ページ（抄録の補完）",
+      "scope": "抄録なしの2026年候補2件のDOIで確認",
+      "terms": [
+       "10.1016/j.ast.2026.113981",
+       "10.1016/j.ijmecsci.2026.112047"
+      ],
+      "hits": 2,
+      "note": "どの経路でも抄録が取れず、ScienceDirectは403だった。"
+     }
+    ],
+    "note": "今日は最新枠の2026年の候補が全て抄録を取得できず、NTRSの全文4本だけの号になりました。"
+   },
+   "afterword": "今回「なるほど」と思ったのは、Hudson & Wittmanの報告です。設計時の解析も工場試験も問題なかったのに現場で不安定になり、解析し直しても、安定さを示す数字は励振力を4倍にしても約0.3残るほど大きかった、とあります。それでも不安定は出て、軸受を幅広にしたら消えた。著者が、原因の力は分からない、さらなる研究が必要、とはっきり書いているのが印象に残りました。もう一つは、DellaCorteの報告で、フォイル軸受の剛性は「気体の膜」と「フォイルの構造」という二本のばねが直列に並んでいる、という説明です。軟らかいほうが効くので、軽い荷重と重い荷重で支配するばねが入れ替わる、というのは素人にも腑に落ちました（これは報告の説明を私なりに読んだ感想です）。 — 編集担当より"
   }
  ]
 }
