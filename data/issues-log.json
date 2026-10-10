@@ -11660,6 +11660,158 @@
     "note": "今日は最新枠の2026年の候補が全て抄録を取得できず、NTRSの全文4本だけの号になりました。"
    },
    "afterword": "今回「なるほど」と思ったのは、Hudson & Wittmanの報告です。設計時の解析も工場試験も問題なかったのに現場で不安定になり、解析し直しても、安定さを示す数字は励振力を4倍にしても約0.3残るほど大きかった、とあります。それでも不安定は出て、軸受を幅広にしたら消えた。著者が、原因の力は分からない、さらなる研究が必要、とはっきり書いているのが印象に残りました。もう一つは、DellaCorteの報告で、フォイル軸受の剛性は「気体の膜」と「フォイルの構造」という二本のばねが直列に並んでいる、という説明です。軟らかいほうが効くので、軽い荷重と重い荷重で支配するばねが入れ替わる、というのは素人にも腑に落ちました（これは報告の説明を私なりに読んだ感想です）。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-11",
+   "status": "published",
+   "headline": "北海と英国の圧縮機が「回転の2/3」で不安定になった現場記録（1980年）、NASAのオイルフリー化の概観スライド（2013年）、多層フォイルスラスト軸受の剛性・減衰実験（2026年）、流体を通しながら回るパイプの安定境界（2026年）",
+   "intro": "今日も collect.mjs の候補プールは、ほとんどが既配信か分野外でした。foilの最新枠はarXivが流体や制御など別分野ばかり、定番枠は14件のうち13件が既配信で、残る1件は書籍。rotorも最新枠のarXivは別分野で、定番枠には統計学や電力系統の論文が混ざっていました。そこで、OpenAlexを発行日順に直接検索して2026年の候補を探し、NASA NTRSの直接検索で未配信の全文を探しました。最新枠は、ScienceDBの多層ガスフォイルスラスト軸受の実験（foil）と、フローニンゲン大学の博士論文（rotor）で、どちらも抄録ベースです。定番枠は、NTRSで全文が読めるDellaCorteのスライド資料（foil、2013年）とDoyleの現場報告（rotor、1980年）です。最初に作り込んだ定番候補2本（Huckabay & Stahl 1966の箔軸受実験、Bently & Muszynska 1988の周方向流れと安定性）は、忠実性チェックを2回通しても重い指摘が残ったため、保留にしました。Doyleの著者は民間企業の所属で、図は転載せず概念図のみです。いずれもOCRやスライドのテキスト化に崩れがあり、図の数値は確認できないものがあります。",
+   "picked": [
+    {
+     "id": "ntrs:20140006582",
+     "title": "長寿命・メンテナンスフリーの発電用途に向けた、オイルフリー・ターボ機械技術（DellaCorte 2013）",
+     "why": "フォイル軸受・固体潤滑コーティング・解析の3つの進歩で、オイルフリー化がどこまで来たかをNASAの研究者が一望した資料。論文ではなくスライドの概観なので、数値は資料の主張として紹介した。"
+    },
+    {
+     "id": "ntrs:19800021206",
+     "title": "高性能ターボ機械におけるロータダイナミック不安定の現場経験（Doyle 1980）",
+     "why": "原因が分かるまでにロータを何度も入れ替え、半年かかった、という現場の時間の使われ方が、計算や実験の論文には出てこない形で書かれている。"
+    },
+    {
+     "id": "doi:10.57760/sciencedb.tribology.00033",
+     "title": "多層ガスフォイルスラスト軸受の静特性・動特性の実験的研究（Hu ほか 2026）",
+     "why": "荷重・予圧・加振の条件を振った実験で、剛性は荷重とともに非線形に増え、周波数が上がると減衰が下がる、という傾向が抄録に書かれている。本文は未取得のため、抄録の範囲の紹介。"
+    },
+    {
+     "id": "doi:10.33612/diss.1568842864",
+     "title": "流体を通す回転パイプの動力学（Fasihi 2026）",
+     "why": "流れと回転という2つの不安定化要因が重なる系の線形化した安定境界が、4分の1の楕円になるという抄録の記述が、ロータダイナミクスと管のフラッターをつなぐ話として面白い。抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "保留にした定番候補2本",
+     "note": "Huckabay & Stahl 1966（NASA CR-76997、箔軸受ロータの実験）とBently & Muszynska 1988（NASA CP、周方向流れとロータの安定性）は、作り込んだ後の忠実性チェックを2回通しても重大な指摘（概念図の幾何の誤り、本文の誤読など）が残ったため、保留にしました。"
+    },
+    {
+     "title": "既配信と分かって取り下げた候補",
+     "note": "Licht & Branger 1973（NASA CR-2243）は、タイトル照合ではなくNTRSのidで照合して既配信と判明し、取り下げました。"
+    },
+    {
+     "title": "見送ったNASA報告",
+     "note": "Elrod 1996（張力型フォイル軸受の大変形解析）は、プログラムのデバッグが終わっていない途中経過で、OCRも崩れていたため見送りました。"
+    },
+    {
+     "title": "抄録を取得できなかった2026年の論文",
+     "note": "Wang ほか（スラスト型多層ガスフォイル軸受の動的応答、Aerospace Science and Technology 2026）とLe ほか（扇形ラビリンスシール、Int. J. Mech. Sci. 2026）は、今日もOpenAlex・Crossrefに抄録が無く、見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 24,
+      "note": "OA18/抄録6。arXivの14件はフォイル軸受と無関係。OpenAlex新着10件のうち未配信は抄録なしの1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。13件が既配信、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "OA13/抄録0。arXivは別分野が大半。OpenAlex新着のうち分野内の未配信は、ResearchGateの単著1件（抄録なし）。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。未配信は書籍・統計学・電力系統・転がり軸受の欠陥モデルなど。"
+     },
+     {
+      "name": "OpenAlex（直接検索・2025年6月以降の新着）",
+      "scope": "title_and_abstract 検索を発行日順に",
+      "terms": [
+       "rotordynamic",
+       "rotor bearing instability",
+       "gas foil bearing",
+       "foil bearing"
+      ],
+      "hits": 486,
+      "note": "件数は4語の合計（176・102・69・139）。2026年の未配信候補を探し、抄録が取れて分野に合う2本（ScienceDBの実験、フローニンゲン大の博士論文）を採用。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "未配信の全文候補の深掘り（件数は検索語ごとの総ヒット数）",
+      "terms": [
+       "foil bearing",
+       "gas bearing",
+       "compliant surface bearing",
+       "foil journal bearing rotor",
+       "foil thrust bearing",
+       "rotordynamic instability",
+       "rotor bearing system whirl",
+       "labyrinth seal rotordynamic",
+       "fluid film bearing stability",
+       "critical speed flexible rotor"
+      ],
+      "hits": 151,
+      "note": "「foil bearing」151件、「gas bearing」725件、「rotordynamic instability」214件など。上位25件ずつを既配信とid・タイトルで突き合わせ、全文テキスト（.txt）が取れるものから選んだ。"
+     },
+     {
+      "name": "Crossref・OpenAlex（抄録の補完）",
+      "scope": "抄録なしの2026年候補のDOIで確認",
+      "terms": [
+       "10.1016/j.ast.2026.113981",
+       "10.1016/j.ijmecsci.2026.112047",
+       "10.1016/j.ijmecsci.2026.111940"
+      ],
+      "hits": 3,
+      "note": "どれも抄録が取れなかった（Elsevier）。"
+     }
+    ],
+    "note": "今日は最新枠の2本が抄録ベースで、定番枠の2本がNTRSの全文、という構成です。"
+   },
+   "afterword": "今回「なるほど」と思ったのは、Doyleの現場報告です。同じ型の圧縮機6台のうち、問題が出る台と出ない台があり、ロータを入れ替えても原因が分からない。診断計器をつないで回転の2/3の成分がはっきり記録されるまで、約半年かかった、とあります。解析や実験だけの論文では見えない、現場の時間の使われ方の話でした。もう一つは、保留にした2本のことです。作り込んだ論文を、検査で止める判断をするのは少し惜しい気もしましたが、図の向きや本文の読み違いが残ったまま出すより、今日は出さないほうがよいと思いました（これは私の感想です）。 — 編集担当より"
   }
  ]
 }
