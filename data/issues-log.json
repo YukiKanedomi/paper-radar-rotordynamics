@@ -11812,6 +11812,169 @@
     "note": "今日は最新枠の2本が抄録ベースで、定番枠の2本がNTRSの全文、という構成です。"
    },
    "afterword": "今回「なるほど」と思ったのは、Doyleの現場報告です。同じ型の圧縮機6台のうち、問題が出る台と出ない台があり、ロータを入れ替えても原因が分からない。診断計器をつないで回転の2/3の成分がはっきり記録されるまで、約半年かかった、とあります。解析や実験だけの論文では見えない、現場の時間の使われ方の話でした。もう一つは、保留にした2本のことです。作り込んだ論文を、検査で止める判断をするのは少し惜しい気もしましたが、図の向きや本文の読み違いが残ったまま出すより、今日は出さないほうがよいと思いました（これは私の感想です）。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-12",
+   "status": "published",
+   "headline": "オイルフリー軸支持系の設計の目安（NASA、2010〜2011年）、気体軸受で支えた歯車軸の振動（2026年）、負荷トルクだけでロータが振れ回る「トルクホワール」の実験（1985年）、スプライン継手を通る組立てずれの超高調波（2026年）",
+   "intro": "今日も collect.mjs の候補プールは、ほぼ既配信か分野外でした。foilの最新枠はarXivが流体や制御など別分野ばかり、定番枠は14件のうち13件が既配信で残る1件は書籍。rotorの定番枠には統計学や電力系統の論文が混ざっていました。そこで、OpenAlexを発行日順に直接検索して2026年の候補を探し、NASA NTRSの直接検索で未配信の全文を探しました。最新枠は、気体軸受で支えた歯車–ロータ系の解析（Springerの出版社ページで抄録を取得）と、スプライン継手を通る組立てずれの解析（MDPI、OpenAlexの抄録）で、どちらも抄録ベースです。MDPIの出版社ページは403で、全文は取れませんでした。定番枠は、NTRSで全文が読めるDellaCorteの2010年の会議論文（foil）とVanceらの1985年の報告（rotor）です。Vanceらの報告はスキャンOCRの文字が崩れており、式と図の数値は載せず、逐語の引用は崩れていない結論の段落だけにしました。著者がNASA職員ではないので、図は転載せず概念図のみです。4本とも忠実性チェックを2ラウンドで通しました。",
+   "picked": [
+    {
+     "id": "ntrs:20110011144",
+     "title": "オイルフリー軸支持系のロータダイナミクス：過去・現在と、これからの課題と機会（DellaCorte 2011）",
+     "why": "フォイル軸受の剛性・減衰が油軸受よりどれだけ小さいかを、数値の目安（剛性約6 MN/m/cm²、減衰100〜1800 N·s/m/cm²）で示し、「軸受の能力に合わせてロータを設計する」と4段階の進め方を勧める概観。新しい実験ではなく整理なので、数字は目安として紹介した。"
+    },
+    {
+     "id": "ntrs:19860020697",
+     "title": "ロータダイナミック不安定の「トルクホワール」理論の実験的検証と実用への応用（Vance, Noah, Yim 1985）",
+     "why": "負荷トルクだけで非同期の振れ回りが起きることを、専用の試験台で確かめた報告。実機では多くの場合二次的だが、張出しの圧縮機モデルでは臨界減衰の少なくとも12%が要る、という見積もりが具体的で面白い。"
+    },
+    {
+     "id": "doi:10.1007/s11071-026-12686-3",
+     "title": "気体軸受の支持剛性の変化と、歯車–ロータ系の振動特性に及ぼす非線形連成の効果（Dong ほか 2026）",
+     "why": "気体膜のすきまが広がると圧力・負荷容量が下がり、等価支持剛性が非線形に下がる、という傾向が抄録に書かれている。フォイル軸受そのものではない点は断ったうえで、気体軸受で支えたロータの動特性として載せた。本文は未取得で、抄録の範囲の紹介。"
+    },
+    {
+     "id": "doi:10.3390/machines14091061",
+     "title": "スプライン継手で結合したロータ–ケーシング系における、組立て起因の超高調波応答を予測する物理ベースの枠組み（Guan ほか 2026）",
+     "why": "軸受座のずれ（同軸度誤差）が、スプライン継手を通って超高調波の応答を生む、という因果の連鎖を、モデルと実験で調べた研究。抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録を取得できなかった2026年の論文",
+     "note": "Wang ほか（多層ガスフォイルスラスト軸受の軸方向擾乱への応答、Aerospace Science and Technology 2026）とZhu ほか（二重V型ハニカム構造と減衰材を持つフォイル軸受–ロータ系、MSSP 2025）は、OpenAlex・Crossref・Semantic Scholar のいずれにも抄録が無く、出版社ページ（ScienceDirect）は403で、見送りました。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "MDPIの2026年のLubricants誌の論文（円すい–円筒のハイブリッド流体膜軸受）は、抄録は取れましたが内容が一般的な記述にとどまるため、今回は見送りました。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックで、本文の一部に他の節の理由の混入（スラスト軸受の性能が低い理由）、出典に無い略称、換算が合わない単位併記などの指摘を受け、いずれも直しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 24,
+      "note": "OA17/抄録7。arXivの14件は別分野。OpenAlex新着10件のうち未配信は抄録なしの2件。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。13件が既配信、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA8/抄録5。arXivは別分野が大半。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。分野内の未配信は書籍2冊のみ。"
+     },
+     {
+      "name": "OpenAlex 直接検索（深掘り）",
+      "scope": "2025年以降・発行日順（キーワード別に直接クエリ）",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "air bearing rotor",
+       "gas bearing",
+       "gas lubricated bearing",
+       "rotordynamic",
+       "rotor bearing system",
+       "journal bearing stability",
+       "seal rotordynamic",
+       "rotor whirl",
+       "flexible rotor",
+       "squeeze film damper"
+      ],
+      "hits": 300,
+      "note": "各クエリ25件まで。抄録のある未配信の2026年候補から、気体軸受のものと、スプライン継手のものを選んだ。"
+     },
+     {
+      "name": "NASA NTRS 直接検索",
+      "scope": "全文テキストAPIが使えるレコード",
+      "terms": [
+       "foil bearing",
+       "gas bearing",
+       "air bearing",
+       "oil-free",
+       "foil thrust bearing",
+       "compliant bearing",
+       "hydrodynamic bearing",
+       "rotordynamic",
+       "rotor stability",
+       "seal rotordynamic",
+       "subsynchronous",
+       "whirl",
+       "critical speed",
+       "squeeze film damper",
+       "tilting pad bearing",
+       "labyrinth seal",
+       "magnetic bearing"
+      ],
+      "hits": 600,
+      "note": "未配信で全文テキストがあり、著者がNASA職員（またはワークショップ論文）のものから、DellaCorte 2011とVance ほか 1985を選んだ。"
+     },
+     {
+      "name": "Crossref・Semantic Scholar・Springer出版社ページ（抄録の補完）",
+      "scope": "抄録なしの2026年候補のDOIで確認",
+      "terms": [
+       "10.1016/j.ast.2026.113981",
+       "10.1016/j.ymssp.2025.113462",
+       "10.1007/s11071-026-12686-3"
+      ],
+      "hits": 3,
+      "note": "Elsevierの2件は抄録が取れず、Springerの1件は出版社ページで抄録が取れた。"
+     }
+    ],
+    "note": "hits は各検索の取得件数（直接検索は概数）。"
+   },
+   "afterword": "今回「なるほど」と思ったのは、Vanceらの実験で、ベルトの歯数の比で決まる「回転数の0.56倍」の振動が、トルクの効果とは別に見えていた、という点でした。試験台の中の機械的な成分を、きちんと名前をつけて切り分けてから、トルクの効果を見ている。実験の組み立て方の話として面白く読みました。もう一つ、DellaCorteの概観で、フォイル軸受の減衰が油の軸受より1〜2桁小さいのに、機械のほうを軸受に合わせて設計する、という逆転の発想を、設計の順序の話として整理しているのも印象に残りました（これは私の感想です）。 — 編集担当より"
   }
  ]
 }
