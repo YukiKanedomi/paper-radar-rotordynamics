@@ -11975,6 +11975,171 @@
     "note": "hits は各検索の取得件数（直接検索は概数）。"
    },
    "afterword": "今回「なるほど」と思ったのは、Vanceらの実験で、ベルトの歯数の比で決まる「回転数の0.56倍」の振動が、トルクの効果とは別に見えていた、という点でした。試験台の中の機械的な成分を、きちんと名前をつけて切り分けてから、トルクの効果を見ている。実験の組み立て方の話として面白く読みました。もう一つ、DellaCorteの概観で、フォイル軸受の減衰が油の軸受より1〜2桁小さいのに、機械のほうを軸受に合わせて設計する、という逆転の発想を、設計の順序の話として整理しているのも印象に残りました（これは私の感想です）。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-13",
+   "status": "published",
+   "headline": "箔軸受のトップフォイルを電子ビーム溶接にしたときの曲げ疲労（NASA、1984年）、動的荷重を受ける油膜ジャーナル軸受の限界サイクル（1987年）、ガスフォイルと磁気軸受のハイブリッド（2025年）、弾性リング型スクイーズフィルムダンパの動特性（2026年）",
+   "intro": "今日も collect.mjs の候補プールは、ほぼ既配信か分野外でした。foilの最新枠は、arXivの14件が流体や制御など別分野で、OpenAlex新着10件のうち未配信は抄録のない2件だけ。定番枠は14件のうち13件が既配信で、残る1件は書籍でした。rotorも、最新枠の未配信はシール2件と保持器の計測の計3件で、いずれも抄録が取れず、定番枠は統計学や電力系統の論文、書籍などでした。そこで、OpenAlexを2025年4月以降の発行日順に直接検索して抄録のある候補を探し、NASA NTRSの直接検索で未配信の全文を探しました。最新枠は、ガスフォイル軸受と磁気軸受を組み合わせたハイブリッド軸受の動特性（J. Vib. Control、2025年）と、弾性リング型スクイーズフィルムダンパの動特性係数（Ind. Lubr. Tribol.、2026年）で、どちらも抄録ベースです。出版社ページは読めず、全文は取れませんでした。定番枠は、NTRSで全文が読めるSaltsman & Halfordの1984年の報告（foil）とMajumdar & Breweの1987年の論文（rotor）です。Majumdarらの論文はOCRの文字が崩れていて、PDFから読み直しましたが、式は1つだけにして、図は転載せず概念図のみです。どちらもNASA職員が著者に含まれますが、図の転載はしていません。",
+   "picked": [
+    {
+     "id": "ntrs:19840008521",
+     "title": "電子ビーム溶接した箔の曲げ疲労——クライスラー／DOE改良型自動車用ガスタービンの流体力学的空気軸受への応用（Saltsman & Halford 1984）",
+     "why": "トップフォイルをスポット溶接した箔軸受が溶接線から疲労で割れる問題を、電子ビーム溶接に替えれば解決できるかを試した報告。結論が「溶接の質を上げる」ではなく「溶接を使わない設計が最も有望」である点と、同じひずみでも寿命が約14倍ばらつくという結果を、そのまま述べる点が読みどころ。式は本文に実在するもの（式(7)・(11)・(13)）だけを載せ、最小寿命線の係数は、OCRで数字が怪しいので載せなかった。"
+    },
+    {
+     "id": "doi:10.1177/10775463251391491",
+     "title": "能動制御を考慮した、二葉・ずらしパッド型ハイブリッドフォイル磁気軸受の動特性に関する理論的・実験的研究（Xian ほか 2025）",
+     "why": "ガスフォイル軸受と能動磁気軸受を組み合わせた軸受の動剛性・交差剛性・損失係数を、理論と実験で調べた研究。直接動剛性がGFB・AMBより高く、交差剛性がGFBより低いという傾向が抄録に書かれている。数値は抄録に無く、抄録の範囲の紹介。"
+    },
+    {
+     "id": "ntrs:19890017743",
+     "title": "動的荷重を受ける油膜ジャーナル軸受で支持された剛体ロータの安定性（Majumdar & Brewe 1987）",
+     "why": "運動方程式と油膜の力を時間ステップごとに交互に解いて、軸の中心の軌跡を追った報告。一方向の一定荷重では安定な軸受に周期荷重を重ねると、軌跡が限界サイクルに至る例が示される。ただし、特定の条件の計算例で、機構の説明や安定限界の地図は載っていない。OCRで式の多くが崩れていたため、式は(3)だけ載せた。"
+    },
+    {
+     "id": "doi:10.1108/ilt-08-2025-0355",
+     "title": "摂動法による、弾性リング型スクイーズフィルムダンパの油膜の動的挙動（Li ほか 2026）",
+     "why": "航空エンジンの高速ロータに使われる弾性リング型スクイーズフィルムダンパの動特性係数を、流体慣性を含めて摂動法で調べた研究。内側の油膜の係数が外側より約一桁大きく、交差連成係数も無視できない、という傾向が抄録に書かれている。数値や条件は抄録に無く、抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録を取得できなかった候補",
+     "note": "Wang ほか（多層ガスフォイルスラスト軸受の軸方向擾乱への応答、Aerospace Science and Technology 2026）、Zhu ほか（二重V型ハニカム構造と減衰材を持つフォイル軸受–ロータ系、MSSP 2025）、Le ほか（扇形ラビリンスシールの流れとロータダイナミクス、Int. J. Mech. Sci. 2026）、Sun ほか（極低温液体タービンの軸シールのロータダイナミクス特性、Int. J. Refrigeration 2026）の4件は、OpenAlex・Crossref・Semantic Scholar のいずれにも抄録が無く、出版社ページ（ScienceDirect）は403で、見送りました。"
+    },
+    {
+     "title": "全文が読めず見送った候補",
+     "note": "NASA CR-159442（Mini-BRU/BIPS 箔軸受の開発、1978年）はNTRSの全文テキストが崩れていて、数値も文も読めませんでした。Bruckner の「箔軸受の受動的な熱管理」は特許（US 9,062,712）の出願文書で、論文ではないため見送りました。Xie ほかの2026年の2本（スクイーズフィルムダンパの軸のずれ、Tribology International。柔軟ロータ・支持・ケーシング系、MSSP）は、OpenAlexがOA（CC BY-NC-ND）と表示しますが、ScienceDirectが403で全文を取れず、今回は選びませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘があり（出典に無い一般的な補足、図番号の帰属、「最大」「量産」といった強い語など）、いずれも直しました。Saltsman & Halford の報告は、2回目の確認でも、直した説明の中に「最小寿命線の右側＝寿命の短い側」という向きの取り違えが1か所見つかりました（誤りは私の修正で入ったものです）。その箇所を原文に合わせて直し、他の軽微な指摘もあわせて直しています。この最後の直しについては、3回目の自動検証は行わず、原文との照合を自分で行いました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA18/抄録6。arXivの14件は別分野（流体・制御・電力系統など）。OpenAlex新着10件のうち未配信は抄録なしの2件。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4/抄録10。13件が既配信、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 24,
+      "note": "OA18/抄録6。arXivの14件のうち3件は既配信、残りは別分野。OpenAlex新着10件のうち未配信は抄録なしの3件。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1/抄録13。未配信の5件は、統計学・電力系統・書籍・転がり軸受の欠陥など分野外が中心。"
+     },
+     {
+      "name": "OpenAlex 直接検索（深掘り）",
+      "scope": "2025年4月以降・発行日順・抄録のある論文",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "air foil bearing",
+       "bump foil",
+       "foil thrust bearing",
+       "gas bearing rotor",
+       "rotordynamic",
+       "rotor-bearing system stability",
+       "annular seal rotordynamic",
+       "oil whirl",
+       "journal bearing instability",
+       "squeeze film damper",
+       "critical speed rotor",
+       "fluid film bearing dynamic"
+      ],
+      "hits": 350,
+      "note": "各クエリ25件まで（概数）。未配信の候補は約80件で、分野外が多い。ここから動特性係数を扱う2本（ガスフォイルと磁気軸受のハイブリッド、弾性リング型スクイーズフィルムダンパ）を選んだ。"
+     },
+     {
+      "name": "NASA NTRS 直接検索",
+      "scope": "全文テキストAPIが使えるレコード",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotor",
+       "compliant surface bearing",
+       "air bearing high speed",
+       "gas lubricated bearing stability",
+       "foil journal bearing test",
+       "hydrodynamic bearing whirl",
+       "seal rotordynamic coefficients",
+       "rotor instability turbomachinery",
+       "subsynchronous vibration",
+       "bearing damper rotor",
+       "squeeze film damper",
+       "critical speed rotor",
+       "fluid film bearing dynamic coefficients",
+       "labyrinth seal",
+       "annular seal"
+      ],
+      "hits": 640,
+      "note": "各クエリ40件まで（概数）。未配信は146件。全文が読めて、著者にNASA職員を含む2件（Saltsman & Halford 1984、Majumdar & Brewe 1987）を選んだ。"
+     },
+     {
+      "name": "Crossref・Semantic Scholar・ScienceDirect（抄録の補完）",
+      "scope": "抄録なしの2025〜2026年の候補のDOIで確認",
+      "terms": [
+       "10.1016/j.ast.2026.113981",
+       "10.1016/j.ymssp.2025.113462",
+       "10.1016/j.ijmecsci.2026.112047",
+       "10.1016/j.ijrefrig.2026.01.023"
+      ],
+      "hits": 4,
+      "note": "4件とも抄録は取れず、ScienceDirectは403でした。"
+     }
+    ],
+    "note": "hits は各検索の取得件数（直接検索は概数）。"
+   },
+   "afterword": "今回「なるほど」と思ったのは、Saltsmanらの報告の結論が、溶接を良くするという話ではなく、「いかなる溶接も避ける設計が最も可能性がある」という方向だった点でした。同じひずみでも寿命が約14倍ばらつくなら、材料や溶接の差を論じるより、ばらつきの原因そのものを設計から外す、という考え方なのだと受け取りました。もう一つ、Majumdarらの報告は、安定か不安定かの二択ではなく、不安定になったあとに軸の中心がどんな軌道（限界サイクル）に落ち着くかまで追っていて、計算の手間と引き換えに見える情報が増えるのだと感じました（これは私の感想です）。 — 編集担当より"
   }
  ]
 }
