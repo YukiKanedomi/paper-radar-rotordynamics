@@ -12140,6 +12140,155 @@
     "note": "hits は各検索の取得件数（直接検索は概数）。"
    },
    "afterword": "今回「なるほど」と思ったのは、Saltsmanらの報告の結論が、溶接を良くするという話ではなく、「いかなる溶接も避ける設計が最も可能性がある」という方向だった点でした。同じひずみでも寿命が約14倍ばらつくなら、材料や溶接の差を論じるより、ばらつきの原因そのものを設計から外す、という考え方なのだと受け取りました。もう一つ、Majumdarらの報告は、安定か不安定かの二択ではなく、不安定になったあとに軸の中心がどんな軌道（限界サイクル）に落ち着くかまで追っていて、計算の手間と引き換えに見える情報が増えるのだと感じました（これは私の感想です）。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-14",
+   "status": "published",
+   "headline": "オイルが無いガスタービンをどう見張るか（NASA、2004年）、玉軸受ロータが危険速度を急いで通り抜けると（NASA、2005年）、気体軸受用の密閉型ダンパ（2026年）、超臨界CO2潤滑のティルティングパッド軸受（2026年）",
+   "intro": "今日も collect.mjs の候補プールは、ほぼ既配信か分野外でした。foilの最新枠はarXivの14件が流体・制御・電力系統など別分野で、OpenAlex新着の未配信は抄録が取れない数件だけ。定番枠は14件のうち13件が既配信で、残る1件は書籍でした。rotorも、最新枠の未配信は転がり軸受の保持器の計測やシール、機械学習の故障診断などで、定番枠は統計学や電力系統の論文、書籍などでした。そこで、NASA NTRSの直接検索で未配信の全文を探し、OpenAlexを2025年9月以降の発行日順に直接検索して、抄録の取れる候補を探しました。全文が読めるのは、DellaCorteの2004年の報告（foil）と、Fleming らの2005年の報告（rotor）です。どちらもクリーンなテキストが取れましたが、第2・第3著者がNASA職員でない報告もあるため、図は転載せず概念図だけにしています。最新枠は、気体潤滑ジャーナル軸受用の密閉型スクイーズフィルムダンパ（foil）と、超臨界CO2潤滑のティルティングパッド軸受の動特性（rotor）で、どちらも抄録ベースです。出版社ページ（ScienceDirect）が読めず、候補にしたScienceDirectの論文の抄録は取れませんでした。",
+   "picked": [
+    {
+     "id": "ntrs:20040062033",
+     "title": "オイルフリー・ガスタービンの健全性監視と故障予防——これからの課題と取り組み方（DellaCorte 2004）",
+     "why": "フォイル軸受を使うとオイル系統が丸ごと無くなり、チップ検出やオイル分析が使えなくなる。そのとき何を見張るか——軸の軌道、軸受温度、摩耗センサ、電気的な導通、始動・停止時の挙動——を整理した論考。実験データは載っておらず、提案の多くは「考えられる方法」である点を、そのまま述べる。"
+    },
+    {
+     "id": "ntrs:20050196666",
+     "title": "荷重に依存する非線形の軸受剛性を持つ、加速するロータのアンバランス応答の予測（Fleming ほか 2005）",
+     "why": "危険速度は急いで通り抜ければ振幅が下がる、という通説を、玉軸受の非線形剛性を入れて確かめた報告。有意な低減には10,000→80,000 rpm を0.05秒以下で上げるほどの高い加速率が要る、という結果を、計算の範囲の話としてそのまま述べる。実験検証は無い。"
+    },
+    {
+     "id": "doi:10.1177/13506501261429791",
+     "title": "気体潤滑ジャーナル軸受用の新しい密閉型スクイーズフィルムダンパの非線形動特性：数値的・実験的研究（Zhang ほか 2026）",
+     "why": "高出力機器の軸受系に優れた減衰を与える密閉型スクイーズフィルムダンパを考案し、層流入口効果を入れた理論モデルと加振試験で非線形の弾性力・減衰力を調べた研究。数値は抄録に無く、抄録の範囲の紹介。題名では気体潤滑ジャーナル軸受用だが、フォイル軸受かどうかは抄録からは分からない。"
+    },
+    {
+     "id": "doi:10.1115/1.4070826",
+     "title": "超臨界二酸化炭素で潤滑されるティルティングパッド軸受：周波数摂動解析と高周波極限の特性（Yi ほか 2026）",
+     "why": "S-CO2で潤滑する軸受の動剛性・減衰を周波数全域で求め、高周波では剛性が硬くなり減衰が消えること、高周波極限の係数が定常密度と圧縮性の項で決まることを示した、と抄録は述べる。数値や条件は抄録に無く、抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録を取得できなかった候補",
+     "note": "Zhu ほか（二重V型ハニカム構造と減衰材を持つフォイル軸受–ロータ系、MSSP 2025）、Wang ほか（多層ガスフォイルスラスト軸受の軸方向擾乱への応答、Aerospace Science and Technology 2026）、Le ほか（扇形ラビリンスシールの流れとロータダイナミクス、Int. J. Mech. Sci. 2026）は、OpenAlex・Crossref・Semantic Scholar のいずれにも抄録が無く、ScienceDirectは403／CAPTCHAで、見送りました。"
+    },
+    {
+     "title": "重なりが大きいため見送った候補",
+     "note": "Proctor & Gunter（2005、NASA/TM-2005-213808）は、同じ高速シール試験ロータの解析で、全文も読めましたが、実験を加えた2007年の報告がすでに配信済みのため、見送りました。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。DellaCorteの報告では、私の要約が原文と逆に「直交しない」プローブと書いていた点（原文は軸に直交）や、「possibly」の留保の脱落、原文に無い「律速」などの解釈の書き込みがあり、Flemingらの報告では、「荷重依存の軸受特性を使っていないようだ」の対象をGenta・DelpreteからHassenpflugに取り違えていた点（重大）と、「実機では出せない加速」など原文に無い評価、「どんな一定剛性でも」というぼかしの脱落がありました。抄録ベースの2本では、一般的な説明の明示漏れや、抄録の例示を「4つ」と数えていた点などがありました。すべて直し、2回目の自動検証では、抄録ベースの2本が通りました。DellaCorteとFlemingらの2本には、2回目にも軽微な指摘（留保の復元漏れなど）が残り、これらは3回目の自動検証は行わず、原文との照合を自分で行って直しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXivの14件は別分野（流体・制御・電力系統など）。OpenAlex新着10件のうち未配信は抄録の取れない数件。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。13件が既配信、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXivの14件のうち既配信1件、残りは別分野。OpenAlex新着10件は、既配信が多く、残りは保持器の計測・シール・機械学習の故障診断など。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計学・電力系統・書籍・転がり軸受の欠陥など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（深掘り）",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "foil bearing",
+       "gas foil journal bearing",
+       "compliant foil bearing test",
+       "foil air bearing",
+       "labyrinth seal rotordynamic",
+       "annular seal rotordynamic coefficients",
+       "squeeze film damper",
+       "rotor instability subsynchronous",
+       "critical speed rotor bearing",
+       "tilting pad bearing dynamic coefficients",
+       "damper seal leakage",
+       "cross-coupled stiffness",
+       "foil bearing thermal management cooling",
+       "oil-free turbine engine foil"
+      ],
+      "hits": 162,
+      "note": "未配信と判定した重複除去後の約162件（検索の重なりを除いた件数）から、テキストが読めるものを探し、DellaCorte 2004、Fleming ほか 2005 を選んだ。"
+     },
+     {
+      "name": "OpenAlex 直接検索（深掘り）",
+      "scope": "2025年9月以降・発行日順・抄録のある論文",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotor",
+       "labyrinth seal",
+       "rotordynamic",
+       "squeeze film damper",
+       "journal bearing",
+       "air bearing rotor",
+       "gas lubricated bearing",
+       "aerodynamic bearing",
+       "gas thrust bearing",
+       "foil air bearing",
+       "oil-free"
+      ],
+      "hits": 194,
+      "note": "既配信を除いた約194件（重複除去後）から、抄録のある未配信を探し、Zhang ほか 2026、Yi ほか 2026 を選んだ（Zenodo 等の分野外が多く含まれる）。"
+     }
+    ],
+    "note": "collect.mjs の本日の検索語（日替わりローテーション）をそのまま記録した。深掘り（NTRS・OpenAlex直接検索）の件数は、既配信を除いた重複除去後の概数。"
+   },
+   "afterword": "— 編集担当より\n専門家ではない私にとって、今回いちばん「なるほど」だったのは、オイルが無い機械は、オイルという「見張りの窓」も一緒に失う、という点でした。ふつうのガスタービンでは、オイルに混ざる金属くずを拾えば、中の摩耗が分かる。オイルフリーにすると、その窓が閉まるので、軸の位置そのものを見張る方向に頭を切り替える必要がある、と2004年の報告は述べています。もう一つは、危険速度を「急いで通り抜ければ小さくなる」という通説が、玉軸受の非線形性を入れて計算しても確かめられた一方で、有意な低減には0.05秒以下というとても高い加速率が要った点です。通説が正しくても、使えるかどうかは別の話、と感じました。"
   }
  ]
 }
