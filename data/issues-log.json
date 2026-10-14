@@ -12289,6 +12289,146 @@
     "note": "collect.mjs の本日の検索語（日替わりローテーション）をそのまま記録した。深掘り（NTRS・OpenAlex直接検索）の件数は、既配信を除いた重複除去後の概数。"
    },
    "afterword": "— 編集担当より\n専門家ではない私にとって、今回いちばん「なるほど」だったのは、オイルが無い機械は、オイルという「見張りの窓」も一緒に失う、という点でした。ふつうのガスタービンでは、オイルに混ざる金属くずを拾えば、中の摩耗が分かる。オイルフリーにすると、その窓が閉まるので、軸の位置そのものを見張る方向に頭を切り替える必要がある、と2004年の報告は述べています。もう一つは、危険速度を「急いで通り抜ければ小さくなる」という通説が、玉軸受の非線形性を入れて計算しても確かめられた一方で、有意な低減には0.05秒以下というとても高い加速率が要った点です。通説が正しくても、使えるかどうかは別の話、と感じました。"
+  },
+  {
+   "date": "2026-10-15",
+   "status": "published",
+   "headline": "フォイル軸受を実機の前に試す模擬リグ（NASA、2007年）、平板型フォイルスラスト軸受のCFD（2026年）、インペラ側面のすきまの流体力と安定性（1989年）、スクイーズフィルムダンパとミスアライメント（2026年）",
+   "intro": "今日も collect.mjs の候補プールは、ほぼ既配信か分野外でした。foilの最新枠はarXivの14件が竜巻・風力発電・交通制御など別分野で、OpenAlex新着の未配信は、抄録の取れない数件と、今回選んだKSFM誌のCFD研究だけ。定番枠は14件のうち12件が既配信で、残る2件は書籍と分野外でした。rotorも、最新枠の未配信は、機械学習の故障診断・保持器の計測・波動の論文などで、定番枠の未配信は統計学や電力系統などでした。そこで、NASA NTRSの直接検索で未配信の全文を探し、OpenAlexを2025年6月以降の発行日順に直接検索して、抄録の取れる候補を探しました。全文が読めるのは、Howardの2007年の報告（foil）と、WilliamsとChildsの1989年の会議論文（rotor）です。どちらもクリーンな本文テキストが取れましたが、後者は著者がNASA職員ではなく、式も崩れているので、図は転載せず概念図だけ、式は載せていません。最新枠は、平板型フォイルスラスト軸受のCFD（foil）と、スクイーズフィルムダンパのミスアライメント（rotor）で、どちらも抄録ベースです。出版社ページ（ScienceDirect）は今日も403で、読めたのはOpenAlexの抄録までです。",
+   "picked": [
+    {
+     "id": "ntrs:20070006852",
+     "title": "高速オイルフリー・タービンエンジンのための、新しいロータダイナミック模擬試験リグ（Howard 2007）",
+     "why": "フォイル軸受を実機の前に「模擬の軸系」で試す設備の紹介。構造に力が伝わりにくいので変位センサが主役、トルクは絶対値が測れず故障の予兆に使う、といった設計の考え方が具体的に読める。軸受性能の数値や解析との比較は載っていない点を、そのまま述べる。"
+    },
+    {
+     "id": "doi:10.5293/kfma.2026.29.5.035",
+     "title": "平板型フォイル・ガススラスト軸受の基礎的なCFD研究（Hwang & Yang 2026）",
+     "why": "気体膜を薄くすると負荷容量も動力損失も増え、薄膜域はほぼ層流で乱流モデルは過小評価の傾向がある、と抄録は述べる。数値や条件は抄録に無く、抄録の範囲の紹介。"
+    },
+    {
+     "id": "ntrs:19890013538",
+     "title": "ターボポンプのロータダイナミクスに対する、インペラのシュラウド側の流体力の影響（Williams & Childs 1989）",
+     "why": "インペラ側面のすきまの流体力は、従来の剛性・減衰・質量の係数では表せない。そこで周波数依存の追加剛性で表し、固有振動数への影響は小さいが安定性は大きく下がることを示した計算研究。実験検証は無い。OCRで式が崩れているため、式は載せず読み取れた数値のみ使った。"
+    },
+    {
+     "id": "doi:10.1016/j.triboint.2026.112367",
+     "title": "半径方向のミスアライメントの影響を考慮した、スクイーズフィルムダンパの流体力学的性能に関する新しい研究（Xie ほか 2026）",
+     "why": "非円形の振れ回り・静偏心・ミスアライメントのいずれもダンパの安定性に不利で、平均剛性への効き方の向きが条件で違う、と抄録は述べる。数値は抄録に無く、抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "抄録を取得できなかった候補",
+     "note": "Wang ほか（多層ガスフォイルスラスト軸受の軸方向擾乱への応答、Aerospace Science and Technology 2026）は、OpenAlex・Crossref・Semantic Scholar のいずれにも抄録が無く、ScienceDirect は403で、見送りました。Results in Engineering の磁気軸受タッチダウン軸受の摩耗の論文も、同じ理由で抄録が取れませんでした。"
+    },
+    {
+     "title": "重なりが大きいため見送った候補",
+     "note": "DellaCorte（2016）のフォイル軸受の技術開発の道筋（NASAスライド）は、同じ内容の2008年版がすでに配信済みのため見送りました。Proctor & Gunter（2005）は、前号でも触れた通り、同じシール試験ロータの解析の報告で、重なりが大きいため見送っています。NASA Tech Brief（Edmonds ほか 2010）は1段落で、深掘りに足りませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。Howard の報告では、基準軸と初回運転の軸を同じ軸として結びつけていた点、「再現できない」という言い方が原文より強かった点がありました。Williams & Childs の報告では、応答が発散する条件を取り違えていた点（重大）、37.5%を不安定域内と書いていた点、2倍の比較対象のあいまいさがありました。抄録ベースの2本では、粘性発熱を膜厚の結果のように書いていた点、平均減衰の向きの取り違えがありました。すべて直したうえで、2回目の自動検証を行いました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXivの14件は別分野（竜巻・風力・交通制御など）。OpenAlex新着10件のうち未配信は、抄録の取れない数件とKSFM誌のCFD研究。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。12件が既配信、残りは書籍・分野外。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "OA11／抄録2。多くが既配信、残りは機械学習の故障診断・保持器・波動など。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計学・電力系統・書籍・転がり軸受の欠陥など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（深掘り）",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing rotordynamic",
+       "compliant foil bearing",
+       "rotor bearing whirl instability",
+       "squeeze film damper rotor",
+       "rotordynamic seal coefficients",
+       "foil thrust bearing",
+       "gas bearing stability rotor",
+       "hydrodynamic gas bearing",
+       "oil-free turbine foil",
+       "foil bearing high temperature",
+       "compliant surface bearing"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。未配信の全文候補から、Howard 2007 と Williams & Childs 1989 を選んだ。"
+     },
+     {
+      "name": "OpenAlex（直接検索・2025年6月以降の発行日順）",
+      "scope": "抄録の取れる新着の候補探し",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotor",
+       "rotordynamic",
+       "squeeze film damper",
+       "whirl rotor bearing"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。抄録つきの候補から、KSFM誌のCFD研究と Tribology International のSFD研究を選んだ。"
+     }
+    ],
+    "note": "collect.mjs の基本候補は、今日もほぼ既配信か分野外でした。全文候補はNASA NTRSの直接検索、抄録ベースの候補はOpenAlexの発行日順の直接検索で補いました。"
+   },
+   "afterword": "今回、いちばん「なるほど」と思ったのは、NASAのリグの報告でした。フォイル軸受は柔らかいので、構造に力があまり伝わらず、だから測るのは構造の加速度ではなく軸そのものの変位になる、という流れです。装置の設計の理由が、軸受の性質から素直に出てくるのが面白かったです。もう一つ、インペラのシュラウド側の流体力の論文では、「不安定な固有値の範囲があること」と「実際に発散すること」は別だと分かりました。私は専門家ではないので読み違いがあるかもしれませんが、安定かどうかを一つの数字で言い切らない慎重さが印象に残りました。— 編集担当より"
   }
  ]
 }
