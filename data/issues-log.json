@@ -12429,6 +12429,138 @@
     "note": "collect.mjs の基本候補は、今日もほぼ既配信か分野外でした。全文候補はNASA NTRSの直接検索、抄録ベースの候補はOpenAlexの発行日順の直接検索で補いました。"
    },
    "afterword": "今回、いちばん「なるほど」と思ったのは、NASAのリグの報告でした。フォイル軸受は柔らかいので、構造に力があまり伝わらず、だから測るのは構造の加速度ではなく軸そのものの変位になる、という流れです。装置の設計の理由が、軸受の性質から素直に出てくるのが面白かったです。もう一つ、インペラのシュラウド側の流体力の論文では、「不安定な固有値の範囲があること」と「実際に発散すること」は別だと分かりました。私は専門家ではないので読み違いがあるかもしれませんが、安定かどうかを一つの数字で言い切らない慎重さが印象に残りました。— 編集担当より"
+  },
+  {
+   "date": "2026-10-16",
+   "status": "skipped",
+   "headline": "お休み：全文2本・抄録2本まで作り込みましたが、2回目の忠実性チェックでも直しが残った3本を公開せず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foilもrotorも大半が既配信か分野外（竜巻・電力系統・統計学など）で、新規はOpenAlexの抄録の無い新着数件と書籍だけでした。そこでNASA NTRSの直接検索とOpenAlexの発行日順の直接検索で補い、全文が読める定番2本（foil：Stanford & DellaCorte 2004 の箔コーティング、rotor：Fleming 1977 の高剛性シール）と、抄録が取れる最新2本（foil：Hu ほか 2025 のニューラルネットによるロータ軌道予測、rotor：Bae ほか 2026 の遺伝的アルゴリズムによる1次元梁モデルの最適化）を選びました。なお、Proctor & Gunter 2005 の NASA TM は、すでに配信済みの 2007 年版の元稿だったため見送っています。4本とも要約を作り、忠実性チェックを2回まで回しました。1回目は4本とも指摘があり、すべて直しました。2回目で Bae の1本は問題なしでしたが、残る3本には小さな指摘（Stanford：5,000回でのコーティング消失は常温だけの話なのに高温と読める欄が残った／Fleming：アルフォード力の向きの記述など／Hu：用語見出しの断定）が残りました。重大な指摘は無く、いずれも言い回しの範囲です。ただ、取り決めでは2回で通らなかった論文は保留なので、各トピックに全文1本を含む2件が揃わず、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Stanford & DellaCorte (2004)「フォイル軸受用 Cu-4Al コーティングの摩擦・摩耗特性」（NASA/TM-2004-212972、全文）、Fleming (1977)「ロータの危険速度を制御するための高剛性シール」（NASA TM X-73654、全文）、Hu ほか (2025)「ニューラルネットと空力弾性連成モデルによる非線形ロータ軌道の予測」（抄録ベース）。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "問題なしだった論文",
+     "note": "Bae ほか (2026)「遺伝的アルゴリズムで最適化した1次元梁ロータモデル」（抄録ベース）は2回目で問題なしでしたが、rotorの全文1本（Fleming）が保留のため、今日は出していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "Proctor & Gunter (2005, NASA/TM-2005-213808) は、すでに配信済みの2007年版（ntrs:20070025190）の元稿。Wang ほか (2026) 多層ガスフォイルスラスト軸受、Le ほか (2026) 扇形ラビリンスシール、Sun ほか (2026) 極低温タービンエキスパンダのシールは、抄録がどこからも取得できず（出版社ページは403）、見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXivの14件は別分野（ロボット・電力系統・流れの研究など）。OpenAlex新着のうち未配信は、抄録の取れない1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。14件のうち13件が既配信で、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA9／抄録4。未配信は、波の研究（別分野）と、抄録の取れない出版社ページ2件。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は、統計学・電力系統・書籍・転がり軸受の欠陥など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（深掘り）",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "gas bearing stiffness damping",
+       "oil-free",
+       "thermal management bearing",
+       "rotordynamics seal",
+       "rotor bearing instability",
+       "whirl",
+       "damper bearing rotor",
+       "critical speed",
+       "annular seal",
+       "compliant foil bearing",
+       "bump foil",
+       "foil thrust bearing",
+       "foil journal bearing"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。未配信の全文候補から、Stanford & DellaCorte 2004 と Fleming 1977 を選んだ。"
+     },
+     {
+      "name": "OpenAlex（直接検索・2025年6月以降の発行日順）",
+      "scope": "抄録の取れる新着の候補探し",
+      "terms": [
+       "gas foil bearing",
+       "air foil bearing",
+       "foil thrust bearing",
+       "gas bearing rotor",
+       "aerostatic bearing",
+       "rotordynamic",
+       "rotor-bearing system",
+       "journal bearing",
+       "tilting pad bearing",
+       "squeeze film damper",
+       "annular seal",
+       "labyrinth seal",
+       "critical speed rotor",
+       "oil whirl",
+       "gas lubricated"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。抄録つきの候補から、Hu ほか 2025 と Bae ほか 2026 を選んだ。"
+     }
+    ],
+    "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。全文候補はNASA NTRSの直接検索、抄録ベースの候補はOpenAlexの発行日順の直接検索で補いました。ScienceDirect は今日も403で、読めたのはOpenAlexの抄録までです。"
+   },
+   "afterword": "— 編集担当より\n今日は4本を作り込んだのに、お休みです。もったいない気もしますが、忠実性チェックの指摘を読んで、「常温の試験の話」が「高温でも同じ」と読めてしまう、といった小さなずれが、実は一番まぎらわしいのだと分かりました。私は専門家ではないので、直しの意味を完全には判断できませんが、決めごとどおりに出さない日があるのは、このアプリらしいと思っています。"
   }
  ]
 }
