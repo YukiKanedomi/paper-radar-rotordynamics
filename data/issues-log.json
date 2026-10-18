@@ -12685,6 +12685,128 @@
     "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。全文候補はNASA NTRSの直接検索、抄録ベースの候補はOpenAlexの発行日順の直接検索で補いました。ScienceDirect は今日も読めず、Elsevierの新着3件は抄録を取得できませんでした。"
    },
    "afterword": "— 編集担当より\n2日続けてのお休みになりました。今回の指摘も、「650℃で19%高い」という数字が、同じ報告の表を計算し直すと約16%になる、といった細かいずれが中心で、一つ直すと別の箇所に同じ言い回しが残っている、ということが起きていました。私は専門家ではないので、どれが本当に致命的かは判断できませんが、同じ数字を要旨・本文・数値カードのどこでも同じ言い方に揃える大切さは、素人なりによく分かりました。"
+  },
+  {
+   "date": "2026-10-19",
+   "status": "skipped",
+   "headline": "お休み：全文2本・抄録2本を作り込み、抄録の1本は忠実性チェックを通りましたが、残る3本に細かい指摘が残り、各トピックに全文1本を含む2件が揃わず前号のままにしました",
+   "intro": "今日も配信をお休みしました。collect.mjs の基本候補は、foilもrotorもほぼ既配信か分野外で、新規は抄録の取れない出版社ページ（Elsevier）の新着数件と書籍だけでした。そこでNASA NTRSとOpenAlexの直接検索で補い、全文が読める定番2本（foil：Hoffmann ほか 2016 のガスフォイル軸受のパラメータ推定、rotor：Fleming 1984 の二重すきまスクイーズフィルムダンパ）と、抄録が取れる最新2本（foil：3パッド流体フォイル軸受-ロータ系の非線形動特性 2026、rotor：Xie ほか 2026 の航空エンジンロータ系の振動抑制と多目的最適化）を選びました。4本とも要約を作り、忠実性チェックを2回まで回しました。2回目で通ったのは Xie ほか 2026 の1本だけです（1回目では、著者名の取り違えが見つかり、直しました）。残る3本は、捏造や数値の誤りではなく、言い回しの範囲の指摘が1〜2件ずつ残りました。Hoffmann＝「摩擦の影響が小さい理由」の段落で、膜厚に占める4.2%という数字の条件（40 N・21,500 r/min）の併記が1か所漏れた（軽微）。Fleming＝設計例の説明で「双安定を避けるため」と書いたが、本文では約250 rpmの帯に「狭めた」だけで、なくなってはいない（中程度）。3パッド＝やさしい要約の「本物の液体燃料の代わり」は抄録にない言い方（抄録は「液体作動媒体」）で、専門レベルの「作動流体を液体窒素とし」も言い過ぎ。取り決めでは2回で通らなかった論文は保留なので、foilは全文の1本が欠け、rotorは全文のFlemingが欠けて、各トピックに全文1本を含む2件が揃わず、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Hoffmann ほか (2016)「ガスフォイル軸受のパラメータ推定の妥当な方法：実験データに裏づけたモデル」（Proc IMechE Part C、全文。TU Berlin の機関リポジトリのPDFから読んだ）、Fleming (1984)「高荷重条件のための二重すきまスクイーズフィルムダンパ」（NASA TM-83619、全文・スキャンOCR）、「液体ロケット用ターボポンプに向けた3パッド流体フォイル軸受-ロータ系の非線形動特性に関する研究」（Dou ほか 2026、抄録ベース。OpenAlex上はScienceDBのレコードで、掲載誌は未確認）。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "チェックは通ったが単独では出さなかった論文",
+     "note": "Xie ほか (2026)「航空エンジンロータ系の振動抑制と多目的最適化：理論と実験」（Mechanical Systems and Signal Processing、抄録ベース）は2回目のチェックで通りましたが、rotor に必要な全文の1本（Fleming）が保留になったため、単独では出しませんでした。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "Bruckner (2015) 「フォイル軸受の受動的な熱管理」は特許の明細書で論文ではないため見送り。Lucero & DellaCorte (2004) のオイルフリー回転支持の報告は、PDFが画像だけで文字が取れず見送り。Wang ほか (2026) 多層ガスフォイルスラスト軸受、Zhu ほか (2025) 二重Vハニカム構造のフォイル軸受など、Elsevierの新着は抄録がどこからも取得できず（出版社ページは読み込めず、CrossrefとOpenAlexにも抄録なし）見送りました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 24,
+      "note": "OA16／抄録8。arXivの14件は別分野（アンテナ・風車・ロボットなど）。OpenAlex新着のうち未配信は、抄録の取れないElsevier 3件ほど。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。14件のうち13件が既配信で、残る1件は書籍。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 12,
+      "note": "OA10／抄録2。arXivの多くは別分野（水波など）で、OpenAlex新着も既配信か分野外が中心。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は、統計学・電力系統・書籍・転がり軸受の欠陥など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（深掘り）",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing rotordynamic",
+       "compliant foil bearing",
+       "foil bearing stiffness damping",
+       "foil thrust bearing",
+       "rotordynamic instability",
+       "rotor whirl fluid bearing",
+       "critical speed rotor unbalance response",
+       "seal rotordynamic coefficients",
+       "squeeze film damper",
+       "rotordynamic stability turbomachinery"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。未配信の全文候補から、Fleming 1984 を選んだ。"
+     },
+     {
+      "name": "OpenAlex（直接検索・OA／発行日順）",
+      "scope": "全文や抄録の取れる候補探し",
+      "terms": [
+       "foil bearing",
+       "gas bearing rotor dynamic",
+       "gas bearing",
+       "aerodynamic bearing rotor",
+       "rotordynamic",
+       "rotor-bearing system",
+       "whirl instability",
+       "squeeze film damper",
+       "gas foil bearing"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。TU Berlin リポジトリで全文の読める Hoffmann ほか 2016、抄録つきの候補から3パッド流体フォイル軸受の論文と Xie ほか 2026 を選んだ。"
+     }
+    ],
+    "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。全文候補はNASA NTRSと大学リポジトリ、抄録ベースの候補はOpenAlexの直接検索で補いました。ScienceDirect は今日も読めず、Elsevierの新着は抄録を取得できないものが多くありました。"
+   },
+   "afterword": "3日続けてのお休みです。今回残った指摘は、「双安定を避ける」と「狭める」のように、一語の強さの違いが中心でした。私は専門家ではないので、どれが本当に致命的かは判断できませんが、同じ事実でも動詞ひとつで「なくなった」とも「小さくなった」とも読めてしまうことは、素人なりによく分かりました。もうひとつ、Xie ほか 2026 の著者一覧で、OpenAlex の表示名とCrossrefに登録された元の著者名が1人分違っていて、チェックで気づけました。データベースの名寄せを信用しすぎない、という小さな教訓でした。"
   }
  ]
 }
