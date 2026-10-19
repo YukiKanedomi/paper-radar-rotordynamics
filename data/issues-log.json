@@ -12807,6 +12807,150 @@
     "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。全文候補はNASA NTRSと大学リポジトリ、抄録ベースの候補はOpenAlexの直接検索で補いました。ScienceDirect は今日も読めず、Elsevierの新着は抄録を取得できないものが多くありました。"
    },
    "afterword": "3日続けてのお休みです。今回残った指摘は、「双安定を避ける」と「狭める」のように、一語の強さの違いが中心でした。私は専門家ではないので、どれが本当に致命的かは判断できませんが、同じ事実でも動詞ひとつで「なくなった」とも「小さくなった」とも読めてしまうことは、素人なりによく分かりました。もうひとつ、Xie ほか 2026 の著者一覧で、OpenAlex の表示名とCrossrefに登録された元の著者名が1人分違っていて、チェックで気づけました。データベースの名寄せを信用しすぎない、という小さな教訓でした。"
+  },
+  {
+   "date": "2026-10-20",
+   "status": "published",
+   "headline": "後縁をV字にしたフォイルスラスト軸受（2024年）、フォイル軸受つきロータの非線形な応答（2007年）、予旋回と短いラビリンスシール（2020年）、ロータホワールの空力的な原因（1965年）",
+   "intro": "3日続けてのお休みのあと、今日は公開できました。collect.mjs の基本候補はまた、ほぼ既配信か分野外でした。そこで未配信の候補を、NASA NTRS・OpenAlex（CC BY 限定と被引用順）・Crossref で探しました。NTRS の未配信分は、ほとんどが古いスキャン（OCRで文字が崩れる）か短い紹介記事で、全文として使えるものがありませんでした。全文で読めたのは、Virginia Tech の著者提出稿（foil）と、CC BY の Journal of Vibroengineering（rotor）の2本です。後者は図を、ライセンスの範囲で原論文から切り出して載せました。抄録ベースは、San Andrés ほか（2007、foil）と Alford（1965、rotor）の2本で、どちらも Crossref の抄録の範囲だけで書いています。ScienceDirect・ASME・DTU の機関リポジトリ・MDPI は今日も本文が取れませんでした。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.4065104",
+     "title": "後縁をシェブロン（V字パターン）にした空気フォイルスラスト軸受の代理モデル開発（Yildiz & Untaroiu 2024）",
+     "why": "後縁の形で放熱を高めるという発想を、CFD・代理モデル・最適化で形にした研究。全文を読むと、著者の結論（負荷容量をほぼ保ったまま最高温度が約10%改善）と、図9のグラフの見かけが合わないように見える点があり、そのまま併記しました。"
+    },
+    {
+     "id": "doi:10.1115/1.2718233",
+     "title": "バンプ型ガスフォイル軸受で支持されたロータのロータダイナミック性能：実験と予測（San Andrés ほか 2007）",
+     "why": "フォイル軸受つきロータで、アンバランスと危険速度での振幅が比例せず、最大アンバランスでは軸回転数の約50%の運動も出る、という実験の抄録。抄録の範囲の紹介。"
+    },
+    {
+     "id": "doi:10.21595/jve.2020.21131",
+     "title": "正の予旋回を用いた短いラビリンスシールのロータダイナミック安定性の改善（Zhang ほか 2020）",
+     "why": "予旋回を逆向きにすれば安定、という従来の見方が、歯数の少ない短いシールでは逆になるというCFD結果。キャビティごとの高圧スポットの位置で理由を説明している。"
+    },
+    {
+     "id": "doi:10.1115/1.3678270",
+     "title": "自励ロータホワールからターボ機械を守る（Alford 1965）",
+     "why": "軸流圧縮機・タービンの激しいロータホワールの原因を、2つの空力的な励振力に整理した古典の抄録。Zhang ほか 2020 が導入部で引用していることも確認できた。抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "NASA NTRS の Lucero & DellaCorte（2004）はスキャン画像のみで本文が抽出できず、Childs ら（SSME シール）の報告は文字が崩れていたため、見送りました。DTU のフォイル軸受論文（von Osmanski ほか 2017）は機関リポジトリが確認画面で止まり、本文が取れませんでした。Journal of Propulsion Technology のフォイル軸受の論文は読めましたが、内容が浅いため選びませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。VT の論文では、結論の「約10%」「負荷容量をほぼ維持」が本文の数値や図9(b)で裏づけられない点（重大）、粘性発熱など出典にない定義がありました。San Andrés ほかの抄録では「自励的」「すきま拡大・浮上」など抄録外の定義と、「比例しない」を非線形性に結びつけた点。Zhang ほかでは、ばねで支えているのがステータである点の取り違えと、Type A を「発散すきま側」と同一視した点。Alford の抄録では、後年の呼称の説明など。すべて直して2回目の確認を受け、残った指摘は語句の統一程度で、それも直しました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA16／抄録8。arXivは別分野ばかり。未配信の2件（抄録のみ）。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA9／抄録4。多くが既配信か分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計学・電力系統・書籍など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（深掘り）",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing",
+       "compliant foil bearing rotordynamic",
+       "foil journal bearing stiffness damping",
+       "seal rotordynamic coefficients",
+       "rotordynamic stability",
+       "labyrinth seal rotordynamic",
+       "squeeze film damper",
+       "subsynchronous whirl turbopump",
+       "bump foil bearing",
+       "oil-free turbomachinery",
+       "foil bearing coating"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。未配信の候補は、スキャン・短報・既配信の旧版が中心で、採用に至らなかった。"
+     },
+     {
+      "name": "OpenAlex（直接検索・OA／被引用順・CC BY）",
+      "scope": "全文や抄録の取れる候補探し",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "foil thrust bearing",
+       "air bearing rotor",
+       "aerodynamic bearing",
+       "rotordynamic",
+       "rotor-bearing system",
+       "journal bearing instability",
+       "annular seal rotordynamic",
+       "critical speed rotor",
+       "rotor whirl",
+       "seal rotordynamic",
+       "squeeze film damper"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。VT リポジトリの著者提出稿（foil）と JVE の CC BY 論文（rotor）を選び、抄録ベースは被引用順の直接検索と Crossref で選んだ。"
+     }
+    ],
+    "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。OAの全文はVirginia TechのリポジトリとJVE（extrica）で取れ、ScienceDirect・ASME・DTU は読めませんでした。"
+   },
+   "afterword": "3日ぶんの積み残しが解けた日です。私は専門家ではありませんが、Zhang ほかを読んで「予旋回を逆向きにすれば安定」という言い方が、歯の数しだいで逆にもなる、と知ったのが一番の収穫でした。決め手はシールの中で圧力が高い場所が、最初の空洞とそれ以降でずれていることだそうです。もうひとつ、VT の論文では、結論の文と図のグラフが素直に噛み合わない箇所があり、チェックで気づきました。著者の主張と図の見かけを並べて書く、という扱いにしています。"
   }
  ]
 }
