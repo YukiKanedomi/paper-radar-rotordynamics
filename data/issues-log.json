@@ -12951,6 +12951,153 @@
     "note": "collect.mjs の基本候補は今日もほぼ既配信か分野外でした。OAの全文はVirginia TechのリポジトリとJVE（extrica）で取れ、ScienceDirect・ASME・DTU は読めませんでした。"
    },
    "afterword": "3日ぶんの積み残しが解けた日です。私は専門家ではありませんが、Zhang ほかを読んで「予旋回を逆向きにすれば安定」という言い方が、歯の数しだいで逆にもなる、と知ったのが一番の収穫でした。決め手はシールの中で圧力が高い場所が、最初の空洞とそれ以降でずれていることだそうです。もうひとつ、VT の論文では、結論の文と図のグラフが素直に噛み合わない箇所があり、チェックで気づきました。著者の主張と図の見かけを並べて書く、という扱いにしています。"
+  },
+  {
+   "date": "2026-10-21",
+   "status": "published",
+   "headline": "フォイル軸受のガス膜の圧力を実測（2020年）、空気フォイル軸受ロータの安定性予測法の比較（2016年）、円すい–円筒ハイブリッド軸受（2026年）、油膜ホワールの古典（1946年）",
+   "intro": "今日は collect.mjs の基本候補が、またほぼ既配信か分野外でした。そこで OpenAlex を直接、OA 限定と被引用順で探し、NASA NTRS も見ました。全文が読めたのは、EPFL の機関リポジトリにある著者受理稿（foil）と、MDPI の CC BY 論文（rotor）の2本です。MDPI はページを直接開くと拒否されましたが、読み取りサービス経由でテキストが取れました。抄録ベースは、Larsen ほか（2016、foil）と Hagg（1946、rotor）の2本で、Crossref や DTU Orbit に載る抄録の範囲だけで書いています。ASME・Elsevier・Hindawi（Wiley）・Texas A&M・DTU の本文 PDF は今日も取れませんでした。",
+   "picked": [
+    {
+     "id": "doi:10.1115/1.4044798",
+     "title": "テレメトリ付き計装ロータによるジャーナルフォイル軸受のガス膜内圧力分布の計測（Shalash & Schiffmann 2020）",
+     "why": "フォイル軸受のモデルは、ガス膜の圧力で検証されていない。その圧力を回転する軸の中から測った実験です。軽荷重では実測がモデルの釣鐘形にならず、荷重をかけるとモデルと合った、という正直な結果が興味深い論文です。"
+    },
+    {
+     "id": "doi:10.1016/j.jsv.2016.06.022",
+     "title": "空気フォイル軸受で支持した剛体ロータの安定性：2つの基本的な手法の比較（Larsen ほか 2016）",
+     "why": "同等のモデルにもとづく時間領域と周波数領域の予測に、有意な食い違いが出たという抄録。上の実測論文とは、周波数領域モデルという接点があります。抄録の範囲の紹介。"
+    },
+    {
+     "id": "doi:10.3390/lubricants14100363",
+     "title": "円すい–円筒ハイブリッド動圧ロータ支持の積分特性と動特性の研究（Zhao ほか 2026）",
+     "why": "円すい軸受と円筒軸受を一体にして、軸方向と半径方向の荷重を1つで受ける案の数値研究。安定性は直接係数と交差係数の大小関係から見込みを述べる段階で、本文もそう断っています。"
+    },
+    {
+     "id": "doi:10.1115/1.4009564",
+     "title": "油膜ジャーナル軸受が回転機械の安定性に及ぼす影響（Hagg 1946）",
+     "why": "油膜ホワールの周波数の上限が回転周波数の1/2であること、ミッチェル型ティルティングパッド軸受がいわゆる「非ホワール」軸受であること、を論じた古典の抄録。抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補と取れなかった本文",
+     "note": "NTRS の Kirk & Gunter（1972、NASA CR）は1972年のスキャンで文字が崩れており、逐語の引用が保証できないため選びませんでした。Hindawi の Identification Methods and Test Results for Tilting Pad and Fixed Geometry Journal Bearings（2009）、Texas A&M の Squeeze Film Dampers の講座資料（1996）は、OA 表示でしたが本文が取れませんでした。DTU Orbit の Larsen ほかの受理稿 PDF も拒否されたため、抄録ベースにしています。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。Shalash ほかでは「初めて」という出典にない優先権の言い方、偏心の測定法の理由の取り違え、要約側の解釈。Larsen ほかでは、比較対象を取り違えかねない関連づけ、「大きく食い違う」という抄録より強い言い方。Zhao ほかでは、50%という損失差の向きの混在、安定性の見込みを言い切りに近づけた書き方、出典にない「熱」を今後の課題に入れた点。Hagg では、「おそらく」の留保が落ちていた点と誤訳。すべて直して2回目の確認を受けました。2回目の指摘のうち、Larsen の用語表記（OIS／OSI）は、既存用語に合わせて定義文で補いました。Zhao・Hagg の細かな語句の指摘は、確認者の提案どおりに直しましたが、その修正後の3回目の確認はしていません。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA16／抄録8。arXivは別分野ばかりで、未配信の2件はいずれも抄録のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。多くが既配信か分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計学・電力系統など分野外が中心。"
+     },
+     {
+      "name": "OpenAlex（直接検索・OA／被引用順、CC BY の新着）",
+      "scope": "全文や抄録の取れる候補探し",
+      "terms": [
+       "foil bearing",
+       "foil journal bearing",
+       "foil thrust bearing",
+       "air foil",
+       "gas bearing rotor",
+       "oil-free turbomachinery",
+       "rotordynamic",
+       "journal bearing stability",
+       "annular seal",
+       "squeeze film damper",
+       "rotor whirl",
+       "critical speed rotor",
+       "rotor-bearing",
+       "fluid film bearing dynamic",
+       "seal rotordynamic coefficients",
+       "tilting pad"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。各語で上位20〜25件を見て、既配信を除いた。"
+     },
+     {
+      "name": "NASA NTRS 直接検索",
+      "scope": "全文テキストが取れる未配信の報告",
+      "terms": [
+       "rotordynamic stability journal bearing",
+       "tilting pad bearing rotordynamic",
+       "rotor whirl instability fluid bearing",
+       "damper seal rotordynamic",
+       "critical speed flexible rotor"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。1970年代のスキャン報告が中心で、逐語引用の保証できないものは選ばなかった。"
+     },
+     {
+      "name": "Crossref（抄録・書誌の確認）",
+      "scope": "抄録ベースの2本の抄録と書誌",
+      "terms": [],
+      "hits": 0,
+      "note": "DOI を指定して抄録と書誌を確認しただけで、検索語は使っていない。"
+     }
+    ],
+    "note": "collect.mjs の基本候補はほぼ既配信か分野外でした。全文は EPFL Infoscience と MDPI で取れ、ASME・Elsevier・Hindawi・Texas A&M・DTU の PDF は取れませんでした。"
+   },
+   "afterword": "私は専門家ではありませんが、今日いちばんの収穫は Shalash ほかの「測ってみたらモデルの釣鐘形にならなかった」という正直さでした。しかも著者は、軸受の内径がかなり真円からずれていたことを理由の候補にしつつ、確定とは書いていません。荷重をかけたときだけモデルと合った、という点も、合わない結果を隠さない姿勢に見えました。Hagg の1946年の抄録で、ふれまわりの周波数の上限が回転の半分だと知ったのも「なるほど」でした。"
   }
  ]
 }
