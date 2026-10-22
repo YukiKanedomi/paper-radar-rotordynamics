@@ -13207,6 +13207,136 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択されています。collect.mjs の基本候補は今日もほぼ既配信か分野外で、全文候補は NASA NTRS、抄録ベースの候補は OpenAlex の直接検索で補いました。MDPI・Hindawi・ScienceDirect の全文は取得できませんでした。"
    },
    "afterword": "また今日もお休みになってしまいました。残った指摘は、原文の「could（〜しうる）」が「〜する」に変わっていたり、「66.1％速い」と「計算時間が66.1％減」が似て非なる量だったり、という言い回しの精度が中心でした。私は専門家ではないので重みづけは判断できませんが、「減った割合」と「速くなった割合」が別の数字になる、というのは算数としてなるほどでした（8.1秒と23.9秒だと、速さは約3倍です）。一方で、Crest が会社名だったという誤訳は、略さず原文に当たったから見つかったもので、確認の大切さを実感しました。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-23",
+   "status": "published",
+   "headline": "フォイル軸受の温度ムラをペルチェ素子で消す案（2015年）、フォイル軸受による曲げ危険速度越えの運転（1999年）、乱流と熱を入れた水潤滑ティルティングパッド軸受の非線形解析（2020年）、オイルホイップの理論（1959年）",
+   "intro": "昨日はお休みでしたが、今日は公開できました。collect.mjs の基本候補はまた、ほぼ既配信か分野外でした。そこで OpenAlex を、タイトル・抄録の語で絞って直接探し、本文が取れる出版社を確かめました。MDPI・Hindawi・Wiley・Taylor & Francis・ScienceDirect は今日も本文を取得できず、Springer 系（CC BY）の PDF は取れました。全文を読めたのは、Journal of Electronic Materials（foil）と Friction（rotor）の2本で、どちらも CC BY です。Friction の論文は、図を2点、ライセンスの範囲で原論文から切り出して載せました。抄録ベースは、Heshmat（1999、foil）と Hori（1959、rotor）の2本で、Crossref の抄録の範囲だけで書いています。",
+   "picked": [
+    {
+     "id": "doi:10.1007/s11664-015-4082-0",
+     "title": "カスタム熱電対を用いた、フォイル軸受の温度特性評価のための多点計測法（Lubieniecki ほか 2015）",
+     "why": "フォイル軸受の温度の偏り（熱勾配）を、電流で制御するペルチェ素子で減らす案と、その温度を測る特製の熱電対の論文です。実験は回転しない軸受をヒーターで温めた概念実証で、回転試験はこれから、と著者が書いている点も含めて紹介します。"
+    },
+    {
+     "id": "doi:10.1115/1.555342",
+     "title": "曲げ危険速度を超えるフォイル軸受の運転（Heshmat 1999）",
+     "why": "試験したフォイル軸受が、1次曲げ危険速度の2.5倍まで振幅を小さく保って運転できた、という抄録です。抄録の範囲の紹介。"
+    },
+    {
+     "id": "doi:10.1007/s40544-019-0263-9",
+     "title": "乱流と熱の影響を考慮した、ティルティングパッド軸受–ロータ系の非線形油膜力と動的挙動の高速解法（Jin ほか 2020）",
+     "why": "水潤滑のティルティングパッド軸受で、乱流と熱の影響を入れると、ロータの軌道や周期の出方が大きく変わる、という数値計算です。違いの主因は水の温度上昇ではなく流れの状態、と本文が述べます。"
+    },
+    {
+     "id": "doi:10.1115/1.4011981",
+     "title": "オイルホイップの理論（Hori 1959）",
+     "why": "油膜の負圧の代わりに圧力ゼロを仮定すると、従来の理論にあったロータの本質的な不安定を避けられる、という1959年の論文の抄録です。抄録の範囲の紹介。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補と取れなかった本文",
+     "note": "Wang ほか（2026）の多層スラストガスフォイル軸受（Aerospace Science and Technology）は、抄録がどこからも取れず、今日も見送りました。Jin ほか（2020）の同じ著者グループの Friction 論文（水潤滑ティルティングパッド軸受の設計パラメータ）と Xu ほか（2020）の再使用型ロケットターボポンプの軸受の総説は、本文は取れましたが、今日の2本の主題に近いものを優先して選びませんでした。MDPI・Hindawi・Wiley・Taylor & Francis の OA 論文は、本文が取れず選べませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。Lubieniecki ほかでは、熱電対の本数の配分の読み違い、出典にない今後の課題、「任意に選んだ」の脱落と「網羅的」の言い過ぎ。Heshmat では、「必要だった」という抄録にない必要条件の言い方、「試験した軸受」という限定の脱落、抄録にない一般論の混入。Jin ほかでは、取得テキストで記号が欠けた箇所を推測で埋めた数値（時間刻み）と温度分布の方向の取り違え、出典にない水の性質の記述、流れの区分の基準の取り違え。Hori では、抄録にない因果の断定と、一般的な定義の混同。すべて直して2回目の確認を受けました。Hori は2回目で ok、他の3本の残りは細かな言い回しの指摘で、確認者の提案どおりに直しましたが、その修正後の3回目の確認はしていません。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXivは別分野ばかりで、未配信の抄録の新着が1件のみ（抄録が取れず見送り）。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着（発行日順）",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA9／抄録2。多くが既配信か分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠・被引用上位）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計学・電力系統など分野外が中心。"
+     },
+     {
+      "name": "OpenAlex（直接検索・タイトル/抄録の語＋被引用順／CC BY）",
+      "scope": "全文や抄録の取れる候補探し",
+      "terms": [
+       "foil bearing",
+       "foil journal bearing air",
+       "bump foil",
+       "gas bearing rotor",
+       "air bearing rotor stability",
+       "tilting pad bearing",
+       "squeeze film damper",
+       "rotordynamic bearing coefficients",
+       "rotor journal bearing stability",
+       "rotordynamic seal",
+       "rotor bearing critical speed",
+       "oil whip"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は集計していない。各語で上位20〜25件を見て、既配信を除いた。"
+     },
+     {
+      "name": "Crossref（抄録・書誌の確認）",
+      "scope": "抄録ベースの2本の抄録と書誌",
+      "terms": [],
+      "hits": 0,
+      "note": "DOI を指定して抄録と書誌を確認しただけで、検索語は使っていない。"
+     }
+    ],
+    "note": "collect.mjs の基本候補はほぼ既配信か分野外でした。全文は Springer 系の CC BY で取れ、MDPI・Hindawi・Wiley・T&F・ScienceDirect は取れませんでした。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん「なるほど」だったのは、Hori の1959年の抄録です。油膜の圧力が負になる部分を、そのまま負として扱うか、ゼロとして扱うか。その仮定の置き方ひとつで、従来の理論にあった「本質的な不安定」を避けられる、と書かれています。専門家ではないので中身の判断はできませんが、モデルの前提の置き方が結論を左右することが、1959年の論文でも今日の Jin ほかでも見えるのが面白かったです。Jin ほかでは、乱流と熱の影響を入れるかどうかで、ロータの動きの現れ方が大きく変わり、その主因は水の温度ではなく流れの状態でした。なお、2本の抄録ベースは、抄録に書かれたことだけで紹介しています。"
   }
  ]
 }
