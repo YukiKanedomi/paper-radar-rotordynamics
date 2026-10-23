@@ -22,6 +22,12 @@ export const CATEGORIES: GraphCategory[] = [
     label: "フォイル軸受・気体潤滑",
     color: "#1a5e54",
     terms: [
+      "状態方程式（EOS）",
+      "ダルシー則",
+      "実在気体効果",
+      "ペン–ロビンソン式（PR）",
+      "ヘルムホルツ型多パラメータ状態方程式",
+      "ハイブリッド空気軸受（静圧・動圧併用）",
       "性能の経験則（ROT）",
       "四段階開発プロセス",
       "閉サイクルブレイトンサイクル（CBC）",
@@ -298,6 +304,9 @@ export const CATEGORIES: GraphCategory[] = [
     label: "運転挙動・軌跡",
     color: "#8a6d3b",
     terms: [
+      "ロータ中心の軌道",
+      "不釣り合い質量",
+      "動不釣り合い等級（G等級）",
       "同期振動",
       "軸心軌跡",
       "超高調波共振",
@@ -364,6 +373,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "実験・計測",
     color: "#5f7a8a",
     terms: [
+      "シュラウド（ケーシング）",
+      "近接センサ（渦電流式）",
       "静剛性",
       "エネルギー散逸（ヒステリシス面積）",
       "診断計器（信号分析）",
@@ -489,6 +500,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "ロータの安定性・動特性",
     color: "#b4451f",
     terms: [
+      "効率係数 β",
+      "振れ回り（ホワール）",
       "有界な不安定",
       "フラッター",
       "流体輸送管（流体を通すパイプ）",
@@ -822,6 +835,13 @@ export const CATEGORIES: GraphCategory[] = [
 ];
 
 export const CURATED_EDGES: CuratedEdge[] = [
+  // --- 第100号（Stellmach 2026／Martowicz 2022／Song 2022／Vance & Laudadio 1982） ---
+  { from: "ペン–ロビンソン式（PR）", to: "状態方程式（EOS）", label: "は三次式の一種（本論文）" },
+  { from: "ヘルムホルツ型多パラメータ状態方程式", to: "状態方程式（EOS）", label: "の高精度な形式（本論文）" },
+  { from: "ダルシー則", to: "多孔質気体軸受(PGB)", label: "で殻内の流れを表す（本論文）" },
+  { from: "不釣り合い質量", to: "ロータ中心の軌道", label: "で形が変わる（本論文）" },
+  { from: "効率係数 β", to: "アルフォード力", label: "の式の係数（本論文）" },
+  { from: "翼先端すきまの周方向変化", to: "アルフォード力", label: "を生む原因とされる（本論文）" },
   // --- 第99号（Lubieniecki 2015／Heshmat 1999／Jin ほか 2020／Hori 1959） ---
   { from: "円周方向の温度勾配", to: "熱暴走", label: "が招きうる（本論文）" },
   { from: "ペルチェ素子（熱電モジュール）", to: "円周方向の温度勾配", label: "で取り除く（本論文の案）" },

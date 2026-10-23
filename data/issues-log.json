@@ -13337,6 +13337,139 @@
     "note": "collect.mjs の基本候補はほぼ既配信か分野外でした。全文は Springer 系の CC BY で取れ、MDPI・Hindawi・Wiley・T&F・ScienceDirect は取れませんでした。"
    },
    "afterword": "— 編集担当より\n今回いちばん「なるほど」だったのは、Hori の1959年の抄録です。油膜の圧力が負になる部分を、そのまま負として扱うか、ゼロとして扱うか。その仮定の置き方ひとつで、従来の理論にあった「本質的な不安定」を避けられる、と書かれています。専門家ではないので中身の判断はできませんが、モデルの前提の置き方が結論を左右することが、1959年の論文でも今日の Jin ほかでも見えるのが面白かったです。Jin ほかでは、乱流と熱の影響を入れるかどうかで、ロータの動きの現れ方が大きく変わり、その主因は水の温度ではなく流れの状態でした。なお、2本の抄録ベースは、抄録に書かれたことだけで紹介しています。"
+  },
+  {
+   "date": "2026-10-24",
+   "status": "published",
+   "headline": "気体軸受の状態方程式（冷媒では理想気体近似がずれる）、センサ付きトップフォイルの温度とひずみ、超高速空気スピンドルの非線形軌道、1982年の Alford の力の実測",
+   "intro": "今日は collect.mjs の基本候補がほとんど既配信か分野外で、OpenAlex も一日の利用枠が切れてしまいました（rotor では途中から 429）。そこで NASA の技術報告サーバー（NTRS）、Europe PMC、arXiv を直接探しました。全文が読めたのは4本です。arXiv の1本（Stellmach ほか 2026）、MDPI の CC BY の2本（Martowicz ほか 2022、Song ほか 2022。MDPI のサイトは取得できず、Europe PMC の全文を使いました）、NASA の1本（Vance と Laudadio 1982）。今日は抄録ベースの論文はなく、4本とも全文ベースです。",
+   "picked": [
+    {
+     "id": "arxiv:2610.27840",
+     "title": "理想気体・三次式・ヘルムホルツ型の状態方程式が多孔質静圧ジャーナル軸受に与える影響（Stellmach ほか 2026）",
+     "why": "空気ならほぼ理想気体で足りる一方、冷媒を潤滑ガスにすると供給流量が最大約9.5％ずれる、という数値研究です。フォイル軸受そのものではなく、気体膜潤滑の物理に近い論文として選びました。"
+    },
+    {
+     "id": "doi:10.3390/ma16010145",
+     "title": "インコネル製センサ付きフォイルによるガスフォイル軸受の熱機械特性の計測（Martowicz ほか 2022）",
+     "why": "トップフォイルに熱電対とひずみゲージを一体化して、立ち上げから停止までの温度とひずみを円周方向に追った実験です。第99号の Lubieniecki ほかと著者の一部が重なる、近いテーマです。"
+    },
+    {
+     "id": "doi:10.3390/ma15020675",
+     "title": "超高速条件下のハイブリッド空気軸受–ロータ系の非線形動解析（Song ほか 2022）",
+     "why": "毎分10万回転を超える空気スピンドルで、半速振れ回り、不釣り合い、危険速度の近くの軌道の変化を数値で整理した論文です。"
+    },
+    {
+     "id": "ntrs:19830007375",
+     "title": "軸流ターボ機械における Alford の力の実験測定（Vance、Laudadio 1982）",
+     "why": "1965年の Alford の説を小型試験機で実測した古典です。力の存在を確かめた一方、トルクのしきい値や回転数への依存など、式のままでは足りない点も示しています。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "定番枠と最新枠の分け方について",
+     "note": "foil の2本は、どちらも比較的新しい論文（2022年と2026年）で、定番枠に当たる未配信の候補が見つかりませんでした。そのため、foil は定番＋最新の構成になっていません（検証では助言扱い）。rotor は定番（1982年）と最新（2022年）です。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "Wang ほか（2026、多層スラストガスフォイル軸受）と Le ほか（2026、扇形ラビリンスシール）は、抄録がどこからも取れず見送りました。Du ほか（2021、PLOS ONE、電磁軸受とフォイル軸受のロータ系）は、深層学習による故障診断が中心で、記述にも気になる点があったため選びませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは、4本とも1回目に指摘がありました。例：空気の最大偏差が理想気体の列の値だった（Stellmach）、『摩擦』と『バンプフォイル』の取り違えや Case C と D の混同（Martowicz）、本文の数値の適用範囲の誤りと因果のつなぎ方（Song）、『ほぼ唯一のモデル』という言い過ぎとランアウトの誤訳（Vance）。すべて直して2回目を受け、3本は ok でした。Song ほかは2回目で、軌道形の一般化と因果の向きについて指摘が残ったため、指摘どおり範囲を狭める修正をしましたが、その修正後の3回目の確認はしていません。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA16／抄録8。arXiv は別分野ばかり、未配信の新着は抄録の取れない1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA9／抄録4。OpenAlex は一部のクエリで 429。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。OpenAlex は一部のクエリで 429。未配信は分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "NASA 技術報告サーバー",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing",
+       "labyrinth seal rotordynamic",
+       "rotor whirl instability",
+       "rotordynamic instability turbomachinery"
+      ],
+      "hits": 25,
+      "note": "各検索の上位25件を確認。Vance と Laudadio の全文を取得。"
+     },
+     {
+      "name": "Europe PMC / Crossref / arXiv（直接検索）",
+      "scope": "CC BY の全文探し",
+      "terms": [
+       "foil bearing",
+       "rotordynamic",
+       "gas bearing",
+       "journal bearing",
+       "rotor-bearing"
+      ],
+      "hits": 0,
+      "note": "件数は記録していない。Europe PMC から MDPI の2本の全文、arXiv から1本を取得。"
+     }
+    ],
+    "note": "OpenAlex の一日の利用枠が切れたため、深掘りは NTRS、Europe PMC、Crossref、arXiv で行いました。MDPI のサイトは取得できませんでした。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん「なるほど」だったのは、Vance と Laudadio の1982年の実験です。Alford の説は1965年から、実験で確かめられないまま計算に使われてきた、と論文の冒頭にあります。実際に測ると、力は確かにあるのに、トルクがある大きさになるまで現れませんでした。式がきれいに単純であることと、現実がその通りであることは別なのだなと思いました。専門家ではないので中身の判断はできませんが、Stellmach ほかの、空気ならほぼ理想気体でよいが冷媒では流量が1割近くずれる、という結果にも、同じように「前提が効く範囲を測る」姿勢を感じました。"
   }
  ]
 }
