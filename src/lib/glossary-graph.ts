@@ -22,6 +22,9 @@ export const CATEGORIES: GraphCategory[] = [
     label: "フォイル軸受・気体潤滑",
     color: "#1a5e54",
     terms: [
+      "Generation IV フォイル軸受",
+      "空気フォイルジャーナル軸受(AFJB)",
+      "統合型ハイブリッド空気フォイル磁気スラスト軸受(i-HFMTB)",
       "状態方程式（EOS）",
       "ダルシー則",
       "実在気体効果",
@@ -304,6 +307,10 @@ export const CATEGORIES: GraphCategory[] = [
     label: "運転挙動・軌跡",
     color: "#8a6d3b",
     terms: [
+      "分調波振動（サブハーモニック）",
+      "昇速率（角加速度）",
+      "過渡応答（加速通過）",
+      "非線形ホワール軌道",
       "ロータ中心の軌道",
       "不釣り合い質量",
       "動不釣り合い等級（G等級）",
@@ -500,6 +507,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "ロータの安定性・動特性",
     color: "#b4451f",
     terms: [
+      "多円弧軸受（マルチローブ軸受）",
+      "プレーンジャーナル軸受（真円軸受）",
       "効率係数 β",
       "振れ回り（ホワール）",
       "有界な不安定",
@@ -756,6 +765,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "シール・環状ギャップ",
     color: "#4a6fa5",
     terms: [
+      "コンプライアントフォイルシール",
+      "フローファクター（シール漏れの指標）",
       "URANS（非定常RANS）",
       "多周波同時加振法",
       "歳差周波数比（PFR）",
@@ -835,6 +846,16 @@ export const CATEGORIES: GraphCategory[] = [
 ];
 
 export const CURATED_EDGES: CuratedEdge[] = [
+  // --- 第101号（Heshmat 2013／Fleming 2006／Ha 2023／Gunter 1972） ---
+  { from: "コンプライアントフォイルシール", to: "ガスフォイル軸受", label: "と同じ原理で、上箔が圧力を受けて動圧を作る（本論文）" },
+  { from: "Generation IV フォイル軸受", to: "Generation III フォイル軸受", label: "の次の世代と、本論文が位置づける" },
+  { from: "フローファクター（シール漏れの指標）", to: "コンプライアントフォイルシール", label: "の漏れを表す指標として使われる（本論文）" },
+  { from: "軸受クリアランス（不感帯）", to: "分調波振動（サブハーモニック）", label: "があるとより目立つ（本論文）" },
+  { from: "昇速率（角加速度）", to: "危険速度", label: "通過時の最大振幅に影響する（本論文）" },
+  { from: "玉軸受", to: "剛性硬化（スティフネスハードニング）", label: "は硬化型の力–変位の関係をもつ（本論文）" },
+  { from: "統合型ハイブリッド空気フォイル磁気スラスト軸受(i-HFMTB)", to: "サブシンクロナス振動", label: "の作動で大きく減った（抄録）" },
+  { from: "空気フォイルジャーナル軸受(AFJB)", to: "剛体モード", label: "領域で負荷容量と減衰が不足する（抄録）" },
+  { from: "多円弧軸受（マルチローブ軸受）", to: "プレーンジャーナル軸受（真円軸受）", label: "と並べて安定性データが示される（抄録）" },
   // --- 第100号（Stellmach 2026／Martowicz 2022／Song 2022／Vance & Laudadio 1982） ---
   { from: "ペン–ロビンソン式（PR）", to: "状態方程式（EOS）", label: "は三次式の一種（本論文）" },
   { from: "ヘルムホルツ型多パラメータ状態方程式", to: "状態方程式（EOS）", label: "の高精度な形式（本論文）" },

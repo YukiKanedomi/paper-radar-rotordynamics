@@ -13470,6 +13470,157 @@
     "note": "OpenAlex の一日の利用枠が切れたため、深掘りは NTRS、Europe PMC、Crossref、arXiv で行いました。MDPI のサイトは取得できませんでした。"
    },
    "afterword": "— 編集担当より\n今回いちばん「なるほど」だったのは、Vance と Laudadio の1982年の実験です。Alford の説は1965年から、実験で確かめられないまま計算に使われてきた、と論文の冒頭にあります。実際に測ると、力は確かにあるのに、トルクがある大きさになるまで現れませんでした。式がきれいに単純であることと、現実がその通りであることは別なのだなと思いました。専門家ではないので中身の判断はできませんが、Stellmach ほかの、空気ならほぼ理想気体でよいが冷媒では流量が1割近くずれる、という結果にも、同じように「前提が効く範囲を測る」姿勢を感じました。"
+  },
+  {
+   "date": "2026-10-25",
+   "status": "published",
+   "headline": "水素用の油なし遠心圧縮機（フォイル軸受）、空気フォイル＋磁気スラスト軸受の剛体モード制振、玉軸受のすきまと急加速、1972年のロータ不安定サーベイ",
+   "intro": "今日は collect.mjs の基本候補がほぼ既配信か分野外で、新着で良いものは出版社サイト（Elsevier など）の抄録も取れないものばかりでした。そこで OpenAlex を広げて直接探し、全文がボット対策なしで取れた J-STAGE（Tribology Online）と NASA の技術報告サーバー（NTRS）から全文ベースを2本、抄録が取れた ASME の1本と Texas A&M リポジトリの1本を抄録ベースで選びました。今回は『定番枠』『最新枠』の分け方が崩れていて、foil は定番＝2013年／最新＝2023年、rotor は定番＝1972年／最新＝2006年と、どれも相対的な呼び名です。",
+   "picked": [
+    {
+     "id": "doi:10.2474/trol.8.44",
+     "title": "遠心式水素圧縮機のためのオイルフリー軸受とシール（Heshmat ほか 2013）",
+     "why": "フォイル軸受を曲げ危険速度の上で使う圧縮機全体の設計と、軸受・シールの試験までが1本で追える全文OA。軸受の話をシステム設計の中に置いて読める点で選びました。"
+    },
+    {
+     "id": "doi:10.1115/1.4063591",
+     "title": "i-HFMTB を備えた250馬力級空気圧縮機の剛体モード振動制御（Ha ほか 2023）",
+     "why": "空気フォイル軸受だけでは剛体モード領域でサブ・スーパーシンクロナス振動が出る、という実機規模の報告。抄録ベースで、抄録の範囲だけで書いています。"
+    },
+    {
+     "id": "doi:10.21423/r1vt1p",
+     "title": "ロータ・軸受系の安定性（Gunter 1972）",
+     "why": "ロータ不安定の原因を軸受・内部摩擦・空力・シールにわたって概観した古典的サーベイ。全文は取れず、抄録ベースです。"
+    },
+    {
+     "id": "ntrs:20060056245",
+     "title": "内部すきまのある転がり軸受に支持されたロータの過渡応答（Fleming ほか 2006）",
+     "why": "玉軸受の内部すきま（不感帯）と急加速を同時に扱った NASA の技術メモランダム。全文OAですが、共著者に NASA 職員以外がいるため図は載せていません。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Wang ほか（2026、多層スラストガスフォイル軸受）と Le ほか（2026、扇形ラビリンスシール）は、抄録がどこからも取れず見送りました。Bonello（2020、Manchester）や Gunter 1972 の全文、DTU の von Osmanski ほか（2017）は、Cloudflare の確認画面で全文が取れませんでした。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックでは4本とも1回目に指摘がありました。例：Fleming の『細い軸』は出典では『かなり剛い軸』、Heshmat の『日量50万kg』は必要量ではなく設計目標、『設計ツールの妥当性を確かめた』は言い過ぎ（予測と実測の一致が示されるのはシールの静的な漏れのみ）、Gunter の hook の『事故事例』は抄録では『実例』、Ha の『8分割』は抄録に無い解釈。すべて直して2回目を受け、Ha は ok、他の3本は high・med が無く文の崩れや言い回しの low のみとの判定で、その分は直しましたが、直した後の3回目の確認はしていません。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものになっています。foil は 2013 年（定番）と 2023 年（最新）、rotor は 1972 年（定番）と 2006 年（最新）です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 24,
+      "note": "OA15／抄録9。arXiv は別分野ばかりで、未配信の OpenAlex 新着は抄録の取れない1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 13,
+      "note": "OA7／抄録6。未配信は分野外か、抄録の取れない Elsevier 論文が中心。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計・電力系統など分野外が中心。"
+     },
+     {
+      "name": "OpenAlex（直接検索・OA限定）",
+      "scope": "is_oa、被引用順と発行日順",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing rotordynamic",
+       "foil thrust bearing",
+       "air foil bearing rotor",
+       "rotordynamic seal force",
+       "journal bearing instability whirl",
+       "critical speed rotor bearing",
+       "tilting pad bearing dynamic coefficients",
+       "squeeze film damper"
+      ],
+      "note": "件数は記録していない。各検索の上位15件から未配信を拾い、J-STAGE・NTRS・OpenAlex の抄録を確認。"
+     },
+     {
+      "name": "arXiv（直接検索）",
+      "scope": "投稿日順",
+      "terms": [
+       "rotordynamic",
+       "journal bearing rotor stability",
+       "gas bearing rotor",
+       "labyrinth seal rotordynamic",
+       "squeeze film damper",
+       "foil bearing"
+      ],
+      "note": "未配信で分野内のものは見つからず。件数は記録していない。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "NASA 技術報告サーバー",
+      "terms": [
+       "rotordynamic instability seal",
+       "journal bearing whirl stability",
+       "gas foil bearing",
+       "tilting pad bearing dynamic coefficients",
+       "squeeze film damper",
+       "rotor critical speed bearing",
+       "annular seal rotordynamic",
+       "hybrid bearing rotor"
+      ],
+      "note": "各検索の上位25件から全文テキストのあるものを確認。Fleming ほか 2006 の全文を取得。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。直接検索の語は手動で選んだもの。"
+   },
+   "afterword": "今回『なるほど』と思ったのは、Fleming らの玉軸受の話です。軸受の『あそび』があると危険速度が下がりそうなものですが、論文の要旨は『ずれうる』、結論は『全体として大きな差はない』と書いていて、実際には昇速の速さしだいで見え方が変わるようでした。ひとことで言い切れないのが面白いところです。Heshmat らの水素圧縮機も、軸受の話が圧縮機全体の設計の中に置かれていて、軸受が『曲げ危険速度の上で回す』ことを可能にする部品として読めました。 — 編集担当より"
   }
  ]
 }
