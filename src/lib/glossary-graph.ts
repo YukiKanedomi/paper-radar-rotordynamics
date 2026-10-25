@@ -22,6 +22,9 @@ export const CATEGORIES: GraphCategory[] = [
     label: "フォイル軸受・気体潤滑",
     color: "#1a5e54",
     terms: [
+      "動剛性（バンプ構造）",
+      "リンクばねモデル（バンプ）",
+      "膜厚（フォイル軸受）",
       "Generation IV フォイル軸受",
       "空気フォイルジャーナル軸受(AFJB)",
       "統合型ハイブリッド空気フォイル磁気スラスト軸受(i-HFMTB)",
@@ -507,6 +510,10 @@ export const CATEGORIES: GraphCategory[] = [
     label: "ロータの安定性・動特性",
     color: "#b4451f",
     terms: [
+      "二重すきまダンパ",
+      "せん断ピン",
+      "軸方向溝軸受",
+      "非線形シミュレーション",
       "多円弧軸受（マルチローブ軸受）",
       "プレーンジャーナル軸受（真円軸受）",
       "効率係数 β",
@@ -846,6 +853,16 @@ export const CATEGORIES: GraphCategory[] = [
 ];
 
 export const CURATED_EDGES: CuratedEdge[] = [
+  // --- 第102号（Hoffmann 2016／Gorla & Catalano 1987／Fleming 1984／Brown & Black 1980） ---
+  { from: "動剛性（バンプ構造）", to: "静剛性", label: "と使い分けて、1次（動的）の式に使う（本論文）" },
+  { from: "リンクばねモデル（バンプ）", to: "バンプフォイル", label: "を剛体セグメントとばねで表す簡易モデル（本論文）" },
+  { from: "バンプ間相互作用（バンプ-バンプ干渉）", to: "リンクばねモデル（バンプ）", label: "はばねで表される（本論文）" },
+  { from: "二重すきまダンパ", to: "スクイーズフィルムダンパ(SFD)", label: "を2つ直列にした構成（本報告）" },
+  { from: "せん断ピン", to: "二重すきまダンパ", label: "が切れると外側の膜が働き出す（本報告）" },
+  { from: "二重すきまダンパ", to: "二安定運転", label: "の計算でも狭い帯が残った（本報告）" },
+  { from: "限界サイクル振動(LCV)", to: "非線形シミュレーション", label: "で示された（抄録）" },
+  { from: "軸方向溝軸受", to: "多円弧軸受（マルチローブ軸受）", label: "を基準に近似する（抄録）" },
+  { from: "膜厚（フォイル軸受）", to: "レイノルズ方程式", label: "から求める（抄録）" },
   // --- 第101号（Heshmat 2013／Fleming 2006／Ha 2023／Gunter 1972） ---
   { from: "コンプライアントフォイルシール", to: "ガスフォイル軸受", label: "と同じ原理で、上箔が圧力を受けて動圧を作る（本論文）" },
   { from: "Generation IV フォイル軸受", to: "Generation III フォイル軸受", label: "の次の世代と、本論文が位置づける" },

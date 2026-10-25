@@ -13621,6 +13621,138 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。直接検索の語は手動で選んだもの。"
    },
    "afterword": "今回『なるほど』と思ったのは、Fleming らの玉軸受の話です。軸受の『あそび』があると危険速度が下がりそうなものですが、論文の要旨は『ずれうる』、結論は『全体として大きな差はない』と書いていて、実際には昇速の速さしだいで見え方が変わるようでした。ひとことで言い切れないのが面白いところです。Heshmat らの水素圧縮機も、軸受の話が圧縮機全体の設計の中に置かれていて、軸受が『曲げ危険速度の上で回す』ことを可能にする部品として読めました。 — 編集担当より"
+  },
+  {
+   "date": "2026-10-26",
+   "status": "published",
+   "headline": "フォイル軸受の剛性・減衰を実測と照らす計算法、フォイル軸受膜厚の圧縮性理論、二重すきまスクイーズフィルムダンパ、不安定領域の限界サイクル",
+   "intro": "今日も collect.mjs の基本候補は、ほぼ既配信か分野外でした。新着の未配信分（2026年の Elsevier・Springer 論文）は、抄録がどこからも取れず見送りました。そこで OpenAlex を OA 限定で直接引き、TU Berlin のリポジトリ（DepositOnce）で全文が読めたフォイル軸受の論文を1本、NASA の技術報告サーバー（NTRS）で全文が読めた1984年の技術メモランダムを1本選びました。残りの2本は NTRS の抄録だけで書いた抄録ベースです。定番枠・最新枠の呼び分けは相対的で、rotor は2本とも1980年代以前の「定番」になっています。",
+   "picked": [
+    {
+     "id": "doi:10.1177/0954406216667966",
+     "title": "ガスフォイル軸受のパラメータ推定の妥当な方法（Hoffmann ほか 2016）",
+     "why": "バンプの摩擦と相互作用を入れた非線形モデルを、実測の剛性・減衰と突き合わせた全文OA。うまく合う所と合わない所の両方が書かれていて、モデルの限界まで読めるので選びました。"
+    },
+    {
+     "id": "ntrs:19880067737",
+     "title": "圧縮性の効果を含むフォイル軸受の潤滑理論（Gorla & Catalano 1987）",
+     "why": "フォイル軸受の膜厚を、気体の圧縮性を入れて求める古い理論。全文は取れず、NTRS の抄録だけで書いた抄録ベースです。"
+    },
+    {
+     "id": "ntrs:19840016996",
+     "title": "高荷重条件のための二重すきまスクイーズフィルムダンパ（Fleming 1984）",
+     "why": "不釣り合いが急に増えたときだけ2層目の油膜を働かせる、という発想のダンパ。全文OAですが、スキャンの文字認識が崩れているため、数式は載せず、本文の言葉だけで書いています。"
+    },
+    {
+     "id": "ntrs:19800021224",
+     "title": "不安定領域にある柔軟軸の限界サイクル（Brown & Black 1980）",
+     "why": "線形解析で不安定とされる条件のその先を、非線形シミュレーションで調べた報告。抄録ベースです。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Wang ほか（2026、多層スラストガスフォイル軸受）と Le ほか（2026、扇形ラビリンスシール）は、OpenAlex にも Crossref にも抄録がなく見送りました。Bonello（2020、Manchester）は Cloudflare の確認画面で全文が取れませんでした。H. Ming Chen（2001、ヘリウムターボ圧縮機）は PDF が取れましたが、画像のみのスキャンで文字が抽出できませんでした。Elrod（1996、張力フォイル軸受）は、コードのデバッグが終わっていない途中経過の報告だったため見送りました。"
+    },
+    {
+     "title": "修正した点",
+     "note": "忠実性チェックは、4本とも1回目に指摘がありました。例：Hoffmann では、摩擦を入れた非線形モデルと、入れない線形ばねモデルの取り違え（std の要旨）、Fleming では、給油やキャビテーションについて『示されていない』と書いたのが本文と食い違っていたこと、Brown では抄録に無い『時間領域』の言い回しや『2葉』の補足、Gorla では軸受の形式を決めつける語を直しました。2回目で Hoffmann・Gorla・Brown は ok、Fleming は限定語や言い回しの med〜low が4件残り、それを直しましたが、直したあとの3回目の確認はしていません。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものです。foil は 1987年（定番）と 2016年（最新）、rotor は 1980年と 1984年の2本とも定番扱いです。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 24,
+      "note": "OA15／抄録9。arXiv は別分野ばかりで、未配信の OpenAlex 新着は抄録の取れない2026年の論文だけ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。未配信は分野外か、抄録の取れない2026年の論文が中心。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。未配信は統計・電力系統など分野外が中心。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "タイトル・本文検索、未配信のみ",
+      "terms": [
+       "foil bearing",
+       "gas bearing stability",
+       "hydrodynamic bearing rotor",
+       "rotordynamic seal",
+       "rotor instability whirl",
+       "squeeze film damper"
+      ],
+      "hits": 25,
+      "note": "語ごとに最大25件を取得（合計件数は未集計）して、配信済みを除いた。Fleming・Brown・Gorla はここから選んだ。"
+     },
+     {
+      "name": "OpenAlex（直接検索・OA限定）",
+      "scope": "is_oa、被引用順",
+      "terms": [
+       "foil bearing",
+       "gas foil",
+       "bump foil"
+      ],
+      "hits": 25,
+      "note": "語ごとに最大25件（合計件数は未集計）。Hoffmann ほかはここで見つけた。"
+     }
+    ],
+    "note": "基本候補が枯渇しているため、NTRS と OpenAlex の直接検索で補いました。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん「なるほど」と思ったのは、Hoffmann らの論文が、計算が合った所だけでなく合わなかった所（低い周波数側の剛性や減衰）まで書いていることです。軸受の係数が回転数だけでなく加振の周波数にも左右される、という点も、読むまでぴんと来ていませんでした。もう一つは Fleming の二重ダンパで、普段は小さなすきまの膜だけを使い、大きな不釣り合いのときだけ、ピンが切れて2層目が働く、という割り切りが面白いと感じました。あくまで専門家ではない者の読みです。"
   }
  ]
 }
