@@ -13753,6 +13753,145 @@
     "note": "基本候補が枯渇しているため、NTRS と OpenAlex の直接検索で補いました。"
    },
    "afterword": "— 編集担当より\n今回いちばん「なるほど」と思ったのは、Hoffmann らの論文が、計算が合った所だけでなく合わなかった所（低い周波数側の剛性や減衰）まで書いていることです。軸受の係数が回転数だけでなく加振の周波数にも左右される、という点も、読むまでぴんと来ていませんでした。もう一つは Fleming の二重ダンパで、普段は小さなすきまの膜だけを使い、大きな不釣り合いのときだけ、ピンが切れて2層目が働く、という割り切りが面白いと感じました。あくまで専門家ではない者の読みです。"
+  },
+  {
+   "date": "2026-10-27",
+   "status": "published",
+   "headline": "段付きフォイルのスラスト軸受、バンプ型フォイル軸受の熱モデル、テーパー付きシールの減衰、テクスチャ付き軸受のモード減衰",
+   "intro": "今日も collect.mjs の基本候補は、ほぼ既配信か分野外でした（foil の最新枠は arXiv の別分野論文ばかり）。そこで OpenAlex を直接引き、J-STAGE（Tribology Online）で全文が読めたフォイルスラスト軸受の論文を1本、NASA の技術報告サーバー（NTRS）で全文が読めた1980年の論文を1本選びました。残りの2本は、Crossref と出版社ページの抄録だけで書いた抄録ベースです。foil の最新枠として最初に考えた2026年のMDPI論文は、出版社ページが『早期公開版』で全文がまだ無く、見送りました。",
+   "picked": [
+    {
+     "id": "doi:10.2474/trol.19.448",
+     "title": "段付きフォイルを用いたガスフォイルスラスト軸受の予備的研究（Shivakumar ほか 2024）",
+     "why": "バンプ箔を除いた単純な箔の組み合わせ16通りを、直径224 mm の試験機で比べた全文OA。ただしライセンスが CC BY-NC-ND のため、図は転載せず概念図にしています。"
+    },
+    {
+     "id": "doi:10.1115/1.4001014",
+     "title": "バンプ型空気フォイル軸受の熱流体力学解析（Lee & Kim 2010）",
+     "why": "気膜・箔・スリーブ・ロータの温度を同時に解くモデル。全文は取れず、Crossref の抄録だけで書いた抄録ベースです。"
+    },
+    {
+     "id": "ntrs:19800021215",
+     "title": "圧縮性流体用リングシールの減衰（Fleming 1980）",
+     "why": "テーパー付きシールは剛性が高いだけでなく減衰も小さい、という指摘。全文OA（NASA職員の著作）ですが、スキャンの文字認識が崩れているため、式は載せず本文の言葉と表の数値だけで書いています。"
+    },
+    {
+     "id": "doi:10.1007/s42417-026-02841-w",
+     "title": "テクスチャ付きジャーナル軸受が多円板ロータ系のモード特性と安定性に及ぼす影響（Srivastava & Rahmani 2026）",
+     "why": "危険速度は動かさず、モード減衰だけを大きく高めるという結果が分かりやすい新着。有料のため抄録ベースです。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Zong & Cai（2026、SMA で支えを変えるフォイル軸受、MDPI Machines）は、出版社ページが早期公開版で全文が無く見送りました。Shin（2025、水素EV向けスラスト軸受のCFD）は韓国の有料データベースで抄録しか見えず、DellaCorte の『フォイル軸受の技術開発の道筋』（NTRS）は既に配信済み、Bruckner の NTRS 記録は論文ではなく特許でした。Zeidan（1996、スクイーズフィルムダンパ）は Texas A&M のリポジトリが403で全文を取れませんでした。"
+    },
+    {
+     "title": "忠実性チェックと修正",
+     "note": "4本とも1回目に指摘があり、修正して2回目の確認を受けました。主な指摘は、Shivakumar では摩耗の観察を50回試験の結果と取り違えた書き方（図8・9のキャプションと本文で材料の対応も食い違っています）、Lee & Kim と Srivastava では一般的な説明の注記漏れ、Fleming では結論の言い切りや、OCRで読めない箇所に頼った記述でした。2回目の指摘は言い回しの軽微なものだけで、それも直しましたが、直した後の3回目の確認はしていません。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものです。foil は 2010年（定番）と 2024年（最新）、rotor は 1980年（定番）と 2026年（最新）です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA16／抄録8。arXiv は別分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 9,
+      "note": "OA5／抄録4。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ（深掘り）",
+      "scope": "被引用順・発行日順、各25件",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "air foil bearing",
+       "foil bearing rotor",
+       "foil thrust bearing",
+       "gas bearing rotor",
+       "rotordynamic",
+       "rotor bearing instability",
+       "squeeze film damper"
+      ],
+      "hits": 25,
+      "note": "各クエリ上位25件×2（被引用順・新着順）。未配信の候補を抽出。"
+     },
+     {
+      "name": "NASA NTRS 検索",
+      "scope": "全文テキストAPI",
+      "terms": [
+       "foil bearing",
+       "gas foil journal bearing",
+       "compliant foil bearing",
+       "rotordynamic stability journal bearing",
+       "whirl instability rotor",
+       "oil whip subsynchronous",
+       "critical speed flexible rotor"
+      ],
+      "hits": 40,
+      "note": "各クエリ最大40件。Fleming 1980 を採用。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Fleming のシールの話です。ふつう減衰は振動を抑える味方だと思っていましたが、この報告は、環状シールの減衰が分数周波ホワールを促して害になりうるので、剛性が高く減衰も小さいテーパー付きが有利になりうる、と述べています。減衰は多ければよいわけではない、という見方を教えてもらいました。もうひとつ、Srivastava の抄録では、軸受のテクスチャは危険速度をほとんど動かさず、減衰だけを大きく動かしたそうです。共振の位置と収まりやすさを別々に扱える、というのは面白いと思いました（これは素人の感想で、抄録の主張ではありません）。"
   }
  ]
 }
