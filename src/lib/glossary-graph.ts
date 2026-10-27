@@ -22,6 +22,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "フォイル軸受・気体潤滑",
     color: "#1a5e54",
     terms: [
+      "形状記憶合金（SMA）",
+      "バンプ高さの誤差",
       "段付きフォイル",
       "扇形角（セクタ角）",
       "くさび膜",
@@ -317,6 +319,9 @@ export const CATEGORIES: GraphCategory[] = [
     label: "運転挙動・軌跡",
     color: "#8a6d3b",
     terms: [
+      "スクワレルケージ弾性支持",
+      "剛体–柔軟連成動力学モデル",
+      "保持器",
       "分調波振動（サブハーモニック）",
       "昇速率（角加速度）",
       "過渡応答（加速通過）",
@@ -390,6 +395,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "実験・計測",
     color: "#5f7a8a",
     terms: [
+      "動力学的・構造的相似則",
+      "能動渦動減衰・剛性システム",
       "シュラウド（ケーシング）",
       "近接センサ（渦電流式）",
       "静剛性",
@@ -517,6 +524,7 @@ export const CATEGORIES: GraphCategory[] = [
     label: "ロータの安定性・動特性",
     color: "#b4451f",
     terms: [
+      "線形安定性",
       "ティモシェンコはり要素",
       "部分テクスチャ軸受",
       "二重すきまダンパ",
@@ -781,6 +789,8 @@ export const CATEGORIES: GraphCategory[] = [
     label: "シール・環状ギャップ",
     color: "#4a6fa5",
     terms: [
+      "渦動励振定数",
+      "シールの半径方向剛性",
       "チョーク流れ",
       "非圧縮性近似（シール）",
       "コンプライアントフォイルシール",
@@ -2123,6 +2133,12 @@ export const CURATED_EDGES: CuratedEdge[] = [
   { from: "テレメトリ付き計装ロータ", to: "気体膜圧力分布", label: "を回転する軸の側から測る（本報告）" },
   { from: "ブレークアウェイトルク", to: "プリロード（予圧）", label: "を見積もるのに使う（本報告）" },
   { from: "真円度のずれ", to: "気体膜圧力分布", label: "が釣鐘形から崩れる原因と著者が推測する（本報告）" },
+  // --- 第104号（Zong & Cai 2026／Fatu & Arghir 2018／Wen ほか 2026／Wright 1983） ---
+  { from: "形状記憶合金（SMA）", to: "プリロード（予圧）", label: "支持の加熱で剛性とともに変わるとされる（抄録）" },
+  { from: "バンプ高さの誤差", to: "構造剛性（フォイル軸受）", label: "が標準偏差20 µm で40〜50%低下しうる（本報告）" },
+  { from: "剛体–柔軟連成動力学モデル", to: "スクワレルケージ弾性支持", label: "の柔軟性を取り込む（抄録）" },
+  { from: "渦動励振定数", to: "交差剛性", label: "の差の項を含む（本報告）" },
+  { from: "渦動励振定数", to: "ラビリンスシール", label: "の力を振れ回りの大きさで割って表す（本報告）" },
 ];
 
 const CAT_OF = new Map<string, GraphCategory>();

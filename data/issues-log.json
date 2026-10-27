@@ -13892,6 +13892,151 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Fleming のシールの話です。ふつう減衰は振動を抑える味方だと思っていましたが、この報告は、環状シールの減衰が分数周波ホワールを促して害になりうるので、剛性が高く減衰も小さいテーパー付きが有利になりうる、と述べています。減衰は多ければよいわけではない、という見方を教えてもらいました。もうひとつ、Srivastava の抄録では、軸受のテクスチャは危険速度をほとんど動かさず、減衰だけを大きく動かしたそうです。共振の位置と収まりやすさを別々に扱える、というのは面白いと思いました（これは素人の感想で、抄録の主張ではありません）。"
+  },
+  {
+   "date": "2026-10-28",
+   "status": "published",
+   "headline": "SMA支持で接触を避けるフォイル軸受、バンプの製造誤差と構造剛性、弾性支持された軸受ロータの連成振動、振れ回りロータへのラビリンスシールの力",
+   "intro": "今日も collect.mjs の基本候補は、ほぼ既配信か分野外でした（foil の最新枠は arXiv の別分野論文ばかり）。そこで OpenAlex を直接引き、未配信の候補を探しました。2026年の2本（Zong & Cai、Wen ほか）は CC BY の OA 論文ですが、出版社サイト（MDPI）が自動取得を断るため全文を読めず、OpenAlex の抄録だけで書いた抄録ベースです。全文で作り込んだのは、フランスの HAL で公開されていた Fatu & Arghir（著者原稿）と、NASA の技術報告サーバー（NTRS）の Wright 1983 です。最新枠・定番枠の呼び名は、候補が少ないため相対的なものです。",
+   "picked": [
+    {
+     "id": "doi:10.3390/machines14111242",
+     "title": "SMA の活性化がフォイルガス軸受内ロータのラブ・衝突リスクに及ぼす効果（Zong & Cai 2026）",
+     "why": "加熱で直接剛性が4.8倍になり、一定の質量範囲で接触が消えるという結果。OA ですが全文が取れず、抄録ベースです。"
+    },
+    {
+     "id": "doi:10.1115/1.4038042",
+     "title": "製造誤差がフォイル軸受の構造剛性に及ぼす影響の数値解析（Fatu & Arghir 2018）",
+     "why": "簡易モデルと詳細モデルの剛性の食い違いを、バンプ高さの誤差で説明する。HAL の著者原稿の全文。ライセンスが明示されていないため、図は転載せず概念図にしています。"
+    },
+    {
+     "id": "doi:10.3390/lubricants14100387",
+     "title": "弾性支持された軸受–ロータ系の動力学モデリングと連成振動特性（Wen ほか 2026）",
+     "why": "航空エンジンのファン軸受を模した縮尺試験機で、軸受内部の動きと軸の振動の連成を調べた。OA ですが全文が取れず、抄録ベースです。"
+    },
+    {
+     "id": "ntrs:19830013927",
+     "title": "振れ回りするロータに働くラビリンスシールの力（Wright 1983）",
+     "why": "能動フィードバックで3種類のシールの力を測った実験報告。NTRS の全文（スキャンのOCR）。理論が実験と合わなかったことも率直に書かれています。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Eshel & Elrod（1965、無限幅の完全可とう自己作動フォイル軸受の理論）は抄録が取れ、定番として有力でしたが、今日は全文OAを優先して見送りました。Dimond ほか（2011、ティルティングパッド軸受理論の総説、CC BY）は Hindawi のサイトが自動取得を断り全文が読めず、次回以降の候補に残しました。San Andrés & Kim（2008、FEトップフォイルのガスフォイル軸受解析）と Le ほか（2026、扇形ラビリンスシール）は Elsevier が抄録を出さず（ScienceDirect は403）、見送りました。NTRS のフォイル軸受の記録の一部は、特許や製作手順の技術報告で、論文としては使えませんでした。"
+    },
+    {
+     "title": "忠実性チェックと修正",
+     "note": "4本とも1回目に指摘があり、修正して2回目の確認を受けました。主な指摘は、Zong & Cai では抄録に無い「軌道比の分母」や「時間の割合」の補い、Fatu & Arghir では「標準偏差」を「±」と書いた誤りや「may」の断定化、Wen ほかでは著者名の姓名の取り違え、Wright では環状部圧力の割合の数値（出典のOCR内で15と25に読み取りが割れた）や「位相差」の誤訳でした。2回目も言い回しの指摘が1〜2点ずつ残り、それは直しましたが、直した後の3回目の確認はしていません。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものです。foil は 2018年（定番）と 2026年（最新）、rotor は 1983年（定番）と 2026年（最新）です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 12,
+      "note": "OA6／抄録6。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ（深掘り）",
+      "scope": "タイトル・抄録検索、被引用順・新着順",
+      "terms": [
+       "foil bearing",
+       "labyrinth seal",
+       "rotordynamic",
+       "journal bearing",
+       "annular seal",
+       "critical speed",
+       "rotor-bearing"
+      ],
+      "hits": 40,
+      "note": "各クエリ上位40件から未配信の候補を抽出。Zong & Cai、Wen ほか、Eshel & Elrod などを見つけた。"
+     },
+     {
+      "name": "NASA NTRS 検索",
+      "scope": "全文テキストAPI",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "gas foil journal bearing",
+       "rotordynamic",
+       "labyrinth seal",
+       "bearing stability"
+      ],
+      "hits": 100,
+      "note": "各クエリ最大100件。Wright 1983 を採用。"
+     },
+     {
+      "name": "HAL（Unpaywall 経由）",
+      "scope": "OA の全文入手先の確認",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 4,
+      "note": "OpenAlex の OA 位置情報から HAL の著者原稿（Fatu & Arghir）を採用。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Fatu & Arghir の話です。詳しい計算が簡単な計算より硬く出るのに、実験は簡単な計算に近い。その食い違いを、バンプの高さが設計値からほんの数十マイクロメートルずれるせいではないか、と考えたところが面白いと思いました。標準偏差20マイクロメートルの高さの誤差で、剛性が4〜5割下がりうるそうです（これは論文の数値で、私の感想ではありません）。もうひとつ、Wright の報告は、実験のあとで「現在の理論は妥当でなく、改善が必要」と率直に書いていて、古い報告ならではの潔さを感じました（これは素人の感想です）。"
   }
  ]
 }
