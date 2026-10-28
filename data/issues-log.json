@@ -14037,6 +14037,151 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Fatu & Arghir の話です。詳しい計算が簡単な計算より硬く出るのに、実験は簡単な計算に近い。その食い違いを、バンプの高さが設計値からほんの数十マイクロメートルずれるせいではないか、と考えたところが面白いと思いました。標準偏差20マイクロメートルの高さの誤差で、剛性が4〜5割下がりうるそうです（これは論文の数値で、私の感想ではありません）。もうひとつ、Wright の報告は、実験のあとで「現在の理論は妥当でなく、改善が必要」と率直に書いていて、古い報告ならではの潔さを感じました（これは素人の感想です）。"
+  },
+  {
+   "date": "2026-10-29",
+   "status": "published",
+   "headline": "フォイル軸受の構造層の動的な検証、シム付きフォイル軸受のサブシンクロナス振動、水潤滑ハイブリッド軸受の偏心の影響、ティルティングパッド軸受の係数と周波数",
+   "intro": "今日も collect.mjs の基本候補は、ほぼ既配信か分野外でした（foil の最新枠は arXiv の別分野論文ばかり、foil の定番枠は新規が1件だけ）。そこで OpenAlex を直接引き、未配信の候補を探しました。2026年の候補のうち、OA（CC BY）の Damsgaard & Santos（スラスト軸受）と Oliveira ほか（油不足の軸受）は、出版社サイト（ScienceDirect）が自動取得を断って全文を読めませんでした。全文で作り込んだのは、Sciendo で公開されていた Żywica 2013 と、NASA の技術報告サーバー（NTRS）の San Andrés 1991 です。Sim ほか 2012 と Parsell ほか 1983 は有料の論文で、抄録だけで書いた抄録ベースです。枠の呼び名（最新／定番）は、候補が少ないため相対的なものです。",
+   "picked": [
+    {
+     "id": "doi:10.2478/ama-2013-0011",
+     "title": "フォイル軸受の構造層の動特性解析（Żywica 2013）",
+     "why": "バンプとトップフォイルの層を有限要素法で解き、揺する実験と比べた記録。最初は負荷と除荷の差が出ず、調整して近づけた過程が率直に書かれています。Sciendo の全文。図は転載せず概念図にしています。"
+    },
+    {
+     "id": "doi:10.1115/1.4005892",
+     "title": "オイルフリー・ターボチャージャ用シム付きガスフォイル軸受のロータダイナミック性能（Sim ほか 2012）",
+     "why": "シムを3枚入れた軸受が、原型で出る大きなサブシンクロナス振動を減らした試験。有料のため抄録ベースです。"
+    },
+    {
+     "id": "ntrs:19920005155",
+     "title": "乱流ハイブリッド軸受の静特性・動特性に及ぼす偏心の影響（San Andrés 1991）",
+     "why": "水潤滑の高速ハイブリッド軸受を、偏心を変えて計算で調べた報告。流体慣性が大きく効く点が特徴です。NTRS の全文（スキャンのOCR）で、予測のみ（実験との比較なし）です。"
+    },
+    {
+     "id": "doi:10.1080/05698198308981496",
+     "title": "ティルティングパッド・ジャーナル軸受の動特性係数に及ぼす振動数の影響（Parsell ほか 1983）",
+     "why": "同期縮約係数で安定性解析をしてよいかを、周波数比で判断する考え方。有料のため抄録ベースです。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Damsgaard & Santos（2026、スラスト軸受の非線形挙動、CC BY）と Oliveira ほか（2026、油不足の軸受を持つロータ、CC BY）は ScienceDirect が自動取得を断り（ロボット確認画面）、全文が読めず見送りました。Wang ほか（2026、多層スラストフォイル軸受）、Le ほか（2026、扇形ラビリンスシール）、San Andrés & Kim（2008）は、OpenAlex に抄録が無く、見送りました。Schiffmann ほかの溝付きガス軸受（EPFL）は、リポジトリが人間確認を求めて開けませんでした。"
+    },
+    {
+     "title": "忠実性チェックと修正",
+     "note": "4本とも1回目に指摘があり、修正して2回目の確認を受けました。Żywica は2回目で ok でした。Sim ほかと Parsell ほか、San Andrés は2回目にも言い回しの指摘（抄録外の推論への「一般的な説明」の付け忘れ、因果のつなぎ方、条件の書き漏れなど。事実の誤りや high の指摘は無し）が残り、それは直しましたが、直した後の3回目の確認はしていません。主な1回目の指摘は、Żywica の加振の対象（軸ではなくブッシュ）の取り違えと「静的」の誤記、San Andrés の供給圧の食い違いの原因をOCRのせいにした点と、約25%の条件（軸を剛体とした試験ロータ系）の書き漏れでした。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものです。foil は 2012年（定番）と 2013年（最新）、rotor は 1983年（定番）と 1991年（最新）です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXiv は別分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。新規は1件のみ。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 13,
+      "note": "OA7／抄録6。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "被引用数順・各25件",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "foil journal bearing",
+       "foil bearing rotordynamic",
+       "air foil bearing",
+       "foil thrust bearing",
+       "rotordynamic coefficients",
+       "rotor bearing stability",
+       "seal rotordynamic",
+       "rotordynamics"
+      ],
+      "hits": 25,
+      "note": "未配信の候補を探すために追加。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "全文テキストの入手先",
+      "terms": [
+       "rotordynamic stability journal bearing",
+       "subsynchronous whirl rotor",
+       "bearing dynamic coefficients rotor instability"
+      ],
+      "hits": 37,
+      "note": "San Andrés 1991 を採用。"
+     },
+     {
+      "name": "Sciendo（出版社の配信サイト）",
+      "scope": "OA の全文入手先の確認",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 1,
+      "note": "Żywica 2013 の全文PDFを取得。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Żywica の話です。箔の構造だけを計算で解いて実験と比べたところ、最初は荷重を増やすときと減らすときで差が出ず、実験の差（エネルギーの散逸）を再現できなかったそうです。そこで質量を足し、ケーブルの硬さまで考えてばねとダンパを足すと、ループの形が似てきた、という流れです。ただ足した値は何度も試して決めた調整値だと論文に書かれていて、そこも正直だと思いました（これは素人の感想です）。もうひとつ、San Andrés の報告は、外から高い圧力をかけて浮かせる軸受でも、30,000 rpm では動圧が支配的で、安定性は普通のジャーナル軸受より良いとは言えない、という予測でした。水は重いので、流体の慣性まで効くところも面白いと思いました（数値は論文の予測で、私の感想ではありません）。"
   }
  ]
 }
