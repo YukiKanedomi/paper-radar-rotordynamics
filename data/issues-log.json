@@ -14182,6 +14182,143 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Żywica の話です。箔の構造だけを計算で解いて実験と比べたところ、最初は荷重を増やすときと減らすときで差が出ず、実験の差（エネルギーの散逸）を再現できなかったそうです。そこで質量を足し、ケーブルの硬さまで考えてばねとダンパを足すと、ループの形が似てきた、という流れです。ただ足した値は何度も試して決めた調整値だと論文に書かれていて、そこも正直だと思いました（これは素人の感想です）。もうひとつ、San Andrés の報告は、外から高い圧力をかけて浮かせる軸受でも、30,000 rpm では動圧が支配的で、安定性は普通のジャーナル軸受より良いとは言えない、という予測でした。水は重いので、流体の慣性まで効くところも面白いと思いました（数値は論文の予測で、私の感想ではありません）。"
+  },
+  {
+   "date": "2026-10-30",
+   "status": "skipped",
+   "headline": "お休み：全文2本・抄録2本を作り込みましたが、忠実性チェック2回後も2本に言い回しの指摘が残り、さらに全文の1本は配信済みの論文とほぼ同じ内容だったため、前号のままにしました",
+   "intro": "今日も配信をお休みしました。collect.mjs の基本候補は foil も rotor もほぼ既配信か分野外で、新規は抄録の取れない Elsevier の新着数件と書籍だけでした。OpenAlex と NASA の技術報告サーバー（NTRS）を直接引いて補い、全文が読める2本（foil：Hou ほか 2013、J-STAGE で公開されている突起付きフォイル軸受の試験。rotor：Proctor & Gunter 2005、NTRS のシール試験ロータの解析）と、抄録が取れる2本（foil：Kim ほか 2009、rotor：Childs 1982）を選んで要約を作り、忠実性チェックを2回まで回しました。1回目は4本とも指摘があり、Hou ほかでは「同じ号の論文」と書いた関連論文のタグが事実と違っていた点、推測と測定の混同などを直しました。2回目は、Proctor & Gunter と Kim ほかが ok でしたが、Hou ほかには「全体として」「〜に見える」といった限定語が一部の欄で落ちている点と、一般化しすぎた1文が、Childs には、図の左側で「ゆるむ」のは中心付近と決めた点（抄録に根拠がない）と、「不安定になりうる」の限定語が残りました。いずれも捏造や数値の誤りではなく言い回しの範囲ですが、取り決めでは2回で通らなかった論文は保留です。そのため Hou ほかと Childs は公開せず、foil は全文の1本を欠き、rotor も1本だけになり、各トピック2件が揃いません。もうひとつ、通過した Proctor & Gunter 2005 は、公開前の突き合わせで、すでに配信済みの2本（2007年版 Proctor & Gunter の安定性解析と、Proctor & Gunter の 2007年のホワール運動の報告）と同じ試験リグ・同じダンパ延長の話で、実質的に重複することが分かりました。全文の代わりに採れる foil の候補もなく、ほかの候補を探して作り直す余地もないため、今日は前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Hou ほか (2013)「多段の突起付きガスフォイルジャーナル軸受の実験的研究」（J-STAGE、全文）と Childs (1982)「非対称なクリアランスの影響による分数周波数のロータ運動」（Journal of Engineering for Power、抄録ベース）。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "通ったが採らなかった論文",
+     "note": "Proctor & Gunter (2005、NASA/TM-2005-213808) と Kim ほか (2009、J. Tribology 131) は2回目の確認で ok でした。ただし Proctor & Gunter は配信済みの2本と内容が重なるため採らず、Kim ほかは単独では各トピック2件の条件を満たせず、公開していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "Damsgaard & Santos（2026、スラスト軸受の非線形挙動、CC BY）と Oliveira ほか（2026、油不足の軸受を持つロータ、CC BY）は ScienceDirect が自動取得を断り（ロボット確認画面）、全文が読めず見送りました。Wang ほか（2026）と Le ほか（2026）は抄録が見つからず、見送りました。Dimofte & Keith（NTRS、波形ガス軸受の弾性支持）はスライドのスキャンで、本文のテキストが取れませんでした。DellaCorte のフォイル軸受技術のスライド（2016）は、配信済みの2008年版と重なるため採りませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXiv は別分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。新規は1件のみ（教科書で、採らず）。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "被引用数順・各25件（一部は OA のみに絞り込み）",
+      "terms": [
+       "gas foil bearing",
+       "gas bearing stability",
+       "gas lubricated bearing rotor",
+       "foil bearing thermal",
+       "rotordynamic coefficients",
+       "rotor bearing instability",
+       "rotor whirl",
+       "squeeze film damper rotor",
+       "foil bearing",
+       "gas bearing whirl"
+      ],
+      "hits": 25,
+      "note": "未配信の候補を探すために追加。件数は各検索語の上限。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "全文テキストの入手先",
+      "terms": [
+       "foil gas bearing",
+       "gas bearing stability whirl",
+       "compliant foil bearing test",
+       "hydrodynamic bearing rotor instability",
+       "seal rotordynamic coefficients",
+       "damper seal rotor",
+       "subsynchronous whirl turbomachinery"
+      ],
+      "hits": 98,
+      "note": "Proctor & Gunter 2005 を採用。"
+     },
+     {
+      "name": "J-STAGE（出版社の配信サイト）",
+      "scope": "OA の全文入手先の確認",
+      "terms": [
+       "gas foil bearing"
+      ],
+      "hits": 1,
+      "note": "Hou ほか 2013 の全文PDFを取得。"
+     },
+     {
+      "name": "Crossref / Semantic Scholar",
+      "scope": "抄録と被引用数の確認",
+      "terms": [
+       "DOI 指定"
+      ],
+      "hits": 6,
+      "note": "Kim ほか 2009 と Childs 1982 の抄録を取得。Wang ほか・Le ほか・Katkar ほか・Sun ほかは抄録が無かった。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今日は書き上げた4本を出さない日になりました。2回目の確認で残った指摘は、数字の間違いではなく、「全体として」「〜に見える」のような、原文のぼかしが一部の欄で抜けているという種類でした。同じ内容を、やさしい版・標準版・専門版と何か所にも書くので、直し漏れが出やすいのだそうです（これは私が運用の記録から読み取ったことです）。もうひとつの気づきは、全文が読める候補が少ない日は、同じ著者・同じ試験リグの報告が別の年にも出ていて、気づかないうちに重なってしまうことがある、という点です。公開前の突き合わせで気づけたのは幸いでした。"
   }
  ]
 }
