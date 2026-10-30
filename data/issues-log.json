@@ -14319,6 +14319,137 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今日は書き上げた4本を出さない日になりました。2回目の確認で残った指摘は、数字の間違いではなく、「全体として」「〜に見える」のような、原文のぼかしが一部の欄で抜けているという種類でした。同じ内容を、やさしい版・標準版・専門版と何か所にも書くので、直し漏れが出やすいのだそうです（これは私が運用の記録から読み取ったことです）。もうひとつの気づきは、全文が読める候補が少ない日は、同じ著者・同じ試験リグの報告が別の年にも出ていて、気づかないうちに重なってしまうことがある、という点です。公開前の突き合わせで気づけたのは幸いでした。"
+  },
+  {
+   "date": "2026-10-31",
+   "status": "published",
+   "headline": "テンション型フォイルの大たわみ解析、連続フォイル軸受の動的シミュレーション、ポンプ用環状シールの流体力の実測、収束テーパーシールの最適角",
+   "intro": "今日も collect.mjs の基本候補は、foil の定番枠が全部既配信、rotor の新着も既配信か分野外で、使えるものがほとんどありませんでした。OpenAlex と NASA の技術報告サーバー（NTRS）を直接引いて補い、全文が読める2本（foil：Elrod 1996、rotor：Iino & Kaneko 1980。どちらも NTRS のスキャンPDFで、OCRが崩れた箇所は慎重に読みました）と、抄録で書く2本（foil：Braun ほか 1996、rotor：Childs & Dressman 1985）を選びました。2026年の新着のうち Damsgaard & Santos（スラスト軸受、CC BY）と Cheng ほか（空気静圧ティルティングパッド軸受、CC BY）は、出版社サイトが自動取得を断って全文を読めず、Wang ほか（2026、多層スラストフォイル軸受）は Crossref・Semantic Scholar・OpenAlex のどこにも抄録がなく、見送りました。Zhang ほか（2026、Mechanical Sciences）は読めましたが、すでに配信済みでした。枠の呼び名（最新／定番）は候補が少ないため相対的なもので、今日の全文2本はどちらも古い報告です。",
+   "picked": [
+    {
+     "id": "ntrs:19960025440",
+     "title": "テンションフォイル軸受の大たわみ解析（Elrod 1996）",
+     "why": "フォイルが板厚の数倍たわむ型では小たわみの式が使えない、という出発点から、ANSYS での比較と自作コードの途中経過までを正直に記した夏季研究の報告。コードは未完成と結論に明記されています。NTRS の全文（OCR）で、図は転載せず概念図にしています。"
+    },
+    {
+     "id": "ntrs:19960020386",
+     "title": "連続フォイル軸受の2次元動的シミュレーション（Braun ほか 1996）",
+     "why": "流体膜・ジャーナル・ばね支持の箔を連成させ、定常・準過渡・完全過渡の3方式を比べた報告。本文が NTRS に無いため抄録ベースで、結果は抄録に書かれていません。"
+    },
+    {
+     "id": "ntrs:19800021217",
+     "title": "遠心ポンプの環状圧力シールが生む流体力（Iino & Kaneko 1980）",
+     "why": "入口・出口の損失係数が従来値（0.5・1.0）よりずっと小さいと実測し、出口でも周方向の圧力むらが残ることを示した試験報告。NTRS の全文（OCR）で、図は転載せず概念図にしています。"
+    },
+    {
+     "id": "doi:10.1115/1.3261059",
+     "title": "収束テーパー環状シール：ロータダイナミック係数の解析と試験（Childs & Dressman 1985）",
+     "why": "直接剛性などに対する最適なテーパー角が存在し、3つの角度の試験が理論とよく合った、という報告。有料のため NTRS の抄録だけで書いた抄録ベースです。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "Damsgaard & Santos（2026）と Cheng ほか（2026、Lubricants）は出版社サイトが自動取得を断り、全文が読めませんでした。Wang ほか（2026）と de Castro ほか（2008、ホワール／ホイップ）、San Andrés & Kim（2008）は、Elsevier が抄録を公開しておらず、抄録が取れませんでした。Bruckner（2015、NTRS）は特許で、論文ではないため採りませんでした。"
+    },
+    {
+     "title": "忠実性チェックと修正",
+     "note": "4本とも1回目に指摘があり、修正して2回目の確認を受けました。Elrod と Iino は2回目で ok でした。主な1回目の指摘は、Elrod の「剛性が小さい」（正しくは負荷容量）、Iino の圧力差の増減の向きの取り違え（正しくは軸方向に減少）、抄録ベース2本の抄録外の書き足し（液体・ポンプ・金属・空気など）でした。Braun ほかと Childs & Dressman は2回目にも、図の矢印の意味づけと「基準が明記されていない」旨の書き漏れの指摘が残り、それは直しましたが、直した後の3回目の確認はしていません（いずれも記述を削る・弱める方向の修正です）。"
+    },
+    {
+     "title": "定番枠・最新枠の呼び名について",
+     "note": "候補が枯渇しているため、枠の名前は相対的なものです。foil は 1996年（定番）と 1996年（最新）、rotor は 1985年（定番）と 1980年（最新）で、どちらの枠も古い報告です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。上位は全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA7／抄録4。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "被引用数順・各25件",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing rotordynamic",
+       "rotordynamic seal force coefficients",
+       "journal bearing instability whirl"
+      ],
+      "hits": 25,
+      "note": "未配信の定番を探すために追加。語の一致が緩く分野外が多かった。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "全文テキスト・抄録の入手先",
+      "terms": [
+       "foil bearing",
+       "foil journal bearing gas",
+       "rotordynamic stability whirl journal bearing",
+       "annular seal rotordynamic coefficients"
+      ],
+      "hits": 151,
+      "note": "Elrod 1996、Braun ほか 1996、Iino & Kaneko 1980、Childs & Dressman 1985（抄録）を採用。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Iino & Kaneko の話です。ポンプの環状シールの入口・出口で失われる圧力の係数は、従来の値（0.5と1.0）よりずっと小さいと実測され、そのせいで出口でも周方向の圧力むらが残る、と著者が書いています。計算の境界条件に置く「出口の圧力は一様」という仮定を、実験が崩したわけで、素人目にはここが面白いと思いました（解釈は論文の記述の範囲で、私の感想です）。もうひとつ、Elrod の報告は、自作の計算コードが「動くけれど値がまだ正しくない」とそのまま結論に書かれていて、うまくいかなかった途中経過を残す記録も読み応えがあるのだと感じました。なお今日は、全文で読めた2本がどちらも古い報告で、新しい論文は出版社の自動取得の制限に阻まれました。"
   }
  ]
 }
