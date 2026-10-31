@@ -14450,6 +14450,135 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今回いちばん『なるほど』だったのは、Iino & Kaneko の話です。ポンプの環状シールの入口・出口で失われる圧力の係数は、従来の値（0.5と1.0）よりずっと小さいと実測され、そのせいで出口でも周方向の圧力むらが残る、と著者が書いています。計算の境界条件に置く「出口の圧力は一様」という仮定を、実験が崩したわけで、素人目にはここが面白いと思いました（解釈は論文の記述の範囲で、私の感想です）。もうひとつ、Elrod の報告は、自作の計算コードが「動くけれど値がまだ正しくない」とそのまま結論に書かれていて、うまくいかなかった途中経過を残す記録も読み応えがあるのだと感じました。なお今日は、全文で読めた2本がどちらも古い報告で、新しい論文は出版社の自動取得の制限に阻まれました。"
+  },
+  {
+   "date": "2026-11-01",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込み、rotor の2本は忠実性チェックを通りましたが、foil の2本に訳語などの指摘が2回目も残ったため、前号のままにしました",
+   "intro": "今日も配信をお休みしました。collect.mjs の基本候補は、foil も rotor もほとんどが配信済みか分野外で、新規は抄録の取れない新着数件と書籍だけでした。そこで OpenAlex を直接引いて補い、foil では Licht & Eshel (1968、NASA の技術報告 CR-1157、全文を NTRS から取得) と Damsgaard & Santos (2026、抄録ベース。全文は出版社サイトが自動取得を断りました)、rotor では Zhong ほか (2026、Frontiers・CC BY の全文) と Lund & Saibel (1967、抄録ベース) を選んで要約を作り、忠実性チェックを2回まで回しました。2回目の結果は、Zhong ほかと Lund & Saibel が ok、Licht & Eshel と Damsgaard & Santos は needs_fix でした。残った指摘は、Licht & Eshel では結論の「flexible な（柔軟な）シール」を「浮動式」と誤訳していた点と、序論の「本格的な試みは無かった」を「試験は無かった」と強めて書いていた点、Damsgaard & Santos では抄録に書かれていない「空気」という語が1か所だけ残っていた点です。数値の誤りや捏造ではなく訳語・言い回しの範囲ですが、取り決めでは2回で通らなかった論文は保留です。foil の2本とも保留になり、foil の代わりの候補を作り直す余地もないため、各トピック2件が揃わず、今日は前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Licht & Eshel (1968)「箔（フォイル）軸受によるロータ支持系の検討・製作・試験」（NASA CR-1157、全文ベース）と Damsgaard & Santos (2026)「ガススラスト軸受上のロータの非線形な軸方向挙動」（Tribology and Interfaces、抄録ベース）。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "通ったが採らなかった論文",
+     "note": "Zhong ほか (2026)「フローティングリング軸受の外側油膜すきまがターボチャージャのサブシンクロナス振動に与える影響」（Frontiers in Mechanical Engineering、CC BY、全文ベース）と Lund & Saibel (1967)「すべり軸受内のロータのオイルホイップ旋回軌道」（J. Eng. Industry、抄録ベース）は2回目の確認で ok でした。ただし foil が揃わず、rotor だけの号は出せないため、公開していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "最新枠で新規に残った Dynamic response and stability of a multilayer thrust gas foil bearing（2026、抄録が取れず）と、定番枠の教科書（Linear and Nonlinear Rotordynamics）は採りませんでした。foil の全文の候補を NTRS で探しましたが、Howard & DellaCorte (2001) は配信済みの論文と同じ報告だと分かり、DellaCorte & Valco（荷重容量の経験則）は配信済みの内容と重なるため採りませんでした。ScienceDirect の Elsevier 論文は全文が自動取得できません。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかり。新規は2件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。上位はほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA7／抄録6。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。分野外が混入。"
+     },
+     {
+      "name": "OpenAlex（直接検索）",
+      "scope": "タイトル・抄録の検索（被引用数順、検索語ごとに上位80件まで確認）",
+      "terms": [
+       "foil bearing",
+       "foil thrust bearing",
+       "foil journal bearing",
+       "rotordynamic",
+       "rotor bearing stability",
+       "annular seal rotordynamic",
+       "rotor bearing whirl",
+       "rotor instability fluid film bearing",
+       "critical speed rotor",
+       "rotor unbalance response bearing",
+       "tilting pad journal bearing",
+       "whirl instability rotor",
+       "subsynchronous rotor bearing",
+       "oil whip"
+      ],
+      "hits": 80,
+      "note": "未配信の定番を探すために追加。件数は各検索語の確認上限。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "全文テキストの入手先（各検索語の上位40件を確認）",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "compliant foil",
+       "gas bearing foil rotordynamic"
+      ],
+      "hits": 40,
+      "note": "Licht & Eshel (1968) を採用。"
+     },
+     {
+      "name": "Crossref / Semantic Scholar / Unpaywall",
+      "scope": "抄録・ライセンス・全文の有無の確認",
+      "terms": [
+       "DOI 指定"
+      ],
+      "hits": 6,
+      "note": "Damsgaard & Santos の全文は取得できず、Elsevier の古典2本は抄録が非公開だった。"
+     }
+    ],
+    "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
+   },
+   "afterword": "— 編集担当より\n今日は書き上げた4本のうち、2本が確認を通ったのに出せない日になりました。いちばん「なるほど」だったのは、Zhong ほかの結果です。リングの外側の油膜のすきまを0.030 mm から0.036 mm に広げると（計算で）、外側の油膜のサブシンクロナス振動は0.01 mm から0.16 mm に増え、内側のは逆に減る、と論文は書いています。リングの回る速さが変わると、内側の油の温度や粘度まで動くから、というのが著者の説明で、1つの寸法が両側に逆向きに効くのが面白いと感じました（解釈は私の感想です）。もうひとつ、Licht & Eshel の古い報告では、箔の軸受で60,000 rpm 超まで回しても半周波ホワールが観測されなかった、と結論の最初に書かれていました。ただ、確認で見つかったのは、報告の「flexible なシール」を私が「浮動式」と訳し違えていた、という種類のミスです。素人目には小さく見えても、専門の方が読めば引っかかる誤訳だと思うので、直した上で後日出し直せるよう、今回は出さない判断が正しいのだと思います。"
   }
  ]
 }
