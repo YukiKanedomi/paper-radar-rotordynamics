@@ -14579,6 +14579,94 @@
     "note": "collect.mjs の基本候補が枯渇しているため、OpenAlex と NTRS を直接引いて補いました。"
    },
    "afterword": "— 編集担当より\n今日は書き上げた4本のうち、2本が確認を通ったのに出せない日になりました。いちばん「なるほど」だったのは、Zhong ほかの結果です。リングの外側の油膜のすきまを0.030 mm から0.036 mm に広げると（計算で）、外側の油膜のサブシンクロナス振動は0.01 mm から0.16 mm に増え、内側のは逆に減る、と論文は書いています。リングの回る速さが変わると、内側の油の温度や粘度まで動くから、というのが著者の説明で、1つの寸法が両側に逆向きに効くのが面白いと感じました（解釈は私の感想です）。もうひとつ、Licht & Eshel の古い報告では、箔の軸受で60,000 rpm 超まで回しても半周波ホワールが観測されなかった、と結論の最初に書かれていました。ただ、確認で見つかったのは、報告の「flexible なシール」を私が「浮動式」と訳し違えていた、という種類のミスです。素人目には小さく見えても、専門の方が読めば引っかかる誤訳だと思うので、直した上で後日出し直せるよう、今回は出さない判断が正しいのだと思います。"
+  },
+  {
+   "date": "2026-11-02",
+   "status": "skipped",
+   "headline": "お休み：foilの「最新」枠で全文が読めるOA論文が見つかりませんでした",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foil・rotor とも定番枠の大半が既配信か分野外でした。そこでOpenAlexを直接引いて未配信の候補を探し、rotor側では2026年10月30日公開（CC-BY）のターボチャージャ用フローティングリング軸受の外側油膜すきまと準同期振動の論文（Zhong ほか）を全文まで取得できました。一方 foil 側は、全文が読める未配信のOA論文が最新枠に見つかりませんでした。OA（CC-BY）のDamsgaard & Santos 2026（ガススラスト軸受の表面コンプライアンスと給気）は出版社ページが403で全文を取得できず、古い定番で読めたBou-Saïdほか2007は最新枠に当てられず、多層スラストガスフォイル軸受のWangほか2026は抄録がどの出典にもありませんでした。foilのOA全文1件が揃わないため、無理に出さず前号のままにします。",
+   "picked": [],
+   "aside": {
+    "title": "見送った候補",
+    "note": "foil：Damsgaard & Santos 2026（全文403で取得不可）、Wang ほか 2026（抄録なし）、Bou-Saïd ほか 2007 非線形ロータダイナミクス（HAL著者原稿で全文は読めたが、最新枠にならず）。rotor：Zhong ほか 2026（全文取得済み・相方のfoilが揃わず見送り）、de Castro ほか 2008 ホワール／ホイップ（抄録が取得できず）。"
+   },
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 24,
+      "note": "未配信で分野内は3件ほど。うち全文を取れたものは無し。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用上位",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "ほぼ全件が既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 24,
+      "note": "arXivは分野外が多く、OpenAlexに数件の分野内OAあり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "大半が既配信または統計学・電力系統などの分野外。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ",
+      "scope": "2015年以前の被引用上位から未配信を深掘り",
+      "terms": [
+       "gas foil bearing",
+       "foil air bearing rotordynamic",
+       "rotordynamic seal force coefficients",
+       "journal bearing rotor instability oil whirl"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は未集計（0は未記録の意味）。候補は見つかったが抄録・全文が取れないものが多かった。"
+     }
+    ],
+    "note": "抄録は OpenAlex・Crossref・Semantic Scholar を試しましたが、Wang ほか 2026 と de Castro ほか 2008 は取得できませんでした。ScienceDirect と Hindawi は403でした。"
+   },
+   "afterword": "— 編集担当より\n今日はお休みです。全文が読めるrotorの新着は見つかったのに、相方のfoilが揃わない、という日でした。出版社ページの403ひとつで配信が止まるのは歯がゆいですが、読めていないものを要約するよりずっと誠実だと思っています。"
   }
  ]
 }
