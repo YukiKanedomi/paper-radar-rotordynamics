@@ -14667,6 +14667,136 @@
     "note": "抄録は OpenAlex・Crossref・Semantic Scholar を試しましたが、Wang ほか 2026 と de Castro ほか 2008 は取得できませんでした。ScienceDirect と Hindawi は403でした。"
    },
    "afterword": "— 編集担当より\n今日はお休みです。全文が読めるrotorの新着は見つかったのに、相方のfoilが揃わない、という日でした。出版社ページの403ひとつで配信が止まるのは歯がゆいですが、読めていないものを要約するよりずっと誠実だと思っています。"
+  },
+  {
+   "date": "2026-11-03",
+   "status": "published",
+   "headline": "第107号：バンプフォイルの固定位置とスラスト箔軸受の性能、ゴムで挟む拘束層ダンピングの空気軸受（全文2本）、圧縮ばね式フォイル軸受とシールの乱流計算（抄録2本）",
+   "intro": "今日は collect.mjs の基本候補がほとんど配信済みか分野外で、foil の定番枠は全て配信済みでした。そこで Crossref を直接引いて候補を補いました。foil では、最新枠として Hu ほか (2023、MDPI・CC BY の全文) を、定番枠として Song & Kim (2007、抄録ベース) を選びました。rotor では、最新枠として Cheng ほか (2026、MDPI・CC BY の全文) を、定番枠として Dietzen & Nordmann (1987、抄録ベース) を選びました。全文の2本は、出版社ページが自動取得を断る日が多いのですが、今日は本文テキストを取得できました。取得できなかった表の数値と式は、要約に使っていません。最初に選んだ foil の全文候補 Sarrazin & Liebich (2023、円錐形ガスフォイル軸受の時間発展解析) は、2回目の忠実性チェックでも条件の書き落とし（言い回し）の指摘が残ったため保留にし、代わりに Hu ほか (2023) を選び直しました。公開した4本は、いずれも忠実性チェックを通しています。",
+   "picked": [
+    {
+     "id": "doi:10.3390/lubricants11100417",
+     "title": "Numerical Investigation of Bump Foil Configurations Effect on Gas Foil Thrust Bearing Performance Based on a Thermos-Elastic-Hydrodynamic Model",
+     "why": "バンプフォイルの形は同じまま、どの端を固定するか、1枚か数本に分けるかだけで、負荷容量と温度が変わる、という計算です。試験装置の引きずりトルクでモデルを確かめている点も読みどころでした。全文で読めました。"
+    },
+    {
+     "id": "doi:10.1115/1.2736455",
+     "title": "Foil Gas Bearing With Compression Springs: Analyses and Experiments",
+     "why": "波形のバンプフォイルを圧縮ばねに替えた軸受で、支持構造の減衰が「危険速度のピークには効くが、不安定の開始には効かない」という整理が、定番として押さえたい内容でした。抄録ベースです。"
+    },
+    {
+     "id": "doi:10.3390/lubricants14110412",
+     "title": "Dynamic Characteristics and Vibration Suppression of Aerostatic Tilting Pad Bearings Enhanced by Constrained Layer Damping",
+     "why": "空気軸受の弱点である低減衰を、ゴムを金属で挟む構造で補う試みです。拘束層は厚いほどよいわけではない、という点が分かりやすい実験でした。全文で読めました。"
+    },
+    {
+     "id": "doi:10.1115/1.3261453",
+     "title": "Calculating Rotordynamic Coefficients of Seals by Finite-Difference Techniques",
+     "why": "シール内の乱流を差分法で計算し、ロータダイナミック係数を求める1980年代の定番の一つです。抄録ベースで、比較の結果は抄録に書かれていないため、そこは書いていません。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Sarrazin & Liebich (2023)「シム付き円錐形ガスフォイル軸受の非線形動力学の数値解析」（Applied Sciences、CC BY の全文）。要約の草稿は作成済みで、事実の捏造ではなく、一様すきまで軸方向の力が出ないという結論の条件（ロータが径方向の中心にあるとき）などを、いくつかの欄で書き落としていた点が、2回目の確認でも残りました。取り決めどおり公開していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "foil の最新枠で新規に残っていた Dynamic response and stability of a multilayer thrust gas foil bearing (2026) と Rotordynamic performances of the foil bearing-rotor system with double-V honeycomb structure (2025) は抄録が取れず採りませんでした。Comparative Study of the Nonlinear Static and Dynamic Axial Behavior of Rotors on Gas Thrust Bearings (2026、Tribology and Interfaces) は出版社ページが自動取得を断ったため見送りました。rotor の Rotordynamics of Turbomachinery (1988) は書籍で、今回は採りませんでした。"
+    },
+    {
+     "title": "候補探しで分かったこと",
+     "note": "OpenAlex は今日、直接検索がすぐ上限に達して使えなくなりました。そのため Crossref の検索で補いました。NASA NTRS で見つけた foil の候補は、全文テキストが取れない、または特許だったため採りませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかりで、新規で使えるのは数件。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。上位はほぼ全て既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。分野外が多く混入。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。統計学・電力系統など分野外が混入。"
+     },
+     {
+      "name": "Crossref（直接検索）",
+      "scope": "書誌検索（関連度順）で、年代を絞って未配信を探す",
+      "terms": [
+       "gas foil bearing",
+       "foil thrust bearing air",
+       "foil bearing stiffness damping",
+       "seal rotordynamic force coefficients",
+       "rotor instability fluid-film bearing whirl",
+       "tilting pad journal bearing dynamic coefficients"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は未集計（0は未記録の意味）。ここから Song & Kim と Dietzen & Nordmann、Sarrazin & Liebich を見つけました。"
+     },
+     {
+      "name": "NASA NTRS（検索）",
+      "scope": "foil bearing",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 25,
+      "note": "未配信の候補は全文テキストが取れない、または特許でした。"
+     }
+    ],
+    "note": "OpenAlex が日次の上限に達したため、直接検索は Crossref で行いました。MDPI の2本は r.jina.ai 経由で本文を取得しました（直接のアクセスは拒否されました）。"
+   },
+   "afterword": "— 編集担当より\n今日の気づきは、同じバンプフォイルでも、どの端を固定するかで空気の膜の形が変わり、負荷容量が変わるという点でした。部品の形を変えなくても、固定の位置だけで差が出るのは意外でした。もう一つ、拘束層ダンピングでは、金属の層を厚くすると硬くはなるものの、ゴムが動きにくくなって減衰の余地が減る、という話が印象に残りました。どちらも「強くすればよい」ではなく、条件を見て釣り合いをとる話でした。"
   }
  ]
 }
