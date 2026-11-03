@@ -14797,6 +14797,97 @@
     "note": "OpenAlex が日次の上限に達したため、直接検索は Crossref で行いました。MDPI の2本は r.jina.ai 経由で本文を取得しました（直接のアクセスは拒否されました）。"
    },
    "afterword": "— 編集担当より\n今日の気づきは、同じバンプフォイルでも、どの端を固定するかで空気の膜の形が変わり、負荷容量が変わるという点でした。部品の形を変えなくても、固定の位置だけで差が出るのは意外でした。もう一つ、拘束層ダンピングでは、金属の層を厚くすると硬くはなるものの、ゴムが動きにくくなって減衰の余地が減る、という話が印象に残りました。どちらも「強くすればよい」ではなく、条件を見て釣り合いをとる話でした。"
+  },
+  {
+   "date": "2026-11-04",
+   "status": "skipped",
+   "headline": "お休み：未配信の候補は見つかったものの、出版社ページが全文を返さず前号のままにしました",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foil・rotor とも定番枠がほぼ既配信か分野外でした。そこでOpenAlexを直接引いて未配信の候補を探し、foil はDamsgaard & Santos 2026（ガススラスト軸受の表面コンプライアンスと給気・CC-BY）とvon Osmanskiほか 2020（ガスフォイル軸受の安定性3手法）、rotor はZhangほか 2026（超臨界CO2ラビリンスシールの周波数依存係数・CC-BY）などを候補にしました。ところがMDPI・ScienceDirect・DTU Orbit・Hindawi(Wiley) のいずれも、全文の取得がアクセス拒否かボット判定で止まり、どの論文も全文を読めませんでした。全文OA1件の条件を満たせないため、無理に出さず前号のままにします。",
+   "picked": [],
+   "aside": {
+    "title": "見送った候補",
+    "note": "foil：Damsgaard & Santos 2026（全文取得不可）、von Osmanskiほか 2020（DTU著者原稿へのアクセスがボット判定で不可）、San Andrés & Kim 2008（抄録が取得できず）。rotor：Zhangほか 2026（MDPIが403）、Schweizer 2009 ターボチャージャのフローティングリング軸受の不安定（抄録が出版社により非公開）、Dimondほか 2011 ティルティングパッド軸受総説（Hindawi/Wiley がボット判定）。"
+   },
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 24,
+      "note": "arXivは分野外が大半。OpenAlex側に未配信の分野内が数件。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用上位",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 14,
+      "note": "ほぼ全件が既配信。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 13,
+      "note": "分野内のOAが数件あるが全文は取れず。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用上位",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "大半が既配信または統計学・電力系統などの分野外。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ",
+      "scope": "定番の深掘り（年代別）",
+      "terms": [
+       "gas foil bearing rotordynamic",
+       "bump-type foil air bearing",
+       "foil thrust bearing",
+       "air foil bearing",
+       "rotor bearing instability oil whirl",
+       "seal rotordynamic coefficients annular",
+       "squeeze film damper rotor"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は未集計。候補は見つかったが全文・抄録が取れないものが多かった。"
+     }
+    ],
+    "note": "抄録はOpenAlex・Crossref・Semantic Scholarで試し、von Osmanskiほか 2020 だけ取得できました。"
+   },
+   "afterword": "— 編集担当より\n今日もお休みです。未配信の論文自体は見つかるのに、出版社ページが機械の読み取りを断ってくる日が続いています。読めていないものを要約して出すより、出さない方がずっと誠実だと思っています。"
   }
  ]
 }
