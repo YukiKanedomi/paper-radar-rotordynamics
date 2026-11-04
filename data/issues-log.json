@@ -14888,6 +14888,117 @@
     "note": "抄録はOpenAlex・Crossref・Semantic Scholarで試し、von Osmanskiほか 2020 だけ取得できました。"
    },
    "afterword": "— 編集担当より\n今日もお休みです。未配信の論文自体は見つかるのに、出版社ページが機械の読み取りを断ってくる日が続いています。読めていないものを要約して出すより、出さない方がずっと誠実だと思っています。"
+  },
+  {
+   "date": "2026-11-05",
+   "status": "skipped",
+   "headline": "お休み：全文を読めた4本を作り込みましたが、2回目の確認でも言い回しの指摘が残り、前号のままにしました",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foil・rotor とも定番枠がほぼ既配信か分野外でした。そこで OpenAlex と NASA NTRS を直接引き、全文が読める候補を探しました。昨日は出版社ページが取れず見送った MDPI の論文も、今日は本文テキストが取れました。作り込んだ全文の4本は、foil が NASA 契約報告書 Dobler & Miller (1978、Mini-BRU のフォイル軸受の故障調査) と Hou ほか (2021、中国でのガスフォイル軸受の応用レビュー)、rotor が Zhong ほか (2026、ターボのフローティングリング軸受の外側油膜すきま) と Zhang ほか (2026、超臨界CO2ラビリンスシールの周波数依存係数) です。どれも忠実性チェックを2回受けましたが、数値や捏造の指摘ではなく、限定語の落ちや言い換えの強さなど言い回しの指摘（重要度は低い〜中）が1〜4件ずつ残りました。取り決めどおり、2回の確認で通らないものは公開しません。抄録ベースの2本 (Damsgaard & Santos 2026、Lund & Saibel 1967) は通りましたが、各トピックに全文OA1件という条件を満たせないため、今日は出さないことにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文（全文OA）",
+     "note": "Dobler & Miller (1978) NASA CR-159442（スキャンのOCR全文。放電の結論はOCRが崩れていて裏が取れず削除。残った指摘は「〜しうる」の言い切り、「整合する」の言い換え、箔のたわみの言い換えなど）／Hou ほか (2021) Applied Sciences（1000時間運転の記述の主語と時間の前後関係の言い回し）／Zhong ほか (2026) Frontiers in Mechanical Engineering（内側油膜の摩擦損失を「逆」とした言い回しと、出典表示の重複）／Zhang ほか (2026) Aerospace（回転数に付けた「約」の直し漏れ1か所）。いずれも要約は草稿まで作成済みでした。"
+    },
+    {
+     "title": "確認は通った抄録ベースの2本",
+     "note": "Damsgaard & Santos (2026、Tribology and Interfaces)：大荷重のハイブリッドガスフォイルスラスト軸受の4つの潤滑領域の比較。Lund & Saibel (1967、ASME)：オイルホイップのホワール軌道を平均法で解いた古典。どちらも全文OAと組めないため今回は載せていません。"
+    },
+    {
+     "title": "候補探しで分かったこと",
+     "note": "MDPI は直接取得が403でしたが、リーダー経由で本文テキストが取れました。ScienceDirect は引き続き確認画面に阻まれ、Texas A&M の機関リポジトリも取得できませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかり。新規で使えるのは数件。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。上位は本の1冊を除いて全て配信済み。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 13,
+      "note": "OA9／抄録4。分野内の新着OAが数件。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。統計学・電力系統などの分野外が混入。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ",
+      "scope": "未配信で抄録が取れるものの深掘り（被引用順・最新順）",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "gas bearing foil",
+       "rotor bearing stability fluid film",
+       "seal rotordynamic",
+       "oil whip whirl"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は未集計。"
+     },
+     {
+      "name": "NASA NTRS（直接検索）",
+      "scope": "全文テキストが取れるNASA報告を探す",
+      "terms": [
+       "foil air bearing",
+       "foil bearing",
+       "compliant foil"
+      ],
+      "hits": 0,
+      "note": "ヒット件数は未集計。Mini-BRU の報告書はここで見つけた。"
+     }
+    ],
+    "note": "抄録は OpenAlex から取りました（Crossref には抄録がありませんでした）。"
+   },
+   "afterword": "— 編集担当より\n今日は全文が読める論文が4本そろったのに、お休みになりました。指摘を読み返して「なるほど」と思ったのは、数字の間違いではなく、「〜しうる」と書いてあるものを言い切る、出典に無い前後関係をつくる、といった断定の強さのずれだったことです。数字より、言い回しのほうが気づきにくいのだと感じました。"
   }
  ]
 }
