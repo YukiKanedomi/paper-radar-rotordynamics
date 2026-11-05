@@ -14999,6 +14999,118 @@
     "note": "抄録は OpenAlex から取りました（Crossref には抄録がありませんでした）。"
    },
    "afterword": "— 編集担当より\n今日は全文が読める論文が4本そろったのに、お休みになりました。指摘を読み返して「なるほど」と思ったのは、数字の間違いではなく、「〜しうる」と書いてあるものを言い切る、出典に無い前後関係をつくる、といった断定の強さのずれだったことです。数字より、言い回しのほうが気づきにくいのだと感じました。"
+  },
+  {
+   "date": "2026-11-06",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込みましたが、2回目の確認を通ったのは1本だけで、前号のままにしました",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foil の定番枠がほぼ既配信、rotor の定番枠は統計学や電力系統などの分野外の論文が混ざっていて、使えるものがありませんでした。そこで OpenAlex を直接引いて未配信の候補を探し、foil は Sarrazin & Liebich (2023、シム付き円錐形ガスフォイル軸受、CC BY の全文)、rotor は Zhong ほか (2026、フローティングリング軸受の外側油膜すきまとサブシンクロナス振動、CC BY の全文) を全文ベースで作り込みました。定番枠には、抄録ベースで Gad & Kaneko (2014、バンプ型フォイル軸受の構造剛性モデル) と Wyssmann ほか (1984、遠心圧縮機ラビリンスシールの剛性・減衰係数の予測) を選びました。Zhong ほかは2回目の確認で ok でしたが、残る3本には指摘が残りました。1論文あたり2回までの取り決めなので、3本は保留にしています。foil は2本とも保留で、OA全文の1件が揃わないため、前号のままにします。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "確認を通った論文（今日は載せていません）",
+     "note": "Zhong ほか (2026)「フローティングリング軸受の外側油膜すきまが、ターボチャージャ・ロータ系のサブシンクロナス振動に与える影響」（Frontiers in Mechanical Engineering、CC BY、全文ベース）は2回目の確認で ok でした。ただし相方の定番枠が揃わず、foil 側も出せないため、公開していません。"
+    },
+    {
+     "title": "保留にした論文",
+     "note": "Sarrazin & Liebich (2023、全文ベース)：準周期の分類を不釣合い無し・有りの両方にかけて直したところ、要約の一文の並べ方がまた崩れたこと、ガスフォイルジャーナル軸受に限った記述を「ジャーナル軸受一般」に読める言い方にしていたこと、などの言い回しの指摘が残りました。Gad & Kaneko (2014、抄録ベース)：「rigid bearing」の訳に使った「剛性」と「剛体」が、別の対象と読み違えられる指摘が残りました。Wyssmann ほか (1984、抄録ベース)：140 bar がどの測定にかかるかを、数値のラベルの1か所で言い切っていた点が直り切っていませんでした。いずれも数値や結論の誤りではなく、言い回しの強さや対象の指し方の指摘です。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "Damsgaard & Santos (2026、ガススラスト軸受の軸方向挙動) は、出版社ページが403で全文を取得できませんでした。DellaCorte (1998、高温フォイル軸受試験装置) と Childs & Scharrer (1986、ラビリンスシールの試験) は、全文が読めましたが、すでに配信済みの論文と分かりました。Rotordynamics of Turbomachinery (1988) は書籍で、採りませんでした。"
+    },
+    {
+     "title": "候補探しで分かったこと",
+     "note": "MDPI の出版社ページは403でしたが、Sarrazin & Liebich は TU Berlin の機関リポジトリ (DepositOnce) の公開版から全文が取れました。ScienceDirect (Elsevier) は引き続き自動取得できず、Elsevier の論文の抄録は OpenAlex でも Semantic Scholar でも取れないものがありました。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかりで、使えるのは OpenAlex 側の数件。ほとんどが配信済みでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼすべて配信済みでした。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 24,
+      "note": "OA20／抄録4。arXiv は別分野が多く、OpenAlex 側に分野内の新着が数件ありました。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。統計学・電力系統などの分野外が混入し、分野内は多くが配信済みでした。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ",
+      "scope": "未配信の候補の深掘り（被引用順・最新順）",
+      "terms": [
+       "foil bearing",
+       "gas bearing stiffness damping",
+       "bump foil",
+       "gas foil thrust bearing",
+       "labyrinth seal",
+       "annular seal rotordynamic",
+       "journal bearing instability",
+       "rotor bearing stability",
+       "air foil bearing"
+      ],
+      "note": "ヒット件数は未集計。単語での検索は他分野の論文が混ざるため、既配信の除外と分野の目視で絞りました。"
+     },
+     {
+      "name": "Semantic Scholar / Crossref",
+      "scope": "抄録の取得",
+      "terms": [],
+      "note": "Elsevier の論文の抄録は取れず、抄録が取れた論文だけを抄録ベースの候補にしました。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
+   },
+   "afterword": "今日「なるほど」と思ったのは、直した文章がまた別の読み違いを生むことがある、という点です。たとえば英語の rigid を「剛性」と訳すと、stiffness の意味に読めてしまい、別の対象と取り違えられます。数字を合わせるだけでなく、言葉が誰かに何を指すように読まれるかまで見るのが、2回の確認の意味なのだと感じました。 — 編集担当より"
   }
  ]
 }
