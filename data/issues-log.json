@@ -15111,6 +15111,117 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
    },
    "afterword": "今日「なるほど」と思ったのは、直した文章がまた別の読み違いを生むことがある、という点です。たとえば英語の rigid を「剛性」と訳すと、stiffness の意味に読めてしまい、別の対象と取り違えられます。数字を合わせるだけでなく、言葉が誰かに何を指すように読まれるかまで見るのが、2回の確認の意味なのだと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-07",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込みましたが、2回目の確認でも言い回しの指摘が残り、前号のままにしました",
+   "intro": "今日は配信をお休みしました。collect.mjs の候補は、foil の最新枠が別分野の arXiv 論文ばかり、定番枠は既配信がほとんどで、rotor の定番枠も統計学や電力系統などの分野外が混ざっていました。そこで OpenAlex と NASA NTRS を直接引いて未配信の候補を探し、foil は Shakil & Simpson (2025、フォイルガス軸受支持のターボ機械で見つかった逆向き歳差運動、抄録ベース) と DellaCorte (2016、ガスフォイル軸受の技術史の講演資料、NASA NTRS の全文)、rotor は Zhong ほか (2026、フローティングリング軸受の外側油膜すきま、CC BY の全文) と Ausman (1963、気体ジャーナル軸受のハーフスピードホワールの安定論、抄録ベース) を作り込みました。1論文あたり2回までの取り決めで確認しましたが、4本とも2回目の確認に言い回しの指摘が残ったため、保留にして前号のままにします。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留にした論文",
+     "note": "Shakil & Simpson (2025、抄録ベース)：「フォイルガス軸受の機械ではめったに報告されない」という著者らの文献の認識を、見出しで著者の主張と断らずに言い切っていた点、用語の定義が対象の機械に限られる旨を書き落としていた点が残りました。DellaCorte (2016、講演スライドの全文ベース)：「量産」を「使われ始めていた」に直したものの、節の見出しと「やさしい」の本文の1か所に古い言い方が残ったこと、「ハイスピードブロワが最も一般的」を「韓国で」と限定し損ねたことなどが残りました。Zhong ほか (2026、全文ベース)：2回目の指摘は、式の内容を確かめられない箇所の因果の言い方、要素と節点の言い回し、計算値であることを書き添える箇所が1つ足りない点、「浮動リング」と「フローティングリング」の表記ゆれの4件で、いずれも軽微でした。Ausman (1963、抄録ベース)：「偏心率が小さい運転が不安定」と、臨界値の限定を付けずに書いた一文、用語の見出しが論文に出てこない言い換えだった点が残りました。いずれも数値や結論の誤りではなく、言い回しの強さや対象の指し方の指摘です。要約の草稿は作成済みですが、公開していません。"
+    },
+    {
+     "title": "見送った候補",
+     "note": "foil の最新枠で新規に残っていた Dynamic response and stability of a multilayer thrust gas foil bearing (2026) は抄録が取れず、Comparative Study of the Nonlinear Static and Dynamic Axial Behavior of Rotors on Gas Thrust Bearings (2026) と On the manufacturing of conical gas foil bearings using SLA-based rapid tooling (2026、CC BY) は ScienceDirect が自動取得を断ったため採れませんでした。rotor の T-Type Labyrinth Seals (2026) は機関リポジトリの本文が取れましたが、定番の相方が揃わず作り込みませんでした。Rotordynamics of Turbomachinery (1988) は書籍で採りませんでした。"
+    },
+    {
+     "title": "候補探しで分かったこと",
+     "note": "OpenAlex の抄録つきの検索で見つけた foil の最新候補のうち、Hybrid Rigid and Hybrid Foil Thrust Bearings (2025)、slotted bump foil bearing (2026)、Gas Polymer Bearings の浮上計測 (2025) は、調べると既に配信済みでした。候補を決める前に、DOI だけでなく論文の id でも既配信を引く必要がありました。NASA NTRS の講演資料は全文テキストが取れる一方、スライドの図は第三者の資料を含むため、実図は載せない方針です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 24,
+      "note": "OA17／抄録7。arXiv は別分野ばかりで、使えるのは OpenAlex 側の数件でした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 14,
+      "note": "OA4／抄録10。ほぼすべて配信済みでした。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 24,
+      "note": "OA19／抄録5。arXiv は別分野が多く、OpenAlex 側に分野内の新着が数件ありました。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。統計学・電力系統などの分野外が混入し、分野内は多くが配信済みでした。"
+     },
+     {
+      "name": "OpenAlex 直接クエリ",
+      "scope": "未配信の候補の深掘り（被引用順・最新順）",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing",
+       "foil thrust",
+       "bump foil",
+       "rotordynamic coefficients seal",
+       "journal bearing instability whirl",
+       "annular seal rotordynamic",
+       "rotor bearing stability"
+      ],
+      "note": "ヒット件数は未集計。単語での検索は他分野の論文が混ざるため、既配信の除外と分野の目視で絞りました。"
+     },
+     {
+      "name": "NASA NTRS",
+      "scope": "全文テキストが取れる政府資料",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing rotordynamic",
+       "compliant foil journal bearing"
+      ],
+      "note": "講演資料 (2016) の全文テキストを取得して使いました。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
+   },
+   "afterword": "今日「なるほど」と思ったのは、歴史を語る講演スライドの読み方です。ガスフォイル軸受の起源をたどる講演では、「最初の論文」「功績」といった言葉が並びますが、それは講演者の整理であって、独立に確かめた事実とは限りません。要約でも、誰の見方なのかを一語ずつ添える必要がある、と確認の指摘から教わりました。数字を写すより、「誰がそう言っているか」を写すほうが難しいのだと感じました。 — 編集担当より"
   }
  ]
 }
