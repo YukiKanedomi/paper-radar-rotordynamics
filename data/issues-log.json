@@ -15222,6 +15222,80 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択（数日で一巡）。"
    },
    "afterword": "今日「なるほど」と思ったのは、歴史を語る講演スライドの読み方です。ガスフォイル軸受の起源をたどる講演では、「最初の論文」「功績」といった言葉が並びますが、それは講演者の整理であって、独立に確かめた事実とは限りません。要約でも、誰の見方なのかを一語ずつ添える必要がある、と確認の指摘から教わりました。数字を写すより、「誰がそう言っているか」を写すほうが難しいのだと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-08",
+   "status": "skipped",
+   "headline": "お休み：検索サービス (OpenAlex) の1日ぶんの利用枠が尽きて候補が取れず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。候補集めに使っている OpenAlex が、1日ぶんの無料の利用枠を使い切っていて (UTC の深夜0時、日本時間の朝9時にリセット)、検索がほとんど通りませんでした。arXiv だけは取れましたが、foil の最新枠は乱流・飛行制御・液滴など別分野の論文ばかり、rotor の最新枠は分野外の1件のみ、rotor の定番枠は0件でした。この状態から無理に4本を揃えると、出典の確認が薄い歪な号になるため、論文の作り込みには進まず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送った候補",
+     "note": "foil の定番枠には、OpenAlex の検索が通った分として Analysis of gas foil bearings integrating FE top foil models (2008) などの抄録ベース候補が出ましたが、最新枠で分野内の候補が無く、rotor は両枠とも候補が無かったため、どれも作り込みませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 16,
+      "note": "OA14／抄録2。OpenAlex は HTTP 429 (利用枠切れ) で一部失敗。残ったのは別分野の arXiv 論文ばかりでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 5,
+      "note": "OA1／抄録4。一部の検索は利用枠切れで失敗しました。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 1,
+      "note": "OpenAlex は全検索が HTTP 429。残った1件は分野外 (重力毛管波) でした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 0,
+      "note": "全検索が HTTP 429 (利用枠切れ) で0件でした。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。既配信 436 件は除外済み。"
+   },
+   "afterword": "今日「なるほど」と思ったのは、配信の土台が外部の検索サービスの利用枠に支えられている、という当たり前の事実でした。枠が尽きた日は、足りない分を手近な素材で埋めて出すより、お休みにしたほうが、このアプリの「出典に忠実」という約束に合うのだと感じました。 — 編集担当より"
   }
  ]
 }
