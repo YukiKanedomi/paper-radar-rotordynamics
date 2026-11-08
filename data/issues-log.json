@@ -15296,6 +15296,109 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。既配信 436 件は除外済み。"
    },
    "afterword": "今日「なるほど」と思ったのは、配信の土台が外部の検索サービスの利用枠に支えられている、という当たり前の事実でした。枠が尽きた日は、足りない分を手近な素材で埋めて出すより、お休みにしたほうが、このアプリの「出典に忠実」という約束に合うのだと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-09",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込んだが、2回目の忠実性チェックにも言い回しの指摘が残り、前号のままにしました",
+   "intro": "今日は配信をお休みしました。候補は十分にあり、foil・rotor それぞれ OA 全文1本と抄録ベース1本の計4本を作り込みました。忠実性チェックを通ったのは rotor の OA 全文（超臨界CO2ラビリンスシール）だけで、残りの3本は、1回直したあとの2回目のチェックにも「出典が言っていないところまで踏み込んだ言い回し」の指摘が残りました。決まりでは1論文につき検証は2回までなので、3本は保留にしました。rotor は定番枠が欠け、foil は2本とも保留で、どのトピックも2本が揃わないため、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留1：Sarrazin & Liebich (2023) シム付き円すい形ガスフォイル軸受（foil・OA全文）",
+     "note": "doi:10.3390/app13105859。1回目は6件の指摘を直し、2回目に「結論の節で、シムを入れると軸方向の力を支えられるようになった、と言い過ぎている（原文は一様すきまでもロータ質量一定なら狭い範囲で支える）」という指摘が残りました。"
+    },
+    {
+     "title": "保留2：Kim, Breedlove & San Andrés (2009) 温度上昇下のフォイル軸受構造（foil・抄録ベース）",
+     "note": "doi:10.1115/1.3195042。2回目に「バンプの層のたわみが荷重を支え振動を減らす、という仕組みの言い切りが抄録に無い」「用語の見出しに付けた“クーロン摩擦換算”が抄録で裏取りできない」という指摘が残りました。"
+    },
+    {
+     "title": "保留3：White & Chan (1992) ティルティングパッド軸受のサブシンクロナス挙動（rotor・抄録ベース）",
+     "note": "doi:10.1115/1.2920856。2回目に「深掘りで、周波数効果の指す範囲を剛性だけに絞ったのは抄録への解釈の上乗せ」という指摘が残りました。"
+    },
+    {
+     "title": "検証は通ったが出さなかった：Zhang ら (2026) 超臨界CO2ラビリンスシール（rotor・OA全文）",
+     "note": "doi:10.3390/aerospace13111006。2回目で ok。ただし rotor の定番枠（上の保留3）が欠けるため、単独では公開しませんでした。"
+    },
+    {
+     "title": "見送った他の候補",
+     "note": "foil の最新枠の OA 全文候補（Damsgaard & Santos 2026）は、出版社サイトが自動取得を拒否して全文が取れず、抄録だけでは OA 全文の枠を満たせないため作り込みませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 20,
+      "note": "OA15／抄録5。arXiv 側は別分野の論文が多く、分野内で使えたのは OpenAlex 新着の数本でした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 11,
+      "note": "OA6／抄録5。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。"
+     },
+     {
+      "name": "OpenAlex（OA全文の追加探索）— foil",
+      "scope": "タイトル・抄録検索（OAのみ・2012年以降）",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing rotor",
+       "compliant foil bearing",
+       "air foil bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 0,
+      "note": "最新枠のOA全文が取れなかったため、CC BY で全文が取れる論文を直接探しました（件数は集計せず）。"
+     }
+    ],
+    "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。既配信 436 件は除外済み。"
+   },
+   "afterword": "今日「なるほど」と思ったのは、指摘を直す作業そのものが、別の言い過ぎを呼び込むことがある、という点でした。たとえば本文の一部で「範囲が狭い」と直したのに、結論の節では「支えられるようになった」と書いたままになっていました。一か所を直したら、同じ内容を言い換えている他の節も一緒に見直す、が大事なのだと感じました。 — 編集担当より"
   }
  ]
 }
