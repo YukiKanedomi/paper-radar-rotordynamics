@@ -15399,6 +15399,101 @@
     "note": "検索語は topics.json の全キーワードから日替わりローテーションで自動選択。既配信 436 件は除外済み。"
    },
    "afterword": "今日「なるほど」と思ったのは、指摘を直す作業そのものが、別の言い過ぎを呼び込むことがある、という点でした。たとえば本文の一部で「範囲が狭い」と直したのに、結論の節では「支えられるようになった」と書いたままになっていました。一か所を直したら、同じ内容を言い換えている他の節も一緒に見直す、が大事なのだと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-10",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が取れず、rotor の定番枠も抄録が得られないため、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil の最新枠には、フォイル推力軸受の静圧噴射と弾性変形を扱う CC-BY の新着論文（Damsgaard & Santos 2026）があったのですが、出版社サイトが自動取得を拒否して全文を読めませんでした。NASA の技術報告書も探しましたが、既に配信済みのものか、全文の無いもの、軸受の物理から離れたコーティング試験ばかりでした。定番枠の候補（Park ら 2007 のフォイル推力軸受、de Castro ら 2008 のオイルホワール／ホイップ）は、どの書誌データベースからも抄録が得られず、抄録ベースですら「抄録の範囲だけで書く」ことができません。出典を読まずに要約すると捏造になるため、作り込みは行わず、前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：Damsgaard & Santos (2026) ハイブリッドガスフォイル推力軸受（foil・最新枠）",
+     "note": "doi:10.1016/j.tribin.2026.100023。CC-BY の新着ですが、全文が 403 で取得できず、抄録だけでは OA 全文の枠を満たせないため見送りました（リンク先では読めます）。"
+    },
+    {
+     "title": "見送り2：Zhong ら (2026) 浮動リング軸受の外側油膜すきまとサブシンクロナス振動（rotor・最新枠）",
+     "note": "doi:10.3389/fmech.2026.1937848。CC-BY で全文も取得でき有力でしたが、foil 側が揃わず、またrotor の定番枠にも抄録の得られる候補が無かったため、単独では出しませんでした。次号以降の候補に残します。"
+    },
+    {
+     "title": "見送り3：定番枠 Park ら (2007)、de Castro ら (2008)",
+     "note": "doi:10.1016/j.triboint.2007.08.001 / doi:10.1016/j.jsv.2008.02.047。Crossref・OpenAlex・Semantic Scholar のいずれにも抄録が無く（出版社が提供していない）、要約の根拠が得られないため見送りました。"
+    },
+    {
+     "title": "最新枠の他分野混入",
+     "note": "arXiv 側は分光器の校正や乱流など別分野の論文ばかりで、軸受・ロータの候補はありませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 19,
+      "note": "OA15／抄録4。分野内は OpenAlex 新着の数本のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 7,
+      "note": "OA0／抄録7。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 21,
+      "note": "OA16／抄録5。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 5,
+      "note": "OA1／抄録4。統計学の高被引用論文が混入。"
+     },
+     {
+      "name": "NASA NTRS（追加探索）— foil",
+      "scope": "キーワード検索「foil gas bearing」（新しい順40件）",
+      "terms": [
+       "foil gas bearing"
+      ],
+      "hits": 40,
+      "note": "大半が既配信。未配信は全文なし、またはコーティング試験で軸受物理から離れるため採用せず。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日はお休みでしたが、候補を探していて「古い定番論文は、抄録すらデータベースに載っていないことがある」と気づきました。有名で被引用が多くても、中身を確かめる材料が手元に無ければ紹介できません。紹介できないことをそのまま書くのも、このアプリの大事な仕事なのだなと思いました。 — 編集担当より"
   }
  ]
 }
