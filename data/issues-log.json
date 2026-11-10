@@ -15494,6 +15494,109 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日はお休みでしたが、候補を探していて「古い定番論文は、抄録すらデータベースに載っていないことがある」と気づきました。有名で被引用が多くても、中身を確かめる材料が手元に無ければ紹介できません。紹介できないことをそのまま書くのも、このアプリの大事な仕事なのだなと思いました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-11",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込みましたが、2回目の忠実性チェックにも言い回しの指摘が残る論文があり、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil は最新枠に Martowicz ら（2022、箔に熱電対を内蔵したガスフォイル軸受の温度測定）、定番枠に Gad & Kaneko（2014、バンプ箔の剛性モデルとスラスト軸受）、rotor は最新枠に Zhong ら（2026、浮動リング軸受の外側油膜すきまとサブシンクロナス振動）、定番枠に Childs ら（2015、負スワールブレーキつきラビリンスシール）の4本を選び、作り込みました。OA の2本は全文（Europe PMC と出版社 PDF）が取れ、抄録ベースの2本は Crossref の抄録が取れたので、昨日までより材料はそろっていました。ところが出典との照合では、1回目に4本すべて、2回目にも Gad & Kaneko 以外の3本に、出典が言い切っていない書き方（比較の起点がはっきりしない温度の数値の扱い、小型ロータの例示を一般化した回転数、抄録の「〜を狙う」を事実のように書いた箇所など）が残りました。決めたルールでは1論文につき2回までの確認で打ち切るため、残った3本は保留です。foil と rotor の両方で2件ずつ揃わないため、無理に出さず、前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留1：Martowicz ら (2022) 内蔵熱電対のガスフォイル軸受温度測定（foil・OA）",
+     "note": "doi:10.3390/s22155718。CC BY の全文で作り込みました。温度の「約90 °C から約40 °C へ」という本文の記述が何と何の比較かを出典から特定できないため、注記の付け方が箇所によってそろわず、2回目にも指摘が残りました。内容に誤りはなく、次回以降の候補に残します。"
+    },
+    {
+     "title": "保留2：Zhong ら (2026) 浮動リング軸受の外側油膜すきま（rotor・OA）",
+     "note": "doi:10.3389/fmech.2026.1937848。CC BY の全文で作り込み、引用・式（リング速度比など）は原文と一致しました。小型ターボチャージャの回転数の例示（約20万 rpm）や、試験台の能力（最高約250 krpm）を、この論文の対象のように書いた箇所が残り、保留にしました。"
+    },
+    {
+     "title": "保留3：Childs ら (2015) 負スワールブレーキ（rotor・抄録ベース）",
+     "note": "doi:10.1115/1.4031877。抄録は取れましたが、図の注記に「本文」と書いてしまい、抄録ベースなのに全文を読んだ図に見える点が残りました。被引用数は出典間で乖離するため、数値は出さない方針でした。"
+    },
+    {
+     "title": "確認を通った1本：Gad & Kaneko (2014) バンプ型フォイル軸受の構造剛性モデル（foil・抄録ベース）",
+     "note": "doi:10.1115/1.4027601。2回目の確認で軽微な指摘（略号・図の描き方）だけになりましたが、foil のもう1本（OA）が保留のため、単独では出しませんでした。"
+    },
+    {
+     "title": "見送り：Damsgaard & Santos (2026)",
+     "note": "doi:10.1016/j.tribin.2026.100023。昨日に続き、出版社サイトが自動取得を拒否して全文を読めませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 20,
+      "note": "OA15／抄録5。分野内は OpenAlex 新着の数本のみ。arXiv 側は乱流・パワーエレクトロニクスなど他分野が大半。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 9,
+      "note": "OA0／抄録9。多くは抄録が取れず、Crossref に抄録のあった Gad & Kaneko を選びました。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 23,
+      "note": "OA18／抄録5。arXiv 側は水面波や流れの話が大半で、軸受・ロータの候補は OpenAlex 新着から。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 12,
+      "note": "OA0／抄録12。HVDC の送電や故障診断の機械学習など他分野も混入。"
+     },
+     {
+      "name": "OpenAlex 直接検索（追加探索）— foil",
+      "scope": "ライセンス CC-BY・2018年以降・被引用順",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing rotordynamic",
+       "air foil bearing",
+       "foil thrust bearing",
+       "gas bearing rotor stability"
+      ],
+      "hits": 25,
+      "note": "他分野の高被引用論文が多く混じり、その中から軸受の OA 論文（Sensors 2022 など）を拾いました。全文は Europe PMC 経由で取得。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日は、同じ数値を「見出し」「やさしい版」「専門版」と何か所にも書くと、1か所だけ注記が抜けて指摘が残るのだと気づきました。論文の中身は変わらないのに、書き方が少しずれるだけで「出典が言い切っていない」と見なされる。厳しいようですが、このアプリが信頼できる理由はそこにあるのだと思います。 — 編集担当より"
   }
  ]
 }
