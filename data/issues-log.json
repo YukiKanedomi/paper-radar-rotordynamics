@@ -15597,6 +15597,97 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日は、同じ数値を「見出し」「やさしい版」「専門版」と何か所にも書くと、1か所だけ注記が抜けて指摘が残るのだと気づきました。論文の中身は変わらないのに、書き方が少しずれるだけで「出典が言い切っていない」と見なされる。厳しいようですが、このアプリが信頼できる理由はそこにあるのだと思います。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-12",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文も、rotor の OA 全文も、出版社のブロックで読めず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil の最新枠は、arXiv も OpenAlex 新着も他分野の論文が大半で、軸受の候補がありませんでした。そこで OpenAlex を直接検索し、CC BY の Zong & Cai (2026、形状記憶合金の支持で温度を変えるとフォイル軸受のロータ接触リスクがどう変わるか、Machines) を見つけました。rotor の最新枠にも、CC BY の Zhang ら (2026、超臨界 CO2 ラビリンスシールの周波数依存の動特性係数、Aerospace) がありました。ただ、どちらも MDPI の論文で、PDF も HTML も出版社サイトが自動取得を拒否し（Access Denied / 403）、全文を読めませんでした。全文が読めないものを全文前提で書くわけにはいかず、foil の定番枠は OpenAlex から抄録が取れていません。各トピックに OA 全文を1件という条件を満たせないため、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：Zong & Cai (2026) SMA 支持フォイル軸受のロータ接触リスク（foil・OA）",
+     "note": "doi:10.3390/machines14111242。OpenAlex の抄録は読めましたが、全文は MDPI のブロックで取得できず、全文版は作れませんでした。次回以降の候補に残します。"
+    },
+    {
+     "title": "見送り2：Zhang ら (2026) 超臨界 CO2 ラビリンスシールの動特性係数（rotor・OA）",
+     "note": "doi:10.3390/aerospace13111006。同じく MDPI で全文が取得できず見送りました。"
+    },
+    {
+     "title": "見送り3：San Andrés & Kim (2008) ガスフォイル軸受支持ロータの非線形強制応答（foil・定番）",
+     "note": "doi:10.1016/j.triboint.2007.12.009。定番枠の有力候補でしたが、OpenAlex に抄録がなく、抄録ベースでも要約の根拠が足りないため作り込みませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 20,
+      "note": "OA15／抄録5。ほぼ他分野（極超音速流・乱流・制御など）で、軸受の候補は無し。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。抄録が取れる候補が見当たりませんでした。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA7／抄録4。シール・ファン型ロータの候補はありましたが、いずれも MDPI 系で全文が取れませんでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。"
+     },
+     {
+      "name": "OpenAlex 直接検索（追加探索）— foil",
+      "scope": "タイトルに foil bearing・OA・新着順",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 30,
+      "note": "2026年の CC BY 論文が複数見つかりましたが、多くは既配信か MDPI で全文が取れませんでした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日は、「CC BY で公開されている」ことと「自動で全文が読める」ことは別の話なのだと気づきました。ライセンス上は誰でも読めるのに、出版社の側で機械のアクセスだけ止められることがあります。読めないものを読んだように書かない、というこのアプリの線引きが、こういう日にそのまま「お休み」になるのだと感じました。 — 編集担当より"
   }
  ]
 }
