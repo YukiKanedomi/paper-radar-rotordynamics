@@ -15688,6 +15688,93 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日は、「CC BY で公開されている」ことと「自動で全文が読める」ことは別の話なのだと気づきました。ライセンス上は誰でも読めるのに、出版社の側で機械のアクセスだけ止められることがあります。読めないものを読んだように書かない、というこのアプリの線引きが、こういう日にそのまま「お休み」になるのだと感じました。 — 編集担当より"
+  },
+  {
+   "date": "2026-11-13",
+   "status": "skipped",
+   "headline": "お休み：foil で全文を読めるOA論文が見つからず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil の最新枠は arXiv 新着が他分野の論文ばかりで、軸受の候補は OpenAlex 新着の2件だけでした。そのうち OA の Tribology and Interfaces 掲載の論文（ガススラスト軸受のロータの非線形な軸方向挙動、CC BY）は題材として良かったのですが、出版社サイト（Elsevier）が自動取得を拒否して（403）全文を読めませんでした。OpenAlex の追加検索でも foil 軸受の新しい OA 論文は見つからず、定番枠は7件すべて抄録ベースで、OA はありません。各トピックに OA 全文を1件という条件を満たせないため、無理に出さず前号のままにしました。rotor 側には Frontiers の CC BY 論文（フローティングリング軸受の外側油膜すきまとサブシンクロナス振動）など取れそうな候補がありましたが、foil が揃わないので作り込みませんでした。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：ガススラスト軸受のロータの非線形な軸方向挙動（foil・OA）",
+     "note": "doi:10.1016/j.tribin.2026.100023。CC BY と記録されていますが、PDF も DOI のリンクも Elsevier 側で拒否され、全文版は作れませんでした。"
+    },
+    {
+     "title": "見送り2：rotor の候補（Frontiers の CC BY 論文など）",
+     "note": "doi:10.3389/fmech.2026.1937848。PDFは取得できましたが、foil 側の OA が揃わず、作り込みは行いませんでした。次回以降の候補に残します。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 20,
+      "note": "OA15／抄録5。ほぼ他分野の論文で、軸受の候補は OpenAlex 新着の数件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 7,
+      "note": "OA0／抄録7。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 11,
+      "note": "OA7／抄録4。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 7,
+      "note": "OA0／抄録7。"
+     },
+     {
+      "name": "OpenAlex 直接検索（追加探索）— foil",
+      "scope": "タイトル・抄録に foil bearing・OA・新着順",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 25,
+      "note": "分野外の論文ばかりで、使える foil 軸受の OA 論文は見つかりませんでした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日は、「ライセンス上は自由に読める」ことと「自動で全文が読める」ことは別なのだと、先日に続いてまた気づきました。出版社によって扱いが違い、同じ CC BY でも Frontiers は PDF がすぐ取れた一方、Elsevier は拒否されました。素人目には些細な差ですが、全文を確認できるかどうかが配信の信頼性を左右するのだと実感しています。— 編集担当より"
   }
  ]
 }
