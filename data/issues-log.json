@@ -15775,6 +15775,124 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日は、「ライセンス上は自由に読める」ことと「自動で全文が読める」ことは別なのだと、先日に続いてまた気づきました。出版社によって扱いが違い、同じ CC BY でも Frontiers は PDF がすぐ取れた一方、Elsevier は拒否されました。素人目には些細な差ですが、全文を確認できるかどうかが配信の信頼性を左右するのだと実感しています。— 編集担当より"
+  },
+  {
+   "date": "2026-11-14",
+   "status": "published",
+   "headline": "第108号：フォイル軸受のトップフォイルを温度センサにする試み、120 kW ガスタービン発電機のフォイル軸受設計（抄録）、フローティングリング軸受の外側油膜すきま、ティルティングパッド軸受理論のレビュー（抄録）",
+   "intro": "今日は collect.mjs の候補が、foil も rotor も軸受の論文がごく少なく、foil の定番枠は OA が0件、抄録も OpenAlex から取れませんでした。そこで Crossref で抄録を引き直し、foil の最新枠は Europe PMC で全文が取れる Martowicz ほか (2022、Sensors・CC BY) を、定番枠は抄録が取れた Kim ほか (2013) を選びました。rotor の最新枠は、昨日まで取得できていた Frontiers の Zhong ほか (2026、CC BY) の全文、定番枠は抄録が取れた Dimond ほか (2011、CC BY 3.0 のレビュー。本文は取得できず抄録ベース) です。4本とも、忠実性チェックで指摘を受けて修正し、再確認を通しました。",
+   "picked": [
+    {
+     "id": "doi:10.3390/s22155718",
+     "title": "Thermal Characterization of a Gas Foil Bearing—A Novel Method of Experimental Identification of the Temperature Field Based on Integrated Thermocouples Measurements",
+     "why": "トップフォイル自体を熱電対の電極にして、18点の温度を測るという着想が面白く、うまくいかない点（配線、壊れやすさ）も正直に書かれていました。全文で読めました。"
+    },
+    {
+     "id": "doi:10.1115/1.4025898",
+     "title": "Evaluation of Foil Bearing Performance and Nonlinear Rotordynamics of 120 kW Oil-Free Gas Turbine Generator",
+     "why": "フォイル軸受を実機の発電機に使うときの、すきまの選び方とロータの不安定の関係を扱う定番です。抄録ベースで、具体的な数値は載せていません。"
+    },
+    {
+     "id": "doi:10.3389/fmech.2026.1937848",
+     "title": "The influence of floating ring bearing outer oil film clearance on subsynchronous vibration of turbocharger rotor system",
+     "why": "外側のすきまを 0.006 mm 変えると、サブシンクロナス振動の主役が内側の油膜から外側へ入れ替わる、という具体的な数字のある計算と試験です。全文で読めました。"
+    },
+    {
+     "id": "doi:10.1155/2011/908469",
+     "title": "A Review of Tilting Pad Bearing Theory",
+     "why": "ティルティングパッド軸受の理論の約50年を1本にまとめたレビューです。本文は取得できなかったため、抄録の範囲だけで紹介しています。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送り：foil の OA 候補（ガススラスト軸受の軸方向挙動）",
+     "note": "doi:10.1016/j.tribin.2026.100023。CC BY と記録されていますが、Elsevier が全文の取得を拒否したため、今日も作れませんでした。"
+    },
+    {
+     "title": "見送り：定番枠の候補",
+     "note": "foil の被引用上位は、OpenAlex から抄録が取れない論文が多く、Crossref に抄録がある ASME の論文から選びました。rotor の被引用上位には転がり軸受や故障診断、鞭毛の動力学の論文が多く、主役の分野から外れるため採りませんでした。Hindawi の OA レビュー (Review: Rotor Balancing など) も全文取得が拒否されました。"
+    },
+    {
+     "title": "修正した主な点",
+     "note": "忠実性チェックで、試験ごとの測定項目の取り違え（摩擦トルクと軸の軌跡は別の試験）、比較の相手が本文で曖昧な温度の記述、抄録に無い形容、用語の定義の言い過ぎなどの指摘があり、すべて修正して再確認しました。 2回目の確認では med/high の指摘はなく、low の指摘6件（言い回し・「一般的な説明」の表記の補足など）を修正して公開しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 20,
+      "note": "OA15／抄録5。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 13,
+      "note": "OA0／抄録13。OpenAlex から抄録が得られず、Crossref で補った。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 21,
+      "note": "OA16／抄録5。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 9,
+      "note": "OA1／抄録8。転がり軸受・故障診断など分野外が多い。"
+     },
+     {
+      "name": "Europe PMC・Crossref・NASA NTRS・OpenAlex 直接検索（追加探索）",
+      "scope": "全文の取得と抄録の確認、foil の OA 候補探し",
+      "terms": [
+       "gas foil bearing",
+       "foil bearing rotor",
+       "air foil thrust bearing",
+       "foil journal bearing rotordynamic",
+       "rotor-bearing system instability oil whirl",
+       "squeeze film damper rotordynamic",
+       "annular seal rotordynamic force coefficients"
+      ],
+      "hits": 0,
+      "note": "NTRS の foil 論文は大半が配信済みでした。ヒット件数は集計していません。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日は、同じ「ティルティングパッド」や「フォイル」でも、論文が何を測って何を書いているかを丁寧に分けて読むのが大事だと気づきました。たとえば温度の論文では、摩擦トルクを測った試験と軸の動きを測った試験が別々で、1つの試験で全部を測ったわけではありませんでした。素人目にはひとまとまりに見える結果も、試験の配置ごとに読み分けないと誤読しそうです。— 編集担当より"
   }
  ]
 }
