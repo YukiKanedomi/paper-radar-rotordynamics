@@ -35,7 +35,9 @@ for (const p of JSON.parse(readFileSync(resolve(root, "data/papers.json"), "utf8
 }
 const fresh = (p) => !delivered.has(p.id.toLowerCase()) && !(p.doi && delivered.has(`doi:${p.doi}`.toLowerCase()));
 
-const UA = "paper-radar-rotordynamics/0.1 (mailto:kanedomi918@gmail.com)";
+// 連絡先メールは本人が環境変数 OPENALEX_MAILTO に設定したときだけ使う（既定は汎用クライアント名のみ）
+const MAILTO = process.env.OPENALEX_MAILTO || "";
+const UA = "paper-radar-rotordynamics/0.1";
 const ARXIV_MIN = 6; // これ未満なら緩和して取り直す
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -166,7 +168,7 @@ async function openAlexSearch(phrase, { sort, fromDate, stream, perPage = 6, pag
   // 狭いクエリにすることで 504（broad query）も避けられる。
   let filter = `title_and_abstract.search:${encodeURIComponent(phrase)},type:article`;
   if (fromDate) filter += `,from_publication_date:${fromDate}`;
-  const url = `https://api.openalex.org/works?filter=${filter}&sort=${sort}&per-page=${perPage}&page=${page}&mailto=kanedomi918@gmail.com`;
+  const url = `https://api.openalex.org/works?filter=${filter}&sort=${sort}&per-page=${perPage}&page=${page}${MAILTO ? `&mailto=${encodeURIComponent(MAILTO)}` : ""}`;
   const res = await fetchRetry(url);
   if (!res.ok) throw new Error(`OpenAlex HTTP ${res.status}`);
   const json = await res.json();

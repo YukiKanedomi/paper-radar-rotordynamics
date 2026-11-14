@@ -15893,6 +15893,97 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日は、同じ「ティルティングパッド」や「フォイル」でも、論文が何を測って何を書いているかを丁寧に分けて読むのが大事だと気づきました。たとえば温度の論文では、摩擦トルクを測った試験と軸の動きを測った試験が別々で、1つの試験で全部を測ったわけではありませんでした。素人目にはひとまとまりに見える結果も、試験の配置ごとに読み分けないと誤読しそうです。— 編集担当より"
+  },
+  {
+   "date": "2026-11-15",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が出版社のブロックで取れず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil の最新枠は arXiv 新着が他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件でした。OA（CC BY）と記録されたガススラスト軸受の論文（Tribology and Interfaces）は、PDF が Elsevier 側に拒否され（403）、公開 API でも書誌情報しか返らず、全文を読めませんでした。追加で OpenAlex を直接検索して見つけた CC BY の OA 論文（空気フォイルスラスト軸受の熱流体モデル、Manchester の機関リポジトリ）も、PDF が 403 でした。arXiv にも foil 軸受の論文はありません。定番枠は被引用の高い抄録ベースの論文が並びましたが、foil で OA 全文が1件に届かないため、無理に出さず前号のままにしました。rotor 側には arXiv の OA 論文（超臨界ロータの低速データによる動バランス）や、Elsevier の CC BY 論文（油不足の軸受で支持されたロータの動特性）などの候補がありましたが、foil が揃わないので作り込みませんでした。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：ガススラスト軸受のロータの非線形な軸方向挙動（foil・OA）",
+     "note": "doi:10.1016/j.tribin.2026.100023。抄録は読めましたが、全文は Elsevier 側で取得できず、全文版は作れませんでした。"
+    },
+    {
+     "title": "見送り2：空気フォイルスラスト軸受の熱流体モデルとチルト（foil・OA）",
+     "note": "doi:10.1115/gt2024-123643。Manchester のリポジトリ上の PDF が 403 で、全文を確認できませんでした。"
+    },
+    {
+     "title": "見送り3：rotor の候補（油不足の軸受で支持されたロータ、arXiv の動バランス論文など）",
+     "note": "foil 側の OA が揃わなかったため作り込みませんでした。次回以降の候補に残します。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 21,
+      "note": "OA15／抄録6。軸受の候補は OpenAlex 新着の6件ほどで、他は分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 23,
+      "note": "OA17／抄録6。軸受・ロータの候補は一部。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。"
+     },
+     {
+      "name": "OpenAlex 直接検索（追加探索）— foil",
+      "scope": "タイトルに foil bearing・OA・新着順",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 40,
+      "note": "使えそうな foil の OA は CC BY の1件と CC BY-NC-SA の1件でしたが、どちらも全文を取得できませんでした。arXiv の foil bearing 検索は0件でした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日も、ライセンス上は自由に読めることと、自動で全文を確認できることは別だと感じました。抄録が読めても、全文を確かめられない論文は『確認した』とは言えないので、お休みにしました。配信が空く日があるのは、確認できないものを出さないためです。— 編集担当より"
   }
  ]
 }
