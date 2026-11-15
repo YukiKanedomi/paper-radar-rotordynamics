@@ -802,6 +802,7 @@ export const CATEGORIES: GraphCategory[] = [
       "外側油膜すきま",
       "同期・非同期モデル",
       "ダイヤフラムカップリング",
+      "ディフューザ旋回失速",
     ],
   },
   {
@@ -895,11 +896,17 @@ export const CATEGORIES: GraphCategory[] = [
       "バルクフロー解析",
       "ウェアリングシール",
       "高圧スポット",
+      "超臨界CO2（S-CO2）",
     ],
   },
 ];
 
 export const CURATED_EDGES: CuratedEdge[] = [
+  // --- 第109号（Bulat ほか 2026／Kim ほか 2009／Evans & Smalley 1984／Zhang ほか 2026） ---
+  { from: "ディフューザ旋回失速", to: "サブシンクロナス振動", label: "が約21%速度の成分の原因と考えられた（本論文）" },
+  { from: "アルフォード力", to: "交差剛性", label: "は交差結合の形で現れる自励振動の力（一般的な説明）" },
+  { from: "超臨界CO2（S-CO2）", to: "ラビリンスシール", label: "を作動流体とするシールの係数を調べた（抄録）" },
+  { from: "実在気体効果", to: "超臨界CO2（S-CO2）", label: "を扱うときに理想気体との差が問題になる（抄録）" },
   // --- 第106号（Elrod 1996／Braun ほか 1996／Iino & Kaneko 1980／Childs & Dressman 1985） ---
   { from: "フォン・カルマン方程式", to: "大変位理論（幾何学的非線形）", label: "は大たわみの平板を表す式（本報告）" },
   { from: "応力剛化", to: "大変位理論（幾何学的非線形）", label: "を有限要素で扱うときの要点（本報告）" },

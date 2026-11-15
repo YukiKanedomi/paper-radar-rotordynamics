@@ -15984,6 +15984,125 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日も、ライセンス上は自由に読めることと、自動で全文を確認できることは別だと感じました。抄録が読めても、全文を確かめられない論文は『確認した』とは言えないので、お休みにしました。配信が空く日があるのは、確認できないものを出さないためです。— 編集担当より"
+  },
+  {
+   "date": "2026-11-16",
+   "status": "published",
+   "headline": "第109号：ロシアの小型ガスタービン用フォイル軸受の試験報告、フォイル軸受構造の温度による硬さの変化（抄録）、高圧圧縮機で出た2種類の低周波振動の事例（1984年）、超臨界 CO2 ラビリンスシールの係数（抄録）",
+   "intro": "ここ数日は foil の OA 全文が出版社のブロックで取れず、お休みが続きました。今日は foil の最新枠に、ロシアの学術誌が自サイトで公開している PDF（Bulat ほか 2026、英語アブストラクト付きのロシア語本文）を見つけ、全文を読んで紹介できました。foil の定番枠は、Crossref で抄録が取れた Kim ほか (2009) です。rotor は、MDPI や Elsevier の新着 OA 論文が今日も全文を取れなかったため、NASA の NTRS で全文が読める Evans & Smalley (1984) を定番枠に選びました（古いスキャン由来で文字が乱れており、表や図の目盛は読まず、本文の散文だけを根拠にしています）。rotor の最新枠は、MDPI の Zhang ほか (2026) を、Crossref の抄録の範囲だけで紹介します。4本とも、忠実性チェックで指摘を受けて修正し、再確認を通しました。",
+   "picked": [
+    {
+     "id": "doi:10.52467/2949-401x-2026-4-3-457-470",
+     "title": "Gas-Dynamic Bearings with a Support Foil Layer: Development Results",
+     "why": "リーフの下にもう一層の支持リーフを重ねた小型ガスタービン向けの軸受を、24,000 rpm で荷重を 10 N ずつ上げて試した報告です。コーティングが一部のリーフで金属地まで削れても荷重能力がほぼ変わらない、という点が目を引きました。全文を読みました。"
+    },
+    {
+     "id": "doi:10.1115/1.3195042",
+     "title": "Characterization of a Foil Bearing Structure at Increasing Temperatures: Static Load and Dynamic Force Performance",
+     "why": "フォイル軸受を温めると、構造の硬さがどう変わるかを測った定番の実験です。抄録の範囲だけで紹介し、具体的な数値は抄録にあるものだけを載せています。"
+    },
+    {
+     "id": "ntrs:19850005809",
+     "title": "Subsynchronous Vibrations in a High Pressure Centrifugal Compressor: A Case History",
+     "why": "1台の圧縮機に、周波数の違う2種類の振動が同時にあり、軸受を変えるだけでは直らなかった、という現場の記録です。振動の原因を「気体の力による自励振動」と「ディフューザの旋回失速」に切り分ける考え方が読み応えのある事例でした。全文を読みました。"
+    },
+    {
+     "id": "doi:10.3390/aerospace13111006",
+     "title": "Frequency-Dependent Rotordynamic Coefficients of Supercritical CO2 Labyrinth Seals Considering Real Gas Effects",
+     "why": "超臨界 CO2 を扱うラビリンスシールの剛性・減衰を、実在気体の性質を入れた流れ計算で調べた新着です。全文は取得できず、抄録の範囲だけで紹介しています。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送り：foil の OA 候補（ガススラスト軸受の軸方向挙動）",
+     "note": "doi:10.1016/j.tribin.2026.100023。Elsevier が今日も全文の取得を拒否したため作れませんでした。"
+    },
+    {
+     "title": "見送り：rotor の OA 新着候補",
+     "note": "MDPI の Machines 誌（ファン型ロータの羽根車の柔軟性）と Aerospace 誌（超臨界 CO2 シール）、Elsevier の Mechanism and Machine Theory 誌（多面のアンバランス推定）は、全文の取得が拒否されました。Aerospace 誌の論文は Crossref の抄録が取れたので、抄録ベースで採りました。"
+    },
+    {
+     "title": "取りこぼしの注意（Evans & Smalley）",
+     "note": "古いスキャンの文字起こしで表や図の目盛が崩れているため、数値は本文の散文から拾ったものに限っています。改造の寸法で、原文のスキャン由来の食い違い（軸受間隔の短縮量と元の値の差）があり、本文に書かれた値をそのまま引いています。"
+    },
+    {
+     "title": "修正した主な点",
+     "note": "忠実性チェックで、試験の帰属（先行報告を参照している点）、2つの動作領域に順序を付けた書き方、「この試験構成では」「概して」などの限定語の落ち、改造軸受の「溝つき」と「溝なし」の取り違え（スキャン文字の読み違い）、対数減衰率の条件の書き落とし、抄録に無い動機付けの補足などの指摘があり、すべて修正しました。2回目の確認では med/high の指摘はなく、low の指摘13件（言い回し・「一般的な説明」の表記・限定語の補足など）を修正して公開しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 23,
+      "note": "OA16／抄録7。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件のみ。ロシアの学術誌の PDF は OpenAlex 新着から見つかりました。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 6,
+      "note": "OA0／抄録6。OpenAlex から抄録が得られず、Crossref で補った。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA8／抄録3。arXiv は他分野の論文が1件のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 9,
+      "note": "OA1／抄録8。OA の1件は教科書（Vance 1988）で全文を確認できず。風力発電の電力系統の論文や転がり軸受・き裂ロータの論文は、主役の分野から外れるため採りませんでした。"
+     },
+     {
+      "name": "NASA NTRS 直接検索（追加探索）— rotor",
+      "scope": "全文が読める NASA 報告・会議録",
+      "terms": [
+       "rotordynamic stability whirl",
+       "critical speed unbalance response rotor",
+       "seal rotordynamic coefficients",
+       "rotor bearing instability subsynchronous"
+      ],
+      "hits": 100,
+      "note": "各語の上位25件を、配信済みの論文と著者・題名で突き合わせて新規を拾いました。ここから Evans & Smalley (1984) を選びました。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
+   },
+   "afterword": "今日の気づきは、同じ「回転数より低い周波数の振動」でも、原因が違えば直し方が逆向きになりうる、ということです。Evans & Smalley の事例では、気体の力で起きる自励振動と、ディフューザの失速による振動が同時にあって、軸受を硬くすると片方には有利でも、もう片方には不都合になるように読めました。それで軸受だけでなくロータごと作り直した、という流れが、素人目にもなるほどでした。ただし古いスキャンで表が読めないので、数字は本文で確かめられたものだけにしています。— 編集担当より"
   }
  ]
 }
