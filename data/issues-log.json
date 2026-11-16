@@ -16103,6 +16103,113 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
    },
    "afterword": "今日の気づきは、同じ「回転数より低い周波数の振動」でも、原因が違えば直し方が逆向きになりうる、ということです。Evans & Smalley の事例では、気体の力で起きる自励振動と、ディフューザの失速による振動が同時にあって、軸受を硬くすると片方には有利でも、もう片方には不都合になるように読めました。それで軸受だけでなくロータごと作り直した、という流れが、素人目にもなるほどでした。ただし古いスキャンで表が読めないので、数字は本文で確かめられたものだけにしています。— 編集担当より"
+  },
+  {
+   "date": "2026-11-17",
+   "status": "published",
+   "headline": "第110号：粘弾性フォイル軸受つきロータのき裂診断（抄録）、700 ℃・70,000 rpm のフォイル軸受試験機（NASA・1997年版）、ファン型ロータで羽根車を柔らかく扱うか剛体で扱うか、ラビリンスシールの負スワールブレーキ（抄録）",
+   "intro": "今日は4本とも、狙いどおりに選べました。foil の最新枠は、Crossref で抄録が取れた Kumar ほか (2026) を抄録の範囲だけで紹介します。foil の定番枠は、NASA の NTRS で全文を読める DellaCorte の試験機の報告です（読んだのは同題の NASA 技術メモ TM-107405＝1997年の会議向けの版で、Tribology Transactions 1998 年版との細かな違いは確かめていません）。rotor の最新枠は、MDPI のファン型ロータの論文（CC BY）です。MDPI の公式 PDF は取得できなかったため、公開ページの本文を読みました。数式と一部の数値は本文から欠けていたので、それらは使わず、確認できた数値だけを載せています。rotor の定番枠は、Crossref で抄録が取れた Childs ほか (2015) を抄録の範囲で紹介します。忠実性チェックでは初回に4本とも指摘があり（med 3〜5件ずつ）、修正して再確認を通しました。再確認で残った low 指摘8件も修正しています。",
+   "picked": [
+    {
+     "id": "doi:10.1142/s0219455428500770",
+     "title": "Novel Modelling and Full Spectrum Analysis for Robust Fault Identification in an Unbalanced and Cracked Rotor System Supported by Viscoelastic Foil Bearings",
+     "why": "粘弾性の層を持つフォイル軸受で支えたロータで、不つりあいとき裂を同時に見分け、軸受の剛性・減衰も推定する試みです。き裂の目印として「8の字」の軌道が挙がる点が目を引きました。全文は取得できず、抄録の範囲だけで紹介しています。"
+    },
+    {
+     "id": "doi:10.1080/10402009808983756",
+     "title": "A New Foil Air Bearing Test Rig for Use to 700°C and 70,000 rpm",
+     "why": "フォイル軸受の摩擦や荷重能力を、高温・高速で測る試験機の設計記録です。どんな装置でデータを取っているかが分かる、定番らしい資料です。全文（NASA 技術メモ版）を読みました。"
+    },
+    {
+     "id": "doi:10.3390/machines14111287",
+     "title": "Rotordynamic Behavior of Fan-Type Rotors: Role of Impeller Flexibility and Structural Idealization",
+     "why": "羽根車を柔らかい円板で扱うか、慣性だけ合わせた剛体で扱うかで、危険速度や応答がどう変わるかを、条件をそろえて比べた新着です。「近い周波数だけではモードの相互作用と言わない」という慎重な判断基準も読み応えがありました。公開ページの本文を読みました。"
+    },
+    {
+     "id": "doi:10.1115/1.4031877",
+     "title": "Rotordynamic Performance of a Negative-Swirl Brake for a Tooth-on-Stator Labyrinth Seal",
+     "why": "ラビリンスシールの入口の流れを逆向きに変えるよう設計したブレーキで、交差剛性の符号が変わり、有効減衰が大きくなったという試験です。抄録の範囲だけで紹介しています。"
+    }
+   ],
+   "aside": [
+    {
+     "title": "見送り：foil の OA 候補（ガススラスト軸受の軸方向挙動、Tribology and Interfaces 2026）",
+     "note": "doi:10.1016/j.tribin.2026.100023。Elsevier が全文の取得を拒否したため作れませんでした。"
+    },
+    {
+     "title": "見送り：rotor の OA 候補（油が足りない軸受のロータ、MSSP 2026）",
+     "note": "doi:10.1016/j.ymssp.2026.114862。Elsevier の本文が取得できず見送りました。"
+    },
+    {
+     "title": "対象外：他分野の論文",
+     "note": "arXiv の新着は、流れの機械学習や電力系統など軸受・ロータとは関係の薄い論文ばかりで、採りませんでした。"
+    },
+    {
+     "title": "忠実性チェックの記録",
+     "note": "初回は4本とも needs_fix（med 指摘：起動停止の1周期の読み違い、図の矢印、条件の付け足し、「偏心」の訳、「安定性向上」の断定など）。修正して再確認し、med/high は残りませんでした。再確認の low 指摘8件も修正して公開しています。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 21,
+      "note": "OA15／抄録6。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 13,
+      "note": "OA1／抄録12。OA の1件が NASA NTRS で全文を読める DellaCorte の報告でした。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 11,
+      "note": "OA5／抄録6。arXiv は他分野の論文が1件のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 10,
+      "note": "OA1／抄録9。OA の1件は粘性フィラメントの物理の論文で、軸受・ロータの主題から外れるため採りませんでした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。非OA の抄録は Crossref／Semantic Scholar で補いました。"
+   },
+   "afterword": "今日の気づきは、「近いこと」と「混ざること」は別、という点です。ファン型ロータの論文では、2つの固有モードの周波数が近づいても、それだけでは相互作用とは呼ばず、運動エネルギーの配分が入れ替わるのを一緒に確かめたときだけ、そう判断していました。慎重で、なるほどと思いました。もう一つ、DellaCorte の試験機の記述では、浮上前の典型的なトルクが約 140 N·mm、浮上後が約 7 N·mm とされていて、空気の膜に乗る前後で摩擦がおよそ20倍も違うことに驚きました（ただし荷重で変わる、という断り書きつきです）。数字は本文や抄録で確かめられたものだけにしています。— 編集担当より"
   }
  ]
 }
