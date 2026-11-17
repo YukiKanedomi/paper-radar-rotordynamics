@@ -16210,6 +16210,100 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。非OA の抄録は Crossref／Semantic Scholar で補いました。"
    },
    "afterword": "今日の気づきは、「近いこと」と「混ざること」は別、という点です。ファン型ロータの論文では、2つの固有モードの周波数が近づいても、それだけでは相互作用とは呼ばず、運動エネルギーの配分が入れ替わるのを一緒に確かめたときだけ、そう判断していました。慎重で、なるほどと思いました。もう一つ、DellaCorte の試験機の記述では、浮上前の典型的なトルクが約 140 N·mm、浮上後が約 7 N·mm とされていて、空気の膜に乗る前後で摩擦がおよそ20倍も違うことに驚きました（ただし荷重で変わる、という断り書きつきです）。数字は本文や抄録で確かめられたものだけにしています。— 編集担当より"
+  },
+  {
+   "date": "2026-11-18",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が出版社のブロックで取れず、前号のままにしました",
+   "intro": "今日は配信をお休みしました。foil の最新枠は arXiv 新着が他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件でした。OA（CC BY）と記録された論文は2件ありましたが、ガススラスト軸受の論文（Tribology and Interfaces、Elsevier）は PDF が 403、バンプフォイル軸受の弾性フォイルの過渡シミュレーション（PAMM、Wiley）も全文ページが確認ブロックで読めませんでした。追加で NASA NTRS の foil 軸受報告（全文を取得できる経路）も探しましたが、読み応えのある主要な報告は既に配信済みで、残りは1960年代の古い報告書や短い技報の紹介記事ばかりでした。定番枠は被引用の高い抄録ベースの論文が並んでいましたが、foil で OA 全文が1件に届かないため、無理に出さず前号のままにしました。rotor 側には Elsevier の CC BY 論文（油不足の軸受で支持されたロータの動特性）や、スクイーズフィルムダンパの OA 資料などの候補がありましたが、foil が揃わないので作り込みませんでした。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：ガススラスト軸受のロータの非線形な軸方向挙動（foil・OA）",
+     "note": "doi:10.1016/j.tribin.2026.100023。抄録は読めましたが、全文は Elsevier 側で取得できず（403）、全文版は作れませんでした。"
+    },
+    {
+     "title": "見送り2：バンプフォイル軸受の弾性フォイルの過渡シミュレーション（foil・OA）",
+     "note": "doi:10.1002/pamm.70274。Wiley 側の全文ページが確認ブロックで読めず、全文版は作れませんでした。"
+    },
+    {
+     "title": "見送り3：rotor の候補（油不足の軸受で支持されたロータ、スクイーズフィルムダンパの OA 資料など）",
+     "note": "foil 側の OA が揃わなかったため作り込みませんでした。次回以降の候補に残します。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 22,
+      "note": "OA16／抄録6。軸受の候補は OpenAlex 新着の8件ほどで、他は分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 12,
+      "note": "OA0／抄録12。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 21,
+      "note": "OA15／抄録6。軸受・ロータの候補は OpenAlex 新着の一部。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 14,
+      "note": "OA2／抄録12（OA の1件は分野外）。"
+     },
+     {
+      "name": "NASA NTRS（追加探索）— foil",
+      "scope": "foil bearing 系の複数クエリ・全文ダウンロードあり",
+      "terms": [
+       "gas foil bearing",
+       "compliant foil journal bearing",
+       "foil air bearing rotor",
+       "gas lubricated bearing foil dynamic coefficients"
+      ],
+      "hits": 151,
+      "note": "「foil bearing」クエリの総数。主要な報告は既配信で、未配信は古い報告書や短い技報の紹介記事が中心でした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。定番枠は被引用順3ページ目。"
+   },
+   "afterword": "今日は、OA と書かれていても出版社のサーバが自動の取得を断ると全文を読めない、という場面にまた当たりました。それに、NASA の報告書は長く読まれてきた分、配信済みの定番が多く、残りを探すほど技報の紹介記事のような短いものが目立ってきます。抄録だけの論文は抄録ベースと明記すれば出せますが、foil の OA 全文が揃わない日は、確認できないものを出さないためにお休みにします。— 編集担当より"
   }
  ]
 }
