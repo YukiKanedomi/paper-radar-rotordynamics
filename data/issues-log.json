@@ -16304,6 +16304,104 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。定番枠は被引用順3ページ目。"
    },
    "afterword": "今日は、OA と書かれていても出版社のサーバが自動の取得を断ると全文を読めない、という場面にまた当たりました。それに、NASA の報告書は長く読まれてきた分、配信済みの定番が多く、残りを探すほど技報の紹介記事のような短いものが目立ってきます。抄録だけの論文は抄録ベースと明記すれば出せますが、foil の OA 全文が揃わない日は、確認できないものを出さないためにお休みにします。— 編集担当より"
+  },
+  {
+   "date": "2026-11-19",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が出版社のブロックで取れず、前号のままにしました",
+   "intro": "今日も配信をお休みしました。foil の最新枠は arXiv 新着が他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件でした。OA（CC BY）と記録された2件のうち、ガススラスト軸受の論文（Tribology and Interfaces、Elsevier）は ScienceDirect が 403、バンプフォイル軸受の弾性フォイルの過渡シミュレーション（PAMM、Wiley）も確認ブロックで本文を読めませんでした。ほかに、DTU のリポジトリにある空気フォイル軸受の連成モデルの論文（JSV 2017）も Cloudflare の確認画面で止まりました。NASA NTRS や DOE OSTI も探しましたが、フォイル軸受の主要な報告は既に配信済みで、残りは本文が取れない・古いスキャン・短い技報記事でした。OSTI で全文が取れた UNLV の DOE 最終報告（超臨界CO2用の外部加圧多孔質ガス軸受）は、フォイル軸受ではなく、試験も回転子ロックで終わった事業報告だったため、foil の配信として出すのは見送りました。定番枠は被引用の高い論文が並んでいましたが、いずれも抄録ベースで、foil で OA 全文が1件に届かないため、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：ガススラスト軸受のロータの非線形な軸方向挙動（foil・OA）",
+     "note": "doi:10.1016/j.tribin.2026.100023。Elsevier 側で全文が取得できず（403）、全文版は作れませんでした。"
+    },
+    {
+     "title": "見送り2：バンプフォイル軸受の弾性フォイルの過渡シミュレーション（foil・OA）",
+     "note": "doi:10.1002/pamm.70274。Wiley 側の全文ページが確認ブロックで読めませんでした。"
+    },
+    {
+     "title": "見送り3：UNLV の DOE 最終報告「超臨界CO2再圧縮ブレイトンサイクル用ガス軸受の開発」（OSTI・全文取得可）",
+     "note": "外部加圧多孔質ガス軸受の事業報告で、フォイル軸受ではなく、最終的に回転子ロックで高速運転に至らなかった内容。foil の主題から外れるため見送りました。"
+    },
+    {
+     "title": "見送り4：rotor の候補（arXiv の遠心バランシング論文、MDPI のラビリンスシール・SFD の OA 論文など）",
+     "note": "foil 側の OA が揃わなかったため作り込みませんでした。次回以降の候補に残します。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 22,
+      "note": "OA16／抄録6。軸受の候補は OpenAlex 新着の8件ほどで、他は分野外。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 5,
+      "note": "OA0／抄録5。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 23,
+      "note": "OA18／抄録5。軸受・ロータの候補は OpenAlex 新着の一部と arXiv 1件。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (1ページ目)",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 10,
+      "note": "OA1／抄録9。"
+     },
+     {
+      "name": "補助：OpenAlex 直接検索・NASA NTRS・DOE OSTI（foil）",
+      "scope": "foil bearing / gas bearing などの語で補完",
+      "terms": [
+       "foil bearing",
+       "foil air bearing",
+       "gas bearing",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 0,
+      "note": "未配信で全文が取れた候補は、主題から外れる DOE 事業報告1件のみでした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。"
+   },
+   "afterword": "今日は、「OA と書いてあること」と「読めること」は別なのだと改めて感じました。論文の記録上は CC BY の本文でも、出版社のサイトが機械の読み取りを止めていれば、ここでは中身を確かめられません。確かめられないものを要約すると、嘘が混ざるおそれがあります。だから今日は無理をせず、お休みにしました。— 編集担当より"
   }
  ]
 }
