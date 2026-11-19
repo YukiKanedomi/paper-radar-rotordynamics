@@ -16402,6 +16402,110 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。"
    },
    "afterword": "今日は、「OA と書いてあること」と「読めること」は別なのだと改めて感じました。論文の記録上は CC BY の本文でも、出版社のサイトが機械の読み取りを止めていれば、ここでは中身を確かめられません。確かめられないものを要約すると、嘘が混ざるおそれがあります。だから今日は無理をせず、お休みにしました。— 編集担当より"
+  },
+  {
+   "date": "2026-11-20",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込みましたが、忠実性チェックを2回通しても指摘が残り、前号のままにしました",
+   "intro": "今日は久しぶりに、実際に4本を作り込みました。foil の最新枠は FME Transactions 2023 の空気フォイルスラスト軸受（全文を取得）、foil の定番枠は Gad & Kaneko 2014 のバンプ箔の構造剛性モデル（Crossref の抄録）、rotor の最新枠は MDPI のラビリンスシールの歯の摩耗（Crossref の抄録。MDPI の本文は 403 で取れませんでした）、rotor の定番枠は NASA NTRS で全文が読める Muszynska の流体ホワール／流体ホイップの論文です。忠実性チェックの初回では4本とも needs_fix（高い指摘：「重ねた枚数」の読み違い、λ に反比例の取り違え、式の記号、著者の欠落など）。指摘を直して再確認したところ、4本とも中程度の指摘が残りました（FME 3件、Muszynska 5件、Gad 3件、Gu 4件。帰属のずれ、一般説明の表示、概念図の描き方など）。規則では2ラウンドで打ち切りで、確認用のサブエージェントの上限にも達したため、4本とも保留とし、無理に出さず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留1：FME Transactions 2023「各種の箔構成によるガス潤滑フォイルスラスト軸受の実験およびCFD解析」（foil・OA全文）",
+     "note": "全文は取得でき、引用2件は逐語一致でした。残った指摘：くさび膜の説明が出典と合わない、deepDive の図の帰属、見出しの比例/線形。"
+    },
+    {
+     "title": "保留2：Gad & Kaneko 2014「バンプ型フォイル軸受の新しい構造剛性モデル」（foil・抄録ベース）",
+     "note": "残った指摘：やさしい版の「これまでより細かく」、概念図のラベル位置、一般説明の表示。"
+    },
+    {
+     "title": "保留3：Gu ほか 2026「キノコ形の歯の摩耗とラビリンスシール」（rotor・抄録ベース）",
+     "note": "残った指摘：見出し・フックでの条件（4800 rpm、シール位置）の抜け、直接剛性の定義、図の形状の断定。"
+    },
+    {
+     "title": "保留4：Muszynska 1994「流体ホワールと流体ホイップのモード」（rotor・NTRS 全文）",
+     "note": "OCR が崩れた全文は、NTRS の PDF の画像でも確認しました。残った指摘：近似の次数（0次近似）、摂動法の帰属、シールでの「2倍」の言い方、オイルホイップの定義の広げすぎ。"
+    },
+    {
+     "title": "見送り：Two-Pad ガスフォイルジャーナル軸受（MDPI 2026）など",
+     "note": "foil の最新枠にもっとも合う新着でしたが、MDPI の本文が取得できず、OA 全文の枠を満たせないため選べませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着の数件のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 12,
+      "note": "OA0／抄録12。抄録は Crossref で取れたものから Gad & Kaneko を選びました（Elsevier の2件は抄録も取れませんでした）。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA8／抄録3。arXiv は他分野の論文が1件のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (2ページ目)",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。OA の1件は粘性フィラメントの物理で主題外でした。"
+     },
+     {
+      "name": "補助：NASA NTRS・OpenAlex 直接検索（foil・rotor）",
+      "scope": "全文が取れる OA 候補の補完",
+      "terms": [
+       "foil air bearing",
+       "gas foil bearing",
+       "rotordynamic",
+       "whirl instability rotor",
+       "seal rotordynamic",
+       "foil bearing（OpenAlex、CC BY 限定）"
+      ],
+      "hits": 0,
+      "note": "NTRS では Muszynska 1994 の全文が取れました。foil 側は NASA Tech Briefs の短い記事ばかりで採れず、OpenAlex の CC BY 候補から全文が取れた FME 2023 を見つけました。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
+   },
+   "afterword": "今日の気づきは、「読めた」と「正しく言えた」のあいだの距離です。Muszynska の論文は、取り込んだ文字がばらばらに崩れていて、式の記号ひとつ（jωD_i か jΩD_i か）も、PDF の画像まで開いて初めて確かめられました。ほかにも、「1/λ に反比例」と書いたつもりが逆の意味になっていた、というミスを指摘されて、言葉の向きひとつで中身が変わる分野なのだなと思いました。直しても中程度の指摘が残ったので、今日は出さないことにしました。— 編集担当より"
   }
  ]
 }
