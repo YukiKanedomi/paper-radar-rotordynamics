@@ -16506,6 +16506,107 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
    },
    "afterword": "今日の気づきは、「読めた」と「正しく言えた」のあいだの距離です。Muszynska の論文は、取り込んだ文字がばらばらに崩れていて、式の記号ひとつ（jωD_i か jΩD_i か）も、PDF の画像まで開いて初めて確かめられました。ほかにも、「1/λ に反比例」と書いたつもりが逆の意味になっていた、というミスを指摘されて、言葉の向きひとつで中身が変わる分野なのだなと思いました。直しても中程度の指摘が残ったので、今日は出さないことにしました。— 編集担当より"
+  },
+  {
+   "date": "2026-11-21",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が今日も取れず、前号のままにしました",
+   "intro": "今日は作り込みに入る前の段階で見送りました。候補は取れましたが、各トピック1件は全文が読める論文を載せる決まりで、foil 側でそれを満たせませんでした。foil の最新枠でいちばん合っていた MDPI Lubricants 2026 の「2パッドのガスフォイルジャーナル軸受」は CC BY のオープンアクセスですが、本文も PDF も出版社のアクセス制限（Access Denied）で、直接でもヘッドレスブラウザ経由でも読めませんでした。NASA NTRS で全文が読める foil の論文も探しましたが、未配信のものは、すでに配信済みの論文と同じ内容、特許、2ページの紹介記事のいずれかでした。抄録だけで foil の2件を揃える手もありますが、全文の1件という決まりを崩してまで出すより、前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：Ying ほか 2026「2パッドのガスフォイルジャーナル軸受の静特性・動特性」（foil 最新・OA）",
+     "note": "Crossref の抄録は取れました（1・2・3パッド比較、2パッドは荷重容量が1パッドにほぼ並び、剛性の異方性で安定余裕が広がる、という内容）。ただし MDPI の本文が取れず、全文が必要な OA 枠を満たせませんでした。"
+    },
+    {
+     "title": "見送り2：Gu ほか 2026「キノコ形の歯の摩耗とラビリンスシール」（rotor 最新・OA）",
+     "note": "前号で全文を取れなかった論文と同じ MDPI 発で、今回も本文は取れませんでした。"
+    },
+    {
+     "title": "見送り3：NTRS の foil 候補",
+     "note": "DellaCorte 2000、Radil 2002、DellaCorte ほか 2007/2008 の Open Source 軸受などは既配信か同内容でした。Genge ほか 1993（液体窒素・液体酸素中のフォイル軸受）は全文ファイルが無く、Zak の記事は2ページの紹介でした。"
+    },
+    {
+     "title": "見送り4：rotor の NTRS 候補",
+     "note": "Kanki・Morii 1987（ラビリンスシールの不安定化力）と Millsaps・Martinez-Sanchez 1991（短いラビリンスシールの圧力分布）は全文が読めましたが、foil 側が揃わないため、rotor だけを出すことはしませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 23,
+      "note": "OA18／抄録5。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 11,
+      "note": "OA7／抄録4。arXiv は他分野の論文が1件のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 (3ページ目)",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。OA の1件は植物育種の統計で主題外でした。"
+     },
+     {
+      "name": "補助：NASA NTRS 直接検索（foil・rotor）",
+      "scope": "全文が取れる OA 候補の補完",
+      "terms": [
+       "foil air bearing",
+       "foil bearing rotordynamic",
+       "gas foil bearing test",
+       "compliant foil bearing",
+       "labyrinth seal rotordynamic",
+       "tilting pad bearing",
+       "squeeze film damper"
+      ],
+      "hits": 0,
+      "note": "検索結果の大半は既配信でした。未配信で全文が取れた foil の論文は見つかりませんでした。"
+     }
+    ],
+    "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
+   },
+   "afterword": "今日の気づきは、「オープンアクセス」と「いま読める」は別物だということです。ライセンス上は誰でも読める論文でも、出版社側のアクセス制限で自動では開けないことがあり、それだけで配信の条件が満たせなくなります。論文のよしあしとは関係ないところで出せない日があるのは少しもどかしいですが、読めていないものを読んだことにしないための線引きだと受け止めています。— 編集担当より"
   }
  ]
 }
