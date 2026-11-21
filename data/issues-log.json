@@ -16607,6 +16607,88 @@
     "note": "検索語は topics.json から日替わりローテーションで自動選択。抄録は Crossref で補いました。"
    },
    "afterword": "今日の気づきは、「オープンアクセス」と「いま読める」は別物だということです。ライセンス上は誰でも読める論文でも、出版社側のアクセス制限で自動では開けないことがあり、それだけで配信の条件が満たせなくなります。論文のよしあしとは関係ないところで出せない日があるのは少しもどかしいですが、読めていないものを読んだことにしないための線引きだと受け止めています。— 編集担当より"
+  },
+  {
+   "date": "2026-11-22",
+   "status": "skipped",
+   "headline": "お休み：foil の OA 全文が取れず、前号のままにしました",
+   "intro": "今日も foil 側で、全文が読める論文を1件載せるという決まりを満たせず、前号のままにしました。foil の最新枠で合っていたのは MDPI Lubricants 2026 の「2パッドのガスフォイルジャーナル軸受」（CC BY）ですが、今日取れたのは抄録までで、本文は読めませんでした。ほかの foil の OA 候補（Wiley の Journal of Tribology・PAMM、Elsevier の Tribology and Interfaces）は出版社のアクセス制限で全文を取れませんでした。定番枠は4件すべて抄録のみで、OA は含まれていません。一方 rotor 側では、MDPI Lubricants 2026 の「キノコ形の歯の摩耗とラビリンスシール」の本文を今回は読むことができました。ただ foil が揃わないので、rotor だけを出すことはしませんでした。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り1：Ying ほか 2026「2パッドのガスフォイルジャーナル軸受の静特性・動特性」（foil 最新・OA）",
+     "note": "抄録は読めました（1・2・3パッドの比較で、2パッドは荷重容量が1パッドにほぼ並ぶ、という内容）。しかし本文が取れず、全文が必要な OA 枠を満たせませんでした。"
+    },
+    {
+     "title": "見送り2：Gu ほか 2026「キノコ形の歯の摩耗とラビリンスシール」（rotor 最新・OA）",
+     "note": "今回は本文を読めましたが、foil が揃わないため出していません。内容は、摩耗深さ0〜0.6 mm でラビリンスシールの漏れ量が約294.5%増え、油膜軸受つきロータのオイルホワール開始速度が約3650 rpm から約3530 rpm に下がる、というものでした。"
+    },
+    {
+     "title": "見送り3：foil の定番枠",
+     "note": "「ガスフォイル軸受のトップフォイル有限要素モデル」（2008）など4件はいずれも抄録のみで、OA の全文は無く、foil の OA 1件を満たす足しにはなりませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 22,
+      "note": "OA18／抄録4。arXiv は他分野の論文ばかりで、軸受の候補は OpenAlex 新着のみでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 1ページ目",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 4,
+      "note": "OA0／抄録4。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 21,
+      "note": "OA15／抄録6。arXiv は他分野の論文ばかりでした。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 1ページ目",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 5,
+      "note": "OA1／抄録4。OA の1件は書籍（Vance, Rotordynamics of Turbomachinery）の書誌のみで本文は無く、1件は分野違いの統計論文でした。"
+     }
+    ],
+    "note": "foil の全文取得先を MDPI・Wiley・Elsevier で試し、取れなかったためお休みにしました。"
+   },
+   "afterword": "今日いちばんの収穫は、取れなかった側ではなく取れた側でした。ラビリンスシールの歯がキノコ状にすり減ると、漏れが増えるだけでなく、同じ回転数でも同期振動は小さくなる一方で半分周波数の振動が大きくなる、という報告です。「振動が減ったから安心」とは限らないというのが、素人にはなるほどでした。ただ、これは1本の数値解析の結果なので、そのまま一般則として受け取らないようにしたいところです。— 編集担当より"
   }
  ]
 }
