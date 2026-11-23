@@ -16780,6 +16780,107 @@
     "note": "foil の全文取得先を MDPI・Elsevier・Wiley で試し、取れなかったためお休みにしました。"
    },
    "afterword": "今日は取れなかった話ですが、NTRS で見つけた NASA の講演スライドの冒頭に、ガスフォイル軸受を使う狙いとして「ターボチャージャーの回転軸支持（ロータ支持系）が何十年も大きく変わらず、技術の成熟で伸びが止まっている」という趣旨の問題設定が書かれていました（スライドの主張で、本文を検証したものではありません）。軸受の話が一つの機械の進歩の天井として語られているのが、素人にはなるほどでした。明日は本文が読める foil の論文に出会えるといいなと思っています。— 編集担当より"
+  },
+  {
+   "date": "2026-11-24",
+   "status": "skipped",
+   "headline": "お休み：4本を作り込んだが、2本が忠実性チェック2ラウンド後も指摘が残り、前号のまま",
+   "intro": "ここ数日は foil の全文が取れずにお休みが続いていましたが、今日は MDPI の本文を読み取り専用のページ変換サービス経由で、DTU（デンマーク工科大学）のリポジトリの査読済み著者版 PDF を直接取得でき、foil と rotor の両方で全文を読めました。foil は Ying ほか 2026（2パッドのガスフォイル軸受）と von Osmanski ほか 2017（摩擦を入れた完全連成モデル）、rotor は Gu ほか 2026（摩耗したラビリンスシール）と、抄録ベースの Humphris ほか 1986（磁気軸受の制御アルゴリズム）の4本を作り込みました。忠実性チェックは1回目で4本とも指摘があり、修正して再検証した結果、von Osmanski と Gu は通りましたが、Ying と Humphris には、出典を言い過ぎている箇所が1件ずつ残りました。決まりでは2ラウンドで打ち切りなので、この2本は保留とし、foil・rotor とも2件が揃わないため、今日は出さずに前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "保留1：Ying ほか 2026「2パッドのガスフォイルジャーナル軸受」（foil・最新・全文）",
+     "note": "全文を読み、数値は本文で裏取りできました。1回目は式の再構成と式番号、条件の抜けなど多数の指摘があり修正しました。2回目に残った指摘は、「横に動くときは圧力がほとんど立たない」という機構の説明が、継ぎ目の近くに限った本文の記述より広く読める点です。"
+    },
+    {
+     "title": "保留2：Humphris ほか 1986「磁気ジャーナル軸受の特性に対する制御アルゴリズムの影響」（rotor・定番・抄録ベース）",
+     "note": "抄録の範囲で作りました。2回目に残った指摘は、豆知識で「制御アルゴリズムの違いだけが現れるようにしている」「〜ためです」と、抄録の「他の効果から切り分けた」より踏み込んだ点です。"
+    },
+    {
+     "title": "検証は通った2本（今日は出していません）",
+     "note": "von Osmanski ほか 2017（foil・定番・DTU の著者版）と Gu ほか 2026（rotor・最新・MDPI）は、low の指摘のみで通りました。ただし、各トピック2件が揃わないため公開していません。"
+    },
+    {
+     "title": "取れなかった候補",
+     "note": "Elsevier の Tribology and Interfaces（ガススラスト軸受）と Wiley の2本は、出版社の403で本文を取得できませんでした。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing"
+      ],
+      "hits": 23,
+      "note": "OA18／抄録5。arXiv は他分野ばかりで、軸受の候補は OpenAlex 新着のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 3ページ目",
+      "terms": [
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA7／抄録4。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 3ページ目",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 14,
+      "note": "OA0／抄録14。抄録を Crossref で読めたのは2件のみ。"
+     },
+     {
+      "name": "OpenAlex（foil の補助検索）",
+      "scope": "foil bearing 系の語7種・OA限定・被引用順・各25件",
+      "terms": [
+       "foil bearing",
+       "gas foil bearing",
+       "foil thrust bearing",
+       "air foil bearing",
+       "bump foil",
+       "compliant foil bearing",
+       "foil journal bearing rotordynamic"
+      ],
+      "hits": 175,
+      "note": "既配信を除き、リポジトリに直接 PDF がある候補から DTU Orbit の著者版を見つけました。"
+     }
+    ],
+    "note": "全文は MDPI（変換サービス経由）と DTU Orbit から取れましたが、忠実性チェックの規則により公開は見送りました。"
+   },
+   "afterword": "今日は4本を読み込んで、結局出せなかった日でした。それでも、von Osmanski らが、摩擦を滑りとして入れたモデルが実験と合わず、「固着が従来の想定より多いのでは」と、うまくいかなかったことを率直に書いているのが、素人目にはなるほどでした（あくまで感想です）。出さない判断は悔しいですが、言い過ぎが一つでも残るなら待つ、というのがこの配信の約束なので、そうしました。— 編集担当より"
   }
  ]
 }
