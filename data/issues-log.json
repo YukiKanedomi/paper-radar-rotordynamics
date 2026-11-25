@@ -17014,6 +17014,88 @@
     "note": "今日の4本の全文は、MDPI（変換サービス経由）・DTU Orbit（著者版 PDF）・NASA NTRS から取得しました。出版社の確認画面で止まったのは Wiley と Elsevier です。"
    },
    "afterword": "今日は4本を読み込んで、結局出せなかった日でした。それでも、Cunningham と Gunter の1971年の報告が、止まった状態で測った空気膜の「ばねの強さ」から、毎分2万8千回転までの危険速度をかなり正確に言い当てていたことが、素人目にはなるほどでした（あくまで感想です）。半世紀前の実験が、いまの計算の足場になっているのを感じます。出さない判断は悔しいですが、言い過ぎが一つでも残るなら待つ、というのがこの配信の約束なので、そうしました。— 編集担当より"
+  },
+  {
+   "date": "2026-11-26",
+   "status": "skipped",
+   "headline": "お休み：foil・rotor ともOA候補の全文が出版社のブロックで取れず、前号のまま",
+   "intro": "今日の候補には、foil の最新枠に Ying ほか（MDPI Lubricants）・Wiley PAMM・Tribology International Open、rotor の最新枠に Gu ほか（MDPI）・starved bearings（Elsevier）といった軸受・ロータの物理に合うOA（CC-BY）論文がありました。ただ Unpaywall でライセンスは確認できたものの、MDPI・Wiley・ScienceDirect はいずれも本文の取得が 403 で拒否され、Europe PMC 経由でも取れませんでした。全文を読めないまま「全文ベース」で書くことは §0 に反するため、今日は作り込みに進まず、前号のままにしました。定番枠は foil・rotor とも抄録のみ（OA 0）で、各トピックのOA全文1件という条件を満たせません。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り：OA候補（全文が取れず）",
+     "note": "foil：Two-Pad Gas Foil Journal Bearing（MDPI）、Transient Simulation of Elastic Foil Structures in Bump-foil Bearings（Wiley PAMM）、Comparative Study of Nonlinear Static and Dynamic Axial Behavior of Rotors on Gas Thrust Bearings（Elsevier）。rotor：Effects of Mushroom-Shaped Tooth Wear on Labyrinth Seal（MDPI）、Dynamic behaviour of rotors supported on starved bearings（Elsevier）。いずれも CC-BY と確認できましたが本文は取得できませんでした。MDPI の2本は 2026-11-24・25 に作り込みを試みて保留になった経緯があり、今回は再挑戦もしていません。"
+    },
+    {
+     "title": "見送り：定番枠",
+     "note": "foil（Analysis of gas foil bearings integrating FE top foil models など）・rotor（Whirl and whip instabilities in rotor-bearing system など）は有力な定番候補ですが、すべて抄録ベースで、OA全文の1件が別に必要なため単独では出せません。"
+    },
+    {
+     "title": "忠実性チェックの回数",
+     "note": "作り込みに進まなかったため、subagent は 0 体です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXiv は他分野ばかりで、軸受の候補は OpenAlex 新着のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 2ページ目",
+      "terms": [
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing"
+      ],
+      "hits": 10,
+      "note": "OA0／抄録10。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 21,
+      "note": "OA15／抄録6。arXiv は他分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 2ページ目",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 8,
+      "note": "OA1／抄録7。OAの1本（Twirling and Whirling）は弾性フィラメントの流体力学で、軸受・ロータの主題から外れるため対象外。"
+     }
+    ],
+    "note": "全文の取得可否は Unpaywall のライセンス情報と、各出版社への直接取得で確認しました。"
+   },
+   "afterword": "— 編集担当より\n今日は「CC-BY と書いてあっても、機械から本文を取れるとは限らない」ことが、あらためてなるほどでした。ライセンス上は自由に読めても、読む側の道がふさがれていれば、要約を出典に忠実に書くことはできません。読める範囲だけで背伸びして書くより、出さない日があるほうが、この配信らしいと思っています。"
   }
  ]
 }
