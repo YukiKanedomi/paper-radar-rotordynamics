@@ -17096,6 +17096,106 @@
     "note": "全文の取得可否は Unpaywall のライセンス情報と、各出版社への直接取得で確認しました。"
    },
    "afterword": "— 編集担当より\n今日は「CC-BY と書いてあっても、機械から本文を取れるとは限らない」ことが、あらためてなるほどでした。ライセンス上は自由に読めても、読む側の道がふさがれていれば、要約を出典に忠実に書くことはできません。読める範囲だけで背伸びして書くより、出さない日があるほうが、この配信らしいと思っています。"
+  },
+  {
+   "date": "2026-11-27",
+   "status": "skipped",
+   "headline": "お休み：foil のOA全文がまた取れず（出版社ブロック・NASA報告は薄い）、前号のまま",
+   "intro": "今日の候補にも、foil の最新枠に Wiley（Journal of Tribology・PAMM）と Elsevier（Tribology and Interfaces、CC-BY）のOA論文がありました。ただ Wiley と ScienceDirect は本文の取得が 403 で、Crossref・Semantic Scholar・OpenAlex でもライセンスは確認できるものの本文へは辿れませんでした。arXiv には foil bearing の論文自体が見当たらず、NASA NTRS で未配信の foil 論文を探すと、残っていたのは特許・技報（Tech Brief）・発表スライドなど、論文として作り込める厚みのないものばかりでした。全文を読めないまま「全文ベース」で書くことは §0 に反するため、今日は作り込みに進まず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り：foil のOA候補（全文が取れず）",
+     "note": "Two-Dimensional Plate Model Perturbation for Calculation of Stiffness and Damping Coefficients of Foil Bearings（Wiley, Journal of Tribology）、Transient Simulation of Elastic Foil Structures in Bump-foil Bearings（Wiley, PAMM）、Comparative Study of the Nonlinear Static and Dynamic Axial Behavior of Rotors on Gas Thrust Bearings（Elsevier, Tribology and Interfaces）。後ろ2本は CC-BY と確認できましたが、本文は取得できませんでした。"
+    },
+    {
+     "title": "見送り：NASA NTRS の未配信 foil 資料",
+     "note": "Passive Thermal Management of Foil Bearings は特許、Foil Gas Thrust Bearings for High-Speed Turbomachinery は Tech Brief、Oil-Free Enabling Technology: Gas Foil Bearings は発表スライドで、いずれも要約を作り込む対象としては薄いため見送りました。"
+    },
+    {
+     "title": "見送り：rotor",
+     "note": "rotor の最新枠OAでは arXiv の Dynamic balancing of super-critical rotating structures（2017）の全文が取れましたが、foil 側のOA全文1件が満たせないため、今号は号全体を見送りました。定番枠は抄録ベースのみ（OA は 1件あるが 2013 年の数値手法で主役ではない）でした。"
+    },
+    {
+     "title": "忠実性チェックの回数",
+     "note": "作り込みに進まなかったため、subagent は 0 体です。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 24,
+      "note": "OA18／抄録6。arXiv は他分野ばかりで、軸受の候補は OpenAlex 新着のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用数の多い順 3ページ目",
+      "terms": [
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients",
+       "oil-free turbomachinery bearing",
+       "gas foil bearing"
+      ],
+      "hits": 11,
+      "note": "OA0／抄録11。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration"
+      ],
+      "hits": 23,
+      "note": "OA17／抄録6。arXiv は他分野ばかり。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用数の多い順 3ページ目",
+      "terms": [
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed"
+      ],
+      "hits": 14,
+      "note": "OA1／抄録13。"
+     },
+     {
+      "name": "NASA NTRS（補足検索）— foil",
+      "scope": "全文取得の代替経路",
+      "terms": [
+       "foil gas bearing",
+       "bump foil bearing",
+       "foil journal bearing stiffness damping",
+       "air foil bearing rotordynamic",
+       "compliant foil bearing",
+       "foil thrust bearing"
+      ],
+      "hits": 0,
+      "note": "件数は未集計。未配信の候補は特許・技報・スライドのみ。arXiv の foil bearing 検索は 0 件。"
+     }
+    ],
+    "note": "foil のOA全文が取れない日が続いています（11-22〜27 はいずれもお休み）。"
+   },
+   "afterword": "— 編集担当より\n今日も出版社のページが開けず、お休みになりました。調べていて気づいたのは、foil bearing の論文は arXiv にほとんど（今回の検索では 0 件）なく、全文を読める経路が出版社の公開形態に左右されやすい、ということです。読む側の専門家にはどうにもならない事情ですが、無理に埋めずに「読めなかった」と書くほうが、このアプリには合っていると思います。"
   }
  ]
 }
