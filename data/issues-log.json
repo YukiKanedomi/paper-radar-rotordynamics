@@ -17196,6 +17196,97 @@
     "note": "foil のOA全文が取れない日が続いています（11-22〜27 はいずれもお休み）。"
    },
    "afterword": "— 編集担当より\n今日も出版社のページが開けず、お休みになりました。調べていて気づいたのは、foil bearing の論文は arXiv にほとんど（今回の検索では 0 件）なく、全文を読める経路が出版社の公開形態に左右されやすい、ということです。読む側の専門家にはどうにもならない事情ですが、無理に埋めずに「読めなかった」と書くほうが、このアプリには合っていると思います。"
+  },
+  {
+   "date": "2026-11-28",
+   "status": "skipped",
+   "headline": "お休み：foil のOA全文が出版社ブロック(MDPI/Wiley/Elsevier)で取れず、前号のまま",
+   "intro": "今日の foil 最新枠には、MDPI（Lubricants: Two-Pad Gas Foil Journal Bearing）、Wiley（Journal of Tribology・PAMM）、Elsevier（Tribology and Interfaces）のOA論文がありました。ただ、どの本文も取得が 403 で、MDPI は別経路（代理取得）でも同じ結果、Unpaywall でも別の公開コピーは見つかりませんでした。arXiv には foil bearing の論文が見当たらず、NASA NTRS の未配信分は特許や1960年代の報告書ばかりで、いまの水準で作り込める厚みがありませんでした。全文を読めないまま全文ベースで書くことは §0 に反するため、今日は作り込みに進まず前号のままにしました。",
+   "picked": [],
+   "aside": [
+    {
+     "title": "見送り：foil のOA候補（全文が取れず）",
+     "note": "Static and Dynamic Characteristics of a Two-Pad Gas Foil Journal Bearing（MDPI）、Two-Dimensional Plate Model Perturbation for Calculation of Stiffness and Damping Coefficients of Foil Bearings（Wiley）、Transient Simulation of Elastic Foil Structures in Bump-foil Bearings（Wiley）、Comparative Study of the Nonlinear Static and Dynamic Axial Behavior of Rotors on Gas Thrust Bearings（Elsevier）。いずれも本文の取得に失敗しました。"
+    },
+    {
+     "title": "見送り：rotor",
+     "note": "rotor 側は定番枠に OA の Rotordynamics of Turbomachinery（1988）がありましたが、foil 側のOA全文1件が満たせないため、号全体を見送りました。"
+    },
+    {
+     "title": "忠実性チェックの回数",
+     "note": "作り込みに進まなかったため、faithfulness-check は 0 体です（本文取得の試行に簡易な取得用エージェントを 1 体使用）。"
+    }
+   ],
+   "searchLog": {
+    "sources": [
+     {
+      "name": "arXiv + OpenAlex（最新枠）— foil",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "oil-free turbomachinery bearing",
+       "gas foil bearing",
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing"
+      ],
+      "hits": 23,
+      "note": "OA18／抄録5。arXiv は他分野ばかりで、軸受の候補は OpenAlex 新着のみ。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— foil",
+      "scope": "被引用順 1ページ目",
+      "terms": [
+       "bump foil bearing",
+       "air foil journal bearing",
+       "foil thrust bearing",
+       "compliant foil bearing",
+       "foil bearing rotordynamic coefficients"
+      ],
+      "hits": 6,
+      "note": "OA0／抄録6。"
+     },
+     {
+      "name": "arXiv + OpenAlex（最新枠）— rotor",
+      "scope": "arXiv＋OpenAlex新着",
+      "terms": [
+       "rotordynamics",
+       "rotor-bearing system stability",
+       "unbalance response",
+       "critical speed",
+       "whirl instability",
+       "bearing stiffness damping coefficients"
+      ],
+      "hits": 11,
+      "note": "OA9／抄録2。"
+     },
+     {
+      "name": "OpenAlex（定番枠）— rotor",
+      "scope": "被引用順 1ページ目",
+      "terms": [
+       "whirl instability",
+       "bearing stiffness damping coefficients",
+       "seal rotordynamic forces",
+       "subsynchronous vibration",
+       "rotordynamics",
+       "rotor-bearing system stability"
+      ],
+      "hits": 10,
+      "note": "OA1／抄録9。"
+     },
+     {
+      "name": "NASA NTRS（補足検索）— foil",
+      "scope": "全文取得の代替経路",
+      "terms": [
+       "foil bearing"
+      ],
+      "hits": 25,
+      "note": "未配信の候補は特許・1960年代の報告書など。"
+     }
+    ],
+    "note": "foil のOA全文が取れない日が続いています（11-22〜28 は、公開できた日がありません）。"
+   },
+   "afterword": "— 編集担当より\n今日も出版社のページが開けず、お休みになりました。調べていて気づいたのは、foil bearing の最新論文は出版社サイトにしか本文がなく、プレプリントで読める経路がほとんどない、ということです。読めなかったものを無理に埋めず、読めなかったと書くほうが、このアプリには合っていると思います。"
   }
  ]
 }
